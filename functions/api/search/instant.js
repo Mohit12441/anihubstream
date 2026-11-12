@@ -78,9 +78,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const ftsQuery = q.trim().split(/\s+/).map((term) => `"${term.replace(/"/g, '""')}"*`).join(' ');
         rows = await env.ANIHUB.prepare(
           `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status, a.art, a.key_art, a.accent, a.synopsis
-           FROM anime_fts f JOIN anime a ON a.rowid = f.rowid
-           WHERE f.anime_fts MATCH ?1
-           ORDER BY bm25(f) DESC, a.rating DESC, a.year DESC
+           FROM anime_fts JOIN anime a ON a.rowid = anime_fts.rowid
+           WHERE anime_fts MATCH ?1
+           ORDER BY bm25(anime_fts) ASC, a.rating DESC, a.year DESC
            LIMIT ?2`
         )
           .bind(ftsQuery, limit)
@@ -108,7 +108,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           query: q,
           hits,
           estimatedTotalHits: hits.length,
-          engine: 'd1_fallback',
+          engine: engineUsed,
         },
         { cache: 'public, max-age=60, s-maxage=180' }
       );

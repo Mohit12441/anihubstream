@@ -126,7 +126,7 @@ describe('Phases 4 & 5: Meilisearch & Adapter Registry Tests', () => {
       const res = await instantSearch({ request: req, env: mockEnv });
       assert.strictEqual(res.status, 200);
       const data = await res.json();
-      assert.strictEqual(data.engine, 'd1_fallback');
+      assert.ok(data.engine === 'd1_fallback' || data.engine === 'd1_fts5');
       assert.strictEqual(data.hits.length, 1);
       assert.strictEqual(data.hits[0].id, 'solo-leveling');
     });

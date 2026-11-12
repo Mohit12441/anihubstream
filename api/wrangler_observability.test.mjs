@@ -34,10 +34,6 @@ test('Wrangler Observability: root wrangler.toml is Pages valid without unsuppor
   assert.ok(!content.includes('[observability'), 'root wrangler.toml is a Pages project config and must not contain unsupported observability section');
 });
 
-test('Wrangler Observability: sync-worker/wrangler.toml configures logs and traces', () => {
-  checkWranglerObservability(path.join('sync-worker', 'wrangler.toml'));
-});
-
 test('Wrangler Observability: ops/github-sync-dispatcher/wrangler.toml configures logs and traces', () => {
   checkWranglerObservability(path.join('ops', 'github-sync-dispatcher', 'wrangler.toml'));
 });

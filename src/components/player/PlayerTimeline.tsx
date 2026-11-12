@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Marker } from '../../data/model';
 import { stamp } from '../../lib/time';
 import { parseThumbnailVtt, findThumbnailCue, type ThumbnailCue } from '../../lib/thumbnailParser';
+import { useDynamicTimelineThumb } from './useDynamicTimelineThumb';
 
 interface Props {
   time: number;
@@ -11,6 +12,9 @@ interface Props {
   markers: Marker[];
   thumbnailsUrl?: string | null;
   fallbackArt?: string | null;
+  streamUrl?: string | null;
+  streamKind?: 'progressive' | 'hls' | 'embed' | null;
+  primaryVideoEl?: HTMLVideoElement | null;
   onSeek: (t: number) => void;
   onScrub: (active: boolean) => void;
 }
@@ -30,6 +34,9 @@ export function PlayerTimeline({
   markers,
   thumbnailsUrl,
   fallbackArt,
+  streamUrl,
+  streamKind,
+  primaryVideoEl,
   onSeek,
   onScrub,
 }: Props) {
@@ -37,6 +44,25 @@ export function PlayerTimeline({
   const [hover, setHover] = useState<{ x: number; t: number; marker?: Marker } | null>(null);
   const [dragging, setDragging] = useState(false);
   const [cues, setCues] = useState<ThumbnailCue[]>([]);
+
+  const dynamicThumbEnabled =
+    cues.length === 0 &&
+    Boolean(streamUrl) &&
+    streamKind !== 'embed' &&
+    !streamUrl?.includes('/api/play/resolve');
+
+  const {
+    thumbUrl: dynamicThumb,
+    isSeeking,
+    hiddenVideoElement,
+  } = useDynamicTimelineThumb({
+    streamUrl,
+    streamKind,
+    duration,
+    hoverTime: hover ? hover.t : null,
+    enabled: dynamicThumbEnabled,
+    primaryVideoEl,
+  });
 
   useEffect(() => {
     if (!thumbnailsUrl) {
@@ -196,6 +222,19 @@ export function PlayerTimeline({
                 />
               );
             }
+            if (dynamicThumb) {
+              return (
+                <div className="ptl__thumb-box ptl__thumb-box--dynamic">
+                  <img
+                    src={dynamicThumb}
+                    alt="Timeline frame preview"
+                    className="ptl__thumb-img"
+                    style={{ width: '160px', height: '90px', objectFit: 'cover', display: 'block' }}
+                  />
+                  {isSeeking && <span className="ptl__thumb-shimmer" aria-hidden="true" />}
+                </div>
+              );
+            }
             if (fallbackArt) {
               return (
                 <div
@@ -207,7 +246,9 @@ export function PlayerTimeline({
                     width: '160px',
                     height: '90px',
                   }}
-                />
+                >
+                  {isSeeking && <span className="ptl__thumb-shimmer" aria-hidden="true" />}
+                </div>
               );
             }
             return null;
@@ -223,6 +264,7 @@ export function PlayerTimeline({
           </span>
         </span>
       )}
+      {hiddenVideoElement}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 // @ts-check
 import { DatabaseSync } from 'node:sqlite';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 import fs from 'node:fs';
 
@@ -20,6 +21,11 @@ export function initLocalDatabase() {
     const defaultHash = 'c9fc89a7d1503de9966d667e6f96a3aa931cd48bcd765060548934038357609a.sqlite';
     dbPath = path.join(D1_DIR, defaultHash);
     console.log(`[db:init] Fresh environment detected. Creating ${defaultHash}`);
+    const backupDb = path.resolve(ROOT, '..', 'cloudflare', 'd1-database', 'anihub.sqlite');
+    if (fs.existsSync(backupDb)) {
+      console.log(`[db:init] Restoring live Cloudflare database from backup: ${backupDb}`);
+      fs.copyFileSync(backupDb, dbPath);
+    }
   } else {
     dbPath = path.join(D1_DIR, files[0]);
     console.log(`[db:init] Using existing local D1 database: ${path.basename(dbPath)}`);
@@ -65,6 +71,14 @@ export function initLocalDatabase() {
       db.exec("ALTER TABLE provider_route ADD COLUMN resolved_title TEXT;");
     }
   } catch {}
+
+  const cnt = db.prepare("SELECT count(*) as c FROM anime").get();
+  db.close();
+
+  if (!cnt || /** @type {any} */ (cnt).c === 0) {
+    console.log('[db:init] Database empty, seeding from data/ catalog...');
+    execSync('node tools/data-build-local.mjs', { cwd: ROOT, stdio: 'inherit' });
+  }
 
   console.log(`[db:init] Schema verified: all ${requiredTables.length} critical tables present (including stream_cache and anime_provider_mapping).`);
   return { dbPath, tables: Array.from(existingSet) };

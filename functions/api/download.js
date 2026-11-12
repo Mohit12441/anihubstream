@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, errorResponse, ok, resolveMalId } from './_lib.js';
+import { HttpError, errorResponse, ok, resolveMalId, parseMasterVariants, parseMediaSegments } from './_lib.js';
 import { resolveMegaplayDirect } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
@@ -112,66 +112,6 @@ async function extractHianimeDownloads(malId, ep, audio, signal) {
   } catch {
     return { downloads: [], downloadPage };
   }
-}
-
-/**
- * Parses variant renditions from an HLS master playlist
- * @param {string} text
- * @param {string} baseUrl
- * @returns {Array<{ quality: string, bandwidth: number, url: string }>}
- */
-function parseMasterVariants(text, baseUrl) {
-  const lines = text.split(/\r?\n/);
-  const renditions = [];
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line.startsWith('#EXT-X-STREAM-INF:')) continue;
-
-    const resMatch = line.match(/RESOLUTION=\d+x(\d+)/i);
-    const bwMatch = line.match(/BANDWIDTH=(\d+)/i);
-    const height = resMatch ? `${resMatch[1]}p` : 'unknown';
-    const bandwidth = bwMatch ? Number(bwMatch[1]) : 0;
-
-    let nextUrl = '';
-    for (let j = i + 1; j < lines.length; j++) {
-      const candidate = lines[j].trim();
-      if (!candidate || candidate.startsWith('#')) continue;
-      nextUrl = candidate;
-      break;
-    }
-
-    if (nextUrl) {
-      const fullUrl = nextUrl.startsWith('http') ? nextUrl : new URL(nextUrl, baseUrl).href;
-      renditions.push({ quality: height, bandwidth, url: fullUrl });
-    }
-  }
-
-  return renditions.sort((a, b) => {
-    const numA = parseInt(a.quality, 10) || 0;
-    const numB = parseInt(b.quality, 10) || 0;
-    return numB - numA || b.bandwidth - a.bandwidth;
-  });
-}
-
-/**
- * Parses media segments from a media playlist
- * @param {string} text
- * @param {string} baseUrl
- * @returns {string[]}
- */
-function parseMediaSegments(text, baseUrl) {
-  const lines = text.split(/\r?\n/);
-  const segments = [];
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (!line || line.startsWith('#')) continue;
-    const absUrl = line.startsWith('http') ? line : new URL(line, baseUrl).href;
-    segments.push(absUrl);
-  }
-
-  return segments;
 }
 
 /**

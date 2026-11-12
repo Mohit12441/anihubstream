@@ -37,11 +37,6 @@ export function isNotificationSupported(): boolean {
   return 'Notification' in window && 'serviceWorker' in navigator;
 }
 
-export function getNotificationPermission(): NotificationPermission {
-  if (!isNotificationSupported()) return 'denied';
-  return Notification.permission;
-}
-
 export async function requestNotificationPermission(): Promise<NotificationPermission> {
   if (!isNotificationSupported()) return 'denied';
   try {
@@ -100,10 +95,13 @@ export async function toggleSubscription(
   }
 
   // Subscribe
-  if (isNotificationSupported() && Notification.permission === 'default') {
-    const permission = await requestNotificationPermission();
-    if (permission !== 'granted') {
-      return false;
+  if (isNotificationSupported()) {
+    if (Notification.permission === 'denied') return false;
+    if (Notification.permission === 'default') {
+      const permission = await requestNotificationPermission();
+      if (permission !== 'granted') {
+        return false;
+      }
     }
   }
 
@@ -208,8 +206,12 @@ export async function checkAiringAlerts(): Promise<number> {
       continue;
     }
 
-    if (countdown.totalSeconds <= thresholdSeconds) {
-      const timeDesc = countdown.totalSeconds <= 60
+    // 604800s in a week. If elapsed < 15 mins (900s) past airtime, target wrapped to next week but it just aired
+    const elapsedSinceAir = 604800 - countdown.totalSeconds;
+    const isJustAired = elapsedSinceAir >= 0 && elapsedSinceAir <= 900;
+
+    if (countdown.totalSeconds <= thresholdSeconds || isJustAired) {
+      const timeDesc = isJustAired || countdown.totalSeconds <= 60
         ? 'airing now!'
         : `airing in ${Math.ceil(countdown.totalSeconds / 60)} minutes!`;
 

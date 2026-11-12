@@ -1,38 +1,9 @@
 // @ts-check
-import { HttpError, deriveSlugCandidates, errorResponse, findAnimeByCandidates, ok, withEdgeCache } from '../_lib.js';
+import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, ok, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
 const BRIDGE_TIMEOUT_MS = 6_000;
-
-function formatServerName(provider, serverId) {
-  const provNames = {
-    anikoto: 'AniKoto',
-    hianime: 'HiAnime',
-    aniwatch: 'AniWatch',
-    anipm: 'AniPM',
-  };
-  const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
-  return serverId && serverId !== 'default' ? `${base} · ${serverId}` : base;
-}
-
-function buildAudioTracks(audio) {
-  if (audio === 'hindi') {
-    return [
-      { id: 'hin', language: 'hi', label: 'Hindi (Multi-Audio)', default: true },
-      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
-    ];
-  }
-  if (audio === 'dub') {
-    return [
-      { id: 'en', language: 'en', label: 'English Dub', default: true },
-      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
-    ];
-  }
-  return [
-    { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true },
-  ];
-}
 
 /**
  * Lazy Server Stream Resolution Endpoint
@@ -83,7 +54,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           } catch {}
 
           meta = await env.ANIHUB.prepare(`
-            SELECT a.id, a.title, a.status,
+            SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
                    m.mal_id, m.anilist_id, m.kitsu_id,
                    pm.provider_slug
             FROM anime a
@@ -97,7 +68,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         // Backward-compat: allow title-only lookups for legacy callers
         if (!meta && titleParam && env.ANIHUB) {
           meta = await env.ANIHUB.prepare(`
-            SELECT a.id, a.title, a.status,
+            SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
                    m.mal_id, m.anilist_id, m.kitsu_id,
                    pm.provider_slug
             FROM anime a
@@ -115,7 +86,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           try {
             const cleanPattern = `%${animeIdParam.replace(/[-_]+/g, '%').slice(0, 30)}%`;
             meta = await env.ANIHUB.prepare(`
-              SELECT a.id, a.title, a.status,
+              SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
                      m.mal_id, m.anilist_id, m.kitsu_id,
                      pm.provider_slug
               FROM anime a
@@ -130,19 +101,27 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         if (!meta) {
-          const fallbackTitle = titleParam || animeIdParam
-            .replace(/^(?:hianime|anikoto|aniwatch|anipm):/i, '')
-            .replace(/-[a-z0-9]{5,8}$/i, '')
-            .replace(/[-_:]+/g, ' ')
-            .trim();
+          const fallbackTitle = cleanDisplayTitle(titleParam || animeIdParam);
           meta = { id: animeIdParam || titleParam, title: fallbackTitle || animeIdParam, status: 'Released', mal_id: 0 };
           animeId = meta.id;
         }
 
         const resolvedTitle = meta.title || animeId;
-        const resolvedMalId = meta.mal_id || 0;
-        const resolvedAnilistId = meta.anilist_id || 0;
-        const resolvedKitsuId = meta.kitsu_id || 0;
+        let resolvedMalId = meta.mal_id || 0;
+        let resolvedAnilistId = meta.anilist_id || 0;
+        let resolvedKitsuId = meta.kitsu_id || 0;
+
+        if (!resolvedMalId && meta.skip_key_space === 'mal' && meta.skip_key_id) {
+          resolvedMalId = meta.skip_key_id;
+        }
+        if (meta.source_ids) {
+          try {
+            const s = JSON.parse(meta.source_ids);
+            if (!resolvedMalId && s.mal) resolvedMalId = Number(s.mal);
+            if (!resolvedAnilistId && s.anilist) resolvedAnilistId = Number(s.anilist);
+            if (!resolvedKitsuId && s.kitsu) resolvedKitsuId = Number(s.kitsu);
+          } catch {}
+        }
         const providerSlug = meta.provider_slug || '';
 
         if (meta.status === 'Upcoming' || meta.status === 'NOT_YET_RELEASED') {
@@ -180,13 +159,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (!directRes) {
               if (provider === 'hianime') {
                 const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-                const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
+                const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
                 if (zokoRes?.masterUrl) {
                   directRes = {
                     streamUrl: zokoRes.masterUrl,
                     referer: 'https://zokoanime.video/',
                     quality: zokoRes.defaultQuality || '1080p',
-                    subtitles: [],
+                    subtitles: zokoRes.subtitles || [],
                     provider: 'hianime',
                     skip: zokoRes.skip,
                   };
@@ -209,6 +188,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
               const subtitles = (directRes.subtitles || []).map((sub) => ({
                 ...sub,
+                language: sub.language || sub.lang || 'en',
                 label: sub.label || sub.name || 'English',
                 name: sub.name || sub.label || 'English',
                 url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
@@ -273,18 +253,26 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           // If bridge unavailable, attempt edge direct fallback via known MAL ID or Jikan lookup
           try {
             let targetMalId = resolvedMalId || 0;
+            if (!targetMalId && env.ANIHUB) {
+              try {
+                const row = await env.ANIHUB.prepare(
+                  'SELECT mal_id FROM anime WHERE title = ?1 OR title_romaji = ?1 OR title_english = ?1 LIMIT 1'
+                ).bind(resolvedTitle).first();
+                if (row?.mal_id) targetMalId = Number(row.mal_id);
+              } catch {}
+            }
             if (!targetMalId) {
-              const cleanTitle = resolvedTitle
-                .replace(/^(?:hianime|anikoto|aniwatch|anipm):/i, '')
-                .replace(/-[a-z0-9]{5,8}$/i, '')
-                .replace(/[-_:]+/g, ' ')
-                .trim();
+              const cleanTitle = cleanDisplayTitle(resolvedTitle);
               const jikanRes = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(cleanTitle)}&limit=1`, {
-                signal: AbortSignal.timeout(4000),
+                signal: AbortSignal.timeout(3000),
               });
               if (jikanRes.ok) {
                 const jikanData = await jikanRes.json();
                 targetMalId = jikanData?.data?.[0]?.mal_id || 0;
+                if (targetMalId > 0 && animeId && env.ANIHUB) {
+                  env.ANIHUB.prepare('UPDATE anime SET mal_id = ?1 WHERE id = ?2 AND mal_id IS NULL')
+                    .bind(targetMalId, animeId).run().catch(() => {});
+                }
               }
             }
             if (targetMalId > 0) {
@@ -303,6 +291,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
                     const subtitles = (directRes.subtitles || []).map((sub) => ({
                       ...sub,
+                      language: sub.language || sub.lang || 'en',
                       label: sub.label || sub.name || 'English',
                       name: sub.name || sub.label || 'English',
                       url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=https://megaplay.buzz/` : '',
@@ -363,7 +352,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         const subtitles = (metaData.subtitles || []).map((sub, idx) => {
           let subUrl = sub.url || sub.proxyUrl || sub.uri || '';
-          if (subUrl.startsWith('http') && !subUrl.includes('/api/proxy')) {
+          if (subUrl.includes('/api/proxy') || subUrl.startsWith('/api/')) {
+            subUrl = subUrl.startsWith('http') ? subUrl : `${url.origin}${subUrl}`;
+          } else if (subUrl.startsWith('http')) {
             subUrl = activeReferer
               ? `${proxyBase}?url=${encodeURIComponent(subUrl)}&referer=${encodeURIComponent(activeReferer)}`
               : `${proxyBase}?url=${encodeURIComponent(subUrl)}`;
@@ -392,6 +383,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           serverName += ' (Sub Only)';
         }
 
+        const resolvedAudioTracks = (Array.isArray(metaData.audioTracks) && metaData.audioTracks.length > 0)
+          ? metaData.audioTracks.map((t, i) => ({
+              id: t.id !== undefined ? String(t.id) : `audio-${i}`,
+              language: t.language || t.lang || 'ja',
+              label: t.label || t.name || t.language || 'Audio',
+              default: t.default !== undefined ? Boolean(t.default) : i === 0,
+            }))
+          : buildAudioTracks(resolvedAudio);
+
         const resolvedServer = {
           id: `${prov}:${rawServerParam || 'HD-1'}`,
           name: serverName,
@@ -401,7 +401,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           type: metaData.type || (resolvedAudio === 'dub' ? 'dub' : (metaData.kind === 'progressive' ? 'mp4' : 'hls')),
           quality: metaData.quality || '1080p',
           audio: resolvedAudio,
-          audioTracks: buildAudioTracks(resolvedAudio),
+          audioTracks: resolvedAudioTracks,
           subtitles,
           downloads,
           intro: metaData.skip?.intro ? { start: metaData.skip.intro[0], end: metaData.skip.intro[1] } : undefined,

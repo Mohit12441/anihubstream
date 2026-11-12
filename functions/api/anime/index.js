@@ -106,7 +106,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       add('EXISTS (SELECT 1 FROM anime_provider_mapping pm WHERE pm.anime_id = a.id AND pm.provider_id = @)', provider.toLowerCase().trim());
     }
 
-    const tokens = q ? foldSearch(q).split(' ').filter(Boolean) : [];
+    const tokens = (q ? foldSearch(q).split(' ').filter(Boolean) : []).slice(0, 10);
     if (sortKey === 'relevance') {
       if (!q) throw new HttpError(400, 'bad_request', 'relevance sort needs a search query (q)');
       /* A query that folds away ("!!!") is answered with zero results, not an error. */

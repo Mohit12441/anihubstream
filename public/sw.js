@@ -257,6 +257,10 @@ self.addEventListener('fetch', (event) => {
     fetch(request).catch(async () => {
       const cached = await caches.match(request);
       if (cached) return cached;
+      if (request.mode === 'navigate') {
+        const shell = (await caches.match('/index.html')) || (await caches.match('/'));
+        if (shell) return shell;
+      }
       throw new Error('Network request failed');
     })
   );

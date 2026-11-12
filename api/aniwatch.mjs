@@ -319,10 +319,6 @@ export async function details(idOrSlugOrUrl, { signal } = {}) {
   return { media: core.media, episodes: await episodesFor(core.media.id, core.animeId, url, signal) };
 }
 
-export async function episodes(idOrSlugOrUrl, { signal } = {}) {
-  return (await details(idOrSlugOrUrl, { signal })).episodes;
-}
-
 /**
  * `.server-item[data-type=sub|dub][data-hash]`; `data-hash` is standard base64
  * of the embed URL (measured: both rows decode to

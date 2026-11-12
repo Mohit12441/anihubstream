@@ -107,17 +107,6 @@ export const onRequestPut = async ({ request, env }) => {
 
     const safeSeconds = Math.max(0, Math.round(seconds * 10) / 10);
 
-    // If viewer watched beyond the initial estimate (e.g. extended cut, movie, OVA),
-    // update the database runtime to the actual duration rather than rejecting with 400!
-    if (episode.runtime_seconds && safeSeconds > episode.runtime_seconds) {
-      const newRuntime = Math.ceil(safeSeconds);
-      await env.ANIHUB.prepare('UPDATE episode SET runtime_seconds = ?1 WHERE id = ?2')
-        .bind(newRuntime, targetEpisodeId)
-        .run()
-        .catch(() => null);
-      episode.runtime_seconds = newRuntime;
-    }
-
     const { id, setCookie } = await getViewer(env, request);
     await env.ANIHUB.prepare(
       `INSERT INTO position (viewer_id, episode_id, seconds, updated_at) VALUES (?1, ?2, ?3, datetime('now'))

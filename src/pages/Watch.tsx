@@ -49,6 +49,24 @@ export function titleMatches(a?: string | null, b?: string | null): boolean {
   return ratio >= 0.5;
 }
 
+const DEFAULT_PLAY_SERVERS: PlayServer[] = [
+  { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:HD-2', name: 'AniKoto · HD-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:HD-1-dub', name: 'AniKoto · HD-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:Vidstream-2-dub', name: 'AniKoto · Vidstream-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:Vidstream-1-dub', name: 'AniKoto · Vidstream-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anikoto:HD-2-dub', name: 'AniKoto · HD-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anipm:beta', name: 'AniPM · Beta Master', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anipm:settlar', name: 'AniPM · Settlar HD', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anipm:settlar-dub', name: 'AniPM · Settlar HD (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+];
+
 export function Watch() {
   const { id = '', ep } = useParams<{ id: string; ep?: string }>();
   const [params] = useSearchParams();
@@ -205,32 +223,21 @@ export function Watch() {
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
-  const DEFAULT_PLAY_SERVERS: PlayServer[] = [
-    { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:HD-2', name: 'AniKoto · HD-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:HD-1-dub', name: 'AniKoto · HD-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:Vidstream-2-dub', name: 'AniKoto · Vidstream-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:Vidstream-1-dub', name: 'AniKoto · Vidstream-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anikoto:HD-2-dub', name: 'AniKoto · HD-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'anipm:default', name: 'AniPM · Settlar HD', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-    { id: 'torrent:p2p', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-  ];
   const [playServers, setPlayServers] = useState<PlayServer[]>(DEFAULT_PLAY_SERVERS);
   const [_scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const [_providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
   const [_availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
   const targetProvider = (
     params.get('provider') ||
-    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : '')
+    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : '')
   ).toLowerCase();
-  const [activeServerId, setActiveServerId] = useState<string>(
-    targetProvider ? serverIdFromProvider(targetProvider) : 'anikoto:HD-1'
-  );
+  const [activeServerId, setActiveServerId] = useState<string>(() => {
+    const srvParam = params.get('server');
+    if (srvParam) return srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
+    return targetProvider
+      ? serverIdFromProvider(targetProvider, prefs.audio)
+      : (prefs.audio === 'dub' ? 'anikoto:HD-1-dub' : 'anikoto:HD-1');
+  });
   const [activeTab, setActiveTab] = useState<'episode' | 'anime'>('episode');
 
   const activeServer = useMemo(() => {
@@ -313,36 +320,50 @@ export function Watch() {
           setAvailableProvidersList(data.availableProviders);
         }
         const rawServerList = Array.isArray(data.servers) ? data.servers : (Array.isArray(data.data?.servers) ? data.data.servers : []);
+        let mismatchedTitle = '';
         const serverList = rawServerList.filter((s: PlayServer) => {
           if (s.resolvedTitle && !titleMatches(s.resolvedTitle, anime.title)) {
-            notify(`Server title mismatch: ${s.resolvedTitle} — falling back`);
+            mismatchedTitle = s.resolvedTitle;
             return false;
           }
           return true;
         });
+        if (mismatchedTitle && serverList.length < rawServerList.length) {
+          notify(`Server title mismatch (${mismatchedTitle}) — filtered`);
+        }
         if (serverList.length > 0) {
           const mergedServers = [
             ...serverList,
             ...DEFAULT_PLAY_SERVERS.filter((def) => !serverList.some((s: PlayServer) => s.id === def.id)),
           ];
           setPlayServers(mergedServers);
-          const matchingActive = mergedServers.find((s: PlayServer) => s.id === activeServerId);
-          const effectiveProvider = targetProvider || data.scopedProvider;
-          const matchedServer = effectiveProvider
-            ? (matchingActive && (matchingActive.id.toLowerCase().includes(effectiveProvider) || matchingActive.provider.toLowerCase() === effectiveProvider)
-                ? matchingActive
-                : mergedServers.find((s: PlayServer) => s.id?.toLowerCase().includes(effectiveProvider) || s.provider?.toLowerCase() === effectiveProvider || s.name?.toLowerCase().includes(effectiveProvider)))
-            : null;
+          const explicitServer = params.get('server');
+          const isDub = (prefs.audio ?? 'sub') === 'dub';
+          let matchedServer: PlayServer | null = null;
+
+          if (explicitServer) {
+            matchedServer = mergedServers.find((s: PlayServer) =>
+              s.id === explicitServer || s.id.endsWith(`:${explicitServer}`) || s.id.endsWith(`:${explicitServer}-dub`)
+            ) || null;
+          }
+
+          if (!matchedServer && targetProvider) {
+            matchedServer = mergedServers.find((s: PlayServer) => {
+              const matchesProv = s.provider?.toLowerCase() === targetProvider || s.id?.toLowerCase().startsWith(`${targetProvider}:`);
+              const matchesAudio = isDub ? (s.id.includes('-dub') || s.audio === 'dub') : (!s.id.includes('-dub') && s.audio !== 'dub');
+              return matchesProv && matchesAudio;
+            }) || mergedServers.find((s: PlayServer) =>
+              s.provider?.toLowerCase() === targetProvider || s.id?.toLowerCase().startsWith(`${targetProvider}:`)
+            ) || null;
+          }
+
+          if (!matchedServer && serverList.length > 0) {
+            // Default: activate the backend's pre-resolved winner in servers[0]
+            matchedServer = serverList[0];
+          }
+
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
-          } else {
-            let finalActiveId = targetProvider
-              ? serverIdFromProvider(targetProvider)
-              : activeServerId;
-            if (!mergedServers.some((s: PlayServer) => s.id === finalActiveId)) {
-              finalActiveId = mergedServers[0].id;
-            }
-            setActiveServerId(finalActiveId);
           }
         }
       })

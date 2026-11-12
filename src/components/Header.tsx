@@ -6,6 +6,10 @@ import { useTheme } from '../lib/useTheme';
 import { useToast } from '../lib/Toast';
 import { useLibrary } from '../state/library';
 import { searchInstant } from '../data/api';
+import { SoundToggle } from './SoundToggle';
+import { MotionToggle } from './MotionToggle';
+import { ScrollProgress } from './ScrollProgress';
+import { soundFx } from '../lib/soundFx';
 import '../styles/header.css';
 
 const NAV = [
@@ -14,7 +18,7 @@ const NAV = [
   { label: 'Genres', to: '/genres' },
   { label: 'Ongoing', to: '/anime?status=Ongoing' },
   { label: 'My List', to: '/my-list' },
-  { label: 'Episode Schedule', to: '/schedule' },
+  { label: 'Episode Schedule', shortLabel: 'Schedule', to: '/schedule' },
 ];
 
 function isActive(to: string, pathname: string, search: string) {
@@ -33,9 +37,19 @@ export function Header() {
   const { items } = useLibrary();
   const count = items.length;
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [q, setQ] = useState('');
   const panelRef = useRef<HTMLDivElement>(null);
   const searchWrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => setOpen(false), [pathname, search]);
 
@@ -140,7 +154,8 @@ export function Header() {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
+      <ScrollProgress />
       <div className="site-header__inner shell">
         <Logo />
 
@@ -152,7 +167,14 @@ export function Header() {
                   to={item.to}
                   className={isActive(item.to, pathname, search) ? 'is-current' : undefined}
                 >
-                  {item.label}
+                  <span className={item.shortLabel ? 'site-nav__label-full' : undefined}>
+                    {item.label}
+                  </span>
+                  {item.shortLabel && (
+                    <span className="site-nav__label-short" aria-hidden="true">
+                      {item.shortLabel}
+                    </span>
+                  )}
                 </Link>
               </li>
             ))}
@@ -174,6 +196,15 @@ export function Header() {
                 onChange={handleInputChange}
                 autoComplete="off"
               />
+              <button
+                type="button"
+                className="site-header__kbd-btn"
+                onClick={() => window.dispatchEvent(new CustomEvent('anihub:open-command-palette'))}
+                title="Open Command Palette (Ctrl+K or ⌘K)"
+                aria-label="Open Command Palette"
+              >
+                <kbd>⌘K</kbd>
+              </button>
               <button type="submit" className="search__go" aria-label="Run search">
                 <Search size={15} aria-hidden="true" />
               </button>
@@ -181,6 +212,18 @@ export function Header() {
             {renderSuggestions()}
           </div>
 
+          <button
+            type="button"
+            className="icon-btn site-header__mobile-search-btn"
+            onClick={() => {
+              soundFx.playClick();
+              window.dispatchEvent(new CustomEvent('anihub:open-command-palette'));
+            }}
+            aria-label="Search anime"
+            title="Search anime"
+          >
+            <Search size={18} />
+          </button>
 
           <Link
             to="/discover"
@@ -191,10 +234,16 @@ export function Header() {
             <Compass size={18} />
           </Link>
 
+          <SoundToggle />
+          <MotionToggle />
+
           <button
             type="button"
             className="icon-btn"
-            onClick={toggle}
+            onClick={() => {
+              soundFx.playClick();
+              toggle();
+            }}
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
             title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
           >
@@ -245,6 +294,11 @@ export function Header() {
             tabIndex={open ? 0 : -1}
           />
         </form>
+        {open && q.trim().length > 0 && (
+          <div className="mobile-nav__suggestions">
+            {renderSuggestions()}
+          </div>
+        )}
         <ul>
           {[...NAV, { label: 'Discover', to: '/discover' }].map((item) => (
             <li key={item.label}>

@@ -62,15 +62,18 @@ export async function buildLocalDatabase(opts = {}) {
     try {
       const routes = JSON.parse(fs.readFileSync(routesFile, 'utf8'));
       const stmt = db.prepare(`
-        INSERT OR REPLACE INTO provider_route (provider_id, route_pattern, target_upstream, priority, is_active, notes)
-        VALUES (?, ?, ?, ?, ?, ?)
+        INSERT OR REPLACE INTO provider_route (anime_id, provider_id, server, path, status, checked_ep, checked_at, resolved_anilist, resolved_title)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
       `);
       db.exec('BEGIN TRANSACTION');
       for (const r of routes) {
-        stmt.run(r.provider_id, r.route_pattern, r.target_upstream || null, r.priority || 0, r.is_active ? 1 : 0, r.notes || null);
+        stmt.run(r.anime_id, r.provider_id, r.server, r.path || null, r.status || 'unresolved', r.checked_ep || null, r.checked_at || null, r.resolved_anilist || null, r.resolved_title || null);
       }
       db.exec('COMMIT');
-    } catch {}
+    } catch (err) {
+      db.exec('ROLLBACK');
+      console.warn('[data-build] Warning inserting routes:', err);
+    }
   };
 
   const insertIdMap = () => {
@@ -79,15 +82,18 @@ export async function buildLocalDatabase(opts = {}) {
     try {
       const mappings = JSON.parse(fs.readFileSync(idMapFile, 'utf8'));
       const stmt = db.prepare(`
-        INSERT OR REPLACE INTO anime_id_map (anime_id, anilist_id, mal_id, kitsu_id, anidb_id, tvdb_id, verified_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT OR REPLACE INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, confidence, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `);
       db.exec('BEGIN TRANSACTION');
       for (const m of mappings) {
-        stmt.run(m.anime_id, m.anilist_id || null, m.mal_id || null, m.kitsu_id || null, m.anidb_id || null, m.tvdb_id || null, m.verified_at || null);
+        stmt.run(m.anime_id, m.mal_id || null, m.anilist_id || null, m.kitsu_id || null, m.anidb_id || null, m.anikoto_slug || null, m.hianime_slug || null, m.aniwatch_slug || null, m.confidence ?? 1.0, m.updated_at || new Date().toISOString());
       }
       db.exec('COMMIT');
-    } catch {}
+    } catch (err) {
+      db.exec('ROLLBACK');
+      console.warn('[data-build] Warning inserting id_map:', err);
+    }
   };
 
   const insertFranchiseRelations = () => {
@@ -96,15 +102,18 @@ export async function buildLocalDatabase(opts = {}) {
     try {
       const relations = JSON.parse(fs.readFileSync(relationsFile, 'utf8'));
       const stmt = db.prepare(`
-        INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_anime_id, relation_type)
-        VALUES (?, ?, ?)
+        INSERT OR REPLACE INTO anime_franchise_relation (anime_id, related_id, relation_type, chronology_order, created_at)
+        VALUES (?, ?, ?, ?, ?)
       `);
       db.exec('BEGIN TRANSACTION');
       for (const r of relations) {
-        stmt.run(r.anime_id, r.related_anime_id, r.relation_type);
+        stmt.run(r.anime_id, r.related_id, r.relation_type || 'sequel', r.chronology_order || 0, r.created_at || new Date().toISOString());
       }
       db.exec('COMMIT');
-    } catch {}
+    } catch (err) {
+      db.exec('ROLLBACK');
+      console.warn('[data-build] Warning inserting franchise_relations:', err);
+    }
   };
 
   const insertRedirects = () => {
@@ -113,15 +122,18 @@ export async function buildLocalDatabase(opts = {}) {
     try {
       const redirects = JSON.parse(fs.readFileSync(redirectsFile, 'utf8'));
       const stmt = db.prepare(`
-        INSERT OR REPLACE INTO anime_redirect (source_slug, target_slug, reason, created_at)
-        VALUES (?, ?, ?, ?)
+        INSERT OR REPLACE INTO anime_redirect (from_id, to_id)
+        VALUES (?, ?)
       `);
       db.exec('BEGIN TRANSACTION');
       for (const rd of redirects) {
-        stmt.run(rd.source_slug, rd.target_slug, rd.reason || null, rd.created_at || new Date().toISOString());
+        stmt.run(rd.from_id, rd.to_id);
       }
       db.exec('COMMIT');
-    } catch {}
+    } catch (err) {
+      db.exec('ROLLBACK');
+      console.warn('[data-build] Warning inserting redirects:', err);
+    }
   };
 
   insertGenres();

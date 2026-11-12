@@ -193,10 +193,16 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--dur-3) var(--ease-out), filter var(--dur-3) var(--ease);
+  animation: genreBreathe 24s ease-in-out infinite alternate;
+}
+@keyframes genreBreathe {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.06); }
 }
 .gcard:hover .gcard__art img {
-  transform: scale(1.08);
-  filter: saturate(1.2);
+  transform: scale(1.1);
+  filter: saturate(1.25);
+  animation-play-state: paused;
 }
 .gcard__wash {
   position: absolute;
@@ -268,9 +274,11 @@
     transform var(--dur-2) var(--ease);
 }
 .gcard:hover .gcard__go {
-  background: color-mix(in srgb, var(--pc) 26%, transparent);
-  color: color-mix(in srgb, var(--pc) 50%, #fff);
-  transform: translateX(3px);
+  background: color-mix(in srgb, var(--pc) 32%, transparent);
+  border-color: color-mix(in srgb, var(--pc) 70%, transparent);
+  color: #fff;
+  transform: translateX(4px) scale(1.1);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--pc) 45%, transparent);
 }
 
 /* ---------- animated genre reveal drawer ---------- */

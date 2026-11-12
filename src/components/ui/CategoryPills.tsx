@@ -74,12 +74,18 @@ export function CategoryPills({
               if (!isActive) {
                 e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
                 e.currentTarget.style.color = '#e2e8f0';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.borderColor = `${pillColor}80`;
+                e.currentTarget.style.boxShadow = `0 4px 16px ${pillColor}25`;
               }
             }}
             onMouseLeave={(e) => {
               if (!isActive) {
                 e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)';
                 e.currentTarget.style.color = '#94a3b8';
+                e.currentTarget.style.transform = 'none';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
               }
             }}
           >

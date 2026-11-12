@@ -62,14 +62,6 @@ export interface PlayServer {
   outro?: { start: number; end: number } | null;
 }
 
-export interface Layer1PlayResponse {
-  title: string;
-  episode: number;
-  malId?: number | null;
-  servers: PlayServer[];
-  aniskip?: AniSkipData | null;
-}
-
 export interface PlayerInput {
   src: string;
   type: 'hls' | 'mp4' | 'embed';

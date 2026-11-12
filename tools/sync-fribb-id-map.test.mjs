@@ -100,11 +100,10 @@ describe('Universal ID Map (Fribb/anime-lists) Suite', () => {
         mal_id        INTEGER,
         anilist_id    INTEGER,
         kitsu_id      INTEGER,
+        anidb_id      INTEGER,
         anikoto_slug  TEXT,
         hianime_slug  TEXT,
         aniwatch_slug TEXT,
-        adb_slug      TEXT,
-        waw_slug      TEXT,
         confidence    REAL DEFAULT 1.0,
         updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
       );

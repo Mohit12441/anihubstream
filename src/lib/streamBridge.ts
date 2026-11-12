@@ -300,9 +300,9 @@ export async function bridgeResolve(
           proof: { container: s.type === 'embed' ? 'embed' : 'hls', checkedBytes: 1024 },
           master: s.streamUrl,
           subtitles: (s.subtitles || []).map((sub: any) => ({
-            language: sub.language,
+            language: sub.language || sub.lang || 'en',
             name: sub.label || sub.name || 'English',
-            url: sub.url,
+            url: sub.url || sub.proxyUrl || sub.uri || '',
           })),
           downloads: s.downloads || [],
         };
@@ -351,7 +351,7 @@ export interface AudioList {
  * probe (~seconds); the bridge caches the verdict per episode for an hour.
  */
 export async function bridgeAudios(title: string, ep: number, provider = 'anikoto'): Promise<AudioList | ResolveFailure> {
-  const isSubOnly = provider.toLowerCase() === 'anipm' || provider.toLowerCase() === 'torrent';
+  const isSubOnly = provider.toLowerCase() === 'torrent';
   const isHindi = provider.toLowerCase().includes('hindi') || title.toLowerCase().includes('hindi');
   const baseAudios: AudioOption[] = [
     { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
@@ -406,8 +406,12 @@ export function parseVtt(text: string): Cue[] {
   const cues: Cue[] = [];
   // Strip UTF-8 BOM if present
   const cleanText = text.charCodeAt(0) === 0xFEFF ? text.slice(1) : text;
+  // Strip NOTE and STYLE blocks that break cue parsing
+  const strippedText = cleanText
+    .replace(/^NOTE(?:\s+[^\r\n]*)?(?:\r?\n[\s\S]*?)?(?=\r?\n\r?\n|\n\n|$)/gm, '')
+    .replace(/^STYLE(?:\s+[^\r\n]*)?(?:\r?\n[\s\S]*?)?(?=\r?\n\r?\n|\n\n|$)/gm, '');
   // Robustly split on blank lines, allowing carriage returns, spaces, or tabs between newlines
-  const blocks = cleanText.split(/\r?\n[ \t]*\r?\n+/);
+  const blocks = strippedText.split(/\r?\n[ \t]*\r?\n+/);
 
   for (const block of blocks) {
     const lines = block.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
@@ -441,9 +445,32 @@ export interface VttFile {
 export async function fetchVtt(path: string): Promise<VttFile | null> {
   try {
     let target = bridgeUrl(path);
-    if (target.startsWith('http') && (target.includes('mysubsplay.com') || target.includes('subsplay.com') || target.includes('megaplay.buzz')) && !target.includes('/api/proxy')) {
-      target = `/api/proxy?url=${encodeURIComponent(target)}&referer=${encodeURIComponent('https://megaplay.buzz/')}`;
+    try {
+      const u = new URL(target, typeof window !== 'undefined' ? window.location?.origin : 'http://127.0.0.1');
+      if (u.pathname.includes('/api/proxy')) {
+        if (u.hostname === '127.0.0.1' || u.hostname === 'localhost' || (typeof window !== 'undefined' && u.host === window.location?.host)) {
+          target = `${u.pathname}${u.search}`;
+        }
+      }
+    } catch {}
+
+    if ((target.startsWith('http://') || target.startsWith('https://')) && !target.includes('/api/proxy')) {
+      let ref = 'https://megaplay.buzz/';
+      try {
+        const parsed = new URL(target);
+        if (parsed.hostname.includes('zoko') || parsed.hostname.includes('animehot') || parsed.hostname.includes('dramahot')) {
+          ref = 'https://zokoanime.video/';
+        } else if (parsed.hostname.includes('vidnest')) {
+          ref = 'https://vidnest.fun/';
+        } else if (parsed.hostname.includes('settlar') || parsed.hostname.includes('cno.to')) {
+          ref = 'https://settlar.io/';
+        } else if (parsed.hostname.includes('rabbitstream') || parsed.hostname.includes('megacloud')) {
+          ref = 'https://megaplay.buzz/';
+        }
+      } catch {}
+      target = `/api/proxy?url=${encodeURIComponent(target)}&referer=${encodeURIComponent(ref)}`;
     }
+
     const res = await fetch(target, { signal: AbortSignal.timeout(20_000) });
     if (!res.ok) return null;
     const text = await res.text();
@@ -453,28 +480,3 @@ export async function fetchVtt(path: string): Promise<VttFile | null> {
   }
 }
 
-export interface DownloadOption {
-  provider: string;
-  name: string;
-  badge: string;
-  format: string;
-  quality: string;
-  type: 'direct' | 'portal' | 'stream';
-  audio: string;
-  description: string;
-}
-
-export async function fetchDownloadOptions(
-  title: string,
-  ep: number,
-): Promise<{ title: string; episode: number; options: DownloadOption[] } | null> {
-  try {
-    const res = await fetch(bridgeUrl(`/downloads?title=${encodeURIComponent(title)}&ep=${ep}`), {
-      signal: AbortSignal.timeout(10_000),
-    });
-    if (!res.ok) return null;
-    return (await res.json()) as { title: string; episode: number; options: DownloadOption[] };
-  } catch {
-    return null;
-  }
-}

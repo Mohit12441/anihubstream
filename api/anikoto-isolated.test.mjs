@@ -1,7 +1,7 @@
 // @ts-check
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { isMegaplayTokenValid } from '../functions/api/anikoto/_megaplay.js';
+import { isMegaplayTokenValid } from '../functions/api/_megaplay.js';
 import { onRequestGet as onHomeGet } from '../functions/api/anikoto/home.js';
 import { onRequestGet as onSearchGet } from '../functions/api/anikoto/search.js';
 import { onRequestGet as onDetailsGet } from '../functions/api/anikoto/[id].js';

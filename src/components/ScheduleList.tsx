@@ -5,24 +5,28 @@ import { Art } from './Art';
 import { CardMeta } from './CardMeta';
 import { cleanAnimeTitle, type ScheduleEntry } from '../data/model';
 import { getEpisodeReleaseStatus } from '../lib/scheduleTime';
-import { isNotificationSupported, isSubscribed, toggleSubscription } from '../lib/notifications';
+import { getNotificationPrefs, isNotificationSupported, toggleSubscription } from '../lib/notifications';
 
 interface Props {
   entries: ScheduleEntry[];
   highlightId?: string | null;
   todayDay?: number;
+  useLocalTime?: boolean;
+  audio?: 'sub' | 'dub';
 }
 
-export function ScheduleList({ entries, highlightId, todayDay }: Props) {
+export function ScheduleList({ entries, highlightId, todayDay, useLocalTime = true, audio = 'sub' }: Props) {
   const [now, setNow] = useState(() => new Date());
   const [subscribedMap, setSubscribedMap] = useState<Record<string, boolean>>({});
 
   // Sync subscription states
   useEffect(() => {
+    const prefs = getNotificationPrefs();
+    const subSet = new Set(prefs.subscriptions.map((s) => s.animeId));
     const map: Record<string, boolean> = {};
     for (const e of entries) {
       if (e.anime?.id) {
-        map[e.anime.id] = isSubscribed(e.anime.id);
+        map[e.anime.id] = subSet.has(e.anime.id);
       }
     }
     setSubscribedMap(map);
@@ -31,14 +35,25 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
   const handleToggleSub = async (e: React.MouseEvent, entry: ScheduleEntry, nextEp: number | null) => {
     e.preventDefault();
     e.stopPropagation();
+    const rawSched = audio === 'dub' && (entry.sched_dub_at || entry.anime.sched_dub_at)
+      ? (() => {
+          const d = new Date((entry.sched_dub_at ?? entry.anime.sched_dub_at)!);
+          const day = d.getUTCDay() === 0 ? 7 : d.getUTCDay();
+          const time = `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`;
+          return { day, time };
+        })()
+      : {
+          day: entry.anime.schedule?.day ?? entry.day,
+          time: entry.anime.schedule?.time ?? entry.time,
+        };
+
     const nextState = await toggleSubscription({
       id: entry.anime.id,
       title: entry.anime.title,
       poster: entry.anime.poster,
       schedule: {
-        day: entry.day,
-        dayLabel: entry.dayLabel,
-        time: entry.time,
+        day: rawSched.day,
+        time: rawSched.time,
         date: entry.date,
         episode: nextEp,
       },
@@ -63,13 +78,16 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
     );
   }
 
-  const effectiveTodayDay = todayDay ?? (now.getDay() === 0 ? 7 : now.getDay());
+  const liveTodayDay = useLocalTime
+    ? (now.getDay() === 0 ? 7 : now.getDay())
+    : (now.getUTCDay() === 0 ? 7 : now.getUTCDay());
+  const effectiveTodayDay = todayDay && todayDay === liveTodayDay ? todayDay : liveTodayDay;
 
   return (
     <ol className="tl">
       {entries.map((e, idx) => {
         const cleanTitle = cleanAnimeTitle(e.anime.title);
-        const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now);
+        const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now, useLocalTime);
         const isToday = e.day === effectiveTodayDay;
 
         const nextEp = e.episode && e.episode > 0
@@ -86,13 +104,15 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
             ? nextEp - 1
             : (e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1));
 
+        const hasDub = Boolean(e.sched_dub_at || e.dubAt || e.anime.sched_dub_at || e.anime.schedule?.dubAt);
         const toWatch = `/watch/${e.anime.id}/${targetEp}`;
+        const watchTarget = audio === 'dub' && hasDub ? `${toWatch}?audio=dub` : toWatch;
 
         const pillEpLabel = (!isReleased && nextEp) ? `Next: Ep ${nextEp}` : `Ep ${targetEp}`;
 
         return (
           <li
-            key={`${e.anime.id}-${e.time}`}
+            key={`${e.anime.id}-${e.day}-${e.time}`}
             className="tl__row"
             data-today={isToday || e.anime.id === highlightId || undefined}
             style={{ '--row-idx': idx } as React.CSSProperties}
@@ -106,7 +126,7 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
             </div>
 
             {/* Poster Thumbnail */}
-            <Link to={toWatch} className="tl__thumb" tabIndex={-1} aria-hidden="true">
+            <Link to={watchTarget} className="tl__thumb" tabIndex={-1} aria-hidden="true">
               <Art sources={[e.anime.poster, e.anime.key]} alt="" hideWhenEmpty />
               <span className="tl__thumb-overlay">
                 <Play size={20} fill="#fff" strokeWidth={0} />
@@ -135,6 +155,11 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
                     {status.label}
                   </span>
                 )}
+                {audio === 'dub' && !hasDub && (
+                  <span className="tl__status" style={{ opacity: 0.75 }}>
+                    Sub only
+                  </span>
+                )}
 
                 {/* Latest Episode Badge */}
                 <span className="tl__ep-pill">
@@ -151,7 +176,7 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
                 )}
               </div>
 
-              <Link to={toWatch} className="tl__title">
+              <Link to={watchTarget} className="tl__title">
                 {cleanTitle}
               </Link>
 
@@ -185,7 +210,7 @@ export function ScheduleList({ entries, highlightId, todayDay }: Props) {
                 </button>
               )}
 
-              <Link className="tl__watch" to={toWatch} title={`Stream ${cleanTitle} Episode ${targetEp}`}>
+              <Link className="tl__watch" to={watchTarget} title={`Stream ${cleanTitle} Episode ${targetEp}`}>
                 <Play size={14} fill="currentColor" strokeWidth={0} aria-hidden="true" />
                 <span>Watch Ep {targetEp}</span>
                 <span className="sr-only"> — Stream {cleanTitle} Episode {targetEp}</span>

@@ -4,8 +4,14 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { AmbientBackground } from './components/AmbientBackground';
+import { SakuraEasterEgg } from './components/SakuraEasterEgg';
+import { DomainExpansion } from './components/DomainExpansion';
+import { CommandPalette } from './components/CommandPalette';
+import { QuickViewModal } from './components/QuickViewModal';
+import { BackToTop } from './components/BackToTop';
 import { checkAiringAlerts } from './lib/notifications';
 import { useMouseGlow } from './lib/useMouseGlow';
+import { useScrollReveal } from './lib/motion';
 import './styles/interactive-effects.css';
 
 const Watch = lazy(() => import('./pages/Watch').then((m) => ({ default: m.Watch })));
@@ -36,6 +42,7 @@ export function App() {
   const bare = pathname === '/discover';
 
   useMouseGlow();
+  useScrollReveal();
 
   useEffect(() => {
     // Airing notification polling
@@ -59,6 +66,11 @@ export function App() {
       </a>
       <ScrollToTop />
       <AmbientBackground />
+      <SakuraEasterEgg />
+      <DomainExpansion />
+      <CommandPalette />
+      <QuickViewModal />
+      <BackToTop />
       {!bare && <Header />}
       <main id="main">
         <div className="page-transition-wrap" key={pathname}>

@@ -264,8 +264,6 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
       anikoto_slug  TEXT,
       hianime_slug  TEXT,
       aniwatch_slug TEXT,
-      adb_slug      TEXT,
-      waw_slug      TEXT,
       confidence    REAL DEFAULT 1.0,
       updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
     );
@@ -280,8 +278,8 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
   const existingIds = new Set(existingRows.map((r) => r.id));
 
   const stmt = db.prepare(`
-    INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+    INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, confidence, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
     ON CONFLICT(anime_id) DO UPDATE SET
       mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
       anilist_id = coalesce(excluded.anilist_id, anime_id_map.anilist_id),
@@ -324,8 +322,6 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
           s.anikoto ?? null,
           s.hianime ?? null,
           s.aniwatch ?? null,
-          s.adb ?? null,
-          s.waw ?? null,
           confidence
         );
         count++;
@@ -342,8 +338,6 @@ export async function populateLocalIdMap(dbInstance, { sourcesPath = SOURCES_FIL
               s.anikoto ?? null,
               s.hianime ?? null,
               s.aniwatch ?? null,
-              s.adb ?? null,
-              s.waw ?? null,
               0.5
             );
             count++;
@@ -390,8 +384,6 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
       anikoto_slug  TEXT,
       hianime_slug  TEXT,
       aniwatch_slug TEXT,
-      adb_slug      TEXT,
-      waw_slug      TEXT,
       confidence    REAL DEFAULT 1.0,
       updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
     )
@@ -429,15 +421,12 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
       s.anikoto ?? null,
       s.hianime ?? null,
       s.aniwatch ?? null,
-      s.adb ?? null,
-      s.waw ?? null,
       confidence,
     ]);
   }
 
-  // 11 params per row, max 90 params per statement => chunk size 7
-  // (8 would be 88 params — safe but tight; 7 leaves headroom at 77)
-  const CHUNK_SIZE = 7;
+  // 9 params per row, max 90 params per statement => chunk size 8 (72 params)
+  const CHUNK_SIZE = 8;
   let count = 0;
 
   for (let i = 0; i < validEntries.length; i += CHUNK_SIZE) {
@@ -447,15 +436,15 @@ export async function populateRemoteIdMap({ sourcesPath = SOURCES_FILE, indexes 
 
     for (let r = 0; r < chunk.length; r++) {
       const row = chunk[r];
-      const offset = r * 11;
+      const offset = r * 9;
       valuePlaceholders.push(
-        `(?${offset + 1}, ?${offset + 2}, ?${offset + 3}, ?${offset + 4}, ?${offset + 5}, ?${offset + 6}, ?${offset + 7}, ?${offset + 8}, ?${offset + 9}, ?${offset + 10}, ?${offset + 11}, datetime('now'))`
+        `(?${offset + 1}, ?${offset + 2}, ?${offset + 3}, ?${offset + 4}, ?${offset + 5}, ?${offset + 6}, ?${offset + 7}, ?${offset + 8}, ?${offset + 9}, datetime('now'))`
       );
       params.push(...row);
     }
 
     const sql = `
-      INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
+      INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, confidence, updated_at)
       VALUES ${valuePlaceholders.join(',\n')}
       ON CONFLICT(anime_id) DO UPDATE SET
         mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),

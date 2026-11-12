@@ -88,7 +88,7 @@ describe('1. pacing ceiling (criterion: never above 30 req/min, even worst case)
     assert.ok(Date.now() - t0 >= 2500 - MEASURE_SLACK_MS, 'the run as a whole cannot be faster than one spacing');
   });
 
-  it('holds the floor across 50 consecutive sends (T6)', async () => {
+  it('holds the floor across 50 consecutive sends (T6)', { skip: process.env.RUN_PACING_TEST ? false : 'slow real-clock pacing test (125s)' }, async () => {
     /* The acceptance criterion is stated over 50 sends, because a short run can hide an
        anchor that drifts by a millisecond per request. This costs about two minutes of real
        elapsed time and that is the point: it measures the clock the limiter is actually

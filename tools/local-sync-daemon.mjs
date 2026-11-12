@@ -175,8 +175,8 @@ async function syncGrowthStage(db, quiet, batchSize = 3) {
           // Populate anime_id_map record for new title
           try {
             db.prepare(`
-              INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at)
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+              INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anikoto_slug, hianime_slug, aniwatch_slug, confidence, updated_at)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
               ON CONFLICT(anime_id) DO UPDATE SET
                 mal_id = coalesce(excluded.mal_id, anime_id_map.mal_id),
                 anilist_id = coalesce(excluded.anilist_id, anime_id_map.anilist_id),
@@ -190,8 +190,6 @@ async function syncGrowthStage(db, quiet, batchSize = 3) {
               item.anikoto ?? null,
               item.hianime ?? null,
               item.aniwatch ?? null,
-              item.adb ?? null,
-              item.waw ?? null,
               item.mal ? 1.0 : (item.anilist && item.kitsu ? 1.0 : 0.85)
             );
           } catch {}

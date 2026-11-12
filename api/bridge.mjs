@@ -280,11 +280,7 @@ const server = http.createServer(async (req, res) => {
 
       const searches = listAdapters().map(async (adapter) => {
         try {
-          const timeout = AbortSignal.timeout(800);
-          const raw = await Promise.race([
-            adapter.search(q, { signal: timeout }),
-            new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 800)),
-          ]);
+          const raw = await adapter.search(q, { signal: AbortSignal.timeout(800) });
           return (raw || []).map((it) => ({
             id: it.id || it.slug,
             slug: it.slug || it.id,
@@ -390,7 +386,7 @@ const server = http.createServer(async (req, res) => {
     const title = reqUrl.searchParams.get('title') || 'Anime';
     const ep = Number(reqUrl.searchParams.get('ep') || '1');
     const provider = (reqUrl.searchParams.get('provider') || 'anikoto').toLowerCase();
-    const isSubOnly = provider === 'anipm' || provider === 'torrent';
+    const isSubOnly = provider === 'torrent';
     const audios = [
       { id: 'sub', label: 'Japanese (Sub)', available: true, state: 'verified' },
     ];
@@ -572,6 +568,12 @@ const server = http.createServer(async (req, res) => {
               streamUrl: tracks.proxiedMaster,
               quality: '1080p',
               variants: (tracks.qualities || []).map((q) => `${q.height}p`),
+              audioTracks: Array.isArray(tracks.audio) ? tracks.audio.map((a) => ({
+                id: a.id !== undefined ? String(a.id) : (a.lang || 'ja'),
+                language: a.lang || 'ja',
+                label: a.label || a.name || a.lang,
+                default: Boolean(a.default),
+              })) : undefined,
               subtitles: (tracks.subtitles || []).map((s) => ({
                 language: s.lang || s.language || 'en',
                 name: s.label || s.name || 'Subtitle',
@@ -618,14 +620,35 @@ const server = http.createServer(async (req, res) => {
         const resolveFromAdapter = async (adapter) => {
           try {
             let details = null;
+            let resolvedSlug = slug || '';
             if (slug && (adapter.id === provider || provider === 'auto' || !provider)) {
               details = await adapter.details(slug).catch(() => null);
+              if (details) resolvedSlug = slug;
             }
             if (!details && title) {
               const searchResults = await adapter.search(title).catch(() => []);
               if (searchResults && searchResults.length > 0) {
-                const first = searchResults[0];
-                details = await adapter.details(first.slug || first.id).catch(() => null);
+                let targetItem = searchResults[0];
+                if (searchResults.length > 1) {
+                  const normTitle = title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+                  const exact = searchResults.find((it) => {
+                    const t = (it.title || it.name || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+                    return t === normTitle;
+                  });
+                  if (exact) {
+                    targetItem = exact;
+                  } else {
+                    const isTargetMovie = /\bmovie\b/i.test(title);
+                    const nonMovie = searchResults.find((it) => {
+                      const t = (it.title || it.name || '').toLowerCase();
+                      return isTargetMovie ? t.includes('movie') : (!t.includes('movie') && !t.includes('special') && !t.includes('recap'));
+                    });
+                    if (nonMovie) targetItem = nonMovie;
+                  }
+                }
+                const chosenSlug = targetItem.slug || targetItem.id;
+                details = await adapter.details(chosenSlug).catch(() => null);
+                if (details) resolvedSlug = chosenSlug;
               }
             }
 
@@ -642,6 +665,7 @@ const server = http.createServer(async (req, res) => {
                     if (res.kind === 'embed' || res.type === 'embed' || streamCandidate.includes('morencius') || (!streamCandidate.includes('.m3u8') && !streamCandidate.includes('.mp4') && streamCandidate.includes('/embed'))) {
                       return null; // Reject dead iframe embeds
                     }
+                    if (res && resolvedSlug) res.slug = resolvedSlug;
                     return res;
                   }
                 } else if (Array.isArray(src?.direct) && src.direct.length > 0) {
@@ -649,6 +673,7 @@ const server = http.createServer(async (req, res) => {
                   return {
                     master: { url: d.url },
                     streamUrl: d.url,
+                    slug: resolvedSlug || undefined,
                     quality: d.quality ? `${d.quality}p` : '1080p',
                     variants: src.direct.map((x) => (x.quality ? `${x.quality}p` : '720p')),
                     subtitles: src.subtitles || [],
@@ -712,11 +737,13 @@ const server = http.createServer(async (req, res) => {
       const responseData = {
         session: `sid-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
         provider: effectiveProvider,
+        slug: resolved.slug || slug || undefined,
         title,
         episode: { number: ep, title: `Episode ${ep}` },
         quality: resolved.quality || '1080p',
         variants,
         audio: effectiveAudio,
+        audioTracks: Array.isArray(resolved.audioTracks) && resolved.audioTracks.length > 0 ? resolved.audioTracks : undefined,
         skip: resolved.skip || null,
         proof,
         master: streamUrl,
@@ -767,6 +794,14 @@ import { resolve as pathResolve } from 'node:path';
 const isDirectRun = process.argv[1] && pathResolve(process.argv[1]) === pathResolve(fileURLToPath(import.meta.url));
 
 if (isDirectRun) {
+  server.on('error', (err) => {
+    // @ts-ignore
+    if (err?.code === 'EADDRINUSE') {
+      console.warn(`[bridge] Port ${PORT} already in use. Existing bridge process will be used.`);
+      process.exit(0);
+    }
+    throw err;
+  });
   server.listen(PORT, HOST, () => {
     console.log(`Stream Bridge listening on http://${HOST}:${PORT}`);
   });

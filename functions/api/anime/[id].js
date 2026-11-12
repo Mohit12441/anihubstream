@@ -240,33 +240,37 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
       } catch {}
     }
 
-    const { results: related } = await env.ANIHUB.prepare(
-      `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
-              a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
-              a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
-              a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
-              (SELECT group_concat(genre_id) FROM anime_genre ag2 WHERE ag2.anime_id = a.id) AS genre_ids,
-              (SELECT count(*) FROM episode e2 WHERE e2.anime_id = a.id) AS episode_count
-         FROM anime_genre ag
-         JOIN anime a ON a.id = ag.anime_id
-        WHERE ag.genre_id IN (SELECT genre_id FROM anime_genre WHERE anime_id = ?1)
-          AND a.id <> ?1
-        GROUP BY a.id
-        ORDER BY count(*) DESC, a.rating DESC
-        LIMIT 6`,
-    )
-      .bind(card.id)
-      .all();
+    const [relatedRes, seasons, provRes, themeRes] = await Promise.all([
+      env.ANIHUB.prepare(
+        `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
+                a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
+                a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
+                a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
+                (SELECT group_concat(genre_id) FROM anime_genre ag2 WHERE ag2.anime_id = a.id) AS genre_ids,
+                (SELECT count(*) FROM episode e2 WHERE e2.anime_id = a.id) AS episode_count
+           FROM anime_genre ag
+           JOIN anime a ON a.id = ag.anime_id
+          WHERE ag.genre_id IN (SELECT genre_id FROM anime_genre WHERE anime_id = ?1)
+            AND a.id <> ?1
+          GROUP BY a.id
+          ORDER BY count(*) DESC, a.rating DESC
+          LIMIT 6`,
+      )
+        .bind(card.id)
+        .all()
+        .catch(() => ({ results: [] })),
+      resolveFranchiseSeasons(env.ANIHUB, card),
+      env.ANIHUB.prepare(
+        `SELECT provider_id, provider_slug FROM anime_provider_mapping WHERE anime_id = ?1`
+      ).bind(card.id).all().catch(() => ({ results: [] })),
+      env.ANIHUB.prepare(
+        `SELECT kind, sequence, title, artist, episodes FROM anime_theme WHERE anime_id = ?1 ORDER BY kind DESC, sequence ASC`
+      ).bind(card.id).all().catch(() => ({ results: [] })),
+    ]);
 
-    const seasons = await resolveFranchiseSeasons(env.ANIHUB, card);
-
-    const { results: provRows } = await env.ANIHUB.prepare(
-      `SELECT provider_id, provider_slug FROM anime_provider_mapping WHERE anime_id = ?1`
-    ).bind(card.id).all().catch(() => ({ results: [] }));
-
-    const { results: themeRows } = await env.ANIHUB.prepare(
-      `SELECT kind, sequence, title, artist, episodes FROM anime_theme WHERE anime_id = ?1 ORDER BY kind DESC, sequence ASC`
-    ).bind(card.id).all().catch(() => ({ results: [] }));
+    const related = relatedRes?.results || [];
+    const provRows = provRes?.results || [];
+    const themeRows = themeRes?.results || [];
 
     const isOngoing = card.status === 'Ongoing' || card.status === 'Airing';
     const cacheTtl = isOngoing ? 1800 : 86400;

@@ -1,9 +1,9 @@
 // @ts-check
-import { HttpError, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, json, ok, withEdgeCache } from './_lib.js';
+import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, withEdgeCache } from './_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
-const BRIDGE_TIMEOUT_MS = 8_000;
+const BRIDGE_TIMEOUT_MS = 2_000;
 const ANISKIP_TIMEOUT_MS = 500;
 const ANISKIP_BASE = 'https://api.aniskip.com/v2';
 
@@ -25,50 +25,6 @@ function formatLanguageLabel(code) {
   if (c === 'ru' || c === 'rus') return 'Russian';
   if (c === 'ar' || c === 'ara') return 'Arabic';
   return code.toUpperCase();
-}
-
-function formatServerName(provider, serverId) {
-  const provNames = {
-    anikoto: 'AniKoto',
-    hianime: 'HiAnime',
-    aniwatch: 'AniWatch',
-    anipm: 'AniPM',
-    torrent: 'P2P Swarm',
-  };
-  const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
-  if (!serverId) return base;
-  const cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
-  return `${base} · ${cleanServer}`;
-}
-
-function buildAudioTracks(audio) {
-  if (audio === 'hindi') {
-    return [
-      { id: 'hin', language: 'hi', label: 'Hindi (Multi-Audio)', default: true },
-      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
-    ];
-  }
-  if (audio === 'spanish') {
-    return [
-      { id: 'es', language: 'es', label: 'Spanish (Latino/Castellano)', default: true },
-      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
-    ];
-  }
-  if (audio === 'russian') {
-    return [
-      { id: 'ru', language: 'ru', label: 'Russian (Multi-Voice)', default: true },
-      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
-    ];
-  }
-  if (audio === 'dub') {
-    return [
-      { id: 'en', language: 'en', label: 'English Dub', default: true },
-      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
-    ];
-  }
-  return [
-    { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true },
-  ];
 }
 
 async function fetchAniSkip(db, malId, ep, duration) {
@@ -335,6 +291,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     let resolvedTitle = titleParam;
     let resolvedMalId = malIdParam ? Number.parseInt(malIdParam, 10) : 0;
+    let resolvedAnilistId = 0;
     let durationSeconds = 1440;
     let rawEpisodeMarkers = null;
     let animeRow = null;
@@ -387,6 +344,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           ).bind(id, ep).first().catch(() => null);
         }
 
+        if (!animeRow && id) {
+          try {
+            const cleanPattern = `%${id.replace(/[-_]+/g, '%').slice(0, 30)}%`;
+            animeRow = await env.ANIHUB.prepare(`
+              SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
+                     e.runtime_seconds, e.markers,
+                     m.mal_id, m.kitsu_id, m.anilist_id,
+                     m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
+              FROM anime a
+              LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
+              LEFT JOIN anime_id_map m ON m.anime_id = a.id
+              WHERE a.id LIKE ?1 OR LOWER(a.title) LIKE ?1
+              LIMIT 1
+            `).bind(cleanPattern, ep).first();
+            if (animeRow) id = animeRow.id;
+          } catch {}
+        }
+
         if (animeRow) {
           if (!resolvedTitle) resolvedTitle = animeRow.title;
           if (animeRow.runtime_seconds) durationSeconds = animeRow.runtime_seconds;
@@ -411,13 +386,18 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               resolvedMalId = animeRow.mal_id;
             } else if (animeRow.skip_key_space === 'mal' && animeRow.skip_key_id) {
               resolvedMalId = animeRow.skip_key_id;
-            } else if (animeRow.source_ids) {
-              try {
-                const s = JSON.parse(animeRow.source_ids);
-                if (s.mal) resolvedMalId = Number(s.mal);
-              } catch {
-                // ignore
-              }
+            }
+          }
+          if (animeRow.anilist_id) {
+            resolvedAnilistId = animeRow.anilist_id;
+          }
+          if (animeRow.source_ids) {
+            try {
+              const s = JSON.parse(animeRow.source_ids);
+              if (!resolvedMalId && s.mal) resolvedMalId = Number(s.mal);
+              if (!resolvedAnilistId && s.anilist) resolvedAnilistId = Number(s.anilist);
+            } catch {
+              // ignore
             }
           }
         }
@@ -460,7 +440,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
       hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || null,
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || null,
-      anipm: animeRow?.anilist_id ? String(animeRow.anilist_id) : null,
+      anipm: resolvedAnilistId ? String(resolvedAnilistId) : (animeRow?.anilist_id ? String(animeRow.anilist_id) : null),
     };
 
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
@@ -548,13 +528,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           let direct = null;
           if (requested === 'hianime') {
             const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-            const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
+            const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
             if (zokoRes?.masterUrl) {
               direct = {
                 streamUrl: zokoRes.masterUrl,
                 referer: 'https://zokoanime.video/',
                 quality: zokoRes.defaultQuality || '1080p',
-                subtitles: [],
+                subtitles: zokoRes.subtitles || [],
                 provider: 'hianime',
                 skip: zokoRes.skip,
               };
@@ -582,6 +562,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (requested) resolveBridgeUrl.searchParams.set('provider', requested);
           if (serverParam) resolveBridgeUrl.searchParams.set('server', serverParam);
           if (resolvedMalId) resolveBridgeUrl.searchParams.set('mal', String(resolvedMalId));
+          if (resolvedAnilistId || animeRow?.anilist_id) resolveBridgeUrl.searchParams.set('anilist', String(resolvedAnilistId || animeRow.anilist_id));
           const provSlug = (requested && availableSlugs[requested]) || availableSlugs.anikoto || availableSlugs.hianime || availableSlugs.aniwatch || null;
           if (provSlug) resolveBridgeUrl.searchParams.set('slug', provSlug);
 
@@ -594,6 +575,14 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         return null;
       })(),
     ]);
+
+    if (bridgeRes?.slug && bridgeRes?.provider && id && env.ANIHUB) {
+      env.ANIHUB.prepare(
+        `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug)
+         VALUES (?1, ?2, ?3)
+         ON CONFLICT(anime_id, provider_id) DO UPDATE SET provider_slug = excluded.provider_slug, updated_at = datetime('now')`
+      ).bind(id, bridgeRes.provider, bridgeRes.slug).run?.()?.catch?.(() => {});
+    }
 
     const resolveUrl = (extra) => {
       const p = new URLSearchParams({ anime_id: id, ep: String(ep), ...extra });
@@ -745,7 +734,14 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         downloads: [],
       },
       ...(() => {
-        if (!animeRow?.anilist_id) return [];
+        let anilistId = resolvedAnilistId || animeRow?.anilist_id;
+        if (!anilistId && animeRow?.source_ids) {
+          try {
+            const s = JSON.parse(animeRow.source_ids);
+            if (s.anilist) anilistId = Number(s.anilist);
+          } catch {}
+        }
+        if (!anilistId && !resolvedTitle) return [];
         return [
           {
             id: 'anipm:beta',
@@ -777,6 +773,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             quality: '1080p',
             audio: 'sub',
             audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
+            subtitles: [],
+            downloads: [],
+          },
+          {
+            id: 'anipm:settlar-dub',
+            name: 'AniPM · Settlar HD (DUB)',
+            provider: 'anipm',
+            status: 'ready',
+            streamUrl: resolveUrl({ audio: 'dub', provider: 'anipm', server: 'settlar' }),
+            type: 'hls',
+            quality: '1080p',
+            audio: 'dub',
+            audioTracks: [{ id: 'audio-1', language: 'en', label: 'English (Dub)', default: true }],
             subtitles: [],
             downloads: [],
           },
@@ -833,7 +842,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           malId: resolvedMalId || null,
           scopedProvider: requested,
           scopedProviderUnavailable: false,
-          servers: [primaryServer, ...defaultServers.filter((s) => s.id !== primaryServer.id)],
+          servers: [
+            primaryServer,
+            ...defaultServers
+              .filter((s) => s.id !== primaryServer.id)
+              .map((s) => (s.subtitles?.length ? s : (subtitles.length ? { ...s, subtitles } : s))),
+          ],
           aniskip: aniskipData || null,
           providerHealth,
           availableProviders: getAvailableProvidersList(),
@@ -843,7 +857,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
 
       const isScopedUnavailable = !availableSlugs[requested];
-      const serversToReturn = defaultServers;
+      let serversToReturn = defaultServers;
+      if (requested && requested !== 'auto') {
+        const matching = defaultServers.filter((s) => s.provider === requested);
+        const others = defaultServers.filter((s) => s.provider !== requested);
+        serversToReturn = matching.length ? [...matching, ...others] : defaultServers;
+      }
 
       return ok({
         title: resolvedTitle,
@@ -879,8 +898,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     // Subtitles format
     const subtitles = (meta.subtitles || []).map((sub, idx) => {
-      let subUrl = sub.url || '';
-      if (subUrl.startsWith('http') && !subUrl.includes('/api/proxy')) {
+      let subUrl = sub.url || sub.proxyUrl || sub.uri || '';
+      if (subUrl.includes('/api/proxy') || subUrl.startsWith('/api/')) {
+        subUrl = subUrl.startsWith('http') ? subUrl : `${url.origin}${subUrl}`;
+      } else if (subUrl.startsWith('http')) {
         subUrl = activeReferer
           ? `${proxyBase}?url=${encodeURIComponent(subUrl)}&referer=${encodeURIComponent(activeReferer)}`
           : `${proxyBase}?url=${encodeURIComponent(subUrl)}`;
@@ -888,12 +909,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         subUrl = `${bridgeBase}${subUrl}`;
       }
       return {
-        id: `sub-${idx}`,
-        language: sub.language || 'en',
-        label: sub.label || sub.name || formatLanguageLabel(sub.language),
-        name: sub.name || sub.label || formatLanguageLabel(sub.language),
+        id: sub.id ? String(sub.id) : `sub-${idx}`,
+        language: sub.language || sub.lang || 'en',
+        label: sub.label || sub.name || formatLanguageLabel(sub.language || sub.lang),
+        name: sub.name || sub.label || formatLanguageLabel(sub.language || sub.lang),
         url: subUrl,
-        default: idx === 0,
+        default: sub.default !== undefined ? Boolean(sub.default) : idx === 0,
       };
     });
 
@@ -913,6 +934,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       primaryServerName += ' (Sub Only)';
     }
 
+    const primaryAudioTracks = (Array.isArray(meta.audioTracks) && meta.audioTracks.length > 0)
+      ? meta.audioTracks.map((t, i) => ({
+          id: t.id !== undefined ? String(t.id) : `audio-${i}`,
+          language: t.language || t.lang || 'ja',
+          label: t.label || t.name || t.language || 'Audio',
+          default: t.default !== undefined ? Boolean(t.default) : i === 0,
+        }))
+      : buildAudioTracks(resolvedAudio);
+
     const primaryServer = {
       id: activeServerId,
       name: primaryServerName,
@@ -922,7 +952,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       type: meta.type || (meta.kind === 'progressive' ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
       audio: resolvedAudio,
-      audioTracks: buildAudioTracks(resolvedAudio),
+      audioTracks: primaryAudioTracks,
       subtitles,
       thumbnails: meta.thumbnails?.url
         ? { url: `${url.origin}/api/proxy?url=${encodeURIComponent(meta.thumbnails.url)}` }
@@ -941,6 +971,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const cleanServerId = String(rawServerId).replace(/^.*?\s*·\s*/, '').trim();
         const sId = `${prov}:${cleanServerId}`;
         if (sId !== activeServerId && !servers.some((existing) => existing.id === sId)) {
+          const sAudioTracks = (Array.isArray(s.audioTracks) && s.audioTracks.length > 0)
+            ? s.audioTracks.map((t, i) => ({
+                id: t.id !== undefined ? String(t.id) : `audio-${i}`,
+                language: t.language || t.lang || 'ja',
+                label: t.label || t.name || t.language || 'Audio',
+                default: t.default !== undefined ? Boolean(t.default) : i === 0,
+              }))
+            : buildAudioTracks(audio);
+
           servers.push({
             id: sId,
             name: formatServerName(prov, cleanServerId),
@@ -950,7 +989,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             type: s.type || 'hls',
             quality: '1080p',
             audio,
-            audioTracks: buildAudioTracks(audio),
+            audioTracks: sAudioTracks,
             subtitles,
             downloads: [],
           });

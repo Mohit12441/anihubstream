@@ -89,3 +89,15 @@ test('Service Worker: sw.js defines notificationclick listener for interactive a
   assert.match(code, /event\.notification\.close\(\)/);
   assert.match(code, /openWindow/);
 });
+
+test('Airing Countdown: checkAiringAlerts recognizes slots that just aired within 15-min grace window', () => {
+  const notifSrc = readFileSync(resolve('src/lib/notifications.ts'), 'utf8');
+  assert.ok(
+    notifSrc.includes('elapsedSinceAir'),
+    'notifications.ts must compute elapsedSinceAir to handle slots that just aired'
+  );
+  assert.ok(
+    notifSrc.includes('isJustAired'),
+    'notifications.ts must flag isJustAired within grace window'
+  );
+});

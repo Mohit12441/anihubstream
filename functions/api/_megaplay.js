@@ -137,7 +137,7 @@ export async function resolveMegaplayEmbed(embedUrl) {
     .filter((t) => (t.kind === 'captions' || t.kind === 'subtitles' || t.file?.endsWith('.vtt')) && !t.file?.includes('thumbnails.vtt') && !t.file?.includes('/preview/'))
     .map((t, idx) => ({
       id: `sub-${idx}`,
-      language: t.label?.slice(0, 3)?.toLowerCase() || 'en',
+      language: t.label || t.name || 'English',
       label: t.label || t.name || 'English',
       name: t.label || t.name || 'English',
       url: t.file,

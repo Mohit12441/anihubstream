@@ -50,8 +50,10 @@ const ALLOWED_STREAMING_DOMAINS = [
   'cno.to',
   'beta.cno.to',
   'flashpod.top',
+  'beamcube.top',
   'mysubsplay.com',
   'subsplay.com',
+  'vidnest.fun',
   'kitsu.app',
   'anilist.co',
   'myanimelist.net',
@@ -70,9 +72,10 @@ const PRIVATE_IP_REGEX = /^(?:127\.|10\.|192\.168\.|169\.254\.|172\.(?:1[6-9]|2[
  * @param {string} hostname
  * @param {string} [targetUrl]
  * @param {string} [customReferer]
+ * @param {string} [provider]
  * @returns {boolean}
  */
-export function isHostAllowed(hostname, targetUrl = '', customReferer = '') {
+export function isHostAllowed(hostname, targetUrl = '', customReferer = '', provider = '') {
   if (!hostname || typeof hostname !== 'string') return false;
   const host = hostname.toLowerCase().trim();
 
@@ -91,10 +94,15 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '') {
     return true;
   }
 
-  // 2. Verified stream CDN pattern:
+  // 2. Verified provider patterns (e.g. Beta CDN rotated nodes *.top or *.cno.to)
+  if (provider === 'beta' && (host.endsWith('.top') || host.endsWith('.cno.to'))) {
+    return true;
+  }
+
+  // 3. Verified stream CDN pattern:
   // Upstream extractors (like Megaplay, AniKoto, HiAnime) dynamically rotate domain names for CDN video chunks.
   // Any public non-private domain requested with a trusted streaming Referer and anime media asset path/extension is authorized.
-  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm'];
+  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun'];
   const hasTrustedReferer = customReferer && trustedReferers.some((r) => customReferer.includes(r));
   if (hasTrustedReferer) {
     const isStreamAsset =
@@ -107,7 +115,7 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '') {
       targetUrl.includes('seg-') ||
       targetUrl.includes('chunk_') ||
       targetUrl.includes('chunk-') ||
-      /\.(?:m3u8|m3u|ts|m4s|mp4|webm|vtt|srt|key)(?:\?|$)/i.test(targetUrl);
+      /\.(?:m3u8|m3u|ts|m4s|mp4|webm|vtt|srt|key|gif|webp)(?:\?|$)/i.test(targetUrl);
     if (isStreamAsset) {
       return true;
     }
@@ -142,7 +150,8 @@ export function rewriteM3u8(text, baseUrl, referer, proxyBase, options = {}) {
       }
       const encoded = encodeURIComponent(abs.toString());
       const refParam = referer ? `&referer=${encodeURIComponent(referer)}` : '';
-      return `${proxyBase}?url=${encoded}${refParam}`;
+      const pParam = options.provider ? `&p=${encodeURIComponent(options.provider)}` : '';
+      return `${proxyBase}?url=${encoded}${refParam}${pParam}`;
     } catch {
       return uri;
     }
@@ -307,7 +316,7 @@ export const onRequest = async (context) => {
     }
 
     // 1. Strict Domain & SSRF Guard
-    if (!isHostAllowed(parsedTarget.hostname, targetUrl, customReferer)) {
+    if (!isHostAllowed(parsedTarget.hostname, targetUrl, customReferer, provParam)) {
       console.warn(`[PROXY 403] Host not allowed: "${parsedTarget.hostname}" | Target URL: ${targetUrl}`);
       throw new HttpError(403, 'forbidden', `Destination domain "${parsedTarget.hostname}" is not authorized`);
     }
@@ -347,9 +356,9 @@ export const onRequest = async (context) => {
 
     // Bridge forwarder for Settlar and Beta (bypasses Cloudflare JA3 bot fingerprinting via native transport)
     const bridgeBase = env?.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
-    if (parsedTarget.hostname.includes('settlar.io') || provParam === 'settlar' || parsedTarget.hostname.includes('cno.to') || provParam === 'beta') {
+    if (parsedTarget.hostname.includes('settlar.io') || provParam === 'settlar' || parsedTarget.hostname.includes('cno.to') || provParam === 'beta' || parsedTarget.hostname.includes('beamcube.top')) {
       try {
-        const effectiveP = provParam || (parsedTarget.hostname.includes('cno.to') ? 'beta' : 'settlar');
+        const effectiveP = provParam || (parsedTarget.hostname.includes('settlar.io') ? 'settlar' : 'beta');
         const bridgeProxyUrl = `${bridgeBase}/api/proxy?u=${encodeURIComponent(targetUrl)}&p=${effectiveP}`;
         const fwdHeaders = new Headers();
         if (rangeHeader) fwdHeaders.set('range', rangeHeader);
@@ -438,7 +447,8 @@ export const onRequest = async (context) => {
       const text = await upstreamRes.text();
       const proxyBase = `${reqUrl.origin}/api/proxy`;
       const filterAds = reqUrl.searchParams.get('filterAds') === '1';
-      const rewritten = rewriteM3u8(text, targetUrl, referer, proxyBase, { filterAds });
+      const provider = provParam || (targetUrl.includes('cno.to') ? 'beta' : (targetUrl.includes('settlar.io') ? 'settlar' : ''));
+      const rewritten = rewriteM3u8(text, targetUrl, referer, proxyBase, { filterAds, provider });
 
       return new Response(rewritten, {
         status: upstreamRes.status,

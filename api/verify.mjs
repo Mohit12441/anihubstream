@@ -19,10 +19,8 @@
 //                                                        MKV and reads its track list
 import { readFile, rm, stat } from "node:fs/promises";
 import * as anikoto from "./anikoto.mjs";
+import * as anipm from "./anipm.mjs";
 import * as aniwatch from "./aniwatch.mjs";
-import * as animekai from "./animekai.mjs";
-import * as animewave from "./animewave.mjs";
-import * as watchanimeworld from "./watchanimeworld.mjs";
 import * as hianime from "./hianime.mjs";
 
 const argv = process.argv.slice(2);
@@ -35,15 +33,9 @@ const positional = argv.find((a) => !a.startsWith("--"));
 const providerId = opt("provider", "anikoto");
 const PROVIDERS = {
   anikoto: { api: anikoto, referer: anikoto.defaultAniKotoReferer, slug: "anikoto:solo-leveling-ilh08" },
+  anipm: { api: anipm, referer: "https://ani.pm/", slug: "anipm:21" },
   aniwatch: { api: aniwatch, referer: aniwatch.defaultAniWatchReferer, slug: "aniwatch:solo-leveling-season-2-arise-from-the-shadow" },
-  animekai: { api: animekai, referer: animekai.defaultAnimeKaiReferer, slug: "animekai:solo-leveling" },
-  animewave: { api: animewave, referer: animewave.defaultAnimeWaveReferer, slug: "animewave:solo-leveling-season-2-arise-from-the-shadow-3eukp" },
   hianime: { api: hianime, referer: hianime.defaultHiAnimeReferer, slug: "hianime:solo-leveling-e5tfvj" },
-  // A Hindi-dub catalogue: its certainty is Naruto, not whatever is trending, and
-  // it is reached by series slug because the site has no numeric-id locator.
-  watchanimeworld: { api: watchanimeworld, referer: watchanimeworld.defaultWatchAnimeWorldReferer, slug: "watchanimeworld:naruto", probe: "naruto", defaultAudio: "dub" },
-  // Same dub-first catalogue, but its episodes are download funnels: the slug is a
-  // live series page and the audio answer lives inside one Multi Audio MKV.
 };
 const provider = PROVIDERS[providerId];
 if (!provider) {

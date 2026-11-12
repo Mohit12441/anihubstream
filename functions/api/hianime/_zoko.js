@@ -38,7 +38,7 @@ export function decodeZokoPayloadEdge(html) {
  * @param {string} embedUrl - e.g. https://zokoanime.video/stream/mal/52991/1/sub
  * @param {Object} [options]
  * @param {AbortSignal} [options.signal]
- * @returns {Promise<{ masterUrl: string, headers: Record<string, string>, defaultQuality?: string, skip?: any } | null>}
+ * @returns {Promise<{ masterUrl: string, headers: Record<string, string>, defaultQuality?: string, skip?: any, subtitles?: any[] } | null>}
  */
 export async function resolveZokoEmbedEdge(embedUrl, { signal } = {}) {
   try {
@@ -55,6 +55,23 @@ export async function resolveZokoEmbedEdge(embedUrl, { signal } = {}) {
     const payload = decodeZokoPayloadEdge(html);
     if (!payload || !payload.src) return null;
 
+    const rawSubs = Array.isArray(payload.subtitles) ? payload.subtitles : (Array.isArray(payload.tracks) ? payload.tracks : []);
+    const subtitles = rawSubs
+      .filter((s) => s && (s.src || s.file) && (s.kind === 'captions' || s.kind === 'subtitles' || !s.kind || (s.src || s.file).includes('.vtt')))
+      .map((s, i) => {
+        const url = s.src || s.file;
+        const label = s.label || s.name || s.lang || 'English';
+        const language = s.lang || label || 'English';
+        return {
+          id: `zoko-${i}`,
+          url,
+          language,
+          label,
+          name: label,
+          default: s.default === true || i === 0,
+        };
+      });
+
     return {
       masterUrl: payload.src,
       headers: {
@@ -63,6 +80,7 @@ export async function resolveZokoEmbedEdge(embedUrl, { signal } = {}) {
       },
       defaultQuality: payload.player?.default_quality || '1080p',
       skip: payload.skip || null,
+      subtitles,
     };
   } catch {
     return null;

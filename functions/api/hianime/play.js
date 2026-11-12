@@ -94,7 +94,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       const megaDirectUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${audio}`;
 
       // Race ZokoAnime and MegaPlay in parallel for minimum cold-start time
-      const zokoRace = resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3000) })
+      const zokoRace = resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) })
         .then((r) => (r?.masterUrl ? { type: 'zoko', res: r } : null))
         .catch(() => null);
 

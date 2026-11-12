@@ -22,9 +22,10 @@ import { NextEpisodeOverlay } from './NextEpisodeOverlay';
 import { WatchPartyPanel } from './WatchPartyPanel';
 import { WatchPartyClient, calculateDrift, shouldSync } from '../../lib/watchParty';
 import { captionAnchor, captionStyle } from './captionStyle';
+import { AmbilightGlow } from './AmbilightGlow';
 import type { PlayServer } from './PlayerInput';
 import { cleanServerName } from './ServerPopover';
-import type { BridgeSource } from '../../lib/streamBridge';
+import { bridgeUrl, type BridgeSource } from '../../lib/streamBridge';
 
 const COUNTDOWN = 8;
 
@@ -138,9 +139,9 @@ export function AdvancedPlayer(props: Props) {
       proof: { container: initialServer.type === 'embed' ? 'embed' : 'hls', checkedBytes: 1024 },
       master: initialServer.streamUrl,
       subtitles: (initialServer.subtitles || []).map((sub: any) => ({
-        language: sub.language,
+        language: sub.language || sub.lang || 'en',
         name: sub.label || sub.name || 'English',
-        url: sub.url,
+        url: sub.url || sub.proxyUrl || sub.uri || '',
       })),
       thumbnails: initialServer.thumbnails?.url ? { url: initialServer.thumbnails.url } : null,
       downloads: initialServer.downloads || [],
@@ -184,7 +185,7 @@ export function AdvancedPlayer(props: Props) {
       setAniSkipMarkers([]);
       return;
     }
-    const epLength = timelineDuration > 0 ? timelineDuration : toSeconds(episode.runtime);
+    const epLength = toSeconds(episode.runtime) || (timelineDuration > 0 ? timelineDuration : 1420);
     fetchSkipTimes(anime.malId, episode.n, epLength)
       .then((m) => {
         if (active) setAniSkipMarkers(m);
@@ -195,7 +196,7 @@ export function AdvancedPlayer(props: Props) {
     return () => {
       active = false;
     };
-  }, [anime.malId, episode.n, timelineDuration, episode.runtime]);
+  }, [anime.malId, episode.n, episode.runtime]);
 
   /* the provider's skip windows (via the bridge) take over once the stream is
      ready; the catalogue's synced AniSkip windows stand in until then */
@@ -816,6 +817,7 @@ export function AdvancedPlayer(props: Props) {
       onFocus={wake}
     >
       <div className="player__stage" ref={stageRef} data-chrome={chrome ? 'visible' : 'hidden'}>
+        <AmbilightGlow videoEl={live.videoEl} accentColor={anime.accent} />
         <Art
           sources={[anime.key, anime.poster]}
           alt={`${anime.title} — episode ${episode.n} frame`}
@@ -829,6 +831,7 @@ export function AdvancedPlayer(props: Props) {
           data-on={(!isEmbed && liveReady) || undefined}
           poster={anime.key || anime.poster}
           playsInline
+          crossOrigin="anonymous"
           preload="auto"
           aria-label={`Stream — ${anime.title} episode ${episode.n}`}
           style={isEmbed ? { display: 'none' } : undefined}
@@ -916,9 +919,20 @@ export function AdvancedPlayer(props: Props) {
                 ? 'Video stream is reconnecting. Click Retry to reload.'
                 : `${live.error ?? 'The stream could not be loaded.'}`}
             </p>
-            <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>
-              <RefreshCw size={14} aria-hidden="true" /> Retry
-            </button>
+            <div style={{ display: 'flex', gap: '8px', marginTop: '8px', justifyContent: 'center' }}>
+              <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>
+                <RefreshCw size={14} aria-hidden="true" /> Retry
+              </button>
+              {props.servers && props.servers.length > 1 && (
+                <button
+                  type="button"
+                  className="btn btn--sm btn--ghost"
+                  onClick={() => setMenu({ kind: 'server' })}
+                >
+                  <Server size={14} aria-hidden="true" /> Switch Server
+                </button>
+              )}
+            </div>
           </div>
         )}
 
@@ -1022,6 +1036,18 @@ export function AdvancedPlayer(props: Props) {
             markers={markers}
             thumbnailsUrl={live.info?.thumbnails?.url || initialServer?.thumbnails?.url || null}
             fallbackArt={episode.thumb || anime.key || anime.poster || null}
+            streamUrl={
+              live.info?.master
+                ? bridgeUrl(live.info.master)
+                : (initialServer?.streamUrl && !initialServer.streamUrl.includes('/api/play/resolve')
+                  ? bridgeUrl(initialServer.streamUrl)
+                  : null)
+            }
+            streamKind={
+              live.info?.kind ||
+              (initialServer?.type === 'mp4' ? 'progressive' : (initialServer?.type === 'embed' ? 'embed' : 'hls'))
+            }
+            primaryVideoEl={live.videoEl}
             onSeek={handlePartySeek}
             onScrub={setScrubbing}
           />

@@ -66,4 +66,62 @@ describe('Layer 2: PlayerInput Adapter Tests', () => {
     assert.strictEqual(input.subtitles.length, 0);
     assert.strictEqual(input.aniskip, undefined);
   });
+
+  it('parses WebVTT cue times and bodies accurately with parseVtt', async () => {
+    const { parseVtt } = await import('../src/lib/streamBridge.ts');
+    const vttSample = `WEBVTT
+
+00:00:02.500 --> 00:00:05.100
+<i>Wealth, fame, power...</i>
+
+00:01:10.000 --> 00:01:15.000 line:80% align:center
+The King of the Pirates!`;
+
+    const cues = parseVtt(vttSample);
+    assert.strictEqual(cues.length, 2);
+    assert.strictEqual(cues[0].start, 2.5);
+    assert.strictEqual(cues[0].end, 5.1);
+    assert.strictEqual(cues[0].text, 'Wealth, fame, power...');
+    assert.strictEqual(cues[1].start, 70);
+    assert.strictEqual(cues[1].end, 75);
+    assert.strictEqual(cues[1].text, 'The King of the Pirates!');
+  });
+
+  it('parses WebVTT containing STYLE and NOTE blocks without dropping cues', async () => {
+    const { parseVtt } = await import('../src/lib/streamBridge.ts');
+    const styledVtt = `WEBVTT
+
+NOTE This is a commentary block before styles
+
+STYLE
+::cue {
+  color: #fff;
+}
+
+00:00:01.000 --> 00:00:04.000
+First styled cue line.
+
+NOTE Another middle comment
+
+00:00:05.000 --> 00:00:08.000
+Second styled cue line.`;
+
+    const cues = parseVtt(styledVtt);
+    assert.strictEqual(cues.length, 2);
+    assert.strictEqual(cues[0].start, 1);
+    assert.strictEqual(cues[0].text, 'First styled cue line.');
+    assert.strictEqual(cues[1].start, 5);
+    assert.strictEqual(cues[1].text, 'Second styled cue line.');
+  });
+
+  it('subLangCode correctly resolves full labels, aliases, and 3-letter codes', async () => {
+    const { subLangCode } = await import('../src/lib/playerPrefs.ts');
+    assert.strictEqual(subLangCode('English'), 'en');
+    assert.strictEqual(subLangCode('eng'), 'en');
+    assert.strictEqual(subLangCode('Spanish'), 'es');
+    assert.strictEqual(subLangCode('spa'), 'es');
+    assert.strictEqual(subLangCode('Bahasa Indonesia'), 'id');
+    assert.strictEqual(subLangCode('bah'), 'id');
+    assert.strictEqual(subLangCode('Japanese'), 'ja');
+  });
 });

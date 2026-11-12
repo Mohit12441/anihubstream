@@ -166,22 +166,31 @@
 .acard__play {
   position: absolute;
   left: 50%;
-  top: 42%;
+  top: 50%;
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--tint) 88%, #000);
+  background: color-mix(in srgb, var(--tint, var(--crimson)) 88%, #000);
   color: #fff;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--tint) 55%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--tint, var(--crimson)) 55%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.7);
-  transition: opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease);
+  transform: translate(-50%, -50%) scale(0.65);
+  transition: opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+  z-index: 4;
 }
 .acard:hover .acard__play {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 12px 35px color-mix(in srgb, var(--tint, var(--crimson)) 75%, transparent),
+    0 0 24px color-mix(in srgb, var(--tint, var(--crimson)) 55%, transparent);
+}
+.acard--poster .acard__play {
+  top: 45%;
 }
 
 .acard__foot {

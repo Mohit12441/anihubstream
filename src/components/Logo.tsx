@@ -1,8 +1,33 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 export function Logo({ className = '' }: { className?: string }) {
+  const clickCount = useRef(0);
+  const clickTimer = useRef<number | null>(null);
+
+  const handleClick = () => {
+    clickCount.current += 1;
+    if (clickTimer.current) {
+      window.clearTimeout(clickTimer.current);
+    }
+
+    if (clickCount.current >= 5) {
+      clickCount.current = 0;
+      window.dispatchEvent(new CustomEvent('anihub:domain-expansion'));
+    } else {
+      clickTimer.current = window.setTimeout(() => {
+        clickCount.current = 0;
+      }, 1800);
+    }
+  };
+
   return (
-    <Link to="/" className={`wordmark ${className}`} aria-label="AniHubStream — home">
+    <Link
+      to="/"
+      className={`wordmark ${className}`}
+      aria-label="AniHubStream — home"
+      onClick={handleClick}
+    >
       <svg className="wordmark__emblem" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
         <path
           fill="currentColor"

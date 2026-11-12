@@ -111,8 +111,6 @@ export const getSchedule = () =>
   request<{ seasons: string[]; days: { day: number; dayLabel: string; entries: ApiCard[] }[] }>('/schedule');
 export const getAnime = (id: string) =>
   request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[]; themes?: AnimeTheme[] }>(`/anime/${encodeURIComponent(id)}`);
-export const getAnimeThemes = (id: string) =>
-  request<AnimeTheme[]>(`/anime/${encodeURIComponent(id)}/themes`);
 
 export interface PlayQuery {
   id: string;
@@ -150,19 +148,6 @@ export const getPlay = (query: PlayQuery, init?: RequestInit): Promise<PlayRespo
   return request<PlayResponse>(`/play${qs ? `?${qs}` : ''}`, init);
 };
 
-// Provider-Isolated API clients (HiAnime & AniKoto)
-export const getHianimeHome = () => request<any>('/hianime/home');
-export const getHianimeSearch = (q: string) => request<any>(`/hianime/search?q=${encodeURIComponent(q)}`);
-export const getHianimeAnime = (id: string) => request<any>(`/hianime/${encodeURIComponent(id)}`);
-export const getHianimePlay = (id: string, ep = 1, audio = 'sub') =>
-  request<any>(`/hianime/play?id=${encodeURIComponent(id)}&ep=${ep}&audio=${encodeURIComponent(audio)}`);
-
-export const getAnikotoHome = () => request<any>('/anikoto/home');
-export const getAnikotoSearch = (q: string) => request<any>(`/anikoto/search?q=${encodeURIComponent(q)}`);
-export const getAnikotoAnime = (id: string) => request<any>(`/anikoto/${encodeURIComponent(id)}`);
-export const getAnikotoPlay = (id: string, ep = 1, audio = 'sub') =>
-  request<any>(`/anikoto/play?id=${encodeURIComponent(id)}&ep=${ep}&audio=${encodeURIComponent(audio)}`);
-
 export const getLibrary = () => request<{ count: number; items: { addedAt: string; anime: ApiCard }[] }>('/me/library');
 export const addToLibrary = (animeId: string) =>
   request<{ saved: boolean; count: number; anime: ApiCard }>('/me/library', {
@@ -189,17 +174,6 @@ export const removePosition = (episodeId: string) =>
   request<{ removed: boolean }>(`/me/positions?episodeId=${encodeURIComponent(episodeId)}`, {
     method: 'DELETE',
   });
-
-export interface ApiRecommendation extends ApiCard {
-  matchPercentage?: number;
-  reason?: string;
-  seedTitle?: string;
-}
-
-export const getRecommendations = (animeId?: string, limit: number = 10) => {
-  const query = animeId ? `?id=${encodeURIComponent(animeId)}&limit=${limit}` : `?limit=${limit}`;
-  return request<{ target?: ApiCard; items: ApiRecommendation[]; total: number }>(`/recommendations${query}`);
-};
 
 export interface FederatedSearchResponse {
   query: string;

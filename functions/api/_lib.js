@@ -611,7 +611,7 @@ export const findAnimeByCandidates = async (db, candidates) => {
     if (!mapped?.anime_id) {
       mapped = await db.prepare(
         `SELECT anime_id FROM anime_id_map
-         WHERE anikoto_slug = ?1 OR hianime_slug = ?1 OR aniwatch_slug = ?1 OR waw_slug = ?1
+         WHERE anikoto_slug = ?1 OR hianime_slug = ?1 OR aniwatch_slug = ?1
          LIMIT 1`
       ).bind(cand).first().catch(() => null);
     }
@@ -628,6 +628,7 @@ export const CARD_COLUMNS = `
   a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status,
   a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
   a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season, a.sched_episode,
+  a.sched_sub_at, a.sched_dub_at,
   a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
   (SELECT group_concat(genre_id) FROM anime_genre ag WHERE ag.anime_id = a.id) AS genre_ids,
   (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) AS episode_count
@@ -668,13 +669,65 @@ export const strParam = (url, name, max = 64) => {
   return raw;
 };
 
-export const requiredBody = (body, name) => {
-  const value = body?.[name];
-  if (typeof value !== 'string' || value === '' || value.length > 200) {
-    throw new HttpError(400, 'bad_request', `${name} must be a non-empty string`);
+/**
+ * Parses variant renditions from an HLS master playlist
+ * @param {string} text
+ * @param {string} baseUrl
+ * @returns {Array<{ quality: string, bandwidth: number, url: string }>}
+ */
+export function parseMasterVariants(text, baseUrl) {
+  const lines = text.split(/\r?\n/);
+  const renditions = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line.startsWith('#EXT-X-STREAM-INF:')) continue;
+
+    const resMatch = line.match(/RESOLUTION=\d+x(\d+)/i);
+    const bwMatch = line.match(/BANDWIDTH=(\d+)/i);
+    const height = resMatch ? `${resMatch[1]}p` : 'unknown';
+    const bandwidth = bwMatch ? Number(bwMatch[1]) : 0;
+
+    let nextUrl = '';
+    for (let j = i + 1; j < lines.length; j++) {
+      const candidate = lines[j].trim();
+      if (!candidate || candidate.startsWith('#')) continue;
+      nextUrl = candidate;
+      break;
+    }
+
+    if (nextUrl) {
+      const fullUrl = nextUrl.startsWith('http') ? nextUrl : new URL(nextUrl, baseUrl).href;
+      renditions.push({ quality: height, bandwidth, url: fullUrl });
+    }
   }
-  return value;
-};
+
+  return renditions.sort((a, b) => {
+    const numA = parseInt(a.quality, 10) || 0;
+    const numB = parseInt(b.quality, 10) || 0;
+    return numB - numA || b.bandwidth - a.bandwidth;
+  });
+}
+
+/**
+ * Parses media segments from a media playlist
+ * @param {string} text
+ * @param {string} baseUrl
+ * @returns {string[]}
+ */
+export function parseMediaSegments(text, baseUrl) {
+  const lines = text.split(/\r?\n/);
+  const segments = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line || line.startsWith('#')) continue;
+    const fullUrl = line.startsWith('http') ? line : new URL(line, baseUrl).href;
+    segments.push(fullUrl);
+  }
+
+  return segments;
+}
 
 /* --- search matching ----------------------------------------------------
    Mirrors src/state/catalogue.tsx (foldSearch / matchScore / scoreSearchRow)
@@ -748,3 +801,47 @@ export const scoreSearchRow = (row, folded, tokens, genreLabels) => {
   else if (title.startsWith(folded)) score += 40;
   return score;
 };
+
+export function formatServerName(provider, serverId) {
+  const provNames = {
+    anikoto: 'AniKoto',
+    hianime: 'HiAnime',
+    aniwatch: 'AniWatch',
+    anipm: 'AniPM',
+    torrent: 'P2P Swarm',
+  };
+  const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
+  if (!serverId || serverId === 'default') return base;
+  const cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
+  return `${base} · ${cleanServer}`;
+}
+
+export function buildAudioTracks(audio) {
+  if (audio === 'hindi') {
+    return [
+      { id: 'hin', language: 'hi', label: 'Hindi (Multi-Audio)', default: true },
+      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
+    ];
+  }
+  if (audio === 'spanish') {
+    return [
+      { id: 'es', language: 'es', label: 'Spanish (Latino/Castellano)', default: true },
+      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
+    ];
+  }
+  if (audio === 'russian') {
+    return [
+      { id: 'ru', language: 'ru', label: 'Russian (Multi-Voice)', default: true },
+      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
+    ];
+  }
+  if (audio === 'dub') {
+    return [
+      { id: 'en', language: 'en', label: 'English Dub', default: true },
+      { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: false },
+    ];
+  }
+  return [
+    { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true },
+  ];
+}

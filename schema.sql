@@ -62,6 +62,7 @@ CREATE INDEX IF NOT EXISTS anime_by_year ON anime(year DESC, rating DESC);
 CREATE INDEX IF NOT EXISTS anime_by_skip_key ON anime(skip_key_space, skip_key_id);
 CREATE INDEX IF NOT EXISTS anime_by_search_text ON anime(search_text);
 CREATE INDEX IF NOT EXISTS anime_by_title ON anime(title);
+CREATE INDEX IF NOT EXISTS anime_by_title_lower ON anime(lower(title));
 
 CREATE TABLE IF NOT EXISTS genre (
   id       TEXT PRIMARY KEY,
@@ -138,17 +139,16 @@ CREATE TABLE IF NOT EXISTS sync_meta (
   value TEXT NOT NULL
 );
 
-/* Cross-referenced IDs (AniList, Kitsu, MyAnimeList) and provider slugs for federated search and playback. */
+/* Cross-referenced IDs (AniList, Kitsu, MyAnimeList, AniDB) and provider slugs for federated search and playback. */
 CREATE TABLE IF NOT EXISTS anime_id_map (
   anime_id      TEXT PRIMARY KEY REFERENCES anime(id) ON DELETE CASCADE,
   mal_id        INTEGER,
   anilist_id    INTEGER,
   kitsu_id      INTEGER,
+  anidb_id      INTEGER,
   anikoto_slug  TEXT,
   hianime_slug  TEXT,
   aniwatch_slug TEXT,
-  adb_slug      TEXT,
-  waw_slug      TEXT,
   confidence    REAL DEFAULT 1.0,
   updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -156,6 +156,7 @@ CREATE TABLE IF NOT EXISTS anime_id_map (
 CREATE UNIQUE INDEX IF NOT EXISTS uk_id_map_mal ON anime_id_map(mal_id) WHERE mal_id IS NOT NULL;
 CREATE UNIQUE INDEX IF NOT EXISTS uk_id_map_anilist ON anime_id_map(anilist_id) WHERE anilist_id IS NOT NULL;
 CREATE UNIQUE INDEX IF NOT EXISTS uk_id_map_kitsu ON anime_id_map(kitsu_id) WHERE kitsu_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS id_map_by_anidb ON anime_id_map(anidb_id) WHERE anidb_id IS NOT NULL;
 
 
 CREATE TABLE IF NOT EXISTS anime_redirect (
@@ -215,6 +216,8 @@ CREATE TABLE IF NOT EXISTS anime_provider_mapping (
 
 CREATE UNIQUE INDEX IF NOT EXISTS uk_provider_map_slug 
 ON anime_provider_mapping(provider_id, provider_slug);
+CREATE INDEX IF NOT EXISTS idx_provider_map_slug 
+ON anime_provider_mapping(provider_slug);
 
 -- Automated franchise and season relations for instant, bidirectional season switching
 CREATE TABLE IF NOT EXISTS anime_franchise_relation (

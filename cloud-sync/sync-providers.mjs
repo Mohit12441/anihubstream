@@ -39,35 +39,6 @@ const intEnv = (name, fallback) => {
 const BATCH_SIZE = intEnv('PROVIDERS_BATCH_SIZE', 50);
 
 /**
- * Normalizes title for comparison
- */
-function normalizeTitle(t) {
-  return String(t || '')
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/\p{M}/gu, '')
-    .replace(/['‘’`"]/g, '')
-    .replace(/\(.*?\)/g, ' ')
-    .replace(/\b(?:season|cour|part)\s+\p{L}+\b/gu, ' ')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
-}
-
-/**
- * @deprecated One-ID architecture resolves AniKoto dynamically via mal_id at playback time.
- */
-export async function syncAniKotoMappings() {
-  return 0;
-}
-
-/**
- * @deprecated One-ID architecture resolves AniWatch dynamically via MegaPlay/Zoko.
- */
-export async function syncAniWatchMappings() {
-  return 0;
-}
-
-/**
  * 3. Sync Franchise Relations
  */
 export async function syncFranchiseRelations() {

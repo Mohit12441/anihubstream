@@ -2,7 +2,7 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { onRequestGet as resolveServer } from '../functions/api/play/resolve.js';
-import { onRequest as proxyHandler, rewriteM3u8 } from '../functions/api/proxy.js';
+import { onRequest as proxyHandler, rewriteM3u8, isHostAllowed } from '../functions/api/proxy.js';
 import { onRequestGet as searchFederated } from '../functions/api/search.js';
 
 describe('Federated Architecture: Edge Services & Proxy Tests', () => {
@@ -114,6 +114,15 @@ describe('Federated Architecture: Edge Services & Proxy Tests', () => {
       const data = await res.json();
       assert.strictEqual(data.error, 'forbidden');
       assert.ok(data.message.includes('not authorized'));
+    });
+
+    it('authorizes AniPM Beta stream CDN domains and provider patterns', () => {
+      assert.strictEqual(isHostAllowed('beamcube.top', 'https://beamcube.top/hls/test/0000.mp4'), true);
+      assert.strictEqual(isHostAllowed('sub.beamcube.top', 'https://sub.beamcube.top/hls/test/0000.mp4'), true);
+      assert.strictEqual(isHostAllowed('flashpod.top', 'https://flashpod.top/hls/test/0000.mp4'), true);
+      assert.strictEqual(isHostAllowed('rotated-node.top', 'https://rotated-node.top/hls/test/0001.webp', '', 'beta'), true);
+      assert.strictEqual(isHostAllowed('rotated-node.cno.to', 'https://rotated-node.cno.to/hls/test/init.gif', '', 'beta'), true);
+      assert.strictEqual(isHostAllowed('unauthorized.org', 'https://unauthorized.org/video.mp4', '', 'beta'), false);
     });
 
     it('rejects private IP addresses and loopback destinations with 403', async () => {

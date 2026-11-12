@@ -99,15 +99,16 @@ export function getEpisodeReleaseStatus(
   day: number,
   timeStr: string,
   todayDay: number,
-  now: Date = new Date()
+  now: Date = new Date(),
+  useLocalTime = true,
 ): EpisodeReleaseStatus {
   const [hStr = '0', mStr = '0'] = (timeStr || '00:00').split(':');
   const slotHour = parseInt(hStr, 10);
   const slotMin = parseInt(mStr, 10);
 
   if (day === todayDay) {
-    const curHour = now.getHours();
-    const curMin = now.getMinutes();
+    const curHour = useLocalTime ? now.getHours() : now.getUTCHours();
+    const curMin = useLocalTime ? now.getMinutes() : now.getUTCMinutes();
     const currentMins = curHour * 60 + curMin;
     const slotMins = slotHour * 60 + slotMin;
 

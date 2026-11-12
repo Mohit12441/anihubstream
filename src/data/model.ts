@@ -100,6 +100,7 @@ export interface Anime {
   key: string;
   accent: string;
   synopsis: string;
+  trailer?: string | null;
   rank?: number;
   /** Position in AniList's global trending list at the last hourly refresh by
       sync-worker/; absent when the title is not trending (or the job has no data). */

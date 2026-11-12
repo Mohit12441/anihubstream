@@ -125,7 +125,3 @@ export function listAdapters() {
 export function listAdapterIds() {
   return listAdapters().map((a) => a.id);
 }
-
-export function getAvailableProviderIds() {
-  return Array.from(adapters.keys());
-}

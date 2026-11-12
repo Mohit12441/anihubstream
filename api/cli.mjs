@@ -54,9 +54,6 @@
 import { parseArgs } from "node:util";
 import * as anikoto from "./anikoto.mjs";
 import * as aniwatch from "./aniwatch.mjs";
-import * as animekai from "./animekai.mjs";
-import * as animewave from "./animewave.mjs";
-import * as watchanimeworld from "./watchanimeworld.mjs";
 import * as hianime from "./hianime.mjs";
 
 const { values, positionals } = parseArgs({ allowPositionals: true, options: {
@@ -89,13 +86,6 @@ const quality = values["quality"];
 const PROVIDERS = {
   anikoto: { api: anikoto, referer: anikoto.defaultAniKotoReferer, honoursAudioFlag: true },
   aniwatch: { api: aniwatch, referer: aniwatch.defaultAniWatchReferer, honoursAudioFlag: true },
-  animekai: { api: animekai, referer: animekai.defaultAnimeKaiReferer, honoursAudioFlag: true },
-  animewave: { api: animewave, referer: animewave.defaultAnimeWaveReferer, honoursAudioFlag: true },
-  // No embeds, no HLS, no resolve(): its sources() rows are already the bytes.
-  watchanimeworld: { api: watchanimeworld, referer: watchanimeworld.defaultWatchAnimeWorldReferer, honoursAudioFlag: true },
-  // No HLS either, but the other way round: its rows are ad-funnel hand-outs that
-  // resolve() walks to one progressive MKV, and its audio truth is a track count
-  // inside that file rather than a sub/dub pair.
   hianime: { api: hianime, referer: hianime.defaultHiAnimeReferer, honoursAudioFlag: true },
 };
 const providerId = values["provider"] ?? "anikoto";

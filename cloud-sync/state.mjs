@@ -123,7 +123,6 @@ export const budget = (endpoint, limit, { day = utcDay(), checkEvery = 25 } = {}
       sinceRead++;
       return true;
     },
-    get spent() { return sinceRead; },
     async remaining() {
       if (total === null) await sync();
       return Math.max(0, limit - total);

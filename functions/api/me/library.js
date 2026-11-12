@@ -53,9 +53,11 @@ export const onRequestPost = async ({ request, env }) => {
     await env.ANIHUB.prepare('INSERT OR IGNORE INTO library (viewer_id, anime_id) VALUES (?1, ?2)')
       .bind(id, animeId)
       .run();
-    const card = await env.ANIHUB.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`)
-      .bind(animeId)
-      .first();
+    const card = anime.title
+      ? anime
+      : await env.ANIHUB.prepare(`SELECT ${CARD_COLUMNS} FROM anime a WHERE a.id = ?1`)
+          .bind(animeId)
+          .first();
     return withViewer(json({ saved: true, count: await size(env, id), anime: cardFromRow(card) }), setCookie);
   } catch (err) {
     return errorResponse(err);

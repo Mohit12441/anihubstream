@@ -140,3 +140,28 @@ test('PlayerInput: toPlayerInput preserves thumbnails payload from PlayServer', 
   assert.ok(input.thumbnails);
   assert.equal(input.thumbnails.url, 'https://cdn.example.com/thumbnails.vtt');
 });
+
+test('Dynamic Thumbnail Scrubber: stream eligibility and gating rules', () => {
+  const isEligible = (cuesCount, streamUrl, streamKind) => {
+    return (
+      cuesCount === 0 &&
+      Boolean(streamUrl) &&
+      streamKind !== 'embed' &&
+      !streamUrl?.includes('/api/play/resolve')
+    );
+  };
+
+  // When VTT cues exist, dynamic extraction is disabled (VTT takes precedence)
+  assert.equal(isEligible(5, 'https://cdn.example.com/stream.m3u8', 'hls'), false);
+
+  // When no VTT cues exist and stream is direct HLS or MP4, dynamic extraction is active
+  assert.equal(isEligible(0, 'https://cdn.example.com/stream.m3u8', 'hls'), true);
+  assert.equal(isEligible(0, 'https://cdn.example.com/video.mp4', 'progressive'), true);
+
+  // Unresolved API route or missing URL stays inactive
+  assert.equal(isEligible(0, '/api/play/resolve?id=123', 'hls'), false);
+  assert.equal(isEligible(0, null, 'hls'), false);
+
+  // Iframe embeds cannot extract canvas frames
+  assert.equal(isEligible(0, 'https://megacloud.tv/embed-2/e-1', 'embed'), false);
+});

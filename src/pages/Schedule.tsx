@@ -1,14 +1,62 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { CalendarDays, Clock, Flame, Globe, Info, Sparkles, Timer } from 'lucide-react';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { Embers } from '../components/Embers';
 import { ScheduleList } from '../components/ScheduleList';
-import { artUrl, currentSeasonKey } from '../data/model';
-import type { SeasonKey } from '../data/model';
+import { artUrl, currentSeasonKey, DAYS } from '../data/model';
+import type { SeasonKey, ScheduleEntry } from '../data/model';
 import { convertSlotTimezone, getUserTimezoneLabel } from '../lib/scheduleTime';
 import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/pages.css';
+
+const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] as const;
+
+function formatScheduleEntry(
+  e: ScheduleEntry,
+  useLocalTime: boolean,
+  scheduleType: 'sub' | 'dub',
+): ScheduleEntry {
+  const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
+  const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
+
+  const targetIso = scheduleType === 'dub' ? schedDubAt : (scheduleType === 'sub' ? schedSubAt : null);
+  if (targetIso) {
+    const d = new Date(typeof targetIso === 'number' && targetIso < 1e11 ? targetIso * 1000 : targetIso);
+    if (!isNaN(d.getTime())) {
+      const dayOfWeek = useLocalTime ? d.getDay() : d.getUTCDay();
+      const day = dayOfWeek === 0 ? 7 : dayOfWeek;
+      const dayLabel = DAYS[day - 1] ?? e.dayLabel;
+      const time = useLocalTime
+        ? `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
+        : `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`;
+      const date = useLocalTime
+        ? `${MONTH_NAMES[d.getMonth()]} ${d.getDate()}`
+        : `${MONTH_NAMES[d.getUTCMonth()]} ${d.getUTCDate()}`;
+
+      return {
+        ...e,
+        day,
+        dayLabel,
+        time,
+        date,
+        sched_sub_at: schedSubAt,
+        sched_dub_at: schedDubAt,
+      };
+    }
+  }
+
+  const converted = convertSlotTimezone(e, useLocalTime);
+  return {
+    ...e,
+    day: converted.day,
+    dayLabel: converted.dayLabel,
+    time: converted.time,
+    date: converted.date,
+    sched_sub_at: schedSubAt,
+    sched_dub_at: schedDubAt,
+  };
+}
 
 type ReleaseFilter = 'all' | 'today' | 'upcoming' | 'released';
 
@@ -54,67 +102,31 @@ export function Schedule() {
 
   // Convert slots to viewer's local timezone (or keep UTC when toggled)
   const convertedAll = useMemo(
-    () =>
-      all.map((e) => {
-        const converted = convertSlotTimezone(e, useLocalTime);
-        const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
-        const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
-        const displayTime =
-          scheduleType === 'dub' && schedDubAt
-            ? new Date(schedDubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
-            : (scheduleType === 'sub' && schedSubAt
-              ? new Date(schedSubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
-              : converted.time);
-
-        return {
-          ...e,
-          day: converted.day,
-          dayLabel: converted.dayLabel,
-          time: displayTime,
-          date: converted.date,
-          sched_sub_at: schedSubAt,
-          sched_dub_at: schedDubAt,
-        };
-      }),
-    [all, useLocalTime, scheduleType],
+    () => {
+      const source = activeYear !== 'All years'
+        ? allScheduleEntries.filter((e) => String(e.anime.year) === activeYear)
+        : all;
+      return source.map((e) => formatScheduleEntry(e, useLocalTime, scheduleType));
+    },
+    [all, allScheduleEntries, activeYear, useLocalTime, scheduleType],
   );
 
-  const now = new Date();
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    const timer = setInterval(() => setNow(new Date()), 60000);
+    return () => clearInterval(timer);
+  }, []);
+
   const todayDay = useLocalTime
     ? (now.getDay() === 0 ? 7 : now.getDay())
     : (now.getUTCDay() === 0 ? 7 : now.getUTCDay());
 
-  const curHour = now.getHours();
-  const curMin = now.getMinutes();
+  const curHour = useLocalTime ? now.getHours() : now.getUTCHours();
+  const curMin = useLocalTime ? now.getMinutes() : now.getUTCMinutes();
   const curTotal = curHour * 60 + curMin;
 
   const entries = useMemo(() => {
-    let list = convertedAll;
-    if (activeYear !== 'All years' && !list.some((e) => String(e.anime.year) === activeYear)) {
-      list = allScheduleEntries.map((e) => {
-        const converted = convertSlotTimezone(e, useLocalTime);
-        const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
-        const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
-        const displayTime =
-          scheduleType === 'dub' && schedDubAt
-            ? new Date(schedDubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
-            : (scheduleType === 'sub' && schedSubAt
-              ? new Date(schedSubAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })
-              : converted.time);
-
-        return {
-          ...e,
-          day: converted.day,
-          dayLabel: converted.dayLabel,
-          time: displayTime,
-          date: converted.date,
-          sched_sub_at: schedSubAt,
-          sched_dub_at: schedDubAt,
-        };
-      });
-    }
-
-    return list
+    return convertedAll
       .filter((e) => {
         if (releaseFilter === 'today') {
           return e.day === todayDay;
@@ -131,11 +143,9 @@ export function Schedule() {
         }
         return day === null ? true : e.day === day;
       })
-      .filter((e) => (activeYear === 'All years' ? true : String(e.anime.year) === activeYear))
       .sort((a, b) => a.day - b.day || a.time.localeCompare(b.time));
-  }, [convertedAll, allScheduleEntries, day, activeYear, useLocalTime, releaseFilter, todayDay, curTotal]);
+  }, [convertedAll, day, releaseFilter, todayDay, curTotal]);
 
-  const airingToday = entries.find((e) => e.day === todayDay)?.anime?.id ?? null;
   const todayCount = convertedAll.filter((e) => e.day === todayDay).length;
 
   const upcomingCount = useMemo(() => {
@@ -277,7 +287,16 @@ export function Schedule() {
             <button
               type="button"
               className={`pill pill--sm${useLocalTime ? ' is-active' : ''}`}
-              onClick={() => setUseLocalTime(!useLocalTime)}
+              onClick={() => {
+                const nextLocal = !useLocalTime;
+                setUseLocalTime(nextLocal);
+                if (releaseFilter === 'today') {
+                  const nextToday = nextLocal
+                    ? (now.getDay() === 0 ? 7 : now.getDay())
+                    : (now.getUTCDay() === 0 ? 7 : now.getUTCDay());
+                  setDay(nextToday);
+                }
+              }}
               title={useLocalTime ? 'Click to show times in UTC' : `Click to show times in your local timezone (${tzLabel})`}
               aria-pressed={useLocalTime}
               style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}
@@ -366,7 +385,12 @@ export function Schedule() {
         {status === 'loading' && <CatalogueLoading grid={false} rows={6} />}
         {status === 'ready' && (
           <div>
-            <ScheduleList entries={entries} todayDay={todayDay} highlightId={airingToday} />
+            <ScheduleList
+              entries={entries}
+              todayDay={todayDay}
+              useLocalTime={useLocalTime}
+              audio={scheduleType}
+            />
           </div>
         )}
 

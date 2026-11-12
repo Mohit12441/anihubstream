@@ -9,7 +9,7 @@ const ROOT = process.cwd();
 test('Header Navigation contains Episode Schedule Tab', () => {
   const header = fs.readFileSync(path.resolve(ROOT, 'src/components/Header.tsx'), 'utf8');
   assert.ok(
-    header.includes("{ label: 'Episode Schedule', to: '/schedule' }"),
+    /label:\s*['"]Episode Schedule['"].*to:\s*['"]\/schedule['"]/s.test(header),
     'Header.tsx NAV must have Episode Schedule tab linking to /schedule'
   );
 });
@@ -148,5 +148,26 @@ test('sync-episodes supports high episode numbers without artificial 50-episode 
   assert.ok(
     syncSrc.includes('2000'),
     'sync-episodes must support episode ceiling up to 2000 for long-running series'
+  );
+});
+
+test('ScheduleList saves UTC schedule coordinates for notifications and checks denied permissions', () => {
+  const listSrc = fs.readFileSync(path.resolve(ROOT, 'src/components/ScheduleList.tsx'), 'utf8');
+  const notifSrc = fs.readFileSync(path.resolve(ROOT, 'src/lib/notifications.ts'), 'utf8');
+
+  // Must derive UTC schedule for notification subscriptions
+  assert.ok(
+    listSrc.includes('rawSched'),
+    'ScheduleList must compute rawSched coordinates in UTC for notification engine'
+  );
+  assert.ok(
+    listSrc.includes('subSet = new Set('),
+    'ScheduleList must batch-read localStorage notification subscriptions'
+  );
+
+  // Must reject denied notification permission
+  assert.ok(
+    notifSrc.includes("Notification.permission === 'denied'"),
+    'notifications.ts must reject subscription immediately if Notification permission is denied'
   );
 });

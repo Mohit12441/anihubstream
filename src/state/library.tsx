@@ -135,8 +135,10 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
 
   const recordPosition = useCallback(
     (anime: Anime, n: number, episodeTitle: string, seconds: number, runtimeSeconds: number) => {
-      if (!Number.isFinite(seconds) || seconds <= 0 || !Number.isFinite(runtimeSeconds)) return;
-      const clamped = Math.min(seconds, runtimeSeconds);
+      if (!Number.isFinite(seconds) || seconds <= 0) return;
+      const clamped = Number.isFinite(runtimeSeconds) && runtimeSeconds > 0
+        ? Math.min(seconds, runtimeSeconds)
+        : seconds;
       pending.current = { animeId: anime.id, n, seconds: clamped };
       if (timer.current === null) {
         timer.current = window.setTimeout(() => {

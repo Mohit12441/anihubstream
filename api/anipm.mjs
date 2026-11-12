@@ -3,6 +3,7 @@ import { curlText, curlOpen } from '../lib/tls.mjs';
 import { upstreamHeaders, PROVIDERS } from '../lib/providers.mjs';
 import { parseMaster, isMaster } from '../lib/m3u8.mjs';
 import { langName, audioRank } from '../lib/langs.mjs';
+export { download, sniffContainer } from './anikoto.mjs';
 
 export const PROVIDER = {
   id: 'anipm',
@@ -41,7 +42,7 @@ export class ResolveError extends Error {
 export const proxied = (u, p) => `${BRIDGE}/api/proxy?u=${encodeURIComponent(u)}&p=${p}`;
 
 async function readMaster(url, provider) {
-  const r = await curlOpen(url, upstreamHeaders(provider, { Accept: '*/*' }));
+  const r = await curlOpen(url, upstreamHeaders(provider, { Accept: '*/*' }), { timeoutMs: 3000 });
   let body = '';
   for await (const c of r.stream) body += c;
   if (r.status !== 200) throw new ResolveError('master_status', `${r.status}`);
@@ -125,7 +126,7 @@ export async function betaMasterUrl(anilistId, ep, slug = null) {
         h += chunk;
         if (h.length >= 512) break;
       }
-      try { head.child.kill('SIGKILL'); } catch {}
+      try { head.child.kill(); } catch {}
       if (head.status === 200 && h.startsWith('#EXTM3U')) {
         PATH_CACHE.set(String(anilistId), { at: Date.now(), path: effectivePath });
         return directUrl;
@@ -135,7 +136,8 @@ export async function betaMasterUrl(anilistId, ep, slug = null) {
 
   const page = await curlText(
     `https://ani.pm/anime/x?ep=e${ep}&id=${anilistId}`,
-    upstreamHeaders('anipm', { accept: 'text/html' })
+    upstreamHeaders('anipm', { accept: 'text/html' }),
+    2500
   ).catch(() => '');
 
   const direct = page.match(BETA_RE);
@@ -156,6 +158,12 @@ export async function betaMasterUrl(anilistId, ep, slug = null) {
 }
 
 export async function resolveBeta({ anilistId, ep, slug = null }) {
+  const trackKey = `beta:${anilistId}:${ep}`;
+  const cachedTracks = TRACKS_CACHE.get(trackKey);
+  if (cachedTracks && Date.now() - cachedTracks.at < TTL.tracks) {
+    return cachedTracks.data;
+  }
+
   const masterUrl = await betaMasterUrl(anilistId, ep, slug);
   const text = await readMaster(masterUrl, 'beta');
   const parsed = parseMaster(text, masterUrl);
@@ -167,7 +175,7 @@ export async function resolveBeta({ anilistId, ep, slug = null }) {
   const groups = new Set(parsed.qualities.map((q) => q.audioGroup).filter(Boolean));
   const best = parsed.qualities.find((q) => q.audioGroup && groups.has(q.audioGroup)) || parsed.qualities[0];
 
-  return {
+  const result = {
     server: 'beta',
     kind: 'hls',
     switchableAudio: true, // in-player via hls.audioTrack
@@ -188,23 +196,31 @@ export async function resolveBeta({ anilistId, ep, slug = null }) {
     subtitles: parsed.subtitles.map((t, i) => ({
       id: i,
       lang: t.lang,
+      language: t.lang,
       label: t.label,
+      name: t.label,
       group: t.group,
       forced: t.forced,
       default: t.default,
       uri: t.uri,
+      url: t.uri ? proxied(t.uri, 'beta') : null,
       proxyUrl: t.uri ? proxied(t.uri, 'beta') : null,
     })),
     qualities: parsed.qualities.map((q) => ({ height: q.height, bandwidth: q.bandwidth, codecs: q.codecs })),
   };
+
+  TRACKS_CACHE.set(trackKey, { at: Date.now(), data: result });
+  return result;
 }
 
 /* ---------- settlar ---------- */
 
 export async function settlarChain(anilistId, ep, lang) {
+  const cleanLang = lang === 'dub' ? 'dub' : 'sub';
   const html = await curlText(
-    `https://ani.pm/embed/ani/${anilistId}/${ep}/${lang}`,
-    upstreamHeaders('anipm', { accept: 'text/html' })
+    `https://ani.pm/embed/ani/${anilistId}/${ep}/${cleanLang}`,
+    upstreamHeaders('anipm', { accept: 'text/html' }),
+    2500
   );
   const m = html.match(CONFIG_RE);
   if (!m) throw new ResolveError('nonce_not_found', 'config script missing');
@@ -213,8 +229,9 @@ export async function settlarChain(anilistId, ep, lang) {
 
   const s = JSON.parse(
     await curlText(
-      `https://ani.pm/api/partner/v1/session?n=${nonce}&id=${anilistId}&ep=${ep}&lang=${lang}&adult=1`,
-      upstreamHeaders('anipm', { accept: 'application/json' })
+      `https://ani.pm/api/partner/v1/session?n=${nonce}&id=${anilistId}&ep=${ep}&lang=${cleanLang}&adult=1`,
+      upstreamHeaders('anipm', { accept: 'application/json' }),
+      2500
     )
   );
   if (!s.token) throw new ResolveError('no_token', 'no partner token');
@@ -222,7 +239,8 @@ export async function settlarChain(anilistId, ep, lang) {
   const payload = JSON.parse(
     await curlText(
       `https://embed.settlar.io/api/embed/session?t=${encodeURIComponent(s.token)}`,
-      upstreamHeaders('settlar', { accept: 'application/json' })
+      upstreamHeaders('settlar', { accept: 'application/json' }),
+      2500
     )
   );
   if (!payload.source) throw new ResolveError('no_source', 'no source');
@@ -235,27 +253,45 @@ export async function resolveSettlar({ anilistId, ep, lang }) {
   const parsed = parseMaster(text, payload.source);
 
   // subtitles come from the embed payload, richer than the playlist
-  const subs = (payload.subtitles || []).map((s, i) => ({
-    id: i,
-    lang: (s.language || s.lang || 'und').toLowerCase(),
-    label: s.label || langName(s.language || s.lang),
-    forced: !!s.forced,
-    default: !!s.default,
-    proxyUrl: proxied(s.url || s.src, 'settlar'),
-  }));
+  const subs = (payload.subtitles || []).map((s, i) => {
+    const lang = (s.language || s.lang || 'und').toLowerCase();
+    const label = s.label || langName(lang);
+    const pUrl = proxied(s.url || s.src, 'settlar');
+    return {
+      id: i,
+      lang,
+      language: lang,
+      label,
+      name: label,
+      forced: !!s.forced,
+      default: !!s.default,
+      url: pUrl,
+      proxyUrl: pUrl,
+    };
+  });
+
+  const audioTracks = (parsed.audio && parsed.audio.length > 0)
+    ? parsed.audio.map((a, i) => ({
+        id: i,
+        lang: a.lang,
+        label: a.name || langName(a.lang),
+        default: a.default || (i === 0),
+        sessionLang: a.lang === 'ja' ? 'sub' : (a.lang === 'en' ? 'dub' : a.lang),
+      }))
+    : [
+        { id: 0, lang: 'ja', label: 'Japanese', default: lang === 'sub', sessionLang: 'sub' },
+        { id: 1, lang: 'en', label: 'English', default: lang === 'dub', sessionLang: 'dub' },
+      ];
 
   return {
     server: 'settlar',
     kind: 'hls',
-    switchableAudio: false, // audio is per-session, needs re-resolve
+    switchableAudio: audioTracks.length > 1,
     masterUrl: payload.source,
     proxiedMaster: proxied(payload.source, 'settlar'),
     startLevel: 0,
     sessionLang: lang,
-    audio: [
-      { id: 0, lang: 'ja', label: 'Japanese', default: lang === 'sub', sessionLang: 'sub' },
-      { id: 1, lang: 'en', label: 'English', default: lang === 'dub', sessionLang: 'dub' },
-    ],
+    audio: audioTracks,
     subtitles: subs,
     qualities: parsed.qualities.map((q) => ({ height: q.height, bandwidth: q.bandwidth })),
     skip: skip ? { introStart: skip.start, introEnd: skip.end } : null,
@@ -316,6 +352,12 @@ export async function resolveStream({ anilistId, ep, lang = 'sub', refresh = fal
     streamUrl: settlarData.proxiedMaster,
     master: { url: settlarData.proxiedMaster },
     title: `AniPM Ep ${ep}`,
+    audioTracks: (settlarData.audio || []).map((a) => ({
+      id: String(a.id),
+      language: a.lang,
+      label: a.label,
+      default: Boolean(a.default),
+    })),
     subtitles: settlarData.subtitles.map((s) => ({
       label: s.label,
       language: s.lang,
@@ -330,7 +372,25 @@ export async function resolveStream({ anilistId, ep, lang = 'sub', refresh = fal
 }
 
 export async function resolve(arg1, opts = {}) {
-  const anilistId = (arg1 && typeof arg1 === 'object' && (arg1.anilistId || arg1.id)) || opts.anilistId || opts.id || null;
+  if (typeof arg1 === 'string' && (arg1.startsWith('http://') || arg1.startsWith('https://'))) {
+    return {
+      provider: 'anipm',
+      extractor: 'anipm',
+      master: { url: arg1 },
+      streamUrl: arg1,
+      type: 'hls',
+      kind: 'hls',
+      quality: '1080p',
+      variants: [{ url: arg1, quality: '1080p' }],
+      audioTracks: [],
+      subtitles: [],
+      proof: { container: 'hls', checkedBytes: 188 },
+    };
+  }
+
+  const anilistId = (arg1 && typeof arg1 === 'object' && (arg1.anilistId || arg1.id))
+    || (typeof arg1 === 'string' && !arg1.startsWith('http') ? arg1.replace(/^anipm:/, '') : null)
+    || opts.anilistId || opts.id || null;
   const ep = (arg1 && typeof arg1 === 'object' && arg1.ep) || opts.ep || 1;
   const lang = (arg1 && typeof arg1 === 'object' && (arg1.lang || arg1.audio)) || opts.audio || 'sub';
   const server = opts.server || (arg1 && typeof arg1 === 'object' && arg1.server) || 'beta';
@@ -343,12 +403,19 @@ export async function resolve(arg1, opts = {}) {
     const tracks = await resolveTracks({ anilistId, ep: Number(ep), lang, server });
     return {
       provider: 'anipm',
+      extractor: 'anipm',
       master: { url: tracks.proxiedMaster },
       streamUrl: tracks.proxiedMaster,
       type: 'hls',
       kind: 'hls',
       quality: '1080p',
-      variants: tracks.qualities.map((q) => `${q.height}p`),
+      variants: tracks.qualities.map((q) => ({ url: tracks.proxiedMaster, quality: `${q.height}p` })),
+      audioTracks: (tracks.audio || []).map((a) => ({
+        id: a.id !== undefined ? String(a.id) : (a.lang || 'ja'),
+        language: a.lang || 'ja',
+        label: a.label || a.name || a.lang,
+        default: Boolean(a.default),
+      })),
       subtitles: tracks.subtitles.map((s) => ({
         label: s.label,
         language: s.lang,
@@ -363,12 +430,19 @@ export async function resolve(arg1, opts = {}) {
     const fallback = await resolveSettlar({ anilistId, ep: Number(ep), lang });
     return {
       provider: 'anipm',
+      extractor: 'anipm',
       master: { url: fallback.proxiedMaster },
       streamUrl: fallback.proxiedMaster,
       type: 'hls',
       kind: 'hls',
       quality: '1080p',
-      variants: fallback.qualities.map((q) => `${q.height}p`),
+      variants: fallback.qualities.map((q) => ({ url: fallback.proxiedMaster, quality: `${q.height}p` })),
+      audioTracks: (fallback.audio || []).map((a) => ({
+        id: a.id !== undefined ? String(a.id) : (a.lang || 'ja'),
+        language: a.lang || 'ja',
+        label: a.label || a.name || a.lang,
+        default: Boolean(a.default),
+      })),
       subtitles: fallback.subtitles.map((s) => ({
         label: s.label,
         language: s.lang,
@@ -414,20 +488,31 @@ export async function search(query, opts = {}) {
 }
 
 export async function details(slugOrId) {
-  let cleanId = String(slugOrId).trim();
-  return {
-    id: cleanId,
-    slug: cleanId,
-    title: cleanId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
-    poster: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400',
+  let cleanId = String(slugOrId).trim().replace(/^anipm:/, '');
+  const title = cleanId.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  const media = {
+    id: `anipm:${cleanId}`,
+    kind: 'anime',
+    title,
+    coverUrl: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400',
     synopsis: 'AniPM multi-track anime stream.',
+    year: 2024,
+  };
+  return {
+    media,
+    id: `anipm:${cleanId}`,
+    slug: cleanId,
+    title,
+    poster: media.coverUrl,
+    synopsis: media.synopsis,
     totalEpisodes: 1,
-    episodes: [{ id: `${cleanId}:1`, number: 1, title: 'Episode 1' }],
+    episodes: [{ id: `${cleanId}:1`, number: 1, title: 'Episode 1', audioType: 'sub' }],
   };
 }
 
 export async function sources(epIdOrRef, opts = {}) {
-  const parts = String(epIdOrRef).split(':');
+  const clean = String(epIdOrRef).replace(/^anipm:/, '');
+  const parts = clean.split(':');
   let animeId = parts[0] || '';
   const epNum = Number(parts[1] || '1');
   const audio = opts?.audioType === 'dub' ? 'dub' : 'sub';

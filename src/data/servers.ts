@@ -119,19 +119,6 @@ export const SERVERS: StreamServer[] = [
   ANIPM_SERVER,
 ];
 
-export const serverById = (id: string): StreamServer => {
-  if (id.startsWith('anikoto:')) {
-    const mirror = id.slice('anikoto:'.length);
-    return {
-      ...LIVE_SERVER,
-      id,
-      name: `AniKoto · ${mirror}`,
-      note: `AniKoto ${mirror} mirror server`,
-    };
-  }
-  return SERVERS.find((s) => s.id === id) ?? LIVE_SERVER;
-};
-
 const ALL_PROVIDER_IDS = [
   'aniwatch',
   'hianime',
@@ -165,15 +152,16 @@ export function providerFromId(serverId: string): string {
   return ALL_PROVIDER_IDS.includes(lower) ? lower : 'anikoto';
 }
 
-export function serverIdFromProvider(provider?: string): string {
-  if (!provider) return 'anikoto:HD-1';
+export function serverIdFromProvider(provider?: string, audio?: string): string {
+  const isDub = (audio || '').toLowerCase() === 'dub';
+  if (!provider) return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
   if (provider.includes(':')) return provider;
   const norm = provider.toLowerCase();
-  if (norm === 'hianime') return 'hianime:HD-1';
-  if (norm === 'anikoto') return 'anikoto:HD-1';
-  if (norm === 'aniwatch') return 'aniwatch:HD-1';
-  if (norm === 'anipm') return 'anipm:default';
-  return `${norm}:HD-1`;
+  if (norm === 'hianime') return isDub ? 'hianime:HD-1-dub' : 'hianime:HD-1';
+  if (norm === 'anikoto') return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
+  if (norm === 'aniwatch') return isDub ? 'aniwatch:HD-1-dub' : 'aniwatch:HD-1';
+  if (norm === 'anipm') return isDub ? 'anipm:settlar-dub' : 'anipm:beta';
+  return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;
 }
 
 export const SERVER_STATUS_LABEL: Record<ServerStatus, string> = {

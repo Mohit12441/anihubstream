@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { Genre } from '../data/model';
 import { genreIcon } from './genreIcons';
+import { soundFx } from '../lib/soundFx';
 
 interface Props {
   genres: Genre[];
@@ -22,8 +23,10 @@ export function GenreGrid({ genres, active, counts, onSelect }: Props) {
               to={`/genres?genre=${g.id}`}
               className={`gcard${on ? ' is-on' : ''}`}
               style={{ '--pc': g.accent } as React.CSSProperties}
+              onMouseEnter={() => soundFx.playHover()}
               onClick={(e) => {
                 e.preventDefault();
+                soundFx.playClick();
                 onSelect(g.id);
               }}
               aria-pressed={on}

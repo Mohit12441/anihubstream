@@ -1,6 +1,6 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Star } from 'lucide-react';
+import { ArrowRight, Info, Play, Star } from 'lucide-react';
 import { Art } from './Art';
 import { AiringCountdown } from './AiringCountdown';
 import { stamp } from '../lib/time';
@@ -9,6 +9,7 @@ import { CardMeta } from './CardMeta';
 import { useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { warmStreamOrigins } from '../lib/warmConnections';
+import { soundFx } from '../lib/soundFx';
 
 interface Props {
   anime: Anime;
@@ -36,16 +37,32 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
   const tint = rank ? rankTint[(rank - 1) % rankTint.length] : anime.accent;
 
   const hoverTimer = useRef<number | null>(null);
+  const previewTimer = useRef<number | null>(null);
+  const [videoPreview, setVideoPreview] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
   const handleMouseEnter = () => {
     hoverTimer.current = window.setTimeout(() => {
       warmStreamOrigins();
     }, 300);
+
+    if (anime.trailer) {
+      previewTimer.current = window.setTimeout(() => {
+        setVideoPreview(true);
+      }, 1300);
+    }
   };
+
   const handleMouseLeave = () => {
     if (hoverTimer.current) {
       window.clearTimeout(hoverTimer.current);
       hoverTimer.current = null;
     }
+    if (previewTimer.current) {
+      window.clearTimeout(previewTimer.current);
+      previewTimer.current = null;
+    }
+    setVideoPreview(false);
   };
 
   if (variant === 'poster') {
@@ -59,6 +76,23 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
       >
         <div className="acard__media acard__media--poster">
           <Art sources={[anime.poster, anime.key]} alt={`${anime.title} poster art`} fill width={280} height={400} />
+          {videoPreview && anime.trailer && (
+            <video
+              ref={videoRef}
+              className="acard__preview-video"
+              src={anime.trailer}
+              autoPlay
+              loop
+              muted={soundFx.isMuted()}
+              playsInline
+              onError={() => setVideoPreview(false)}
+              onCanPlay={() => {
+                if (videoRef.current && !soundFx.isMuted()) {
+                  videoRef.current.volume = 0.15;
+                }
+              }}
+            />
+          )}
           <div className="acard__scrim" />
           {badge ? (
             <span className="acard__flag">{badge}</span>
@@ -77,6 +111,29 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
           <span className="acard__play" aria-hidden="true">
             <Play size={18} fill="currentColor" strokeWidth={0} />
           </span>
+          <button
+            type="button"
+            className="acard__info-btn"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: anime }));
+            }}
+            aria-label={`Quick preview for ${cleanTitle}`}
+            title="Quick preview"
+          >
+            <Info size={13} aria-hidden="true" />
+          </button>
+          {resume && resume.seconds > 0 && (
+            <div className="acard__progress-track" aria-hidden="true">
+              <div
+                className="acard__progress-bar"
+                style={{
+                  width: `${Math.min(100, Math.max(5, Math.round((resume.seconds / 1440) * 100)))}%`,
+                }}
+              />
+            </div>
+          )}
         </div>
         <div className="acard__foot">
           <h3 className="acard__title">{cleanTitle}</h3>
@@ -131,6 +188,23 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
     >
       <div className="acard__media acard__media--key">
         <Art sources={[anime.key, anime.poster]} alt={`${anime.title} key art`} fill width={360} height={202} />
+        {videoPreview && anime.trailer && (
+          <video
+            ref={videoRef}
+            className="acard__preview-video"
+            src={anime.trailer}
+            autoPlay
+            loop
+            muted={soundFx.isMuted()}
+            playsInline
+            onError={() => setVideoPreview(false)}
+            onCanPlay={() => {
+              if (videoRef.current && !soundFx.isMuted()) {
+                videoRef.current.volume = 0.15;
+              }
+            }}
+          />
+        )}
         <div className="acard__scrim" />
         {badge ? (
           <span className="acard__flag">{badge}</span>
@@ -138,6 +212,32 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provid
           anime.schedule?.day && anime.schedule?.time && (
             <AiringCountdown anime={anime} variant="compact" showRemindMe={false} />
           )
+        )}
+        <span className="acard__play" aria-hidden="true">
+          <Play size={18} fill="currentColor" strokeWidth={0} />
+        </span>
+        <button
+          type="button"
+          className="acard__info-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: anime }));
+          }}
+          aria-label={`Quick preview for ${cleanTitle}`}
+          title="Quick preview"
+        >
+          <Info size={13} aria-hidden="true" />
+        </button>
+        {resume && resume.seconds > 0 && (
+          <div className="acard__progress-track" aria-hidden="true">
+            <div
+              className="acard__progress-bar"
+              style={{
+                width: `${Math.min(100, Math.max(5, Math.round((resume.seconds / 1440) * 100)))}%`,
+              }}
+            />
+          </div>
         )}
       </div>
       <div className="acard__foot">

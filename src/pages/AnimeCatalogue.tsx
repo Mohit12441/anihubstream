@@ -8,6 +8,8 @@ import { listCatalogue } from '../data/api';
 import { hydrateCard, type Anime, type AnimeKind, type AnimeStatus } from '../data/model';
 import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
+import { useTextScramble } from '../lib/useTextScramble';
+import { useFlipGrid } from '../lib/useFlipGrid';
 import '../styles/pages.css';
 
 const KINDS: (AnimeKind | 'All')[] = ['All', 'TV', 'Movie', 'OVA', 'ONA', 'Special'];
@@ -97,6 +99,9 @@ export function AnimeCatalogue() {
   const [busy, setBusy] = useState<'load' | 'more' | null>('load');
   const [fetchError, setFetchError] = useState<string | null>(null);
   const pageNo = useRef(1);
+  const gridRef = useRef<HTMLUListElement | null>(null);
+
+  useFlipGrid(gridRef, [rows, view, status, kind, sort]);
 
   useEffect(() => {
     let live = true;
@@ -151,6 +156,10 @@ export function AnimeCatalogue() {
 
   const clearAll = () => setParams(new URLSearchParams(), { replace: true });
   const hasFilters = Boolean(q || genre) || status !== 'All' || kind !== 'All';
+  const rawMatching = hasFilters ? (total ?? null) : (stats?.titles ?? total ?? null);
+  const rawAiring = stats ? stats.ongoing : null;
+  const matchingText = useTextScramble(rawMatching);
+  const airingText = useTextScramble(rawAiring);
 
   return (
     <div className="page catalogue">
@@ -167,11 +176,11 @@ export function AnimeCatalogue() {
           </div>
           <div className="catalogue__stats">
             <span>
-              <b>{hasFilters ? (total ?? '—') : (stats?.titles ?? total ?? '—')}</b>
+              <b className="scramble-num">{matchingText}</b>
               matching
             </span>
             <span>
-              <b>{stats ? stats.ongoing : '—'}</b>
+              <b className="scramble-num">{airingText}</b>
               airing now
             </span>
           </div>
@@ -361,9 +370,9 @@ export function AnimeCatalogue() {
           <CatalogueError error={fetchError} onRetry={() => setParams(new URLSearchParams(params), { replace: true })} />
         ) : rows.length || busy === 'load' ? (
           <>
-            <ul className={view === 'grid' ? 'pgrid' : 'lgrid'} aria-busy={busy !== null}>
+            <ul ref={gridRef} className={view === 'grid' ? 'pgrid' : 'lgrid'} aria-busy={busy !== null}>
               {rows.map((a) => (
-                <li key={a.id}>
+                <li key={a.id} data-flip-id={a.id}>
                   <AnimeCard
                     anime={a}
                     variant={view === 'grid' ? 'poster' : 'wide'}

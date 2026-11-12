@@ -61,11 +61,13 @@ export const onRequestPost = async ({ request, env }) => {
       .bind(key, dataStr, expiresAt)
       .run();
 
-    // Opportunistically prune expired keys
-    await env.ANIHUB.prepare('DELETE FROM stream_cache WHERE expires_at < ?1')
-      .bind(Date.now())
-      .run()
-      .catch(() => {});
+    // Opportunistically prune expired keys with low probability to prevent write contention
+    if (Math.random() < 0.02) {
+      env.ANIHUB.prepare('DELETE FROM stream_cache WHERE expires_at < ?1')
+        .bind(Date.now())
+        .run()
+        .catch(() => {});
+    }
 
     return ok({ ok: true, key, expiresAt });
   } catch (err) {

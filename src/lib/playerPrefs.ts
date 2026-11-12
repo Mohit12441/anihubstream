@@ -108,7 +108,7 @@ export const SUB_LANG_NAMES: Record<string, string> = {
 /** Provider tokens, stored labels and legacy display names -> ISO 639-1 code. */
 const SUB_ALIASES: Record<string, string> = {
   eng: 'en', english: 'en', en: 'en',
-  spa: 'es', span: 'es', es: 'es', español: 'es', espanol: 'es',
+  spa: 'es', span: 'es', spanish: 'es', es: 'es', español: 'es', espanol: 'es',
   fre: 'fr', fra: 'fr', french: 'fr', fr: 'fr', français: 'fr',
   ger: 'de', deu: 'de', german: 'de', de: 'de', deutsch: 'de',
   ita: 'it', italian: 'it', it: 'it', italiano: 'it',
@@ -120,7 +120,7 @@ const SUB_ALIASES: Record<string, string> = {
   kor: 'ko', korean: 'ko', ko: 'ko', 한국어: 'ko',
   chi: 'zh', zho: 'zh', chinese: 'zh', zh: 'zh', 中文: 'zh',
   ind: 'id', id: 'id', indonesia: 'id', indonesian: 'id',
-  bahasa: 'id', 'bahasa indonesia': 'id', 'bahasa malaysia': 'ms',
+  bah: 'id', bahasa: 'id', 'bahasa indonesia': 'id', 'bahasa malaysia': 'ms',
   may: 'ms', ms: 'ms', malay: 'ms', melayu: 'ms', 'bahasa melayu': 'ms',
   tha: 'th', th: 'th', thai: 'th', ไทย: 'th',
   vie: 'vi', vi: 'vi', vietnamese: 'vi', vietsub: 'vi', tiếng: 'vi', việt: 'vi',
@@ -330,10 +330,6 @@ function sanitizeSubs(input?: SubtitleSettings): SubtitleSettings {
 
 export function savePrefs(prefs: PlayerPrefs) {
   write(PREFS_KEY, prefs);
-}
-
-export function resetSubtitles(): SubtitleSettings {
-  return { ...DEFAULT_SUBTITLES };
 }
 
 /* ---------------- resume positions ---------------- */

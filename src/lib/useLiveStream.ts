@@ -577,18 +577,24 @@ export function useLiveStream(o: Options) {
     : '';
 
   const subPick = useMemo<SubTrack | null>(() => {
-    if (!o.subsOn || !info) return null;
+    if (!o.subsOn || !info || tracks.length === 0) return null;
     if (wantedRaw) {
       const low = wantedRaw.toLowerCase();
       /* an exact pick from this episode's own list wins before the code table, so choosing
          the second of two Spanish files cannot silently land on the first */
       const exact = tracks.find((t) => t.key.toLowerCase() === low || t.name.toLowerCase() === low);
       if (exact) return exact;
-      if (wanted) return tracks.find((t) => t.code === wanted) ?? null;
-      /* the choice names a track this source does not carry — say so, never substitute */
-      return null;
+      if (wanted) {
+        const byCode = tracks.find((t) => t.code === wanted);
+        if (byCode) return byCode;
+      }
+      /* Fall back to English or first track if requested language is absent */
+      return tracks.find((t) => t.code === 'en') ?? tracks[0] ?? null;
     }
-    if (wanted) return tracks.find((t) => t.code === wanted) ?? null;
+    if (wanted) {
+      const byCode = tracks.find((t) => t.code === wanted);
+      if (byCode) return byCode;
+    }
     /* nothing was asked for: English when the stream carries it, else the first track */
     return tracks.find((t) => t.code === 'en') ?? tracks[0] ?? null;
   }, [info, tracks, o.subsOn, wanted, wantedRaw]);
@@ -768,6 +774,7 @@ export function useLiveStream(o: Options) {
     subName: subPick ? subPick.label : null,
     controller,
     videoRef,
+    videoEl,
     cuesAt,
     /** what a refused play() told us, or null when the last attempt started cleanly */
     playRefused,

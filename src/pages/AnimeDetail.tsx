@@ -9,7 +9,7 @@ import { AiringCountdown } from '../components/AiringCountdown';
 import { FranchiseTimeline } from '../components/franchise/FranchiseTimeline';
 import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel, type AnimeTheme } from '../data/model';
-import { getAnimeThemes, getPlay } from '../data/api';
+import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import '../styles/anime-detail.css';
 
@@ -36,25 +36,10 @@ export function AnimeDetail() {
   const [serversLoading, setServersLoading] = useState(true);
   const [themes, setThemes] = useState<AnimeTheme[]>([]);
 
-  // Fetch theme songs (OP/ED)
+  // Theme songs (OP/ED) arrive directly with anime detail
   useEffect(() => {
-    if (!id) return;
-    if (anime?.themes && anime.themes.length > 0) {
-      setThemes(anime.themes);
-      return;
-    }
-    let active = true;
-    getAnimeThemes(id)
-      .then((data) => {
-        if (active && Array.isArray(data)) {
-          setThemes(data);
-        }
-      })
-      .catch(() => {});
-    return () => {
-      active = false;
-    };
-  }, [id, anime?.themes]);
+    setThemes(anime?.themes || []);
+  }, [anime?.themes]);
 
   // Fetch servers available for episode 1 (/api/play?id=) only for aired anime
   useEffect(() => {

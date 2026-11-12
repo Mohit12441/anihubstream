@@ -1,7 +1,11 @@
 // @ts-check
-import { spawn } from 'node:child_process';
+import { spawn, execSync } from 'node:child_process';
 import net from 'node:net';
+import fs from 'node:fs';
+import path from 'node:path';
 import { initLocalDatabase } from './init-local-db.mjs';
+
+const ROOT = path.resolve(import.meta.dirname, '..');
 
 function isPortOpen(port, host = '127.0.0.1') {
   return new Promise((resolve) => {
@@ -29,6 +33,11 @@ async function main() {
   // 0. Ensure Local D1 schema and tables are initialized
   try {
     initLocalDatabase();
+    if (!fs.existsSync(path.join(ROOT, 'dist-pages', 'index.html'))) {
+      console.log('⚡ dist-pages not found. Building pages first...');
+      const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+      execSync(`${npmCmd} run build:pages`, { cwd: ROOT, stdio: 'inherit' });
+    }
   } catch (err) {
     console.error('Database initialization warning:', err);
   }

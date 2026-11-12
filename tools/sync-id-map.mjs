@@ -51,12 +51,12 @@ export function buildIdMappings() {
 
     const baseSlug = normalizeSlug(animeId);
 
+    const anidbId = item.anidb || null;
+
     // Compute provider slugs with single-source-of-truth priority
     const anikotoSlug = anikotoSlugs[animeId] || item.anikoto || null;
     const hianimeSlug = item.hianime || null;
     const aniwatchSlug = item.aniwatch || null;
-    const adbSlug = item.adb || null;
-    const wawSlug = item.waw || null;
 
     // Confidence is 1.0 when MAL or (Kitsu and AniList) are present and confirmed
     const confidence = malId ? 1.0 : (kitsuId && anilistId ? 1.0 : 0.85);
@@ -66,11 +66,10 @@ export function buildIdMappings() {
       mal_id: malId,
       anilist_id: anilistId,
       kitsu_id: kitsuId,
+      anidb_id: anidbId,
       anikoto_slug: anikotoSlug,
       hianime_slug: hianimeSlug,
       aniwatch_slug: aniwatchSlug,
-      adb_slug: adbSlug,
-      waw_slug: wawSlug,
       confidence,
     });
   }
@@ -93,9 +92,9 @@ export function generateIdMapSql(mappings) {
   for (const m of mappings) {
     const val = (v) => (v === null || v === undefined ? 'NULL' : typeof v === 'number' ? v : `'${String(v).replace(/'/g, "''")}'`);
     sqlLines.push(
-      `INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anikoto_slug, hianime_slug, aniwatch_slug, adb_slug, waw_slug, confidence, updated_at) ` +
-      `VALUES (${val(m.anime_id)}, ${val(m.mal_id)}, ${val(m.anilist_id)}, ${val(m.kitsu_id)}, ${val(m.anikoto_slug)}, ${val(m.hianime_slug)}, ${val(m.aniwatch_slug)}, ${val(m.adb_slug)}, ${val(m.waw_slug)}, ${m.confidence}, datetime('now')) ` +
-      `ON CONFLICT(anime_id) DO UPDATE SET mal_id=coalesce(excluded.mal_id, anime_id_map.mal_id), anilist_id=coalesce(excluded.anilist_id, anime_id_map.anilist_id), kitsu_id=coalesce(excluded.kitsu_id, anime_id_map.kitsu_id), anikoto_slug=coalesce(excluded.anikoto_slug, anime_id_map.anikoto_slug), hianime_slug=coalesce(excluded.hianime_slug, anime_id_map.hianime_slug), confidence=excluded.confidence, updated_at=datetime('now');`
+      `INSERT INTO anime_id_map (anime_id, mal_id, anilist_id, kitsu_id, anidb_id, anikoto_slug, hianime_slug, aniwatch_slug, confidence, updated_at) ` +
+      `VALUES (${val(m.anime_id)}, ${val(m.mal_id)}, ${val(m.anilist_id)}, ${val(m.kitsu_id)}, ${val(m.anidb_id)}, ${val(m.anikoto_slug)}, ${val(m.hianime_slug)}, ${val(m.aniwatch_slug)}, ${m.confidence}, datetime('now')) ` +
+      `ON CONFLICT(anime_id) DO UPDATE SET mal_id=coalesce(excluded.mal_id, anime_id_map.mal_id), anilist_id=coalesce(excluded.anilist_id, anime_id_map.anilist_id), kitsu_id=coalesce(excluded.kitsu_id, anime_id_map.kitsu_id), anidb_id=coalesce(excluded.anidb_id, anime_id_map.anidb_id), anikoto_slug=coalesce(excluded.anikoto_slug, anime_id_map.anikoto_slug), hianime_slug=coalesce(excluded.hianime_slug, anime_id_map.hianime_slug), aniwatch_slug=coalesce(excluded.aniwatch_slug, anime_id_map.aniwatch_slug), confidence=excluded.confidence, updated_at=datetime('now');`
     );
   }
 
