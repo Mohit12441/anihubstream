@@ -26,9 +26,9 @@ environment variables — no npm install, no local machine.
 
 AniList blocks shared egress. This repo already has that in writing —
 `sync-worker/wrangler.toml` records that AniList answers `403 "You have been manually
-blocked"` to Cloudflare's datacenter IPs (verified 2026-10-13), which is why the sync was
-moved to a Windows task on the operator machine. Any free host has the same problem: a
-shared IP whose other tenants you do not control. Keeping *our* volume low is necessary
+blocked"` to Cloudflare's datacenter IPs (verified 2026-10-13), which is why the primary
+full sync runs locally via `npm run sync` (or `npm run sync:local`) on the operator machine.
+Any free host has the same problem: a shared IP whose other tenants you do not control. Keeping *our* volume low is necessary
 and not sufficient, so the system is built to detect pressure, back off, and stop — rather
 than to assume a low volume is safe.
 
