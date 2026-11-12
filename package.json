@@ -23,6 +23,7 @@
     "meili:setup": "node tools/meilisearch/setup-index.mjs && node tools/meilisearch/sync-meilisearch.mjs",
     "db:seed-id-map": "node tools/apply-id-map.mjs",
     "sync": "node tools/local-sync-daemon.mjs --once",
+    "sync:auto": "node tools/local-sync-daemon.mjs",
     "sync:local": "node tools/local-sync-daemon.mjs --once",
     "sync:daemon": "node tools/local-sync-daemon.mjs",
     "sync:growth": "node tools/local-sync-daemon.mjs --once --growth-only",

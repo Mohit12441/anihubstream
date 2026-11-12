@@ -3,7 +3,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { existsSync } from 'node:fs';
-import { findSqlitePath, runSyncCycle } from './local-sync-daemon.mjs';
+import { findSqlitePath, runSyncCycle, computeSafeInterval } from './local-sync-daemon.mjs';
 import { computeFranchiseGraph, persistRelations } from './auto-sync-franchises.mjs';
 
 describe('Local Autonomous Sync Daemon Suite', () => {
@@ -162,5 +162,16 @@ describe('Local Autonomous Sync Daemon Suite', () => {
     assert.equal(res.search, null, 'search stage must be skipped');
     assert.equal(res.growth.added, 0);
     assert.equal(res.growth.skipped, 'disabled');
+  });
+
+  it('computeSafeInterval enforces 30m floor unless force=true', () => {
+    assert.equal(computeSafeInterval(undefined), 60, 'defaults to 60m safe interval');
+    assert.equal(computeSafeInterval(0), 60, 'zero defaults to 60m');
+    assert.equal(computeSafeInterval(10), 30, 'clamps dangerously low 10m to safe 30m floor');
+    assert.equal(computeSafeInterval(15), 30, 'clamps 15m to 30m floor');
+    assert.equal(computeSafeInterval(45), 45, 'preserves valid safe intervals >= 30m');
+    assert.equal(computeSafeInterval(120), 120, 'preserves 120m');
+    assert.equal(computeSafeInterval(5, true), 5, 'allows lower interval when force=true');
+    assert.equal(computeSafeInterval(1, true), 1, 'allows 1m when force=true');
   });
 });

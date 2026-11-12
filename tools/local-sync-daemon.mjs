@@ -378,6 +378,16 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
   return metrics;
 }
 
+/**
+ * Compute safe recurring sync interval enforcing 30m floor to prevent API bans.
+ * @param {number|undefined} rawInterval
+ * @param {boolean} [force=false]
+ */
+export function computeSafeInterval(rawInterval, force = false) {
+  if (force) return Math.max(1, rawInterval || 30);
+  return Math.max(30, rawInterval || 60);
+}
+
 // ----------------------------------------------------
 // CLI & Daemon Runner
 // ----------------------------------------------------
@@ -385,14 +395,20 @@ async function main() {
   const args = process.argv.slice(2);
   const isOnce = args.includes('--once');
   const isQuiet = args.includes('--quiet');
+  const force = args.includes('--force');
   
   const isGrowthOnly = args.includes('--growth-only');
   const stageArg = args.find((a) => a.startsWith('--stage='));
   const stage = isGrowthOnly ? 'growth' : (stageArg ? stageArg.split('=')[1] : null);
 
   const intervalArg = args.find((a) => a.startsWith('--interval='));
-  const intervalMin = intervalArg ? Math.max(5, Number(intervalArg.split('=')[1]) || 30) : 30;
+  const rawInterval = intervalArg ? Number(intervalArg.split('=')[1]) : 60;
+  const intervalMin = computeSafeInterval(rawInterval, force);
   const intervalMs = intervalMin * 60 * 1000;
+
+  if (intervalArg && rawInterval < 30 && !force) {
+    console.warn(`[local-sync-daemon] Warning: Requested ${rawInterval}m interval is below safe limits. Clamped to 30m floor (pass --force to override).`);
+  }
 
   const delayArg = args.find((a) => a.startsWith('--delay='));
   const delaySec = delayArg ? Math.max(0, Number(delayArg.split('=')[1]) || 5) : 5;
@@ -405,22 +421,32 @@ async function main() {
     process.exit(res.ok ? 0 : 1);
   }
 
-  console.log(`[local-sync-daemon] Starting background daemon (Interval: ${intervalMin}m, Initial delay: ${delaySec}s, Growth batch: ${expand}${stage ? `, Stage: ${stage}` : ''})...`);
+  console.log(`[local-sync-daemon] Starting autonomous daemon (Safe Interval: ${intervalMin}m, Initial delay: ${delaySec}s, Growth batch: ${expand}${stage ? `, Stage: ${stage}` : ''})...`);
   if (delaySec > 0) {
     await sleep(delaySec * 1000);
   }
 
-  // Initial immediate cycle
-  await runSyncCycle({ quiet: isQuiet, expand, stage }).catch((err) => console.error('[local-sync-daemon] Initial cycle error:', err));
+  let running = true;
+  process.on('SIGINT', () => {
+    running = false;
+    console.log('\n[local-sync-daemon] Stopping daemon gracefully...');
+    process.exit(0);
+  });
+  process.on('SIGTERM', () => {
+    running = false;
+    process.exit(0);
+  });
 
-  // Recurring loop
-  setInterval(async () => {
+  // Sequential, non-overlapping loop
+  while (running) {
     try {
       await runSyncCycle({ quiet: isQuiet, expand, stage });
     } catch (err) {
-      console.error('[local-sync-daemon] Interval cycle error:', err);
+      console.error('[local-sync-daemon] Cycle error:', err);
     }
-  }, intervalMs);
+    if (!running) break;
+    await sleep(intervalMs);
+  }
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].replace(/\\/g, '/'))) {
