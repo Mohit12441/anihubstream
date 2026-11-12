@@ -37,10 +37,19 @@ import { submitUrlsToIndexNow } from './indexnow.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export function findSqlitePath() {
+  if (process.env.LOCAL_DB_PATH && existsSync(process.env.LOCAL_DB_PATH)) {
+    return resolve(process.env.LOCAL_DB_PATH);
+  }
   const d1Dir = resolve(__dirname, '../.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
   if (existsSync(d1Dir)) {
     const files = readdirSync(d1Dir).filter((f) => f.endsWith('.sqlite') && f !== 'metadata.sqlite');
     if (files.length > 0) return resolve(d1Dir, files[0]);
+  }
+  const altDir = resolve(__dirname, '../.wrangler/state/v3/d1');
+  if (existsSync(altDir)) {
+    const files = readdirSync(altDir, { recursive: true })
+      .filter((f) => typeof f === 'string' && f.endsWith('.sqlite') && !f.includes('metadata.sqlite'));
+    if (files.length > 0) return resolve(altDir, files[0]);
   }
   return null;
 }
