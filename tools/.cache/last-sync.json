@@ -1,42 +1,35 @@
 {
-  "fetched_at": "2026-11-07T00:57:51.678Z",
+  "fetched_at": "2026-11-12T08:33:23.816Z",
   "titles": [
     {
-      "id": "mobile-suit-gundam-wing",
+      "id": "the-super-cube",
       "sources": {
-        "kitsu": 69,
-        "anilist": 90,
-        "mal": 90
+        "kitsu": 49739,
+        "anilist": 166442,
+        "mal": 60057
       },
-      "episodes": 49,
-      "episodeTotal": 49,
+      "episodes": 12,
+      "episodeTotal": 12,
       "skipKey": null,
       "markers": 0
     }
   ],
   "stats": {
-    "episodesStored": 49,
-    "episodeTotal": 49,
+    "episodesStored": 12,
+    "episodeTotal": 12,
     "markers": 0,
     "runtimeFallbacks": 0
   },
   "droppedGenres": [
-    "Mecha",
-    "Politics",
-    "Space",
-    "Military",
-    "Real Robot",
-    "War",
-    "Ensemble Cast",
-    "Terrorism",
-    "Primarily Male Cast",
-    "Coming of Age",
+    "Cultivation",
+    "Urban Fantasy",
+    "Martial Arts",
+    "Super Power",
+    "Heterosexual",
     "Male Protagonist",
-    "Philosophy",
-    "Foreign",
-    "Circus",
-    "Amnesia",
-    "Suicide",
-    "Espionage"
+    "Adoption",
+    "Marriage",
+    "Gangs",
+    "Bullying"
   ]
 }

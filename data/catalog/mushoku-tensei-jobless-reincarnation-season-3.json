@@ -12,7 +12,7 @@
   "accent": "#28bbe4",
   "synopsis": "The third season of Mushoku Tensei: Isekai Ittara Honki Dasu.",
   "rank": null,
-  "trend_rank": 21,
+  "trend_rank": 28,
   "alt_seasons": [],
   "sched_day": null,
   "sched_day_label": null,
@@ -65,7 +65,14 @@
       "thumb": "",
       "synopsis": "",
       "airdate": null,
-      "markers": [],
+      "markers": [
+        {
+          "kind": "outro",
+          "start": 1322.505,
+          "end": 1411.814,
+          "label": "Ending"
+        }
+      ],
       "external_id": "369837"
     },
     {

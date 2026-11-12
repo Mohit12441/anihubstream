@@ -26,8 +26,8 @@
     "anilist": 250,
     "mal": 250
   },
-  "skip_key_id": null,
-  "skip_key_space": null,
+  "skip_key_id": 250,
+  "skip_key_space": "mal",
   "episode_total": 150,
   "added_at": "2026-11-09 00:01:08",
   "search_text": "zatch bell 金色のカ ッシュヘ ル tv finished",

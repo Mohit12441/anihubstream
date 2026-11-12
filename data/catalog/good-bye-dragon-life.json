@@ -27,8 +27,8 @@
     "mal": 58445,
     "kitsu": 48619
   },
-  "skip_key_id": null,
-  "skip_key_space": null,
+  "skip_key_id": 58445,
+  "skip_key_space": "mal",
   "episode_total": 12,
   "added_at": "2026-11-08 11:58:46",
   "search_text": "good bye dragon life さようなら竜生 こんにちは人生 tv finished",
@@ -40,10 +40,10 @@
   "episodes": [
     {
       "n": 1,
-      "title": "Episode 1",
+      "title": "Goodbye, Dragon Life",
       "runtime": "24:00",
       "runtime_seconds": 1440,
-      "thumb": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176053-HfPo4pUm6Ktg.jpg",
+      "thumb": "https://img1.ak.crunchyroll.com/i/spire4-tmb/4f0406e585d26ea6983a165b8032d4361727972355_full.jpg",
       "synopsis": "",
       "airdate": null,
       "markers": [],
