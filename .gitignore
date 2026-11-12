@@ -33,6 +33,7 @@ scratch/
 .code-ranker/
 .firewall/
 anihub_tables_backup.sql
-
+.gemini/
+.planning/
 
 remote-user-tables-backup.json

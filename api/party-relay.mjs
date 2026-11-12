@@ -250,7 +250,10 @@ export function attachPartyRelay(server) {
       });
     });
 
+    let cleaned = false;
     const cleanup = () => {
+      if (cleaned) return;
+      cleaned = true;
       if (rooms.has(roomId)) {
         const r = rooms.get(roomId);
         r.members.delete(userId);

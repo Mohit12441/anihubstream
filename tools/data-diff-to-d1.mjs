@@ -139,6 +139,8 @@ export function getChangedDataFiles(fromRef = 'HEAD~1', toRef = 'HEAD', staged =
 if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1]))) {
   const dryRun = process.argv.includes('--dry-run');
   const force = process.argv.includes('--force');
+  const maxWritesArg = process.argv.find(a => a.startsWith('--max-writes='));
+  const maxWrites = maxWritesArg ? parseInt(maxWritesArg.split('=')[1], 10) : 5000;
   const staged = process.argv.includes('--staged');
   const fromArg = process.argv.find(a => a.startsWith('--from='));
   const toArg = process.argv.find(a => a.startsWith('--to='));
@@ -168,7 +170,7 @@ if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1])))
     }
   }
 
-  const delta = generateDeltaSqlFromDocs({ modifiedDocs, force });
+  const delta = generateDeltaSqlFromDocs({ modifiedDocs, force: force || dryRun, maxWrites });
   console.log(`[data-diff-to-d1] Generated ${delta.totalWrites} SQL statements across ${delta.batchCount} batch(es).`);
 
   if (dryRun) {
