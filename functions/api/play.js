@@ -265,6 +265,193 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
   return null;
 }
 
+async function lookupAnimeMetadata(db, id, ep) {
+  if (!db || !id) return { id, animeRow: null };
+  let resolvedId = id;
+  try {
+    const r = await db.prepare('SELECT to_id FROM anime_redirect WHERE from_id = ?1').bind(resolvedId).first();
+    if (r?.to_id) {
+      resolvedId = r.to_id;
+    } else {
+      const playCandidates = deriveSlugCandidates(resolvedId);
+      const foundCard = await findAnimeByCandidates(db, playCandidates);
+      if (foundCard?.id) {
+        resolvedId = foundCard.id;
+      } else {
+        const p = await db.prepare(
+          `SELECT id FROM anime WHERE json_extract(source_ids, '$.hianime') = ?1 OR json_extract(source_ids, '$.anikoto') = ?1 LIMIT 1`
+        ).bind(resolvedId).first().catch(() => null);
+        if (p?.id) resolvedId = p.id;
+      }
+    }
+  } catch {
+    // anime_redirect table may not exist yet or no redirect
+  }
+
+  let animeRow = null;
+  try {
+    animeRow = await db.prepare(
+      `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
+              e.runtime_seconds, e.markers,
+              m.mal_id, m.kitsu_id, m.anilist_id,
+              m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
+       FROM anime a
+       LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
+       LEFT JOIN anime_id_map m ON m.anime_id = a.id
+       WHERE a.id = ?1`
+    ).bind(resolvedId, ep).first();
+  } catch {
+    // If anime_id_map table does not exist in production D1 yet, query anime directly
+    animeRow = await db.prepare(
+      `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
+              e.runtime_seconds, e.markers
+       FROM anime a
+       LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
+       WHERE a.id = ?1`
+    ).bind(resolvedId, ep).first().catch(() => null);
+  }
+
+  if (!animeRow && resolvedId) {
+    try {
+      const cleanPattern = `%${resolvedId.replace(/[-_]+/g, '%').slice(0, 30)}%`;
+      animeRow = await db.prepare(`
+        SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
+               e.runtime_seconds, e.markers,
+               m.mal_id, m.kitsu_id, m.anilist_id,
+               m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
+        FROM anime a
+        LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
+        LEFT JOIN anime_id_map m ON m.anime_id = a.id
+        WHERE a.id LIKE ?1 OR LOWER(a.title) LIKE ?1
+        LIMIT 1
+      `).bind(cleanPattern, ep).first();
+      if (animeRow) resolvedId = animeRow.id;
+    } catch {}
+  }
+
+  return { id: resolvedId, animeRow };
+}
+
+function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle }) {
+  const jaAudio = [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }];
+  const enDub = [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }];
+
+  const makeServer = ({ id, name, provider, streamUrl, type = 'hls', quality = '1080p', audio = 'sub', audioTracks = jaAudio, resolvedTitle: rt }) => ({
+    id,
+    name,
+    provider,
+    status: 'ready',
+    streamUrl,
+    type,
+    quality,
+    audio,
+    audioTracks,
+    subtitles: [],
+    downloads: [],
+    ...(rt ? { resolvedTitle: rt } : {}),
+  });
+
+  const anikotoSubs = ['HD-1', 'Vidstream-2', 'Vidstream-1', 'HD-2'].map((srv) =>
+    makeServer({
+      id: `anikoto:${srv}`,
+      name: `AniKoto · ${srv}`,
+      provider: 'anikoto',
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: srv }),
+    })
+  );
+
+  const anikotoDubs = ['HD-1', 'Vidstream-2', 'Vidstream-1', 'HD-2'].map((srv) =>
+    makeServer({
+      id: `anikoto:${srv}-dub`,
+      name: `AniKoto · ${srv} (DUB)`,
+      provider: 'anikoto',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: srv }),
+      type: 'dub',
+      audio: 'dub',
+      audioTracks: enDub,
+    })
+  );
+
+  const servers = [
+    ...anikotoSubs,
+    ...anikotoDubs,
+    makeServer({
+      id: 'hianime:HD-1',
+      name: 'HiAnime · HD-1',
+      provider: 'hianime',
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD-1' }),
+    }),
+    makeServer({
+      id: 'aniwatch:HD-1',
+      name: 'AniWatch · HD-1',
+      provider: 'aniwatch',
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'aniwatch', server: 'HD-1' }),
+    }),
+    makeServer({
+      id: 'aniwatch:HD-1-dub',
+      name: 'AniWatch · HD-1 (DUB)',
+      provider: 'aniwatch',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: 'HD-1' }),
+      type: 'hls',
+      audio: 'dub',
+      audioTracks: enDub,
+    }),
+  ];
+
+  let anilistId = resolvedAnilistId || animeRow?.anilist_id;
+  if (!anilistId && animeRow?.source_ids) {
+    try {
+      const s = JSON.parse(animeRow.source_ids);
+      if (s.anilist) anilistId = Number(s.anilist);
+    } catch {}
+  }
+
+  if (anilistId || resolvedTitle) {
+    servers.push(
+      makeServer({
+        id: 'anipm:beta',
+        name: 'AniPM · Beta Master (11 Audios)',
+        provider: 'anipm',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
+        resolvedTitle,
+        audioTracks: [
+          { id: 'audio-ja', language: 'ja', label: 'Japanese [CR]', default: true },
+          { id: 'audio-en', language: 'en', label: 'English [CR]', default: false },
+          { id: 'audio-hi', language: 'hi', label: 'Hindi [CR]', default: false },
+          { id: 'audio-ta', language: 'ta', label: 'Tamil [CR]', default: false },
+          { id: 'audio-te', language: 'te', label: 'Telugu [CR]', default: false },
+        ],
+      }),
+      makeServer({
+        id: 'anipm:settlar',
+        name: 'AniPM · Settlar HD (16 Subs)',
+        provider: 'anipm',
+        streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'settlar' }),
+      }),
+      makeServer({
+        id: 'anipm:settlar-dub',
+        name: 'AniPM · Settlar HD (DUB)',
+        provider: 'anipm',
+        streamUrl: resolveUrl({ audio: 'dub', provider: 'anipm', server: 'settlar' }),
+        audio: 'dub',
+        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English (Dub)', default: true }],
+      })
+    );
+  }
+
+  servers.push(
+    makeServer({
+      id: 'torrent:P2P-1',
+      name: 'P2P Swarm · WebTorrent',
+      provider: 'torrent',
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'torrent', server: 'P2P-1' }),
+      type: 'torrent',
+    })
+  );
+
+  return servers;
+}
+
 /**
  * Universal Layer 1 Play Endpoint:
  * Resolves unified player payload containing multi-server candidate list,
@@ -297,108 +484,46 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     let animeRow = null;
 
     // Look up anime metadata and ID mappings in D1
-    if (env.ANIHUB) {
-      if (id) {
-        try {
-          const r = await env.ANIHUB.prepare('SELECT to_id FROM anime_redirect WHERE from_id = ?1').bind(id).first();
-          if (r?.to_id) {
-            id = r.to_id;
-          } else {
-            const playCandidates = deriveSlugCandidates(id);
-            const foundCard = await findAnimeByCandidates(env.ANIHUB, playCandidates);
-            let m = foundCard ? { anime_id: foundCard.id } : null;
+    if (env.ANIHUB && id) {
+      const meta = await lookupAnimeMetadata(env.ANIHUB, id, ep);
+      id = meta.id;
+      animeRow = meta.animeRow;
+      if (animeRow) {
+        if (!resolvedTitle) resolvedTitle = animeRow.title;
+        if (animeRow.runtime_seconds) durationSeconds = animeRow.runtime_seconds;
+        if (animeRow.markers) rawEpisodeMarkers = animeRow.markers;
 
-            if (m?.anime_id) {
-              id = m.anime_id;
-            } else {
-              const p = await env.ANIHUB.prepare(
-                `SELECT id FROM anime WHERE json_extract(source_ids, '$.hianime') = ?1 OR json_extract(source_ids, '$.anikoto') = ?1 LIMIT 1`
-              ).bind(id).first().catch(() => null);
-              if (p?.id) id = p.id;
-            }
+        if (animeRow.status === 'Upcoming' || animeRow.status === 'NOT_YET_RELEASED') {
+          return ok({
+            title: resolvedTitle,
+            episode: ep,
+            status: 'unreleased',
+            error: 'This anime has not yet been released.',
+            servers: [],
+            subtitles: [],
+            audioTracks: buildAudioTracks(audio),
+            aniskip: null,
+            downloads: [],
+          });
+        }
+
+        if (!resolvedMalId) {
+          if (animeRow.mal_id) {
+            resolvedMalId = animeRow.mal_id;
+          } else if (animeRow.skip_key_space === 'mal' && animeRow.skip_key_id) {
+            resolvedMalId = animeRow.skip_key_id;
           }
-        } catch {
-          // anime_redirect table may not exist yet or no redirect
         }
-
-        animeRow = null;
-        try {
-          animeRow = await env.ANIHUB.prepare(
-            `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
-                    e.runtime_seconds, e.markers,
-                    m.mal_id, m.kitsu_id, m.anilist_id,
-                    m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
-             FROM anime a
-             LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
-             LEFT JOIN anime_id_map m ON m.anime_id = a.id
-             WHERE a.id = ?1`
-          ).bind(id, ep).first();
-        } catch {
-          // If anime_id_map table does not exist in production D1 yet, query anime directly
-          animeRow = await env.ANIHUB.prepare(
-            `SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
-                    e.runtime_seconds, e.markers
-             FROM anime a
-             LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
-             WHERE a.id = ?1`
-          ).bind(id, ep).first().catch(() => null);
+        if (animeRow.anilist_id) {
+          resolvedAnilistId = animeRow.anilist_id;
         }
-
-        if (!animeRow && id) {
+        if (animeRow.source_ids) {
           try {
-            const cleanPattern = `%${id.replace(/[-_]+/g, '%').slice(0, 30)}%`;
-            animeRow = await env.ANIHUB.prepare(`
-              SELECT a.id, a.title, a.status, a.source_ids, a.skip_key_id, a.skip_key_space,
-                     e.runtime_seconds, e.markers,
-                     m.mal_id, m.kitsu_id, m.anilist_id,
-                     m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
-              FROM anime a
-              LEFT JOIN episode e ON (e.anime_id = a.id AND e.n = ?2)
-              LEFT JOIN anime_id_map m ON m.anime_id = a.id
-              WHERE a.id LIKE ?1 OR LOWER(a.title) LIKE ?1
-              LIMIT 1
-            `).bind(cleanPattern, ep).first();
-            if (animeRow) id = animeRow.id;
-          } catch {}
-        }
-
-        if (animeRow) {
-          if (!resolvedTitle) resolvedTitle = animeRow.title;
-          if (animeRow.runtime_seconds) durationSeconds = animeRow.runtime_seconds;
-          if (animeRow.markers) rawEpisodeMarkers = animeRow.markers;
-
-          if (animeRow.status === 'Upcoming' || animeRow.status === 'NOT_YET_RELEASED') {
-            return ok({
-              title: resolvedTitle,
-              episode: ep,
-              status: 'unreleased',
-              error: 'This anime has not yet been released.',
-              servers: [],
-              subtitles: [],
-              audioTracks: buildAudioTracks(audio),
-              aniskip: null,
-              downloads: [],
-            });
-          }
-
-          if (!resolvedMalId) {
-            if (animeRow.mal_id) {
-              resolvedMalId = animeRow.mal_id;
-            } else if (animeRow.skip_key_space === 'mal' && animeRow.skip_key_id) {
-              resolvedMalId = animeRow.skip_key_id;
-            }
-          }
-          if (animeRow.anilist_id) {
-            resolvedAnilistId = animeRow.anilist_id;
-          }
-          if (animeRow.source_ids) {
-            try {
-              const s = JSON.parse(animeRow.source_ids);
-              if (!resolvedMalId && s.mal) resolvedMalId = Number(s.mal);
-              if (!resolvedAnilistId && s.anilist) resolvedAnilistId = Number(s.anilist);
-            } catch {
-              // ignore
-            }
+            const s = JSON.parse(animeRow.source_ids);
+            if (!resolvedMalId && s.mal) resolvedMalId = Number(s.mal);
+            if (!resolvedAnilistId && s.anilist) resolvedAnilistId = Number(s.anilist);
+          } catch {
+            // ignore
           }
         }
       }
@@ -589,222 +714,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       return `/api/play/resolve?${p}`;
     };
 
-    const defaultServers = [
-      {
-        id: 'anikoto:HD-1',
-        name: 'AniKoto · HD-1',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'HD-1' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:Vidstream-2',
-        name: 'AniKoto · Vidstream-2',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'Vidstream-2' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:Vidstream-1',
-        name: 'AniKoto · Vidstream-1',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'Vidstream-1' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:HD-2',
-        name: 'AniKoto · HD-2',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'anikoto', server: 'HD-2' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:HD-1-dub',
-        name: 'AniKoto · HD-1 (DUB)',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'HD-1' }),
-        type: 'dub',
-        quality: '1080p',
-        audio: 'dub',
-        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:Vidstream-2-dub',
-        name: 'AniKoto · Vidstream-2 (DUB)',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'Vidstream-2' }),
-        type: 'dub',
-        quality: '1080p',
-        audio: 'dub',
-        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:Vidstream-1-dub',
-        name: 'AniKoto · Vidstream-1 (DUB)',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'Vidstream-1' }),
-        type: 'dub',
-        quality: '1080p',
-        audio: 'dub',
-        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'anikoto:HD-2-dub',
-        name: 'AniKoto · HD-2 (DUB)',
-        provider: 'anikoto',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'dub', provider: 'anikoto', server: 'HD-2' }),
-        type: 'dub',
-        quality: '1080p',
-        audio: 'dub',
-        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'hianime:HD-1',
-        name: 'HiAnime · HD-1',
-        provider: 'hianime',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD-1' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'aniwatch:HD-1',
-        name: 'AniWatch · HD-1',
-        provider: 'aniwatch',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'aniwatch', server: 'HD-1' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      {
-        id: 'aniwatch:HD-1-dub',
-        name: 'AniWatch · HD-1 (DUB)',
-        provider: 'aniwatch',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: 'HD-1' }),
-        type: 'hls',
-        quality: '1080p',
-        audio: 'dub',
-        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-      ...(() => {
-        let anilistId = resolvedAnilistId || animeRow?.anilist_id;
-        if (!anilistId && animeRow?.source_ids) {
-          try {
-            const s = JSON.parse(animeRow.source_ids);
-            if (s.anilist) anilistId = Number(s.anilist);
-          } catch {}
-        }
-        if (!anilistId && !resolvedTitle) return [];
-        return [
-          {
-            id: 'anipm:beta',
-            name: 'AniPM · Beta Master (11 Audios)',
-            provider: 'anipm',
-            status: 'ready',
-            streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
-            resolvedTitle,
-            type: 'hls',
-            quality: '1080p',
-            audio: 'sub',
-            audioTracks: [
-              { id: 'audio-ja', language: 'ja', label: 'Japanese [CR]', default: true },
-              { id: 'audio-en', language: 'en', label: 'English [CR]', default: false },
-              { id: 'audio-hi', language: 'hi', label: 'Hindi [CR]', default: false },
-              { id: 'audio-ta', language: 'ta', label: 'Tamil [CR]', default: false },
-              { id: 'audio-te', language: 'te', label: 'Telugu [CR]', default: false },
-            ],
-            subtitles: [],
-            downloads: [],
-          },
-          {
-            id: 'anipm:settlar',
-            name: 'AniPM · Settlar HD (16 Subs)',
-            provider: 'anipm',
-            status: 'ready',
-            streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'settlar' }),
-            type: 'hls',
-            quality: '1080p',
-            audio: 'sub',
-            audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-            subtitles: [],
-            downloads: [],
-          },
-          {
-            id: 'anipm:settlar-dub',
-            name: 'AniPM · Settlar HD (DUB)',
-            provider: 'anipm',
-            status: 'ready',
-            streamUrl: resolveUrl({ audio: 'dub', provider: 'anipm', server: 'settlar' }),
-            type: 'hls',
-            quality: '1080p',
-            audio: 'dub',
-            audioTracks: [{ id: 'audio-1', language: 'en', label: 'English (Dub)', default: true }],
-            subtitles: [],
-            downloads: [],
-          },
-        ];
-      })(),
-      {
-        id: 'torrent:P2P-1',
-        name: 'P2P Swarm · WebTorrent',
-        provider: 'torrent',
-        status: 'ready',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'torrent', server: 'P2P-1' }),
-        type: 'torrent',
-        quality: '1080p',
-        audio: 'sub',
-        audioTracks: [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }],
-        subtitles: [],
-        downloads: [],
-      },
-    ];
+    const defaultServers = buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle });
 
     // If stream bridge is cold or external to Cloudflare edge, check if Direct Edge Extractor resolved
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
