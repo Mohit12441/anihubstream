@@ -136,10 +136,9 @@ export async function buildLocalDatabase(opts = {}) {
     }
   };
 
+  // 1. Insert Reference Data (independent tables)
   insertGenres();
   insertRoutes();
-  insertIdMap();
-  insertFranchiseRelations();
   insertRedirects();
 
   // 2. Prepare Anime & Episode Statements
@@ -258,6 +257,11 @@ export async function buildLocalDatabase(opts = {}) {
   }
 
   db.exec('COMMIT');
+
+  // 4. Insert Reference Data with FKs to anime (after anime rows are committed)
+  insertIdMap();
+  insertFranchiseRelations();
+
   db.close();
 
   return {
