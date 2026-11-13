@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BookmarkPlus, Calendar, ChevronRight, Clock, Film, Heart, Music, Play, Server, Star } from 'lucide-react';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
@@ -11,7 +11,6 @@ import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel, type AnimeTheme } from '../data/model';
 import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
-import { ServerCard } from '../components/player/ServerCard';
 import { DEFAULT_PLAY_SERVERS } from './Watch';
 import '../styles/anime-detail.css';
 
@@ -43,8 +42,45 @@ export function AnimeDetail() {
 
   const [servers, setServers] = useState<ServerPreview[]>(DEFAULT_PLAY_SERVERS);
   const [serversLoading, setServersLoading] = useState(false);
-  const [selectedServerId, setSelectedServerId] = useState<string>('anikoto:HD-1');
+  const [selectedProviderId, setSelectedProviderId] = useState<string>('anikoto');
   const [themes, setThemes] = useState<AnimeTheme[]>([]);
+
+  const groupedProviders = useMemo(() => {
+    const map = new Map<string, {
+      id: string;
+      name: string;
+      status: string;
+      unavailableReason?: string;
+      mirrorCount: number;
+      hasDub: boolean;
+    }>();
+
+    for (const s of servers) {
+      const provKey = (s.provider || (s.id?.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
+      const existing = map.get(provKey);
+      const isUnavailable = s.status === 'unavailable';
+      const hasDub = Boolean(s.id?.includes('-dub') || s.audio === 'dub');
+
+      if (!existing) {
+        map.set(provKey, {
+          id: provKey,
+          name: provKey === 'anikoto' ? 'AniKoto' : provKey === 'hianime' ? 'HiAnime' : provKey === 'aniwatch' ? 'AniWatch' : provKey === 'anipm' ? 'AniPM' : 'P2P Swarm',
+          status: isUnavailable ? 'unavailable' : 'ready',
+          unavailableReason: s.unavailableReason,
+          mirrorCount: isUnavailable ? 0 : 1,
+          hasDub,
+        });
+      } else {
+        if (!isUnavailable) {
+          existing.mirrorCount++;
+          existing.status = 'ready';
+        }
+        if (hasDub) existing.hasDub = true;
+      }
+    }
+
+    return Array.from(map.values());
+  }, [servers]);
 
   // Theme songs (OP/ED) arrive directly with anime detail
   useEffect(() => {
@@ -76,10 +112,11 @@ export function AnimeDetail() {
             subtitles: s.subtitles || [],
           }));
           setServers(mapped);
-          setSelectedServerId((prev) => {
-            if (prev && mapped.some((s) => s.id === prev)) return prev;
+          setSelectedProviderId((prev) => {
+            const valid = mapped.some((s) => (s.provider || '').toLowerCase() === prev && s.status !== 'unavailable');
+            if (valid) return prev;
             const ready = mapped.find((s) => s.status !== 'unavailable');
-            return ready ? ready.id : (mapped[0]?.id || '');
+            return (ready?.provider || 'anikoto').toLowerCase();
           });
         }
       })
@@ -122,15 +159,8 @@ export function AnimeDetail() {
   const epCount = isUpcoming ? 0 : (anime.episodes?.length || anime.episodeCount || 0);
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
-  const selectedServer = servers.find((s) => s.id === selectedServerId) || servers.find((s) => s.status !== 'unavailable') || servers[0] || null;
-
-  const getWatchUrl = (targetEpNum: number, srv = selectedServer) => {
-    const base = `/watch/${encodeURIComponent(anime.id)}/${targetEpNum}`;
-    if (!srv) return base;
-    const prov = srv.provider || (srv.id?.includes(':') ? srv.id.split(':')[0] : 'auto');
-    const srvName = srv.id?.includes(':') ? srv.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : srv.id;
-    const isDub = srv.id?.includes('-dub') || srv.audio === 'dub';
-    return `${base}?provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(srvName)}&audio=${isDub ? 'dub' : 'sub'}`;
+  const getWatchUrl = (targetEpNum: number, provId = selectedProviderId) => {
+    return `/watch/${encodeURIComponent(anime.id)}/${targetEpNum}?provider=${encodeURIComponent(provId)}`;
   };
 
   return (
@@ -286,7 +316,7 @@ export function AnimeDetail() {
               )}
             </div>
 
-            {/* Available Servers Preview */}
+            {/* Multi-Source Streaming Providers */}
             <div className="ad-servers-box">
               <div className="ad-servers-header">
                 <Server size={15} color="#38bdf8" />
@@ -294,20 +324,49 @@ export function AnimeDetail() {
               </div>
               <div className="mt-3">
                 {serversLoading ? (
-                  <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Checking server availability...</span>
-                ) : servers.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {servers.map((s) => (
-                      <ServerCard
-                        key={s.id || s.name}
-                        server={s}
-                        isActive={selectedServerId === s.id}
-                        onSelect={(srv) => {
-                          setSelectedServerId(srv.id);
-                          navigate(getWatchUrl(targetEp, srv));
-                        }}
-                      />
-                    ))}
+                  <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Checking provider availability...</span>
+                ) : groupedProviders.length > 0 ? (
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    {groupedProviders.map((p) => {
+                      const isSelected = selectedProviderId === p.id;
+                      const isUnavailable = p.status === 'unavailable';
+                      return (
+                        <button
+                          key={p.id}
+                          type="button"
+                          disabled={isUnavailable}
+                          onClick={() => {
+                            setSelectedProviderId(p.id);
+                            navigate(getWatchUrl(targetEp, p.id));
+                          }}
+                          className={`p-4 rounded-xl border text-left transition-all ${
+                            isSelected
+                              ? 'border-white/40 bg-white/10 ring-1 ring-white/20'
+                              : isUnavailable
+                                ? 'opacity-50 grayscale cursor-not-allowed border-white/10 bg-white/5'
+                                : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 cursor-pointer'
+                          }`}
+                        >
+                          <div className="flex justify-between items-center mb-1">
+                            <span className="font-bold text-white text-base">{p.name}</span>
+                            {isUnavailable ? (
+                              <span className="text-xs text-amber-400 font-medium whitespace-nowrap">⚠️ Unavailable</span>
+                            ) : isSelected ? (
+                              <span className="text-xs text-green-400 font-medium whitespace-nowrap">▶️ Selected</span>
+                            ) : (
+                              <span className="text-xs text-blue-400 font-medium whitespace-nowrap">⏳ Ready</span>
+                            )}
+                          </div>
+                          <div className="text-xs text-white/60">
+                            {isUnavailable ? (
+                              <span className="text-amber-400/90">{p.unavailableReason || 'Offline'}</span>
+                            ) : (
+                              <span>{p.mirrorCount} Mirror{p.mirrorCount === 1 ? '' : 's'}{p.hasDub ? ' • SUB/DUB' : ' • SUB'}</span>
+                            )}
+                          </div>
+                        </button>
+                      );
+                    })}
                   </div>
                 ) : (
                   <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Fast Edge CDN & P2P available on player</span>
