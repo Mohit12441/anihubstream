@@ -188,7 +188,17 @@ export function AdvancedPlayer(props: Props) {
   useEffect(() => {
     onStreamResolved?.(liveReady);
     onStreamInfo?.(live.info);
-  }, [liveReady, live.info, onStreamResolved, onStreamInfo]);
+    if (liveReady && live.info?.session && props.serverId && live.info.session !== props.serverId) {
+      props.onServerChange?.(live.info.session);
+    }
+    if (liveReady && live.info?.provider && provider && provider !== 'auto' && live.info.provider !== provider) {
+      const key = `${provider}->${live.info.provider}`;
+      if (fallbackAnnounced.current !== key) {
+        fallbackAnnounced.current = key;
+        notify(`Requested ${provider} unavailable — streaming from ${live.info.provider}`);
+      }
+    }
+  }, [liveReady, live.info, onStreamResolved, onStreamInfo, props.serverId, provider, props.onServerChange, notify]);
 
   /* Dynamically query AniSkip v2 timestamps for the anime MAL ID and episode */
   const [aniSkipMarkers, setAniSkipMarkers] = useState<Marker[]>([]);
