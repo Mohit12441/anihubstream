@@ -108,7 +108,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         const resolvedTitle = meta.title || animeId;
         let resolvedMalId = meta.mal_id || 0;
-        let resolvedAnilistId = meta.anilist_id || 0;
+        const anilistParam = url.searchParams.get('anilist') || '';
+        let resolvedAnilistId = meta.anilist_id || (anilistParam ? Number.parseInt(anilistParam, 10) : (/^\d+$/.test(animeIdParam) ? Number.parseInt(animeIdParam, 10) : 0));
         let resolvedKitsuId = meta.kitsu_id || 0;
 
         if (!resolvedMalId && meta.skip_key_space === 'mal' && meta.skip_key_id) {

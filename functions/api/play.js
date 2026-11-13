@@ -476,9 +476,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     let serverParam = url.searchParams.get('server') || '';
     if (serverParam.toLowerCase() === 'mega') serverParam = 'MegaPlay';
 
+    const anilistParam = url.searchParams.get('anilist') || '';
     let resolvedTitle = titleParam;
     let resolvedMalId = malIdParam ? Number.parseInt(malIdParam, 10) : 0;
-    let resolvedAnilistId = 0;
+    let resolvedAnilistId = anilistParam ? Number.parseInt(anilistParam, 10) : (/^\d+$/.test(id) ? Number.parseInt(id, 10) : 0);
     let durationSeconds = 1440;
     let rawEpisodeMarkers = null;
     let animeRow = null;
