@@ -730,8 +730,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           url: sub.url ? (isDirectNoReferrer ? sub.url : `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}`) : '',
         }));
 
-        const effectiveProvider = (directRes.provider === requested || requested === 'auto') ? directRes.provider : (directRes.provider || 'fallback');
-        const cleanServerId = serverParam || (effectiveProvider === 'anipm' ? 'beta' : 'HD-1');
+        const effectiveProvider = directRes.provider || 'anikoto';
+        const cleanServerId = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
+          ? 'HD-1'
+          : (serverParam || 'HD-1');
         const primaryServer = {
           id: `${effectiveProvider}:${cleanServerId}${audio === 'dub' ? '-dub' : ''}`,
           name: formatServerName(effectiveProvider, `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`),
@@ -798,7 +800,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const meta = bridgeRes;
     const session = meta.session || '';
-    const prov = meta.provider || (requested !== 'auto' ? requested : 'aniwatch');
+    const cleanPrimaryServer = String(serverParam || 'HD-1').replace(/^.*?\s*·\s*/, '').trim();
+    let prov = meta.provider || (requested !== 'auto' ? requested : 'anikoto');
+    if (cleanPrimaryServer.includes('HD-1') || cleanPrimaryServer.includes('HD-2') || cleanPrimaryServer.includes('Vidstream') || meta.provider === 'anikoto' || (meta.master && meta.master.includes('nexabloom'))) {
+      prov = 'anikoto';
+    }
     const proxyBase = `${url.origin}/api/proxy`;
     const masterPath = meta.master || meta.streamUrl || '';
     const activeReferer = meta.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : ''));
@@ -843,7 +849,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }));
 
     // Construct primary server entry
-    const cleanPrimaryServer = String(serverParam || 'HD-1').replace(/^.*?\s*·\s*/, '').trim();
     const activeServerId = `${prov}:${cleanPrimaryServer}`;
     const resolvedAudio = typeof meta.audio === 'string' ? meta.audio : audio;
     let primaryServerName = formatServerName(prov, cleanPrimaryServer);
@@ -957,17 +962,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
     }
 
-    const scoped = servers.filter((s) => s.provider === requested);
-    const finalServers = scoped.length ? scoped : defaultServers.filter((s) => s.provider === requested);
-    const isScopedUnavailable = !availableSlugs[requested];
+    const allServers = [
+      ...servers,
+      ...defaultServers.filter((def) => !servers.some((s) => s.id === def.id)),
+    ];
+    const isScopedUnavailable = Boolean(requested && requested !== 'auto' && !availableSlugs[requested]);
 
     return ok({
       title: resolvedTitle,
       episode: ep,
       malId: resolvedMalId || null,
       scopedProvider: requested,
-      scopedProviderUnavailable: Boolean(isScopedUnavailable),
-      servers: finalServers,
+      scopedProviderUnavailable: isScopedUnavailable,
+      servers: allServers,
       aniskip: {
         op: finalOp,
         ed: finalEd,

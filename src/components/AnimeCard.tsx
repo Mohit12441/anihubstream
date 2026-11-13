@@ -22,18 +22,12 @@ interface Props {
 
 const rankTint = ['#8fe9ff', '#b57bff', '#ff5470', '#ff9420', '#ffc247'];
 
-export function AnimeCard({ anime, variant = 'key', rank, badge, episode, provider }: Props) {
+export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Props) {
   const { genreLabel } = useCatalogue();
   const { history } = useLibrary();
   const resume = history.find((h) => h.anime.id === anime.id);
   const cleanTitle = cleanAnimeTitle(anime.title);
-  const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
-  const targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
-  const to = isUpcoming
-    ? `/anime/${anime.id}`
-    : provider
-      ? `/watch/${anime.id}/${targetEp}?provider=${encodeURIComponent(provider)}${cleanTitle ? `&title=${encodeURIComponent(cleanTitle)}` : ''}`
-      : `/watch/${anime.id}/${targetEp}`;
+  const to = `/anime/${anime.id}`;
   const tint = rank ? rankTint[(rank - 1) % rankTint.length] : anime.accent;
 
   const hoverTimer = useRef<number | null>(null);

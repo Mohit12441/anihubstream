@@ -250,13 +250,12 @@ export function Watch() {
 
   const currentSubservers = useMemo(() => {
     const isDub = prefs.audio === 'dub';
-    const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
-    const audioMatching = provServers.filter((s) => {
+    const audioMatching = playServers.filter((s) => {
       const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
       return isDub ? sDub : !sDub;
     });
-    return audioMatching.length > 0 ? audioMatching : provServers;
-  }, [playServers, activeProvider, prefs.audio]);
+    return audioMatching.length > 0 ? audioMatching : playServers;
+  }, [playServers, prefs.audio]);
 
   const hasDubForProvider = useMemo(() => {
     const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
@@ -739,13 +738,13 @@ export function Watch() {
               <div className="watch__ext-subservers-row">
                 <span className="watch__ext-label">
                   <Server size={13} aria-hidden="true" />
-                  <span>{activeProvider} ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
+                  <span>Servers ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
                 </span>
                 <div className="watch__ext-subservers-list">
                   {currentSubservers.map((s) => {
                     const isSelected = s.id === activeServerId;
                     const isUnavailable = s.status === 'unavailable';
-                    const name = cleanServerName(s);
+                    const name = s.name || cleanServerName(s);
                     return (
                       <button
                         key={s.id}
