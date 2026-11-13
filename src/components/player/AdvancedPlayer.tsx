@@ -110,6 +110,8 @@ export function AdvancedPlayer(props: Props) {
      playhead instead of the saved position, but never across an episode change */
   const switchSeekRef = useRef<number | null>(null);
   const switchSeekFor = useRef<string | null>(null);
+  const providerFallbackAnnounced = useRef<string | null>(null);
+  const syncedFallbackInfo = useRef<BridgeSource | null>(null);
 
   /* ---------- live bridge ---------- */
   const startAtForLive =
@@ -188,17 +190,22 @@ export function AdvancedPlayer(props: Props) {
   useEffect(() => {
     onStreamResolved?.(liveReady);
     onStreamInfo?.(live.info);
-    if (liveReady && live.info?.session && props.serverId && live.info.session !== props.serverId) {
-      props.onServerChange?.(live.info.session);
-    }
-    if (liveReady && live.info?.provider && provider && provider !== 'auto' && live.info.provider !== provider) {
-      const key = `${provider}->${live.info.provider}`;
-      if (fallbackAnnounced.current !== key) {
-        fallbackAnnounced.current = key;
-        notify(`Requested ${provider} unavailable — streaming from ${live.info.provider}`);
+    if (liveReady && live.info?.fallback) {
+      if (syncedFallbackInfo.current !== live.info) {
+        syncedFallbackInfo.current = live.info;
+        if (live.info.session && props.serverId && live.info.session !== props.serverId) {
+          props.onServerChange?.(live.info.session);
+        }
+      }
+      const from = live.info.fallback.fromProvider || provider;
+      const to = live.info.provider;
+      const key = `${episodeTag}:${from}->${to}`;
+      if (providerFallbackAnnounced.current !== key) {
+        providerFallbackAnnounced.current = key;
+        notify(`Requested ${from} unavailable — streaming from ${to}`);
       }
     }
-  }, [liveReady, live.info, onStreamResolved, onStreamInfo, props.serverId, provider, props.onServerChange, notify]);
+  }, [liveReady, live.info, onStreamResolved, onStreamInfo, props.serverId, provider, props.onServerChange, notify, episodeTag]);
 
   /* Dynamically query AniSkip v2 timestamps for the anime MAL ID and episode */
   const [aniSkipMarkers, setAniSkipMarkers] = useState<Marker[]>([]);

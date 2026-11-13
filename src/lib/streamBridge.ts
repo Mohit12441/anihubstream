@@ -51,6 +51,7 @@ export interface BridgeSource {
   servers?: { name: string; linkId: string; type?: string }[];
   referrerPolicy?: 'no-referrer' | 'origin' | 'same-origin';
   betaUrlCandidates?: string[];
+  fallback?: { fromProvider?: string; fromServer?: string };
 }
 
 export interface ResolveFailure {

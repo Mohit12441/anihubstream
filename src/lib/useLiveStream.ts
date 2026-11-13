@@ -214,7 +214,7 @@ export function useLiveStream(o: Options) {
             const autoRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
             if (cancel) return;
             if (!isResolveFailure(autoRes)) {
-              setInfo(autoRes);
+              setInfo({ ...autoRes, fallback: { fromProvider: o.provider, fromServer: o.server } });
               prefetchEpisode(o.animeId, o.episode + 1, o.audio, 'auto');
               return;
             }
@@ -391,7 +391,7 @@ export function useLiveStream(o: Options) {
           const fallbackRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
           if (cancelled) return;
           if (!isResolveFailure(fallbackRes)) {
-            setInfo(fallbackRes);
+            setInfo({ ...fallbackRes, fallback: { fromProvider: o.provider, fromServer: o.server } });
             return;
           }
         }
@@ -505,7 +505,7 @@ export function useLiveStream(o: Options) {
             console.warn('[useLiveStream] AniPM Beta stream failed mid-flight; switching to auto fallback');
             void bridgeResolve(o.animeId, o.episode, o.audio, 'auto').then((fallbackRes) => {
               if (!cancelled && !isResolveFailure(fallbackRes)) {
-                setInfo(fallbackRes);
+                setInfo({ ...fallbackRes, fallback: { fromProvider: o.provider, fromServer: o.server } });
               }
             });
             return;
