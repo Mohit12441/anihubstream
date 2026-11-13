@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, withEdgeCache } from './_lib.js';
+import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, resolveBetaAudioTracks, withEdgeCache } from './_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
@@ -623,10 +623,36 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       serverParam.toLowerCase().includes('hd') ||
       serverParam.toLowerCase().includes('vidstream');
 
+    const effectiveAnilistId = resolvedAnilistId || animeRow?.anilist_id || 0;
+    const isExplicitBeta = serverParam && serverParam.toLowerCase() === 'beta';
+    const isBetaServer = isExplicitBeta || !serverParam;
+    const shouldUseEdgeBeta =
+      effectiveAnilistId > 0 &&
+      (
+        (requested === 'anipm' && isBetaServer) ||
+        (requested === 'auto' && isExplicitBeta)
+      );
+
     // Parallel fetch: AniSkip timestamps (D1 markers/cache/API), Direct Edge Resolution, and Bridge Stream Resolution
     const [aniskipData, directRes, bridgeRes] = await Promise.all([
       resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id),
       (async () => {
+        if (shouldUseEdgeBeta) {
+          try {
+            const betaDirect = await resolveBetaAudioTracks(
+              env,
+              effectiveAnilistId,
+              { title: resolvedTitle, id },
+              ep,
+              audio,
+              request
+            );
+            if (betaDirect?.streamUrl) {
+              return betaDirect;
+            }
+          } catch {}
+        }
+
         if (!resolvedMalId || !canUseEdgeDirect) return null;
         const cacheKey = `stream:${requested || 'auto'}:${resolvedMalId}:${ep}:${audio}:${serverParam || 'HD-1'}`;
         const memCached = STREAM_MEM_CACHE.get(cacheKey);
@@ -678,7 +704,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
       })(),
       (async () => {
-        if (!bridgeBase) return null;
+        if (!bridgeBase || shouldUseEdgeBeta) return null;
         try {
           const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
           resolveBridgeUrl.searchParams.set('title', resolvedTitle);
@@ -720,7 +746,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
       if (directRes?.streamUrl) {
         const proxyBase = `${url.origin}/api/proxy`;
-        const activeReferer = directRes.referer || 'https://megaplay.buzz/';
+        const activeReferer = directRes.referer || (directRes.provider === 'anipm' ? 'https://beta.cno.to/' : 'https://megaplay.buzz/');
         const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
 
         const subtitles = (directRes.subtitles || []).map((sub) => ({
@@ -731,9 +757,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }));
 
         const effectiveProvider = (directRes.provider === requested || requested === 'auto') ? directRes.provider : (directRes.provider || 'fallback');
+        const cleanServerId = serverParam || (effectiveProvider === 'anipm' ? 'beta' : 'HD-1');
         const primaryServer = {
-          id: `${effectiveProvider}:${serverParam || 'HD-1'}${audio === 'dub' ? '-dub' : ''}`,
-          name: formatServerName(effectiveProvider, `${serverParam || 'HD-1'}${audio === 'dub' ? ' (DUB)' : ''}`),
+          id: `${effectiveProvider}:${cleanServerId}${audio === 'dub' ? '-dub' : ''}`,
+          name: formatServerName(effectiveProvider, `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`),
           provider: effectiveProvider,
           status: 'ready',
           streamUrl: proxiedStreamUrl,

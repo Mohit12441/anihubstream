@@ -1,7 +1,7 @@
 import { HttpError, errorResponse, ok } from '../_lib.js';
 import { isMegaplayTokenValid } from '../_megaplay.js';
 
-const STREAM_KEY_REGEX = /^stream:[a-zA-Z0-9_-]+(?::[a-zA-Z0-9_-]+)*:\d+:(sub|dub|hindi)(:[a-zA-Z0-9_-]+)?$/;
+const STREAM_KEY_REGEX = /^stream:[a-zA-Z0-9_-]+(?::[a-zA-Z0-9_-]+)*:\d+:(sub|dub|hindi)(?::[a-zA-Z0-9_-]+)*$/;
 
 export const onRequestGet = async ({ request, env }) => {
   try {

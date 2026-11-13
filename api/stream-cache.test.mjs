@@ -26,6 +26,10 @@ describe('Task 3: Playback Startup Latency & Stream Caching', () => {
         streamCacheKey('Demon Slayer', 1, 'hindi', 'watchanimeworld'),
         'stream:demon-slayer:1:hindi:watchanimeworld',
       );
+      assert.equal(
+        streamCacheKey('One Piece', 1, 'sub', 'anipm', 'beta'),
+        'stream:one-piece:1:sub:anipm:beta',
+      );
     });
   });
 
@@ -146,6 +150,31 @@ describe('Task 3: Playback Startup Latency & Stream Caching', () => {
       assert.equal(hindiGetJson.hit, true);
       assert.equal(hindiGetJson.data.audio, 'hindi');
       assert.equal(hindiGetJson.data.provider, 'watchanimeworld');
+
+      // Multi-suffix stream cache POST & GET (e.g. provider + server)
+      const betaKey = 'stream:21:1:sub:anipm:beta';
+      const betaData = {
+        master: 'https://beta.cno.to/hls/21-one-piece/E0001/master.m3u8',
+        quality: 1080,
+        audio: 'sub',
+        provider: 'anipm',
+      };
+      const betaPostReq = new Request('https://anihubstream.com/api/stream/cache', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ key: betaKey, data: betaData, ttlSeconds: 1200 }),
+      });
+      const betaPostRes = await onRequestPost({ request: betaPostReq, env });
+      assert.equal(betaPostRes.status, 200);
+      const betaPostJson = await betaPostRes.json();
+      assert.equal(betaPostJson.ok, true);
+
+      const betaGetReq = new Request(`https://anihubstream.com/api/stream/cache?key=${encodeURIComponent(betaKey)}`);
+      const betaGetRes = await onRequestGet({ request: betaGetReq, env });
+      assert.equal(betaGetRes.status, 200);
+      const betaGetJson = await betaGetRes.json();
+      assert.equal(betaGetJson.hit, true);
+      assert.equal(betaGetJson.data.provider, 'anipm');
     });
 
     it('rejects invalid key formats with 400', async () => {
