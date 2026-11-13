@@ -371,7 +371,31 @@ export function useLiveStream(o: Options) {
       if (cancelled) return;
 
       let sourceUrl = url;
-      if (info.betaUrlCandidates && info.betaUrlCandidates.length > 1) {
+      if (info.provider === 'anipm' && sourceUrl.includes('cno.to')) {
+        let probeOk = false;
+        const candidates = (info.betaUrlCandidates && info.betaUrlCandidates.length > 0)
+          ? info.betaUrlCandidates
+          : [sourceUrl];
+        for (const candidate of candidates) {
+          try {
+            const res = await fetch(candidate, { referrerPolicy: 'no-referrer', method: 'HEAD', signal: AbortSignal.timeout(3000) });
+            if (res.ok) {
+              sourceUrl = candidate;
+              probeOk = true;
+              break;
+            }
+          } catch {}
+        }
+        if (!probeOk) {
+          console.warn('[useLiveStream] Direct browser fetch to Beta blocked; falling back to auto provider');
+          const fallbackRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
+          if (cancelled) return;
+          if (!isResolveFailure(fallbackRes)) {
+            setInfo(fallbackRes);
+            return;
+          }
+        }
+      } else if (info.betaUrlCandidates && info.betaUrlCandidates.length > 1) {
         for (const candidate of info.betaUrlCandidates) {
           try {
             const res = await fetch(candidate, { referrerPolicy: 'no-referrer', method: 'HEAD', signal: AbortSignal.timeout(3000) });
@@ -477,6 +501,15 @@ export function useLiveStream(o: Options) {
            appended) — a parsed manifest alone is not playback. */
         hls.on(HlsCtor.Events.ERROR, (_evt, data) => {
           if (cancelled || !data.fatal) return;
+          if (info.provider === 'anipm' && (data.type === HlsCtor.ErrorTypes.NETWORK_ERROR || (data as any).response?.code === 403)) {
+            console.warn('[useLiveStream] AniPM Beta stream failed mid-flight; switching to auto fallback');
+            void bridgeResolve(o.animeId, o.episode, o.audio, 'auto').then((fallbackRes) => {
+              if (!cancelled && !isResolveFailure(fallbackRes)) {
+                setInfo(fallbackRes);
+              }
+            });
+            return;
+          }
           if ((data as any).response?.code === 403) {
             // Expired token (e.g. Settlar): trigger fresh re-resolve
             setNonce((n) => n + 1);
