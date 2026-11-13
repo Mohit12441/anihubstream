@@ -730,7 +730,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
         }));
 
-        const effectiveProvider = requested && requested !== 'auto' ? requested : directRes.provider;
+        const effectiveProvider = (directRes.provider === requested || requested === 'auto') ? directRes.provider : (directRes.provider || 'fallback');
         const primaryServer = {
           id: `${effectiveProvider}:${serverParam || 'HD-1'}${audio === 'dub' ? '-dub' : ''}`,
           name: formatServerName(effectiveProvider, `${serverParam || 'HD-1'}${audio === 'dub' ? ' (DUB)' : ''}`),
@@ -740,7 +740,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           type: audio === 'dub' ? 'dub' : 'hls',
           quality: directRes.quality || '1080p',
           audio,
-          audioTracks: buildAudioTracks(audio),
+          audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
+            ? directRes.audioTracks
+            : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
+              ? directRes.audio
+              : buildAudioTracks(audio),
           subtitles,
           thumbnails: directRes.thumbnails?.url ? { url: `${proxyBase}?url=${encodeURIComponent(directRes.thumbnails.url)}&referer=${encodeURIComponent(activeReferer)}` } : null,
           downloads: [],
@@ -838,15 +842,21 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     // Construct primary server entry
     const cleanPrimaryServer = String(serverParam || 'HD-1').replace(/^.*?\s*·\s*/, '').trim();
     const activeServerId = `${prov}:${cleanPrimaryServer}`;
-    const resolvedAudio = meta.audio || audio;
+    const resolvedAudio = typeof meta.audio === 'string' ? meta.audio : audio;
     let primaryServerName = formatServerName(prov, cleanPrimaryServer);
     if (audio === 'dub' && resolvedAudio === 'sub') {
       primaryServerName += ' (Sub Only)';
     }
 
-    const primaryAudioTracks = (Array.isArray(meta.audioTracks) && meta.audioTracks.length > 0)
-      ? meta.audioTracks.map((t, i) => ({
-          id: t.id !== undefined ? String(t.id) : `audio-${i}`,
+    const activeAudio = (Array.isArray(meta.audioTracks) && meta.audioTracks.length > 0)
+      ? meta.audioTracks
+      : (Array.isArray(meta.audio) && meta.audio.length > 0)
+        ? meta.audio
+        : null;
+
+    const primaryAudioTracks = activeAudio
+      ? activeAudio.map((t, i) => ({
+          id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${i}`),
           language: t.language || t.lang || 'ja',
           label: t.label || t.name || t.language || 'Audio',
           default: t.default !== undefined ? Boolean(t.default) : i === 0,
@@ -881,9 +891,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const cleanServerId = String(rawServerId).replace(/^.*?\s*·\s*/, '').trim();
         const sId = `${prov}:${cleanServerId}`;
         if (sId !== activeServerId && !servers.some((existing) => existing.id === sId)) {
-          const sAudioTracks = (Array.isArray(s.audioTracks) && s.audioTracks.length > 0)
-            ? s.audioTracks.map((t, i) => ({
-                id: t.id !== undefined ? String(t.id) : `audio-${i}`,
+          const activeSecondaryAudio = (Array.isArray(s.audioTracks) && s.audioTracks.length > 0)
+            ? s.audioTracks
+            : (Array.isArray(s.audio) && s.audio.length > 0)
+              ? s.audio
+              : null;
+
+          const sAudioTracks = activeSecondaryAudio
+            ? activeSecondaryAudio.map((t, i) => ({
+                id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${i}`),
                 language: t.language || t.lang || 'ja',
                 label: t.label || t.name || t.language || 'Audio',
                 default: t.default !== undefined ? Boolean(t.default) : i === 0,

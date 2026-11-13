@@ -845,3 +845,6 @@ export function buildAudioTracks(audio) {
     { id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true },
   ];
 }
+
+export { parseMaster } from '../../lib/m3u8.mjs';
+

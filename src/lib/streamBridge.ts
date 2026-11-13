@@ -16,6 +16,8 @@
    / `{ error }` and the player shows an offline state with retry.
    ============================================================ */
 
+import type { LiveAudioTrack } from './useLiveStream';
+
 export interface BridgeSubtitle {
   language: string;
   name?: string;
@@ -34,6 +36,7 @@ export interface BridgeSource {
   quality: number | string;
   variants: (number | string)[];
   audio: string;
+  audioTracks?: LiveAudioTrack[];
   skip: { intro?: [number, number]; outro?: [number, number] } | null;
   proof: { container: string; checkedBytes: number };
   master: string;

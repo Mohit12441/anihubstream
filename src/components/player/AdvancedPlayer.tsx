@@ -9,7 +9,7 @@ import {
 import { useToast } from '../../lib/Toast';
 import { usePrefersReducedMotion } from '../../lib/motion';
 import { usePlayerEngine, type PlayerEngine } from '../../lib/usePlayerEngine';
-import { useLiveStream } from '../../lib/useLiveStream';
+import { useLiveStream, type LiveAudioTrack } from '../../lib/useLiveStream';
 import { actionFor, isEditable, type ShortcutAction } from '../../lib/shortcuts';
 import type { AudioId, PlayerPrefs, SubtitleSettings } from '../../lib/playerPrefs';
 import { bridgeAudios, isResolveFailure, type AudioList } from '../../lib/streamBridge';
@@ -23,9 +23,19 @@ import { WatchPartyPanel } from './WatchPartyPanel';
 import { WatchPartyClient, calculateDrift, shouldSync } from '../../lib/watchParty';
 import { captionAnchor, captionStyle } from './captionStyle';
 import { AmbilightGlow } from './AmbilightGlow';
-import type { PlayServer } from './PlayerInput';
+import type { PlayServer, AudioTrack } from './PlayerInput';
 import { cleanServerName } from './ServerPopover';
 import { bridgeUrl, type BridgeSource } from '../../lib/streamBridge';
+
+function toLiveAudioTrack(t: AudioTrack, idx: number): LiveAudioTrack {
+  const num = typeof t.id === 'number' ? t.id : Number.parseInt(String(t.id), 10);
+  return {
+    id: Number.isFinite(num) ? num : idx,
+    name: t.label || t.language || `Track ${idx + 1}`,
+    lang: t.language || '',
+    default: Boolean(t.default),
+  };
+}
 
 const COUNTDOWN = 8;
 
@@ -144,6 +154,7 @@ export function AdvancedPlayer(props: Props) {
         url: sub.url || sub.proxyUrl || sub.uri || '',
       })),
       thumbnails: initialServer.thumbnails?.url ? { url: initialServer.thumbnails.url } : null,
+      audioTracks: (initialServer.audioTracks || []).map(toLiveAudioTrack),
       downloads: initialServer.downloads || [],
     };
   }, [initialServer, anime.title, episode.n, prefs.audio]);

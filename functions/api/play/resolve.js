@@ -1,9 +1,97 @@
 // @ts-check
-import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, ok, withEdgeCache } from '../_lib.js';
+import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, ok, parseMaster, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
 const BRIDGE_TIMEOUT_MS = 6_000;
+const BETA_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
+const POSITIVE_TTL_MS = 30 * 60_000;
+const NEGATIVE_TTL_MS = 60 * 60_000;
+
+const slugify = (s) =>
+  String(s || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
+
+async function resolveBetaAudioTracks(env, resolvedAnilistId, meta, ep, audio) {
+  const audioType = audio === 'dub' || audio === 'hindi' ? audio : 'sub';
+  const epPadded = String(ep).padStart(4, '0');
+  const cacheKey = `stream:anipm:beta:${resolvedAnilistId}:${ep}:${audioType}`;
+
+  // 1. Cache read
+  if (env?.ANIHUB?.prepare) {
+    try {
+      const row = await env.ANIHUB.prepare(
+        'SELECT data FROM stream_cache WHERE key = ?1 AND expires_at > ?2'
+      ).bind(cacheKey, Date.now()).first();
+      if (row?.data) {
+        const parsed = JSON.parse(row.data);
+        if (parsed?.negative === true) return null;
+        if (parsed?.streamUrl) return parsed;
+      }
+    } catch { /* miss */ }
+  }
+
+  // 2. Upstream fetch — deduped slug candidates
+  const candidates = [...new Set(
+    [slugify(meta?.title), slugify(meta?.id)].filter(Boolean)
+  )];
+
+  let winner = null;
+  for (const slug of candidates) {
+    const url = `https://beta.cno.to/hls/${resolvedAnilistId}-${slug}/E${epPadded}/master.m3u8`;
+    let res;
+    try {
+      res = await fetch(url, {
+        headers: { 'User-Agent': BETA_UA, 'Referer': 'https://beta.cno.to/', 'Origin': 'https://beta.cno.to' },
+      });
+    } catch { continue; }
+    if (!res.ok) continue;
+
+    let parsed;
+    try { parsed = parseMaster(await res.text(), url); } catch { continue; }
+    const rawAudio = parsed?.audio ?? parsed?.audioTracks ?? (Array.isArray(parsed) ? parsed : []);
+    if (!rawAudio.length) continue;
+
+    const audioTracks = rawAudio.map((t, idx) => ({
+      id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${idx}`),
+      language: t.language || t.lang || 'ja',
+      label: t.label || t.name || t.language || 'Audio',
+      default: t.default !== undefined ? Boolean(t.default) : idx === 0,
+    }));
+
+    winner = {
+      streamUrl: url,
+      audioTracks,
+      provider: 'anipm',
+      quality: '1080p',
+      referer: 'https://beta.cno.to/',
+      subtitles: (parsed?.subtitles || []).map((s, idx) => ({
+        id: s.id !== undefined ? String(s.id) : `sub-${idx}`,
+        language: s.language || s.lang || 'en',
+        label: s.label || s.name || s.language || 'English',
+        url: s.uri || s.url || '',
+        default: Boolean(s.default),
+      })),
+    };
+    break;
+  }
+
+  // 3. Cache write
+  if (env?.ANIHUB?.prepare) {
+    try {
+      if (winner) {
+        await env.ANIHUB.prepare(
+          'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+        ).bind(cacheKey, JSON.stringify(winner), Date.now() + POSITIVE_TTL_MS).run();
+      } else {
+        await env.ANIHUB.prepare(
+          'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
+        ).bind(cacheKey, JSON.stringify({ negative: true, audioTracks: [] }), Date.now() + NEGATIVE_TTL_MS).run();
+      }
+    } catch { /* best-effort */ }
+  }
+
+  return winner;
+}
 
 /**
  * Lazy Server Stream Resolution Endpoint
@@ -129,6 +217,36 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         // Direct Edge Resolution (Method C: Pure Edge Extractor)
+        // Check AniPM Beta edge-native multi-audio first if AniPM or Beta server requested
+        if (resolvedAnilistId > 0 && (provider === 'anipm' || serverParam.toLowerCase().includes('beta'))) {
+          try {
+            const betaDirect = await resolveBetaAudioTracks(env, resolvedAnilistId, meta, ep, audio);
+            if (betaDirect?.streamUrl) {
+              const proxyBase = `${url.origin}/api/proxy`;
+              const activeReferer = betaDirect.referer || 'https://beta.cno.to/';
+              const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(betaDirect.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
+              const effectiveProvider = 'anipm';
+              const cleanServerId = rawServerParam || 'beta';
+              const resolvedServer = {
+                id: `${effectiveProvider}:${cleanServerId}`,
+                name: formatServerName(effectiveProvider, serverParam || 'Beta Master'),
+                provider: effectiveProvider,
+                status: 'ready',
+                streamUrl: proxiedStreamUrl,
+                type: 'hls',
+                quality: betaDirect.quality || '1080p',
+                audio,
+                audioTracks: (Array.isArray(betaDirect.audioTracks) && betaDirect.audioTracks.length > 0)
+                  ? betaDirect.audioTracks
+                  : buildAudioTracks(audio),
+                subtitles: betaDirect.subtitles || [],
+                downloads: [],
+              };
+              return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
+            }
+          } catch {}
+        }
+
         // Megaplay powers AniKoto, MegaPlay, and HD-1 / Vidstream servers directly
         const canUseEdgeDirect =
           provider === 'auto' ||
@@ -194,7 +312,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
               }));
 
-              const effectiveProvider = (provider && provider !== 'auto') ? provider : directRes.provider;
+              const effectiveProvider = directRes?.provider || 'fallback';
               const cleanServerId = rawServerParam || 'HD-1';
               const serverIdWithAudio = audio === 'dub' && !cleanServerId.includes('-dub') ? `${cleanServerId}-dub` : cleanServerId;
               const serverNameWithAudio = audio === 'dub' && !serverParam.includes('(DUB)') ? `${serverParam || 'HD-1'} (DUB)` : (serverParam || 'HD-1');
@@ -207,7 +325,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 type: audio === 'dub' ? 'dub' : 'hls',
                 quality: directRes.quality || '1080p',
                 audio,
-                audioTracks: buildAudioTracks(audio),
+                audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
+                  ? directRes.audioTracks
+                  : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
+                    ? directRes.audio
+                    : buildAudioTracks(audio),
                 subtitles,
                 downloads: [],
                 intro: directRes.intro || null,
@@ -309,7 +431,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       type: audio === 'dub' ? 'dub' : 'hls',
                       quality: directRes.quality || '1080p',
                       audio,
-                      audioTracks: buildAudioTracks(audio),
+                      audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
+                        ? directRes.audioTracks
+                        : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
+                          ? directRes.audio
+                          : buildAudioTracks(audio),
                       subtitles,
                       downloads: [],
                       intro: directRes.intro || null,
@@ -377,15 +503,21 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           url: dl.url?.startsWith('http') ? dl.url : `${bridgeBase}${dl.url}`,
         }));
 
-        const resolvedAudio = metaData.audio || audio;
+        const rawAudioMeta = (Array.isArray(metaData.audioTracks) && metaData.audioTracks.length > 0)
+          ? metaData.audioTracks
+          : (Array.isArray(metaData.audio) && metaData.audio.length > 0)
+            ? metaData.audio
+            : null;
+
+        const resolvedAudio = typeof metaData.audio === 'string' ? metaData.audio : audio;
         let serverName = formatServerName(prov, serverParam || 'HD-1');
         if (audio === 'dub' && resolvedAudio === 'sub') {
           serverName += ' (Sub Only)';
         }
 
-        const resolvedAudioTracks = (Array.isArray(metaData.audioTracks) && metaData.audioTracks.length > 0)
-          ? metaData.audioTracks.map((t, i) => ({
-              id: t.id !== undefined ? String(t.id) : `audio-${i}`,
+        const resolvedAudioTracks = rawAudioMeta
+          ? rawAudioMeta.map((t, i) => ({
+              id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${i}`),
               language: t.language || t.lang || 'ja',
               label: t.label || t.name || t.language || 'Audio',
               default: t.default !== undefined ? Boolean(t.default) : i === 0,

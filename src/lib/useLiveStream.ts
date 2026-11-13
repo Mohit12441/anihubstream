@@ -477,7 +477,22 @@ export function useLiveStream(o: Options) {
           }));
           setAudioTracks(aTracks);
           if (aTracks.length > 0) {
-            const active = hls && hls.audioTrack !== -1 ? hls.audioTrack : (aTracks.find((a) => a.default)?.id ?? 0);
+            let targetTrack = -1;
+            if (o.audio === 'dub') {
+              const dub = aTracks.find((a) => a.lang?.startsWith('en') || /dub|english/i.test(a.name));
+              if (dub) targetTrack = dub.id;
+            } else if (o.audio === 'hindi') {
+              const hi = aTracks.find((a) => a.lang?.startsWith('hi') || /hindi/i.test(a.name));
+              if (hi) targetTrack = hi.id;
+            }
+
+            const active = targetTrack !== -1
+              ? targetTrack
+              : (aTracks.find((a) => a.default)?.id ?? 0);
+
+            if (hls && targetTrack !== -1) {
+              hls.audioTrack = targetTrack;
+            }
             setCurrentAudioTrack(active);
           }
         });
