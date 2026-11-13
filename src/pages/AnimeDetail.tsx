@@ -1,6 +1,23 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { BookmarkPlus, Calendar, ChevronRight, Clock, Film, Heart, Music, Play, Server, Star } from 'lucide-react';
+import {
+  BookmarkPlus,
+  Calendar,
+  ChevronRight,
+  Clock,
+  Film,
+  Globe,
+  Heart,
+  Layers,
+  Music,
+  Play,
+  Radio,
+  Server,
+  Shield,
+  Sparkles,
+  Star,
+  Zap,
+} from 'lucide-react';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
@@ -24,6 +41,24 @@ interface ServerPreview {
   audio?: string;
   audioTracks?: any[];
   subtitles?: any[];
+}
+
+function getProviderIcon(provId: string) {
+  switch (provId) {
+    case 'anikoto':
+      return <Zap size={14} className="text-amber-400" />;
+    case 'hianime':
+      return <Sparkles size={14} className="text-sky-400" />;
+    case 'aniwatch':
+      return <Globe size={14} className="text-emerald-400" />;
+    case 'anipm':
+      return <Shield size={14} className="text-rose-400" />;
+    case 'torrent':
+    case 'p2p':
+      return <Radio size={14} className="text-purple-400" />;
+    default:
+      return <Server size={14} className="text-blue-400" />;
+  }
 }
 
 export function AnimeDetail() {
@@ -326,7 +361,7 @@ export function AnimeDetail() {
                 {serversLoading ? (
                   <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Checking provider availability...</span>
                 ) : groupedProviders.length > 0 ? (
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="ad-providers-grid">
                     {groupedProviders.map((p) => {
                       const isSelected = selectedProviderId === p.id;
                       const isUnavailable = p.status === 'unavailable';
@@ -339,29 +374,46 @@ export function AnimeDetail() {
                             setSelectedProviderId(p.id);
                             navigate(getWatchUrl(targetEp, p.id));
                           }}
-                          className={`p-4 rounded-xl border text-left transition-all ${
-                            isSelected
-                              ? 'border-white/40 bg-white/10 ring-1 ring-white/20'
-                              : isUnavailable
-                                ? 'opacity-50 grayscale cursor-not-allowed border-white/10 bg-white/5'
-                                : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 cursor-pointer'
-                          }`}
+                          className={`ad-provider-card${isSelected ? ' is-selected' : ''}${isUnavailable ? ' is-unavailable' : ''}`}
                         >
-                          <div className="flex justify-between items-center mb-1">
-                            <span className="font-bold text-white text-base">{p.name}</span>
+                          <div className="ad-provider-top">
+                            <div className="ad-provider-title-wrap">
+                              <span className="ad-provider-icon">{getProviderIcon(p.id)}</span>
+                              <span className="ad-provider-name">{p.name}</span>
+                            </div>
                             {isUnavailable ? (
-                              <span className="text-xs text-amber-400 font-medium whitespace-nowrap">⚠️ Unavailable</span>
+                              <span className="ad-provider-badge ad-provider-badge--unavailable">
+                                <span className="ad-provider-pulse-dot" />
+                                <span>Unavailable</span>
+                              </span>
                             ) : isSelected ? (
-                              <span className="text-xs text-green-400 font-medium whitespace-nowrap">▶️ Selected</span>
+                              <span className="ad-provider-badge ad-provider-badge--selected">
+                                <span className="ad-provider-pulse-dot" />
+                                <span>Selected</span>
+                              </span>
                             ) : (
-                              <span className="text-xs text-blue-400 font-medium whitespace-nowrap">⏳ Ready</span>
+                              <span className="ad-provider-badge ad-provider-badge--ready">
+                                <span className="ad-provider-pulse-dot" />
+                                <span>Ready</span>
+                              </span>
                             )}
                           </div>
-                          <div className="text-xs text-white/60">
+                          <div className="ad-provider-meta">
                             {isUnavailable ? (
-                              <span className="text-amber-400/90">{p.unavailableReason || 'Offline'}</span>
+                              <span className="ad-provider-reason" title={p.unavailableReason}>
+                                {p.unavailableReason || 'Offline'}
+                              </span>
                             ) : (
-                              <span>{p.mirrorCount} Mirror{p.mirrorCount === 1 ? '' : 's'}{p.hasDub ? ' • SUB/DUB' : ' • SUB'}</span>
+                              <>
+                                <span className="ad-provider-mirrors">
+                                  <Layers size={12} className="opacity-70" />
+                                  <span>{p.mirrorCount} Mirror{p.mirrorCount === 1 ? '' : 's'}</span>
+                                </span>
+                                <div className="ad-provider-tags">
+                                  <span className="ad-provider-tag ad-provider-tag--sub">SUB</span>
+                                  {p.hasDub && <span className="ad-provider-tag ad-provider-tag--dub">DUB</span>}
+                                </div>
+                              </>
                             )}
                           </div>
                         </button>
