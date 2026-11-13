@@ -677,7 +677,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
       })(),
       (async () => {
-        if (!bridgeBase || shouldUseEdgeBeta) return null;
+        if (!bridgeBase) return null;
         try {
           const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
           resolveBridgeUrl.searchParams.set('title', resolvedTitle);
