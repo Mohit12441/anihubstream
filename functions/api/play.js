@@ -541,7 +541,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: { status: 'healthy', latencyMs: 85 },
       hianime: { status: 'healthy', latencyMs: 140 },
       aniwatch: { status: 'healthy', latencyMs: 210 },
-      anipm: { status: 'healthy', latencyMs: 105 },
+      anipm: { status: 'offline', latencyMs: 0 },
       torrent: { status: 'healthy', latencyMs: 45, peers: 12 },
     };
 
@@ -582,13 +582,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
-      { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || {}) },
+      { id: 'anipm', name: 'AniPM', available: false, status: 'offline', unavailableReason: 'Cloudflare WAF (Requires VPS Bridge)', latencyMs: 0 },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
     // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm'].filter((p) => availableSlugs[p]);
+      const candidates = ['anikoto', 'hianime', 'aniwatch'].filter((p) => availableSlugs[p]);
       if (candidates.length > 0) {
         candidates.sort((a, b) => {
           const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
