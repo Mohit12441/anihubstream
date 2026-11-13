@@ -328,15 +328,17 @@
   gap: 10px;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 580px) {
   .ad-providers-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1240px) {
   .ad-providers-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
   }
 }
 
@@ -345,8 +347,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14px 14px 12px;
-  background: rgba(15, 18, 30, 0.65);
+  padding: 13px 13px 11px;
+  background: rgba(15, 18, 30, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -356,7 +358,7 @@
   cursor: pointer;
   overflow: hidden;
   user-select: none;
-  min-height: 82px;
+  min-height: 94px;
 }
 
 .ad-provider-card::before {
@@ -381,17 +383,21 @@
 }
 
 .ad-provider-card.is-selected {
-  background: linear-gradient(145deg, rgba(34, 197, 94, 0.14), rgba(15, 23, 42, 0.88));
+  background: linear-gradient(145deg, rgba(34, 197, 94, 0.15), rgba(15, 23, 42, 0.9));
   border-color: rgba(74, 222, 128, 0.55);
   box-shadow: 0 0 0 1px rgba(74, 222, 128, 0.35), 0 8px 24px -4px rgba(34, 197, 94, 0.25);
 }
 
 .ad-provider-card.is-unavailable {
-  opacity: 0.5;
-  filter: grayscale(0.6);
+  opacity: 0.55;
   cursor: not-allowed;
   border-color: rgba(255, 255, 255, 0.05);
   background: rgba(15, 18, 30, 0.35);
+}
+
+.ad-provider-card.is-unavailable:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .ad-provider-top {
@@ -399,20 +405,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  margin-bottom: 10px;
-}
-
-.ad-provider-title-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-width: 0;
 }
 
 .ad-provider-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 7px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,14 +425,20 @@
   border-color: rgba(74, 222, 128, 0.4);
 }
 
+.ad-provider-body {
+  margin: 9px 0 7px;
+}
+
 .ad-provider-name {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: #f8fafc;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.ad-provider-card.is-unavailable .ad-provider-name {
+  color: #94a3b8;
 }
 
 .ad-provider-badge {

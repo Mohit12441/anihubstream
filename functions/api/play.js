@@ -419,20 +419,28 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
         subtitles: [],
         quality: '1080p',
       },
-      makeServer({
+      {
         id: 'anipm:settlar',
         name: 'AniPM · Settlar HD (16 Subs)',
         provider: 'anipm',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'settlar' }),
-      }),
-      makeServer({
+        status: 'unavailable',
+        unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
+        streamUrl: null,
+        audioTracks: [],
+        subtitles: [],
+        quality: '1080p',
+      },
+      {
         id: 'anipm:settlar-dub',
         name: 'AniPM · Settlar HD (DUB)',
         provider: 'anipm',
-        streamUrl: resolveUrl({ audio: 'dub', provider: 'anipm', server: 'settlar' }),
-        audio: 'dub',
-        audioTracks: [{ id: 'audio-1', language: 'en', label: 'English (Dub)', default: true }],
-      })
+        status: 'unavailable',
+        unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
+        streamUrl: null,
+        audioTracks: [],
+        subtitles: [],
+        quality: '1080p',
+      }
     );
   }
 

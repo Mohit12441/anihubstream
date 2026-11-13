@@ -39,6 +39,7 @@ interface ServerPreview {
   unavailableReason?: string;
   quality?: string;
   audio?: string;
+  streamUrl?: string | null;
   audioTracks?: any[];
   subtitles?: any[];
 }
@@ -93,7 +94,7 @@ export function AnimeDetail() {
     for (const s of servers) {
       const provKey = (s.provider || (s.id?.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
       const existing = map.get(provKey);
-      const isUnavailable = s.status === 'unavailable';
+      const isUnavailable = s.status === 'unavailable' || (provKey === 'anipm' && (!s.streamUrl || s.status === 'unavailable'));
       const hasDub = Boolean(s.id?.includes('-dub') || s.audio === 'dub');
 
       if (!existing) {
@@ -101,7 +102,7 @@ export function AnimeDetail() {
           id: provKey,
           name: provKey === 'anikoto' ? 'AniKoto' : provKey === 'hianime' ? 'HiAnime' : provKey === 'aniwatch' ? 'AniWatch' : provKey === 'anipm' ? 'AniPM' : 'P2P Swarm',
           status: isUnavailable ? 'unavailable' : 'ready',
-          unavailableReason: s.unavailableReason,
+          unavailableReason: s.unavailableReason || (provKey === 'anipm' ? 'Cloudflare WAF (Requires VPS Bridge)' : undefined),
           mirrorCount: isUnavailable ? 0 : 1,
           hasDub,
         });
@@ -377,10 +378,7 @@ export function AnimeDetail() {
                           className={`ad-provider-card${isSelected ? ' is-selected' : ''}${isUnavailable ? ' is-unavailable' : ''}`}
                         >
                           <div className="ad-provider-top">
-                            <div className="ad-provider-title-wrap">
-                              <span className="ad-provider-icon">{getProviderIcon(p.id)}</span>
-                              <span className="ad-provider-name">{p.name}</span>
-                            </div>
+                            <span className="ad-provider-icon">{getProviderIcon(p.id)}</span>
                             {isUnavailable ? (
                               <span className="ad-provider-badge ad-provider-badge--unavailable">
                                 <span className="ad-provider-pulse-dot" />
@@ -397,6 +395,9 @@ export function AnimeDetail() {
                                 <span>Ready</span>
                               </span>
                             )}
+                          </div>
+                          <div className="ad-provider-body">
+                            <span className="ad-provider-name">{p.name}</span>
                           </div>
                           <div className="ad-provider-meta">
                             {isUnavailable ? (
