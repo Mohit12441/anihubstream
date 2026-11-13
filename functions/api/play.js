@@ -575,14 +575,17 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
-    // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
+    // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the best healthy provider
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm'].filter((p) => availableSlugs[p]);
+      const candidates = ['anipm', 'anikoto', 'hianime', 'aniwatch'].filter((p) => availableSlugs[p]);
       if (candidates.length > 0) {
         candidates.sort((a, b) => {
           const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
           const healthB = providerHealth[b]?.status === 'healthy' ? 0 : 1;
           if (healthA !== healthB) return healthA - healthB;
+          // Prioritize AniPM for native multi-audio stream support when healthy
+          if (a === 'anipm') return -1;
+          if (b === 'anipm') return 1;
           return (providerHealth[a]?.latencyMs || 999) - (providerHealth[b]?.latencyMs || 999);
         });
         requested = candidates[0];
