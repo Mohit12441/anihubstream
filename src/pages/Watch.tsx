@@ -744,18 +744,21 @@ export function Watch() {
                 <div className="watch__ext-subservers-list">
                   {currentSubservers.map((s) => {
                     const isSelected = s.id === activeServerId;
+                    const isUnavailable = s.status === 'unavailable';
                     const name = cleanServerName(s);
                     return (
                       <button
                         key={s.id}
                         type="button"
-                        className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}`}
-                        onClick={() => handleSelectServer(s)}
-                        title={`Switch to ${s.name}`}
+                        disabled={isUnavailable}
+                        className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
+                        onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
+                        title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
                       >
-                        <span className="watch__ext-subserver-dot" />
+                        <span className={`watch__ext-subserver-dot${isUnavailable ? ' bg-amber-400' : ''}`} />
                         <span>{name}</span>
-                        {isSelected && <span className="watch__ext-active-badge">Active</span>}
+                        {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">(Unavailable)</span>}
+                        {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
                       </button>
                     );
                   })}

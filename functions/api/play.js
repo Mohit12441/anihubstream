@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, resolveBetaAudioTracks, withEdgeCache } from './_lib.js';
+import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, withEdgeCache } from './_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 
@@ -408,14 +408,17 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
 
   if (anilistId || resolvedTitle) {
     servers.push(
-      makeServer({
+      {
         id: 'anipm:beta',
-        name: 'AniPM · Beta Master',
         provider: 'anipm',
-        streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
-        resolvedTitle,
+        name: 'AniPM · Beta Master',
+        status: 'unavailable',
+        unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
+        streamUrl: null,
         audioTracks: [],
-      }),
+        subtitles: [],
+        quality: '1080p',
+      },
       makeServer({
         id: 'anipm:settlar',
         name: 'AniPM · Settlar HD (16 Subs)',
@@ -619,36 +622,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       serverParam.toLowerCase().includes('hd') ||
       serverParam.toLowerCase().includes('vidstream');
 
-    const effectiveAnilistId = resolvedAnilistId || animeRow?.anilist_id || 0;
-    const isExplicitBeta = serverParam && serverParam.toLowerCase() === 'beta';
-    const isBetaServer = isExplicitBeta || !serverParam;
-    const shouldUseEdgeBeta =
-      effectiveAnilistId > 0 &&
-      (
-        (requested === 'anipm' && isBetaServer) ||
-        (requested === 'auto' && isExplicitBeta)
-      );
-
     // Parallel fetch: AniSkip timestamps (D1 markers/cache/API), Direct Edge Resolution, and Bridge Stream Resolution
     const [aniskipData, directRes, bridgeRes] = await Promise.all([
       resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id),
       (async () => {
-        if (shouldUseEdgeBeta) {
-          try {
-            const betaDirect = await resolveBetaAudioTracks(
-              env,
-              effectiveAnilistId,
-              { title: resolvedTitle, id },
-              ep,
-              audio,
-              request
-            );
-            if (betaDirect?.streamUrl) {
-              return betaDirect;
-            }
-          } catch {}
-        }
-
         if (!resolvedMalId || !canUseEdgeDirect) return null;
         const cacheKey = `stream:${requested || 'auto'}:${resolvedMalId}:${ep}:${audio}:${serverParam || 'HD-1'}`;
         const memCached = STREAM_MEM_CACHE.get(cacheKey);

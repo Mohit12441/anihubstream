@@ -11,11 +11,18 @@ import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel, type AnimeTheme } from '../data/model';
 import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
+import { ServerCard } from '../components/player/ServerCard';
 import '../styles/anime-detail.css';
 
 interface ServerPreview {
+  id: string;
   name: string;
   status: string;
+  provider?: string;
+  unavailableReason?: string;
+  quality?: string;
+  audioTracks?: any[];
+  subtitles?: any[];
 }
 
 export function AnimeDetail() {
@@ -54,9 +61,15 @@ export function AnimeDetail() {
       .then((data) => {
         if (!active || !data) return;
         if (Array.isArray(data.servers)) {
-          setServers(data.servers.map((s: { name?: string; status?: string }) => ({
+          setServers(data.servers.map((s: any) => ({
+            id: s.id || s.name,
             name: s.name || 'HD Server',
+            provider: s.provider,
             status: s.status || 'ready',
+            unavailableReason: s.unavailableReason,
+            quality: s.quality || '1080p',
+            audioTracks: s.audioTracks || [],
+            subtitles: s.subtitles || [],
           })));
         }
       })
@@ -258,25 +271,24 @@ export function AnimeDetail() {
                 <Server size={15} color="#38bdf8" />
                 <span>Multi-Source Streaming Providers</span>
               </div>
-              <div className="ad-servers-list">
+              <div className="mt-3">
                 {serversLoading ? (
                   <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Checking server availability...</span>
                 ) : servers.length > 0 ? (
-                  servers.map((s) => (
-                    <span
-                      key={s.name}
-                      className="ad-server-chip"
-                    >
-                      <span
-                        className="ad-server-chip-dot"
-                        style={{
-                          background: s.status === 'ready' ? '#34d399' : '#f59e0b',
-                          boxShadow: `0 0 6px ${s.status === 'ready' ? '#34d399' : '#f59e0b'}`,
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {servers.map((s) => (
+                      <ServerCard
+                        key={s.id || s.name}
+                        server={s}
+                        isActive={false}
+                        onSelect={(srv) => {
+                          const prov = srv.provider || (srv.id?.includes(':') ? srv.id.split(':')[0] : 'auto');
+                          const srvName = srv.id?.includes(':') ? srv.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : srv.id;
+                          navigate(`/watch/${encodeURIComponent(anime?.id || id)}/1?provider=${prov}&server=${srvName}`);
                         }}
                       />
-                      {s.name}
-                    </span>
-                  ))
+                    ))}
+                  </div>
                 ) : (
                   <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Fast Edge CDN & P2P available on player</span>
                 )}

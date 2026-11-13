@@ -846,33 +846,3 @@ export function buildAudioTracks(audio) {
   ];
 }
 
-import { parseMaster } from '../../lib/m3u8.mjs';
-export { parseMaster };
-
-const BETA_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
-const POSITIVE_TTL_MS = 30 * 60_000;
-const NEGATIVE_TTL_MS = 60 * 60_000;
-
-const slugify = (s) =>
-  String(s || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
-
-export async function resolveBetaAudioTracks(env, resolvedAnilistId, meta, ep, audio, request = null) {
-  const epPadded = String(ep).padStart(4, '0');
-  const slugCandidates = [...new Set(
-    [slugify(meta?.id), slugify(meta?.title)].filter(Boolean)
-  )];
-  const candidates = slugCandidates.length > 0
-    ? slugCandidates.map((slug) => `https://beta.cno.to/hls/${resolvedAnilistId}-${slug}/E${epPadded}/master.m3u8`)
-    : [`https://beta.cno.to/hls/${resolvedAnilistId}/E${epPadded}/master.m3u8`];
-
-  return {
-    streamUrl: candidates[0],
-    betaUrlCandidates: candidates,
-    referrerPolicy: 'no-referrer',
-    provider: 'anipm',
-    quality: '1080p',
-    audioTracks: [],
-    subtitles: [],
-  };
-}
-

@@ -214,7 +214,7 @@ export function useLiveStream(o: Options) {
             const autoRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
             if (cancel) return;
             if (!isResolveFailure(autoRes)) {
-              setInfo({ ...autoRes, fallback: { fromProvider: o.provider, fromServer: o.server } });
+              setInfo(autoRes);
               prefetchEpisode(o.animeId, o.episode + 1, o.audio, 'auto');
               return;
             }
@@ -279,6 +279,8 @@ export function useLiveStream(o: Options) {
     let cancelled = false;
     let mediaTried = false;
     let netTried = false;
+    setAudioTracks([]);
+    setCurrentAudioTrack(-1);
 
     v.volume = media.current.volume;
     v.muted = media.current.muted;
@@ -371,45 +373,6 @@ export function useLiveStream(o: Options) {
       if (cancelled) return;
 
       let sourceUrl = url;
-      if (info.provider === 'anipm' && sourceUrl.includes('cno.to')) {
-        let probeOk = false;
-        const candidates = (info.betaUrlCandidates && info.betaUrlCandidates.length > 0)
-          ? info.betaUrlCandidates
-          : [sourceUrl];
-        for (const candidate of candidates) {
-          try {
-            const res = await fetch(candidate, { referrerPolicy: 'no-referrer', method: 'HEAD', signal: AbortSignal.timeout(3000) });
-            if (res.ok) {
-              sourceUrl = candidate;
-              probeOk = true;
-              break;
-            }
-          } catch {}
-        }
-        if (!probeOk) {
-          console.warn('[useLiveStream] Direct browser fetch to Beta blocked; falling back to auto provider');
-          const fallbackRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
-          if (cancelled) return;
-          if (!isResolveFailure(fallbackRes)) {
-            setInfo({ ...fallbackRes, fallback: { fromProvider: o.provider, fromServer: o.server } });
-            return;
-          }
-        }
-      } else if (info.betaUrlCandidates && info.betaUrlCandidates.length > 1) {
-        for (const candidate of info.betaUrlCandidates) {
-          try {
-            const res = await fetch(candidate, { referrerPolicy: 'no-referrer', method: 'HEAD', signal: AbortSignal.timeout(3000) });
-            if (res.ok) {
-              sourceUrl = candidate;
-              break;
-            }
-          } catch {}
-        }
-      }
-      if (cancelled) return;
-      if (info.referrerPolicy && v) {
-        try { (v as any).referrerPolicy = info.referrerPolicy; } catch {}
-      }
 
       if (HlsCtor.isSupported()) {
         let p2p: P2PEngine | null = null;
@@ -445,18 +408,6 @@ export function useLiveStream(o: Options) {
           xhrSetup: (xhr: XMLHttpRequest) => {
             xhr.withCredentials = false;
           },
-          fetchSetup: (context: any, initParams: any) => {
-            const isDirect = !context.url.startsWith('/api/') && (context.url.includes('cno.to') || context.url.includes('beamcube.top'));
-            if (!isDirect) {
-              return new Request(context.url, initParams);
-            }
-            return new Request(context.url, {
-              ...initParams,
-              referrerPolicy: 'no-referrer',
-              mode: 'cors',
-              credentials: 'omit',
-            });
-          },
         };
 
         if (o.enableP2P && p2p) {
@@ -469,11 +420,7 @@ export function useLiveStream(o: Options) {
                   .loadSegment(
                     ctx.url,
                     async (u: string) => {
-                      const isDirect = !u.startsWith('/api/') && (u.includes('cno.to') || u.includes('beamcube.top'));
-                      const res = await fetch(u, {
-                        headers: ctx.headers,
-                        ...(isDirect ? { referrerPolicy: 'no-referrer', credentials: 'omit' as RequestCredentials } : {}),
-                      });
+                      const res = await fetch(u, { headers: ctx.headers });
                       if (!res.ok) throw new Error(`HTTP ${res.status}`);
                       return await res.arrayBuffer();
                     },
@@ -501,15 +448,6 @@ export function useLiveStream(o: Options) {
            appended) — a parsed manifest alone is not playback. */
         hls.on(HlsCtor.Events.ERROR, (_evt, data) => {
           if (cancelled || !data.fatal) return;
-          if (info.provider === 'anipm' && (data.type === HlsCtor.ErrorTypes.NETWORK_ERROR || (data as any).response?.code === 403)) {
-            console.warn('[useLiveStream] AniPM Beta stream failed mid-flight; switching to auto fallback');
-            void bridgeResolve(o.animeId, o.episode, o.audio, 'auto').then((fallbackRes) => {
-              if (!cancelled && !isResolveFailure(fallbackRes)) {
-                setInfo({ ...fallbackRes, fallback: { fromProvider: o.provider, fromServer: o.server } });
-              }
-            });
-            return;
-          }
           if ((data as any).response?.code === 403) {
             // Expired token (e.g. Settlar): trigger fresh re-resolve
             setNonce((n) => n + 1);

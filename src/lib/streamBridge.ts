@@ -49,9 +49,6 @@ export interface BridgeSource {
   downloadUrl?: string | null;
   downloads?: { name: string; quality?: string; url: string; provider?: string; audio?: string }[];
   servers?: { name: string; linkId: string; type?: string }[];
-  referrerPolicy?: 'no-referrer' | 'origin' | 'same-origin';
-  betaUrlCandidates?: string[];
-  fallback?: { fromProvider?: string; fromServer?: string };
 }
 
 export interface ResolveFailure {
@@ -311,8 +308,6 @@ export async function bridgeResolve(
             url: sub.url || sub.proxyUrl || sub.uri || '',
           })),
           downloads: s.downloads || [],
-          referrerPolicy: s.referrerPolicy,
-          betaUrlCandidates: s.betaUrlCandidates,
         };
       } else {
         body = rawBody as BridgeSource;

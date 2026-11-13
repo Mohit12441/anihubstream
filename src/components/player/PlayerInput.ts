@@ -47,7 +47,8 @@ export interface PlayServer {
   id: string;
   name: string;
   provider: string;
-  status: 'ready' | 'loading' | 'error';
+  status: 'ready' | 'loading' | 'error' | 'unavailable';
+  unavailableReason?: string;
   streamUrl: string;
   type: 'hls' | 'mp4' | 'embed';
   quality?: string;
@@ -60,8 +61,6 @@ export interface PlayServer {
   fallbackUrls?: string[];
   intro?: { start: number; end: number } | null;
   outro?: { start: number; end: number } | null;
-  referrerPolicy?: 'no-referrer' | 'origin' | 'same-origin';
-  betaUrlCandidates?: string[];
 }
 
 export interface PlayerInput {
@@ -79,8 +78,6 @@ export interface PlayerInput {
   fallbackUrls: string[];
   provider: string;
   serverId: string;
-  referrerPolicy?: 'no-referrer' | 'origin' | 'same-origin';
-  betaUrlCandidates?: string[];
 }
 
 /**
@@ -131,7 +128,5 @@ export function toPlayerInput(
     fallbackUrls,
     provider: server.provider || 'unknown',
     serverId: server.id,
-    referrerPolicy: server.referrerPolicy,
-    betaUrlCandidates: server.betaUrlCandidates,
   };
 }

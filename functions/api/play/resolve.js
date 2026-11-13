@@ -1,5 +1,5 @@
 // @ts-check
-import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, ok, parseMaster, resolveBetaAudioTracks, withEdgeCache } from '../_lib.js';
+import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, ok, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 
@@ -130,39 +130,20 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           throw new HttpError(404, 'not_found', 'Anime not yet released');
         }
 
-        // Direct Edge Resolution (Method C: Pure Edge Extractor)
-        // Check AniPM Beta edge-native multi-audio first if AniPM or Beta server requested
-        const shouldUseEdgeBeta =
-          resolvedAnilistId > 0 &&
-          (
-            (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta')) ||
-            (provider === 'auto' && serverParam && serverParam.toLowerCase() === 'beta')
-          );
-
-        if (shouldUseEdgeBeta) {
-          try {
-            const betaDirect = await resolveBetaAudioTracks(env, resolvedAnilistId, meta, ep, audio, request);
-            if (betaDirect?.streamUrl) {
-              const effectiveProvider = 'anipm';
-              const cleanServerId = rawServerParam || 'beta';
-              const resolvedServer = {
-                id: `${effectiveProvider}:${cleanServerId}`,
-                name: formatServerName(effectiveProvider, serverParam || 'Beta Master'),
-                provider: effectiveProvider,
-                status: 'ready',
-                streamUrl: betaDirect.streamUrl,
-                referrerPolicy: betaDirect.referrerPolicy || 'no-referrer',
-                betaUrlCandidates: betaDirect.betaUrlCandidates,
-                type: 'hls',
-                quality: betaDirect.quality || '1080p',
-                audio,
-                audioTracks: [],
-                subtitles: betaDirect.subtitles || [],
-                downloads: [],
-              };
-              return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
+        if (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta')) {
+          return ok({
+            server: {
+              id: 'anipm:beta',
+              provider: 'anipm',
+              name: 'AniPM · Beta Master',
+              status: 'unavailable',
+              unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
+              streamUrl: null,
+              audioTracks: [],
+              subtitles: [],
+              quality: '1080p',
             }
-          } catch {}
+          });
         }
 
         // Megaplay powers AniKoto, MegaPlay, and HD-1 / Vidstream servers directly

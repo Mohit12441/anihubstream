@@ -110,8 +110,6 @@ export function AdvancedPlayer(props: Props) {
      playhead instead of the saved position, but never across an episode change */
   const switchSeekRef = useRef<number | null>(null);
   const switchSeekFor = useRef<string | null>(null);
-  const providerFallbackAnnounced = useRef<string | null>(null);
-  const syncedFallbackInfo = useRef<BridgeSource | null>(null);
 
   /* ---------- live bridge ---------- */
   const startAtForLive =
@@ -158,8 +156,6 @@ export function AdvancedPlayer(props: Props) {
       thumbnails: initialServer.thumbnails?.url ? { url: initialServer.thumbnails.url } : null,
       audioTracks: (initialServer.audioTracks || []).map(toLiveAudioTrack),
       downloads: initialServer.downloads || [],
-      referrerPolicy: initialServer.referrerPolicy,
-      betaUrlCandidates: initialServer.betaUrlCandidates,
     };
   }, [initialServer, anime.title, episode.n, prefs.audio]);
   const live = useLiveStream({
@@ -190,22 +186,7 @@ export function AdvancedPlayer(props: Props) {
   useEffect(() => {
     onStreamResolved?.(liveReady);
     onStreamInfo?.(live.info);
-    if (liveReady && live.info?.fallback) {
-      if (syncedFallbackInfo.current !== live.info) {
-        syncedFallbackInfo.current = live.info;
-        if (live.info.session && props.serverId && live.info.session !== props.serverId) {
-          props.onServerChange?.(live.info.session);
-        }
-      }
-      const from = live.info.fallback.fromProvider || provider;
-      const to = live.info.provider;
-      const key = `${episodeTag}:${from}->${to}`;
-      if (providerFallbackAnnounced.current !== key) {
-        providerFallbackAnnounced.current = key;
-        notify(`Requested ${from} unavailable — streaming from ${to}`);
-      }
-    }
-  }, [liveReady, live.info, onStreamResolved, onStreamInfo, props.serverId, provider, props.onServerChange, notify, episodeTag]);
+  }, [liveReady, live.info, onStreamResolved, onStreamInfo]);
 
   /* Dynamically query AniSkip v2 timestamps for the anime MAL ID and episode */
   const [aniSkipMarkers, setAniSkipMarkers] = useState<Marker[]>([]);
