@@ -92,10 +92,10 @@ export function PlayerSettings({
   subState,
   subReady,
   playingAudio,
-  audioList,
-  audioStatus,
-  audioError,
-  onAudio,
+  audioList: _audioList,
+  audioStatus: _audioStatus,
+  audioError: _audioError,
+  onAudio: _onAudio,
   switchableAudio: _switchableAudio,
   hlsAudioTracks,
   currentHlsAudioTrack,
@@ -306,80 +306,20 @@ export function PlayerSettings({
               </PopGroup>
             );
           }
-          const dubOpt = audioList?.audios.find((a) => a.id === 'dub');
-          const checking = audioStatus === 'idle' || audioStatus === 'loading';
-          const dubAvailable = audioStatus === 'ready' && Boolean(dubOpt?.available);
+          const activeTrackLabel = playingAudio === 'dub' ? 'English (Dubbed)' : 'Japanese (Original)';
           return (
-            <>
-              <PopGroup title="Track">
-                {audioList?.audios && audioList.audios.length > 0 ? (
-                  audioList.audios.map((a) => (
-                    <PopRow
-                      key={a.id}
-                      radio
-                      label={a.label}
-                      note={
-                        playingAudio === a.id
-                          ? 'playing now'
-                          : a.available
-                            ? (a.state === 'verified' ? 'verified audio' : 'available')
-                            : checking
-                              ? 'checking…'
-                              : 'not offered'
-                      }
-                      active={playingAudio === a.id}
-                      disabled={!a.available && !checking}
-                      onClick={() => onAudio(a.id as AudioId)}
-                    />
-                  ))
-                ) : (
-                  <>
-                    <PopRow
-                      radio
-                      label="Original (Japanese)"
-                      note={playingAudio === 'sub' ? 'playing now' : undefined}
-                      active={playingAudio === 'sub'}
-                      onClick={() => onAudio('sub')}
-                    />
-                    <PopRow
-                      radio
-                      label="Dubbed (English)"
-                      note={
-                        playingAudio === 'dub'
-                          ? 'playing now'
-                          : checking
-                            ? 'checking…'
-                            : dubAvailable
-                              ? 'verified second audio'
-                              : 'switch to dub'
-                      }
-                      active={playingAudio === 'dub'}
-                      disabled={audioStatus === 'ready' && !dubAvailable && Boolean(audioList)}
-                      onClick={() => onAudio('dub')}
-                    />
-                  </>
-                )}
-              </PopGroup>
-
-              {checking && (
-                <p className="pop__hint" role="status">
-                  Measuring available audio tracks across providers…
-                </p>
-              )}
-              {audioStatus === 'error' && (
-                <p className="pop__warn" role="status">
-                  {audioError ?? 'Audio tracks could not be verified right now.'}
-                </p>
-              )}
-              {audioStatus === 'ready' && !dubAvailable && (
-                <p className="pop__hint">
-                  {dubOpt?.reason ?? 'This title has no verified dubbed audio for this episode.'}
-                </p>
-              )}
+            <PopGroup title="Active Stream Audio">
+              <PopRow
+                radio
+                label={activeTrackLabel}
+                note="active track"
+                active={true}
+                onClick={() => {}}
+              />
               <p className="pop__hint">
-                Multi-audio and dubbed streams are selectable across all providers with automated fallback.
+                This stream carries 1 audio track from the selected server.
               </p>
-            </>
+            </PopGroup>
           );
         })()}
 

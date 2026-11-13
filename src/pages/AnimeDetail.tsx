@@ -12,6 +12,7 @@ import { ratingLabel, type AnimeTheme } from '../data/model';
 import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import { ServerCard } from '../components/player/ServerCard';
+import { DEFAULT_PLAY_SERVERS } from './Watch';
 import '../styles/anime-detail.css';
 
 interface ServerPreview {
@@ -21,6 +22,7 @@ interface ServerPreview {
   provider?: string;
   unavailableReason?: string;
   quality?: string;
+  audio?: string;
   audioTracks?: any[];
   subtitles?: any[];
 }
@@ -39,8 +41,9 @@ export function AnimeDetail() {
   const { genreLabel } = useCatalogue();
   const { has, isBusy, toggle, favourites, toggleFavourite, history } = useLibrary();
 
-  const [servers, setServers] = useState<ServerPreview[]>([]);
-  const [serversLoading, setServersLoading] = useState(true);
+  const [servers, setServers] = useState<ServerPreview[]>(DEFAULT_PLAY_SERVERS);
+  const [serversLoading, setServersLoading] = useState(false);
+  const [selectedServerId, setSelectedServerId] = useState<string>('anikoto:HD-1');
   const [themes, setThemes] = useState<AnimeTheme[]>([]);
 
   // Theme songs (OP/ED) arrive directly with anime detail
@@ -61,16 +64,23 @@ export function AnimeDetail() {
       .then((data) => {
         if (!active || !data) return;
         if (Array.isArray(data.servers)) {
-          setServers(data.servers.map((s: any) => ({
+          const mapped: ServerPreview[] = data.servers.map((s: any) => ({
             id: s.id || s.name,
             name: s.name || 'HD Server',
             provider: s.provider,
             status: s.status || 'ready',
             unavailableReason: s.unavailableReason,
             quality: s.quality || '1080p',
+            audio: s.audio || (s.id?.includes('-dub') ? 'dub' : 'sub'),
             audioTracks: s.audioTracks || [],
             subtitles: s.subtitles || [],
-          })));
+          }));
+          setServers(mapped);
+          setSelectedServerId((prev) => {
+            if (prev && mapped.some((s) => s.id === prev)) return prev;
+            const ready = mapped.find((s) => s.status !== 'unavailable');
+            return ready ? ready.id : (mapped[0]?.id || '');
+          });
         }
       })
       .catch(() => {})
@@ -81,7 +91,7 @@ export function AnimeDetail() {
     return () => {
       active = false;
     };
-  }, [id]);
+  }, [id, anime?.status]);
 
   useSEO({
     title: anime ? `${anime.title} — Watch Online & Episode Guide | AniHubStream` : 'Anime Details | AniHubStream',
@@ -111,6 +121,17 @@ export function AnimeDetail() {
   const targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
   const epCount = isUpcoming ? 0 : (anime.episodes?.length || anime.episodeCount || 0);
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
+
+  const selectedServer = servers.find((s) => s.id === selectedServerId) || servers.find((s) => s.status !== 'unavailable') || servers[0] || null;
+
+  const getWatchUrl = (targetEpNum: number, srv = selectedServer) => {
+    const base = `/watch/${encodeURIComponent(anime.id)}/${targetEpNum}`;
+    if (!srv) return base;
+    const prov = srv.provider || (srv.id?.includes(':') ? srv.id.split(':')[0] : 'auto');
+    const srvName = srv.id?.includes(':') ? srv.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : srv.id;
+    const isDub = srv.id?.includes('-dub') || srv.audio === 'dub';
+    return `${base}?provider=${encodeURIComponent(prov)}&server=${encodeURIComponent(srvName)}&audio=${isDub ? 'dub' : 'sub'}`;
+  };
 
   return (
     <div className="ad-page" style={{ '--tint': anime.accent || '#ff2a5f' } as React.CSSProperties}>
@@ -256,7 +277,7 @@ export function AnimeDetail() {
                 </Link>
               ) : (
                 <Link
-                  to={`/watch/${anime.id}/${targetEp}`}
+                  to={getWatchUrl(targetEp)}
                   className="ad-cta-btn"
                 >
                   <Play size={18} fill="currentColor" />
@@ -280,11 +301,10 @@ export function AnimeDetail() {
                       <ServerCard
                         key={s.id || s.name}
                         server={s}
-                        isActive={false}
+                        isActive={selectedServerId === s.id}
                         onSelect={(srv) => {
-                          const prov = srv.provider || (srv.id?.includes(':') ? srv.id.split(':')[0] : 'auto');
-                          const srvName = srv.id?.includes(':') ? srv.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : srv.id;
-                          navigate(`/watch/${encodeURIComponent(anime?.id || id)}/1?provider=${prov}&server=${srvName}`);
+                          setSelectedServerId(srv.id);
+                          navigate(getWatchUrl(targetEp, srv));
                         }}
                       />
                     ))}
@@ -315,7 +335,7 @@ export function AnimeDetail() {
               anime.episodes.map((ep) => (
                 <Link
                   key={ep.n}
-                  to={`/watch/${anime.id}/${ep.n}`}
+                  to={getWatchUrl(ep.n)}
                   className="ad-ep-card"
                 >
                   {ep.thumb && (

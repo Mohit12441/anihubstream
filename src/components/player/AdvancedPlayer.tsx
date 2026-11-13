@@ -12,7 +12,6 @@ import { usePlayerEngine, type PlayerEngine } from '../../lib/usePlayerEngine';
 import { useLiveStream, type LiveAudioTrack } from '../../lib/useLiveStream';
 import { actionFor, isEditable, type ShortcutAction } from '../../lib/shortcuts';
 import type { AudioId, PlayerPrefs, SubtitleSettings } from '../../lib/playerPrefs';
-import { bridgeAudios, isResolveFailure, type AudioList } from '../../lib/streamBridge';
 import { stamp } from '../../lib/time';
 import { Art } from '../Art';
 import { PlayerControls } from './PlayerControls';
@@ -92,11 +91,6 @@ export function AdvancedPlayer(props: Props) {
   const [hud, setHud] = useState<{ text: string; id: number } | null>(null);
   const [countdown, setCountdown] = useState(COUNTDOWN);
   const [dismissed, setDismissed] = useState(false);
-
-  /* audio availability is probed on demand (the byte-pair check is the costly part) */
-  const [audioList, setAudioList] = useState<AudioList | null>(null);
-  const [audioStatus, setAudioStatus] = useState<'idle' | 'loading' | 'ready' | 'error'>('idle');
-  const [audioError, setAudioError] = useState<string | null>(null);
   const [showEmbedEscape, setShowEmbedEscape] = useState(false);
 
   const open = menu.kind !== 'none';
@@ -363,27 +357,13 @@ export function AdvancedPlayer(props: Props) {
     }
   }, [engine, partyClient, prefs.speed]);
 
-  /* ---------- audio: switch, and probe what the source really carries ---------- */
+  /* ---------- audio: switch without server hopping ---------- */
   const setAudio = useCallback(
     (next: AudioId) => {
       const at = engineRef.current.time;
       switchSeekRef.current = at > 1 ? at : null;
       switchSeekFor.current = episodeTag;
       patch({ audio: next });
-      if (props.servers && props.onSelectServer) {
-        const currentProvider = activeServer?.provider || 'anikoto';
-        const matching = props.servers.find((s) => {
-          const provMatch = (s.provider || '').toLowerCase() === currentProvider.toLowerCase();
-          const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
-          return provMatch && (next === 'dub' ? isDub : !isDub);
-        }) || props.servers.find((s) => {
-          const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
-          return next === 'dub' ? isDub : !isDub;
-        });
-        if (matching && matching.id !== activeServer?.id) {
-          props.onSelectServer(matching);
-        }
-      }
       const label =
         next === 'dub'
           ? 'dubbed English'
@@ -392,30 +372,8 @@ export function AdvancedPlayer(props: Props) {
             : 'original Japanese';
       notify(`Switching to ${label} audio…`);
     },
-    [patch, episodeTag, notify, props.servers, props.onSelectServer, activeServer],
+    [patch, episodeTag, notify],
   );
-
-  const ensureAudios = useCallback(() => {
-    if (audioStatus === 'loading' || audioStatus === 'ready') return;
-    setAudioStatus('loading');
-    setAudioError(null);
-    const activeProvider = props.servers?.find((s) => s.id === (props.serverId || initialServer?.id))?.provider || 'anikoto';
-    void bridgeAudios(anime.title, episode.n, activeProvider).then((r) => {
-      if (isResolveFailure(r)) {
-        setAudioStatus('error');
-        setAudioError(r.message ? `${r.error} — ${r.message}` : r.error);
-        return;
-      }
-      setAudioList(r);
-      setAudioStatus('ready');
-    });
-  }, [audioStatus, anime.title, episode.n, props.servers, props.serverId, initialServer]);
-
-  /* a fresh episode or server change re-probes */
-  useEffect(() => {
-    setAudioList(null);
-    setAudioStatus('idle');
-  }, [episodeTag, props.serverId]);
 
   const fallbackAnnounced = useRef<string | null>(null);
   useEffect(() => {
@@ -426,11 +384,6 @@ export function AdvancedPlayer(props: Props) {
     if (live.audioFallback)
       notify('This episode has no dubbed audio — playing the original Japanese instead.');
   }, [liveReady, live.audioFallback, episodeTag, notify]);
-
-  /* open the audio tab -> probe once */
-  useEffect(() => {
-    if (menu.kind === 'settings' && menu.tab === 'audio') ensureAudios();
-  }, [menu, ensureAudios]);
 
   /* ---------- persist position ---------- */
   const saveRef = useRef({ time: engine.time, fn: props.onProgress, on: prefs.rememberPosition, dur: timelineDuration });
@@ -1142,9 +1095,9 @@ export function AdvancedPlayer(props: Props) {
                     ? 'hindi'
                     : 'sub'
               }
-              audioList={audioList}
-              audioStatus={audioStatus}
-              audioError={audioError}
+              audioList={null}
+              audioStatus="ready"
+              audioError={null}
               onAudio={setAudio}
               switchableAudio={live.switchableAudio}
               hlsAudioTracks={live.audioTracks}

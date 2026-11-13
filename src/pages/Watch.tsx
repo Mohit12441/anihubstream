@@ -49,7 +49,7 @@ export function titleMatches(a?: string | null, b?: string | null): boolean {
   return ratio >= 0.5;
 }
 
-const DEFAULT_PLAY_SERVERS: PlayServer[] = [
+export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'anikoto:HD-1', name: 'AniKoto · HD-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anikoto:Vidstream-2', name: 'AniKoto · Vidstream-2', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anikoto:Vidstream-1', name: 'AniKoto · Vidstream-1', provider: 'anikoto', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
@@ -250,12 +250,13 @@ export function Watch() {
 
   const currentSubservers = useMemo(() => {
     const isDub = prefs.audio === 'dub';
-    const audioMatching = playServers.filter((s) => {
+    const providerScoped = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
+    const audioMatching = providerScoped.filter((s) => {
       const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
       return isDub ? sDub : !sDub;
     });
-    return audioMatching.length > 0 ? audioMatching : playServers;
-  }, [playServers, prefs.audio]);
+    return audioMatching.length > 0 ? audioMatching : providerScoped;
+  }, [playServers, activeProvider, prefs.audio]);
 
   const hasDubForProvider = useMemo(() => {
     const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
@@ -341,9 +342,16 @@ export function Watch() {
           let matchedServer: PlayServer | null = null;
 
           if (explicitServer) {
-            matchedServer = mergedServers.find((s: PlayServer) =>
-              s.id === explicitServer || s.id.endsWith(`:${explicitServer}`) || s.id.endsWith(`:${explicitServer}-dub`)
-            ) || null;
+            const fullTargetId = explicitServer.includes(':')
+              ? explicitServer
+              : (targetProvider ? `${targetProvider}:${explicitServer}` : explicitServer);
+            matchedServer = mergedServers.find((s: PlayServer) => {
+              if (s.id.toLowerCase() === fullTargetId.toLowerCase()) return true;
+              if (targetProvider && s.provider?.toLowerCase() !== targetProvider && !s.id.toLowerCase().startsWith(`${targetProvider}:`)) {
+                return false;
+              }
+              return s.id === explicitServer || s.id.endsWith(`:${explicitServer}`) || s.id.endsWith(`:${explicitServer}-dub`);
+            }) || null;
           }
 
           if (!matchedServer && targetProvider) {
@@ -726,7 +734,7 @@ export function Watch() {
             onStreamInfo={setCurrentStream}
             serverId={activeServerId}
             onServerChange={setActiveServerId}
-            servers={playServers}
+            servers={currentSubservers}
             onSelectServer={handleSelectServer}
             initialServer={playServers.find((s) => s.id === activeServerId) || playServers[0] || null}
             initialPartyRoom={params.get('party')}
@@ -738,7 +746,7 @@ export function Watch() {
               <div className="watch__ext-subservers-row">
                 <span className="watch__ext-label">
                   <Server size={13} aria-hidden="true" />
-                  <span>Servers ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
+                  <span>{activeProvider} Mirrors ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
                 </span>
                 <div className="watch__ext-subservers-list">
                   {currentSubservers.map((s) => {

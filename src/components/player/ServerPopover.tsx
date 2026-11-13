@@ -31,14 +31,6 @@ export function getProvider(server: PlayServer): string {
   return p.charAt(0).toUpperCase() + p.slice(1);
 }
 
-const PROVIDER_METAS: Record<string, { tag: string; desc: string }> = {
-  AniKoto: { tag: 'HD-1 • Vidstream', desc: '4 Mirrors • Fast Edge' },
-  HiAnime: { tag: 'Multi-Quality', desc: 'Direct HLS' },
-  AniWatch: { tag: 'Rapid Edge', desc: 'Global CDN' },
-  AniPM: { tag: 'Settlar HD', desc: 'Partner Feed' },
-  P2P: { tag: 'WebTorrent', desc: 'P2P Swarm' },
-};
-
 export function ServerPopover({
   servers,
   activeServerId,
@@ -51,67 +43,38 @@ export function ServerPopover({
   if (!isOpen || servers.length === 0) return null;
 
   const activeServer = servers.find((s) => s.id === activeServerId) || servers[0];
-  const activeProvider = activeServer ? getProvider(activeServer) : 'AniKoto';
-  const isDub = (activeServer?.audio || '').toLowerCase() === 'dub' || (activeServer?.id || '').includes('-dub');
-
-  const handleSelectProvider = (provName: string) => {
-    const norm = provName.toLowerCase();
-    // Select the best matching server for this provider honoring current audio (sub/dub)
-    const match = servers.find((s) => {
-      const p = getProvider(s).toLowerCase();
-      const serverDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
-      return p.includes(norm) && (isDub ? serverDub : !serverDub);
-    }) || servers.find((s) => getProvider(s).toLowerCase().includes(norm));
-
-    if (match) {
-      onSelectServer(match);
-    }
-    onClose();
-  };
+  const activeProvider = activeServer ? getProvider(activeServer) : 'Server';
 
   return (
     <div onKeyDown={(e) => e.key === 'Escape' && onClose()}>
       <PopShell
-        label="Stream Providers"
+        label={`${activeProvider} Mirrors`}
         innerRef={ref}
         head={
           <div className="pop__head" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Server size={16} color="#818cf8" aria-hidden="true" />
-            <h3 style={{ margin: 0, fontSize: '0.92rem', fontWeight: 700 }}>Stream Provider</h3>
+            <h3 style={{ margin: 0, fontSize: '0.92rem', fontWeight: 700 }}>{activeProvider} Mirrors</h3>
           </div>
         }
-        footer="Subservers (mirrors) can be selected directly below the player."
+        footer="Only mirrors from the selected provider are shown."
       >
-        <PopGroup title="Provider">
-          {PROVIDER_ORDER.map((provName) => {
-            const isSelected = activeProvider.toLowerCase() === provName.toLowerCase();
-            const meta = PROVIDER_METAS[provName];
+        <PopGroup title="Mirrors">
+          {servers.map((s) => {
+            const isSelected = s.id === activeServerId;
+            const name = s.name || cleanServerName(s);
+            const isUnavailable = s.status === 'unavailable';
             return (
               <PopRow
-                key={provName}
+                key={s.id}
                 radio
                 active={isSelected}
-                label={
-                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-                    <span style={{ fontWeight: 700, fontSize: '0.92rem' }}>{provName}</span>
-                    {meta?.tag && (
-                      <span
-                        style={{
-                          fontSize: '0.68rem',
-                          fontWeight: 700,
-                          padding: '1px 6px',
-                          borderRadius: '4px',
-                          background: isSelected ? 'rgba(255, 42, 95, 0.22)' : 'rgba(255, 255, 255, 0.08)',
-                          color: isSelected ? '#ff5c8a' : '#94a3b8',
-                        }}
-                      >
-                        {meta.tag}
-                      </span>
-                    )}
-                  </span>
-                }
-                note={isSelected ? 'active' : undefined}
-                onClick={() => handleSelectProvider(provName)}
+                disabled={isUnavailable}
+                label={name}
+                note={isSelected ? 'active' : isUnavailable ? 'unavailable' : undefined}
+                onClick={!isUnavailable ? () => {
+                  onSelectServer(s);
+                  onClose();
+                } : () => {}}
               />
             );
           })}
