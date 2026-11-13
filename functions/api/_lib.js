@@ -857,96 +857,22 @@ const slugify = (s) =>
   String(s || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '');
 
 export async function resolveBetaAudioTracks(env, resolvedAnilistId, meta, ep, audio, request = null) {
-  const audioType = audio === 'dub' || audio === 'hindi' ? audio : 'sub';
   const epPadded = String(ep).padStart(4, '0');
-  const cacheKey = `stream:anipm:beta:${resolvedAnilistId}:${ep}:${audioType}`;
-
-  // 1. Cache read
-  if (env?.ANIHUB?.prepare) {
-    try {
-      const row = await env.ANIHUB.prepare(
-        'SELECT data FROM stream_cache WHERE key = ?1 AND expires_at > ?2'
-      ).bind(cacheKey, Date.now()).first();
-      if (row?.data) {
-        const parsed = JSON.parse(row.data);
-        if (parsed?.negative === true) return null;
-        if (parsed?.streamUrl) return parsed;
-      }
-    } catch { /* miss */ }
-  }
-
-  // 2. Upstream fetch — deduped slug candidates
-  const candidates = [...new Set(
-    [slugify(meta?.title), slugify(meta?.id)].filter(Boolean)
+  const slugCandidates = [...new Set(
+    [slugify(meta?.id), slugify(meta?.title)].filter(Boolean)
   )];
+  const candidates = slugCandidates.length > 0
+    ? slugCandidates.map((slug) => `https://beta.cno.to/hls/${resolvedAnilistId}-${slug}/E${epPadded}/master.m3u8`)
+    : [`https://beta.cno.to/hls/${resolvedAnilistId}/E${epPadded}/master.m3u8`];
 
-  const isDebug = env?.EDGE_BETA_DEBUG === '1' || request?.headers?.get('x-debug-beta') === '1';
-  if (isDebug) {
-    console.log('[edge-beta] called', { resolvedAnilistId, candidates });
-  }
-
-  let winner = null;
-  for (const slug of candidates) {
-    const url = `https://beta.cno.to/hls/${resolvedAnilistId}-${slug}/E${epPadded}/master.m3u8`;
-    let res;
-    try {
-      res = await fetch(url, {
-        headers: { 'User-Agent': BETA_UA, 'Referer': 'https://beta.cno.to/', 'Origin': 'https://beta.cno.to' },
-      });
-    } catch { continue; }
-    if (!res.ok) continue;
-
-    let parsed;
-    try { parsed = parseMaster(await res.text(), url); } catch { continue; }
-    const rawAudio = parsed?.audio ?? parsed?.audioTracks ?? (Array.isArray(parsed) ? parsed : []);
-    if (!rawAudio.length) continue;
-
-    const audioTracks = rawAudio.map((t, idx) => ({
-      id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${idx}`),
-      language: t.language || t.lang || 'ja',
-      label: t.label || t.name || t.language || 'Audio',
-      default: t.default !== undefined ? Boolean(t.default) : idx === 0,
-    }));
-
-    winner = {
-      streamUrl: url,
-      audioTracks,
-      provider: 'anipm',
-      quality: '1080p',
-      referer: 'https://beta.cno.to/',
-      subtitles: (parsed?.subtitles || []).map((s, idx) => ({
-        id: s.id !== undefined ? String(s.id) : `sub-${idx}`,
-        language: s.language || s.lang || 'en',
-        label: s.label || s.name || s.language || 'English',
-        url: s.uri || s.url || '',
-        default: Boolean(s.default),
-      })),
-    };
-    break;
-  }
-
-  if (isDebug || (!winner && candidates.length > 0)) {
-    console.log('[edge-beta] result', winner ? 'winner' : 'no-winner', {
-      tried: candidates.length,
-      audioTracks: winner?.audioTracks?.length ?? 0,
-    });
-  }
-
-  // 3. Cache write
-  if (env?.ANIHUB?.prepare) {
-    try {
-      if (winner) {
-        await env.ANIHUB.prepare(
-          'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-        ).bind(cacheKey, JSON.stringify(winner), Date.now() + POSITIVE_TTL_MS).run();
-      } else {
-        await env.ANIHUB.prepare(
-          'INSERT OR REPLACE INTO stream_cache (key, data, expires_at) VALUES (?1, ?2, ?3)'
-        ).bind(cacheKey, JSON.stringify({ negative: true, audioTracks: [] }), Date.now() + NEGATIVE_TTL_MS).run();
-      }
-    } catch { /* best-effort */ }
-  }
-
-  return winner;
+  return {
+    streamUrl: candidates[0],
+    betaUrlCandidates: candidates,
+    referrerPolicy: 'no-referrer',
+    provider: 'anipm',
+    quality: '1080p',
+    audioTracks: [],
+    subtitles: [],
+  };
 }
 

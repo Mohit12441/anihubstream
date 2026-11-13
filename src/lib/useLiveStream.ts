@@ -367,8 +367,26 @@ export function useLiveStream(o: Options) {
         return;
       }
 
-      const { default: HlsCtor } = await import('hls.js');
+      const { default: HlsCtor, FetchLoader } = await import('hls.js');
       if (cancelled) return;
+
+      let sourceUrl = url;
+      if (info.betaUrlCandidates && info.betaUrlCandidates.length > 1) {
+        for (const candidate of info.betaUrlCandidates) {
+          try {
+            const res = await fetch(candidate, { referrerPolicy: 'no-referrer', method: 'HEAD', signal: AbortSignal.timeout(3000) });
+            if (res.ok) {
+              sourceUrl = candidate;
+              break;
+            }
+          } catch {}
+        }
+      }
+      if (cancelled) return;
+      if (info.referrerPolicy && v) {
+        try { (v as any).referrerPolicy = info.referrerPolicy; } catch {}
+      }
+
       if (HlsCtor.isSupported()) {
         let p2p: P2PEngine | null = null;
         if (o.enableP2P) {
@@ -379,10 +397,13 @@ export function useLiveStream(o: Options) {
           p2p.subscribe(setP2PStats);
         }
 
+        const BaseLoaderClass = (FetchLoader || HlsCtor.DefaultConfig.loader) as any;
+
         const hlsConfig: any = {
           enableWorker: true,
           lowLatencyMode: true,
           startLevel: -1,
+          loader: BaseLoaderClass,
           maxBufferLength: 30,
           maxMaxBufferLength: 60,
           backBufferLength: 30,
@@ -400,10 +421,22 @@ export function useLiveStream(o: Options) {
           xhrSetup: (xhr: XMLHttpRequest) => {
             xhr.withCredentials = false;
           },
+          fetchSetup: (context: any, initParams: any) => {
+            const isDirect = !context.url.startsWith('/api/') && (context.url.includes('cno.to') || context.url.includes('beamcube.top'));
+            if (!isDirect) {
+              return new Request(context.url, initParams);
+            }
+            return new Request(context.url, {
+              ...initParams,
+              referrerPolicy: 'no-referrer',
+              mode: 'cors',
+              credentials: 'omit',
+            });
+          },
         };
 
         if (o.enableP2P && p2p) {
-          class P2PFragLoader extends HlsCtor.DefaultConfig.loader {
+          class P2PFragLoader extends BaseLoaderClass {
             constructor(cfg: any) {
               super(cfg);
               const defaultLoad = this.load.bind(this);
@@ -412,7 +445,11 @@ export function useLiveStream(o: Options) {
                   .loadSegment(
                     ctx.url,
                     async (u: string) => {
-                      const res = await fetch(u, { headers: ctx.headers });
+                      const isDirect = !u.startsWith('/api/') && (u.includes('cno.to') || u.includes('beamcube.top'));
+                      const res = await fetch(u, {
+                        headers: ctx.headers,
+                        ...(isDirect ? { referrerPolicy: 'no-referrer', credentials: 'omit' as RequestCredentials } : {}),
+                      });
                       if (!res.ok) throw new Error(`HTTP ${res.status}`);
                       return await res.arrayBuffer();
                     },
@@ -514,10 +551,10 @@ export function useLiveStream(o: Options) {
           if (cancelled) return;
           setCurrentLevelIndex(data.level);
         });
-        hls.loadSource(url);
+        hls.loadSource(sourceUrl);
         hls.attachMedia(v);
       } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
-        v.src = url;
+        v.src = sourceUrl;
         v.load();
       } else {
         setStatus('error');

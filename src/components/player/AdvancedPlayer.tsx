@@ -156,6 +156,8 @@ export function AdvancedPlayer(props: Props) {
       thumbnails: initialServer.thumbnails?.url ? { url: initialServer.thumbnails.url } : null,
       audioTracks: (initialServer.audioTracks || []).map(toLiveAudioTrack),
       downloads: initialServer.downloads || [],
+      referrerPolicy: initialServer.referrerPolicy,
+      betaUrlCandidates: initialServer.betaUrlCandidates,
     };
   }, [initialServer, anime.title, episode.n, prefs.audio]);
   const live = useLiveStream({

@@ -143,9 +143,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           try {
             const betaDirect = await resolveBetaAudioTracks(env, resolvedAnilistId, meta, ep, audio, request);
             if (betaDirect?.streamUrl) {
-              const proxyBase = `${url.origin}/api/proxy`;
-              const activeReferer = betaDirect.referer || 'https://beta.cno.to/';
-              const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(betaDirect.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
               const effectiveProvider = 'anipm';
               const cleanServerId = rawServerParam || 'beta';
               const resolvedServer = {
@@ -153,13 +150,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 name: formatServerName(effectiveProvider, serverParam || 'Beta Master'),
                 provider: effectiveProvider,
                 status: 'ready',
-                streamUrl: proxiedStreamUrl,
+                streamUrl: betaDirect.streamUrl,
+                referrerPolicy: betaDirect.referrerPolicy || 'no-referrer',
+                betaUrlCandidates: betaDirect.betaUrlCandidates,
                 type: 'hls',
                 quality: betaDirect.quality || '1080p',
                 audio,
-                audioTracks: (Array.isArray(betaDirect.audioTracks) && betaDirect.audioTracks.length > 0)
-                  ? betaDirect.audioTracks
-                  : buildAudioTracks(audio),
+                audioTracks: [],
                 subtitles: betaDirect.subtitles || [],
                 downloads: [],
               };
@@ -466,6 +463,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         return errorResponse(err);
       }
     },
-    { allowedParams: ['anime_id', 'id', 'title', 'ep', 'audio', 'provider', 'server'], waitUntil },
+    { allowedParams: ['anime_id', 'id', 'title', 'ep', 'audio', 'provider', 'server', 'anilist'], waitUntil },
   );
 };

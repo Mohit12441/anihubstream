@@ -49,6 +49,8 @@ export interface BridgeSource {
   downloadUrl?: string | null;
   downloads?: { name: string; quality?: string; url: string; provider?: string; audio?: string }[];
   servers?: { name: string; linkId: string; type?: string }[];
+  referrerPolicy?: 'no-referrer' | 'origin' | 'same-origin';
+  betaUrlCandidates?: string[];
 }
 
 export interface ResolveFailure {
@@ -308,6 +310,8 @@ export async function bridgeResolve(
             url: sub.url || sub.proxyUrl || sub.uri || '',
           })),
           downloads: s.downloads || [],
+          referrerPolicy: s.referrerPolicy,
+          betaUrlCandidates: s.betaUrlCandidates,
         };
       } else {
         body = rawBody as BridgeSource;
@@ -457,24 +461,32 @@ export async function fetchVtt(path: string): Promise<VttFile | null> {
       }
     } catch {}
 
+    let fetchOpts: RequestInit = { signal: AbortSignal.timeout(20_000) };
     if ((target.startsWith('http://') || target.startsWith('https://')) && !target.includes('/api/proxy')) {
+      let isDirectNoReferrer = false;
       let ref = 'https://megaplay.buzz/';
       try {
         const parsed = new URL(target);
-        if (parsed.hostname.includes('zoko') || parsed.hostname.includes('animehot') || parsed.hostname.includes('dramahot')) {
+        if (parsed.hostname.includes('cno.to') || parsed.hostname.includes('beamcube.top')) {
+          isDirectNoReferrer = true;
+        } else if (parsed.hostname.includes('zoko') || parsed.hostname.includes('animehot') || parsed.hostname.includes('dramahot')) {
           ref = 'https://zokoanime.video/';
         } else if (parsed.hostname.includes('vidnest')) {
           ref = 'https://vidnest.fun/';
-        } else if (parsed.hostname.includes('settlar') || parsed.hostname.includes('cno.to')) {
+        } else if (parsed.hostname.includes('settlar')) {
           ref = 'https://settlar.io/';
         } else if (parsed.hostname.includes('rabbitstream') || parsed.hostname.includes('megacloud')) {
           ref = 'https://megaplay.buzz/';
         }
       } catch {}
-      target = `/api/proxy?url=${encodeURIComponent(target)}&referer=${encodeURIComponent(ref)}`;
+      if (isDirectNoReferrer) {
+        fetchOpts = { signal: AbortSignal.timeout(20_000), referrerPolicy: 'no-referrer' };
+      } else {
+        target = `/api/proxy?url=${encodeURIComponent(target)}&referer=${encodeURIComponent(ref)}`;
+      }
     }
 
-    const res = await fetch(target, { signal: AbortSignal.timeout(20_000) });
+    const res = await fetch(target, fetchOpts);
     if (!res.ok) return null;
     const text = await res.text();
     return { cues: parseVtt(text), chars: text.length };

@@ -410,17 +410,11 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
     servers.push(
       makeServer({
         id: 'anipm:beta',
-        name: 'AniPM · Beta Master (11 Audios)',
+        name: 'AniPM · Beta Master',
         provider: 'anipm',
         streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
         resolvedTitle,
-        audioTracks: [
-          { id: 'audio-ja', language: 'ja', label: 'Japanese [CR]', default: true },
-          { id: 'audio-en', language: 'en', label: 'English [CR]', default: false },
-          { id: 'audio-hi', language: 'hi', label: 'Hindi [CR]', default: false },
-          { id: 'audio-ta', language: 'ta', label: 'Tamil [CR]', default: false },
-          { id: 'audio-te', language: 'te', label: 'Telugu [CR]', default: false },
-        ],
+        audioTracks: [],
       }),
       makeServer({
         id: 'anipm:settlar',
@@ -694,7 +688,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
           }
           if (!direct) {
-            direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: requested });
+            direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: (requested === 'anipm' ? undefined : requested) });
           }
           if (direct?.streamUrl) {
             // shortcut: in-memory cache only; avoids exhausting Cloudflare D1 monthly write quota on ephemeral 20-min tokens
@@ -748,14 +742,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
       if (directRes?.streamUrl) {
         const proxyBase = `${url.origin}/api/proxy`;
+        const isDirectNoReferrer = directRes.referrerPolicy === 'no-referrer' || directRes.provider === 'anipm';
         const activeReferer = directRes.referer || (directRes.provider === 'anipm' ? 'https://beta.cno.to/' : 'https://megaplay.buzz/');
-        const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
+        const finalStreamUrl = isDirectNoReferrer ? directRes.streamUrl : `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
 
         const subtitles = (directRes.subtitles || []).map((sub) => ({
           ...sub,
           label: sub.label || sub.name || 'English',
           name: sub.name || sub.label || 'English',
-          url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
+          url: sub.url ? (isDirectNoReferrer ? sub.url : `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}`) : '',
         }));
 
         const effectiveProvider = (directRes.provider === requested || requested === 'auto') ? directRes.provider : (directRes.provider || 'fallback');
@@ -765,7 +760,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           name: formatServerName(effectiveProvider, `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`),
           provider: effectiveProvider,
           status: 'ready',
-          streamUrl: proxiedStreamUrl,
+          streamUrl: finalStreamUrl,
+          referrerPolicy: directRes.referrerPolicy,
+          betaUrlCandidates: directRes.betaUrlCandidates,
           type: audio === 'dub' ? 'dub' : 'hls',
           quality: directRes.quality || '1080p',
           audio,
@@ -773,7 +770,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             ? directRes.audioTracks
             : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
               ? directRes.audio
-              : buildAudioTracks(audio),
+              : (effectiveProvider === 'anipm' ? [] : buildAudioTracks(audio)),
           subtitles,
           thumbnails: directRes.thumbnails?.url ? { url: `${proxyBase}?url=${encodeURIComponent(directRes.thumbnails.url)}&referer=${encodeURIComponent(activeReferer)}` } : null,
           downloads: [],
@@ -1008,6 +1005,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         return errorResponse(err);
       }
     },
-    { allowedParams: ['id', 'animeId', 'title', 'malId', 'ep', 'audio', 'provider', 'server'], waitUntil },
+    { allowedParams: ['id', 'animeId', 'title', 'malId', 'ep', 'audio', 'provider', 'server', 'anilist'], waitUntil },
   );
 };
