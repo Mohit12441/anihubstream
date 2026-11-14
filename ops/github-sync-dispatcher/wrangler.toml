@@ -2,10 +2,10 @@ name = "anihubstream-sync-dispatcher"
 main = "src/index.mjs"
 compatibility_date = "2026-10-17"
 
-# Hourly cron schedule:
-# Fires every hour at :00 (runs 45s pulse, and deep sync at 02:00 and 14:00 UTC)
+# 2-hour cron schedule (12 runs per day, < 18% GitHub Action minutes):
+# Fires every 2 hours at :07 UTC (safe from top-of-hour bot traffic)
 [triggers]
-crons = ["0 * * * *"]
+crons = ["7 */2 * * *"]
 
 [observability.logs]
 enabled = true

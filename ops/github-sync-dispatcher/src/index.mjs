@@ -28,17 +28,22 @@ export default {
     const utcHour = new Date(event.scheduledTime || Date.now()).getUTCHours();
     
     // Select event type and execution target based on schedule:
-    // - 02:00 & 14:00 UTC -> Full deep catalog sync (event: 'catalog-sync', target: 'all')
-    // - Hourly ticks -> Fast 45-second pulse (event: 'pulse', target: 'pulse')
+    // - 02:00 & 14:00 UTC -> Pulse + New Anime Discovery (target: 'all')
+    // - Every 2 hours -> Airing Pulse (target: 'pulse')
     let eventType = 'pulse';
     let target = 'pulse';
 
-    if (cron === '0 2,14 * * *' || (cron === '0 * * * *' && (utcHour === 2 || utcHour === 14))) {
+    if (cron === '7 */2 * * *' || cron === '0 * * * *') {
+      if (utcHour === 2 || utcHour === 14) {
+        eventType = 'catalog-sync';
+        target = 'all';
+      } else {
+        eventType = 'pulse';
+        target = 'pulse';
+      }
+    } else if (cron === '0 2,14 * * *') {
       eventType = 'catalog-sync';
       target = 'all';
-    } else if (cron === '0 * * * *') {
-      eventType = 'pulse';
-      target = 'pulse';
     } else if (cron === '45 */6 * * *') {
       eventType = 'providers-sync';
       target = 'providers';
@@ -93,7 +98,7 @@ export default {
         status: 'ok',
         worker: 'anihubstream-sync-dispatcher',
         supported_events: ['pulse', 'catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync'],
-        schedules: ['0 * * * * (hourly pulse on :00, deep sync on 02:00/14:00 UTC)'],
+        schedules: ['7 */2 * * * (2-hour airing pulse; adds new anime discovery at 02:00/14:00 UTC)'],
       }), {
         status: 200,
         headers: {

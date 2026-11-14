@@ -1,0 +1,48 @@
+name: pulse-sync
+
+# Lightweight 2-hour pulse and new-anime discovery.
+# Triggered by Cloudflare Worker cron dispatcher (ops/github-sync-dispatcher).
+# Uses ~30s execution time (billed as 1 minute). Consumes < 18% of monthly free GitHub Actions minutes.
+
+on:
+  repository_dispatch:
+    types: [pulse, catalog-sync, anilist-sync]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Sync target (pulse, all)'
+        required: false
+        default: 'pulse'
+        type: string
+
+permissions: {}
+
+concurrency:
+  group: pulse-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19'
+
+      - name: Execute 2-Hour Airing & New Anime Sync
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          if [ "${{ github.event.client_payload.target }}" = "all" ] || [ "${{ github.event.inputs.target }}" = "all" ]; then
+            echo "Running Airing Pulse + New Anime Discovery..."
+            node tools/pulse-airing.mjs --remote
+            node tools/discover-titles.mjs --limit=2 --force || true
+          else
+            echo "Running 2-Hour Airing Pulse..."
+            node tools/pulse-airing.mjs --remote
+          fi
