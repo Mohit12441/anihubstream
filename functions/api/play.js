@@ -643,7 +643,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             thumbnails: null,
           });
         }
-      }
     }
 
     // Determine Stream Bridge base (fallback to local bridge on 8795)
