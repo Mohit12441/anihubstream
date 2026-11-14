@@ -411,7 +411,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
     servers.push({
       id: 'anipm:beta',
       provider: 'anipm',
-      name: 'AniPM · Beta Master',
+      name: 'AniPM · Beta',
       status: 'ready',
       unavailableReason: null,
       streamUrl: null,
@@ -615,7 +615,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         if (betaRes?.streamUrl) {
           const primaryServer = {
             id: 'anipm:beta',
-            name: 'AniPM · Beta Master',
+            name: 'AniPM · Beta',
             provider: 'anipm',
             status: 'ready',
             streamUrl: betaRes.streamUrl,

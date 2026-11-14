@@ -140,7 +140,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 server: {
                   id: 'anipm:beta',
                   provider: 'anipm',
-                  name: 'AniPM · Beta Master',
+                  name: 'AniPM · Beta',
                   status: 'ready',
                   streamUrl: betaRes.streamUrl,
                   audioTracks: [],
@@ -154,7 +154,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             server: {
               id: 'anipm:beta',
               provider: 'anipm',
-              name: 'AniPM · Beta Master',
+              name: 'AniPM · Beta',
               status: 'unavailable',
               unavailableReason: 'Could not resolve AniPM Beta stream for this episode.',
               streamUrl: null,
