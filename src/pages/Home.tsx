@@ -172,7 +172,9 @@ export function Home() {
           </AnimeCarousel>
         </section>
 
-        <section className="home__row scroll-reveal" aria-label="Themed sections">
+        <HomeSchedule />
+
+        <section className="home__row" aria-label="Themed sections">
           <div className="moods">
             {MOODS.map((m) => (
               <Link key={m.to} to={m.to} className="mood" style={{ '--pc': m.pc } as React.CSSProperties}>
@@ -196,8 +198,6 @@ export function Home() {
           toLabel="Full schedule"
         />
 
-        <HomeSchedule />
-
         <Row
           id="row-top"
           title="Top Anime Right Now"
@@ -217,7 +217,7 @@ export function Home() {
           poster
         />
 
-        <section className="home__row scroll-reveal" aria-labelledby="row-genres">
+        <section className="home__row" aria-labelledby="row-genres">
           <div className="spot">
             <div className="spot__head">
               <h2 id="row-genres">Find your shelf</h2>
@@ -287,7 +287,7 @@ function Row({
   poster?: boolean;
 }) {
   return (
-    <section className="home__row scroll-reveal" aria-labelledby={id}>
+    <section className="home__row" aria-labelledby={id}>
       <div className="sec-head">
         <h2 id={id}>
           {icon}

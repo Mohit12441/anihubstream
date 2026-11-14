@@ -45,7 +45,7 @@ export function HomeSchedule() {
   if (!allEntries.length) return null;
 
   return (
-    <section className="home__row home-schedule scroll-reveal" aria-labelledby="row-schedule">
+    <section className="home__row home-schedule" aria-labelledby="row-schedule">
       <div className="sec-head">
         <h2 id="row-schedule">
           <Calendar size={21} aria-hidden="true" style={{ color: 'var(--cyan, #24d3ee)' }} />
