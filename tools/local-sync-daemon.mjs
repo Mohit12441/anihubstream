@@ -329,16 +329,16 @@ export async function runSyncCycle({ quiet = false, expand = 3, stage = null } =
     if (!stage || stage === 'trending') {
       metrics.trending = await syncTrendingStage(db, quiet).catch((e) => ({ error: e.message }));
     }
-    if (!stage || stage === 'schedules') {
+    if (!stage || stage === 'schedules' || stage === 'schedule') {
       metrics.schedules = await syncSchedulesStage(quiet).catch((e) => ({ error: e.message }));
     }
-    if (!stage || stage === 'providers') {
+    if (!stage || stage === 'providers' || stage === 'provider') {
       metrics.providers = await syncProvidersStage(quiet).catch((e) => ({ error: e.message }));
     }
-    if (!stage || stage === 'franchises') {
+    if (!stage || stage === 'franchises' || stage === 'franchise') {
       metrics.franchises = await syncFranchisesStage(db, quiet).catch((e) => ({ error: e.message }));
     }
-    if (!stage || stage === 'episodes') {
+    if (!stage || stage === 'episodes' || stage === 'episode') {
       metrics.episodes = await syncEpisodesStage(quiet).catch((e) => ({ error: e.message }));
     }
     if (!stage || stage === 'growth') {

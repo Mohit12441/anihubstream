@@ -47,7 +47,9 @@ const CANDIDATE_DEPTH = 30;
    ComSpec is not a usable cmd.exe, so call wrangler's JS entry with node directly. */
 const WRANGLER_JS =
   process.env.ANIHUB_WRANGLER_JS ??
-  (process.env.APPDATA ? resolve(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js') : 'wrangler');
+  (existsSync(resolve(ROOT, 'node_modules/wrangler/bin/wrangler.js'))
+    ? resolve(ROOT, 'node_modules/wrangler/bin/wrangler.js')
+    : (process.env.APPDATA ? resolve(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js') : 'wrangler'));
 
 export function findSqlitePath() {
   const d1Dir = resolve(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
