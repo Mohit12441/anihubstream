@@ -132,14 +132,14 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         if (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta')) {
-          const targetAnilist = resolvedAnilistId || meta?.anilist_id || (Number(animeIdParam) ? Number(animeIdParam) : 195604);
+          const targetAnilist = resolvedAnilistId || meta?.anilist_id || (Number(animeIdParam) ? Number(animeIdParam) : 0);
           const betaRes = await resolveAniPmBetaDirect({
             anilistId: targetAnilist,
             ep,
             title: resolvedTitle || meta?.title,
             slug: meta?.provider_slug || animeIdParam,
           });
-          if (betaRes?.streamUrl) {
+          if (betaRes?.status === 'ready' && betaRes?.streamUrl) {
             return ok({
               server: {
                 id: 'anipm:beta',
@@ -147,8 +147,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 name: 'AniPM · Beta',
                 status: 'ready',
                 streamUrl: betaRes.streamUrl,
-                audioTracks: [],
-                subtitles: [],
+                audioTracks: betaRes.audioTracks || [],
+                subtitles: betaRes.subtitles || [],
                 quality: '1080p',
               }
             });
@@ -159,7 +159,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               provider: 'anipm',
               name: 'AniPM · Beta',
               status: 'unavailable',
-              unavailableReason: 'Could not resolve AniPM Beta stream for this episode.',
+              unavailableReason: betaRes?.unavailableReason || 'Could not resolve AniPM Beta stream for this episode.',
               streamUrl: null,
               audioTracks: [],
               subtitles: [],

@@ -120,6 +120,7 @@ export interface PlayQuery {
   provider?: string;
   malId?: number | string;
   server?: string;
+  anilist?: number | string;
 }
 
 export interface PlayResponse {

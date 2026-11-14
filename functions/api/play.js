@@ -606,7 +606,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     // FAST ROUTE FOR ANIPM: Never call stream bridge, resolve directly in Edge Worker!
     if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
-      const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 195604);
+      const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 0);
       const [betaRes, aniskipData] = await Promise.all([
         resolveAniPmBetaDirect({
           anilistId: targetAnilist,
@@ -616,7 +616,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }),
         resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id).catch(() => null),
       ]);
-        if (betaRes?.streamUrl) {
+        if (betaRes?.status === 'ready' && betaRes?.streamUrl) {
           const primaryServer = {
             id: 'anipm:beta',
             name: 'AniPM · Beta',
@@ -627,8 +627,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             type: 'hls',
             quality: '1080p',
             audio,
-            audioTracks: [],
-            subtitles: [],
+            audioTracks: betaRes.audioTracks || [],
+            subtitles: betaRes.subtitles || [],
           };
           const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== 'anipm:beta')];
           return ok({
@@ -636,8 +636,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             servers: allServers,
             allServers,
             availableProviders: getAvailableProvidersList(),
-            subtitles: [],
-            audioTracks: [],
+            subtitles: betaRes.subtitles || [],
+            audioTracks: betaRes.audioTracks || [],
             audio,
             skip: aniskipData,
             thumbnails: null,
@@ -685,7 +685,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         try {
           let direct = null;
           if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
-            const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 195604);
+            const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 0);
             const betaRes = await resolveAniPmBetaDirect({
               anilistId: targetAnilist,
               ep,

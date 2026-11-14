@@ -334,6 +334,8 @@ export function Watch() {
     if (!anime) return;
     let cancelled = false;
 
+    const targetAnilist = (anime as any).sourceIds?.anilist || (anime as any).anilistId || (/^\d+$/.test(anime.id) ? anime.id : undefined);
+
     getPlay({
       id: anime.id,
       ep: epNum,
@@ -341,6 +343,7 @@ export function Watch() {
       title: anime.title || undefined,
       provider: targetProvider || undefined,
       malId: anime.malId || undefined,
+      anilist: targetAnilist,
     })
       .then((data) => {
         if (cancelled) return;

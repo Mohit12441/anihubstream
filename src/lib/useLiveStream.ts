@@ -212,7 +212,7 @@ export function useLiveStream(o: Options) {
         if (cancel) return;
         if (isResolveFailure(res)) {
           /* if explicit provider failed or timed out, attempt auto fallback before failing */
-          if (o.provider && o.provider !== 'auto' && o.provider !== 'anipm') {
+          if (o.provider && o.provider !== 'auto') {
             const autoRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
             if (cancel) return;
             if (!isResolveFailure(autoRes)) {
