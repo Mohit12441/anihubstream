@@ -35,5 +35,6 @@ scratch/
 anihub_tables_backup.sql
 .gemini/
 .planning/
+.code-review-graph/
 
 remote-user-tables-backup.json
