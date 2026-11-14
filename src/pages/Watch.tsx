@@ -232,29 +232,63 @@ export function Watch() {
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const srvParam = params.get('server');
     if (srvParam) return srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
+    if (targetProvider === 'anipm') return 'anipm:beta';
     return targetProvider
       ? serverIdFromProvider(targetProvider, prefs.audio)
       : (prefs.audio === 'dub' ? 'anikoto:HD-1-dub' : 'anikoto:HD-1');
   });
   const [activeTab, setActiveTab] = useState<'episode' | 'anime'>('episode');
 
-  const activeServer = useMemo(() => {
-    return playServers.find((s) => s.id === activeServerId) || playServers[0] || null;
-  }, [playServers, activeServerId]);
-
   const activeProvider = useMemo(() => {
-    return getProvider(activeServer || playServers[0]);
-  }, [activeServer, playServers]);
+    const raw = targetProvider || (activeServerId ? (activeServerId.includes(':') ? activeServerId.split(':')[0] : '') : 'anikoto');
+    if (raw.toLowerCase().includes('anipm')) return 'AniPM';
+    if (raw.toLowerCase().includes('anikoto')) return 'AniKoto';
+    if (raw.toLowerCase().includes('hianime')) return 'HiAnime';
+    if (raw.toLowerCase().includes('aniwatch')) return 'AniWatch';
+    if (raw.toLowerCase().includes('torrent') || raw.toLowerCase().includes('p2p')) return 'P2P';
+    return raw ? raw.charAt(0).toUpperCase() + raw.slice(1) : 'AniKoto';
+  }, [targetProvider, activeServerId]);
 
   const currentSubservers = useMemo(() => {
     const isDub = prefs.audio === 'dub';
-    const providerScoped = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
+    const targetKey = activeProvider.toLowerCase();
+
+    // Strict provider isolation: ONLY servers from this specific provider are allowed
+    const providerScoped = playServers.filter((s) => {
+      const p = (s.provider || (s.id.includes(':') ? s.id.split(':')[0] : '')).toLowerCase();
+      if (targetKey === 'anipm') return p === 'anipm' || s.id.startsWith('anipm:');
+      if (targetKey === 'anikoto') return p === 'anikoto' || s.id.startsWith('anikoto:');
+      if (targetKey === 'hianime') return p === 'hianime' || s.id.startsWith('hianime:');
+      if (targetKey === 'aniwatch') return p === 'aniwatch' || s.id.startsWith('aniwatch:');
+      if (targetKey === 'p2p') return p === 'torrent' || s.id.startsWith('torrent:');
+      return p === targetKey;
+    });
+
     const audioMatching = providerScoped.filter((s) => {
       const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
       return isDub ? sDub : !sDub;
     });
     return audioMatching.length > 0 ? audioMatching : providerScoped;
   }, [playServers, activeProvider, prefs.audio]);
+
+  const activeServer = useMemo(() => {
+    const match = currentSubservers.find((s) => s.id === activeServerId);
+    if (match) return match;
+    return currentSubservers[0] || playServers[0] || null;
+  }, [currentSubservers, activeServerId, playServers]);
+
+  useEffect(() => {
+    if (!targetProvider) return;
+    const targetKey = targetProvider.toLowerCase();
+    const currentProv = (activeServerId.includes(':') ? activeServerId.split(':')[0] : '').toLowerCase();
+    if (currentProv !== targetKey) {
+      if (targetKey === 'anipm') {
+        setActiveServerId('anipm:beta');
+      } else {
+        setActiveServerId(serverIdFromProvider(targetKey, prefs.audio));
+      }
+    }
+  }, [targetProvider, prefs.audio]);
 
   const hasDubForProvider = useMemo(() => {
     const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
@@ -734,7 +768,7 @@ export function Watch() {
             onServerChange={setActiveServerId}
             servers={currentSubservers}
             onSelectServer={handleSelectServer}
-            initialServer={playServers.find((s) => s.id === activeServerId) || playServers[0] || null}
+            initialServer={activeServer}
             initialPartyRoom={params.get('party')}
           />
 

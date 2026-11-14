@@ -96,7 +96,7 @@ export function AnimeDetail() {
       const provKey = (s.provider || (s.id?.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
       const existing = map.get(provKey);
       const isUnavailable = s.status === 'unavailable';
-      const hasDub = Boolean(s.id?.includes('-dub') || s.audio === 'dub');
+      const hasDub = provKey === 'anipm' || Boolean(s.id?.includes('-dub') || s.audio === 'dub');
 
       if (!existing) {
         map.set(provKey, {
@@ -116,7 +116,12 @@ export function AnimeDetail() {
       }
     }
 
-    return Array.from(map.values());
+    const order = ['anikoto', 'hianime', 'aniwatch', 'anipm', 'torrent'];
+    return Array.from(map.values()).sort((a, b) => {
+      const idxA = order.indexOf(a.id);
+      const idxB = order.indexOf(b.id);
+      return (idxA !== -1 ? idxA : 99) - (idxB !== -1 ? idxB : 99);
+    });
   }, [servers]);
 
   // Theme songs (OP/ED) arrive directly with anime detail
