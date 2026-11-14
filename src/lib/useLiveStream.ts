@@ -198,11 +198,13 @@ export function useLiveStream(o: Options) {
           return;
         }
 
-        const up = await bridgeHealth(fresh);
-        if (cancel) return;
-        if (!up) {
-          setStatus('unavailable');
-          return;
+        if (o.provider !== 'anipm') {
+          const up = await bridgeHealth(fresh);
+          if (cancel) return;
+          if (!up) {
+            setStatus('unavailable');
+            return;
+          }
         }
         autoTries.current = 0;
         errorTries.current = 0;
@@ -210,7 +212,7 @@ export function useLiveStream(o: Options) {
         if (cancel) return;
         if (isResolveFailure(res)) {
           /* if explicit provider failed or timed out, attempt auto fallback before failing */
-          if (o.provider && o.provider !== 'auto') {
+          if (o.provider && o.provider !== 'auto' && o.provider !== 'anipm') {
             const autoRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
             if (cancel) return;
             if (!isResolveFailure(autoRes)) {
@@ -324,11 +326,13 @@ export function useLiveStream(o: Options) {
     const onClearBuffer = () => setBuffering(false);
 
     v.addEventListener('loadedmetadata', onMetadata);
+    v.addEventListener('loadeddata', onMetadata);
     v.addEventListener('error', onError);
     v.addEventListener('playing', onPlaying);
     v.addEventListener('waiting', onWaiting);
     v.addEventListener('stalled', onWaiting);
-    v.addEventListener('canplay', onClearBuffer);
+    const onCanPlay = () => { onClearBuffer(); markReady(); };
+    v.addEventListener('canplay', onCanPlay);
     v.addEventListener('seeked', onClearBuffer);
 
     let hls: Hls | null = null;
@@ -542,6 +546,9 @@ export function useLiveStream(o: Options) {
           if (cancelled) return;
           setCurrentLevelIndex(data.level);
         });
+        hls.once(HlsCtor.Events.FRAG_BUFFERED, () => {
+          if (!cancelled) markReady();
+        });
         hls.loadSource(sourceUrl);
         hls.attachMedia(v);
       } else if (v.canPlayType('application/vnd.apple.mpegurl')) {
@@ -556,11 +563,12 @@ export function useLiveStream(o: Options) {
     return () => {
       cancelled = true;
       v.removeEventListener('loadedmetadata', onMetadata);
+      v.removeEventListener('loadeddata', onMetadata);
       v.removeEventListener('error', onError);
       v.removeEventListener('playing', onPlaying);
       v.removeEventListener('waiting', onWaiting);
       v.removeEventListener('stalled', onWaiting);
-      v.removeEventListener('canplay', onClearBuffer);
+      v.removeEventListener('canplay', onCanPlay);
       v.removeEventListener('seeked', onClearBuffer);
       hls?.destroy();
       if (hlsRef.current === hls) hlsRef.current = null;
