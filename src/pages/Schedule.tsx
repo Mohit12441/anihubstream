@@ -3,60 +3,12 @@ import { CalendarDays, Clock, Flame, Globe, Info, Sparkles, Timer } from 'lucide
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { Embers } from '../components/Embers';
 import { ScheduleList } from '../components/ScheduleList';
-import { artUrl, currentSeasonKey, DAYS } from '../data/model';
-import type { SeasonKey, ScheduleEntry } from '../data/model';
-import { convertSlotTimezone, getUserTimezoneLabel } from '../lib/scheduleTime';
+import { artUrl, currentSeasonKey } from '../data/model';
+import type { SeasonKey } from '../data/model';
+import { formatScheduleEntry, getUserTimezoneLabel } from '../lib/scheduleTime';
 import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/pages.css';
-
-const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] as const;
-
-function formatScheduleEntry(
-  e: ScheduleEntry,
-  useLocalTime: boolean,
-  scheduleType: 'sub' | 'dub',
-): ScheduleEntry {
-  const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
-  const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
-
-  const targetIso = scheduleType === 'dub' ? schedDubAt : (scheduleType === 'sub' ? schedSubAt : null);
-  if (targetIso) {
-    const d = new Date(typeof targetIso === 'number' && targetIso < 1e11 ? targetIso * 1000 : targetIso);
-    if (!isNaN(d.getTime())) {
-      const dayOfWeek = useLocalTime ? d.getDay() : d.getUTCDay();
-      const day = dayOfWeek === 0 ? 7 : dayOfWeek;
-      const dayLabel = DAYS[day - 1] ?? e.dayLabel;
-      const time = useLocalTime
-        ? `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
-        : `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`;
-      const date = useLocalTime
-        ? `${MONTH_NAMES[d.getMonth()]} ${d.getDate()}`
-        : `${MONTH_NAMES[d.getUTCMonth()]} ${d.getUTCDate()}`;
-
-      return {
-        ...e,
-        day,
-        dayLabel,
-        time,
-        date,
-        sched_sub_at: schedSubAt,
-        sched_dub_at: schedDubAt,
-      };
-    }
-  }
-
-  const converted = convertSlotTimezone(e, useLocalTime);
-  return {
-    ...e,
-    day: converted.day,
-    dayLabel: converted.dayLabel,
-    time: converted.time,
-    date: converted.date,
-    sched_sub_at: schedSubAt,
-    sched_dub_at: schedDubAt,
-  };
-}
 
 type ReleaseFilter = 'all' | 'today' | 'upcoming' | 'released';
 

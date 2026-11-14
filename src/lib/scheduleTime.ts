@@ -1,4 +1,6 @@
-import { DAYS } from '../data/model.ts';
+import { DAYS, type ScheduleEntry } from '../data/model.ts';
+
+export const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 export interface ConvertedSlot {
   day: number; // 1 to 7 (1 = MON, 7 = SUN)
@@ -50,8 +52,6 @@ export function convertSlotTimezone(
   if (daysDiff === -6) deltaDays = 1;
   else if (daysDiff === 6) deltaDays = -1;
 
-const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
   if (deltaDays !== 0 && slot.date) {
     const parts = slot.date.trim().split(/\s+/);
     if (parts.length === 2) {
@@ -71,6 +71,55 @@ const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Se
     dayLabel: localDayLabel,
     time: localTime,
     date: localDate,
+  };
+}
+
+/**
+ * Formats a schedule entry using dynamic epoch timestamps (sub/dub) or fallback slot time.
+ */
+export function formatScheduleEntry(
+  e: ScheduleEntry,
+  useLocalTime: boolean,
+  scheduleType: 'sub' | 'dub',
+): ScheduleEntry {
+  const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
+  const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
+
+  const targetIso = scheduleType === 'dub' ? schedDubAt : (scheduleType === 'sub' ? schedSubAt : null);
+  if (targetIso) {
+    const d = new Date(typeof targetIso === 'number' && targetIso < 1e11 ? targetIso * 1000 : targetIso);
+    if (!isNaN(d.getTime())) {
+      const dayOfWeek = useLocalTime ? d.getDay() : d.getUTCDay();
+      const day = dayOfWeek === 0 ? 7 : dayOfWeek;
+      const dayLabel = DAYS[day - 1] ?? e.dayLabel;
+      const time = useLocalTime
+        ? `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
+        : `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`;
+      const date = useLocalTime
+        ? `${MONTH_NAMES[d.getMonth()]} ${d.getDate()}`
+        : `${MONTH_NAMES[d.getUTCMonth()]} ${d.getUTCDate()}`;
+
+      return {
+        ...e,
+        day,
+        dayLabel,
+        time,
+        date,
+        sched_sub_at: schedSubAt,
+        sched_dub_at: schedDubAt,
+      };
+    }
+  }
+
+  const converted = convertSlotTimezone(e, useLocalTime);
+  return {
+    ...e,
+    day: converted.day,
+    dayLabel: converted.dayLabel,
+    time: converted.time,
+    date: converted.date,
+    sched_sub_at: schedSubAt,
+    sched_dub_at: schedDubAt,
   };
 }
 

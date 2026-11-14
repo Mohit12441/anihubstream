@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { convertSlotTimezone, getUserTimezoneLabel } from '../src/lib/scheduleTime.ts';
+import { convertSlotTimezone, formatScheduleEntry, getUserTimezoneLabel } from '../src/lib/scheduleTime.ts';
 
 describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
   it('converts Sunday night slot into Monday morning slot in positive timezone (e.g. JST UTC+9)', () => {
@@ -102,5 +102,54 @@ describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
     const label = getUserTimezoneLabel();
     assert.ok(typeof label === 'string' && label.length > 0);
     assert.match(label, /UTC/i);
+  });
+
+  it('formatScheduleEntry recomputes day and time from sched_dub_at when scheduleType is dub', () => {
+    // 1793725200000 = Tue, 03 Nov 2026 17:00:00 GMT (UTC Tuesday = day 2)
+    const entry = {
+      anime: {
+        id: 'one-piece',
+        title: 'One Piece',
+        poster: '',
+        key: '',
+        episodeCount: 1181,
+        sched_dub_at: 1793725200000,
+      },
+      day: 7, // Sunday slot for sub
+      dayLabel: 'SUN',
+      time: '14:16',
+      date: 'Nov 01',
+      season: 'Fall 2026',
+      sched_dub_at: 1793725200000,
+    };
+
+    const formattedSub = formatScheduleEntry(entry, false, 'sub');
+    assert.equal(formattedSub.day, 7, 'Sub format retains Sunday slot');
+    assert.equal(formattedSub.time, '14:16');
+
+    const formattedDub = formatScheduleEntry(entry, false, 'dub');
+    assert.equal(formattedDub.day, 2, 'Dub format rolls to Tuesday from timestamp');
+    assert.equal(formattedDub.time, '17:00');
+  });
+
+  it('formatScheduleEntry falls back to slot timezone when target timestamp is absent', () => {
+    const entry = {
+      anime: {
+        id: 'sub-only-anime',
+        title: 'Sub Only Anime',
+        poster: '',
+        key: '',
+        episodeCount: 12,
+      },
+      day: 3,
+      dayLabel: 'WED',
+      time: '12:00',
+      date: 'Oct 14',
+      season: 'Fall 2026',
+    };
+
+    const formatted = formatScheduleEntry(entry, false, 'dub');
+    assert.equal(formatted.day, 3);
+    assert.equal(formatted.time, '12:00');
   });
 });

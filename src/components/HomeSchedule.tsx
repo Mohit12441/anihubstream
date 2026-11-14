@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, CheckCircle2, Clock, Play } from 'lucide-react';
 import { Art } from './Art';
 import { cleanAnimeTitle, DAYS } from '../data/model';
-import { convertSlotTimezone, getEpisodeReleaseStatus } from '../lib/scheduleTime';
+import { formatScheduleEntry, getEpisodeReleaseStatus } from '../lib/scheduleTime';
 import { useCatalogue } from '../state/catalogue';
 import { soundFx } from '../lib/soundFx';
 import '../styles/home-schedule.css';
@@ -34,22 +34,13 @@ export function HomeSchedule() {
     setSelectedDay(todayDay);
   }, [todayDay]);
 
-  // Convert timezone to local time and filter by selected day
+  // Convert timezone to local time and filter by selected day and audio format
   const dayEntries = useMemo(() => {
     return allEntries
-      .map((e) => {
-        const converted = convertSlotTimezone(e, true);
-        return {
-          ...e,
-          day: converted.day,
-          dayLabel: converted.dayLabel,
-          time: converted.time,
-          date: converted.date,
-        };
-      })
+      .map((e) => formatScheduleEntry(e, true, audio))
       .filter((e) => e.day === selectedDay)
       .sort((a, b) => a.time.localeCompare(b.time));
-  }, [allEntries, selectedDay]);
+  }, [allEntries, selectedDay, audio]);
 
   if (!allEntries.length) return null;
 
@@ -132,13 +123,31 @@ export function HomeSchedule() {
             const anime = entry.anime;
             const cleanTitle = cleanAnimeTitle(anime.title);
             const status = getEpisodeReleaseStatus(entry.day, entry.time, todayDay, now, true);
-            const isReleased = status.type === 'released';
-            const epNum = entry.episode || 1;
+
+            const nextEp = entry.episode && entry.episode > 0
+              ? entry.episode
+              : (anime.schedule?.episode && anime.schedule.episode > 0
+                ? anime.schedule.episode
+                : null);
+
+            const isReleased = status.type === 'released' || (nextEp !== null && (anime.episodeCount ?? 0) >= nextEp);
+
+            const targetEp = isReleased
+              ? (nextEp ?? (anime.episodeCount && anime.episodeCount > 0 ? anime.episodeCount : 1))
+              : (nextEp && nextEp > 1
+                ? nextEp - 1
+                : (anime.episodeCount && anime.episodeCount > 0 ? anime.episodeCount : 1));
+
+            const hasDub = Boolean(entry.sched_dub_at || entry.dubAt || anime.sched_dub_at || anime.schedule?.dubAt);
+            const toWatch = `/watch/${anime.id}/${targetEp}`;
+            const watchTarget = audio === 'dub' && hasDub ? `${toWatch}?audio=dub` : toWatch;
+            const destination = isReleased ? watchTarget : `/anime/${anime.id}`;
+            const epDisplay = isReleased ? targetEp : (nextEp ?? targetEp);
 
             return (
               <article key={anime.id} className="home-sched-card">
                 <Link
-                  to={isReleased ? `/watch/${anime.id}/${epNum}` : `/anime/${anime.id}`}
+                  to={destination}
                   className="home-sched-card__media-wrap"
                 >
                   <Art
@@ -159,12 +168,17 @@ export function HomeSchedule() {
                       <Clock size={12} aria-hidden="true" />
                       {entry.time}
                     </span>
-                    <span className="home-sched-card__ep">EP {epNum}</span>
+                    <span className="home-sched-card__ep">EP {epDisplay}</span>
                     <span className="home-sched-card__format">{anime.kind || 'TV'}</span>
+                    {audio === 'dub' && !hasDub && (
+                      <span className="home-sched-card__format" style={{ opacity: 0.75, color: '#f59e0b' }}>
+                        SUB ONLY
+                      </span>
+                    )}
                   </div>
 
                   <h3 className="home-sched-card__title">
-                    <Link to={isReleased ? `/watch/${anime.id}/${epNum}` : `/anime/${anime.id}`}>
+                    <Link to={destination}>
                       {cleanTitle}
                     </Link>
                   </h3>
@@ -173,16 +187,16 @@ export function HomeSchedule() {
                     {isReleased ? (
                       <span className="home-sched-card__status home-sched-card__status--released">
                         <CheckCircle2 size={12} aria-hidden="true" />
-                        Aired Today
+                        {selectedDay === todayDay ? 'Aired Today' : 'Released'}
                       </span>
                     ) : (
                       <span className="home-sched-card__status home-sched-card__status--countdown">
-                        {status.countdown ? `Airing in ${status.countdown}` : 'Coming Today'}
+                        {status.countdown ? `Airing in ${status.countdown}` : (selectedDay === todayDay ? 'Coming Today' : 'Upcoming')}
                       </span>
                     )}
 
                     <Link
-                      to={isReleased ? `/watch/${anime.id}/${epNum}` : `/anime/${anime.id}`}
+                      to={destination}
                       className="home-sched-card__btn"
                     >
                       {isReleased ? 'Watch' : 'Details'}
