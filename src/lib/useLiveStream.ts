@@ -390,6 +390,7 @@ export function useLiveStream(o: Options) {
           enableWorker: true,
           lowLatencyMode: true,
           startLevel: -1,
+          strictMode: false,
           loader: BaseLoaderClass,
           maxBufferLength: 30,
           maxMaxBufferLength: 60,
@@ -447,6 +448,7 @@ export function useLiveStream(o: Options) {
         /* 'ready' is set from the video's own loadedmetadata (real media data
            appended) — a parsed manifest alone is not playback. */
         hls.on(HlsCtor.Events.ERROR, (_evt, data) => {
+          console.warn('[HLS Event Error]', data.details, data.type, 'fatal:', data.fatal, data);
           if (cancelled || !data.fatal) return;
           if ((data as any).response?.code === 403) {
             // Expired token (e.g. Settlar): trigger fresh re-resolve

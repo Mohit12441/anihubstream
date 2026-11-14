@@ -78,6 +78,9 @@ export const bridgeUrl = (path: string) => {
   if (path.startsWith('http://') || path.startsWith('https://')) {
     return path;
   }
+  if (path.startsWith('/api/')) {
+    return path;
+  }
   const base = activeBase ?? (ENV_BASE || candidateBases()[0]);
   return `${base}${path.startsWith('/') ? path : `/${path}`}`;
 };
