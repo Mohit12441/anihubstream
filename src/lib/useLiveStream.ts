@@ -386,12 +386,25 @@ export function useLiveStream(o: Options) {
 
         const BaseLoaderClass = (FetchLoader || HlsCtor.DefaultConfig.loader) as any;
 
+        class CustomFragLoader extends BaseLoaderClass {
+          constructor(...args: any[]) {
+            super(...args);
+          }
+          load(context: any, config: any, callbacks: any) {
+            if (context?.url && (context.url.includes('.gif') || context.url.includes('.mp4') || context.url.includes('.png') || context.url.includes('.jpg'))) {
+              context.responseType = 'arraybuffer';
+            }
+            super.load(context, config, callbacks);
+          }
+        }
+
         const hlsConfig: any = {
           enableWorker: true,
           lowLatencyMode: true,
           startLevel: -1,
           strictMode: false,
           loader: BaseLoaderClass,
+          fLoader: CustomFragLoader,
           maxBufferLength: 30,
           maxMaxBufferLength: 60,
           backBufferLength: 30,
@@ -401,9 +414,11 @@ export function useLiveStream(o: Options) {
           nudgeOffset: 0.1,
           nudgeMaxRetry: 5,
           manifestLoadingTimeOut: 10000,
+          manifestLoadingMaxRetry: 6,
           levelLoadingTimeOut: 10000,
+          levelLoadingMaxRetry: 6,
           fragLoadingTimeOut: 15000,
-          fragLoadingMaxRetry: 4,
+          fragLoadingMaxRetry: 6,
           fragLoadingRetryDelay: 500,
           testBandwidth: true,
           xhrSetup: (xhr: XMLHttpRequest) => {
@@ -412,11 +427,14 @@ export function useLiveStream(o: Options) {
         };
 
         if (o.enableP2P && p2p) {
-          class P2PFragLoader extends BaseLoaderClass {
+          class P2PFragLoader extends CustomFragLoader {
             constructor(cfg: any) {
               super(cfg);
               const defaultLoad = this.load.bind(this);
               this.load = (ctx: any, c: any, cb: any) => {
+                if (ctx?.url && (ctx.url.includes('.gif') || ctx.url.includes('.mp4') || ctx.url.includes('.png') || ctx.url.includes('.jpg'))) {
+                  ctx.responseType = 'arraybuffer';
+                }
                 p2p!
                   .loadSegment(
                     ctx.url,
