@@ -122,7 +122,8 @@ export function HomeSchedule() {
           {dayEntries.map((entry) => {
             const anime = entry.anime;
             const cleanTitle = cleanAnimeTitle(anime.title);
-            const status = getEpisodeReleaseStatus(entry.day, entry.time, todayDay, now, true);
+            const targetTs = audio === 'dub' ? (entry.sched_dub_at ?? entry.dubAt) : (entry.sched_sub_at ?? entry.subAt);
+            const status = getEpisodeReleaseStatus(entry.day, entry.time, todayDay, now, true, entry.date, targetTs);
 
             const nextEp = entry.episode && entry.episode > 0
               ? entry.episode
@@ -130,7 +131,7 @@ export function HomeSchedule() {
                 ? anime.schedule.episode
                 : null);
 
-            const isReleased = status.type === 'released' || (nextEp !== null && (anime.episodeCount ?? 0) >= nextEp);
+            const isReleased = status.type === 'released';
 
             const targetEp = isReleased
               ? (nextEp ?? (anime.episodeCount && anime.episodeCount > 0 ? anime.episodeCount : 1))

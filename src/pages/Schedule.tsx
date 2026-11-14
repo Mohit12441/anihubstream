@@ -5,7 +5,7 @@ import { Embers } from '../components/Embers';
 import { ScheduleList } from '../components/ScheduleList';
 import { artUrl, currentSeasonKey } from '../data/model';
 import type { SeasonKey } from '../data/model';
-import { formatScheduleEntry, getUserTimezoneLabel } from '../lib/scheduleTime';
+import { formatScheduleEntry, getEpisodeReleaseStatus, getUserTimezoneLabel } from '../lib/scheduleTime';
 import { useSEO } from '../lib/useSEO';
 import { useCatalogue } from '../state/catalogue';
 import '../styles/pages.css';
@@ -73,48 +73,42 @@ export function Schedule() {
     ? (now.getDay() === 0 ? 7 : now.getDay())
     : (now.getUTCDay() === 0 ? 7 : now.getUTCDay());
 
-  const curHour = useLocalTime ? now.getHours() : now.getUTCHours();
-  const curMin = useLocalTime ? now.getMinutes() : now.getUTCMinutes();
-  const curTotal = curHour * 60 + curMin;
-
   const entries = useMemo(() => {
     return convertedAll
       .filter((e) => {
         if (releaseFilter === 'today') {
           return e.day === todayDay;
         }
+        const targetTs = scheduleType === 'dub' ? (e.sched_dub_at ?? e.dubAt) : (e.sched_sub_at ?? e.subAt);
+        const status = getEpisodeReleaseStatus(e.day, e.time, todayDay, now, useLocalTime, e.date, targetTs);
         if (releaseFilter === 'upcoming') {
-          const [hStr = '0', mStr = '0'] = e.time.split(':');
-          const slotTotal = parseInt(hStr, 10) * 60 + parseInt(mStr, 10);
-          return e.day > todayDay || (e.day === todayDay && slotTotal > curTotal);
+          return status.type === 'upcoming' || status.type === 'countdown';
         }
         if (releaseFilter === 'released') {
-          const [hStr = '0', mStr = '0'] = e.time.split(':');
-          const slotTotal = parseInt(hStr, 10) * 60 + parseInt(mStr, 10);
-          return e.day < todayDay || (e.day === todayDay && slotTotal <= curTotal);
+          return status.type === 'released';
         }
         return day === null ? true : e.day === day;
       })
       .sort((a, b) => a.day - b.day || a.time.localeCompare(b.time));
-  }, [convertedAll, day, releaseFilter, todayDay, curTotal]);
+  }, [convertedAll, day, releaseFilter, todayDay, now, useLocalTime, scheduleType]);
 
   const todayCount = convertedAll.filter((e) => e.day === todayDay).length;
 
   const upcomingCount = useMemo(() => {
     return convertedAll.filter((e) => {
-      const [hStr = '0', mStr = '0'] = e.time.split(':');
-      const slotTotal = parseInt(hStr, 10) * 60 + parseInt(mStr, 10);
-      return e.day > todayDay || (e.day === todayDay && slotTotal > curTotal);
+      const targetTs = scheduleType === 'dub' ? (e.sched_dub_at ?? e.dubAt) : (e.sched_sub_at ?? e.subAt);
+      const status = getEpisodeReleaseStatus(e.day, e.time, todayDay, now, useLocalTime, e.date, targetTs);
+      return status.type === 'upcoming' || status.type === 'countdown';
     }).length;
-  }, [convertedAll, todayDay, curTotal]);
+  }, [convertedAll, todayDay, now, useLocalTime, scheduleType]);
 
   const releasedCount = useMemo(() => {
     return convertedAll.filter((e) => {
-      const [hStr = '0', mStr = '0'] = e.time.split(':');
-      const slotTotal = parseInt(hStr, 10) * 60 + parseInt(mStr, 10);
-      return e.day < todayDay || (e.day === todayDay && slotTotal <= curTotal);
+      const targetTs = scheduleType === 'dub' ? (e.sched_dub_at ?? e.dubAt) : (e.sched_sub_at ?? e.subAt);
+      const status = getEpisodeReleaseStatus(e.day, e.time, todayDay, now, useLocalTime, e.date, targetTs);
+      return status.type === 'released';
     }).length;
-  }, [convertedAll, todayDay, curTotal]);
+  }, [convertedAll, todayDay, now, useLocalTime, scheduleType]);
 
   return (
     <div className="page schedule">

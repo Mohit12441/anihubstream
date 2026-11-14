@@ -129,8 +129,8 @@ test('ScheduleList differentiates between released episodes and upcoming countdo
   const listSrc = fs.readFileSync(path.resolve(ROOT, 'src/components/ScheduleList.tsx'), 'utf8');
 
   assert.ok(
-    listSrc.includes('const isReleased = status.type === \'released\' || (nextEp !== null && (e.anime.episodeCount ?? 0) >= nextEp);'),
-    'ScheduleList must determine release status by status.type or database episodeCount'
+    listSrc.includes("const isReleased = status.type === 'released';"),
+    'ScheduleList must determine release status by status.type'
   );
   assert.ok(
     listSrc.includes('nextEp && nextEp > 1'),

@@ -87,7 +87,8 @@ export function ScheduleList({ entries, highlightId, todayDay, useLocalTime = tr
     <ol className="tl">
       {entries.map((e, idx) => {
         const cleanTitle = cleanAnimeTitle(e.anime.title);
-        const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now, useLocalTime);
+        const targetTs = audio === 'dub' ? (e.sched_dub_at ?? e.dubAt) : (e.sched_sub_at ?? e.subAt);
+        const status = getEpisodeReleaseStatus(e.day, e.time, effectiveTodayDay, now, useLocalTime, e.date, targetTs);
         const isToday = e.day === effectiveTodayDay;
 
         const nextEp = e.episode && e.episode > 0
@@ -96,7 +97,7 @@ export function ScheduleList({ entries, highlightId, todayDay, useLocalTime = tr
             ? e.anime.schedule.episode
             : null);
 
-        const isReleased = status.type === 'released' || (nextEp !== null && (e.anime.episodeCount ?? 0) >= nextEp);
+        const isReleased = status.type === 'released';
 
         const targetEp = isReleased
           ? (nextEp ?? (e.anime.episodeCount && e.anime.episodeCount > 0 ? e.anime.episodeCount : 1))

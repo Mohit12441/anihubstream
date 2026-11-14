@@ -144,16 +144,91 @@ export interface EpisodeReleaseStatus {
   countdown?: string;
 }
 
+/**
+ * Parses a schedule date string (e.g. 'Nov 16', 'Oct 14') and time string into a Date.
+ */
+export function parseScheduleDate(
+  dateStr?: string,
+  timeStr = '00:00',
+  refDate: Date = new Date(),
+  useLocal = true,
+): Date | null {
+  if (!dateStr) return null;
+  const parts = dateStr.trim().split(/\s+/);
+  if (parts.length < 2) return null;
+  const monthIdx = MONTH_NAMES.indexOf(parts[0]);
+  const dayNum = Number.parseInt(parts[1], 10);
+  if (monthIdx === -1 || isNaN(dayNum)) return null;
+
+  const [hStr = '0', mStr = '0'] = (timeStr || '00:00').split(':');
+  const h = Number.parseInt(hStr, 10) || 0;
+  const m = Number.parseInt(mStr, 10) || 0;
+
+  const refYear = useLocal ? refDate.getFullYear() : refDate.getUTCFullYear();
+  let year = refYear;
+  const refMonth = useLocal ? refDate.getMonth() : refDate.getUTCMonth();
+  if (refMonth === 11 && monthIdx === 0) {
+    year += 1;
+  } else if (refMonth === 0 && monthIdx === 11) {
+    year -= 1;
+  }
+
+  return useLocal
+    ? new Date(year, monthIdx, dayNum, h, m, 0, 0)
+    : new Date(Date.UTC(year, monthIdx, dayNum, h, m, 0, 0));
+}
+
 export function getEpisodeReleaseStatus(
   day: number,
   timeStr: string,
   todayDay: number,
   now: Date = new Date(),
   useLocalTime = true,
+  dateStr?: string,
+  targetTimestamp?: number | null,
 ): EpisodeReleaseStatus {
+  let targetMs: number | null = null;
+  if (targetTimestamp != null && targetTimestamp > 0) {
+    targetMs = targetTimestamp < 1e11 ? targetTimestamp * 1000 : targetTimestamp;
+  }
+
+  if (targetMs == null && dateStr) {
+    const parsed = parseScheduleDate(dateStr, timeStr, now, useLocalTime);
+    if (parsed) {
+      targetMs = parsed.getTime();
+    }
+  }
+
+  if (targetMs != null && !isNaN(targetMs)) {
+    const diffMs = targetMs - now.getTime();
+    if (diffMs <= 0) {
+      return {
+        type: 'released',
+        label: 'Episode Released',
+      };
+    }
+
+    const diffMins = Math.floor(diffMs / 60000);
+    if (diffMins < 1440 && (day === todayDay || diffMs < 86400000)) {
+      const hours = Math.floor(diffMins / 60);
+      const mins = diffMins % 60;
+      const countdown = hours > 0 ? `${hours}h ${mins}m` : `${mins}m`;
+      return {
+        type: 'countdown',
+        label: `Airing in ${countdown}`,
+        countdown,
+      };
+    }
+
+    return {
+      type: 'upcoming',
+      label: 'Coming Soon',
+    };
+  }
+
   const [hStr = '0', mStr = '0'] = (timeStr || '00:00').split(':');
-  const slotHour = parseInt(hStr, 10);
-  const slotMin = parseInt(mStr, 10);
+  const slotHour = parseInt(hStr, 10) || 0;
+  const slotMin = parseInt(mStr, 10) || 0;
 
   if (day === todayDay) {
     const curHour = useLocalTime ? now.getHours() : now.getUTCHours();

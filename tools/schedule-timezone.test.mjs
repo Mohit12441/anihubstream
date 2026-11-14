@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { convertSlotTimezone, formatScheduleEntry, getUserTimezoneLabel } from '../src/lib/scheduleTime.ts';
+import { convertSlotTimezone, formatScheduleEntry, getEpisodeReleaseStatus, getUserTimezoneLabel, parseScheduleDate } from '../src/lib/scheduleTime.ts';
 
 describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
   it('converts Sunday night slot into Monday morning slot in positive timezone (e.g. JST UTC+9)', () => {
@@ -151,5 +151,56 @@ describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
     const formatted = formatScheduleEntry(entry, false, 'dub');
     assert.equal(formatted.day, 3);
     assert.equal(formatted.time, '12:00');
+  });
+
+  it('parseScheduleDate correctly resolves calendar date strings across months', () => {
+    const ref = new Date('2026-11-14T12:00:00Z');
+    const d1 = parseScheduleDate('Nov 16', '07:30', ref, false);
+    assert.ok(d1);
+    assert.equal(d1.getUTCFullYear(), 2026);
+    assert.equal(d1.getUTCMonth(), 10); // Nov
+    assert.equal(d1.getUTCDate(), 16);
+    assert.equal(d1.getUTCHours(), 7);
+    assert.equal(d1.getUTCMinutes(), 30);
+
+    const d2 = parseScheduleDate('Jan 02', '18:00', new Date('2026-12-30T10:00:00Z'), false);
+    assert.ok(d2);
+    assert.equal(d2.getUTCFullYear(), 2027, 'Should roll to next year if reference is December and slot is January');
+  });
+
+  it('getEpisodeReleaseStatus marks upcoming Monday broadcast as upcoming when viewed on Saturday', () => {
+    // Saturday Nov 14, 2026 at 12:49:00 UTC (todayDay = 6)
+    const mockSaturday = new Date('2026-11-14T12:49:00Z');
+
+    // Renegade Immortal: Monday Nov 16 at 07:30 (day 1)
+    const mondaySlot = getEpisodeReleaseStatus(1, '07:30', 6, mockSaturday, false, 'Nov 16');
+    assert.equal(mondaySlot.type, 'upcoming', 'Monday Nov 16 slot must be upcoming on Saturday Nov 14');
+    assert.equal(mondaySlot.label, 'Coming Soon');
+
+    // Tuesday Nov 17 at 18:00 (day 2)
+    const tuesdaySlot = getEpisodeReleaseStatus(2, '18:00', 6, mockSaturday, false, 'Nov 17');
+    assert.equal(tuesdaySlot.type, 'upcoming');
+  });
+
+  it('getEpisodeReleaseStatus marks past Friday broadcast as released when viewed on Saturday', () => {
+    const mockSaturday = new Date('2026-11-14T12:49:00Z');
+
+    // Friday Nov 13 at 18:00 (day 5)
+    const fridaySlot = getEpisodeReleaseStatus(5, '18:00', 6, mockSaturday, false, 'Nov 13');
+    assert.equal(fridaySlot.type, 'released');
+    assert.equal(fridaySlot.label, 'Episode Released');
+  });
+
+  it('getEpisodeReleaseStatus handles same-day countdown and release', () => {
+    const mockSaturday = new Date('2026-11-14T12:00:00Z');
+
+    // Later today: 14:30 (2h 30m away)
+    const futureToday = getEpisodeReleaseStatus(6, '14:30', 6, mockSaturday, false, 'Nov 14');
+    assert.equal(futureToday.type, 'countdown');
+    assert.equal(futureToday.countdown, '2h 30m');
+
+    // Earlier today: 10:00 (already aired)
+    const pastToday = getEpisodeReleaseStatus(6, '10:00', 6, mockSaturday, false, 'Nov 14');
+    assert.equal(pastToday.type, 'released');
   });
 });
