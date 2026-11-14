@@ -92,9 +92,10 @@ export function AnimeDetail() {
     }>();
 
     for (const s of servers) {
+      if (s.id?.startsWith('anipm:settlar')) continue;
       const provKey = (s.provider || (s.id?.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
       const existing = map.get(provKey);
-      const isUnavailable = s.status === 'unavailable' || (provKey === 'anipm' && (!s.streamUrl || s.status === 'unavailable'));
+      const isUnavailable = s.status === 'unavailable';
       const hasDub = Boolean(s.id?.includes('-dub') || s.audio === 'dub');
 
       if (!existing) {
@@ -102,7 +103,7 @@ export function AnimeDetail() {
           id: provKey,
           name: provKey === 'anikoto' ? 'AniKoto' : provKey === 'hianime' ? 'HiAnime' : provKey === 'aniwatch' ? 'AniWatch' : provKey === 'anipm' ? 'AniPM' : 'P2P Swarm',
           status: isUnavailable ? 'unavailable' : 'ready',
-          unavailableReason: s.unavailableReason || (provKey === 'anipm' ? 'Cloudflare WAF (Requires VPS Bridge)' : undefined),
+          unavailableReason: s.unavailableReason,
           mirrorCount: isUnavailable ? 0 : 1,
           hasDub,
         });

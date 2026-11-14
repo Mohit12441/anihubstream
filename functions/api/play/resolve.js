@@ -2,6 +2,7 @@
 import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, ok, withEdgeCache } from '../_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
+import { resolveAniPmBetaDirect } from '../_anipm.js';
 
 const BRIDGE_TIMEOUT_MS = 6_000;
 
@@ -131,13 +132,31 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         if (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta')) {
+          const targetAnilist = resolvedAnilistId || meta?.anilist_id;
+          if (targetAnilist) {
+            const betaRes = await resolveAniPmBetaDirect({ anilistId: targetAnilist, ep });
+            if (betaRes?.streamUrl) {
+              return ok({
+                server: {
+                  id: 'anipm:beta',
+                  provider: 'anipm',
+                  name: 'AniPM · Beta Master',
+                  status: 'ready',
+                  streamUrl: betaRes.streamUrl,
+                  audioTracks: [],
+                  subtitles: [],
+                  quality: '1080p',
+                }
+              });
+            }
+          }
           return ok({
             server: {
               id: 'anipm:beta',
               provider: 'anipm',
               name: 'AniPM · Beta Master',
               status: 'unavailable',
-              unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
+              unavailableReason: 'Could not resolve AniPM Beta stream for this episode.',
               streamUrl: null,
               audioTracks: [],
               subtitles: [],

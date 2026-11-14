@@ -2,6 +2,7 @@
 import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, withEdgeCache } from './_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
+import { resolveAniPmBetaDirect } from './_anipm.js';
 
 const BRIDGE_TIMEOUT_MS = 2_000;
 const ANISKIP_TIMEOUT_MS = 500;
@@ -407,41 +408,17 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   }
 
   if (anilistId || resolvedTitle) {
-    servers.push(
-      {
-        id: 'anipm:beta',
-        provider: 'anipm',
-        name: 'AniPM · Beta Master',
-        status: 'unavailable',
-        unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
-        streamUrl: null,
-        audioTracks: [],
-        subtitles: [],
-        quality: '1080p',
-      },
-      {
-        id: 'anipm:settlar',
-        name: 'AniPM · Settlar HD (16 Subs)',
-        provider: 'anipm',
-        status: 'unavailable',
-        unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
-        streamUrl: null,
-        audioTracks: [],
-        subtitles: [],
-        quality: '1080p',
-      },
-      {
-        id: 'anipm:settlar-dub',
-        name: 'AniPM · Settlar HD (DUB)',
-        provider: 'anipm',
-        status: 'unavailable',
-        unavailableReason: 'Cloudflare WAF blocks browser direct play (Requires VPS Bridge).',
-        streamUrl: null,
-        audioTracks: [],
-        subtitles: [],
-        quality: '1080p',
-      }
-    );
+    servers.push({
+      id: 'anipm:beta',
+      provider: 'anipm',
+      name: 'AniPM · Beta Master',
+      status: 'ready',
+      unavailableReason: null,
+      streamUrl: null,
+      audioTracks: [],
+      subtitles: [],
+      quality: '1080p',
+    });
   }
 
   servers.push(
@@ -541,7 +518,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       anikoto: { status: 'healthy', latencyMs: 85 },
       hianime: { status: 'healthy', latencyMs: 140 },
       aniwatch: { status: 'healthy', latencyMs: 210 },
-      anipm: { status: 'offline', latencyMs: 0 },
+      anipm: { status: 'healthy', latencyMs: 70 },
       torrent: { status: 'healthy', latencyMs: 45, peers: 12 },
     };
 
@@ -582,13 +559,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
-      { id: 'anipm', name: 'AniPM', available: false, status: 'offline', unavailableReason: 'Cloudflare WAF (Requires VPS Bridge)', latencyMs: 0 },
+      { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || { status: 'healthy', latencyMs: 70 }) },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
     // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch'].filter((p) => availableSlugs[p]);
+      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm'].filter((p) => availableSlugs[p]);
       if (candidates.length > 0) {
         candidates.sort((a, b) => {
           const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
@@ -617,6 +594,52 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     if (!resolvedTitle) {
       throw new HttpError(400, 'bad_request', 'Could not determine anime title from id or title query parameter');
+    }
+
+
+    const resolveUrl = (extra) => {
+      const p = new URLSearchParams({ anime_id: id, ep: String(ep), ...extra });
+      return `/api/play/resolve?${p}`;
+    };
+
+    const defaultServers = buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle });
+
+    // FAST ROUTE FOR ANIPM: Never call stream bridge, resolve directly in Edge Worker!
+    if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
+      const targetAnilist = resolvedAnilistId || animeRow?.anilist_id;
+      if (targetAnilist) {
+        const [betaRes, aniskipData] = await Promise.all([
+          resolveAniPmBetaDirect({ anilistId: targetAnilist, ep }),
+          resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id).catch(() => null),
+        ]);
+        if (betaRes?.streamUrl) {
+          const primaryServer = {
+            id: 'anipm:beta',
+            name: 'AniPM · Beta Master',
+            provider: 'anipm',
+            status: 'ready',
+            streamUrl: betaRes.streamUrl,
+            referrerPolicy: 'no-referrer',
+            type: 'hls',
+            quality: '1080p',
+            audio,
+            audioTracks: [],
+            subtitles: [],
+          };
+          const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== 'anipm:beta')];
+          return ok({
+            server: primaryServer,
+            servers: allServers,
+            allServers,
+            availableProviders: getAvailableProvidersList(),
+            subtitles: [],
+            audioTracks: [],
+            audio,
+            skip: aniskipData,
+            thumbnails: null,
+          });
+        }
+      }
     }
 
     // Determine Stream Bridge base (fallback to local bridge on 8795)
@@ -658,7 +681,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
         try {
           let direct = null;
-          if (requested === 'hianime') {
+          if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
+            const targetAnilist = resolvedAnilistId || animeRow?.anilist_id;
+            if (targetAnilist) {
+              const betaRes = await resolveAniPmBetaDirect({ anilistId: targetAnilist, ep });
+              if (betaRes?.streamUrl) {
+                direct = betaRes;
+              }
+            }
+          }
+          if (!direct && requested === 'hianime') {
             const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
             const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
             if (zokoRes?.masterUrl) {
@@ -685,7 +717,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
       })(),
       (async () => {
-        if (!bridgeBase) return null;
+        if (!bridgeBase || requested === 'anipm') return null;
         try {
           const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
           resolveBridgeUrl.searchParams.set('title', resolvedTitle);
@@ -716,12 +748,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       ).bind(id, bridgeRes.provider, bridgeRes.slug).run?.()?.catch?.(() => {});
     }
 
-    const resolveUrl = (extra) => {
-      const p = new URLSearchParams({ anime_id: id, ep: String(ep), ...extra });
-      return `/api/play/resolve?${p}`;
-    };
-
-    const defaultServers = buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle });
 
     // If stream bridge is cold or external to Cloudflare edge, check if Direct Edge Extractor resolved
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {

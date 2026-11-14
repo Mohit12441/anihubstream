@@ -61,9 +61,7 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'anipm:beta', name: 'AniPM · Beta Master', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'unavailable', unavailableReason: 'Cloudflare WAF (Requires VPS Bridge)', streamUrl: '', type: 'hls' },
-  { id: 'anipm:settlar', name: 'AniPM · Settlar HD', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'unavailable', unavailableReason: 'Cloudflare WAF (Requires VPS Bridge)', streamUrl: '', type: 'hls' },
-  { id: 'anipm:settlar-dub', name: 'AniPM · Settlar HD (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'unavailable', unavailableReason: 'Cloudflare WAF (Requires VPS Bridge)', streamUrl: '', type: 'hls' },
+  { id: 'anipm:beta', name: 'AniPM · Beta Master', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 

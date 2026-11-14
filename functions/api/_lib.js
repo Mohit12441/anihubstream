@@ -282,7 +282,7 @@ const isHashToken = (token) => {
 
 export const cleanDisplayTitle = (t) => {
   if (!t || typeof t !== 'string') return '';
-  return t
+  const cleaned = t
     .replace(/\s+([a-z0-9]{4,8})\s*([-–—]\s*(?:episode|ep|part|season|vol|volume)\b.*)$/i, (match, code, rest) => {
       if (isHashToken(code)) return ' ' + rest;
       return match;
@@ -292,6 +292,7 @@ export const cleanDisplayTitle = (t) => {
       return match;
     })
     .trim();
+  return cleaned || t.trim();
 };
 
 export const cardFromRow = (r) => ({
