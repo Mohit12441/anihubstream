@@ -170,17 +170,18 @@ footer {
 .site-nav {
   position: relative;
   background: rgba(255, 255, 255, 0.03);
-  padding: 4px 6px;
+  padding: 4px 5px;
   border-radius: var(--r-pill, 999px);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .site-nav a {
-  padding: 7px 14px;
+  padding: 6px clamp(8px, 0.8vw, 12px);
   border-radius: var(--r-pill, 999px);
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.01em;
+  white-space: nowrap;
   transition: all var(--dur-2, 0.2s) var(--ease, ease);
 }
 
