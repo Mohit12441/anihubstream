@@ -414,7 +414,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       name: 'AniPM · Beta',
       status: 'ready',
       unavailableReason: null,
-      streamUrl: null,
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
       audioTracks: [],
       subtitles: [],
       quality: '1080p',
@@ -606,12 +606,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     // FAST ROUTE FOR ANIPM: Never call stream bridge, resolve directly in Edge Worker!
     if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
-      const targetAnilist = resolvedAnilistId || animeRow?.anilist_id;
-      if (targetAnilist) {
-        const [betaRes, aniskipData] = await Promise.all([
-          resolveAniPmBetaDirect({ anilistId: targetAnilist, ep }),
-          resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id).catch(() => null),
-        ]);
+      const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 195604);
+      const [betaRes, aniskipData] = await Promise.all([
+        resolveAniPmBetaDirect({
+          anilistId: targetAnilist,
+          ep,
+          title: resolvedTitle || animeRow?.title,
+          slug: animeRow?.slug || animeRow?.id || id,
+        }),
+        resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id).catch(() => null),
+      ]);
         if (betaRes?.streamUrl) {
           const primaryServer = {
             id: 'anipm:beta',
@@ -682,12 +686,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         try {
           let direct = null;
           if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
-            const targetAnilist = resolvedAnilistId || animeRow?.anilist_id;
-            if (targetAnilist) {
-              const betaRes = await resolveAniPmBetaDirect({ anilistId: targetAnilist, ep });
-              if (betaRes?.streamUrl) {
-                direct = betaRes;
-              }
+            const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 195604);
+            const betaRes = await resolveAniPmBetaDirect({
+              anilistId: targetAnilist,
+              ep,
+              title: resolvedTitle || animeRow?.title,
+              slug: animeRow?.slug || animeRow?.id || id,
+            });
+            if (betaRes?.streamUrl) {
+              direct = betaRes;
             }
           }
           if (!direct && requested === 'hianime') {

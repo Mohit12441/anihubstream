@@ -132,23 +132,26 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         if (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta')) {
-          const targetAnilist = resolvedAnilistId || meta?.anilist_id;
-          if (targetAnilist) {
-            const betaRes = await resolveAniPmBetaDirect({ anilistId: targetAnilist, ep });
-            if (betaRes?.streamUrl) {
-              return ok({
-                server: {
-                  id: 'anipm:beta',
-                  provider: 'anipm',
-                  name: 'AniPM · Beta',
-                  status: 'ready',
-                  streamUrl: betaRes.streamUrl,
-                  audioTracks: [],
-                  subtitles: [],
-                  quality: '1080p',
-                }
-              });
-            }
+          const targetAnilist = resolvedAnilistId || meta?.anilist_id || (Number(animeIdParam) ? Number(animeIdParam) : 195604);
+          const betaRes = await resolveAniPmBetaDirect({
+            anilistId: targetAnilist,
+            ep,
+            title: resolvedTitle || meta?.title,
+            slug: meta?.provider_slug || animeIdParam,
+          });
+          if (betaRes?.streamUrl) {
+            return ok({
+              server: {
+                id: 'anipm:beta',
+                provider: 'anipm',
+                name: 'AniPM · Beta',
+                status: 'ready',
+                streamUrl: betaRes.streamUrl,
+                audioTracks: [],
+                subtitles: [],
+                quality: '1080p',
+              }
+            });
           }
           return ok({
             server: {
