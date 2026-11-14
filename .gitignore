@@ -33,6 +33,7 @@ scratch/
 .code-ranker/
 .firewall/
 anihub_tables_backup.sql
+anihubstream.com-audit/
 .gemini/
 .planning/
 .code-review-graph/

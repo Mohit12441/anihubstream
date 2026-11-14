@@ -75,12 +75,13 @@ export async function onRequest(context) {
     });
   }
 
-  // Static assets and api routes pass through untouched
+  // Static assets, api routes, and dedicated function routes pass through untouched
   if (
     path.startsWith('/api/') ||
     path === '/api' ||
     path.startsWith('/art/') ||
     path.startsWith('/assets/') ||
+    path.startsWith('/anime/') ||
     path.endsWith('.js') ||
     path.endsWith('.css') ||
     path.endsWith('.png') ||
@@ -176,7 +177,7 @@ export async function onRequest(context) {
 
         if (row) {
           const animeTitle = row.title || id;
-          const yearStr = row.year ? ` (${row.year})` : '';
+          const yearStr = row.year && !animeTitle.includes(`(${row.year})`) ? ` (${row.year})` : '';
           const cleanSynopsis = (row.synopsis || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
           desc = cleanSynopsis ? cleanSynopsis.slice(0, 150).trim() : `Watch ${animeTitle} free online in high definition on AniHubStream.`;
 
