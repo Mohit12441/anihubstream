@@ -45,11 +45,30 @@ const CANDIDATE_DEPTH = 30;
 
 /* The global npm shim (wrangler.cmd) goes through the shell, and this environment's
    ComSpec is not a usable cmd.exe, so call wrangler's JS entry with node directly. */
-const WRANGLER_JS =
-  process.env.ANIHUB_WRANGLER_JS ??
-  (existsSync(resolve(ROOT, 'node_modules/wrangler/bin/wrangler.js'))
-    ? resolve(ROOT, 'node_modules/wrangler/bin/wrangler.js')
-    : (process.env.APPDATA ? resolve(process.env.APPDATA, 'npm', 'node_modules', 'wrangler', 'bin', 'wrangler.js') : 'wrangler'));
+function findWranglerJs() {
+  if (process.env.ANIHUB_WRANGLER_JS && existsSync(process.env.ANIHUB_WRANGLER_JS)) {
+    return process.env.ANIHUB_WRANGLER_JS;
+  }
+  const rootBin = resolve(ROOT, 'node_modules/wrangler/bin/wrangler.js');
+  if (existsSync(rootBin)) return rootBin;
+
+  const appDataBin = process.env.APPDATA ? resolve(process.env.APPDATA, 'npm/node_modules/wrangler/bin/wrangler.js') : null;
+  if (appDataBin && existsSync(appDataBin)) return appDataBin;
+
+  const npxCacheDir = process.env.LOCALAPPDATA ? resolve(process.env.LOCALAPPDATA, 'npm-cache/_npx') : null;
+  if (npxCacheDir && existsSync(npxCacheDir)) {
+    try {
+      const subdirs = readdirSync(npxCacheDir);
+      for (const sub of subdirs) {
+        const candidate = resolve(npxCacheDir, sub, 'node_modules/wrangler/bin/wrangler.js');
+        if (existsSync(candidate)) return candidate;
+      }
+    } catch {}
+  }
+  return null;
+}
+
+const WRANGLER_JS = findWranglerJs();
 
 export function findSqlitePath() {
   const d1Dir = resolve(ROOT, '.wrangler/state/v3/d1/miniflare-D1DatabaseObject');
@@ -71,7 +90,7 @@ export function wrangler(args) {
     return execFileSync(process.execPath, [WRANGLER_JS, ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT });
   }
   const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
-  return execFileSync(npxCmd, ['wrangler', ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT });
+  return execFileSync(npxCmd, ['wrangler', ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT, shell: process.platform === 'win32' });
 }
 
 /* Every AniList POST this process makes, whichever module sent it. The hourly task has no pacing

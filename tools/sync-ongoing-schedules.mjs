@@ -5,7 +5,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import { seasonKey } from './season.mjs';
 import { d1All, d1First, d1Query } from '../cloud-sync/d1.mjs';
-import { findSqlitePath } from './discover-titles.mjs';
+import { findSqlitePath, wrangler } from './discover-titles.mjs';
 
 const isRemote = process.argv.includes('--remote');
 const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
@@ -145,9 +145,8 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
     `);
   } else {
     // Remote D1 mode fallback: fetch ongoing titles using wrangler CLI
-    const output = execFileSync(
-      process.platform === 'win32' ? 'npx.cmd' : 'npx',
-      ['wrangler', 'd1', 'execute', 'anihub', '--remote', '--json', '--command', `
+    const output = wrangler([
+      'd1', 'execute', 'anihub', '--remote', '--json', '--command', `
         SELECT DISTINCT a.id,
           a.sched_day,
           a.sched_day_label,
@@ -160,9 +159,8 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
         LEFT JOIN anime_id_map m ON a.id = m.anime_id
         WHERE a.status = 'Ongoing'
           AND COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) IS NOT NULL
-      `],
-      { encoding: 'utf8', windowsHide: true },
-    );
+      `,
+    ]);
     const parsed = JSON.parse(output);
     ongoingRows = parsed[0]?.results || [];
   }
@@ -287,11 +285,7 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
     const CHUNK_SQL = 50;
     for (let i = 0; i < remoteSqlStatements.length; i += CHUNK_SQL) {
       const batchSql = remoteSqlStatements.slice(i, i + CHUNK_SQL).join('\n');
-      execFileSync(
-        process.platform === 'win32' ? 'npx.cmd' : 'npx',
-        ['wrangler', 'd1', 'execute', 'anihub', '--remote', '--command', batchSql],
-        { stdio: 'ignore', windowsHide: true },
-      );
+      wrangler(['d1', 'execute', 'anihub', '--remote', '--command', batchSql]);
     }
   }
 
