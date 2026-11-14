@@ -412,9 +412,22 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       id: 'anipm:beta',
       provider: 'anipm',
       name: 'AniPM · Beta',
+      audio: 'sub',
       status: 'ready',
       unavailableReason: null,
       streamUrl: resolveUrl({ audio: 'sub', provider: 'anipm', server: 'beta' }),
+      audioTracks: [],
+      subtitles: [],
+      quality: '1080p',
+    });
+    servers.push({
+      id: 'anipm:beta-dub',
+      provider: 'anipm',
+      name: 'AniPM · Beta (DUB)',
+      audio: 'dub',
+      status: 'ready',
+      unavailableReason: null,
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'anipm', server: 'beta' }),
       audioTracks: [],
       subtitles: [],
       quality: '1080p',
@@ -605,8 +618,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const defaultServers = buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle });
 
     // FAST ROUTE FOR ANIPM: Never call stream bridge, resolve directly in Edge Worker!
-    if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta') {
+    if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta' || serverParam?.toLowerCase() === 'beta-dub') {
       const targetAnilist = resolvedAnilistId || animeRow?.anilist_id || (Number(id) ? Number(id) : 0);
+      const isDub = audio === 'dub' || serverParam?.toLowerCase().includes('dub');
+      const serverId = isDub ? 'anipm:beta-dub' : 'anipm:beta';
+      const serverName = isDub ? 'AniPM · Beta (DUB)' : 'AniPM · Beta';
       const [betaRes, aniskipData] = await Promise.all([
         resolveAniPmBetaDirect({
           anilistId: targetAnilist,
@@ -618,19 +634,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       ]);
         if (betaRes?.status === 'ready' && betaRes?.streamUrl) {
           const primaryServer = {
-            id: 'anipm:beta',
-            name: 'AniPM · Beta',
+            id: serverId,
+            name: serverName,
             provider: 'anipm',
             status: 'ready',
             streamUrl: betaRes.streamUrl,
             referrerPolicy: 'no-referrer',
             type: 'hls',
             quality: '1080p',
-            audio,
+            audio: isDub ? 'dub' : 'sub',
             audioTracks: betaRes.audioTracks || [],
             subtitles: betaRes.subtitles || [],
           };
-          const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== 'anipm:beta')];
+          const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== serverId)];
           return ok({
             server: primaryServer,
             servers: allServers,
@@ -638,7 +654,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             availableProviders: getAvailableProvidersList(),
             subtitles: betaRes.subtitles || [],
             audioTracks: betaRes.audioTracks || [],
-            audio,
+            audio: isDub ? 'dub' : 'sub',
             skip: aniskipData,
             thumbnails: null,
           });

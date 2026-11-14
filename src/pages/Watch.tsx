@@ -62,6 +62,7 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta', name: 'AniPM · Beta', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'anipm:beta-dub', name: 'AniPM · Beta (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 
@@ -232,7 +233,6 @@ export function Watch() {
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const srvParam = params.get('server');
     if (srvParam) return srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
-    if (targetProvider === 'anipm') return 'anipm:beta';
     return targetProvider
       ? serverIdFromProvider(targetProvider, prefs.audio)
       : (prefs.audio === 'dub' ? 'anikoto:HD-1-dub' : 'anikoto:HD-1');
@@ -282,11 +282,7 @@ export function Watch() {
     const targetKey = targetProvider.toLowerCase();
     const currentProv = (activeServerId.includes(':') ? activeServerId.split(':')[0] : '').toLowerCase();
     if (currentProv !== targetKey) {
-      if (targetKey === 'anipm') {
-        setActiveServerId('anipm:beta');
-      } else {
-        setActiveServerId(serverIdFromProvider(targetKey, prefs.audio));
-      }
+      setActiveServerId(serverIdFromProvider(targetKey, prefs.audio));
     }
   }, [targetProvider, prefs.audio]);
 

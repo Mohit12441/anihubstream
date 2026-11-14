@@ -131,8 +131,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           throw new HttpError(404, 'not_found', 'Anime not yet released');
         }
 
-        if (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta')) {
+        if (provider === 'anipm' && (!serverParam || serverParam.toLowerCase() === 'beta' || serverParam.toLowerCase() === 'beta-dub')) {
           const targetAnilist = resolvedAnilistId || meta?.anilist_id || (Number(animeIdParam) ? Number(animeIdParam) : 0);
+          const isDub = audio === 'dub' || serverParam?.toLowerCase().includes('dub');
+          const serverId = isDub ? 'anipm:beta-dub' : 'anipm:beta';
+          const serverName = isDub ? 'AniPM · Beta (DUB)' : 'AniPM · Beta';
           const betaRes = await resolveAniPmBetaDirect({
             anilistId: targetAnilist,
             ep,
@@ -142,11 +145,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (betaRes?.status === 'ready' && betaRes?.streamUrl) {
             return ok({
               server: {
-                id: 'anipm:beta',
+                id: serverId,
                 provider: 'anipm',
-                name: 'AniPM · Beta',
+                name: serverName,
                 status: 'ready',
                 streamUrl: betaRes.streamUrl,
+                audio: isDub ? 'dub' : 'sub',
                 audioTracks: betaRes.audioTracks || [],
                 subtitles: betaRes.subtitles || [],
                 quality: '1080p',
@@ -155,12 +159,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           }
           return ok({
             server: {
-              id: 'anipm:beta',
+              id: serverId,
               provider: 'anipm',
-              name: 'AniPM · Beta',
+              name: serverName,
               status: 'unavailable',
               unavailableReason: betaRes?.unavailableReason || 'Could not resolve AniPM Beta stream for this episode.',
               streamUrl: null,
+              audio: isDub ? 'dub' : 'sub',
               audioTracks: [],
               subtitles: [],
               quality: '1080p',

@@ -160,7 +160,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   if (norm === 'hianime') return isDub ? 'hianime:HD-1-dub' : 'hianime:HD-1';
   if (norm === 'anikoto') return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
   if (norm === 'aniwatch') return isDub ? 'aniwatch:HD-1-dub' : 'aniwatch:HD-1';
-  if (norm === 'anipm') return 'anipm:beta';
+  if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';
   return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;
 }
 
