@@ -15,7 +15,8 @@ on:
         default: 'pulse'
         type: string
 
-permissions: {}
+permissions:
+  contents: write
 
 concurrency:
   group: pulse-sync
@@ -48,4 +49,14 @@ jobs:
           else
             echo "Running 2-Hour Airing Pulse (Remote D1)..."
             node tools/pulse-airing.mjs --remote
+          fi
+
+      - name: Commit newly discovered sources
+        run: |
+          if [ -n "$(git status --porcelain tools/catalogue-sources.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add tools/catalogue-sources.json
+            git commit -m "chore(sync): record discovered anime sources [skip ci]"
+            git push origin master
           fi
