@@ -92,3 +92,11 @@
   text-overflow: ellipsis;
   max-width: 100%;
 }
+
+@media (max-width: 760px) {
+  .rec-shuffle-btn {
+    padding: 8px 14px;
+    font-size: 12px;
+    min-height: 36px;
+  }
+}

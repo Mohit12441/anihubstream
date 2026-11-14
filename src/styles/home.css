@@ -790,6 +790,8 @@ html[data-theme='light'] .hero__lede {
   overflow-x: auto;
   scrollbar-width: none;
   padding: 2px 0;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
 }
 
 .hero-slideshow__genre-list::-webkit-scrollbar {
@@ -919,6 +921,9 @@ html[data-theme='light'] .hero__lede {
   }
   .hero-slideshow__genre-label {
     display: none;
+  }
+  .hero-slideshow__genre-strip-inner {
+    padding: 8px 12px;
   }
 }
 

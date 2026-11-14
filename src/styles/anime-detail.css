@@ -97,6 +97,21 @@
   }
 }
 
+@media (max-width: 600px) {
+  .ad-hero {
+    padding: 1rem 0.75rem;
+    gap: 1.25rem;
+  }
+  .ad-action-btn {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  .ad-poster-wrap {
+    max-width: 240px;
+  }
+}
+
 /* Poster Column */
 .ad-poster-wrap {
   position: relative;

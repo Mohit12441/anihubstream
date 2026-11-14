@@ -170,3 +170,13 @@
 .cw-card__left {
   color: var(--text-3, rgba(255, 255, 255, 0.45));
 }
+
+@media (max-width: 760px) {
+  .cw-card {
+    flex: 0 0 clamp(200px, 62vw, 260px);
+  }
+  .cw-card__dismiss {
+    width: 32px;
+    height: 32px;
+  }
+}

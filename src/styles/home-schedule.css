@@ -312,4 +312,16 @@
   .home-schedule__day-name {
     font-size: 12px;
   }
+  .home-sched-card__btn {
+    min-height: 36px;
+    padding: 6px 14px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-schedule__audio-btn {
+    min-height: 32px;
+    padding: 5px 14px;
+  }
 }

@@ -1221,6 +1221,17 @@
     justify-content: space-between;
     width: 100%;
   }
+  .watch__tb-btn {
+    height: 38px;
+    min-width: 38px;
+  }
+  .watch__tb-ep-badge {
+    height: 38px;
+    padding: 0 12px;
+  }
+  .watch__tb-server-pill {
+    height: 38px;
+  }
   .watch__ep-overview {
     flex-direction: column;
   }
@@ -1238,6 +1249,16 @@
     display: block;
     font-size: 0.6em;
     margin-top: 4px;
+  }
+  .eps-drawer__sheet {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-width: 480px) {
+  .watch__tb-btn[title*="Cinema"],
+  .watch__tb-btn[aria-label*="Cinema"] {
+    display: none;
   }
 }
 
