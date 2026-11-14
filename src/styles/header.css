@@ -344,7 +344,14 @@ html[data-theme='light'] .wordmark__oni {
   display: none;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
+  .site-header__sound,
+  .site-header__motion {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1140px) {
   .site-nav {
     display: none;
   }
