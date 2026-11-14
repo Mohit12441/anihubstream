@@ -60,7 +60,6 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
     try {
       const cleanName = (title || slug)
         .replace(/^(?:anipm|anikoto|hianime|aniwatch):/i, '')
-        .replace(/-[a-z0-9]{4,8}$/i, '')
         .replace(/-(?:tv|ona|ova|movie|special)$/i, '')
         .replace(/[-_]+/g, ' ')
         .trim();
@@ -103,15 +102,31 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
 
   // Query AniPM Beta API for canonical slug & availability
   let betaMeta = null;
+  let notFound = false;
   try {
     const metaRes = await fetch(`https://ani.pm/api/anime/beta-server/${targetAnilist}`, {
       headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
       signal: AbortSignal.timeout(2500),
     });
-    if (metaRes.ok) {
+    if (metaRes.status === 404) {
+      notFound = true;
+    } else if (metaRes.ok) {
       betaMeta = await metaRes.json();
     }
   } catch {}
+
+  if (notFound) {
+    return {
+      id: 'anipm:beta',
+      provider: 'anipm',
+      name: 'AniPM · Beta',
+      status: 'unavailable',
+      unavailableReason: 'This anime is not hosted on AniPM Beta server.',
+      streamUrl: null,
+      audioTracks: [],
+      subtitles: [],
+    };
+  }
 
   if (betaMeta) {
     if (!betaMeta.available) {
@@ -172,24 +187,20 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
   }
 
   // Deterministic fallback if AniPM API timed out
-  let cleanSlug = '';
-  if (slug) {
+  let cleanSlug = KNOWN_SLUGS[targetAnilist] || '';
+  if (!cleanSlug && slug) {
     cleanSlug = String(slug)
       .replace(/^(?:anipm|anikoto|hianime|aniwatch):/i, '')
-      .replace(/-[a-z0-9]{4,8}$/i, '')
       .replace(/-(?:tv|ona|ova|movie|special)$/i, '')
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
   }
-  if ((!cleanSlug || /^\d+$/.test(cleanSlug)) && title) {
+  if (!cleanSlug && title) {
     cleanSlug = String(title)
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
-  }
-  if ((!cleanSlug || /^\d+$/.test(cleanSlug)) && KNOWN_SLUGS[targetAnilist]) {
-    cleanSlug = KNOWN_SLUGS[targetAnilist];
   }
 
   const masterSlug = cleanSlug ? `${targetAnilist}-${cleanSlug}` : String(targetAnilist);

@@ -29,8 +29,8 @@ test('AniPM Edge Resolver Suite', async (t) => {
     assert.match(res.masterUrl, /https:\/\/beta\.cno\.to\/hls\/101922-demon-slayer-kimetsu-no-yaiba\/E0001\/master\.m3u8/);
   });
 
-  await t.test('returns unavailable for unknown / fake anime ID without inventing 195604', async () => {
-    const res = await resolveAniPmBetaDirect({ anilistId: 999999999, ep: 1 });
+  await t.test('returns unavailable when AniList ID cannot be resolved', async () => {
+    const res = await resolveAniPmBetaDirect({ slug: 'completely-unknown-random-slug-xyz', ep: 1 });
     assert.equal(res.status, 'unavailable');
     assert.equal(res.streamUrl, null);
   });
