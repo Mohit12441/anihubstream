@@ -37,12 +37,15 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
-          if [ "${{ github.event.client_payload.target }}" = "all" ] || [ "${{ github.event.inputs.target }}" = "all" ]; then
-            echo "Running Airing Pulse + New Anime Discovery..."
+          TARGET="${{ github.event.client_payload.target || github.event.inputs.target }}"
+          if [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
+            echo "Running Airing Pulse + New Anime Discovery (Remote D1)..."
             node tools/pulse-airing.mjs --remote
-            node tools/discover-titles.mjs --limit=2 --force || true
+            node tools/discover-titles.mjs --limit=2 --force --remote || true
           else
-            echo "Running 2-Hour Airing Pulse..."
+            echo "Running 2-Hour Airing Pulse (Remote D1)..."
             node tools/pulse-airing.mjs --remote
           fi

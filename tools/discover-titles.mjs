@@ -265,11 +265,20 @@ export async function discover({ rows = null, limit = 2, force = false } = {}) {
     }
   }
 
-  const data = await anilist(
-    `query($n: Int){ Page(page: 1, perPage: $n){ media(sort: TRENDING_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } } }`,
-    { n: CANDIDATE_DEPTH },
-  );
-  const candidates = (data?.Page?.media ?? []).filter((m) => !anilistIds.has(m.id));
+  const query = `query($n: Int){
+    trending: Page(page: 1, perPage: $n){ media(sort: TRENDING_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } }
+    recent: Page(page: 1, perPage: $n){ media(sort: START_DATE_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } }
+  }`;
+  const data = await anilist(query, { n: 40 });
+  const rawList = [...(data?.trending?.media ?? []), ...(data?.recent?.media ?? [])];
+  const seenMedia = new Set();
+  const candidates = [];
+  for (const m of rawList) {
+    if (!seenMedia.has(m.id) && !anilistIds.has(m.id)) {
+      seenMedia.add(m.id);
+      candidates.push(m);
+    }
+  }
 
   const skipped = [];
   const added = [];
