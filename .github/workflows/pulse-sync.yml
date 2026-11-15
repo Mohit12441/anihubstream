@@ -5,6 +5,9 @@ name: pulse-sync
 # Uses ~30s execution time (billed as 1 minute). Consumes < 18% of monthly free GitHub Actions minutes.
 
 on:
+  schedule:
+    # Backup 2-hour pulse if Cloudflare Worker dispatcher is paused or token expires
+    - cron: '37 */2 * * *'
   repository_dispatch:
     types: [pulse, catalog-sync, anilist-sync]
   workflow_dispatch:
@@ -41,7 +44,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
-          TARGET="${{ github.event.client_payload.target || github.event.inputs.target }}"
+          TARGET="${{ github.event.client_payload.target || github.event.inputs.target || 'pulse' }}"
           if [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
             echo "Running Airing Pulse + New Anime Discovery (Remote D1)..."
             node tools/pulse-airing.mjs --remote
