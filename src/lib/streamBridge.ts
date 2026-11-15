@@ -466,7 +466,7 @@ export async function fetchVtt(path: string): Promise<VttFile | null> {
       let ref = 'https://megaplay.buzz/';
       try {
         const parsed = new URL(target);
-        if (parsed.hostname.includes('cno.to') || parsed.hostname.includes('beamcube.top')) {
+        if (parsed.hostname.includes('cno.to') || parsed.hostname.includes('beamcube.top') || parsed.hostname.includes('flashpod.top')) {
           isDirectNoReferrer = true;
         } else if (parsed.hostname.includes('zoko') || parsed.hostname.includes('animehot') || parsed.hostname.includes('dramahot')) {
           ref = 'https://zokoanime.video/';
@@ -487,7 +487,17 @@ export async function fetchVtt(path: string): Promise<VttFile | null> {
 
     const res = await fetch(target, fetchOpts);
     if (!res.ok) return null;
-    const text = await res.text();
+    let text = await res.text();
+    if (text.includes('#EXTM3U')) {
+      const match = text.match(/https?:\/\/[^\r\n]+\.vtt/i) || text.match(/^[^\r\n#]+\.vtt/m);
+      if (match) {
+        const vttTarget = match[0].startsWith('http') ? match[0] : new URL(match[0], target).href;
+        const vttRes = await fetch(vttTarget, { signal: AbortSignal.timeout(20_000), referrerPolicy: 'no-referrer' });
+        if (vttRes.ok) {
+          text = await vttRes.text();
+        }
+      }
+    }
     return { cues: parseVtt(text), chars: text.length };
   } catch {
     return null;

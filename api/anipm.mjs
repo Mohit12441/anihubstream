@@ -193,19 +193,22 @@ export async function resolveBeta({ anilistId, ep, slug = null }) {
         channels: t.channels,
         uri: t.uri,
       })),
-    subtitles: parsed.subtitles.map((t, i) => ({
-      id: i,
-      lang: t.lang,
-      language: t.lang,
-      label: t.label,
-      name: t.label,
-      group: t.group,
-      forced: t.forced,
-      default: t.default,
-      uri: t.uri,
-      url: t.uri ? proxied(t.uri, 'beta') : null,
-      proxyUrl: t.uri ? proxied(t.uri, 'beta') : null,
-    })),
+    subtitles: parsed.subtitles.map((t, i) => {
+      const subUrl = t.uri ? (t.uri.startsWith('http') ? t.uri : new URL(t.uri, masterUrl).href) : null;
+      return {
+        id: i,
+        lang: t.lang,
+        language: t.lang,
+        label: t.label,
+        name: t.label,
+        group: t.group,
+        forced: t.forced,
+        default: t.default,
+        uri: subUrl || t.uri,
+        url: subUrl || (t.uri ? proxied(t.uri, 'beta') : null),
+        proxyUrl: subUrl || (t.uri ? proxied(t.uri, 'beta') : null),
+      };
+    }),
     qualities: parsed.qualities.map((q) => ({ height: q.height, bandwidth: q.bandwidth, codecs: q.codecs })),
   };
 

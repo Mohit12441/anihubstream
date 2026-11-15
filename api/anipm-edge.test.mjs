@@ -23,10 +23,13 @@ test('AniPM Edge Resolver Suite', async (t) => {
     assert.match(res.masterUrl, /https:\/\/beta\.cno\.to\/hls\/113415-jujutsu-kaisen\/E0001\/master\.m3u8/);
   });
 
-  await t.test('resolves Demon Slayer correctly with exact AniPM slug', async () => {
+  await t.test('resolves Demon Slayer correctly with exact AniPM slug and valid subtitle URLs', async () => {
     const res = await resolveAniPmBetaDirect({ anilistId: 101922, ep: 1 });
     assert.equal(res.status, 'ready');
     assert.match(res.masterUrl, /https:\/\/beta\.cno\.to\/hls\/101922-demon-slayer-kimetsu-no-yaiba\/E0001\/master\.m3u8/);
+    assert.ok(Array.isArray(res.subtitles));
+    assert.ok(res.subtitles.length > 0);
+    assert.ok(res.subtitles[0].url.startsWith('https://flashpod.top/'));
   });
 
   await t.test('returns unavailable when AniList ID cannot be resolved', async () => {

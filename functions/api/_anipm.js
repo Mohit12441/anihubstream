@@ -165,11 +165,17 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
       label: lang.toUpperCase(),
       language: lang,
     }));
-    const subtitles = (betaMeta.subs || []).map((sub) => ({
-      id: sub,
-      label: sub.toUpperCase(),
-      language: sub,
-    }));
+    const subtitles = (betaMeta.subs || []).map((sub) => {
+      const code = String(sub).toLowerCase();
+      const vttUrl = `https://flashpod.top/hls/${masterSlug}/${paddedEp}/sub-${code}/sub.vtt`;
+      return {
+        id: code,
+        label: code.toUpperCase(),
+        language: code,
+        url: vttUrl,
+        proxyUrl: vttUrl,
+      };
+    });
 
     return {
       id: 'anipm:beta',
@@ -206,6 +212,17 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
   const masterSlug = cleanSlug ? `${targetAnilist}-${cleanSlug}` : String(targetAnilist);
   const masterUrl = `https://beta.cno.to/hls/${masterSlug}/${paddedEp}/master.m3u8`;
 
+  const fallbackSubs = ['eng'].map((code) => {
+    const vttUrl = `https://flashpod.top/hls/${masterSlug}/${paddedEp}/sub-${code}/sub.vtt`;
+    return {
+      id: code,
+      label: code.toUpperCase(),
+      language: code,
+      url: vttUrl,
+      proxyUrl: vttUrl,
+    };
+  });
+
   return {
     id: 'anipm:beta',
     provider: 'anipm',
@@ -217,6 +234,6 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
     referrerPolicy: 'no-referrer',
     quality: '1080p',
     audioTracks: [],
-    subtitles: [],
+    subtitles: fallbackSubs,
   };
 }
