@@ -25,16 +25,22 @@ export default {
   async scheduled(event, env, ctx) {
     const cron = event.cron;
     const cronId = `${event.scheduledTime || Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
-    const utcHour = new Date(event.scheduledTime || Date.now()).getUTCHours();
+    const scheduledDate = new Date(event.scheduledTime || Date.now());
+    const utcHour = scheduledDate.getUTCHours();
+    const dayOfWeek = scheduledDate.getUTCDay();
     
     // Select event type and execution target based on schedule:
-    // - 02:00 & 14:00 UTC -> Pulse + New Anime Discovery (target: 'all')
-    // - Every 2 hours -> Airing Pulse (target: 'pulse')
+    // - Sunday 03:00 UTC -> Weekly Provider & Franchise Sync (target: 'providers')
+    // - 02:00 & 14:00 UTC -> Pulse + Discovery + Provider Sync (target: 'all')
+    // - Hourly ticks -> Airing Pulse + New Anime Discovery (target: 'pulse')
     let eventType = 'pulse';
     let target = 'pulse';
 
-    if (cron === '7 */2 * * *' || cron === '0 * * * *') {
-      if (utcHour === 2 || utcHour === 14) {
+    if (cron === '7 * * * *' || cron === '7 */2 * * *' || cron === '0 * * * *') {
+      if (dayOfWeek === 0 && utcHour === 3) {
+        eventType = 'providers-sync';
+        target = 'providers';
+      } else if (utcHour === 2 || utcHour === 14) {
         eventType = 'catalog-sync';
         target = 'all';
       } else {
@@ -98,7 +104,7 @@ export default {
         status: 'ok',
         worker: 'anihubstream-sync-dispatcher',
         supported_events: ['pulse', 'catalog-sync', 'anilist-sync', 'kitsu-sync', 'hianime-sync', 'providers-sync'],
-        schedules: ['7 */2 * * * (2-hour airing pulse; adds new anime discovery at 02:00/14:00 UTC)'],
+        schedules: ['7 * * * * (hourly pulse + discovery; deep sync at 02:00/14:00 UTC; weekly providers on Sunday 03:00 UTC)'],
       }), {
         status: 200,
         headers: {

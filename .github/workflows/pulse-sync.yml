@@ -1,22 +1,26 @@
 name: pulse-sync
 
-# Lightweight 2-hour pulse and new-anime discovery.
+# Lightweight hourly pulse, new-anime discovery, and weekly provider sync.
 # Triggered by Cloudflare Worker cron dispatcher (ops/github-sync-dispatcher).
 # Uses ~30s execution time (billed as 1 minute). Consumes < 18% of monthly free GitHub Actions minutes.
 
 on:
   schedule:
-    # Backup 2-hour pulse if Cloudflare Worker dispatcher is paused or token expires
-    - cron: '37 */2 * * *'
+    # Hourly backup pulse (fires at :37 past each hour)
+    - cron: '37 * * * *'
   repository_dispatch:
-    types: [pulse, catalog-sync, anilist-sync]
+    types: [pulse, discovery, catalog-sync, anilist-sync, providers-sync]
   workflow_dispatch:
     inputs:
       target:
-        description: 'Sync target (pulse, all)'
+        description: 'Sync target (pulse, providers, all)'
         required: false
         default: 'pulse'
-        type: string
+        type: choice
+        options:
+          - pulse
+          - providers
+          - all
 
 permissions:
   contents: write
@@ -36,7 +40,7 @@ jobs:
         with:
           node-version: '24.19'
 
-      - name: Execute 2-Hour Airing & New Anime Sync
+      - name: Execute Sync Pipeline
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
@@ -44,17 +48,38 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
-          TARGET="${{ github.event.client_payload.target || github.event.inputs.target || 'pulse' }}"
-          if [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
-            echo "Running Airing Pulse + New Anime Discovery (Remote D1)..."
+          TARGET="${{ github.event.client_payload.target || github.event.inputs.target }}"
+
+          # Handle scheduled backup triggers: check if Sunday 03:xx UTC for weekly providers maintenance
+          if [ -z "$TARGET" ]; then
+            DOW=$(date -u +%u)
+            HOUR=$(date -u +%H)
+            if [ "$DOW" = "7" ] && [ "$HOUR" = "03" ]; then
+              TARGET="providers"
+            else
+              TARGET="pulse"
+            fi
+          fi
+
+          if [ "$TARGET" = "providers" ] || [ "$TARGET" = "providers-sync" ]; then
+            echo "Running Weekly Multi-Provider & Franchise Graph Sync..."
+            node cloud-sync/sync-providers.mjs --force
+          elif [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
+            echo "Running Airing Pulse + Discovery + Provider Sync (Remote D1)..."
             node tools/pulse-airing.mjs --remote
             node tools/discover-titles.mjs --limit=2 --force --remote || true
+            node cloud-sync/sync-providers.mjs --force
           else
-            echo "Running 2-Hour Airing Pulse (Remote D1)..."
+            echo "Running Hourly Airing Pulse + New Anime Discovery (Remote D1)..."
             node tools/pulse-airing.mjs --remote
+            node tools/discover-titles.mjs --limit=2 --force --remote || true
           fi
 
       - name: Commit newly discovered sources
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
           if [ -n "$(git status --porcelain tools/catalogue-sources.json)" ]; then
             git config user.name "github-actions[bot]"
@@ -62,4 +87,6 @@ jobs:
             git add tools/catalogue-sources.json
             git commit -m "chore(sync): record discovered anime sources [skip ci]"
             git push origin master
+            echo "New anime discovered and committed! Running immediate provider & franchise sync..."
+            node cloud-sync/sync-providers.mjs --force || true
           fi
