@@ -11,7 +11,7 @@
   --pl-gap: 4px;
   --pl-rail: 5px;
   /* keeps the caption clear of the overlaid control row */
-  --pl-bar: 116px;
+  --pl-bar: 68px;
 
   position: relative;
   border-radius: var(--r-lg);
@@ -24,7 +24,7 @@
 .player[data-density='compact'] {
   --pl-btn: 33px;
   --pl-gap: 1px;
-  --pl-bar: 102px;
+  --pl-bar: 60px;
 }
 
 .player__stage {
@@ -350,22 +350,36 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  max-width: min(86%, 740px);
+  max-width: min(92%, 840px);
+  width: fit-content;
   text-align: center;
   z-index: 2;
   pointer-events: none;
   font-weight: 600;
   font-size: var(--cap-px, 16px);
-  transition: opacity var(--dur-2) var(--ease);
+  letter-spacing: 0.015em;
+  user-select: none;
+  transition: bottom 0.22s cubic-bezier(0, 0, 0.2, 1), top 0.22s cubic-bezier(0, 0, 0.2, 1), opacity var(--dur-2) var(--ease);
 }
 .cap--bottom {
-  bottom: var(--pl-bar);
+  bottom: 20px;
+}
+.player__stage[data-chrome='visible'] .cap--bottom,
+.player:has(.pop) .cap--bottom,
+.player[data-menu] .cap--bottom {
+  bottom: calc(var(--pl-bar, 68px) + 8px);
 }
 .cap--middle {
-  top: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .cap--top {
-  top: 62px;
+  top: 20px;
+}
+.player__stage[data-chrome='visible'] .cap--top,
+.player:has(.pop) .cap--top,
+.player[data-menu] .cap--top {
+  top: 64px;
 }
 .cap__tag {
   display: block;
@@ -378,6 +392,9 @@
 }
 .cap__text {
   display: block;
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-wrap: balance;
 }
 /* Two speakers, one moment: real tracks overlap, and each active cue gets its own line */
 .cap__text + .cap__text {
@@ -1367,7 +1384,12 @@
     width: 64px;
   }
   .cap--bottom {
-    bottom: 108px;
+    bottom: 16px;
+  }
+  .player__stage[data-chrome='visible'] .cap--bottom,
+  .player:has(.pop) .cap--bottom,
+  .player[data-menu] .cap--bottom {
+    bottom: calc(var(--pl-bar, 64px) + 6px);
   }
 }
 @media (max-width: 620px) {
@@ -1499,10 +1521,15 @@
     display: none;
   }
   .player__stage[data-chrome='visible'] .pl__skip {
-    bottom: calc(var(--pl-bar) - 16px);
+    bottom: calc(var(--pl-bar, 52px) + 8px);
   }
   .cap--bottom {
-    bottom: 10px;
+    bottom: 12px;
+  }
+  .player__stage[data-chrome='visible'] .cap--bottom,
+  .player:has(.pop) .cap--bottom,
+  .player[data-menu] .cap--bottom {
+    bottom: calc(var(--pl-bar, 52px) + 6px);
   }
   .player__top {
     top: 8px;
@@ -1521,9 +1548,6 @@
   .cap {
     font-size: min(var(--cap-px, 16px), max(12px, calc(var(--pl-stage-h, 240px) * 0.06)));
     max-width: calc(100% - 12px);
-  }
-  .player__stage[data-chrome='visible'] .cap--bottom {
-    bottom: calc(var(--pl-bar) + 2px);
   }
   .pl__resume {
     top: 40px;

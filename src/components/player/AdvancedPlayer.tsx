@@ -422,7 +422,7 @@ export function AdvancedPlayer(props: Props) {
     const root = rootRef.current;
     if (!el || !stage || !root || typeof ResizeObserver === 'undefined') return;
     const ro = new ResizeObserver(() => {
-      root.style.setProperty('--pl-bar', `${Math.round(el.getBoundingClientRect().height) + 14}px`);
+      root.style.setProperty('--pl-bar', `${Math.round(el.getBoundingClientRect().height)}px`);
       /* The frame's own height as well: on a phone the stage is ~200px and a long cue at
          the viewer's size covers the picture it is describing, so CSS shrinks the text
          against this instead of against the viewport. */

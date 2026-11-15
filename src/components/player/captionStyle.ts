@@ -2,14 +2,14 @@ import type { CSSProperties } from 'react';
 import type { SubtitleSettings } from '../../lib/playerPrefs';
 
 const OUTLINE_LIGHT =
-  '1px 1px 0 rgba(0,0,0,.9), -1px 1px 0 rgba(0,0,0,.9), 1px -1px 0 rgba(0,0,0,.9), -1px -1px 0 rgba(0,0,0,.9)';
+  '1px 1px 0 rgba(0,0,0,.95), -1px 1px 0 rgba(0,0,0,.95), 1px -1px 0 rgba(0,0,0,.95), -1px -1px 0 rgba(0,0,0,.95), 0 0 2px rgba(0,0,0,0.9)';
 const OUTLINE_HEAVY =
   '2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000, -2px -2px 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 0 0 #000, -2px 0 0 #000, 1px 1px 2px rgba(0,0,0,0.8)';
 const SHADOW_GLOW = '0 0 8px rgba(0,0,0,0.95), 0 0 16px rgba(0,0,0,0.85)';
 const SHADOW_DROP = '2px 3px 6px rgba(0,0,0,0.95)';
 
 const FONT_MAP: Record<string, string> = {
-  sans: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+  sans: "'YouTube Noto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   classic: "'Trebuchet MS', 'Lucida Sans Unicode', 'Noto Sans', sans-serif",
   serif: "'Noto Serif JP', 'Merriweather', 'Georgia', serif",
   mono: "'JetBrains Mono', 'Consolas', 'Courier New', monospace",
@@ -43,12 +43,12 @@ export function captionStyle(s: SubtitleSettings): CSSProperties {
        CSS rule, and a caption inside a 200px-tall phone frame has to be able to shrink
        against the frame (player.css reads --cap-px and --pl-stage-h together). */
     '--cap-px': `${s.size}px`,
-    lineHeight: 1.42,
+    lineHeight: 1.34,
     background: s.backdrop === 'box' ? `rgba(5,5,12,${s.background})` : 'transparent',
     boxShadow: s.backdrop === 'box' && s.background > 0.35 ? '0 4px 18px rgba(0,0,0,.35)' : 'none',
     textShadow: shadows.length ? shadows.join(', ') : 'none',
-    padding: s.backdrop === 'box' ? '0.32em 0.7em' : '0.1em 0.2em',
-    borderRadius: '0.35em',
+    padding: s.backdrop === 'box' ? '0.24em 0.6em' : '0.08em 0.16em',
+    borderRadius: '0.28em',
   } as CSSProperties;
 }
 
