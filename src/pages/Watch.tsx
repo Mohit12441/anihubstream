@@ -144,8 +144,13 @@ export function Watch() {
     const baseList = (anime.episodes && anime.episodes.length > 0) ? [...anime.episodes] : [];
     const existingCount = baseList.length;
 
-    // For ongoing series that have not yet aired any episodes, show empty state instead of phantom shells
-    if (anime.status === 'Ongoing' && existingCount === 0) {
+    const requestedEp = Number.parseInt(ep ?? '', 10);
+    const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? requestedEp : 0;
+    const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
+    const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? queryEp : 0;
+
+    // For ongoing series that have not yet aired any episodes and none was requested, show empty state
+    if (anime.status === 'Ongoing' && existingCount === 0 && validRequested === 0 && validQueryEp === 0) {
       return [];
     }
 
@@ -162,11 +167,6 @@ export function Watch() {
         airdate: null,
       }];
     }
-
-    const requestedEp = Number.parseInt(ep ?? '', 10);
-    const validRequested = Number.isFinite(requestedEp) && requestedEp > 0 ? requestedEp : 0;
-    const queryEp = Number.parseInt(params.get('ep') ?? '', 10);
-    const validQueryEp = Number.isFinite(queryEp) && queryEp > 0 ? queryEp : 0;
 
     // Only expand shells if a specific episode was requested beyond the current list (e.g. via schedule deep link)
     // or if the anime has 0 episodes in DB and is finished

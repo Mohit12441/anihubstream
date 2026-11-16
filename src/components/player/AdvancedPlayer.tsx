@@ -877,11 +877,19 @@ export function AdvancedPlayer(props: Props) {
         {(live.status === 'unavailable' || live.status === 'error') && (
           <div className="pl__offline" role="alert">
             <WifiOff size={26} aria-hidden="true" />
-            <b>{live.status === 'unavailable' ? 'Stream temporarily unavailable' : 'This episode could not be streamed'}</b>
+            <b>
+              {live.status === 'unavailable'
+                ? 'Stream temporarily unavailable'
+                : (live.error?.includes('not_yet_available') || live.error?.includes('processing or awaiting')
+                  ? 'Episode Still Processing'
+                  : 'This episode could not be streamed')}
+            </b>
             <p>
               {live.status === 'unavailable'
                 ? 'Video stream is reconnecting. Click Retry to reload.'
-                : `${live.error ?? 'The stream could not be loaded.'}`}
+                : (live.error?.includes('not_yet_available') || live.error?.includes('processing or awaiting')
+                  ? 'This episode recently aired. Streaming servers are encoding and uploading the video — please check back shortly or switch mirrors.'
+                  : `${live.error ?? 'The stream could not be loaded.'}`)}
             </p>
             <div style={{ display: 'flex', gap: '8px', marginTop: '8px', justifyContent: 'center' }}>
               <button type="button" className="btn btn--sm btn--primary" onClick={live.retry}>

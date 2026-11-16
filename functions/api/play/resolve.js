@@ -375,10 +375,18 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               // ignore fallback error
             }
 
+          const isOngoing = meta?.status === 'Ongoing' || meta?.sched_day != null;
+          if (isOngoing) {
+            throw new HttpError(404, 'episode_not_yet_available', 'Episode not yet available on streaming servers. It may still be processing or awaiting upload after broadcast.');
+          }
           throw new HttpError(504, 'upstream_timeout', 'Stream bridge resolution timed out or unavailable');
         }
 
         if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
+          const isOngoing = meta?.status === 'Ongoing' || meta?.sched_day != null;
+          if (isOngoing) {
+            throw new HttpError(404, 'episode_not_yet_available', 'Episode not yet available on streaming servers. It may still be processing or awaiting upload after broadcast.');
+          }
           throw new HttpError(502, 'provider_error', 'No playable stream returned by provider');
         }
 

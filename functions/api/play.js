@@ -729,6 +729,34 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (!direct) {
             direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: (requested === 'anipm' ? undefined : requested) });
           }
+          // Multi-provider direct fallback if primary provider has not uploaded the episode yet
+          if (!direct && availableSlugs.hianime && requested !== 'hianime') {
+            try {
+              const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
+              const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
+              if (zokoRes?.masterUrl) {
+                direct = {
+                  streamUrl: zokoRes.masterUrl,
+                  referer: 'https://zokoanime.video/',
+                  quality: zokoRes.defaultQuality || '1080p',
+                  subtitles: zokoRes.subtitles || [],
+                  provider: 'hianime',
+                  skip: zokoRes.skip,
+                };
+              }
+            } catch {}
+          }
+          if (!direct && resolvedAnilistId && requested !== 'anipm') {
+            try {
+              const betaRes = await resolveAniPmBetaDirect({
+                anilistId: resolvedAnilistId,
+                ep,
+                title: resolvedTitle || animeRow?.title,
+                slug: animeRow?.slug || animeRow?.id || id,
+              });
+              if (betaRes?.streamUrl) direct = betaRes;
+            } catch {}
+          }
           if (direct?.streamUrl) {
             // shortcut: in-memory cache only; avoids exhausting Cloudflare D1 monthly write quota on ephemeral 20-min tokens
             STREAM_MEM_CACHE.set(cacheKey, { data: direct, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
