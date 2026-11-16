@@ -77,7 +77,7 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
     console.log('Target Database:', dbPath);
     db = new DatabaseSync(dbPath);
 
-    // 1. Clean up any finished / non-ongoing anime lingering on schedule
+    // 1. Clean up any finished / non-ongoing anime lingering on schedule, and clear bogus mock dub timestamps
     const cleaned = db.prepare(`
       UPDATE anime SET
         sched_day = NULL,
@@ -85,12 +85,21 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
         sched_date = NULL,
         sched_time = NULL,
         sched_season = NULL,
-        sched_episode = NULL
+        sched_episode = NULL,
+        sched_sub_at = NULL,
+        sched_dub_at = NULL
       WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
     `).run();
     if (cleaned.changes > 0) {
       console.log(`🧹 Cleaned up ${cleaned.changes} stale schedule slots for non-ongoing anime.`);
     }
+
+    // Clear unverified/bogus mock dub timestamps for sub-only anime (e.g. A Tale of the Secret Saint)
+    db.prepare(`
+      UPDATE anime SET sched_dub_at = NULL
+      WHERE id = 'a-tale-of-the-secret-saint'
+         OR id IN ('a-good-day-to-ascend', 'a-will-eternal-final-season', 'dawang-raoming-3', 'renegade-immortal', 'white-cat-legend-season-3', 'holo-no-graffiti', 'shin-chan', 'detective-conan', 'dandivine', 'a-certain-dark-item', 'battle-spirits-re-zekkai-no-ku', 'beyond-times-gaze-2nd-season')
+    `).run();
 
     // 2. Query ongoing anime with AniList IDs from either anime_id_map or source_ids
     // @ts-ignore
@@ -118,8 +127,16 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
           sched_date = NULL,
           sched_time = NULL,
           sched_season = NULL,
-        sched_episode = NULL
+          sched_episode = NULL,
+          sched_sub_at = NULL,
+          sched_dub_at = NULL
         WHERE sched_day IS NOT NULL AND status IN ('Finished', 'Cancelled', 'Upcoming')
+      `);
+
+      await d1Query(`
+        UPDATE anime SET sched_dub_at = NULL
+        WHERE id = 'a-tale-of-the-secret-saint'
+           OR id IN ('a-good-day-to-ascend', 'a-will-eternal-final-season', 'dawang-raoming-3', 'renegade-immortal', 'white-cat-legend-season-3', 'holo-no-graffiti', 'shin-chan', 'detective-conan', 'dandivine', 'a-certain-dark-item', 'battle-spirits-re-zekkai-no-ku', 'beyond-times-gaze-2nd-season')
       `);
     } catch (err) {
       if (err.message && (err.message.includes('7500') || err.message.includes('daily row write limit'))) {
