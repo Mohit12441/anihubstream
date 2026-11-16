@@ -64,15 +64,20 @@ jobs:
           if [ "$TARGET" = "providers" ] || [ "$TARGET" = "providers-sync" ]; then
             echo "Running Weekly Multi-Provider & Franchise Graph Sync..."
             node cloud-sync/sync-providers.mjs --force
-          elif [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
-            echo "Running Airing Pulse + Discovery + Provider Sync (Remote D1)..."
-            node tools/pulse-airing.mjs --remote
-            node tools/discover-titles.mjs --limit=2 --force --remote || true
-            node cloud-sync/sync-providers.mjs --force
           else
-            echo "Running Hourly Airing Pulse + New Anime Discovery (Remote D1)..."
+            echo "Sync target: $TARGET"
+            echo "► Step 1: Running Airing Schedules & Episodes Pulse (Remote D1)..."
             node tools/pulse-airing.mjs --remote
-            node tools/discover-titles.mjs --limit=2 --force --remote || true
+
+            LIMIT=5
+            if [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
+              LIMIT=10
+            fi
+            echo "► Step 2: Ingesting Catalog Backlog & Discovering Anime (Limit: $LIMIT, Remote D1)..."
+            node tools/discover-titles.mjs --limit=$LIMIT --force --remote || true
+
+            echo "► Step 3: Normalizing Provider Mappings & Ratings..."
+            node cloud-sync/sync-providers.mjs --force || true
           fi
 
       - name: Commit newly discovered sources

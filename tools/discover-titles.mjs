@@ -181,6 +181,27 @@ export async function kitsuByMal(malId) {
   };
 }
 
+/* Fallback lookup: search Kitsu by title when MAL external mapping is not yet populated */
+export async function kitsuByTitle(title, seasonYear = null) {
+  if (!title) return null;
+  const clean = title.replace(/[^\w\s]/g, ' ').replace(/\s+/g, ' ').trim();
+  const url = `https://kitsu.io/api/edge/anime?filter%5Btext%5D=${encodeURIComponent(clean)}&page%5Blimit%5D=5`;
+  const res = await fetch(url, { headers: { accept: 'application/vnd.api+json', 'user-agent': UA } });
+  if (!res.ok) return null;
+  const body = await res.json();
+  const items = body.data || [];
+  for (const item of items) {
+    const at = item.attributes || {};
+    const itemYear = Number(String(at.startDate || '').slice(0, 4)) || null;
+    if (seasonYear && itemYear && Math.abs(itemYear - seasonYear) > 1) continue;
+    return {
+      kitsuId: Number(item.id),
+      year: itemYear,
+    };
+  }
+  return null;
+}
+
 export function readSources(sourcesPath = SOURCES) {
   return JSON.parse(readFileSync(sourcesPath, 'utf8'));
 }
@@ -265,89 +286,135 @@ export async function discover({ rows = null, limit = 2, force = false } = {}) {
     }
   }
 
-  const query = `query($n: Int){
-    trending: Page(page: 1, perPage: $n){ media(sort: TRENDING_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } }
-    recent: Page(page: 1, perPage: $n){ media(sort: START_DATE_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } }
-  }`;
-  const data = await anilist(query, { n: 40 });
-  const rawList = [...(data?.trending?.media ?? []), ...(data?.recent?.media ?? [])];
-  const seenMedia = new Set();
-  const candidates = [];
-  for (const m of rawList) {
-    if (!seenMedia.has(m.id) && !anilistIds.has(m.id)) {
-      seenMedia.add(m.id);
-      candidates.push(m);
-    }
-  }
-
+  const isRemote = process.argv.includes('--remote');
   const skipped = [];
   const added = [];
   const failures = [];
   const newEntries = [];
-  for (const cand of candidates) {
-    if (added.length >= limit) break;
-    const label = cand.title?.english || cand.title?.romaji || `anilist ${cand.id}`;
 
-    if (!cand.idMal) {
-      skipped.push(`${label}: no MAL id to map through`);
-      continue;
-    }
-    let kitsu;
-    try {
-      kitsu = await kitsuByMal(cand.idMal);
-    } catch (err) {
-      failures.push(`${label}: ${err.message}`);
-      continue;
-    }
-    if (!kitsu) {
-      skipped.push(`${label}: no Kitsu mapping for MAL ${cand.idMal}`);
-      continue;
-    }
-    if (kitsu.year && cand.seasonYear && Math.abs(kitsu.year - cand.seasonYear) > 1) {
-      skipped.push(`${label}: Kitsu ${kitsu.kitsuId} starts ${kitsu.year}, AniList says ${cand.seasonYear} — skipped rather than trusted`);
-      continue;
-    }
+  // Stage 1: Ingest pending backlog from catalogue-sources.json first
+  const existingSources = readSources();
+  const dbAnimeIds = new Set(animeRows.map((r) => r.id));
+  const pendingBacklog = existingSources.filter((s) => !dbAnimeIds.has(s.id) && s.kitsu && s.anilist);
 
-    let id = slugify(label) || `anime-${cand.id}`;
-    if (ids.has(id)) id = `${slugify(label)}-${cand.id}`;
-
-    const entry = { id, kitsu: kitsu.kitsuId, anilist: cand.id, note: `discovered ${new Date().toISOString().slice(0, 10)} from the AniList trending list (status RELEASING)` };
-    appendSource(entry);
-    try {
-      execFileSync(process.execPath, [resolve(ROOT, 'tools/sync-catalogue.mjs'), `--title=${id}`], {
-        encoding: 'utf8',
-        windowsHide: true,
-        cwd: ROOT,
-      });
-      if (!existsSync(SEED)) throw new Error('sync wrote no seed.sql');
-      const isRemote = process.argv.includes('--remote');
-      if (isRemote) {
-        wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
-      } else {
-        const sqlitePath = findSqlitePath();
-        if (sqlitePath) {
-          const db = new DatabaseSync(sqlitePath);
-          try {
-            const sql = readFileSync(SEED, 'utf8');
-            db.exec(sql);
-          } finally {
-            db.close();
+  if (pendingBacklog.length > 0) {
+    for (const item of pendingBacklog) {
+      if (added.length >= limit) break;
+      try {
+        execFileSync(process.execPath, [resolve(ROOT, 'tools/sync-catalogue.mjs'), `--title=${item.id}`, '--no-skips'], {
+          encoding: 'utf8',
+          windowsHide: true,
+          cwd: ROOT,
+        });
+        if (!existsSync(SEED)) throw new Error('sync wrote no seed.sql');
+        if (isRemote) {
+          wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
+        } else {
+          const sqlitePath = findSqlitePath();
+          if (sqlitePath) {
+            const db = new DatabaseSync(sqlitePath);
+            try {
+              const sql = readFileSync(SEED, 'utf8');
+              db.exec(sql);
+            } finally {
+              db.close();
+            }
           }
         }
+        ids.add(item.id);
+        anilistIds.add(item.anilist);
+        dbAnimeIds.add(item.id);
+        added.push({ id: item.id, anilist: item.anilist, kitsu: item.kitsu, title: item.id });
+      } catch (err) {
+        failures.push(`${item.id}: backlog ingest failed (${String(err.message).split('\n')[0].slice(0, 160)})`);
       }
-    } catch (err) {
-      removeSource(id);
-      failures.push(`${label}: build failed (${String(err.message).split('\n')[0].slice(0, 160)})`);
-      continue;
     }
-    ids.add(id);
-    anilistIds.add(cand.id);
-    added.push({ id, anilist: cand.id, kitsu: kitsu.kitsuId, title: label });
-    newEntries.push(entry);
+  }
+
+  // Stage 2: Discover new candidates from AniList (trending, recent, popular)
+  if (added.length < limit) {
+    const query = `query($n: Int){
+      trending: Page(page: 1, perPage: $n){ media(sort: TRENDING_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } }
+      recent: Page(page: 1, perPage: $n){ media(sort: START_DATE_DESC, type: ANIME, status: RELEASING, isAdult: false){ id idMal seasonYear title{ romaji english } } }
+      popular: Page(page: 1, perPage: $n){ media(sort: POPULARITY_DESC, type: ANIME, isAdult: false){ id idMal seasonYear title{ romaji english } } }
+    }`;
+    const data = await anilist(query, { n: 40 });
+    const rawList = [...(data?.trending?.media ?? []), ...(data?.recent?.media ?? []), ...(data?.popular?.media ?? [])];
+    const seenMedia = new Set();
+    const candidates = [];
+    for (const m of rawList) {
+      if (!seenMedia.has(m.id) && !anilistIds.has(m.id) && !dbAnimeIds.has(m.id)) {
+        seenMedia.add(m.id);
+        candidates.push(m);
+      }
+    }
+
+    for (const cand of candidates) {
+      if (added.length >= limit) break;
+      const label = cand.title?.english || cand.title?.romaji || `anilist ${cand.id}`;
+
+      let kitsu = null;
+      if (cand.idMal) {
+        try {
+          kitsu = await kitsuByMal(cand.idMal);
+        } catch (err) {
+          // fall through to title search
+        }
+      }
+      if (!kitsu) {
+        try {
+          kitsu = await kitsuByTitle(cand.title?.romaji || cand.title?.english, cand.seasonYear);
+        } catch (err) {}
+      }
+      if (!kitsu) {
+        skipped.push(`${label}: no Kitsu mapping for MAL ${cand.idMal || 'none'} or title`);
+        continue;
+      }
+      if (kitsu.year && cand.seasonYear && Math.abs(kitsu.year - cand.seasonYear) > 1) {
+        skipped.push(`${label}: Kitsu ${kitsu.kitsuId} starts ${kitsu.year}, AniList says ${cand.seasonYear} — skipped rather than trusted`);
+        continue;
+      }
+
+      let id = slugify(label) || `anime-${cand.id}`;
+      if (ids.has(id)) id = `${slugify(label)}-${cand.id}`;
+
+      const entry = { id, kitsu: kitsu.kitsuId, anilist: cand.id, note: `discovered ${new Date().toISOString().slice(0, 10)} from AniList` };
+      appendSource(entry);
+      try {
+        execFileSync(process.execPath, [resolve(ROOT, 'tools/sync-catalogue.mjs'), `--title=${id}`, '--no-skips'], {
+          encoding: 'utf8',
+          windowsHide: true,
+          cwd: ROOT,
+        });
+        if (!existsSync(SEED)) throw new Error('sync wrote no seed.sql');
+        if (isRemote) {
+          wrangler(['d1', 'execute', 'anihub', '--remote', '--file', SEED]);
+        } else {
+          const sqlitePath = findSqlitePath();
+          if (sqlitePath) {
+            const db = new DatabaseSync(sqlitePath);
+            try {
+              const sql = readFileSync(SEED, 'utf8');
+              db.exec(sql);
+            } finally {
+              db.close();
+            }
+          }
+        }
+      } catch (err) {
+        removeSource(id);
+        failures.push(`${label}: build failed (${String(err.message).split('\n')[0].slice(0, 160)})`);
+        continue;
+      }
+      ids.add(id);
+      anilistIds.add(cand.id);
+      dbAnimeIds.add(id);
+      added.push({ id, anilist: cand.id, kitsu: kitsu.kitsuId, title: label });
+      newEntries.push(entry);
+    }
   }
 
   const value = JSON.stringify({ at: new Date().toISOString(), limit, added, skipped, failures });
-  const isRemote = process.argv.includes('--remote');
   if (isRemote) {
     wrangler([
       'd1', 'execute', 'anihub', '--remote',
