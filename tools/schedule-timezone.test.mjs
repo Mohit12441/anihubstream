@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { convertSlotTimezone, formatScheduleEntry, getEpisodeReleaseStatus, getUserTimezoneLabel, parseScheduleDate } from '../src/lib/scheduleTime.ts';
+import { convertSlotTimezone, formatScheduleEntry, getEpisodeReleaseStatus, getUserTimezoneLabel, parseScheduleDate, rollTimestampToCurrentWeek } from '../src/lib/scheduleTime.ts';
 
 describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
   it('converts Sunday night slot into Monday morning slot in positive timezone (e.g. JST UTC+9)', () => {
@@ -130,6 +130,42 @@ describe('TASK 9 (P2) — Schedule Timezone Conversion & Year Filter', () => {
     const formattedDub = formatScheduleEntry(entry, false, 'dub');
     assert.equal(formattedDub.day, 2, 'Dub format rolls to Tuesday from timestamp');
     assert.equal(formattedDub.time, '17:00');
+  });
+
+  it('formatScheduleEntry advances past dub timestamp to current/upcoming week calendar date', () => {
+    // 1793725200000 = Tue, 03 Nov 2026 17:00:00 GMT
+    // If now is Mon, 16 Nov 2026 12:00:00 GMT, the upcoming Tuesday is Nov 17 2026
+    const refNow = new Date('2026-11-16T12:00:00Z');
+    const entry = {
+      anime: {
+        id: 'one-piece',
+        title: 'One Piece',
+        sched_dub_at: 1793725200000,
+      },
+      day: 7,
+      dayLabel: 'SUN',
+      time: '14:16',
+      date: 'Nov 22',
+      season: 'Fall 2026',
+      sched_dub_at: 1793725200000,
+    };
+
+    const formattedDub = formatScheduleEntry(entry, false, 'dub', refNow.getTime());
+    assert.equal(formattedDub.day, 2, 'Day remains Tuesday');
+    assert.equal(formattedDub.time, '17:00', 'Time remains 17:00');
+    assert.equal(formattedDub.date, 'Nov 17', 'Date advances from Nov 03 to upcoming Nov 17');
+  });
+
+  it('rollTimestampToCurrentWeek advances weekly timestamps across multiple weeks', () => {
+    // 1787752800000 = Wed, 26 Aug 2026 14:00:00 GMT (day 3 = Wednesday)
+    // If now is Mon, 16 Nov 2026 12:00:00 GMT, advancing 12 weeks lands on Wed, 18 Nov 2026 14:00:00 GMT
+    const targetMs = 1787752800000;
+    const nowMs = new Date('2026-11-16T12:00:00Z').getTime();
+    const rolled = rollTimestampToCurrentWeek(targetMs, nowMs);
+    const d = new Date(rolled);
+    assert.equal(d.getUTCDay(), 3, 'Should remain Wednesday');
+    assert.equal(d.getUTCHours(), 14);
+    assert.equal(d.getUTCDate(), 18, 'Should advance to Nov 18');
   });
 
   it('formatScheduleEntry falls back to slot timezone when target timestamp is absent', () => {

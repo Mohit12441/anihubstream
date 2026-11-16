@@ -214,6 +214,7 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
           existing.sched_episode === (nextEpNum || null);
 
         if (!isUnchanged) {
+          const subAtMs = d.getTime();
           if (db) {
             db.prepare(`
               UPDATE anime SET
@@ -222,17 +223,18 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
                 sched_date = ?3,
                 sched_time = ?4,
                 sched_season = ?5,
-                sched_episode = ?6
-              WHERE id = ?7
-            `).run(schedDay, dayLabel, dateStr, timeStr, sKey, nextEpNum || null, animeSlug);
+                sched_episode = ?6,
+                sched_sub_at = ?7
+              WHERE id = ?8
+            `).run(schedDay, dayLabel, dateStr, timeStr, sKey, nextEpNum || null, subAtMs, animeSlug);
           } else if (hasRestCreds) {
             await d1Query(
-              `UPDATE anime SET sched_day = ?1, sched_day_label = ?2, sched_date = ?3, sched_time = ?4, sched_season = ?5, sched_episode = ?6 WHERE id = ?7`,
-              [schedDay, dayLabel, dateStr, timeStr, sKey, nextEpNum || null, animeSlug],
+              `UPDATE anime SET sched_day = ?1, sched_day_label = ?2, sched_date = ?3, sched_time = ?4, sched_season = ?5, sched_episode = ?6, sched_sub_at = ?7 WHERE id = ?8`,
+              [schedDay, dayLabel, dateStr, timeStr, sKey, nextEpNum || null, subAtMs, animeSlug],
             );
           } else {
             remoteSqlStatements.push(
-              `UPDATE anime SET sched_day=${schedDay}, sched_day_label=${sqlEscape(dayLabel)}, sched_date=${sqlEscape(dateStr)}, sched_time=${sqlEscape(timeStr)}, sched_season=${sqlEscape(sKey)}, sched_episode=${nextEpNum > 0 ? nextEpNum : 'NULL'} WHERE id=${sqlEscape(animeSlug)};`,
+              `UPDATE anime SET sched_day=${schedDay}, sched_day_label=${sqlEscape(dayLabel)}, sched_date=${sqlEscape(dateStr)}, sched_time=${sqlEscape(timeStr)}, sched_season=${sqlEscape(sKey)}, sched_episode=${nextEpNum > 0 ? nextEpNum : 'NULL'}, sched_sub_at=${subAtMs} WHERE id=${sqlEscape(animeSlug)};`,
             );
           }
           updatedCount++;
@@ -255,18 +257,20 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
               sched_date = NULL,
               sched_time = NULL,
               sched_season = NULL,
-        sched_episode = NULL
+              sched_episode = NULL,
+              sched_sub_at = NULL,
+              sched_dub_at = NULL
             WHERE id = ?1
           `).run(animeSlug);
         } else if (hasRestCreds) {
           await d1Query(
             `UPDATE anime SET sched_day = NULL, sched_day_label = NULL, sched_date = NULL, sched_time = NULL, sched_season = NULL,
-        sched_episode = NULL WHERE id = ?1`,
+        sched_episode = NULL, sched_sub_at = NULL, sched_dub_at = NULL WHERE id = ?1`,
             [animeSlug],
           );
         } else {
           remoteSqlStatements.push(
-            `UPDATE anime SET sched_day=NULL, sched_day_label=NULL, sched_date=NULL, sched_time=NULL, sched_season=NULL WHERE id=${sqlEscape(animeSlug)};`,
+            `UPDATE anime SET sched_day=NULL, sched_day_label=NULL, sched_date=NULL, sched_time=NULL, sched_season=NULL, sched_episode=NULL, sched_sub_at=NULL, sched_dub_at=NULL WHERE id=${sqlEscape(animeSlug)};`,
           );
         }
         clearedCount++;

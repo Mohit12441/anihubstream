@@ -75,19 +75,36 @@ export function convertSlotTimezone(
 }
 
 /**
+ * Rolls an epoch timestamp forward by 7-day increments if it has passed its weekly broadcast window.
+ * Ensures recurring weekly schedules display the current / upcoming episode's date and countdown.
+ */
+export function rollTimestampToCurrentWeek(targetMs: number, nowMs = Date.now()): number {
+  const gracePeriodMs = 24 * 60 * 60 * 1000; // 24-hour window where an aired episode is considered 'released'
+  if (targetMs < nowMs - gracePeriodMs) {
+    const weekMs = 7 * 24 * 60 * 60 * 1000;
+    const weeksToAdd = Math.floor((nowMs - gracePeriodMs - targetMs) / weekMs) + 1;
+    return targetMs + weeksToAdd * weekMs;
+  }
+  return targetMs;
+}
+
+/**
  * Formats a schedule entry using dynamic epoch timestamps (sub/dub) or fallback slot time.
  */
 export function formatScheduleEntry(
   e: ScheduleEntry,
   useLocalTime: boolean,
   scheduleType: 'sub' | 'dub',
+  nowMs = Date.now(),
 ): ScheduleEntry {
   const schedSubAt = e.sched_sub_at ?? e.subAt ?? e.anime.sched_sub_at ?? e.anime.schedule?.subAt ?? null;
   const schedDubAt = e.sched_dub_at ?? e.dubAt ?? e.anime.sched_dub_at ?? e.anime.schedule?.dubAt ?? null;
 
-  const targetIso = scheduleType === 'dub' ? schedDubAt : (scheduleType === 'sub' ? schedSubAt : null);
-  if (targetIso) {
-    const d = new Date(typeof targetIso === 'number' && targetIso < 1e11 ? targetIso * 1000 : targetIso);
+  const rawTargetIso = scheduleType === 'dub' ? schedDubAt : (scheduleType === 'sub' ? schedSubAt : null);
+  if (rawTargetIso) {
+    const rawMs = typeof rawTargetIso === 'number' && rawTargetIso < 1e11 ? rawTargetIso * 1000 : Number(rawTargetIso);
+    const targetMs = rollTimestampToCurrentWeek(rawMs, nowMs);
+    const d = new Date(targetMs);
     if (!isNaN(d.getTime())) {
       const dayOfWeek = useLocalTime ? d.getDay() : d.getUTCDay();
       const day = dayOfWeek === 0 ? 7 : dayOfWeek;
@@ -189,7 +206,8 @@ export function getEpisodeReleaseStatus(
 ): EpisodeReleaseStatus {
   let targetMs: number | null = null;
   if (targetTimestamp != null && targetTimestamp > 0) {
-    targetMs = targetTimestamp < 1e11 ? targetTimestamp * 1000 : targetTimestamp;
+    const rawMs = targetTimestamp < 1e11 ? targetTimestamp * 1000 : targetTimestamp;
+    targetMs = rollTimestampToCurrentWeek(rawMs, now.getTime());
   }
 
   if (targetMs == null && dateStr) {
