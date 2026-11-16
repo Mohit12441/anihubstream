@@ -1,24 +1,29 @@
 name: pulse-sync
 
-# Lightweight hourly pulse, new-anime discovery, and weekly provider sync.
+# 3-Tier Multi-Provider Synchronization:
+#   1. Hourly (1h): AniList Airing Schedules & Episode Countdowns (target: pulse)
+#   2. Daily (24h): Top-50 Trending Rankings & Catalog Growth (target: daily)
+#   3. Weekly (7d): Multi-Provider Mappings & Franchise Graph Rebuild (target: providers)
+#
 # Triggered by Cloudflare Worker cron dispatcher (ops/github-sync-dispatcher).
-# Uses ~30s execution time (billed as 1 minute). Consumes < 18% of monthly free GitHub Actions minutes.
+# Uses 5s - 35s execution time (< 10% of monthly free GitHub Actions minutes).
 
 on:
   schedule:
     # Hourly backup pulse (fires at :37 past each hour)
     - cron: '37 * * * *'
   repository_dispatch:
-    types: [pulse, discovery, catalog-sync, anilist-sync, providers-sync]
+    types: [pulse, daily, daily-sync, providers, providers-sync, catalog-sync, all]
   workflow_dispatch:
     inputs:
       target:
-        description: 'Sync target (pulse, providers, all)'
+        description: 'Sync target (pulse, daily, providers, all)'
         required: false
         default: 'pulse'
         type: choice
         options:
           - pulse
+          - daily
           - providers
           - all
 
@@ -50,34 +55,44 @@ jobs:
         run: |
           TARGET="${{ github.event.client_payload.target || github.event.inputs.target }}"
 
-          # Handle scheduled backup triggers: check if Sunday 03:xx UTC for weekly providers maintenance
+          # Handle scheduled backup triggers:
+          # - Sunday 03:xx UTC -> weekly providers maintenance
+          # - Daily 00:xx UTC -> 24-hour trending & catalog discovery
+          # - Otherwise -> hourly AniList broadcast pulse
           if [ -z "$TARGET" ]; then
             DOW=$(date -u +%u)
             HOUR=$(date -u +%H)
             if [ "$DOW" = "7" ] && [ "$HOUR" = "03" ]; then
               TARGET="providers"
+            elif [ "$HOUR" = "00" ]; then
+              TARGET="daily"
             else
               TARGET="pulse"
             fi
           fi
 
-          if [ "$TARGET" = "providers" ] || [ "$TARGET" = "providers-sync" ]; then
-            echo "Running Weekly Multi-Provider & Franchise Graph Sync..."
-            node cloud-sync/sync-providers.mjs --force
-          else
-            echo "Sync target: $TARGET"
-            echo "► Step 1: Running Airing Schedules & Episodes Pulse (Remote D1)..."
-            node tools/pulse-airing.mjs --remote
+          echo "============================================================"
+          echo "Sync Target: $TARGET"
+          echo "============================================================"
 
-            LIMIT=5
-            if [ "$TARGET" = "all" ] || [ "$TARGET" = "catalog-sync" ]; then
-              LIMIT=10
-            fi
-            echo "► Step 2: Ingesting Catalog Backlog & Discovering Anime (Limit: $LIMIT, Remote D1)..."
+          if [ "$TARGET" = "providers" ] || [ "$TARGET" = "providers-sync" ]; then
+            echo "⚡ [WEEKLY] Synchronizing Multi-Provider Mappings & Franchise Graph..."
+            node cloud-sync/sync-providers.mjs --force
+
+          elif [ "$TARGET" = "daily" ] || [ "$TARGET" = "daily-sync" ] || [ "$TARGET" = "catalog-sync" ] || [ "$TARGET" = "all" ]; then
+            echo "📅 [24-HOUR DAILY] Syncing Airing Schedules + Global Trending Ranks..."
+            node tools/pulse-airing.mjs --remote --trending
+
+            LIMIT=10
+            echo "🌱 [24-HOUR DAILY] Ingesting Catalog Backlog & Discovering Anime (Limit: $LIMIT, Remote D1)..."
             node tools/discover-titles.mjs --limit=$LIMIT --force --remote || true
 
-            echo "► Step 3: Normalizing Provider Mappings & Ratings..."
+            echo "⚡ [24-HOUR DAILY] Normalizing Provider Mappings & Ratings..."
             node cloud-sync/sync-providers.mjs --force || true
+
+          else
+            echo "⏱️ [HOURLY] Syncing AniList Broadcast Schedules & Episode Countdowns..."
+            node tools/pulse-airing.mjs --remote
           fi
 
       - name: Commit newly discovered sources

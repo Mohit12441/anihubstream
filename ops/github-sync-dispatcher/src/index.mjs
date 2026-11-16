@@ -29,39 +29,19 @@ export default {
     const utcHour = scheduledDate.getUTCHours();
     const dayOfWeek = scheduledDate.getUTCDay();
     
-    // Select event type and execution target based on schedule:
+    // Select event type and execution target based on 3-tier cadence:
     // - Sunday 03:00 UTC -> Weekly Provider & Franchise Sync (target: 'providers')
-    // - 02:00 & 14:00 UTC -> Pulse + Discovery + Provider Sync (target: 'all')
-    // - Hourly ticks -> Airing Pulse + New Anime Discovery (target: 'pulse')
+    // - Daily 00:00 UTC -> 24-Hour Trending & Catalog Discovery (target: 'daily')
+    // - Hourly ticks -> AniList Broadcast Schedules & Countdowns (target: 'pulse')
     let eventType = 'pulse';
     let target = 'pulse';
 
-    if (cron === '7 * * * *' || cron === '7 */2 * * *' || cron === '0 * * * *') {
-      if (dayOfWeek === 0 && utcHour === 3) {
-        eventType = 'providers-sync';
-        target = 'providers';
-      } else if (utcHour === 2 || utcHour === 14) {
-        eventType = 'catalog-sync';
-        target = 'all';
-      } else {
-        eventType = 'pulse';
-        target = 'pulse';
-      }
-    } else if (cron === '0 2,14 * * *') {
-      eventType = 'catalog-sync';
-      target = 'all';
-    } else if (cron === '45 */6 * * *') {
+    if (dayOfWeek === 0 && utcHour === 3) {
       eventType = 'providers-sync';
       target = 'providers';
-    } else if (cron === '27,57 * * * *') {
-      eventType = 'hianime-sync';
-      target = 'hianime';
-    } else if (cron === '17,47 * * * *') {
-      eventType = 'kitsu-sync';
-      target = 'kitsu';
-    } else if (cron === '7,37 * * * *') {
-      eventType = 'anilist-sync';
-      target = 'anilist';
+    } else if (utcHour === 0 || utcHour === 12) {
+      eventType = 'daily-sync';
+      target = 'daily';
     } else {
       eventType = 'pulse';
       target = 'pulse';

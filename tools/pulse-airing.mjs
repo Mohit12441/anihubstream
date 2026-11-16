@@ -19,18 +19,24 @@ import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
 
 async function main() {
   const isRemote = process.argv.includes('--remote');
+  const includeTrending = process.argv.includes('--trending');
   const start = Date.now();
 
   console.log('====================================================');
-  console.log(`⏱️ AniHubStream Hourly Airing Pulse (Mode: ${isRemote ? 'Remote D1' : 'Local SQLite'})`);
+  console.log(`⏱️ AniHubStream Airing Pulse (Mode: ${isRemote ? 'Remote D1' : 'Local SQLite'}, Trending: ${includeTrending ? 'Enabled' : 'Skipped (Daily)'})`);
   console.log('====================================================\n');
 
-  // Stage 1: Global Trending Ranks (AniList GraphQL, 1 query, ~1s)
-  console.log('► Stage 1: Syncing global trending ranks from AniList...');
-  const trendRes = await syncTrendingRanks({ quiet: false });
+  // Stage 1: Global Trending Ranks (AniList GraphQL, runs daily via --trending)
+  let trendRes = { totalTrending: 0 };
+  if (includeTrending) {
+    console.log('► Stage 1: Syncing global trending ranks from AniList (24h Daily Cadence)...');
+    trendRes = await syncTrendingRanks({ quiet: false });
+  } else {
+    console.log('► Stage 1: Skipped trending ranks (scheduled on 24-hour daily cadence; use --trending to force).');
+  }
 
-  // Stage 2: Airing schedule delta from AniList (~5s)
-  console.log('\n► Stage 2: Checking broadcast airing slots...');
+  // Stage 2: Airing schedule delta from AniList (~5s, hourly)
+  console.log('\n► Stage 2: Checking broadcast airing slots (Hourly AniList Sync)...');
   const schedRes = await syncOngoingSchedules({ isRemote, quiet: false });
 
   // Stage 3: Newly released episodes delta (~10s)
