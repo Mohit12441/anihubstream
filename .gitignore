@@ -34,7 +34,6 @@ scratch/
 .firewall/
 anihub_tables_backup.sql
 anihubstream.com-audit/
-seed.sql
 .gemini/
 .planning/
 .code-review-graph/
