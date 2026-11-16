@@ -19,6 +19,7 @@ export function Schedule() {
   const [day, setDay] = useState<number | null>(null);
   const [useLocalTime, setUseLocalTime] = useState(true);
   const [scheduleType, setScheduleType] = useState<'sub' | 'dub'>('sub');
+  const [dubOnly, setDubOnly] = useState(false);
   const [releaseFilter, setReleaseFilter] = useState<ReleaseFilter>('all');
 
   useSEO({
@@ -58,9 +59,13 @@ export function Schedule() {
       const source = activeYear !== 'All years'
         ? allScheduleEntries.filter((e) => String(e.anime.year) === activeYear)
         : all;
-      return source.map((e) => formatScheduleEntry(e, useLocalTime, scheduleType));
+      const formatted = source.map((e) => formatScheduleEntry(e, useLocalTime, scheduleType));
+      if (scheduleType === 'dub' && dubOnly) {
+        return formatted.filter((e) => Boolean(e.sched_dub_at || e.dubAt || e.anime.sched_dub_at || e.anime.schedule?.dubAt));
+      }
+      return formatted;
     },
-    [all, allScheduleEntries, activeYear, useLocalTime, scheduleType],
+    [all, allScheduleEntries, activeYear, useLocalTime, scheduleType, dubOnly],
   );
 
   const [now, setNow] = useState(() => new Date());
@@ -153,6 +158,17 @@ export function Schedule() {
           >
             Dub Times
           </button>
+          {scheduleType === 'dub' && (
+            <button
+              type="button"
+              className={`pill${dubOnly ? ' is-active' : ''}`}
+              onClick={() => setDubOnly((v) => !v)}
+              aria-pressed={dubOnly}
+              style={{ fontSize: '0.82rem', padding: '0.45rem 0.9rem', opacity: dubOnly ? 1 : 0.85 }}
+            >
+              {dubOnly ? '✓ Dubs Only' : 'Filter: Dubs Only'}
+            </button>
+          )}
         </div>
 
         {/* Quick Release Filter Tabs */}

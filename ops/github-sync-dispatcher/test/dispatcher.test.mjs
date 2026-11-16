@@ -82,7 +82,7 @@ describe('github-sync-dispatcher worker', () => {
   });
 
   describe('Scheduled Cron Handler', () => {
-    it('dispatches anilist-sync for cron "7,37 * * * *"', async () => {
+    it('dispatches pulse for hourly cron ticks (target: "pulse")', async () => {
       let capturedUrl = null;
       let capturedOpts = null;
 
@@ -92,112 +92,9 @@ describe('github-sync-dispatcher worker', () => {
         return new Response(null, { status: 204 });
       };
 
-      const event = { cron: '7,37 * * * *', scheduledTime: Date.now() };
-      const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
-      const ctx = { waitUntil: (p) => p };
-
-      const result = await worker.scheduled(event, env, ctx);
-      assert.equal(result.success, true);
-      assert.equal(result.status, 204);
-      assert.equal(result.event_type, 'anilist-sync');
-
-      assert.equal(capturedUrl, 'https://api.github.com/repos/Mohit12441/anihubstream/dispatches');
-      assert.equal(capturedOpts.method, 'POST');
-      assert.equal(capturedOpts.headers['Authorization'], 'Bearer secret-token-xyz');
-      assert.equal(capturedOpts.headers['Accept'], 'application/vnd.github+json');
-      assert.equal(capturedOpts.headers['User-Agent'], 'AniHubStream-Cloudflare-Cron-Dispatcher/1.0');
-
-      const payload = JSON.parse(capturedOpts.body);
-      assert.equal(payload.event_type, 'anilist-sync');
-      assert.equal(payload.client_payload.eventType, 'anilist-sync');
-      assert.equal(payload.client_payload.source, 'cloudflare-worker-cron');
-    });
-
-    it('dispatches kitsu-sync for cron "17,47 * * * *"', async () => {
-      let capturedUrl = null;
-      let capturedOpts = null;
-
-      globalThis.fetch = async (url, opts) => {
-        capturedUrl = url;
-        capturedOpts = opts;
-        return new Response(null, { status: 204 });
-      };
-
-      const event = { cron: '17,47 * * * *', scheduledTime: Date.now() };
-      const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
-      const ctx = { waitUntil: (p) => p };
-
-      const result = await worker.scheduled(event, env, ctx);
-      assert.equal(result.success, true);
-      assert.equal(result.status, 204);
-      assert.equal(result.event_type, 'kitsu-sync');
-
-      const payload = JSON.parse(capturedOpts.body);
-      assert.equal(payload.event_type, 'kitsu-sync');
-      assert.equal(payload.client_payload.eventType, 'kitsu-sync');
-    });
-
-    it('dispatches hianime-sync for cron "27,57 * * * *"', async () => {
-      let capturedUrl = null;
-      let capturedOpts = null;
-
-      globalThis.fetch = async (url, opts) => {
-        capturedUrl = url;
-        capturedOpts = opts;
-        return new Response(null, { status: 204 });
-      };
-
-      const event = { cron: '27,57 * * * *', scheduledTime: Date.now() };
-      const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
-      const ctx = { waitUntil: (p) => p };
-
-      const result = await worker.scheduled(event, env, ctx);
-      assert.equal(result.success, true);
-      assert.equal(result.status, 204);
-      assert.equal(result.event_type, 'hianime-sync');
-
-      const payload = JSON.parse(capturedOpts.body);
-      assert.equal(payload.event_type, 'hianime-sync');
-      assert.equal(payload.client_payload.eventType, 'hianime-sync');
-    });
-
-    it('dispatches catalog-sync for cron "0 2,14 * * *"', async () => {
-      let capturedUrl = null;
-      let capturedOpts = null;
-
-      globalThis.fetch = async (url, opts) => {
-        capturedUrl = url;
-        capturedOpts = opts;
-        return new Response(null, { status: 204 });
-      };
-
-      const event = { cron: '0 2,14 * * *', scheduledTime: Date.now() };
-      const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
-      const ctx = { waitUntil: (p) => p };
-
-      const result = await worker.scheduled(event, env, ctx);
-      assert.equal(result.success, true);
-      assert.equal(result.status, 204);
-      assert.equal(result.event_type, 'catalog-sync');
-
-      const payload = JSON.parse(capturedOpts.body);
-      assert.equal(payload.event_type, 'catalog-sync');
-      assert.equal(payload.client_payload.eventType, 'catalog-sync');
-    });
-
-    it('dispatches pulse for hourly cron "0 * * * *" outside 02:00/14:00', async () => {
-      let capturedUrl = null;
-      let capturedOpts = null;
-
-      globalThis.fetch = async (url, opts) => {
-        capturedUrl = url;
-        capturedOpts = opts;
-        return new Response(null, { status: 204 });
-      };
-
-      // Set scheduledTime to 05:00 UTC
-      const date = new Date('2026-10-24T05:00:00Z');
-      const event = { cron: '0 * * * *', scheduledTime: date.getTime() };
+      // Set scheduledTime to Wednesday 05:00 UTC
+      const date = new Date('2026-10-21T05:00:00Z');
+      const event = { cron: '7 * * * *', scheduledTime: date.getTime() };
       const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
       const ctx = { waitUntil: (p) => p };
 
@@ -206,23 +103,55 @@ describe('github-sync-dispatcher worker', () => {
       assert.equal(result.status, 204);
       assert.equal(result.event_type, 'pulse');
 
+      assert.equal(capturedUrl, 'https://api.github.com/repos/Mohit12441/anihubstream/dispatches');
+      assert.equal(capturedOpts.method, 'POST');
+      assert.equal(capturedOpts.headers['Authorization'], 'Bearer secret-token-xyz');
+      assert.equal(capturedOpts.headers['Accept'], 'application/vnd.github+json');
+      assert.equal(capturedOpts.headers['User-Agent'], 'AniHubStream-Cloudflare-Cron-Dispatcher/1.0');
+
       const payload = JSON.parse(capturedOpts.body);
       assert.equal(payload.event_type, 'pulse');
       assert.equal(payload.client_payload.eventType, 'pulse');
       assert.equal(payload.client_payload.target, 'pulse');
+      assert.equal(payload.client_payload.source, 'cloudflare-worker-cron');
     });
 
-    it('dispatches providers-sync for cron "45 */6 * * *"', async () => {
-      let capturedUrl = null;
+    it('dispatches daily-sync for 24-hour daily runs at 00:00 and 12:00 UTC (target: "daily")', async () => {
       let capturedOpts = null;
 
       globalThis.fetch = async (url, opts) => {
-        capturedUrl = url;
         capturedOpts = opts;
         return new Response(null, { status: 204 });
       };
 
-      const event = { cron: '45 */6 * * *', scheduledTime: Date.now() };
+      // Set scheduledTime to Wednesday 00:00 UTC
+      const date = new Date('2026-10-21T00:00:00Z');
+      const event = { cron: '7 * * * *', scheduledTime: date.getTime() };
+      const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
+      const ctx = { waitUntil: (p) => p };
+
+      const result = await worker.scheduled(event, env, ctx);
+      assert.equal(result.success, true);
+      assert.equal(result.status, 204);
+      assert.equal(result.event_type, 'daily-sync');
+
+      const payload = JSON.parse(capturedOpts.body);
+      assert.equal(payload.event_type, 'daily-sync');
+      assert.equal(payload.client_payload.eventType, 'daily-sync');
+      assert.equal(payload.client_payload.target, 'daily');
+    });
+
+    it('dispatches providers-sync on Sunday at 03:00 UTC (target: "providers")', async () => {
+      let capturedOpts = null;
+
+      globalThis.fetch = async (url, opts) => {
+        capturedOpts = opts;
+        return new Response(null, { status: 204 });
+      };
+
+      // Set scheduledTime to Sunday 03:00 UTC (2026-10-25 was Sunday)
+      const date = new Date('2026-10-25T03:00:00Z');
+      const event = { cron: '7 * * * *', scheduledTime: date.getTime() };
       const env = { GH_DISPATCH_TOKEN: 'secret-token-xyz' };
       const ctx = { waitUntil: (p) => p };
 
@@ -234,10 +163,11 @@ describe('github-sync-dispatcher worker', () => {
       const payload = JSON.parse(capturedOpts.body);
       assert.equal(payload.event_type, 'providers-sync');
       assert.equal(payload.client_payload.eventType, 'providers-sync');
+      assert.equal(payload.client_payload.target, 'providers');
     });
 
     it('throws error when GH_DISPATCH_TOKEN is missing (records as failed execution)', async () => {
-      const event = { cron: '7,37 * * * *', scheduledTime: Date.now() };
+      const event = { cron: '7 * * * *', scheduledTime: Date.now() };
       const env = {}; // No token
       const ctx = { waitUntil: (p) => p };
 
@@ -245,7 +175,7 @@ describe('github-sync-dispatcher worker', () => {
         async () => {
           await worker.scheduled(event, env, ctx);
         },
-        /Scheduled dispatch failed for "anilist-sync": Missing GH_DISPATCH_TOKEN/
+        /Scheduled dispatch failed for ".*": Missing GH_DISPATCH_TOKEN/
       );
     });
 
@@ -254,7 +184,7 @@ describe('github-sync-dispatcher worker', () => {
         return new Response(JSON.stringify({ message: 'Bad credentials' }), { status: 401 });
       };
 
-      const event = { cron: '17,47 * * * *', scheduledTime: Date.now() };
+      const event = { cron: '7 * * * *', scheduledTime: Date.now() };
       const env = { GH_DISPATCH_TOKEN: 'invalid-token' };
       const ctx = { waitUntil: (p) => p };
 
@@ -262,7 +192,7 @@ describe('github-sync-dispatcher worker', () => {
         async () => {
           await worker.scheduled(event, env, ctx);
         },
-        /Scheduled dispatch failed for "kitsu-sync": Bad credentials/
+        /Scheduled dispatch failed for ".*": Bad credentials/
       );
     });
 
