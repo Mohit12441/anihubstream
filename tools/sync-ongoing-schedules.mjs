@@ -94,11 +94,10 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
       console.log(`🧹 Cleaned up ${cleaned.changes} stale schedule slots for non-ongoing anime.`);
     }
 
-    // Clear unverified/bogus mock dub timestamps for sub-only anime (e.g. A Tale of the Secret Saint)
+    // Clear unverified/bogus mock dub timestamps across catalog
     db.prepare(`
       UPDATE anime SET sched_dub_at = NULL
-      WHERE id = 'a-tale-of-the-secret-saint'
-         OR id IN ('a-good-day-to-ascend', 'a-will-eternal-final-season', 'dawang-raoming-3', 'renegade-immortal', 'white-cat-legend-season-3', 'holo-no-graffiti', 'shin-chan', 'detective-conan', 'dandivine', 'a-certain-dark-item', 'battle-spirits-re-zekkai-no-ku', 'beyond-times-gaze-2nd-season')
+      WHERE sched_dub_at IS NOT NULL
     `).run();
 
     // 2. Query ongoing anime with AniList IDs from either anime_id_map or source_ids
@@ -111,6 +110,7 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
         a.sched_time,
         a.sched_season,
         a.sched_episode,
+        a.sched_sub_at,
         COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
       FROM anime a
       LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -135,8 +135,7 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
 
       await d1Query(`
         UPDATE anime SET sched_dub_at = NULL
-        WHERE id = 'a-tale-of-the-secret-saint'
-           OR id IN ('a-good-day-to-ascend', 'a-will-eternal-final-season', 'dawang-raoming-3', 'renegade-immortal', 'white-cat-legend-season-3', 'holo-no-graffiti', 'shin-chan', 'detective-conan', 'dandivine', 'a-certain-dark-item', 'battle-spirits-re-zekkai-no-ku', 'beyond-times-gaze-2nd-season')
+        WHERE sched_dub_at IS NOT NULL
       `);
     } catch (err) {
       if (err.message && (err.message.includes('7500') || err.message.includes('daily row write limit'))) {
@@ -154,6 +153,7 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
         a.sched_time,
         a.sched_season,
         a.sched_episode,
+        a.sched_sub_at,
         COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
       FROM anime a
       LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -170,7 +170,8 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
           a.sched_date,
           a.sched_time,
           a.sched_season,
-        a.sched_episode,
+          a.sched_episode,
+          a.sched_sub_at,
           COALESCE(m.anilist_id, CAST(json_extract(a.source_ids, '$.anilist') AS INTEGER)) as anilist_id
         FROM anime a
         LEFT JOIN anime_id_map m ON a.id = m.anime_id
@@ -220,7 +221,9 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
         const nextEpNum = Number(m.nextAiringEpisode.episode) || 0;
         const latestAiredEp = nextEpNum > 1 ? nextEpNum - 1 : (nextEpNum === 1 ? 1 : 0);
 
-        // Delta check: skip write if already matching stored values
+        const subAtMs = d.getTime();
+
+        // Delta check: skip write if already matching stored values (including epoch sub timestamp)
         const isUnchanged =
           existing &&
           existing.sched_day === schedDay &&
@@ -228,10 +231,10 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
           existing.sched_date === dateStr &&
           existing.sched_time === timeStr &&
           existing.sched_season === sKey &&
-          existing.sched_episode === (nextEpNum || null);
+          existing.sched_episode === (nextEpNum || null) &&
+          existing.sched_sub_at === subAtMs;
 
         if (!isUnchanged) {
-          const subAtMs = d.getTime();
           if (db) {
             db.prepare(`
               UPDATE anime SET
