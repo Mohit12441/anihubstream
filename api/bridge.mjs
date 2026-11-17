@@ -507,7 +507,7 @@ const server = http.createServer(async (req, res) => {
 
   if (pathname === '/resolve') {
     const animeId = reqUrl.searchParams.get('anime_id') || '';
-    const title = reqUrl.searchParams.get('title') || '';
+    const title = reqUrl.searchParams.get('title') || animeId.replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai|hdrezka):/i, '').replace(/[-_]+/g, ' ').trim();
     const slug = reqUrl.searchParams.get('slug') || reqUrl.searchParams.get('providerSlug') || '';
     const ep = Number(reqUrl.searchParams.get('ep') || '1');
     const audio = reqUrl.searchParams.get('audio') || 'sub';
@@ -626,7 +626,7 @@ const server = http.createServer(async (req, res) => {
               if (details) resolvedSlug = slug;
             }
             if (!details && title) {
-              const searchResults = await adapter.search(title).catch(() => []);
+              const searchResults = await adapter.search(title, { malId: mal }).catch(() => []);
               if (searchResults && searchResults.length > 0) {
                 let targetItem = searchResults[0];
                 if (searchResults.length > 1) {
@@ -657,9 +657,10 @@ const server = http.createServer(async (req, res) => {
               const targetEp = epList.find((e) => e.number === ep) || (ep === 1 ? epList[0] : null);
               if (targetEp) {
                 const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio }).catch(() => null);
-                const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0];
+                const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0] || src?.rawUrl;
                 if (firstEmbed && adapter.resolve) {
-                  const res = await adapter.resolve(firstEmbed, { quality: serverParam, skip: src?.skip }).catch(() => null);
+                  const embedPayload = adapter.id === 'hdrezka' ? src : firstEmbed;
+                  const res = await adapter.resolve(embedPayload, { quality: serverParam, skip: src?.skip, subtitles: src?.subtitle }).catch(() => null);
                   const streamCandidate = res?.master?.url || res?.streamUrl;
                   if (streamCandidate) {
                     if (res.kind === 'embed' || res.type === 'embed' || streamCandidate.includes('morencius') || (!streamCandidate.includes('.m3u8') && !streamCandidate.includes('.mp4') && streamCandidate.includes('/embed'))) {
@@ -748,7 +749,7 @@ const server = http.createServer(async (req, res) => {
         proof,
         master: streamUrl,
         referer: resolved.master?.headers?.referer || resolved.referer || (effectiveProvider === 'hianime' ? 'https://zokoanime.video/' : (effectiveProvider === 'anikoto' || effectiveProvider === 'aniwatch') ? 'https://megaplay.buzz/' : undefined),
-        type: resolved.type || (streamUrl.includes('.m3u8') ? 'hls' : 'embed'),
+        type: resolved.type || (streamUrl.includes('.m3u8') ? 'hls' : (streamUrl.includes('.mp4') ? 'mp4' : 'embed')),
         defaultEmbed: resolved.defaultEmbed || undefined,
         subtitles: (resolved.subtitles || []).map((s) => ({
           ...s,

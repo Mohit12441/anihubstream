@@ -48,6 +48,8 @@ function getProviderIcon(provId: string) {
   switch (provId) {
     case 'anikoto':
       return <Zap size={14} className="text-amber-400" />;
+    case 'hdrezka':
+      return <Film size={14} className="text-amber-400" />;
     case 'hianime':
       return <Sparkles size={14} className="text-sky-400" />;
     case 'aniwatch':
@@ -99,9 +101,16 @@ export function AnimeDetail() {
       const hasDub = provKey === 'anipm' || Boolean(s.id?.includes('-dub') || s.audio === 'dub');
 
       if (!existing) {
+        let displayName = 'P2P Swarm';
+        if (provKey === 'anikoto') displayName = 'AniKoto';
+        else if (provKey === 'hdrezka') displayName = 'HDRezka';
+        else if (provKey === 'hianime') displayName = 'HiAnime';
+        else if (provKey === 'aniwatch') displayName = 'AniWatch';
+        else if (provKey === 'anipm') displayName = 'AniPM';
+
         map.set(provKey, {
           id: provKey,
-          name: provKey === 'anikoto' ? 'AniKoto' : provKey === 'hianime' ? 'HiAnime' : provKey === 'aniwatch' ? 'AniWatch' : provKey === 'anipm' ? 'AniPM' : 'P2P Swarm',
+          name: displayName,
           status: isUnavailable ? 'unavailable' : 'ready',
           unavailableReason: s.unavailableReason,
           mirrorCount: isUnavailable ? 0 : 1,
@@ -116,7 +125,7 @@ export function AnimeDetail() {
       }
     }
 
-    const order = ['anikoto', 'hianime', 'aniwatch', 'anipm', 'torrent'];
+    const order = ['anikoto', 'hdrezka', 'hianime', 'aniwatch', 'anipm', 'torrent'];
     return Array.from(map.values()).sort((a, b) => {
       const idxA = order.indexOf(a.id);
       const idxB = order.indexOf(b.id);
@@ -417,8 +426,14 @@ export function AnimeDetail() {
                                   <span>{p.mirrorCount} Mirror{p.mirrorCount === 1 ? '' : 's'}</span>
                                 </span>
                                 <div className="ad-provider-tags">
-                                  <span className="ad-provider-tag ad-provider-tag--sub">SUB</span>
-                                  {p.hasDub && <span className="ad-provider-tag ad-provider-tag--dub">DUB</span>}
+                                  {p.id === 'hdrezka' ? (
+                                    <span className="ad-provider-tag" style={{ background: 'rgba(245, 158, 11, 0.22)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.35)' }}>ULTRA MP4</span>
+                                  ) : (
+                                    <>
+                                      <span className="ad-provider-tag ad-provider-tag--sub">SUB</span>
+                                      {p.hasDub && <span className="ad-provider-tag ad-provider-tag--dub">DUB</span>}
+                                    </>
+                                  )}
                                 </div>
                               </>
                             )}

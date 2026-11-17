@@ -15,6 +15,12 @@ export async function onRequest(context) {
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /api/anime',
+      'Allow: /api/genres',
+      'Allow: /api/home',
+      'Allow: /api/schedule',
+      'Allow: /api/stats',
+      'Allow: /api/search',
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
@@ -22,6 +28,12 @@ export async function onRequest(context) {
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /api/anime',
+      'Allow: /api/genres',
+      'Allow: /api/home',
+      'Allow: /api/schedule',
+      'Allow: /api/stats',
+      'Allow: /api/search',
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
@@ -29,6 +41,12 @@ export async function onRequest(context) {
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /api/anime',
+      'Allow: /api/genres',
+      'Allow: /api/home',
+      'Allow: /api/schedule',
+      'Allow: /api/stats',
+      'Allow: /api/search',
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
@@ -36,6 +54,12 @@ export async function onRequest(context) {
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /api/anime',
+      'Allow: /api/genres',
+      'Allow: /api/home',
+      'Allow: /api/schedule',
+      'Allow: /api/stats',
+      'Allow: /api/search',
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
@@ -43,6 +67,12 @@ export async function onRequest(context) {
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /api/anime',
+      'Allow: /api/genres',
+      'Allow: /api/home',
+      'Allow: /api/schedule',
+      'Allow: /api/stats',
+      'Allow: /api/search',
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
@@ -50,6 +80,12 @@ export async function onRequest(context) {
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /api/anime',
+      'Allow: /api/genres',
+      'Allow: /api/home',
+      'Allow: /api/schedule',
+      'Allow: /api/stats',
+      'Allow: /api/search',
       'Disallow: /api/',
       'Disallow: /mylist',
       '',
@@ -505,6 +541,39 @@ export async function onRequest(context) {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Broadcast Schedule</h1><p>Discover when new anime episodes air weekly with local timezone conversion. Stay updated on premiere dates, seasonal broadcast slots, and episode countdowns.</p></main>`;
   } else if (path === '/discover') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Discover Trending Anime</h1><p>Explore currently trending anime titles, seasonal fan favorites, top-rated series, and recommended hidden gems updated in real-time from community watch metrics.</p></main>`;
+  } else if (path === '/' || path === '') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
+<h1>AniHubStream — Watch High Quality Anime Online Free Anytime, Anywhere</h1>
+<p>Welcome to AniHubStream, the next-generation anime streaming platform offering seamless high-definition anime playback, synchronized subtitle streams, instant server switching, and comprehensive episodic navigation across all major releases. Stream subbed and dubbed anime with ultra-low latency, clean weekly broadcast schedules, community ratings, and full episode guides.</p>
+<section aria-labelledby="crawler-popular-anime">
+<h2 id="crawler-popular-anime">Popular & Trending Anime Series</h2>
+<p>Stream trending anime series including Jujutsu Kaisen, Demon Slayer, Solo Leveling, One Piece, Attack on Titan, Chainsaw Man, Frieren: Beyond Journey's End, Bleach, and DanDaDan in full HD with zero ads.</p>
+<nav aria-label="Quick Links" style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:1rem 0;">
+<a href="/anime" style="color:#ff1f4a;text-decoration:underline;">Browse Full Catalogue</a> |
+<a href="/genres" style="color:#ff1f4a;text-decoration:underline;">All Anime Genres</a> |
+<a href="/schedule" style="color:#ff1f4a;text-decoration:underline;">Broadcast Schedule</a> |
+<a href="/discover" style="color:#ff1f4a;text-decoration:underline;">Discover Trending Anime</a>
+</nav>
+</section>
+<section aria-labelledby="crawler-features">
+<h2 id="crawler-features">Features & Streaming Capabilities</h2>
+<p>AniHubStream delivers multi-server redundancy, episode intro and outro auto-skip via AniSkip, customizable subtitle styling, and persistent playback resume across desktop and mobile browsers.</p>
+</section>
+</main>`;
+  } else if (path === '/anime') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
+<h1>Anime Catalogue — Browse All Series, Movies, and OVAs</h1>
+<p>Explore thousands of anime series, films, and seasonal broadcasts with subbed and dubbed video streams, episode ratings, air dates, and complete story synopses.</p>
+<nav aria-label="Genre Navigation" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;">
+<a href="/genres?genre=action" style="color:#ff1f4a;">Action</a> |
+<a href="/genres?genre=adventure" style="color:#ff1f4a;">Adventure</a> |
+<a href="/genres?genre=fantasy" style="color:#ff1f4a;">Fantasy</a> |
+<a href="/genres?genre=romance" style="color:#ff1f4a;">Romance</a> |
+<a href="/genres?genre=comedy" style="color:#ff1f4a;">Comedy</a> |
+<a href="/genres?genre=sci-fi" style="color:#ff1f4a;">Sci-Fi</a> |
+<a href="/genres?genre=supernatural" style="color:#ff1f4a;">Supernatural</a>
+</nav>
+</main>`;
   }
 
   // Use HTMLRewriter to dynamically rewrite head tags

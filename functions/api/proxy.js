@@ -62,6 +62,13 @@ const ALLOWED_STREAMING_DOMAINS = [
   'akamaized.net',
   'cloudfront.net',
   'fastly.net',
+  'rezka.ag',
+  'hdrezka.ag',
+  'rezkify.com',
+  'voidboost.cc',
+  'voidboost.net',
+  'voidboost.one',
+  'streamguard.cc',
   'example.com', // for test mock fixtures
 ];
 
@@ -102,7 +109,7 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '', prov
   // 3. Verified stream CDN pattern:
   // Upstream extractors (like Megaplay, AniKoto, HiAnime) dynamically rotate domain names for CDN video chunks.
   // Any public non-private domain requested with a trusted streaming Referer and anime media asset path/extension is authorized.
-  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun'];
+  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun', 'rezka.ag'];
   const hasTrustedReferer = customReferer && trustedReferers.some((r) => customReferer.includes(r));
   if (hasTrustedReferer) {
     const isStreamAsset =
@@ -354,11 +361,11 @@ export const onRequest = async (context) => {
       }
     }
 
-    // Bridge forwarder for Settlar and Beta (bypasses Cloudflare JA3 bot fingerprinting via native transport)
+    // Bridge forwarder for Settlar, Beta, and HDRezka (bypasses Cloudflare JA3 bot fingerprinting via native transport)
     const bridgeBase = env?.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';
-    if (parsedTarget.hostname.includes('settlar.io') || provParam === 'settlar' || parsedTarget.hostname.includes('cno.to') || provParam === 'beta' || parsedTarget.hostname.includes('beamcube.top')) {
+    if (parsedTarget.hostname.includes('settlar.io') || provParam === 'settlar' || parsedTarget.hostname.includes('cno.to') || provParam === 'beta' || parsedTarget.hostname.includes('beamcube.top') || provParam === 'hdrezka' || parsedTarget.hostname.includes('voidboost') || parsedTarget.hostname.includes('streamguard')) {
       try {
-        const effectiveP = provParam || (parsedTarget.hostname.includes('settlar.io') ? 'settlar' : 'beta');
+        const effectiveP = provParam || (parsedTarget.hostname.includes('settlar.io') ? 'settlar' : (parsedTarget.hostname.includes('voidboost') || parsedTarget.hostname.includes('streamguard')) ? 'hdrezka' : 'beta');
         const bridgeProxyUrl = `${bridgeBase}/api/proxy?u=${encodeURIComponent(targetUrl)}&p=${effectiveP}`;
         const fwdHeaders = new Headers();
         if (rangeHeader) fwdHeaders.set('range', rangeHeader);

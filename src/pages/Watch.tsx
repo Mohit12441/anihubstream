@@ -7,6 +7,7 @@ import {
   Download,
   Heart,
   Info,
+  Layers,
   ListVideo,
   Play,
   Server,
@@ -63,6 +64,7 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta', name: 'AniPM · Beta', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta-dub', name: 'AniPM · Beta (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hdrezka:ultra', name: 'HDRezka · Ultra HD (1080p)', provider: 'hdrezka', quality: '1080p Ultra', audio: 'russian', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 
@@ -99,7 +101,7 @@ export function Watch() {
     const queryTitle = params.get('title') || '';
     const queryPoster = params.get('poster') || '';
     const cleanBase = id
-      .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i, '')
+      .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai|hdrezka):/i, '')
       .replace(/-([a-z0-9]{4,8})$/i, (match, token) => (isHashToken(token) ? '' : match))
       .replace(/[-_:]+/g, ' ')
       .trim();
@@ -225,10 +227,10 @@ export function Watch() {
   const [playServers, setPlayServers] = useState<PlayServer[]>(DEFAULT_PLAY_SERVERS);
   const [_scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const [_providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
-  const [_availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
+  const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
   const targetProvider = (
     params.get('provider') ||
-    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : '')
+    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : '')
   ).toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const srvParam = params.get('server');
@@ -239,15 +241,39 @@ export function Watch() {
   });
   const [activeTab, setActiveTab] = useState<'episode' | 'anime'>('episode');
 
+  const displayProviders = useMemo(() => {
+    if (availableProvidersList && availableProvidersList.length > 0) {
+      return availableProvidersList;
+    }
+    return [
+      { id: 'anikoto', name: 'AniKoto', available: true },
+      { id: 'hdrezka', name: 'HDRezka', available: true },
+      { id: 'hianime', name: 'HiAnime', available: true },
+      { id: 'aniwatch', name: 'AniWatch', available: true },
+      { id: 'anipm', name: 'AniPM', available: true },
+      { id: 'torrent', name: 'P2P Swarm', available: true },
+    ];
+  }, [availableProvidersList]);
+
   const activeProvider = useMemo(() => {
     const raw = targetProvider || (activeServerId ? (activeServerId.includes(':') ? activeServerId.split(':')[0] : '') : 'anikoto');
     if (raw.toLowerCase().includes('anipm')) return 'AniPM';
     if (raw.toLowerCase().includes('anikoto')) return 'AniKoto';
     if (raw.toLowerCase().includes('hianime')) return 'HiAnime';
     if (raw.toLowerCase().includes('aniwatch')) return 'AniWatch';
+    if (raw.toLowerCase().includes('hdrezka')) return 'HDRezka';
     if (raw.toLowerCase().includes('torrent') || raw.toLowerCase().includes('p2p')) return 'P2P';
     return raw ? raw.charAt(0).toUpperCase() + raw.slice(1) : 'AniKoto';
   }, [targetProvider, activeServerId]);
+
+  const audioMatchingServers = useMemo(() => {
+    const isDub = prefs.audio === 'dub';
+    const filtered = playServers.filter((s) => {
+      const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
+      return isDub ? sDub : !sDub;
+    });
+    return filtered.length > 0 ? filtered : playServers;
+  }, [playServers, prefs.audio]);
 
   const currentSubservers = useMemo(() => {
     const isDub = prefs.audio === 'dub';
@@ -260,6 +286,7 @@ export function Watch() {
       if (targetKey === 'anikoto') return p === 'anikoto' || s.id.startsWith('anikoto:');
       if (targetKey === 'hianime') return p === 'hianime' || s.id.startsWith('hianime:');
       if (targetKey === 'aniwatch') return p === 'aniwatch' || s.id.startsWith('aniwatch:');
+      if (targetKey === 'hdrezka') return p === 'hdrezka' || s.id.startsWith('hdrezka:');
       if (targetKey === 'p2p') return p === 'torrent' || s.id.startsWith('torrent:');
       return p === targetKey;
     });
@@ -700,6 +727,20 @@ export function Watch() {
     notify(`Switched to ${server.name} (${srvAudio.toUpperCase()})`);
   };
 
+  const handleSelectProvider = (provId: string) => {
+    const targetKey = provId.toLowerCase();
+    const defaultSrvId = serverIdFromProvider(targetKey, prefs.audio);
+    setActiveServerId(defaultSrvId);
+    const newParams = new URLSearchParams(params);
+    newParams.set('provider', targetKey);
+    const serverNameOnly = defaultSrvId.includes(':')
+      ? defaultSrvId.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '')
+      : defaultSrvId;
+    newParams.set('server', serverNameOnly);
+    navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
+    notify(`Switched provider to ${provId === 'hdrezka' ? 'HDRezka' : provId.toUpperCase()}`);
+  };
+
   const crumbs = [
     { label: 'Home', to: '/' },
     { label: 'Anime', to: '/anime' },
@@ -765,16 +806,49 @@ export function Watch() {
             onStreamInfo={setCurrentStream}
             serverId={activeServerId}
             onServerChange={setActiveServerId}
-            servers={currentSubservers}
+            servers={audioMatchingServers}
             onSelectServer={handleSelectServer}
             initialServer={activeServer}
             initialPartyRoom={params.get('party')}
           />
 
-          {/* EXTERNAL SUBSERVER SELECTOR */}
-          {currentSubservers.length > 0 && (
-            <div className="watch__servers-external">
-              <div className="watch__ext-subservers-row">
+          {/* EXTERNAL PROVIDER & SUBSERVER SELECTOR */}
+          <div className="watch__servers-external">
+            {/* Top row: Providers (AniKoto, HDRezka, HiAnime, AniWatch, AniPM, P2P) */}
+            <div className="watch__ext-row watch__ext-providers-row">
+              <span className="watch__ext-label">
+                <Layers size={13} aria-hidden="true" />
+                <span>Provider:</span>
+              </span>
+              <div className="watch__ext-pill-list">
+                {displayProviders.map((p) => {
+                  const pId = p.id.toLowerCase();
+                  const isActive =
+                    activeProvider.toLowerCase() === pId ||
+                    (pId === 'torrent' && activeProvider.toLowerCase() === 'p2p') ||
+                    p.name.toLowerCase() === activeProvider.toLowerCase();
+                  const isRezka = pId === 'hdrezka';
+                  return (
+                    <button
+                      key={p.id}
+                      type="button"
+                      className={`watch__ext-provider-pill watch__ext-prov--${pId}${isActive ? ' is-active' : ''}`}
+                      onClick={() => handleSelectProvider(p.id)}
+                      title={`Switch streaming provider to ${p.name}`}
+                    >
+                      <span className={`watch__ext-prov-dot${isRezka ? ' is-rezka' : ''}`} />
+                      <span className="watch__ext-prov-name">{p.name}</span>
+                      {isRezka && <span className="watch__rezka-badge">Ultra</span>}
+                      {isActive && <span className="watch__ext-active-badge">Active</span>}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Bottom row: Mirrors for active provider */}
+            {currentSubservers.length > 0 && (
+              <div className="watch__ext-row watch__ext-subservers-row">
                 <span className="watch__ext-label">
                   <Server size={13} aria-hidden="true" />
                   <span>{activeProvider} Mirrors ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
@@ -784,17 +858,19 @@ export function Watch() {
                     const isSelected = s.id === activeServerId;
                     const isUnavailable = s.status === 'unavailable';
                     const name = s.name || cleanServerName(s);
+                    const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
                     return (
                       <button
                         key={s.id}
                         type="button"
                         disabled={isUnavailable}
-                        className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
+                        className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
                         onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
                         title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
                       >
-                        <span className={`watch__ext-subserver-dot${isUnavailable ? ' bg-amber-400' : ''}`} />
+                        <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
                         <span>{name}</span>
+                        {isRezka && <span className="watch__rezka-sub-tag">1080p Ultra</span>}
                         {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">(Unavailable)</span>}
                         {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
                       </button>
@@ -802,8 +878,8 @@ export function Watch() {
                   })}
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* STREAM UTILITY TOOLBAR */}
           <div className="watch__toolbar">

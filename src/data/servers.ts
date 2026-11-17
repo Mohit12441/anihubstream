@@ -112,11 +112,28 @@ export const ANIPM_SERVER: StreamServer = {
   note: 'Open partner Settlar session stream with precise skip intervals.',
 };
 
+export const HDREZKA_SERVER: StreamServer = {
+  id: 'hdrezka-live',
+  name: 'HDRezka',
+  region: 'Voidboost High-Speed CDN',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: ['Russian'],
+    subtitleType: 'selectable',
+    audioLanguages: ['Russian (dub)', 'Japanese (original)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Direct Voidboost CDN 1080p Ultra MP4 download and progressive stream.',
+};
+
 export const SERVERS: StreamServer[] = [
   LIVE_SERVER,
   ANIWATCH_SERVER,
   HIANIME_SERVER,
   ANIPM_SERVER,
+  HDREZKA_SERVER,
 ];
 
 const ALL_PROVIDER_IDS = [
@@ -124,6 +141,7 @@ const ALL_PROVIDER_IDS = [
   'hianime',
   'anikoto',
   'anipm',
+  'hdrezka',
 ];
 
 export function providerFromId(serverId: string): string {
@@ -161,6 +179,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   if (norm === 'anikoto') return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
   if (norm === 'aniwatch') return isDub ? 'aniwatch:HD-1-dub' : 'aniwatch:HD-1';
   if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';
+  if (norm === 'hdrezka') return 'hdrezka:ultra';
   return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;
 }
 

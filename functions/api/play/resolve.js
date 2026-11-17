@@ -4,7 +4,7 @@ import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 import { resolveAniPmBetaDirect } from '../_anipm.js';
 
-const BRIDGE_TIMEOUT_MS = 6_000;
+const BRIDGE_TIMEOUT_MS = 15_000;
 
 /**
  * Lazy Server Stream Resolution Endpoint
@@ -27,8 +27,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const rawServerParam = url.searchParams.get('server') || '';
         let serverParam = rawServerParam;
         if (serverParam.toLowerCase() === 'mega') serverParam = 'MegaPlay';
-        let audio = url.searchParams.get('audio') === 'hindi' ? 'hindi'
-          : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
+        const rawAudio = (url.searchParams.get('audio') || '').toLowerCase();
+        let audio = ['hindi', 'russian', 'spanish', 'dub'].includes(rawAudio) ? rawAudio : 'sub';
         if (serverParam.endsWith('-dub')) {
           audio = 'dub';
           serverParam = serverParam.replace(/-dub$/, '');

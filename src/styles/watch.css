@@ -342,18 +342,32 @@
   outline-offset: 3px;
 }
 
-/* ---------- External Subserver Bar ---------- */
+/* ---------- External Subserver & Provider Bar ---------- */
 .watch__servers-external {
   margin-top: 14px;
   padding: 12px 16px;
-  background: linear-gradient(135deg, rgba(16, 18, 28, 0.9), rgba(10, 11, 18, 0.95));
+  background: linear-gradient(135deg, rgba(16, 18, 28, 0.92), rgba(10, 11, 18, 0.96));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 14px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.watch__ext-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.watch__ext-providers-row {
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .watch__ext-subservers-row {
@@ -368,7 +382,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -380,11 +394,88 @@
   color: var(--p-accent, #ff2a5f);
 }
 
+.watch__ext-pill-list,
 .watch__ext-subservers-list {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+/* Provider Pills */
+.watch__ext-provider-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: all var(--dur-2, 0.2s) var(--ease, ease);
+}
+
+.watch__ext-provider-pill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.watch__ext-provider-pill.is-active {
+  background: linear-gradient(135deg, var(--p-accent, #6366f1), color-mix(in srgb, var(--p-accent, #6366f1) 80%, #000));
+  border-color: color-mix(in srgb, var(--p-accent, #6366f1) 90%, #fff);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.45);
+}
+
+/* HDRezka specific provider styling */
+.watch__ext-prov--hdrezka:hover {
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+}
+
+.watch__ext-prov--hdrezka.is-active {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-color: #fbbf24;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.55);
+}
+
+.watch__ext-prov-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 6px #34d399;
+}
+
+.watch__ext-prov-dot.is-rezka {
+  background: #fbbf24;
+  box-shadow: 0 0 6px #f59e0b;
+}
+
+.watch__rezka-badge {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: rgba(245, 158, 11, 0.22);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fef3c7;
+  letter-spacing: 0.04em;
+  margin-left: 2px;
+}
+
+.watch__ext-prov--hdrezka.is-active .watch__rezka-badge {
+  background: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 
 .watch__ext-subserver-btn {
@@ -415,6 +506,28 @@
   border-color: color-mix(in srgb, var(--p-accent, #ff2a5f) 90%, #fff);
   color: #fff;
   box-shadow: 0 0 16px rgba(255, 42, 95, 0.45);
+}
+
+.watch__ext-subserver-btn.is-rezka.is-active {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-color: #fbbf24;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.5);
+}
+
+.watch__ext-subserver-dot.is-rezka {
+  background: #fbbf24;
+  box-shadow: 0 0 6px #f59e0b;
+}
+
+.watch__rezka-sub-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fef08a;
+  background: rgba(245, 158, 11, 0.22);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 2px;
 }
 
 .watch__ext-active-badge {

@@ -589,6 +589,17 @@ export const onRequestGet = async ({ request, env }) => {
     }
 
     if (isPipe) {
+      if (!masterUrlToPipe && bridgeBase) {
+        try {
+          const bResolveUrl = `${bridgeBase}/resolve?title=${encodeURIComponent(animeTitle)}&ep=${ep}&provider=${provider}&audio=${audio}`;
+          const bRes = await fetch(bResolveUrl, { signal: AbortSignal.timeout(6000) });
+          if (bRes.ok) {
+            const bData = await bRes.json();
+            masterUrlToPipe = bData?.master?.url || bData?.master || bData?.streamUrl;
+            if (bData?.referer) pipeReferer = bData.referer;
+          }
+        } catch (_) {}
+      }
       if (!masterUrlToPipe) {
         throw new HttpError(404, 'not_found', `Could not resolve video stream to download for ${provider} episode ${ep}`);
       }

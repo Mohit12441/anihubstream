@@ -59,6 +59,7 @@ const PROVIDER_NAMES: Record<string, { name: string; badge: string; color: strin
   hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
   anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6', icon: '⚡' },
+  hdrezka: { name: 'HDRezka', badge: 'Ultra MP4', color: '#f59e0b', icon: '🎬' },
 };
 
 const POPULAR_SEARCHES = [

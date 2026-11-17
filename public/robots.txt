@@ -2,6 +2,12 @@ User-agent: *
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -10,6 +16,12 @@ User-agent: GPTBot
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -17,6 +29,12 @@ User-agent: ChatGPT-User
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -24,6 +42,12 @@ User-agent: ClaudeBot
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -31,6 +55,12 @@ User-agent: PerplexityBot
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -38,6 +68,12 @@ User-agent: Google-Extended
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -45,6 +81,12 @@ User-agent: Applebot-Extended
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
@@ -52,7 +94,14 @@ User-agent: cohere-ai
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /api/anime
+Allow: /api/genres
+Allow: /api/home
+Allow: /api/schedule
+Allow: /api/stats
+Allow: /api/search
 Disallow: /api/
 Disallow: /mylist
 
 Sitemap: https://anihubstream.com/sitemap.xml
+

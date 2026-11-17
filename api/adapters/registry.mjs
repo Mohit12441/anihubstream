@@ -3,6 +3,7 @@ import * as anikoto from '../anikoto.mjs';
 import * as hianime from '../hianime.mjs';
 import * as aniwatch from '../aniwatch.mjs';
 import * as anipm from '../anipm.mjs';
+import * as hdrezka from './hdrezka.mjs';
 
 /**
  * @typedef {Object} AdapterDefinition
@@ -75,6 +76,18 @@ registerAdapter({
   details: (slug, opts) => anipm.details(slug, opts),
   sources: (epId, opts) => anipm.sources(epId, opts),
   resolve: (embed, opts) => anipm.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'hdrezka',
+  name: 'HDRezka',
+  supportedAudio: ['russian', 'sub', 'dub'],
+  defaultType: 'mp4',
+  priority: 85,
+  search: (q, opts) => hdrezka.search(q, opts),
+  details: (slug, opts) => hdrezka.details(slug, opts),
+  sources: (epId, opts) => hdrezka.sources(epId, opts),
+  resolve: (embed, opts) => hdrezka.resolve(embed, opts),
 });
 
 registerAdapter({

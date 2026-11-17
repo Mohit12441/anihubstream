@@ -369,4 +369,43 @@ test('TASK 5 (P1) SEO: _middleware enriches specific episode requests with disti
   assert.ok(html.includes('"datePublished":"2013-04-06"'), 'Must include episode airdate in schema');
 });
 
+test('TASK 5 (P1) SEO: robots.txt and _middleware allow public API endpoints for SPA crawler rendering', async () => {
+  const robotsPath = path.resolve(process.cwd(), 'public/robots.txt');
+  const fileContent = fs.readFileSync(robotsPath, 'utf8');
+
+  assert.match(fileContent, /Allow:\s*\/api\/home/i);
+  assert.match(fileContent, /Allow:\s*\/api\/anime/i);
+  assert.match(fileContent, /Allow:\s*\/api\/genres/i);
+  assert.match(fileContent, /Allow:\s*\/api\/schedule/i);
+
+  const context = {
+    request: new Request('https://anihubstream.com/robots.txt'),
+    next: async () => new Response(''),
+    env: {},
+  };
+  const res = await onRequest(context);
+  const text = await res.text();
+  assert.match(text, /Allow:\s*\/api\/home/i);
+  assert.match(text, /Allow:\s*\/api\/anime/i);
+  assert.match(text, /Allow:\s*\/api\/genres/i);
+  assert.match(text, /Allow:\s*\/api\/schedule/i);
+  assert.match(text, /Disallow:\s*\/api\//i);
+});
+
+test('TASK 5 (P1) SEO: _middleware injects rich semantic HTML for homepage root (/) to prevent Soft 404', async () => {
+  const context = {
+    request: new Request('https://anihubstream.com/'),
+    next: async () => new Response('<!doctype html><html><head><title>AniHubStream</title></head><body><div id="root"></div></body></html>', {
+      headers: { 'content-type': 'text/html' },
+    }),
+    env: {},
+  };
+  const res = await onRequest(context);
+  const html = await res.text();
+  assert.ok(html.includes('AniHubStream — Watch High Quality Anime Online Free'), 'Must inject root H1 header');
+  assert.ok(html.includes('Popular & Trending Anime Series'), 'Must inject featured anime section');
+  assert.ok(html.includes('class="crawler-content"'), 'Must have crawler-content container');
+});
+
+
 

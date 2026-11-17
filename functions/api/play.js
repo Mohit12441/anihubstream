@@ -436,6 +436,18 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
 
   servers.push(
     makeServer({
+      id: 'hdrezka:ultra',
+      name: 'HDRezka · Ultra HD (1080p)',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'russian', provider: 'hdrezka', server: 'ultra' }),
+      type: 'mp4',
+      audio: 'russian',
+      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+    })
+  );
+
+  servers.push(
+    makeServer({
       id: 'torrent:P2P-1',
       name: 'P2P Swarm · WebTorrent',
       provider: 'torrent',
@@ -563,6 +575,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || null,
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || null,
       anipm: resolvedAnilistId ? String(resolvedAnilistId) : (animeRow?.anilist_id ? String(animeRow.anilist_id) : null),
+      hdrezka: pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || null,
     };
 
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
@@ -573,6 +586,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
       { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || { status: 'healthy', latencyMs: 70 }) },
+      { id: 'hdrezka', name: 'HDRezka', available: true, ...(providerHealth.hdrezka || { status: 'healthy', latencyMs: 85 }) },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
@@ -777,12 +791,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (serverParam) resolveBridgeUrl.searchParams.set('server', serverParam);
           if (resolvedMalId) resolveBridgeUrl.searchParams.set('mal', String(resolvedMalId));
           if (resolvedAnilistId || animeRow?.anilist_id) resolveBridgeUrl.searchParams.set('anilist', String(resolvedAnilistId || animeRow.anilist_id));
-          const provSlug = (requested && availableSlugs[requested]) || availableSlugs.anikoto || availableSlugs.hianime || availableSlugs.aniwatch || null;
+          const provSlug = (requested && availableSlugs[requested]) || (requested === 'hdrezka' ? null : (availableSlugs.anikoto || availableSlugs.hianime || availableSlugs.aniwatch || null));
           if (provSlug) resolveBridgeUrl.searchParams.set('slug', provSlug);
 
+          const bridgeTimeout = requested === 'hdrezka' ? 12_000 : (requested && requested !== 'auto' ? 5_000 : BRIDGE_TIMEOUT_MS);
           const res = await fetch(resolveBridgeUrl.toString(), {
             headers: { accept: 'application/json' },
-            signal: AbortSignal.timeout(BRIDGE_TIMEOUT_MS),
+            signal: AbortSignal.timeout(bridgeTimeout),
           });
           if (res.ok) return await res.json().catch(() => null);
         } catch {}
@@ -859,7 +874,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         });
       }
 
-      const isScopedUnavailable = !availableSlugs[requested];
+      const isScopedUnavailable = requested !== 'hdrezka' && requested !== 'torrent' && !availableSlugs[requested];
       let serversToReturn = defaultServers;
       if (requested && requested !== 'auto') {
         const matching = defaultServers.filter((s) => s.provider === requested);
@@ -1050,7 +1065,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       ...servers,
       ...defaultServers.filter((def) => !servers.some((s) => s.id === def.id)),
     ];
-    const isScopedUnavailable = Boolean(requested && requested !== 'auto' && !availableSlugs[requested]);
+    const isScopedUnavailable = Boolean(requested && requested !== 'auto' && requested !== 'hdrezka' && requested !== 'torrent' && !availableSlugs[requested]);
 
     return ok({
       title: resolvedTitle,

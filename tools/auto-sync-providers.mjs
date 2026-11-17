@@ -63,7 +63,7 @@ export async function autoSyncProviders({ quiet = false } = {}) {
   }
 
   // 2. Synchronize from anime_id_map into anime_provider_mapping
-  const providers = ['aniwatch', 'hianime', 'anikoto', 'adb', 'waw'];
+  const providers = ['aniwatch', 'hianime', 'anikoto', 'adb', 'waw', 'hdrezka'];
   let totalMapped = 0;
 
   for (const prov of providers) {
@@ -91,6 +91,31 @@ export async function autoSyncProviders({ quiet = false } = {}) {
   `).run();
   if (malAniwatchRes.changes > 0) {
     totalMapped += Number(malAniwatchRes.changes);
+  }
+
+  // 2c. Seed verified HDRezka slugs for key catalogue anime
+  const knownHdrezka = [
+    ['sousou-no-frieren', '62195'],
+    ['solo-leveling', '65738'],
+    ['jujutsu-kaisen', '35876'],
+    ['kimetsu-no-yaiba', '30522'],
+    ['shingeki-no-kyojin', '1973'],
+    ['black-clover', '26240'],
+    ['chainsaw-man', '50965'],
+    ['boku-no-hero-academia', '16104'],
+    ['one-piece', '1446'],
+    ['naruto-shippuuden', '1440'],
+    ['bleach', '1442'],
+    ['death-note', '1439'],
+  ];
+  for (const [aId, slug] of knownHdrezka) {
+    const rezkaRes = db.prepare(`
+      INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug, confidence, updated_at)
+      SELECT ?, 'hdrezka', ?, 1.0, unixepoch()
+      WHERE EXISTS (SELECT 1 FROM anime WHERE id = ?)
+      ON CONFLICT(anime_id, provider_id) DO UPDATE SET provider_slug = excluded.provider_slug, updated_at = unixepoch()
+    `).run(aId, slug, aId);
+    if (rezkaRes.changes > 0) totalMapped += Number(rezkaRes.changes);
   }
 
   // 3. Synchronize from anime.source_ids JSON into anime_provider_mapping

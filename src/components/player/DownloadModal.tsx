@@ -54,6 +54,12 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     badge: 'Settlar HLS Downloader',
     description: 'Settlar session stream-to-video assembler with skip timestamps.',
   },
+  hdrezka: {
+    name: 'HDRezka',
+    color: '#f59e0b',
+    badge: 'Ultra Direct MP4',
+    description: 'High-speed direct Voidboost CDN 1080p Ultra MP4 download.',
+  },
 };
 
 export function DownloadModal({
@@ -72,6 +78,7 @@ export function DownloadModal({
     if (clean.includes('hianime')) return 'hianime';
     if (clean.includes('aniwatch')) return 'aniwatch';
     if (clean.includes('anipm')) return 'anipm';
+    if (clean.includes('hdrezka')) return 'hdrezka';
     return 'anikoto';
   }, [activeProvider, currentStream]);
 
@@ -225,7 +232,7 @@ export function DownloadModal({
       const safeTitle = (anime.title || 'anime').replace(/[^a-zA-Z0-9_-]/g, '_');
       const filename = `${safeTitle}_EP${episode.n}_${item.quality}.mp4`;
 
-      const defaultReferer = selectedProvider === 'hianime' ? 'https://zokoanime.video/' : 'https://megaplay.buzz/';
+      const defaultReferer = selectedProvider === 'hdrezka' ? 'https://rezka.ag/' : selectedProvider === 'hianime' ? 'https://zokoanime.video/' : 'https://megaplay.buzz/';
       await downloadHlsStream({
         streamUrl: item.url,
         referer: item.referer || defaultReferer,

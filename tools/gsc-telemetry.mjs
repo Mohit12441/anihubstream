@@ -20,7 +20,7 @@ import crypto from 'node:crypto';
 
 const SCOPES = 'https://www.googleapis.com/auth/webmasters';
 const TOKEN_URI = 'https://oauth2.googleapis.com/token';
-const DEFAULT_SITE_URL = process.env.GSC_SITE_URL || 'https://anihubstream.pages.dev/';
+export const DEFAULT_SITE_URL = process.env.GSC_SITE_URL || 'sc-domain:anihubstream.com';
 
 /**
  * Finds service account JSON key in known locations
@@ -34,6 +34,7 @@ function findCredentialsFile() {
     './.gsc-key.json',
     './gsc-credentials.json',
     './tools/gsc-key.json',
+    'C:/api/gsc-key.json',
   ];
 
   for (const c of candidates) {
@@ -104,6 +105,9 @@ export async function inspectUrl(url, accessToken, siteUrl = DEFAULT_SITE_URL) {
   });
 
   if (!res.ok) {
+    if (res.status === 429) {
+      throw new Error('Google Search Console inspection quota exceeded (HTTP 429). Try again later.');
+    }
     const text = await res.text();
     throw new Error(`GSC URL Inspection API error HTTP ${res.status}: ${text}`);
   }
@@ -211,7 +215,84 @@ export async function deleteSitemap(accessToken, siteUrl = DEFAULT_SITE_URL, sit
   return { ok: true, status: res.status };
 }
 
+/**
+ * Extracts argument value supporting both `--flag=value` and `--flag value`
+ */
+export function getArg(name, args = process.argv) {
+  const prefix = `${name}=`;
+  const eq = args.find((a) => a.startsWith(prefix));
+  if (eq) return eq.slice(prefix.length);
+  const idx = args.indexOf(name);
+  if (idx !== -1 && args[idx + 1] && !args[idx + 1].startsWith('--')) {
+    return args[idx + 1];
+  }
+  return null;
+}
+
+export function resolveSiteProperty(targetUrl, availableSites = []) {
+  if (availableSites.includes(targetUrl)) return targetUrl;
+  try {
+    const u = new URL(targetUrl);
+    const domainProp = `sc-domain:${u.hostname}`;
+    if (availableSites.includes(domainProp)) return domainProp;
+    const strippedDomain = `sc-domain:${u.hostname.replace(/^www\./, '')}`;
+    if (availableSites.includes(strippedDomain)) return strippedDomain;
+  } catch {}
+  return availableSites[0] || DEFAULT_SITE_URL;
+}
+
+export function siteToInspectUrl(site) {
+  if (site.startsWith('sc-domain:')) {
+    return `https://${site.replace('sc-domain:', '')}/`;
+  }
+  if (!site.endsWith('/')) {
+    return `${site}/`;
+  }
+  return site;
+}
+
+/**
+ * Formats and prints URL Inspection API results
+ */
+export function printInspectionResult(result) {
+  const ir = result?.indexStatusResult;
+  console.log('\n--- Indexing Status ---');
+  console.log(`Verdict:        ${ir?.verdict || 'UNKNOWN'}`);
+  console.log(`Coverage State: ${ir?.coverageState || 'UNKNOWN'}`);
+  console.log(`Page Fetch:     ${ir?.pageFetchState || 'UNKNOWN'}`);
+  console.log(`Crawled As:     ${ir?.crawledAs || 'UNKNOWN'}`);
+  console.log(`Robots.txt:     ${ir?.robotsTxtState || 'ALLOWED'}`);
+  console.log(`Indexing State: ${ir?.indexingState || 'INDEXING_ALLOWED'}`);
+  console.log(`Last Crawled:   ${ir?.lastCrawlTime || 'Not yet crawled'}`);
+  console.log(`User Canonical: ${ir?.userCanonical || 'Not declared'}`);
+  console.log(`Google Canonical: ${ir?.googleCanonical || 'Pending'}`);
+  if (ir?.referringUrls?.length) {
+    console.log(`Referring URLs: ${ir.referringUrls.slice(0, 3).join(', ')}${ir.referringUrls.length > 3 ? ` (+${ir.referringUrls.length - 3} more)` : ''}`);
+  }
+  if (result?.richResultsResult) {
+    console.log(`Rich Results:   ${result.richResultsResult.verdict || 'UNKNOWN'}`);
+  }
+}
+
 async function main() {
+  if (process.argv.includes('--help') || process.argv.includes('-h')) {
+    console.log(`Usage: node tools/gsc-telemetry.mjs [options]
+
+Options:
+  --inspect [url]       Inspect indexing status of a specific URL
+  --analytics           Query search traffic, impressions, CTR, and top queries
+  --days <number>       Date range in days for analytics (default: 28)
+  --limit <number>      Max number of query rows to return (default: 10)
+  --sitemaps            List all sitemaps registered in Google Search Console
+  --submit-sitemap      Submit XML sitemap
+  --delete-sitemap      Delete registered sitemap
+  --reset-sitemap       Delete stale record and re-submit sitemap
+  --sitemap-url [url]   Override sitemap URL (default: https://anihubstream.com/sitemap.xml)
+  --help, -h            Show this help reference
+`);
+    return;
+  }
+
   const credPath = findCredentialsFile();
   if (!credPath) {
     console.error('❌ Google Search Console credentials file not found.');
@@ -235,7 +316,7 @@ async function main() {
     console.warn('⚠️ No verified properties found for this service account yet.');
     console.warn('\n👉 To grant access in Google Search Console:');
     console.warn('1. Open: https://search.google.com/search-console');
-    console.warn('2. Select your property in the top-left dropdown (e.g. https://anihubstream.pages.dev/)');
+    console.warn('2. Select your property in the top-left dropdown (e.g. sc-domain:anihubstream.com)');
     console.warn('3. Go to: Settings (bottom-left) ➔ Users and permissions ➔ Add user');
     console.warn(`4. Paste email: ${credentials.client_email}`);
     console.warn('5. Permission: Full (or Owner) ➔ Click "Add"');
@@ -245,58 +326,25 @@ async function main() {
     console.log(`🌐 Accessible Properties: ${sites.join(', ')}\n`);
   }
 
-  function resolveSiteProperty(targetUrl, availableSites) {
-    if (availableSites.includes(targetUrl)) return targetUrl;
-    try {
-      const u = new URL(targetUrl);
-      const domainProp = `sc-domain:${u.hostname}`;
-      if (availableSites.includes(domainProp)) return domainProp;
-      const strippedDomain = `sc-domain:${u.hostname.replace(/^www\./, '')}`;
-      if (availableSites.includes(strippedDomain)) return strippedDomain;
-    } catch {}
-    return availableSites[0] || DEFAULT_SITE_URL;
-  }
-
-  function siteToInspectUrl(site) {
-    if (site.startsWith('sc-domain:')) {
-      return `https://${site.replace('sc-domain:', '')}/`;
-    }
-    if (!site.endsWith('/')) {
-      return `${site}/`;
-    }
-    return site;
-  }
-
-  const inspectArg = process.argv.find((a) => a.startsWith('--inspect='));
+  const inspectTarget = getArg('--inspect');
   const isAnalytics = process.argv.includes('--analytics');
   const isSitemaps = process.argv.includes('--sitemaps');
   const isSubmitSitemap = process.argv.includes('--submit-sitemap') || process.argv.includes('--sitemap-submit');
   const isDeleteSitemap = process.argv.includes('--delete-sitemap') || process.argv.includes('--remove-sitemap');
   const isResetSitemap = process.argv.includes('--reset-sitemap');
-  const sitemapArg = process.argv.find((a) => a.startsWith('--sitemap-url='));
-  const targetSitemap = sitemapArg ? sitemapArg.split('=')[1] : 'https://anihubstream.com/sitemap.xml';
+  const targetSitemap = getArg('--sitemap-url') || 'https://anihubstream.com/sitemap.xml';
+  const days = Number(getArg('--days')) || 28;
+  const limit = Number(getArg('--limit')) || 10;
 
-  if (inspectArg) {
-    const targetUrl = inspectArg.split('=')[1];
-    const property = resolveSiteProperty(targetUrl, sites);
-    console.log(`🔍 Inspecting URL: ${targetUrl} (Property: ${property})`);
-    const result = await inspectUrl(targetUrl, token, property);
-    const indexResult = result?.indexStatusResult;
-    console.log('\n--- Indexing Status ---');
-    console.log(`Verdict:        ${indexResult?.verdict || 'UNKNOWN'}`);
-    console.log(`Coverage State: ${indexResult?.coverageState || 'UNKNOWN'}`);
-    console.log(`Robots.txt:     ${indexResult?.robotsTxtState || 'ALLOWED'}`);
-    console.log(`Indexing State: ${indexResult?.indexingState || 'INDEXING_ALLOWED'}`);
-    console.log(`Last Crawled:   ${indexResult?.lastCrawlTime || 'Not yet crawled'}`);
-    console.log(`User Canonical: ${indexResult?.userCanonical || 'Not declared'}`);
-    console.log(`Google Canonical: ${indexResult?.googleCanonical || 'Pending'}`);
-    if (result?.richResultsResult) {
-      console.log(`Rich Results:   ${result.richResultsResult.verdict || 'UNKNOWN'}`);
-    }
+  if (inspectTarget) {
+    const property = resolveSiteProperty(inspectTarget, sites);
+    console.log(`🔍 Inspecting URL: ${inspectTarget} (Property: ${property})`);
+    const result = await inspectUrl(inspectTarget, token, property);
+    printInspectionResult(result);
   } else if (isAnalytics) {
     const property = sites[0] || DEFAULT_SITE_URL;
-    console.log(`📊 Querying Search Analytics (Property: ${property})...`);
-    const data = await queryAnalytics(token, { siteUrl: property });
+    console.log(`📊 Querying Search Analytics (Property: ${property}, Days: ${days}, Limit: ${limit})...`);
+    const data = await queryAnalytics(token, { siteUrl: property, days, rowLimit: limit });
     console.log('\n--- Top Queries & Traffic ---');
     if (data.rows && data.rows.length) {
       for (const row of data.rows) {
@@ -342,15 +390,7 @@ async function main() {
     const defaultUrl = siteToInspectUrl(property);
     console.log(`Default Check: Inspecting Homepage (${defaultUrl}) under ${property}...`);
     const result = await inspectUrl(defaultUrl, token, property);
-    const indexResult = result?.indexStatusResult;
-    console.log('\n--- Indexing Status ---');
-    console.log(`Verdict:        ${indexResult?.verdict || 'UNKNOWN'}`);
-    console.log(`Coverage State: ${indexResult?.coverageState || 'UNKNOWN'}`);
-    console.log(`Robots.txt:     ${indexResult?.robotsTxtState || 'ALLOWED'}`);
-    console.log(`Indexing State: ${indexResult?.indexingState || 'INDEXING_ALLOWED'}`);
-    console.log(`Last Crawled:   ${indexResult?.lastCrawlTime || 'Not yet crawled'}`);
-    console.log(`User Canonical: ${indexResult?.userCanonical || 'Not declared'}`);
-    console.log(`Google Canonical: ${indexResult?.googleCanonical || 'Pending'}`);
+    printInspectionResult(result);
   }
 }
 
