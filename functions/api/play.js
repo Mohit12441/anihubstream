@@ -3,7 +3,7 @@ import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, e
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 import { resolveAniPmBetaDirect } from './_anipm.js';
-import { rezkaFetch, parseStreams } from '../_lib/hdrezka.js';
+import { rezkaFetch, parseStreams, hdrezkaMeta } from '../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 2_000;
 const ANISKIP_TIMEOUT_MS = 500;
@@ -780,35 +780,44 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             try {
               const rezkaId = availableSlugs.hdrezka;
               if (rezkaId) {
-                const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
-                  method: 'POST',
-                  headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
-                  body: new URLSearchParams({
-                    id: String(rezkaId),
-                    translator_id: '238',
-                    season: '1',
-                    episode: String(ep),
-                    action: 'get_stream',
-                  }).toString(),
-                });
-                if (res && res.ok) {
-                  const data = await res.json().catch(() => null);
-                  if (data?.success && data?.url) {
-                    const streams = parseStreams(data.url);
-                    const chosen = streams.find((s) => s.quality.includes('1080')) || streams[0];
-                    if (chosen?.url) {
-                      direct = {
-                        streamUrl: chosen.url,
-                        quality: chosen.quality,
-                        type: 'mp4',
-                        provider: 'hdrezka',
-                        referrerPolicy: 'no-referrer',
-                        audio: 'russian',
-                        audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
-                        subtitles: [],
-                        direct: streams,
-                      };
-                    }
+                // KV-first read of pre-cached metadata ahead of live fetch
+                const kvMeta = await hdrezkaMeta(env, rezkaId);
+                let rawPayload = null;
+                if (kvMeta?.ok && kvMeta.body) {
+                  rawPayload = kvMeta.body;
+                } else {
+                  const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
+                    method: 'POST',
+                    headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
+                    body: new URLSearchParams({
+                      id: String(rezkaId),
+                      translator_id: '238',
+                      season: '1',
+                      episode: String(ep),
+                      action: 'get_stream',
+                    }).toString(),
+                  });
+                  if (res && res.ok) {
+                    const data = await res.json().catch(() => null);
+                    if (data?.success && data?.url) rawPayload = data.url;
+                  }
+                }
+
+                if (rawPayload) {
+                  const streams = parseStreams(rawPayload);
+                  const chosen = streams.find((s) => s.quality.includes('1080')) || streams[0];
+                  if (chosen?.url) {
+                    direct = {
+                      streamUrl: chosen.url,
+                      quality: chosen.quality,
+                      type: 'mp4',
+                      provider: 'hdrezka',
+                      referrerPolicy: 'no-referrer',
+                      audio: 'russian',
+                      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                      subtitles: [],
+                      direct: streams,
+                    };
                   }
                 }
               }

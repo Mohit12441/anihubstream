@@ -55,6 +55,48 @@ export async function rezkaFetch(env, path, init = {}) {
 }
 
 /**
+ * Reads pre-cached Rezka metadata from KV, or dispatches a background workflow on miss.
+ * @param {any} env
+ * @param {string | number} id
+ * @returns {Promise<{ ok: true, body: string } | { ok: false }>}
+ */
+export async function hdrezkaMeta(env, id) {
+  if (!id) return { ok: false };
+
+  // 1. KV-first read of hdrezka:meta:<id>
+  if (env?.STREAM_KV) {
+    try {
+      const hit = await env.STREAM_KV.get(`hdrezka:meta:${id}`);
+      if (hit) return { ok: true, body: hit };
+    } catch {}
+  }
+
+  // 2. On miss with env.GH_DISPATCH_TOKEN set, dispatch workflow asynchronously
+  if (env?.GH_DISPATCH_TOKEN && env?.STREAM_KV) {
+    try {
+      const guardKey = `hdrezka:dispatch:${id}`;
+      const last = Number((await env.STREAM_KV.get(guardKey)) || 0);
+      if (Date.now() - last > 120_000) {
+        await env.STREAM_KV.put(guardKey, String(Date.now()), { expirationTtl: 600 });
+        const repo = env.GH_REPO || 'Mohit12441/anihubstream';
+        fetch(`https://api.github.com/repos/${repo}/actions/workflows/hdrezka.yml/dispatches`, {
+          method: 'POST',
+          headers: {
+            authorization: `Bearer ${env.GH_DISPATCH_TOKEN}`,
+            accept: 'application/vnd.github+json',
+            'user-agent': UA,
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify({ ref: 'master', inputs: { ids: String(id) } }),
+        }).catch(() => {});
+      }
+    } catch {}
+  }
+
+  return { ok: false };
+}
+
+/**
  * Cleans HDRezka's custom trash characters and decodes the stream payload.
  * @param {string} rawUrl
  * @returns {Array<{ quality: string, mp4: string, hls: string | null }>}

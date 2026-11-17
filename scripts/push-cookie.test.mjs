@@ -2,7 +2,7 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { normalizeCookie, needEnv } from './push-cookie.mjs';
-import { rezkaFetch, parseStreams, decodeRezkaStream } from '../functions/_lib/hdrezka.js';
+import { rezkaFetch, parseStreams, decodeRezkaStream, hdrezkaMeta } from '../functions/_lib/hdrezka.js';
 
 describe('Manual Cookie Push & KV Passthrough Tests', () => {
   it('normalizes pasted cookie string cleanly', () => {
@@ -52,5 +52,33 @@ describe('Manual Cookie Push & KV Passthrough Tests', () => {
     assert.equal(parsed[0].url, 'https://stream.voidboost.cc/video.mp4');
     assert.equal(parsed[0].container, 'mp4');
     assert.equal(parsed[1].quality, '720p');
+  });
+
+  it('hdrezkaMeta returns pre-cached payload on KV hit', async () => {
+    const mockKv = {
+      get: async (k) => {
+        if (k === 'hdrezka:meta:65738') return '{"success":true,"url":"#h..."}';
+        return null;
+      },
+    };
+    const res = await hdrezkaMeta({ STREAM_KV: mockKv }, '65738');
+    assert.equal(res.ok, true);
+    assert.ok(res.body.includes('success'));
+  });
+
+  it('hdrezkaMeta dispatches workflow and returns false on KV miss', async () => {
+    let putKey = null;
+    let putVal = null;
+    const mockKv = {
+      get: async () => null,
+      put: async (k, v) => {
+        putKey = k;
+        putVal = v;
+      },
+    };
+    const res = await hdrezkaMeta({ STREAM_KV: mockKv, GH_DISPATCH_TOKEN: 'fake-token' }, '65738');
+    assert.equal(res.ok, false);
+    assert.equal(putKey, 'hdrezka:dispatch:65738');
+    assert.ok(putVal);
   });
 });

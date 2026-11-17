@@ -9,10 +9,24 @@ const KEY = 'anubis:cookie';
 const TS_KEY = 'anubis:ts';
 const DEFAULT_TTL = 4 * 24 * 3600;
 
-const { CF_API_TOKEN, CF_ACCOUNT_ID, CF_KV_NAMESPACE } = process.env;
-const kvUrl = (k) =>
-  `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/storage/kv/namespaces/${CF_KV_NAMESPACE}/values/${encodeURIComponent(k)}`;
-const kvHeaders = { authorization: `Bearer ${CF_API_TOKEN}` };
+export const kvUrl = (k) =>
+  `https://api.cloudflare.com/client/v4/accounts/${process.env.CF_ACCOUNT_ID}/storage/kv/namespaces/${process.env.CF_KV_NAMESPACE}/values/${encodeURIComponent(k)}`;
+
+export const kvHeaders = () => ({ authorization: `Bearer ${process.env.CF_API_TOKEN}` });
+
+export async function putKv(k, v, ttl = DEFAULT_TTL) {
+  const r = await fetch(`${kvUrl(k)}?expiration_ttl=${ttl}`, {
+    method: 'PUT',
+    headers: { ...kvHeaders(), 'content-type': 'text/plain' },
+    body: v,
+  });
+  if (!r.ok) throw new Error(`KV ${k}: ${r.status} ${await r.text()}`);
+}
+
+export async function getKv(k) {
+  const r = await fetch(kvUrl(k), { headers: kvHeaders() });
+  return r.ok ? await r.text() : null;
+}
 
 export function needEnv() {
   for (const k of ['CF_API_TOKEN', 'CF_ACCOUNT_ID', 'CF_KV_NAMESPACE']) {
@@ -94,17 +108,8 @@ async function run() {
     process.exit(1);
   }
 
-  const put = (k, v, ttl) =>
-    fetch(`${kvUrl(k)}?expiration_ttl=${ttl}`, {
-      method: 'PUT',
-      headers: { ...kvHeaders, 'content-type': 'text/plain' },
-      body: v,
-    }).then(async (r) => {
-      if (!r.ok) throw new Error(`KV ${k}: ${r.status} ${await r.text()}`);
-    });
-
-  await put(KEY, cookie, DEFAULT_TTL);
-  await put(TS_KEY, String(Date.now()), DEFAULT_TTL);
+  await putKv(KEY, cookie, DEFAULT_TTL);
+  await putKv(TS_KEY, String(Date.now()), DEFAULT_TTL);
   console.log(`stored, verified, expires in ${DEFAULT_TTL / 86400} days`);
 }
 

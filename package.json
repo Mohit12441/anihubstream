@@ -23,6 +23,7 @@
     "rezka:push": "node scripts/push-cookie.mjs",
     "rezka:check": "node scripts/push-cookie.mjs --check",
     "rezka:clear": "node scripts/push-cookie.mjs --clear",
+    "rezka:auto": "node scripts/rezka-auto.mjs",
     "start:local": "node tools/start-local.mjs",
     "supervise": "node tools/supervise-origin.mjs",
     "meili:setup": "node tools/meilisearch/setup-index.mjs && node tools/meilisearch/sync-meilisearch.mjs",
