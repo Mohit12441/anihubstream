@@ -8,5 +8,10 @@ binding = "ANIHUB"
 database_name = "anihub"
 database_id = "b352ef74-e863-4278-bee7-e4409afb11bb"
 
+# Stream metadata cache and session cookies for HDRezka
+[[kv_namespaces]]
+binding = "STREAM_KV"
+id = "5292c24b24ea4208b20be4433ce90915"
+
 [vars]
 VITE_P2P_SIGNAL_URL = "wss://anihub-p2p-signal.workers.dev/p2p-signal"
