@@ -95,11 +95,19 @@ jobs:
             node tools/pulse-airing.mjs --remote
           fi
 
-      - name: Notify search engines via IndexNow
+      - name: Notify search engines (IndexNow & Google)
         if: always()
+        env:
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
         run: |
           echo "📡 Notifying search engines via IndexNow..."
           node tools/indexnow.mjs --sitemap || true
+          if [ -n "$GSC_KEY_JSON" ]; then
+            echo "🔍 Submitting sitemap to Google Search Console..."
+            echo "$GSC_KEY_JSON" > /tmp/gsc-key.json
+            GSC_KEY_PATH=/tmp/gsc-key.json node tools/gsc-telemetry.mjs --submit-sitemap || true
+            rm -f /tmp/gsc-key.json
+          fi
 
       - name: Commit newly discovered sources
         env:

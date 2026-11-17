@@ -561,9 +561,54 @@ export async function onRequest(context) {
 </section>
 </main>`;
   } else if (path === '/anime') {
+    let topAnimeHtml = '';
+    if (env.ANIHUB) {
+      try {
+        const { results } = await env.ANIHUB.prepare(
+          `SELECT id, title, year, rating FROM anime WHERE rating > 7.5 ORDER BY rating DESC LIMIT 24`
+        ).all().catch(() => ({ results: [] }));
+        if (results && results.length) {
+          topAnimeHtml = results.map(a => `<a href="/anime/${a.id}" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem;">${a.title}${a.year ? ` (${a.year})` : ''}</a>`).join(' ');
+        }
+      } catch (_) {}
+    }
+    if (!topAnimeHtml) {
+      const topSlugs = [
+        ['solo-leveling', 'Solo Leveling'],
+        ['jujutsu-kaisen', 'Jujutsu Kaisen'],
+        ['demon-slayer-kimetsu-no-yaiba', 'Demon Slayer'],
+        ['one-piece', 'One Piece'],
+        ['attack-on-titan', 'Attack on Titan'],
+        ['frieren-beyond-journeys-end', 'Frieren: Beyond Journey\'s End'],
+        ['chainsaw-man', 'Chainsaw Man'],
+        ['bleach', 'Bleach: Thousand-Year Blood War'],
+        ['naruto-shippuden', 'Naruto Shippuden'],
+        ['hunter-x-hunter-2011', 'Hunter x Hunter'],
+        ['death-note', 'Death Note'],
+        ['my-hero-academia', 'My Hero Academia'],
+        ['dandadan', 'DanDaDan'],
+        ['spy-x-family', 'Spy x Family'],
+        ['vinland-saga', 'Vinland Saga'],
+        ['black-clover', 'Black Clover'],
+        ['mushoku-tensei-jobless-reincarnation', 'Mushoku Tensei'],
+        ['blue-lock', 'Blue Lock'],
+        ['kaiju-no-8', 'Kaiju No. 8'],
+        ['tokyo-ghoul', 'Tokyo Ghoul'],
+      ];
+      topAnimeHtml = topSlugs.map(([slug, name]) => `<a href="/anime/${slug}" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem;">${name}</a>`).join(' ');
+    }
+
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
 <h1>Anime Catalogue — Browse All Series, Movies, and OVAs</h1>
 <p>Explore thousands of anime series, films, and seasonal broadcasts with subbed and dubbed video streams, episode ratings, air dates, and complete story synopses.</p>
+<section aria-labelledby="crawler-popular-series" style="margin:1.5rem 0;">
+<h2 id="crawler-popular-series">Popular & High-Rated Anime Series</h2>
+<nav aria-label="Popular Anime" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;">
+${topAnimeHtml}
+</nav>
+</section>
+<section aria-labelledby="crawler-genres" style="margin:1.5rem 0;">
+<h2 id="crawler-genres">Browse by Genre</h2>
 <nav aria-label="Genre Navigation" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;">
 <a href="/genres?genre=action" style="color:#ff1f4a;">Action</a> |
 <a href="/genres?genre=adventure" style="color:#ff1f4a;">Adventure</a> |
@@ -573,6 +618,7 @@ export async function onRequest(context) {
 <a href="/genres?genre=sci-fi" style="color:#ff1f4a;">Sci-Fi</a> |
 <a href="/genres?genre=supernatural" style="color:#ff1f4a;">Supernatural</a>
 </nav>
+</section>
 </main>`;
   }
 

@@ -5,7 +5,7 @@ import { withEdgeCache } from './api/_lib.js';
 
 export async function onRequestGet(context) {
   const { request, env } = context;
-  return withEdgeCache(request, env, 86400, async () => {
+  return withEdgeCache(request, env, 3600, async () => {
     const origin = request?.url ? new URL(request.url).origin : 'https://anihubstream.com';
     const now = new Date().toISOString().slice(0, 10);
 
@@ -87,7 +87,7 @@ ${allUrls
       status: 200,
       headers: {
         'content-type': 'application/xml; charset=utf-8',
-        'cache-control': 'public, max-age=3600, s-maxage=86400',
+        'cache-control': 'public, max-age=3600, s-maxage=3600',
       },
     });
   });
