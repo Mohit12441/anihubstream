@@ -30,6 +30,7 @@ export async function submitUrlsToIndexNow(urlList, options = {}) {
   const host = options.host || DEFAULT_HOST;
   const key = options.key || INDEXNOW_KEY;
   const keyLocation = options.keyLocation || `https://${host}/${key}.txt`;
+  const chunkSize = options.chunkSize || 50;
 
   if (!urlList || !urlList.length) {
     throw new Error('No URLs provided for IndexNow submission.');
@@ -37,42 +38,52 @@ export async function submitUrlsToIndexNow(urlList, options = {}) {
 
   // Deduplicate and cap to 10,000 URLs per IndexNow specification
   const uniqueUrls = Array.from(new Set(urlList)).slice(0, 10000);
+  let totalSubmitted = 0;
+  let lastStatus = 200;
 
-  const payload = {
-    host,
-    key,
-    keyLocation,
-    urlList: uniqueUrls,
-  };
-
-  const res = await fetch(INDEXNOW_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-    },
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(15000),
-  });
-
-  const responseText = await res.text().catch(() => '');
-
-  // IndexNow returns 200 OK or 202 Accepted on success
-  if (res.status === 200 || res.status === 202) {
-    return {
-      ok: true,
-      status: res.status,
-      count: uniqueUrls.length,
-      message: res.status === 200 ? 'OK' : 'Accepted',
+  for (let i = 0; i < uniqueUrls.length; i += chunkSize) {
+    const chunk = uniqueUrls.slice(i, i + chunkSize);
+    const payload = {
+      host,
+      key,
+      keyLocation,
+      urlList: chunk,
     };
+
+    const res = await fetch(INDEXNOW_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(15000),
+    });
+
+    const responseText = await res.text().catch(() => '');
+
+    // IndexNow returns 200 OK or 202 Accepted on success
+    if (res.status !== 200 && res.status !== 202) {
+      throw new Error(`IndexNow API error HTTP ${res.status}: ${responseText || res.statusText}`);
+    }
+
+    totalSubmitted += chunk.length;
+    lastStatus = res.status;
   }
 
-  throw new Error(`IndexNow API error HTTP ${res.status}: ${responseText || res.statusText}`);
+  return {
+    ok: true,
+    status: lastStatus,
+    count: totalSubmitted,
+    message: lastStatus === 200 ? 'OK' : 'Accepted',
+  };
 }
 
 async function main() {
   const args = process.argv.slice(2);
   const isSitemap = args.includes('--sitemap');
   const urlArg = args.find((a) => a.startsWith('--urls='));
+  const limitArg = args.find((a) => a.startsWith('--limit='));
+  const limit = limitArg ? parseInt(limitArg.split('=')[1], 10) : 50;
 
   console.log('🚀 IndexNow Autonomous Dispatcher');
   console.log(`Host: ${DEFAULT_HOST}`);
@@ -91,8 +102,8 @@ async function main() {
     const xml = await res.text();
     const matches = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     console.log(`Discovered ${matches.length} URLs in sitemap.`);
-    // Submit top 1,000 URLs
-    targetUrls = matches.slice(0, 1000);
+    // Submit top N URLs (defaults to 50 for streaming mode)
+    targetUrls = matches.slice(0, limit);
   } else {
     // Default check: Submit primary hub pages
     targetUrls = [
