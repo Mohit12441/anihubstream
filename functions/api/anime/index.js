@@ -61,7 +61,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
   return withEdgeCache(
     request,
     env,
-    300,
+    3600,
     async () => {
       try {
         const url = new URL(request.url);
@@ -156,6 +156,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         scanned: results.length,
         capped: results.length >= SEARCH_SCAN_MAX,
         results: slice.map((x) => cardFromRow(x.r)),
+      }, {
+        cache: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=600',
       });
     }
 
@@ -175,7 +177,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       .bind(...bindings.slice(0, limitIndex - 1))
       .first();
 
-    return ok({ page, limit, total: total?.n ?? 0, count: results.length, results: results.map(cardFromRow) });
+    return ok(
+      { page, limit, total: total?.n ?? 0, count: results.length, results: results.map(cardFromRow) },
+      { cache: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=600' }
+    );
   } catch (err) {
     return errorResponse(err);
   }

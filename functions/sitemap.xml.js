@@ -52,15 +52,7 @@ export async function onRequestGet(context) {
           priority: '0.9',
         });
 
-        // 2. Canonical Player Entry Page (HTTP 200)
-        animeUrls.push({
-          loc: `${origin}/watch/${row.id}`,
-          lastmod,
-          changefreq: 'weekly',
-          priority: '0.8',
-        });
-
-        // 3. Episode 1 deep link for episodic series (Focuses crawl budget on highest-volume search queries)
+        // 2. Episode 1 deep link for episodic series (Focuses crawl budget on highest-volume search queries)
         if (row.episode_total && row.episode_total > 1) {
           animeUrls.push({
             loc: `${origin}/watch/${row.id}/1`,

@@ -95,6 +95,12 @@ jobs:
             node tools/pulse-airing.mjs --remote
           fi
 
+      - name: Notify search engines via IndexNow
+        if: always()
+        run: |
+          echo "📡 Notifying search engines via IndexNow..."
+          node tools/indexnow.mjs --sitemap || true
+
       - name: Commit newly discovered sources
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
