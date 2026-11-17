@@ -13,7 +13,8 @@
 
 import { decodeRezkaStream, search as hdrezkaSearch, details as hdrezkaDetails, sources as hdrezkaSources, resolve as hdrezkaResolve } from '../api/adapters/hdrezka.mjs';
 
-export async function testHdrezkaPlayback({ query = 'Solo Leveling', malId = 52299, ep = 1, timeoutMs = 8000 } = {}) {
+export async function testHdrezkaPlayback({ query = 'Solo Leveling', malId = undefined, ep = 1, timeoutMs = 8000 } = {}) {
+  const effectiveMalId = malId !== undefined ? malId : (query.toLowerCase().includes('solo leveling') ? 52299 : undefined);
   const diagnostics = {
     provider: 'hdrezka',
     query,
@@ -28,11 +29,12 @@ export async function testHdrezkaPlayback({ query = 'Solo Leveling', malId = 522
   };
 
   try {
-    // Step 1: Upstream Connectivity & Anti-bot probe
+    // Step 1: Upstream Connectivity & Anti-bot probe (probes real search endpoint, bypassing root Anubis)
     diagnostics.step = 'connectivity';
-    const probeRes = await fetch('https://hdrezka.ag', {
+    const probeRes = await fetch('https://hdrezka.ag/search/?do=search&subaction=search&q=test', {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Referer': 'https://hdrezka.ag/',
       },
       signal: AbortSignal.timeout(timeoutMs),
     }).catch((err) => {
@@ -42,14 +44,14 @@ export async function testHdrezkaPlayback({ query = 'Solo Leveling', malId = 522
     const probeHtml = await probeRes.text().catch(() => '');
     diagnostics.upstreamAlive = probeRes.ok;
 
-    if (probeHtml.includes('Проверяем, что вы не бот') || probeHtml.includes('cf-turnstile')) {
+    if (probeHtml.includes('Проверяем, что вы не бот') || probeHtml.includes('cf-turnstile') || probeHtml.includes('anubis_challenge')) {
       diagnostics.antiBotBlocked = true;
-      throw new Error('HDRezka is blocked by Cloudflare anti-bot challenge ("Проверяем, что вы не бот!"). Requests from this IP/datacenter are rejected by upstream DDoS-Guard.');
+      throw new Error('HDRezka is blocked by anti-bot challenge ("Проверяем, что вы не бот!"). Requests from this IP/datacenter are rejected by upstream.');
     }
 
     // Step 2: Search Resolution
     diagnostics.step = 'search';
-    const results = await hdrezkaSearch(query, { malId, signal: AbortSignal.timeout(timeoutMs) });
+    const results = await hdrezkaSearch(query, { malId: effectiveMalId, signal: AbortSignal.timeout(timeoutMs) });
     if (!results || results.length === 0) {
       throw new Error(`No HDRezka search results found for "${query}" (malId: ${malId})`);
     }
