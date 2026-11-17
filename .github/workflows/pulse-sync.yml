@@ -83,9 +83,9 @@ jobs:
             echo "📅 [24-HOUR DAILY] Syncing Airing Schedules + Global Trending Ranks..."
             node tools/pulse-airing.mjs --remote --trending
 
-            LIMIT=10
+            LIMIT=2
             echo "🌱 [24-HOUR DAILY] Ingesting Catalog Backlog & Discovering Anime (Limit: $LIMIT, Remote D1)..."
-            node tools/discover-titles.mjs --limit=$LIMIT --force --remote || true
+            node tools/discover-titles.mjs --limit=$LIMIT --remote || true
 
             echo "⚡ [24-HOUR DAILY] Normalizing Provider Mappings & Ratings..."
             node cloud-sync/sync-providers.mjs --force || true
