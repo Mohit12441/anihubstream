@@ -11,6 +11,7 @@
     "test": "node --test api/*.test.mjs tools/*.test.mjs tools/meilisearch/*.test.mjs cloud-sync/*.test.mjs",
     "test:cache": "node --test tools/zero-read.test.mjs",
     "test:streams": "node tools/probe-trending-streams.mjs",
+    "test:playback": "node tools/test-playback.mjs",
     "verify": "node tools/verify-runtime.mjs",
     "pages:dev": "npm run build:pages && wrangler pages dev dist-pages --port 8899",
     "db:init": "node tools/init-local-db.mjs",
