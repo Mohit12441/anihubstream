@@ -3,6 +3,7 @@ import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, e
 import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 import { resolveAniPmBetaDirect } from '../_anipm.js';
+import { hdrezkaMeta, rezkaFetch, parseStreams } from '../../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 15_000;
 
@@ -166,6 +167,76 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               unavailableReason: betaRes?.unavailableReason || 'Could not resolve AniPM Beta stream for this episode.',
               streamUrl: null,
               audio: isDub ? 'dub' : 'sub',
+              audioTracks: [],
+              subtitles: [],
+              quality: '1080p',
+            }
+          });
+        }
+
+        if (provider === 'hdrezka') {
+          let rezkaId = meta?.provider_slug || null;
+          if (!rezkaId && env.ANIHUB) {
+            try {
+              const row = await env.ANIHUB.prepare(
+                "SELECT provider_slug FROM anime_provider_mapping WHERE anime_id = ?1 AND provider_id = 'hdrezka' LIMIT 1"
+              ).bind(animeId).first();
+              if (row?.provider_slug) rezkaId = row.provider_slug;
+            } catch {}
+          }
+          if (rezkaId) {
+            let rawPayload = null;
+            const kvMeta = await hdrezkaMeta(env, rezkaId, 1, ep);
+            if (kvMeta?.ok && kvMeta.payload) {
+              rawPayload = kvMeta.payload;
+            } else {
+              const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
+                method: 'POST',
+                headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
+                body: new URLSearchParams({
+                  id: String(rezkaId),
+                  translator_id: '238',
+                  season: '1',
+                  episode: String(ep || 1),
+                  action: 'get_stream',
+                }).toString(),
+              });
+              if (res && res.ok) {
+                const data = await res.json().catch(() => null);
+                if (data?.success && data?.url) rawPayload = data.url;
+              }
+            }
+            if (rawPayload) {
+              const streams = parseStreams(rawPayload);
+              const chosen = streams.find((s) => s.quality.includes('1080')) || streams[0];
+              if (chosen?.url) {
+                return ok({
+                  server: {
+                    id: 'hdrezka:ultra',
+                    name: 'HDRezka · Ultra HD (RU Dub)',
+                    provider: 'hdrezka',
+                    status: 'ready',
+                    streamUrl: chosen.url,
+                    type: 'mp4',
+                    quality: chosen.quality || '1080p Ultra',
+                    audio: 'russian',
+                    audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                    subtitles: [],
+                    direct: streams,
+                  }
+                }, { cache: 'public, max-age=300, s-maxage=600' });
+              }
+            }
+          }
+          return ok({
+            server: {
+              id: 'hdrezka:ultra',
+              name: 'HDRezka · Ultra HD (RU Dub)',
+              provider: 'hdrezka',
+              status: 'unavailable',
+              unavailableReason: 'HDRezka stream unavailable for this episode',
+              streamUrl: null,
+              audio: 'russian',
               audioTracks: [],
               subtitles: [],
               quality: '1080p',

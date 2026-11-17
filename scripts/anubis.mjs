@@ -8,11 +8,10 @@ const NAMES = [
   'within.website-x-cmd-anubis-auth',
   'within.website-cmd-anubis-auth',
   'anubis-auth',
+  'techaro.lol-anubis-cookie-verification',
 ];
-const PASS = [
-  '/.within.website/x/cmd/anubis/api/pass-challenge',
-  '/api/pass-challenge',
-];
+
+const PASS_PATH = '/.within.website/x/cmd/anubis/api/pass-challenge';
 const sha256 = (s) => createHash('sha256').update(s).digest('hex');
 
 export function solve(challenge, difficulty, capMs = 300_000) {
@@ -27,48 +26,68 @@ export function solve(challenge, difficulty, capMs = 300_000) {
 
 function extract(html) {
   const tag = html.match(/<script id="anubis_challenge"[^>]*>([\s\S]*?)<\/script>/);
-  if (tag) return JSON.parse(tag[1]);
+  if (tag) {
+    try { return JSON.parse(tag[1]); } catch {}
+  }
   const inline = html.match(/\{"challenge":"[^"]+"[\s\S]{0,400}?\}/);
-  if (inline) { try { return JSON.parse(inline[0]); } catch {} }
+  if (inline) {
+    try { return JSON.parse(inline[0]); } catch {}
+  }
   return null;
 }
 
 export async function getCookie(path = '/') {
-  const page = await fetch(BASE + path, { headers: { 'user-agent': UA }, redirect: 'manual' });
+  const page = await fetch(BASE + path, { headers: { 'user-agent': UA }, redirect: 'follow' });
   const html = await page.text();
   const cfg = extract(html);
   if (!cfg) {
     if (page.status === 200) return { cookie: null };
     throw new Error(`gated, no challenge parsed (${page.status})`);
   }
-  const difficulty = cfg.rules?.difficulty ?? cfg.difficulty ?? 4;
-  const id = cfg.challenge;
-  const { nonce, hash, elapsed } = solve(id, difficulty);
 
-  for (const p of PASS) {
-    const res = await fetch(BASE + p, {
-      method: 'POST',
-      headers: {
-        'user-agent': UA,
-        'content-type': 'application/x-www-form-urlencoded',
-        origin: BASE,
-        referer: BASE + path,
-      },
-      body: new URLSearchParams({
-        id, nonce: String(nonce), response: hash, redir: BASE + path,
-        elapsedTime: String(elapsed),
-      }),
-      redirect: 'manual',
-    });
-    const pairs = (res.headers.getSetCookie?.() ?? [])
-      .map((c) => c.split(';')[0])
-      .filter((c) => NAMES.some((n) => c.startsWith(n + '=')));
-    if (!pairs.length) continue;
-    const cookie = pairs.join('; ');
-    const check = await fetch(BASE + path, { headers: { 'user-agent': UA, cookie } });
-    if (check.status === 200) return { cookie };
+  const chal = typeof cfg.challenge === 'object' ? cfg.challenge : cfg;
+  const chalId = chal.id || cfg.challenge;
+  const randomData = chal.randomData || chalId;
+  const difficulty = chal.difficulty ?? cfg.rules?.difficulty ?? 4;
+  const { nonce, hash, elapsed } = solve(randomData, difficulty);
+
+  const activeBase = new URL(page.url).origin;
+  const initialCookies = (page.headers.getSetCookie?.() ?? [])
+    .map((c) => c.split(';')[0])
+    .filter((c) => !c.endsWith('='));
+
+  const passUrl = new URL(activeBase + PASS_PATH);
+  passUrl.searchParams.set('id', chalId);
+  passUrl.searchParams.set('response', hash);
+  passUrl.searchParams.set('nonce', String(nonce));
+  passUrl.searchParams.set('redir', path || '/');
+  passUrl.searchParams.set('elapsedTime', String(elapsed));
+
+  const res = await fetch(passUrl.toString(), {
+    headers: {
+      'user-agent': UA,
+      referer: page.url,
+      cookie: initialCookies.join('; '),
+    },
+    redirect: 'manual',
+  });
+
+  const solvedCookies = (res.headers.getSetCookie?.() ?? [])
+    .map((c) => c.split(';')[0])
+    .filter((c) => !c.endsWith('='));
+
+  const combined = [...initialCookies, ...solvedCookies]
+    .filter((c) => NAMES.some((n) => c.startsWith(n)));
+
+  if (!combined.length) {
+    throw new Error(`pass-challenge failed (${res.status})`);
   }
-  throw new Error('all pass-challenge endpoints failed');
+
+  const cookie = combined.join('; ');
+  const check = await fetch(activeBase + path, { headers: { 'user-agent': UA, cookie } });
+  if (check.status === 200) return { cookie };
+
+  throw new Error(`authenticated check failed (${check.status})`);
 }
 
 export function headers(cookie) {

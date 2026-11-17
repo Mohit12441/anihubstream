@@ -779,7 +779,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           }
           if (!direct && (requested === 'hdrezka' || availableSlugs.hdrezka)) {
             try {
-              const rezkaId = availableSlugs.hdrezka;
+              let rezkaId = availableSlugs.hdrezka;
+              if (!rezkaId && env.ANIHUB) {
+                try {
+                  const row = await env.ANIHUB.prepare(
+                    "SELECT provider_slug FROM anime_provider_mapping WHERE anime_id = ?1 AND provider_id = 'hdrezka' LIMIT 1"
+                  ).bind(id).first();
+                  if (row?.provider_slug) rezkaId = row.provider_slug;
+                } catch {}
+              }
               if (rezkaId) {
                 // KV-first read of pre-cached metadata ahead of live fetch
                 const kvMeta = await hdrezkaMeta(env, rezkaId, season, ep);
