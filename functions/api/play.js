@@ -3,6 +3,7 @@ import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, e
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 import { resolveAniPmBetaDirect } from './_anipm.js';
+import { rezkaFetch, parseStreams } from '../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 2_000;
 const ANISKIP_TIMEOUT_MS = 500;
@@ -584,7 +585,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
     let requested = rawRequested;
 
-    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL);
+    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL || env?.STREAM_KV || env?.HDREZKA_COOKIE);
     const getAvailableProvidersList = () => [
       { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
@@ -773,6 +774,44 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 slug: animeRow?.slug || animeRow?.id || id,
               });
               if (betaRes?.streamUrl) direct = betaRes;
+            } catch {}
+          }
+          if (!direct && (requested === 'hdrezka' || availableSlugs.hdrezka)) {
+            try {
+              const rezkaId = availableSlugs.hdrezka;
+              if (rezkaId) {
+                const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
+                  method: 'POST',
+                  headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
+                  body: new URLSearchParams({
+                    id: String(rezkaId),
+                    translator_id: '238',
+                    season: '1',
+                    episode: String(ep),
+                    action: 'get_stream',
+                  }).toString(),
+                });
+                if (res && res.ok) {
+                  const data = await res.json().catch(() => null);
+                  if (data?.success && data?.url) {
+                    const streams = parseStreams(data.url);
+                    const chosen = streams.find((s) => s.quality.includes('1080')) || streams[0];
+                    if (chosen?.url) {
+                      direct = {
+                        streamUrl: chosen.url,
+                        quality: chosen.quality,
+                        type: 'mp4',
+                        provider: 'hdrezka',
+                        referrerPolicy: 'no-referrer',
+                        audio: 'russian',
+                        audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                        subtitles: [],
+                        direct: streams,
+                      };
+                    }
+                  }
+                }
+              }
             } catch {}
           }
           if (direct?.streamUrl) {
