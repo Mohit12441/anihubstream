@@ -427,6 +427,12 @@ export function Watch() {
             matchedServer = serverList[0];
           }
 
+          if (matchedServer && matchedServer.status === 'unavailable') {
+            // If requested server is unavailable (e.g. Proxy Required), silently fall back to first ready server
+            const fallbackServer = mergedServers.find((s: PlayServer) => s.status !== 'unavailable');
+            if (fallbackServer) matchedServer = fallbackServer;
+          }
+
           if (matchedServer) {
             setActiveServerId(matchedServer.id);
           }

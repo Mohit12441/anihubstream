@@ -71,12 +71,38 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     assert.doesNotThrow(() => assertAllowed('https://rezka.ag/ajax/get_cdn_series/', 'hdrezka'));
   });
 
-  it('includes hdrezka server and provider in play endpoint response', async () => {
+  it('includes hdrezka server and provider in play endpoint response with Proxy Required status when unbridged', async () => {
     const req = new Request('http://127.0.0.1:8795/api/play?id=solo-leveling&ep=1');
     const res = await onPlayGet({ request: req, env: {} });
     assert.equal(res.status, 200);
     const json = await res.json();
-    assert.ok(json.servers.some((s) => s.id === 'hdrezka:ultra'), 'Should include hdrezka:ultra server');
-    assert.ok(json.availableProviders.some((p) => p.id === 'hdrezka'), 'Should include hdrezka in availableProviders');
+    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:ultra');
+    assert.ok(rezkaServer, 'Should include hdrezka:ultra server');
+    assert.equal(rezkaServer.status, 'unavailable');
+    assert.equal(rezkaServer.unavailableReason, 'Proxy Required');
+
+    const rezkaProv = json.availableProviders.find((p) => p.id === 'hdrezka');
+    assert.ok(rezkaProv, 'Should include hdrezka in availableProviders');
+    assert.equal(rezkaProv.available, false);
+    assert.equal(rezkaProv.unavailableReason, 'Proxy Required');
+  });
+
+  it('marks scopedProviderUnavailable when hdrezka requested without reachable bridge', async () => {
+    const req = new Request('http://127.0.0.1:8795/api/play?id=solo-leveling&ep=1&provider=hdrezka');
+    const res = await onPlayGet({ request: req, env: {} });
+    assert.equal(res.status, 200);
+    const json = await res.json();
+    assert.equal(json.scopedProviderUnavailable, true);
+  });
+
+  it('marks hdrezka server ready when STREAM_BRIDGE_URL is configured', async () => {
+    const req = new Request('http://127.0.0.1:8795/api/play?id=demon-slayer-bridged&ep=1');
+    const res = await onPlayGet({ request: req, env: { STREAM_BRIDGE_URL: 'http://127.0.0.1:8795' } });
+    assert.equal(res.status, 200);
+    const json = await res.json();
+    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:ultra');
+    assert.ok(rezkaServer);
+    assert.equal(rezkaServer.status, 'ready');
+    assert.equal(rezkaServer.unavailableReason, null);
   });
 });

@@ -333,15 +333,16 @@ async function lookupAnimeMetadata(db, id, ep) {
   return { id: resolvedId, animeRow };
 }
 
-function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle }) {
+function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle, hasRezkaBridge = false }) {
   const jaAudio = [{ id: 'audio-0', language: 'ja', label: 'Japanese (Original)', default: true }];
   const enDub = [{ id: 'audio-1', language: 'en', label: 'English Dub', default: true }];
 
-  const makeServer = ({ id, name, provider, streamUrl, type = 'hls', quality = '1080p', audio = 'sub', audioTracks = jaAudio, resolvedTitle: rt }) => ({
+  const makeServer = ({ id, name, provider, streamUrl, type = 'hls', quality = '1080p', audio = 'sub', audioTracks = jaAudio, resolvedTitle: rt, status = 'ready', unavailableReason = null }) => ({
     id,
     name,
     provider,
-    status: 'ready',
+    status,
+    unavailableReason,
     streamUrl,
     type,
     quality,
@@ -442,6 +443,8 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       streamUrl: resolveUrl({ audio: 'russian', provider: 'hdrezka', server: 'ultra' }),
       type: 'mp4',
       audio: 'russian',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
       audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
     })
   );
@@ -581,12 +584,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
     let requested = rawRequested;
 
+    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL);
     const getAvailableProvidersList = () => [
       { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
       { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || { status: 'healthy', latencyMs: 70 }) },
-      { id: 'hdrezka', name: 'HDRezka', available: true, ...(providerHealth.hdrezka || { status: 'healthy', latencyMs: 85 }) },
+      { id: 'hdrezka', name: 'HDRezka', available: hasRezkaBridge, unavailableReason: hasRezkaBridge ? null : 'Proxy Required', ...(providerHealth.hdrezka || { status: hasRezkaBridge ? 'healthy' : 'offline', latencyMs: 85 }) },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
@@ -629,7 +633,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       return `/api/play/resolve?${p}`;
     };
 
-    const defaultServers = buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle });
+    const defaultServers = buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle, hasRezkaBridge });
 
     // FAST ROUTE FOR ANIPM: Never call stream bridge, resolve directly in Edge Worker!
     if (requested === 'anipm' || serverParam?.toLowerCase() === 'beta' || serverParam?.toLowerCase() === 'beta-dub') {
@@ -874,7 +878,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         });
       }
 
-      const isScopedUnavailable = requested !== 'hdrezka' && requested !== 'torrent' && !availableSlugs[requested];
+      const isScopedUnavailable = requested === 'hdrezka'
+        ? (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl))
+        : (requested !== 'torrent' && !availableSlugs[requested]);
       let serversToReturn = defaultServers;
       if (requested && requested !== 'auto') {
         const matching = defaultServers.filter((s) => s.provider === requested);
@@ -1065,7 +1071,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       ...servers,
       ...defaultServers.filter((def) => !servers.some((s) => s.id === def.id)),
     ];
-    const isScopedUnavailable = Boolean(requested && requested !== 'auto' && requested !== 'hdrezka' && requested !== 'torrent' && !availableSlugs[requested]);
+    const isScopedUnavailable = Boolean(
+      requested && requested !== 'auto' && (
+        requested === 'hdrezka'
+          ? (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl))
+          : (requested !== 'torrent' && !availableSlugs[requested])
+      )
+    );
 
     return ok({
       title: resolvedTitle,
