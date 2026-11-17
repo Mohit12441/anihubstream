@@ -9,12 +9,18 @@ on:
         description: 'comma separated episode or series ids'
         required: false
 
-concurrency: hdrezka
+concurrency:
+  group: hdrezka-prefetch
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: write
 
 jobs:
   prefetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,6 +30,8 @@ jobs:
         run: node scripts/rezka-auto.mjs
         env:
           IDS: ${{ inputs.ids || vars.HDREZKA_WATCHLIST }}
+          REZKA_COOKIE: ${{ secrets.REZKA_COOKIE }}
+          REZKA_DISABLED: ${{ vars.REZKA_DISABLED }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_KV_NAMESPACE: ${{ secrets.CF_KV_NAMESPACE }}

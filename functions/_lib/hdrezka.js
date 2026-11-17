@@ -55,19 +55,43 @@ export async function rezkaFetch(env, path, init = {}) {
 }
 
 /**
- * Reads pre-cached Rezka metadata from KV, or dispatches a background workflow on miss.
+ * Reads pre-cached Rezka metadata from KV, keyed by episode.
  * @param {any} env
  * @param {string | number} id
- * @returns {Promise<{ ok: true, body: string } | { ok: false }>}
+ * @param {number} [season] - optional season number; when provided, episode must also be set
+ * @param {number} [episode] - optional episode number; when provided, season must also be set
+ * @returns {Promise<{ ok: true, payload: string } | { ok: false }>}
  */
-export async function hdrezkaMeta(env, id) {
+export async function hdrezkaMeta(env, id, season, episode) {
   if (!id) return { ok: false };
 
-  // 1. KV-first read of hdrezka:meta:<id>
+  // Build the key: hdrezka:meta:<id>:<season>:<episode>
+  let key = `hdrezka:meta:${id}`;
+  let needsValidation = false;
+
+  if (season !== undefined && episode !== undefined) {
+    key = `hdrezka:meta:${id}:${season}:${episode}`;
+    needsValidation = true;
+  }
+
+  // 1. KV-first read
   if (env?.STREAM_KV) {
     try {
-      const hit = await env.STREAM_KV.get(`hdrezka:meta:${id}`);
-      if (hit) return { ok: true, body: hit };
+      const hit = await env.STREAM_KV.get(key);
+      if (hit) {
+        let parsed = null;
+        try {
+          parsed = JSON.parse(hit);
+        } catch {}
+
+        if (needsValidation) {
+          if (!parsed || parsed.s !== season || parsed.e !== episode) {
+            // mismatched envelope — treat as miss and fall through
+            return { ok: false };
+          }
+        }
+        return { ok: true, payload: parsed?.payload || hit };
+      }
     } catch {}
   }
 
@@ -95,6 +119,7 @@ export async function hdrezkaMeta(env, id) {
 
   return { ok: false };
 }
+
 
 /**
  * Cleans HDRezka's custom trash characters and decodes the stream payload.

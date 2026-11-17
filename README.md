@@ -25,15 +25,15 @@ High-performance, serverless anime streaming platform built on Cloudflare Pages,
 HDRezka streams are resolved and served serverless with zero-latency edge caching:
 
 1. **Edge Cache First:** The player checks `STREAM_KV` for `hdrezka:meta:<id>` (6-hour TTL). On hit, 1080p Ultra MP4 streams are served immediately.
-2. **Scheduled CI Prefetch:** A GitHub Actions workflow (`.github/workflows/hdrezka.yml`) runs on schedule (`7 */2 * * *`) and runs `npm run rezka:auto` to prefetch metadata for watchlist titles and write them into `STREAM_KV`.
+2. **Scheduled CI Prefetch:** A GitHub Actions workflow (`.github/workflows/hdrezka.yml`) runs on schedule (`7 */2 * * *`) and runs `npm run rezka:auto` to prefetch metadata for watchlist titles and write them into `STREAM_KV`. The script obtains its own session cookie first: `scripts/anubis.mjs` parses the Anubis proof-of-work challenge, solves it, exchanges it for the `anubis-auth` cookie, and `rezka-auto.mjs` writes that cookie plus its timestamp back to `STREAM_KV` for the edge to reuse. No human step is involved.
 3. **Async Dispatch on Miss:** When an uncached title is requested, the edge worker triggers a background `workflow_dispatch` (rate-limited to once every 120s per title) and immediately serves AniKoto or AniPM streams so playback never stalls.
 4. **Direct Browser Streaming:** Video bytes stream directly from `stream.voidboost.one` to the user's browser with `206 Partial Content`, bypassing worker bandwidth limits.
 
 ---
 
-### Manual Override
+### Manual Override (Exception Path)
 
-If an emergency cookie refresh or manual override is needed:
+The scheduled prefetch is self-sufficient: it solves the challenge and stores its own cookie, so nothing needs to be pushed by hand during normal operation. The commands below exist only to override a stale or misbehaving cookie by hand, or to inspect/clear what is stored.
 
 1. **Push Cookie to KV:**
    ```bash
@@ -71,7 +71,7 @@ If an emergency cookie refresh or manual override is needed:
 | `npm run typecheck` | Run TypeScript type validation (`tsc --noEmit`) |
 | `npm run build` | Compile production build into `dist-pages/` |
 | `npm run rezka:auto` | Prefetch metadata for watchlist IDs into `STREAM_KV` |
-| `npm run rezka:push` | Manual override: validate and push session cookie to KV |
+| `npm run rezka:push` | Manual override only: validate and push a session cookie to KV |
 | `npm run rezka:check` | Check status of stored KV cookie |
 | `npm run rezka:clear` | Remove stored cookie from KV |
 | `npm run bridge:tunnel` | Start local bridge and Cloudflare Tunnel together |
@@ -90,3 +90,5 @@ If an emergency cookie refresh or manual override is needed:
 - `CF_ACCOUNT_ID`: Cloudflare Account ID.
 - `CF_KV_NAMESPACE`: Namespace ID for `STREAM_KV`.
 - `IDS` / `HDREZKA_WATCHLIST`: Comma-separated list of HDRezka anime IDs for automatic prefetching.
+- `REZKA_COOKIE`: (Optional) Secret used only when the Anubis solve fails after 3 attempts; the run logs a loud warning when it falls back.
+- `REZKA_DISABLED`: Set to `1` to skip the prefetch entirely; checked before any other work so it works even with missing credentials.

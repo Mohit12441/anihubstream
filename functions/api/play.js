@@ -482,6 +482,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const titleParam = url.searchParams.get('title') || '';
     const malIdParam = url.searchParams.get('malId') || '';
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
+    const season = Math.max(1, Number.parseInt(url.searchParams.get('season') ?? '1', 10) || 1);
     const audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
     const rawProvider = url.searchParams.get('provider') || '';
     let serverParam = url.searchParams.get('server') || '';
@@ -781,10 +782,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               const rezkaId = availableSlugs.hdrezka;
               if (rezkaId) {
                 // KV-first read of pre-cached metadata ahead of live fetch
-                const kvMeta = await hdrezkaMeta(env, rezkaId);
+                const kvMeta = await hdrezkaMeta(env, rezkaId, season, ep);
                 let rawPayload = null;
-                if (kvMeta?.ok && kvMeta.body) {
-                  rawPayload = kvMeta.body;
+                if (kvMeta?.ok && kvMeta.payload) {
+                  rawPayload = kvMeta.payload;
                 } else {
                   const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
                     method: 'POST',
@@ -792,8 +793,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     body: new URLSearchParams({
                       id: String(rezkaId),
                       translator_id: '238',
-                      season: '1',
-                      episode: String(ep),
+                      season: String(season || 1),
+                      episode: String(ep || 1),
                       action: 'get_stream',
                     }).toString(),
                   });

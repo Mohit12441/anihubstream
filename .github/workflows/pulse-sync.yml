@@ -93,24 +93,6 @@ jobs:
           else
             echo "⏱️ [HOURLY] Syncing AniList Broadcast Schedules & Episode Countdowns..."
             node tools/pulse-airing.mjs --remote
-
-            LIMIT=10
-            echo "🌱 [HOURLY] Ingesting Catalog Backlog & Discovering Anime (Limit: $LIMIT, Remote D1)..."
-            node tools/discover-titles.mjs --limit=$LIMIT --force --remote || true
-          fi
-
-      - name: Notify search engines (IndexNow & Google)
-        if: always()
-        env:
-          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
-        run: |
-          echo "📡 Notifying search engines via IndexNow..."
-          node tools/indexnow.mjs --sitemap || true
-          if [ -n "$GSC_KEY_JSON" ]; then
-            echo "🔍 Submitting sitemap to Google Search Console..."
-            echo "$GSC_KEY_JSON" > /tmp/gsc-key.json
-            GSC_KEY_PATH=/tmp/gsc-key.json node tools/gsc-telemetry.mjs --submit-sitemap || true
-            rm -f /tmp/gsc-key.json
           fi
 
       - name: Commit newly discovered sources
@@ -127,4 +109,18 @@ jobs:
             git push origin master
             echo "New anime discovered and committed! Running immediate provider & franchise sync..."
             node cloud-sync/sync-providers.mjs --force || true
+          fi
+
+      - name: Notify search engines (IndexNow & Google)
+        if: github.event.client_payload.target != 'pulse' && github.event.inputs.target != 'pulse'
+        env:
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
+        run: |
+          echo "📡 Notifying search engines via IndexNow..."
+          node tools/indexnow.mjs --sitemap || true
+          if [ -n "$GSC_KEY_JSON" ]; then
+            echo "🔍 Submitting sitemap to Google Search Console..."
+            echo "$GSC_KEY_JSON" > /tmp/gsc-key.json
+            GSC_KEY_PATH=/tmp/gsc-key.json node tools/gsc-telemetry.mjs --submit-sitemap || true
+            rm -f /tmp/gsc-key.json
           fi
