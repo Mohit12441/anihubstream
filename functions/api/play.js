@@ -438,7 +438,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   servers.push(
     makeServer({
       id: 'hdrezka:ultra',
-      name: 'HDRezka · Ultra HD (1080p)',
+      name: 'HDRezka · Ultra HD (RU Dub)',
       provider: 'hdrezka',
       streamUrl: resolveUrl({ audio: 'russian', provider: 'hdrezka', server: 'ultra' }),
       type: 'mp4',
@@ -912,9 +912,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }
     const proxyBase = `${url.origin}/api/proxy`;
     const masterPath = meta.master || meta.streamUrl || '';
-    const activeReferer = meta.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : ''));
+    const isDirectVoidboost = prov === 'hdrezka' || masterPath.includes('voidboost');
+    const activeReferer = isDirectVoidboost ? '' : (meta.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
     let streamUrl;
-    if (masterPath.includes('/api/proxy')) {
+    if (isDirectVoidboost && masterPath.startsWith('http')) {
+      streamUrl = masterPath;
+    } else if (masterPath.includes('/api/proxy')) {
       streamUrl = masterPath.startsWith('http') ? masterPath : `${url.origin}${masterPath}`;
     } else if (masterPath.startsWith('http')) {
       streamUrl = activeReferer
@@ -978,14 +981,17 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const primaryServer = {
       id: activeServerId,
-      name: primaryServerName,
+      name: prov === 'hdrezka' ? `HDRezka · ${cleanPrimaryServer} (RU Dub)` : primaryServerName,
       provider: prov,
       status: 'ready',
       streamUrl,
-      type: meta.type || (meta.kind === 'progressive' ? 'mp4' : 'hls'),
+      referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
+      type: meta.type || (meta.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
-      audio: resolvedAudio,
-      audioTracks: primaryAudioTracks,
+      audio: prov === 'hdrezka' ? 'russian' : resolvedAudio,
+      audioTracks: prov === 'hdrezka'
+        ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+        : primaryAudioTracks,
       subtitles,
       thumbnails: meta.thumbnails?.url
         ? { url: `${url.origin}/api/proxy?url=${encodeURIComponent(meta.thumbnails.url)}` }
@@ -996,6 +1002,30 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     };
 
     const servers = [primaryServer];
+
+    // If HDRezka supplied direct quality variants, expose them as selectable sub-servers
+    if (prov === 'hdrezka' && Array.isArray(meta.direct)) {
+      for (const d of meta.direct) {
+        const qLabel = `${d.quality}p`;
+        const sId = `hdrezka:${qLabel.toLowerCase()}`;
+        if (sId !== activeServerId && !servers.some((existing) => existing.id === sId) && d.url) {
+          servers.push({
+            id: sId,
+            name: `HDRezka · ${qLabel} (RU Dub)`,
+            provider: 'hdrezka',
+            status: 'ready',
+            streamUrl: d.url,
+            referrerPolicy: 'no-referrer',
+            type: 'mp4',
+            quality: qLabel,
+            audio: 'russian',
+            audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+            subtitles,
+            downloads: [],
+          });
+        }
+      }
+    }
 
     // If bridge supplied other server choices, add them as alternatives
     if (Array.isArray(meta.servers)) {

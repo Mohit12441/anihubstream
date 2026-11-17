@@ -876,8 +876,8 @@ export function Watch() {
                       >
                         <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
                         <span>{name}</span>
-                        {isRezka && <span className="watch__rezka-sub-tag">1080p Ultra</span>}
-                        {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">(Unavailable)</span>}
+                        {isRezka && <span className="watch__rezka-sub-tag">RU Dub</span>}
+                        {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
                         {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
                       </button>
                     );

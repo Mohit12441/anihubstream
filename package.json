@@ -19,6 +19,7 @@
     "preview": "vite preview",
     "serve": "node tools/serve-static.mjs",
     "bridge": "node api/bridge.mjs",
+    "bridge:tunnel": "node tools/bridge-tunnel.mjs",
     "start:local": "node tools/start-local.mjs",
     "supervise": "node tools/supervise-origin.mjs",
     "meili:setup": "node tools/meilisearch/setup-index.mjs && node tools/meilisearch/sync-meilisearch.mjs",

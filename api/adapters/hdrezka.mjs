@@ -7,6 +7,19 @@ const REZKA_HEADERS = {
   'X-Requested-With': 'XMLHttpRequest',
 };
 
+export const KNOWN_TRANSLATORS = {
+  '238': 'Studio Band',
+  '105': 'AniDUB',
+  '68': 'AniLibria',
+  '81': 'Persona99',
+  '377': 'SHIZA Project',
+  '73': 'Dream Records',
+  '56': 'AnimeVost',
+  '33': 'Original (Subtitles)',
+  '440': 'DEEP',
+  '241': 'Amber',
+};
+
 /**
  * Cleans HDRezka's custom trash characters and decodes the stream payload.
  * @param {string} rawUrl
@@ -138,8 +151,9 @@ export async function details(slugOrId, opts = {}) {
   const id = String(slugOrId).replace(/[^\d]/g, '');
   if (!id) throw new Error(`Invalid HDRezka ID: ${slugOrId}`);
 
-  let defaultTranslator = '238'; // Default Studio Band fallback
+  let defaultTranslator = opts.translatorId || '238'; // Default Studio Band fallback
   let episodes = [];
+  const translators = [];
 
   // Scrape page for translator and series events
   try {
@@ -152,7 +166,19 @@ export async function details(slugOrId, opts = {}) {
       const html = await res.text();
       // Extract active or first translator_id
       const trMatch = html.match(/data-translator_id="(\d+)"/) || html.match(/initCDNSeriesEvents\(\s*\d+,\s*(\d+)/);
-      if (trMatch) defaultTranslator = trMatch[1];
+      if (trMatch && !opts.translatorId) defaultTranslator = trMatch[1];
+
+      const trRegex = /data-translator_id="(\d+)"(?:[^>]*title="([^"]+)")?/g;
+      let m;
+      while ((m = trRegex.exec(html)) !== null) {
+        const trId = m[1];
+        if (!translators.some((t) => t.id === trId)) {
+          translators.push({
+            id: trId,
+            name: m[2] || KNOWN_TRANSLATORS[trId] || `Studio ${trId}`,
+          });
+        }
+      }
     }
   } catch {}
 
@@ -213,6 +239,7 @@ export async function details(slugOrId, opts = {}) {
     slug: id,
     translatorId: defaultTranslator,
     episodes,
+    translators: translators.length > 0 ? translators : [{ id: defaultTranslator, name: KNOWN_TRANSLATORS[defaultTranslator] || 'Studio Band' }],
   };
 }
 

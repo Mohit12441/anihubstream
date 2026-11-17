@@ -104,5 +104,6 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     assert.ok(rezkaServer);
     assert.equal(rezkaServer.status, 'ready');
     assert.equal(rezkaServer.unavailableReason, null);
+    assert.ok(rezkaServer.name.includes('(RU Dub)'), 'Server name should include RU Dub badge');
   });
 });

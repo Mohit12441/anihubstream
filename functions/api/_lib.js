@@ -809,6 +809,7 @@ export function formatServerName(provider, serverId) {
     hianime: 'HiAnime',
     aniwatch: 'AniWatch',
     anipm: 'AniPM',
+    hdrezka: 'HDRezka',
     torrent: 'P2P Swarm',
   };
   const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
