@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   BookmarkPlus,
   ChevronRight,
@@ -76,6 +76,8 @@ export function Watch() {
   const { id = '', ep } = useParams<{ id: string; ep?: string }>();
   const [params] = useSearchParams();
   const navigate = useNavigate();
+  const location = useLocation();
+  const navState = (location.state || {}) as { title?: string; poster?: string };
 
   useEffect(() => {
     if (id && SLUG_REDIRECTS[id] && SLUG_REDIRECTS[id] !== id) {
@@ -84,6 +86,26 @@ export function Watch() {
       navigate(target, { replace: true });
     }
   }, [id, ep, navigate]);
+
+  /* Automatically clean messy legacy query parameters (e.g. title/poster) from URL bar */
+  useEffect(() => {
+    if (!id) return;
+    if (params.has('title') || params.has('poster')) {
+      const cleanParams = new URLSearchParams(params);
+      const carriedState = {
+        title: navState.title || params.get('title') || undefined,
+        poster: navState.poster || params.get('poster') || undefined,
+      };
+      cleanParams.delete('title');
+      cleanParams.delete('poster');
+      const targetEp = ep || 1;
+      const qs = cleanParams.toString();
+      navigate(`/watch/${encodeURIComponent(id)}/${targetEp}${qs ? `?${qs}` : ''}`, {
+        replace: true,
+        state: carriedState,
+      });
+    }
+  }, [id, ep, params, navigate, navState]);
 
   const { notify } = useToast();
   const { status, error, missing, anime: loadedAnime, related, reload } = useAnimeDetail(id);
@@ -98,12 +120,12 @@ export function Watch() {
     }
     // If we are still loading a catalog anime (not an external provider id and no explicit title query),
     // wait for loadedAnime to arrive so we don't flash mutilated fallback titles or kick off premature stream resolution
-    if (status === 'loading' && !params.get('title') && !id?.includes(':')) {
+    if (status === 'loading' && !params.get('title') && !navState.title && !id?.includes(':')) {
       return null;
     }
     if (!id) return null;
-    const queryTitle = params.get('title') || '';
-    const queryPoster = params.get('poster') || '';
+    const queryTitle = params.get('title') || navState.title || '';
+    const queryPoster = params.get('poster') || navState.poster || '';
     const cleanBase = id
       .replace(/^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai|hdrezka):/i, '')
       .replace(/-([a-z0-9]{4,8})$/i, (match, token) => (isHashToken(token) ? '' : match))
@@ -338,6 +360,8 @@ export function Watch() {
       handleSelectServer(matching);
     } else {
       const newParams = new URLSearchParams(params);
+      newParams.delete('title');
+      newParams.delete('poster');
       newParams.set('audio', targetAudio);
       navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
       notify(`Audio switched to ${targetAudio.toUpperCase()}`);
@@ -606,18 +630,27 @@ export function Watch() {
       if (!anime || episodes.length === 0) return;
       const clamped = Math.min(Math.max(n, 1), episodes.length);
       setEpNum(clamped);
-      navigate(`/watch/${anime.id}/${clamped}`);
+      const cleanParams = new URLSearchParams();
+      if (targetProvider) cleanParams.set('provider', targetProvider);
+      if (params.get('server')) cleanParams.set('server', params.get('server')!);
+      if (params.get('audio')) cleanParams.set('audio', params.get('audio')!);
+      const qs = cleanParams.toString();
+      navigate(`/watch/${anime.id}/${clamped}${qs ? `?${qs}` : ''}`);
     },
-    [anime, episodes, navigate],
+    [anime, episodes, navigate, targetProvider, params],
   );
-
 
   const selectSeason = useCallback(
     (seasonId: string) => {
       if (!seasonId || seasonId === anime?.id) return;
-      navigate(`/watch/${seasonId}/1`);
+      const cleanParams = new URLSearchParams();
+      if (targetProvider) cleanParams.set('provider', targetProvider);
+      if (params.get('server')) cleanParams.set('server', params.get('server')!);
+      if (params.get('audio')) cleanParams.set('audio', params.get('audio')!);
+      const qs = cleanParams.toString();
+      navigate(`/watch/${seasonId}/1${qs ? `?${qs}` : ''}`);
     },
-    [anime?.id, navigate],
+    [anime?.id, navigate, targetProvider, params],
   );
 
   const prefetchedNext = useRef<number | null>(null);
@@ -733,6 +766,8 @@ export function Watch() {
     patch({ audio: srvAudio });
     const newProv = server.provider || providerFromId(server.id).split(':')[0];
     const newParams = new URLSearchParams(params);
+    newParams.delete('title');
+    newParams.delete('poster');
     newParams.set('provider', newProv);
     const serverNameOnly = server.id.includes(':') ? server.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : server.id;
     newParams.set('server', serverNameOnly);
@@ -746,6 +781,8 @@ export function Watch() {
     const defaultSrvId = serverIdFromProvider(targetKey, prefs.audio);
     setActiveServerId(defaultSrvId);
     const newParams = new URLSearchParams(params);
+    newParams.delete('title');
+    newParams.delete('poster');
     newParams.set('provider', targetKey);
     const serverNameOnly = defaultSrvId.includes(':')
       ? defaultSrvId.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '')

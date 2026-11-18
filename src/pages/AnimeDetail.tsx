@@ -28,6 +28,7 @@ import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel, type AnimeTheme } from '../data/model';
 import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
+import { getCleanWatchUrl } from '../data/servers';
 import { DEFAULT_PLAY_SERVERS } from './Watch';
 import '../styles/anime-detail.css';
 
@@ -211,7 +212,7 @@ export function AnimeDetail() {
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
   const getWatchUrl = (targetEpNum: number, provId = selectedProviderId) => {
-    return `/watch/${encodeURIComponent(anime.id)}/${targetEpNum}?provider=${encodeURIComponent(provId)}`;
+    return getCleanWatchUrl(anime.id, targetEpNum, provId);
   };
 
   return (
@@ -511,7 +512,7 @@ export function AnimeDetail() {
               Array.from({ length: epCount }, (_, i) => i + 1).map((n) => (
                 <Link
                   key={n}
-                  to={`/watch/${anime.id}/${n}`}
+                  to={getWatchUrl(n)}
                   className="ad-ep-card"
                   style={{ alignItems: 'center', justifyContent: 'space-between' }}
                 >

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Film, Play, Server } from 'lucide-react';
+import { defaultServerNameForProvider } from '../../data/servers';
 
 export interface ProviderSearchResult {
   id: string;
@@ -132,7 +133,8 @@ export function ProviderRow({ providerKey, meta, items }: ProviderRowProps) {
         {items.map((item) => (
           <Link
             key={`${providerKey}-${item.id}`}
-            to={`/watch/${encodeURIComponent(item.slug || item.id)}/1?provider=${encodeURIComponent(providerKey)}&title=${encodeURIComponent(item.title)}${item.coverUrl ? `&poster=${encodeURIComponent(item.coverUrl)}` : ''}`}
+            to={`/watch/${encodeURIComponent(item.slug || item.id)}/1?provider=${encodeURIComponent(providerKey)}&server=${encodeURIComponent(defaultServerNameForProvider(providerKey))}`}
+            state={{ title: item.title, poster: item.coverUrl }}
             style={{
               flex: '0 0 170px',
               maxWidth: '170px',

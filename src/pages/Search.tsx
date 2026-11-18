@@ -16,6 +16,7 @@ import { useToast } from '../lib/Toast';
 import { ProviderRow, type ProviderSearchResult } from '../components/search/ProviderRow';
 import { CategoryPills, type CategoryPillItem } from '../components/ui/CategoryPills';
 import { searchFederated } from '../data/api';
+import { getCleanWatchUrl } from '../data/servers';
 import '../styles/pages.css';
 
 export interface SearchProviderBadge {
@@ -476,9 +477,7 @@ export function Search() {
                 const primaryProvider = selectedProvider !== 'all'
                   ? selectedProvider
                   : (item.providers?.[0]?.id || 'anikoto');
-                const titleQuery = item.title ? `&title=${encodeURIComponent(item.title)}` : '';
-                const posterQuery = (item.art || item.coverUrl) ? `&poster=${encodeURIComponent(item.art || item.coverUrl || '')}` : '';
-                const primaryWatchUrl = `/watch/${encodeURIComponent(item.slug || item.id)}/1?provider=${encodeURIComponent(primaryProvider)}${titleQuery}${posterQuery}`;
+                const primaryWatchUrl = getCleanWatchUrl(item.slug || item.id, 1, primaryProvider);
 
                 return (
                   <div
@@ -497,6 +496,7 @@ export function Search() {
                     {/* Card Poster with Click to Watch */}
                     <Link
                       to={primaryWatchUrl}
+                      state={{ title: item.title, poster: item.art || item.coverUrl }}
                       style={{
                         position: 'relative',
                         width: '100%',
@@ -650,7 +650,8 @@ export function Search() {
                           {item.providers?.map((prov) => (
                             <Link
                               key={`${item.id}-${prov.id}`}
-                              to={`/watch/${encodeURIComponent(item.slug || item.id)}/1?provider=${encodeURIComponent(prov.id)}${titleQuery}${posterQuery}`}
+                              to={getCleanWatchUrl(item.slug || item.id, 1, prov.id)}
+                              state={{ title: item.title, poster: item.art || item.coverUrl }}
                               title={`Watch on ${prov.name}`}
                               style={{
                                 display: 'inline-flex',

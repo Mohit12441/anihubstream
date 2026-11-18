@@ -188,3 +188,21 @@ export const SERVER_STATUS_LABEL: Record<ServerStatus, string> = {
   degraded: 'Slow',
   unavailable: 'Unavailable',
 };
+
+export function defaultServerNameForProvider(provider?: string): string {
+  const srvId = serverIdFromProvider(provider);
+  return srvId.includes(':') ? srvId.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : srvId;
+}
+
+export function getCleanWatchUrl(
+  id: string,
+  ep: number | string = 1,
+  provider = 'anikoto',
+  server?: string
+): string {
+  const cleanId = encodeURIComponent(id.trim());
+  const cleanEp = ep || 1;
+  const srv = server || defaultServerNameForProvider(provider);
+  return `/watch/${cleanId}/${cleanEp}?provider=${encodeURIComponent(provider)}&server=${encodeURIComponent(srv)}`;
+}
+
