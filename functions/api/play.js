@@ -624,7 +624,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const availableSlugs = {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
-      hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : null),
+      hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : (id || null)),
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : null),
       anipm: resolvedAnilistId ? String(resolvedAnilistId) : (animeRow?.anilist_id ? String(animeRow.anilist_id) : null),
       hdrezka: pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || null,
@@ -743,8 +743,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const [aniskipData, directRes, bridgeRes] = await Promise.all([
       resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id),
       (async () => {
-        if (!resolvedMalId || !canUseEdgeDirect) return null;
-        const cacheKey = `stream:${requested || 'auto'}:${resolvedMalId}:${ep}:${audio}:${serverParam || 'HD-1'}`;
+        if (!canUseEdgeDirect) return null;
+        if (!resolvedMalId && requested !== 'hianime') return null;
+        const cacheKey = `stream:${requested || 'auto'}:${resolvedMalId || id}:${ep}:${audio}:${serverParam || 'HD-1'}`;
         const memCached = STREAM_MEM_CACHE.get(cacheKey);
         if (memCached && memCached.expiresAt > Date.now()) {
           if (memCached.data?.streamUrl && isMegaplayTokenValid(memCached.data.streamUrl)) {
@@ -780,22 +781,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
           }
           if (!direct && requested === 'hianime') {
-            const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-            const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
-            if (zokoRes?.masterUrl) {
-              direct = {
-                streamUrl: zokoRes.masterUrl,
-                referer: 'https://zokoanime.video/',
-                quality: zokoRes.defaultQuality || '1080p',
-                subtitles: zokoRes.subtitles || [],
-                provider: 'hianime',
-                skip: zokoRes.skip,
-              };
+            if (resolvedMalId > 0) {
+              const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
+              const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
+              if (zokoRes?.masterUrl) {
+                direct = {
+                  streamUrl: zokoRes.masterUrl,
+                  referer: 'https://zokoanime.video/',
+                  quality: zokoRes.defaultQuality || '1080p',
+                  subtitles: zokoRes.subtitles || [],
+                  provider: 'hianime',
+                  skip: zokoRes.skip,
+                };
+              }
             }
             if (!direct) {
               const v2Res = await resolveHiAnimeV2Direct({
                 slug: availableSlugs.hianime || animeRow?.slug || id,
-                animeId: resolvedMalId,
+                animeId: resolvedMalId || '',
                 ep,
                 audio,
                 server: serverParam || 'HD-1',

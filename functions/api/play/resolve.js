@@ -291,9 +291,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           serverParam.toLowerCase().includes('hd') ||
           serverParam.toLowerCase().includes('vidstream');
 
-        if (resolvedMalId > 0 && canUseEdgeDirect) {
+        if ((resolvedMalId > 0 || provider === 'hianime') && canUseEdgeDirect) {
           try {
-            const cacheKey = `stream:${provider || 'auto'}:${resolvedMalId}:${ep}:${audio}`;
+            const cacheKey = `stream:${provider || 'auto'}:${resolvedMalId || animeId}:${ep}:${audio}`;
             let directRes = null;
             if (env.ANIHUB) {
               try {
@@ -310,22 +310,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
             if (!directRes) {
               if (provider === 'hianime') {
-                const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-                const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
-                if (zokoRes?.masterUrl) {
-                  directRes = {
-                    streamUrl: zokoRes.masterUrl,
-                    referer: 'https://zokoanime.video/',
-                    quality: zokoRes.defaultQuality || '1080p',
-                    subtitles: zokoRes.subtitles || [],
-                    provider: 'hianime',
-                    skip: zokoRes.skip,
-                  };
+                if (resolvedMalId > 0) {
+                  const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
+                  const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
+                  if (zokoRes?.masterUrl) {
+                    directRes = {
+                      streamUrl: zokoRes.masterUrl,
+                      referer: 'https://zokoanime.video/',
+                      quality: zokoRes.defaultQuality || '1080p',
+                      subtitles: zokoRes.subtitles || [],
+                      provider: 'hianime',
+                      skip: zokoRes.skip,
+                    };
+                  }
                 }
                 if (!directRes) {
                   const v2Res = await resolveHiAnimeV2Direct({
-                    slug: providerSlug || animeId,
-                    animeId: resolvedMalId,
+                    slug: providerSlug || animeIdParam || animeId || titleParam,
+                    animeId: resolvedMalId || '',
                     ep,
                     audio,
                     server: serverParam || 'HD-1',
@@ -342,7 +344,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                   }
                 }
               }
-              if (!directRes) {
+              if (!directRes && resolvedMalId > 0) {
                 directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider });
               }
               if (env.ANIHUB && directRes?.streamUrl) {

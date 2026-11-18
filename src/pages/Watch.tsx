@@ -362,7 +362,11 @@ export function Watch() {
       const newParams = new URLSearchParams(params);
       newParams.delete('title');
       newParams.delete('poster');
-      newParams.set('audio', targetAudio);
+      if (targetAudio === 'dub') {
+        newParams.set('audio', 'dub');
+      } else {
+        newParams.delete('audio');
+      }
       navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
       notify(`Audio switched to ${targetAudio.toUpperCase()}`);
     }
@@ -633,7 +637,7 @@ export function Watch() {
       const cleanParams = new URLSearchParams();
       if (targetProvider) cleanParams.set('provider', targetProvider);
       if (params.get('server')) cleanParams.set('server', params.get('server')!);
-      if (params.get('audio')) cleanParams.set('audio', params.get('audio')!);
+      if (params.get('audio') === 'dub') cleanParams.set('audio', 'dub');
       const qs = cleanParams.toString();
       navigate(`/watch/${anime.id}/${clamped}${qs ? `?${qs}` : ''}`);
     },
@@ -646,7 +650,7 @@ export function Watch() {
       const cleanParams = new URLSearchParams();
       if (targetProvider) cleanParams.set('provider', targetProvider);
       if (params.get('server')) cleanParams.set('server', params.get('server')!);
-      if (params.get('audio')) cleanParams.set('audio', params.get('audio')!);
+      if (params.get('audio') === 'dub') cleanParams.set('audio', 'dub');
       const qs = cleanParams.toString();
       navigate(`/watch/${seasonId}/1${qs ? `?${qs}` : ''}`);
     },
@@ -771,7 +775,11 @@ export function Watch() {
     newParams.set('provider', newProv);
     const serverNameOnly = server.id.includes(':') ? server.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : server.id;
     newParams.set('server', serverNameOnly);
-    newParams.set('audio', srvAudio);
+    if (srvAudio === 'dub') {
+      newParams.set('audio', 'dub');
+    } else {
+      newParams.delete('audio');
+    }
     navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
     notify(`Switched to ${server.name} (${srvAudio.toUpperCase()})`);
   };
@@ -790,6 +798,11 @@ export function Watch() {
       ? defaultSrvId.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '')
       : defaultSrvId;
     newParams.set('server', serverNameOnly);
+    if (prefs.audio === 'dub') {
+      newParams.set('audio', 'dub');
+    } else {
+      newParams.delete('audio');
+    }
     navigate(`/watch/${encodeURIComponent(anime?.id || id || '')}/${epNum}?${newParams.toString()}`, { replace: true });
     notify(`Switched provider to ${provId === 'hdrezka' ? 'HDRezka' : provId.toUpperCase()}`);
   };
