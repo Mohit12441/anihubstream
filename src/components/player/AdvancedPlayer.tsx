@@ -1103,6 +1103,14 @@ export function AdvancedPlayer(props: Props) {
                     ? 'hindi'
                     : 'sub'
               }
+              activeAudioLabel={
+                activeServer?.audioTracks?.[0]?.label ||
+                (live.info?.audioTracks?.[0] as any)?.label ||
+                live.info?.audioTracks?.[0]?.name ||
+                (activeServer?.id.startsWith('hdrezka:')
+                  ? (activeServer.id.includes('dub') ? 'Russian Dub' : 'Japanese (Original)')
+                  : undefined)
+              }
               audioList={null}
               audioStatus="ready"
               audioError={null}

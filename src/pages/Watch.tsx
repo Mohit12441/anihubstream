@@ -238,7 +238,10 @@ export function Watch() {
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const rawSrv = params.get('server');
     const srvParam = (targetProvider === 'hdrezka' && rawSrv?.toLowerCase().includes('ultra')) ? '1080p' : rawSrv;
-    if (srvParam) return srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
+    if (srvParam) {
+      const base = srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
+      return (prefs.audio === 'dub' && !base.includes('-dub')) ? `${base}-dub` : base;
+    }
     return targetProvider
       ? serverIdFromProvider(targetProvider, prefs.audio)
       : (prefs.audio === 'dub' ? 'anikoto:HD-1-dub' : 'anikoto:HD-1');
@@ -848,7 +851,7 @@ export function Watch() {
                     >
                       <span className={`watch__ext-prov-dot${isRezka ? ' is-rezka' : ''}`} />
                       <span className="watch__ext-prov-name">{p.name}</span>
-                      {isRezka && <span className="watch__rezka-badge">Ultra</span>}
+                      {isRezka && <span className="watch__rezka-badge">MP4</span>}
                       {isActive && <span className="watch__ext-active-badge">Active</span>}
                     </button>
                   );

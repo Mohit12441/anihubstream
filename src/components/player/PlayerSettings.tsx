@@ -66,6 +66,7 @@ interface Props {
   subReady: boolean;
   /** audio: what is really playing, and the probed availability */
   playingAudio: AudioId;
+  activeAudioLabel?: string;
   audioList: AudioList | null;
   audioStatus: 'idle' | 'loading' | 'ready' | 'error';
   audioError: string | null;
@@ -92,6 +93,7 @@ export function PlayerSettings({
   subState,
   subReady,
   playingAudio,
+  activeAudioLabel,
   audioList: _audioList,
   audioStatus: _audioStatus,
   audioError: _audioError,
@@ -306,7 +308,7 @@ export function PlayerSettings({
               </PopGroup>
             );
           }
-          const activeTrackLabel = playingAudio === 'dub' ? 'English (Dubbed)' : 'Japanese (Original)';
+          const activeTrackLabel = activeAudioLabel || (playingAudio === 'dub' ? 'English (Dubbed)' : (playingAudio === 'hindi' ? 'Hindi Multi-Audio' : 'Japanese (Original)'));
           return (
             <PopGroup title="Active Stream Audio">
               <PopRow

@@ -77,9 +77,8 @@ export function ServerPopover({
           <PopGroup key={providerName} title={providerName}>
             {provServers.map((s) => {
               const isSelected = s.id === activeServerId;
-              const name = s.name || cleanServerName(s);
+              const name = cleanServerName(s);
               const isUnavailable = s.status === 'unavailable';
-              const isRezka = providerName === 'HDRezka' || s.id.startsWith('hdrezka:');
               return (
                 <PopRow
                   key={s.id}
@@ -87,7 +86,7 @@ export function ServerPopover({
                   active={isSelected}
                   disabled={isUnavailable}
                   label={name}
-                  note={isSelected ? 'active' : isRezka ? '1080p Ultra' : isUnavailable ? 'unavailable' : undefined}
+                  note={isSelected ? 'active' : isUnavailable ? 'unavailable' : (s.quality || '1080p')}
                   onClick={!isUnavailable ? () => {
                     onSelectServer(s);
                     onClose();
