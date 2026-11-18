@@ -8,16 +8,19 @@ const REZKA_HEADERS = {
 };
 
 export const KNOWN_TRANSLATORS = {
-  '238': 'Studio Band',
-  '105': 'AniDUB',
-  '68': 'AniLibria',
+  '105': 'Studio Band',
+  '19': 'AniLibria',
+  '565': 'TVShows',
+  '318': 'Amber',
+  '115': 'JAM',
+  '477': 'DreamCast',
+  '238': 'Original (Subtitles)',
+  '68': 'AniDUB',
   '81': 'Persona99',
   '377': 'SHIZA Project',
   '73': 'Dream Records',
   '56': 'AnimeVost',
-  '33': 'Original (Subtitles)',
   '440': 'DEEP',
-  '241': 'Amber',
 };
 
 /**
@@ -151,7 +154,7 @@ export async function details(slugOrId, opts = {}) {
   const id = String(slugOrId).replace(/[^\d]/g, '');
   if (!id) throw new Error(`Invalid HDRezka ID: ${slugOrId}`);
 
-  let defaultTranslator = opts.translatorId || '238'; // Default Studio Band fallback
+  let defaultTranslator = opts.translatorId || (opts.audio === 'sub' ? '238' : '105');
   let episodes = [];
   const translators = [];
 
@@ -182,7 +185,7 @@ export async function details(slugOrId, opts = {}) {
     }
   } catch {}
 
-  const candidateTranslators = [defaultTranslator, '238', '105', '68', '81', '377', '73', '56', '33', '440', '241'];
+  const candidateTranslators = [defaultTranslator, '105', '19', '565', '238', '318', '115'];
   const uniqueTranslators = [...new Set(candidateTranslators)];
 
   // Fetch episodes list from CDN series handler
@@ -253,9 +256,9 @@ export async function sources(epRef, opts = {}) {
   const id = parts[0];
   const season = parts[1] || '1';
   const ep = parts[2] || '1';
-  const translator = opts.translatorId || parts[3] || '238';
+  const translator = opts.translatorId || parts[3] || (opts.audio === 'sub' ? '238' : '105');
 
-  const candidateTranslators = [translator, '238', '105', '68', '81', '377', '73', '56', '33', '440', '241'];
+  const candidateTranslators = [translator, '105', '19', '565', '238', '318', '115'];
   const uniqueTranslators = [...new Set(candidateTranslators)];
 
   let lastError = null;
@@ -303,10 +306,13 @@ export async function resolve(embed, opts = {}) {
   const streams = decodeRezkaStream(rawUrl);
   if (streams.length === 0) return null;
 
-  // Prefer 1080p Ultra or 1080p, fallback to first available
+  // Filter out premium 1-min demo video (1080p Ultra) unless explicitly requested
+  const validStreams = streams.filter((s) => !s.quality.toLowerCase().includes('ultra'));
+  const candidatePool = validStreams.length > 0 ? validStreams : streams;
+
   const requested = opts.quality ? String(opts.quality).toLowerCase() : '';
-  let chosen = requested ? streams.find((s) => s.quality.toLowerCase().includes(requested)) : null;
-  if (!chosen) chosen = streams.find((s) => s.quality.toLowerCase().includes('ultra')) || streams.find((s) => s.quality.includes('1080')) || streams[0];
+  let chosen = requested && requested !== 'ultra' ? candidatePool.find((s) => s.quality.toLowerCase().includes(requested)) : null;
+  if (!chosen) chosen = candidatePool.find((s) => s.quality.includes('1080')) || candidatePool.find((s) => s.quality.includes('720')) || candidatePool[0];
 
   const primaryUrl = chosen.mp4 || chosen.hls || '';
   const isMp4 = primaryUrl.includes('.mp4');
@@ -314,7 +320,7 @@ export async function resolve(embed, opts = {}) {
   // Parse subtitle tracks if present
   const subtitles = [];
   const rawSubtitles = embed?.subtitle || opts.subtitles || opts.subtitle;
-  if (rawSubtitles) {
+  if (rawSubtitles && typeof rawSubtitles === 'string') {
     const subRegex = /\[([^\]]+)\](https?:\/\/[^\s,]+)/g;
     let sm;
     while ((sm = subRegex.exec(rawSubtitles)) !== null) {
@@ -338,9 +344,9 @@ export async function resolve(embed, opts = {}) {
     type: isMp4 ? 'mp4' : 'hls',
     kind: isMp4 ? 'mp4' : 'hls',
     referer: 'https://rezka.ag/',
-    variants: streams.map((s) => s.quality),
+    variants: candidatePool.map((s) => s.quality),
     subtitles,
-    direct: streams.map((s) => ({
+    direct: candidatePool.map((s) => ({
       quality: parseInt(s.quality, 10) || 1080,
       url: s.mp4 || s.hls,
       container: s.mp4 ? 'mp4' : 'hls',

@@ -1,7 +1,7 @@
 // @ts-check
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { decodeRezkaStream, resolve as hdrezkaResolve } from './adapters/hdrezka.mjs';
+import { decodeRezkaStream, resolve as hdrezkaResolve, KNOWN_TRANSLATORS } from './adapters/hdrezka.mjs';
 import { getAdapter } from './adapters/registry.mjs';
 import { isHostAllowed } from '../functions/api/proxy.js';
 import { assertAllowed, PROVIDERS } from '../lib/providers.mjs';
@@ -57,6 +57,23 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     assert.equal(res.referer, 'https://rezka.ag/');
     assert.equal(res.subtitles.length, 1);
     assert.equal(res.subtitles[0].language, 'Русский');
+  });
+
+  it('prefers standard 1080p over 1080p Ultra to avoid 1-minute demo video', async () => {
+    const sampleOutput = '[1080p Ultra]https://stream.voidboost.cc/demo-1min.mp4,[1080p]https://stream.voidboost.cc/full-episode.mp4,[720p]https://stream.voidboost.cc/720.mp4';
+    const b64 = Buffer.from(sampleOutput).toString('base64');
+    const res = await hdrezkaResolve({ rawUrl: `#h${b64}` });
+
+    assert.ok(res);
+    assert.equal(res.quality, '1080p');
+    assert.equal(res.streamUrl, 'https://stream.voidboost.cc/full-episode.mp4');
+    assert.ok(!res.variants.includes('1080p Ultra'), 'Should filter out 1080p Ultra from selectable variants');
+  });
+
+  it('correctly maps Russian dub vs Japanese translators in KNOWN_TRANSLATORS', () => {
+    assert.equal(KNOWN_TRANSLATORS['105'], 'Studio Band');
+    assert.equal(KNOWN_TRANSLATORS['19'], 'AniLibria');
+    assert.equal(KNOWN_TRANSLATORS['238'], 'Original (Subtitles)');
   });
 
   it('authorizes rezka and voidboost in edge proxy', () => {

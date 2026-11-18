@@ -186,8 +186,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           }
           if (rezkaId) {
             // Translator loop: try each translator_id until one resolves the stream
-            const TRANSLATORS = ['238', '105', '68', '81', '3'];
+            const TRANSLATORS = (audio === 'sub' || audio === 'ja') ? ['238', '105', '19', '565'] : ['105', '19', '565', '238', '318', '115'];
             let rawPayload = null;
+            let subtitleRaw = null;
+            let resolvedTid = null;
             for (const tid of TRANSLATORS) {
               const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
                 method: 'POST',
@@ -204,26 +206,48 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 const data = await res.json().catch(() => null);
                 if (data?.success && data?.url) {
                   rawPayload = data.url;
+                  subtitleRaw = data.subtitle;
+                  resolvedTid = tid;
                   break;
                 }
               }
             }
             if (rawPayload) {
               const streams = parseStreams(rawPayload);
-              const chosen = streams.find((s) => s.quality.includes('1080')) || streams[0];
+              const validStreams = streams.filter((s) => !s.quality.toLowerCase().includes('ultra'));
+              const pool = validStreams.length > 0 ? validStreams : streams;
+              const chosen = pool.find((s) => s.quality.includes('1080')) || pool.find((s) => s.quality.includes('720')) || pool[0];
               if (chosen?.url) {
+                const rezkaSubs = [];
+                if (typeof subtitleRaw === 'string' && subtitleRaw.includes('http')) {
+                  const subRegex = /\[([^\]]+)\](https?:\/\/[^\s,]+)/g;
+                  let sm;
+                  while ((sm = subRegex.exec(subtitleRaw)) !== null) {
+                    rezkaSubs.push({
+                      id: `rezka-sub-${rezkaSubs.length}`,
+                      language: sm[1].toLowerCase().includes('рус') ? 'ru' : 'en',
+                      label: sm[1],
+                      name: sm[1],
+                      url: sm[2],
+                      default: rezkaSubs.length === 0,
+                    });
+                  }
+                }
+                const isJa = resolvedTid === '238' || audio === 'sub';
                 return ok({
                   server: {
                     id: 'hdrezka:ultra',
-                    name: 'HDRezka · Ultra HD (RU Dub)',
+                    name: isJa ? 'HDRezka · 1080p (Japanese)' : 'HDRezka · 1080p (RU Dub)',
                     provider: 'hdrezka',
                     status: 'ready',
                     streamUrl: chosen.url,
                     type: 'mp4',
-                    quality: chosen.quality || '1080p Ultra',
-                    audio: 'russian',
-                    audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
-                    subtitles: [],
+                    quality: chosen.quality || '1080p',
+                    audio: isJa ? 'sub' : 'russian',
+                    audioTracks: isJa
+                      ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
+                      : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                    subtitles: rezkaSubs,
                   }
                 }, { cache: 'public, max-age=300, s-maxage=600' });
               }

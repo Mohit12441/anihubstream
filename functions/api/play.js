@@ -792,40 +792,71 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 // KV-first read of pre-cached metadata ahead of live fetch
                 const kvMeta = await hdrezkaMeta(env, rezkaId, season, ep);
                 let rawPayload = null;
+                let subtitleRaw = null;
+                let resolvedTranslator = null;
                 if (kvMeta?.ok && kvMeta.payload) {
                   rawPayload = kvMeta.payload;
                 } else {
-                  const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
-                    method: 'POST',
-                    headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
-                    body: new URLSearchParams({
-                      id: String(rezkaId),
-                      translator_id: '238',
-                      season: String(season || 1),
-                      episode: String(ep || 1),
-                      action: 'get_stream',
-                    }).toString(),
-                  });
-                  if (res && res.ok) {
-                    const data = await res.json().catch(() => null);
-                    if (data?.success && data?.url) rawPayload = data.url;
+                  const trCandidates = (audio === 'sub' || audio === 'ja') ? ['238', '105', '19'] : ['105', '19', '565', '238'];
+                  for (const tr of trCandidates) {
+                    const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
+                      method: 'POST',
+                      headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
+                      body: new URLSearchParams({
+                        id: String(rezkaId),
+                        translator_id: tr,
+                        season: String(season || 1),
+                        episode: String(ep || 1),
+                        action: 'get_stream',
+                      }).toString(),
+                    });
+                    if (res && res.ok) {
+                      const data = await res.json().catch(() => null);
+                      if (data?.success && data?.url) {
+                        rawPayload = data.url;
+                        subtitleRaw = data.subtitle;
+                        resolvedTranslator = tr;
+                        break;
+                      }
+                    }
                   }
                 }
 
                 if (rawPayload) {
                   const streams = parseStreams(rawPayload);
-                  const chosen = streams.find((s) => s.quality.includes('1080')) || streams[0];
+                  const validStreams = streams.filter((s) => !s.quality.toLowerCase().includes('ultra'));
+                  const pool = validStreams.length > 0 ? validStreams : streams;
+                  const chosen = pool.find((s) => s.quality.includes('1080')) || pool.find((s) => s.quality.includes('720')) || pool[0];
                   if (chosen?.url) {
+                    const rezkaSubs = [];
+                    if (typeof subtitleRaw === 'string' && subtitleRaw.includes('http')) {
+                      const subRegex = /\[([^\]]+)\](https?:\/\/[^\s,]+)/g;
+                      let sm;
+                      while ((sm = subRegex.exec(subtitleRaw)) !== null) {
+                        rezkaSubs.push({
+                          id: `rezka-sub-${rezkaSubs.length}`,
+                          language: sm[1].toLowerCase().includes('рус') ? 'ru' : 'en',
+                          label: sm[1],
+                          name: sm[1],
+                          url: sm[2],
+                          default: rezkaSubs.length === 0,
+                        });
+                      }
+                    }
+
+                    const isJaAudio = resolvedTranslator === '238' || (audio === 'sub' && !resolvedTranslator);
                     direct = {
                       streamUrl: chosen.url,
                       quality: chosen.quality,
                       type: 'mp4',
                       provider: 'hdrezka',
                       referrerPolicy: 'no-referrer',
-                      audio: 'russian',
-                      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
-                      subtitles: [],
-                      direct: streams,
+                      audio: isJaAudio ? 'sub' : 'russian',
+                      audioTracks: isJaAudio
+                        ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
+                        : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                      subtitles: rezkaSubs,
+                      direct: pool,
                     };
                   }
                 }
@@ -1066,7 +1097,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     // If HDRezka supplied direct quality variants, expose them as selectable sub-servers
     if (prov === 'hdrezka' && Array.isArray(meta.direct)) {
       for (const d of meta.direct) {
-        const qLabel = `${d.quality}p`;
+        const rawQ = String(d.quality || '');
+        if (rawQ.toLowerCase().includes('ultra')) continue; // Skip 1-minute premium promo teaser
+        const qLabel = rawQ.endsWith('p') ? rawQ : `${rawQ}p`;
         const sId = `hdrezka:${qLabel.toLowerCase()}`;
         if (sId !== activeServerId && !servers.some((existing) => existing.id === sId) && d.url) {
           servers.push({
