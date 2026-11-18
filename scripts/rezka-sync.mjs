@@ -55,10 +55,22 @@ async function main() {
   const { cookie } = await getCookie('/');
   if (!cookie) { console.log('not gated'); process.exit(1); }
 
+  // Store cookie in both D1 provider_session and KV anubis:cookie for redundancy
   await d1(
     `INSERT INTO provider_session (provider_id, cookie, updated_at) VALUES ('hdrezka', ?, ?) ON CONFLICT(provider_id) DO UPDATE SET cookie = excluded.cookie, updated_at = excluded.updated_at`,
     [cookie ?? '', Date.now()],
   );
+  if (env.KV_NAMESPACE) {
+    const kv = env.KV_NAMESPACE;
+    await kv.put('anubis:cookie', cookie, { expirationTtl: 30 * 24 * 3600 * 1000 });
+  }
+
+  // Also set env for resolve.js to read from KV
+  if (env.KV_NAMESPACE) process.env.KV_NAMESPACE = env.KV_NAMESPACE;
+
+  // Set cookie in environment for resolve.js provider_session fallback
+  process.env.HDREZKA_COOKIE = cookie;
+
 
   const rows = await d1(
     `SELECT id, mal_id, COALESCE(romaji, title) AS title FROM anime_id_map JOIN anime ON anime.id = anime_id_map.anime_id WHERE hdrezka_slug IS NULL AND id % ? = ? ORDER BY id LIMIT ?`,

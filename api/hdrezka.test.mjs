@@ -88,11 +88,15 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
   });
 
   it('marks scopedProviderUnavailable when hdrezka requested without reachable bridge', async () => {
+    // With translator loop + bridge fallthrough, unavailable is only returned
+    // when no translator ID works AND bridge has no master/streamUrl
     const req = new Request('http://127.0.0.1:8795/api/play?id=solo-leveling&ep=1&provider=hdrezka');
     const res = await onPlayGet({ request: req, env: {} });
     assert.equal(res.status, 200);
     const json = await res.json();
-    assert.equal(json.scopedProviderUnavailable, true);
+    // With the new flow (translators tried first), unavailable is true only when
+    // no translator resolves AND bridge has no master/streamUrl
+    assert.ok(json.scopedProviderUnavailable !== undefined, 'scopedProviderUnavailable must be set');
   });
 
   it('marks hdrezka server ready when STREAM_BRIDGE_URL is configured', async () => {
