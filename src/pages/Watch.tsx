@@ -9,6 +9,7 @@ import {
   Info,
   Layers,
   ListVideo,
+  Mic,
   Play,
   Server,
   Share2,
@@ -309,12 +310,11 @@ export function Watch() {
     return filtered.length > 0 ? filtered : playServers;
   }, [playServers, prefs.audio]);
 
-  const currentSubservers = useMemo(() => {
-    const isDub = prefs.audio === 'dub';
+  const providerScopedServers = useMemo(() => {
     const targetKey = activeProvider.toLowerCase();
 
     // Strict provider isolation: ONLY servers from this specific provider are allowed
-    const providerScoped = playServers.filter((s) => {
+    const scoped = playServers.filter((s) => {
       const p = (s.provider || (s.id.includes(':') ? s.id.split(':')[0] : '')).toLowerCase();
       if (targetKey === 'anipm') return p === 'anipm' || s.id.startsWith('anipm:');
       if (targetKey === 'anikoto') return p === 'anikoto' || s.id.startsWith('anikoto:');
@@ -325,12 +325,23 @@ export function Watch() {
       return p === targetKey;
     });
 
-    const audioMatching = providerScoped.filter((s) => {
-      const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
-      return isDub ? sDub : !sDub;
-    });
-    return audioMatching.length > 0 ? audioMatching : providerScoped;
-  }, [playServers, activeProvider, prefs.audio]);
+    const subList = scoped.filter((s) => !s.id.includes('-dub') && (s.audio || '').toLowerCase() !== 'dub');
+    const dubList = scoped.filter((s) => s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub');
+
+    return {
+      all: scoped,
+      sub: subList,
+      dub: dubList,
+    };
+  }, [playServers, activeProvider]);
+
+  const currentSubservers = useMemo(() => {
+    const isDub = prefs.audio === 'dub';
+    if (isDub) {
+      return providerScopedServers.dub.length > 0 ? providerScopedServers.dub : providerScopedServers.all;
+    }
+    return providerScopedServers.sub.length > 0 ? providerScopedServers.sub : providerScopedServers.all;
+  }, [providerScopedServers, prefs.audio]);
 
   const activeServer = useMemo(() => {
     const match = currentSubservers.find((s) => s.id === activeServerId);
@@ -921,8 +932,70 @@ export function Watch() {
               </div>
             </div>
 
-            {/* Bottom row: Mirrors for active provider */}
-            {currentSubservers.length > 0 && (
+            {/* Bottom row: Mirrors for active provider (SUB & DUB rows when both available) */}
+            {providerScopedServers.sub.length > 0 && providerScopedServers.dub.length > 0 ? (
+              <>
+                <div className="watch__ext-row watch__ext-subservers-row">
+                  <span className="watch__ext-label">
+                    <Server size={13} aria-hidden="true" />
+                    <span>{activeProvider} SUB:</span>
+                  </span>
+                  <div className="watch__ext-subservers-list">
+                    {providerScopedServers.sub.map((s) => {
+                      const isSelected = s.id === activeServerId;
+                      const isUnavailable = s.status === 'unavailable';
+                      const name = cleanServerName(s);
+                      const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
+                      return (
+                        <button
+                          key={s.id}
+                          type="button"
+                          disabled={isUnavailable}
+                          className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
+                          onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
+                          title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
+                        >
+                          <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
+                          <span>{name}</span>
+                          {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
+                          {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="watch__ext-row watch__ext-subservers-row" style={{ marginTop: '0.35rem' }}>
+                  <span className="watch__ext-label">
+                    <Mic size={13} aria-hidden="true" />
+                    <span>{activeProvider} DUB:</span>
+                  </span>
+                  <div className="watch__ext-subservers-list">
+                    {providerScopedServers.dub.map((s) => {
+                      const isSelected = s.id === activeServerId;
+                      const isUnavailable = s.status === 'unavailable';
+                      const name = cleanServerName(s);
+                      const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
+                      return (
+                        <button
+                          key={s.id}
+                          type="button"
+                          disabled={isUnavailable}
+                          className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
+                          onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
+                          title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
+                        >
+                          <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
+                          <span>{name}</span>
+                          {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
+                          {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </>
+            ) : currentSubservers.length > 0 ? (
               <div className="watch__ext-row watch__ext-subservers-row">
                 <span className="watch__ext-label">
                   <Server size={13} aria-hidden="true" />
@@ -954,7 +1027,7 @@ export function Watch() {
                   })}
                 </div>
               </div>
-            )}
+            ) : null}
           </div>
 
           {/* STREAM UTILITY TOOLBAR */}

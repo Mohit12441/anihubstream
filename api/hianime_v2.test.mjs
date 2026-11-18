@@ -4,6 +4,7 @@ import {
   parseHiAnimeEpisodeList,
   parseHiAnimeServers,
   extractDirectStreamFromEmbed,
+  resolveHiAnimeV2Direct,
 } from '../functions/api/hianime/_hianime_v2.js';
 
 test('parseHiAnimeEpisodeList: parses episode items from /ajax/v2/episode/list HTML', () => {
@@ -94,7 +95,7 @@ test('parseHiAnimeServers: handles malformed HTML without crashing', () => {
   assert.deepEqual(parseHiAnimeServers('<div class="nothing">test</div>'), []);
 });
 
-test('extractDirectStreamFromEmbed: removes iframe and extracts direct MegaPlay HLS stream', async () => {
+test('extractDirectStreamFromEmbed: removes iframe and extracts direct MegaPlay HLS stream (HD-1)', async () => {
   const mockResolveMegaplay = async (url) => {
     assert.match(url, /megaplay\.buzz/);
     return {
@@ -121,7 +122,7 @@ test('extractDirectStreamFromEmbed: removes iframe and extracts direct MegaPlay 
   assert.equal(res.subtitles.length, 1);
 });
 
-test('extractDirectStreamFromEmbed: removes iframe and extracts direct ZokoAnime HLS stream', async () => {
+test('extractDirectStreamFromEmbed: removes iframe and extracts direct ZokoAnime HLS stream (HD-3)', async () => {
   const mockResolveZoko = async (url) => {
     assert.match(url, /zokoanime\.video/);
     return {
@@ -147,4 +148,17 @@ test('extractDirectStreamFromEmbed: returns null for unsupported or empty embed 
   assert.equal(await extractDirectStreamFromEmbed(''), null);
   assert.equal(await extractDirectStreamFromEmbed(null), null);
   assert.equal(await extractDirectStreamFromEmbed('https://unknown-ad-host.com/embed/123'), null);
+});
+
+test('resolveHiAnimeV2Direct: supports HD-1, HD-2, HD-3 server targets without throwing', async () => {
+  // Test resolving via malId fallback for Solo Leveling S1 ep 1
+  const hd1 = await resolveHiAnimeV2Direct({ malId: 52299, ep: 1, audio: 'sub', server: 'HD-1' });
+  assert.ok(hd1, 'HD-1 must resolve');
+  assert.equal(hd1.serverName, 'HD-1');
+  assert.ok(hd1.streamUrl.includes('m3u8') || hd1.streamUrl.includes('nexabloom.top'));
+
+  const hd3 = await resolveHiAnimeV2Direct({ malId: 52299, ep: 1, audio: 'sub', server: 'HD-3' });
+  assert.ok(hd3, 'HD-3 must resolve');
+  assert.equal(hd3.serverName, 'HD-3');
+  assert.ok(hd3.streamUrl.includes('m3u8') || hd3.streamUrl.includes('dramahot.top'));
 });

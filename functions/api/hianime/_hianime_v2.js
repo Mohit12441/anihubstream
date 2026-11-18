@@ -50,6 +50,9 @@ export function parseHiAnimeServers(html) {
   return servers;
 }
 
+const HIANIME_MAIN = 'https://hianimex.com.in';
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
+
 /**
  * Strips iframe and extracts direct HLS stream + subtitles without ads
  * from HiAnime sources response: { type: "iframe", link: "..." }
@@ -78,7 +81,41 @@ export async function extractDirectStreamFromEmbed(embedUrl, deps = {}) {
     }
   }
 
-  // 2. ZokoAnime embed (HD-3)
+  // 2. MegaVid embed (HD-2)
+  if (/megavid\.buzz/i.test(embedUrl)) {
+    try {
+      const sourceUrl = embedUrl.replace(/\/?$/, '') + '/source';
+      const mvRes = await fetch(sourceUrl, {
+        headers: { 'User-Agent': USER_AGENT, Referer: embedUrl },
+        signal: AbortSignal.timeout(3500),
+      });
+      if (mvRes.ok) {
+        const mvData = await mvRes.json();
+        if (mvData?.source) {
+          const skip = mvData.chapters?.length ? {
+            intro: mvData.chapters.find((c) => /intro/i.test(c.title)) ? [mvData.chapters.find((c) => /intro/i.test(c.title)).start, mvData.chapters.find((c) => /intro/i.test(c.title)).end] : null,
+            outro: mvData.chapters.find((c) => /outro/i.test(c.title)) ? [mvData.chapters.find((c) => /outro/i.test(c.title)).start, mvData.chapters.find((c) => /outro/i.test(c.title)).end] : null,
+          } : null;
+          return {
+            streamUrl: mvData.source,
+            referer: 'https://megavid.buzz/',
+            subtitles: (mvData.tracks || []).map((t, idx) => ({
+              id: `megavid-sub-${idx}`,
+              language: (t.label || 'en').toLowerCase().slice(0, 2),
+              label: t.label || 'English',
+              name: t.label || 'English',
+              url: t.file,
+              default: Boolean(t.default),
+            })),
+            quality: '1080p',
+            skip,
+          };
+        }
+      }
+    } catch (_) {}
+  }
+
+  // 3. ZokoAnime embed (HD-3)
   if (/zokoanime\.video/i.test(embedUrl)) {
     const resolveZoko = deps.resolveZokoEmbedEdge || (await import('./_zoko.js')).resolveZokoEmbedEdge;
     const res = await resolveZoko(embedUrl);
@@ -96,9 +133,6 @@ export async function extractDirectStreamFromEmbed(embedUrl, deps = {}) {
   return null;
 }
 
-const HIANIME_MAIN = 'https://hianimex.com.in';
-const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
-
 /**
  * Resolves a HiAnime v2 stream directly without iframe/ads using official v2 Ajax endpoints.
  * 
@@ -108,10 +142,13 @@ const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
  * @param {number} [options.ep=1]
  * @param {string} [options.audio='sub']
  * @param {string} [options.server='HD-1']
+ * @param {number} [options.malId=0]
  * @returns {Promise<{ streamUrl: string, referer: string, subtitles: any[], quality?: string, skip?: any, serverName?: string } | null>}
  */
-export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, audio = 'sub', server = 'HD-1' }) {
+export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, audio = 'sub', server = 'HD-1', malId = 0 }) {
   let numericId = String(animeId || '').trim();
+  const targetServerName = (server || 'HD-1').replace(/-dub$/i, '').toUpperCase();
+  const wantedAudio = audio === 'dub' ? 'dub' : 'sub';
 
   if (!numericId && slug) {
     const suffixMatch = /-([0-9]+)$/.exec(slug);
@@ -134,55 +171,77 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
     }
   }
 
-  if (!numericId) return null;
+  // 1. Try resolving via official HiAnime v2 API
+  if (numericId) {
+    try {
+      const epListRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/list/${numericId}`, {
+        headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
+        signal: AbortSignal.timeout(3500),
+      });
+      if (epListRes.ok) {
+        const epListData = await epListRes.json();
+        const episodes = parseHiAnimeEpisodeList(epListData?.html || '');
+        const targetEp = episodes.find((e) => e.number === Number(ep)) || episodes[0];
+        if (targetEp?.id) {
+          const serversRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/servers?episodeId=${targetEp.id}`, {
+            headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
+            signal: AbortSignal.timeout(3500),
+          });
+          if (serversRes.ok) {
+            const serversData = await serversRes.json();
+            const servers = parseHiAnimeServers(serversData?.html || '');
+            const matchingServers = servers.filter((s) => s.type === wantedAudio);
+            const chosenServer = matchingServers.find((s) => s.name.toUpperCase() === targetServerName) ||
+              matchingServers.find((s) => s.name.toUpperCase() === 'HD-1') ||
+              matchingServers[0];
 
-  try {
-    const epListRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/list/${numericId}`, {
-      headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
-      signal: AbortSignal.timeout(3500),
-    });
-    if (!epListRes.ok) return null;
-
-    const epListData = await epListRes.json();
-    const episodes = parseHiAnimeEpisodeList(epListData?.html || '');
-    const targetEp = episodes.find((e) => e.number === Number(ep)) || episodes[0];
-    if (!targetEp?.id) return null;
-
-    const serversRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/servers?episodeId=${targetEp.id}`, {
-      headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
-      signal: AbortSignal.timeout(3500),
-    });
-    if (!serversRes.ok) return null;
-
-    const serversData = await serversRes.json();
-    const servers = parseHiAnimeServers(serversData?.html || '');
-    const wantedAudio = audio === 'dub' ? 'dub' : 'sub';
-    const matchingServers = servers.filter((s) => s.type === wantedAudio);
-    const targetServerName = (server || 'HD-1').replace(/-dub$/i, '').toUpperCase();
-    const chosenServer = matchingServers.find((s) => s.name.toUpperCase() === targetServerName) ||
-      matchingServers.find((s) => s.name.toUpperCase() === 'HD-1') ||
-      matchingServers[0];
-
-    if (!chosenServer?.id) return null;
-
-    const sourceRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/sources?id=${chosenServer.id}`, {
-      headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
-      signal: AbortSignal.timeout(3500),
-    });
-    if (!sourceRes.ok) return null;
-
-    const sourceData = await sourceRes.json();
-    if (!sourceData?.link) return null;
-
-    const direct = await extractDirectStreamFromEmbed(sourceData.link);
-    if (!direct?.streamUrl) return null;
-
-    return {
-      ...direct,
-      serverName: chosenServer.name || 'HD-1',
-    };
-  } catch (_) {
-    return null;
+            if (chosenServer?.id) {
+              const sourceRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/sources?id=${chosenServer.id}`, {
+                headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
+                signal: AbortSignal.timeout(3500),
+              });
+              if (sourceRes.ok) {
+                const sourceData = await sourceRes.json();
+                if (sourceData?.link) {
+                  const direct = await extractDirectStreamFromEmbed(sourceData.link);
+                  if (direct?.streamUrl) {
+                    return {
+                      ...direct,
+                      serverName: chosenServer.name || targetServerName,
+                    };
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    } catch (_) {}
   }
-}
 
+  // 2. Direct MAL ID stream fallbacks matching the exact upstream host per server
+  if (malId > 0) {
+    try {
+      if (targetServerName === 'HD-1') {
+        const megaDirectUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${wantedAudio}`;
+        const direct = await extractDirectStreamFromEmbed(megaDirectUrl);
+        if (direct?.streamUrl) return { ...direct, serverName: 'HD-1' };
+      } else if (targetServerName === 'HD-3') {
+        const zokoDirectUrl = `https://zokoanime.video/stream/mal/${malId}/${ep}/${wantedAudio}?color=ffbade`;
+        const direct = await extractDirectStreamFromEmbed(zokoDirectUrl);
+        if (direct?.streamUrl) return { ...direct, serverName: 'HD-3' };
+      } else if (targetServerName === 'HD-2') {
+        const megavidDirectUrl = `https://megavid.buzz/mal/${malId}/${ep}/${wantedAudio}`;
+        const direct = await extractDirectStreamFromEmbed(megavidDirectUrl);
+        if (direct?.streamUrl) {
+          return { ...direct, serverName: 'HD-2' };
+        }
+        // If megavid.buzz fails (e.g. s-90 DNS down), fallback to MegaPlay or Zoko
+        const megaBackup = await extractDirectStreamFromEmbed(`https://megaplay.buzz/stream/mal/${malId}/${ep}/${wantedAudio}`);
+        if (megaBackup?.streamUrl) return { ...megaBackup, serverName: 'HD-2' };
+      }
+    } catch (_) {}
+  }
+
+  return null;
+}
