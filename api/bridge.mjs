@@ -448,10 +448,10 @@ const server = http.createServer(async (req, res) => {
       },
       {
         provider: 'hdrezka',
-        name: 'HDRezka · Ultra HD (1080p Ultra)',
-        badge: 'Ultra MP4',
+        name: 'HDRezka · 1080p (RU Dub)',
+        badge: '1080p MP4',
         format: 'MP4',
-        quality: '1080p Ultra',
+        quality: '1080p',
         type: 'direct',
         audio: 'russian',
         description: 'Voidboost CDN direct high-bitrate MP4 download',
@@ -622,7 +622,7 @@ const server = http.createServer(async (req, res) => {
             let details = null;
             let resolvedSlug = slug || '';
             if (slug && (adapter.id === provider || provider === 'auto' || !provider)) {
-              details = await adapter.details(slug).catch(() => null);
+              details = await adapter.details(slug, { audio }).catch(() => null);
               if (details) resolvedSlug = slug;
             }
             if (!details && title) {
@@ -647,7 +647,7 @@ const server = http.createServer(async (req, res) => {
                   }
                 }
                 const chosenSlug = targetItem.slug || targetItem.id;
-                details = await adapter.details(chosenSlug).catch(() => null);
+                details = await adapter.details(chosenSlug, { audio }).catch(() => null);
                 if (details) resolvedSlug = chosenSlug;
               }
             }
@@ -656,11 +656,12 @@ const server = http.createServer(async (req, res) => {
               const epList = details.episodes || [];
               const targetEp = epList.find((e) => e.number === ep) || (ep === 1 ? epList[0] : null);
               if (targetEp) {
-                const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio }).catch(() => null);
+                const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio, audio }).catch(() => null);
                 const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0] || src?.rawUrl;
                 if (firstEmbed && adapter.resolve) {
                   const embedPayload = adapter.id === 'hdrezka' ? src : firstEmbed;
-                  const res = await adapter.resolve(embedPayload, { quality: serverParam, skip: src?.skip, subtitles: src?.subtitle }).catch(() => null);
+                  const safeQuality = (adapter.id === 'hdrezka' && String(serverParam || '').toLowerCase().includes('ultra')) ? '1080p' : serverParam;
+                  const res = await adapter.resolve(embedPayload, { quality: safeQuality, audio, skip: src?.skip, subtitles: src?.subtitle }).catch(() => null);
                   const streamCandidate = res?.master?.url || res?.streamUrl;
                   if (streamCandidate) {
                     if (res.kind === 'embed' || res.type === 'embed' || streamCandidate.includes('morencius') || (!streamCandidate.includes('.m3u8') && !streamCandidate.includes('.mp4') && streamCandidate.includes('/embed'))) {
@@ -743,7 +744,7 @@ const server = http.createServer(async (req, res) => {
         episode: { number: ep, title: `Episode ${ep}` },
         quality: resolved.quality || '1080p',
         variants,
-        audio: effectiveAudio,
+        audio: resolved.audio || effectiveAudio,
         audioTracks: Array.isArray(resolved.audioTracks) && resolved.audioTracks.length > 0 ? resolved.audioTracks : undefined,
         skip: resolved.skip || null,
         proof,

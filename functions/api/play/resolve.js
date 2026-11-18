@@ -236,7 +236,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 const isJa = resolvedTid === '238' || audio === 'sub';
                 return ok({
                   server: {
-                    id: 'hdrezka:ultra',
+                    id: 'hdrezka:1080p',
                     name: isJa ? 'HDRezka · 1080p (Japanese)' : 'HDRezka · 1080p (RU Dub)',
                     provider: 'hdrezka',
                     status: 'ready',
@@ -477,9 +477,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const prov = metaData.provider || provider;
         const proxyBase = `${url.origin}/api/proxy`;
         const masterPath = metaData.master || metaData.streamUrl || '';
-        const activeReferer = metaData.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : ''));
+        const isDirectVoidboost = prov === 'hdrezka' || masterPath.includes('voidboost');
+        const activeReferer = isDirectVoidboost ? '' : (metaData.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
         let streamUrl;
-        if (masterPath.includes('/api/proxy')) {
+        if (isDirectVoidboost && masterPath.startsWith('http')) {
+          streamUrl = masterPath;
+        } else if (masterPath.includes('/api/proxy')) {
           streamUrl = masterPath.startsWith('http') ? masterPath : `${url.origin}${masterPath}`;
         } else if (masterPath.startsWith('http')) {
           streamUrl = activeReferer
@@ -527,27 +530,37 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             : null;
 
         const resolvedAudio = typeof metaData.audio === 'string' ? metaData.audio : audio;
-        let serverName = formatServerName(prov, serverParam || 'HD-1');
+        const cleanServerId = (prov === 'hdrezka' && (!rawServerParam || rawServerParam.toLowerCase().includes('ultra')))
+          ? '1080p'
+          : (rawServerParam || 'HD-1');
+        let serverName = prov === 'hdrezka'
+          ? `HDRezka · ${cleanServerId} (${resolvedAudio === 'russian' ? 'RU Dub' : 'Japanese'})`
+          : formatServerName(prov, serverParam || 'HD-1');
         if (audio === 'dub' && resolvedAudio === 'sub') {
           serverName += ' (Sub Only)';
         }
 
-        const resolvedAudioTracks = rawAudioMeta
-          ? rawAudioMeta.map((t, i) => ({
-              id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${i}`),
-              language: t.language || t.lang || 'ja',
-              label: t.label || t.name || t.language || 'Audio',
-              default: t.default !== undefined ? Boolean(t.default) : i === 0,
-            }))
-          : buildAudioTracks(resolvedAudio);
+        const resolvedAudioTracks = prov === 'hdrezka'
+          ? (resolvedAudio === 'russian'
+            ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+            : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }])
+          : (rawAudioMeta
+            ? rawAudioMeta.map((t, i) => ({
+                id: t.id !== undefined ? String(t.id) : (t.language || t.lang || `audio-${i}`),
+                language: t.language || t.lang || 'ja',
+                label: t.label || t.name || t.language || 'Audio',
+                default: t.default !== undefined ? Boolean(t.default) : i === 0,
+              }))
+            : buildAudioTracks(resolvedAudio));
 
         const resolvedServer = {
-          id: `${prov}:${rawServerParam || 'HD-1'}`,
+          id: `${prov}:${cleanServerId}`,
           name: serverName,
           provider: prov,
           status: 'ready',
           streamUrl,
-          type: metaData.type || (resolvedAudio === 'dub' ? 'dub' : (metaData.kind === 'progressive' ? 'mp4' : 'hls')),
+          referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
+          type: metaData.type || (resolvedAudio === 'dub' ? 'dub' : (metaData.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls')),
           quality: metaData.quality || '1080p',
           audio: resolvedAudio,
           audioTracks: resolvedAudioTracks,

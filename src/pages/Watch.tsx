@@ -64,7 +64,7 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta', name: 'AniPM · Beta', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta-dub', name: 'AniPM · Beta (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hdrezka:ultra', name: 'HDRezka · Ultra HD (1080p)', provider: 'hdrezka', quality: '1080p Ultra', audio: 'russian', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:1080p', name: 'HDRezka · 1080p (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'russian', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 
@@ -233,7 +233,8 @@ export function Watch() {
     (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : '')
   ).toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(() => {
-    const srvParam = params.get('server');
+    const rawSrv = params.get('server');
+    const srvParam = (targetProvider === 'hdrezka' && rawSrv?.toLowerCase().includes('ultra')) ? '1080p' : rawSrv;
     if (srvParam) return srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
     return targetProvider
       ? serverIdFromProvider(targetProvider, prefs.audio)

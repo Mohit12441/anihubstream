@@ -154,7 +154,8 @@ export async function details(slugOrId, opts = {}) {
   const id = String(slugOrId).replace(/[^\d]/g, '');
   if (!id) throw new Error(`Invalid HDRezka ID: ${slugOrId}`);
 
-  let defaultTranslator = opts.translatorId || (opts.audio === 'sub' ? '238' : '105');
+  const wantsSub = opts.audio === 'sub' || opts.audio === 'ja';
+  let defaultTranslator = opts.translatorId || (wantsSub ? '238' : '105');
   let episodes = [];
   const translators = [];
 
@@ -169,7 +170,11 @@ export async function details(slugOrId, opts = {}) {
       const html = await res.text();
       // Extract active or first translator_id
       const trMatch = html.match(/data-translator_id="(\d+)"/) || html.match(/initCDNSeriesEvents\(\s*\d+,\s*(\d+)/);
-      if (trMatch && !opts.translatorId) defaultTranslator = trMatch[1];
+      if (trMatch && !opts.translatorId) {
+        if (wantsSub ? trMatch[1] === '238' : trMatch[1] !== '238') {
+          defaultTranslator = trMatch[1];
+        }
+      }
 
       const trRegex = /data-translator_id="(\d+)"(?:[^>]*title="([^"]+)")?/g;
       let m;
@@ -185,7 +190,9 @@ export async function details(slugOrId, opts = {}) {
     }
   } catch {}
 
-  const candidateTranslators = [defaultTranslator, '105', '19', '565', '238', '318', '115'];
+  const candidateTranslators = wantsSub
+    ? [defaultTranslator, '238', '105', '19', '565', '318', '115']
+    : [defaultTranslator, '105', '19', '565', '318', '115', '477', '238'];
   const uniqueTranslators = [...new Set(candidateTranslators)];
 
   // Fetch episodes list from CDN series handler
@@ -256,9 +263,13 @@ export async function sources(epRef, opts = {}) {
   const id = parts[0];
   const season = parts[1] || '1';
   const ep = parts[2] || '1';
-  const translator = opts.translatorId || parts[3] || (opts.audio === 'sub' ? '238' : '105');
+  const wantsSub = opts.audio === 'sub' || opts.audio === 'ja' || opts.audioType === 'sub';
+  const defaultTr = wantsSub ? '238' : '105';
+  let translator = opts.translatorId || (wantsSub ? (parts[3] === '238' ? '238' : defaultTr) : (parts[3] !== '238' ? parts[3] : defaultTr));
 
-  const candidateTranslators = [translator, '105', '19', '565', '238', '318', '115'];
+  const candidateTranslators = wantsSub
+    ? [translator, '238', '105', '19', '565']
+    : [translator, '105', '19', '565', '318', '115', '477', '238'];
   const uniqueTranslators = [...new Set(candidateTranslators)];
 
   let lastError = null;
@@ -286,6 +297,8 @@ export async function sources(epRef, opts = {}) {
           rawUrl: data.url,
           subtitle: data.subtitle || '',
           subtitle_lns: data.subtitle_lns || {},
+          translatorId: tr,
+          translatorName: KNOWN_TRANSLATORS[tr] || `Studio ${tr}`,
         };
       }
     } catch (err) {
@@ -333,6 +346,12 @@ export async function resolve(embed, opts = {}) {
     }
   }
 
+  const trId = embed?.translatorId || opts.translatorId;
+  const isJa = trId === '238' || (opts.audio === 'sub' && !trId);
+  const audioTracks = isJa
+    ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
+    : [{ id: 'audio-ru', language: 'ru', label: `${embed?.translatorName || 'Russian'} Dub`, default: true }];
+
   return {
     provider: 'hdrezka',
     master: {
@@ -341,6 +360,8 @@ export async function resolve(embed, opts = {}) {
     },
     streamUrl: primaryUrl,
     quality: chosen.quality,
+    audio: isJa ? 'sub' : 'russian',
+    audioTracks,
     type: isMp4 ? 'mp4' : 'hls',
     kind: isMp4 ? 'mp4' : 'hls',
     referer: 'https://rezka.ag/',

@@ -438,11 +438,12 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
 
   servers.push(
     makeServer({
-      id: 'hdrezka:ultra',
-      name: 'HDRezka · Ultra HD (RU Dub)',
+      id: 'hdrezka:1080p',
+      name: 'HDRezka · 1080p (RU Dub)',
       provider: 'hdrezka',
-      streamUrl: resolveUrl({ audio: 'russian', provider: 'hdrezka', server: 'ultra' }),
+      streamUrl: resolveUrl({ audio: 'russian', provider: 'hdrezka', server: '1080p' }),
       type: 'mp4',
+      quality: '1080p',
       audio: 'russian',
       status: hasRezkaBridge ? 'ready' : 'unavailable',
       unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
@@ -994,7 +995,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const meta = bridgeRes;
     const session = meta.session || '';
-    const cleanPrimaryServer = String(serverParam || (requested === 'hdrezka' ? 'ultra' : 'HD-1')).replace(/^.*?\s*·\s*/, '').trim();
+    const cleanPrimaryServer = String(serverParam || (requested === 'hdrezka' ? '1080p' : 'HD-1')).replace(/^.*?\s*·\s*/, '').replace(/^ultra$/i, '1080p').trim();
     let prov = meta.provider || (requested !== 'auto' ? requested : 'anikoto');
     if (meta.provider === 'hdrezka' || requested === 'hdrezka') {
       prov = meta.provider || 'hdrezka';
@@ -1070,18 +1071,21 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }))
       : buildAudioTracks(resolvedAudio);
 
+    const isRezkaJa = prov === 'hdrezka' && (resolvedAudio === 'sub' || resolvedAudio === 'ja');
     const primaryServer = {
       id: activeServerId,
-      name: prov === 'hdrezka' ? `HDRezka · ${cleanPrimaryServer} (RU Dub)` : primaryServerName,
+      name: prov === 'hdrezka' ? `HDRezka · ${cleanPrimaryServer} (${isRezkaJa ? 'Japanese' : 'RU Dub'})` : primaryServerName,
       provider: prov,
       status: 'ready',
       streamUrl,
       referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
       type: meta.type || (meta.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
-      audio: prov === 'hdrezka' ? 'russian' : resolvedAudio,
+      audio: prov === 'hdrezka' ? (isRezkaJa ? 'sub' : 'russian') : resolvedAudio,
       audioTracks: prov === 'hdrezka'
-        ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+        ? (isRezkaJa
+          ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
+          : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }])
         : primaryAudioTracks,
       subtitles,
       thumbnails: meta.thumbnails?.url

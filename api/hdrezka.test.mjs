@@ -93,8 +93,8 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     const res = await onPlayGet({ request: req, env: {} });
     assert.equal(res.status, 200);
     const json = await res.json();
-    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:ultra');
-    assert.ok(rezkaServer, 'Should include hdrezka:ultra server');
+    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:1080p' || s.id === 'hdrezka:ultra');
+    assert.ok(rezkaServer, 'Should include hdrezka server');
     assert.equal(rezkaServer.status, 'unavailable');
     assert.equal(rezkaServer.unavailableReason, 'Proxy Required');
 
@@ -126,7 +126,7 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     const res = await onPlayGet({ request: req, env: { STREAM_BRIDGE_URL: 'http://127.0.0.1:8795' } });
     assert.equal(res.status, 200);
     const json = await res.json();
-    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:ultra');
+    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:1080p' || s.id === 'hdrezka:ultra');
     assert.ok(rezkaServer);
     assert.equal(rezkaServer.status, 'ready');
     assert.equal(rezkaServer.unavailableReason, null);
