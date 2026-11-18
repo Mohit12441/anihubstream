@@ -115,5 +115,3 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
     { allowedParams: [], waitUntil },
   );
 };
-  );
-};
