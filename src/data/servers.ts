@@ -175,7 +175,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   if (!provider) return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
   if (provider.includes(':')) return provider;
   const norm = provider.toLowerCase();
-  if (norm === 'hianime') return isDub ? 'hianime:HD-1-dub' : 'hianime:HD-1';
+  if (norm === 'hianime') return isDub ? 'hianime:HD-3-dub' : 'hianime:HD-3';
   if (norm === 'anikoto') return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
   if (norm === 'aniwatch') return isDub ? 'aniwatch:HD-1-dub' : 'aniwatch:HD-1';
   if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';

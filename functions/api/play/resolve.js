@@ -15,13 +15,8 @@ const BRIDGE_TIMEOUT_MS = 15_000;
  * GET /api/play/resolve?anime_id=<id>&ep=<ep>&audio=<audio>&provider=<prov>&server=<server>
  */
 export const onRequestGet = async ({ request, env, waitUntil }) => {
-  return withEdgeCache(
-    request,
-    env,
-    600,
-    async () => {
-      try {
-        const url = new URL(request.url);
+  try {
+    const url = new URL(request.url);
         const animeIdParam = url.searchParams.get('anime_id') || url.searchParams.get('id') || '';
         const titleParam = url.searchParams.get('title') || '';
         const malIdParam = url.searchParams.get('malId') || url.searchParams.get('mal_id') || url.searchParams.get('mal') || '';
@@ -293,7 +288,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         if ((resolvedMalId > 0 || provider === 'hianime') && canUseEdgeDirect) {
           try {
-            const cacheKey = `stream:${provider || 'auto'}:${resolvedMalId || animeId}:${ep}:${audio}`;
+            const srvKey = (serverParam || 'HD-1').replace(/-dub$/i, '').toUpperCase();
+            const cacheKey = `stream:${provider || 'auto'}:${srvKey}:${resolvedMalId || animeId}:${ep}:${audio}`;
             let directRes = null;
             if (env.ANIHUB) {
               try {
@@ -334,7 +330,22 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 }
               }
               if (!directRes && resolvedMalId > 0) {
-                directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider });
+                if (provider === 'hianime') {
+                  const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}?color=ffbade`;
+                  const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
+                  if (zokoRes?.masterUrl) {
+                    directRes = {
+                      streamUrl: zokoRes.masterUrl,
+                      referer: 'https://zokoanime.video/',
+                      quality: zokoRes.defaultQuality || '1080p',
+                      subtitles: zokoRes.subtitles || [],
+                      provider: 'hianime',
+                      skip: zokoRes.skip,
+                    };
+                  }
+                } else {
+                  directRes = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider });
+                }
               }
               if (env.ANIHUB && directRes?.streamUrl) {
                 const ttl = Date.now() + 20 * 60 * 1000;
@@ -622,11 +633,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           outro: metaData.skip?.outro ? { start: metaData.skip.outro[0], end: metaData.skip.outro[1] } : undefined,
         };
 
-        return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
+        return ok({ server: resolvedServer }, { cache: 'no-store' });
       } catch (err) {
         return errorResponse(err);
       }
-    },
-    { allowedParams: ['anime_id', 'id', 'title', 'ep', 'audio', 'provider', 'server', 'anilist', 'malId', 'mal_id', 'mal'], waitUntil },
-  );
 };

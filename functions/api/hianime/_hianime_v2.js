@@ -236,9 +236,9 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
         if (direct?.streamUrl) {
           return { ...direct, serverName: 'HD-2' };
         }
-        // If megavid.buzz fails (e.g. s-90 DNS down), fallback to MegaPlay or Zoko
-        const megaBackup = await extractDirectStreamFromEmbed(`https://megaplay.buzz/stream/mal/${malId}/${ep}/${wantedAudio}`);
-        if (megaBackup?.streamUrl) return { ...megaBackup, serverName: 'HD-2' };
+        // If megavid.buzz fails (e.g. s-90 DNS down), fallback to clean ZokoAnime
+        const zokoBackup = await extractDirectStreamFromEmbed(`https://zokoanime.video/stream/mal/${malId}/${ep}/${wantedAudio}?color=ffbade`);
+        if (zokoBackup?.streamUrl) return { ...zokoBackup, serverName: 'HD-2' };
       }
     } catch (_) {}
   }
