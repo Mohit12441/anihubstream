@@ -18,4 +18,4 @@ CREATE TABLE IF NOT EXISTS provider_sync_state (
 );
 
 CREATE INDEX IF NOT EXISTS idx_aim_hdrezka_null
-  ON anime_id_map (id) WHERE hdrezka_slug IS NULL;
+  ON anime_id_map (anime_id) WHERE hdrezka_slug IS NULL;

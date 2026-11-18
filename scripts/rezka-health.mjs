@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // @ts-check
-import { CF_API_TOKEN, CF_ACCOUNT_ID, CF_D1_DATABASE_ID } from process.env;
+const { CF_API_TOKEN, CF_ACCOUNT_ID, CF_D1_DATABASE_ID } = process.env;
 
 const q = (sql) => fetch(
   `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/d1/database/${CF_D1_DATABASE_ID}/query`,
@@ -22,7 +22,9 @@ if (sess?.cookie) {
 console.log(JSON.stringify({
   cookie: live,
   cookie_age_h: sess ? ((Date.now() - sess.updated_at) / 3.6e6).toFixed(1) : null,
-  coverage: `${cov.mapped}/${cov.total}`,
+  coverage: cov && cov.total > 0 ? Number(((cov.mapped / cov.total) * 100).toFixed(2)) : 0,
+  mapped: cov?.mapped ?? 0,
+  total: cov?.total ?? 0,
 }, null, 2));
 
-process.exit(live === 'valid' ? 0 : 1);
+process.exit(live.startsWith('dead') ? 1 : 0);

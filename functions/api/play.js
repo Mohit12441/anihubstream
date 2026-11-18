@@ -746,7 +746,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               };
             }
           }
-          if (!direct) {
+          if (!direct && requested !== 'hdrezka') {
             direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: (requested === 'anipm' ? undefined : requested) });
           }
           // Multi-provider direct fallback if primary provider has not uploaded the episode yet
@@ -843,6 +843,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       })(),
       (async () => {
         if (!bridgeBase || requested === 'anipm') return null;
+        if (requested === 'hdrezka' && !hasRezkaBridge) return null;
         try {
           const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
           resolveBridgeUrl.searchParams.set('title', resolvedTitle);
@@ -920,7 +921,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           episode: ep,
           malId: resolvedMalId || null,
           scopedProvider: requested,
-          scopedProviderUnavailable: false,
+          scopedProviderUnavailable: requested === 'hdrezka' ? (directRes.provider !== 'hdrezka') : false,
           servers: [
             primaryServer,
             ...defaultServers
@@ -936,7 +937,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
 
       const isScopedUnavailable = requested === 'hdrezka'
-        ? (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl))
+        ? (!hasRezkaBridge || !bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka')
         : (requested !== 'torrent' && !availableSlugs[requested]);
       let serversToReturn = defaultServers;
       if (requested && requested !== 'auto') {
@@ -962,9 +963,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const meta = bridgeRes;
     const session = meta.session || '';
-    const cleanPrimaryServer = String(serverParam || 'HD-1').replace(/^.*?\s*·\s*/, '').trim();
+    const cleanPrimaryServer = String(serverParam || (requested === 'hdrezka' ? 'ultra' : 'HD-1')).replace(/^.*?\s*·\s*/, '').trim();
     let prov = meta.provider || (requested !== 'auto' ? requested : 'anikoto');
-    if (cleanPrimaryServer.includes('HD-1') || cleanPrimaryServer.includes('HD-2') || cleanPrimaryServer.includes('Vidstream') || meta.provider === 'anikoto' || (meta.master && meta.master.includes('nexabloom'))) {
+    if (meta.provider === 'hdrezka' || requested === 'hdrezka') {
+      prov = meta.provider || 'hdrezka';
+    } else if (cleanPrimaryServer.includes('HD-1') || cleanPrimaryServer.includes('HD-2') || cleanPrimaryServer.includes('Vidstream') || meta.provider === 'anikoto' || (meta.master && meta.master.includes('nexabloom'))) {
       prov = 'anikoto';
     }
     const proxyBase = `${url.origin}/api/proxy`;
@@ -1161,7 +1164,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const isScopedUnavailable = Boolean(
       requested && requested !== 'auto' && (
         requested === 'hdrezka'
-          ? (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl))
+          ? (!hasRezkaBridge || !bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka')
           : (requested !== 'torrent' && !availableSlugs[requested])
       )
     );

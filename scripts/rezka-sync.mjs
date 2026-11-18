@@ -60,20 +60,12 @@ async function main() {
     `INSERT INTO provider_session (provider_id, cookie, updated_at) VALUES ('hdrezka', ?, ?) ON CONFLICT(provider_id) DO UPDATE SET cookie = excluded.cookie, updated_at = excluded.updated_at`,
     [cookie ?? '', Date.now()],
   );
-  if (env.KV_NAMESPACE) {
-    const kv = env.KV_NAMESPACE;
-    await kv.put('anubis:cookie', cookie, { expirationTtl: 30 * 24 * 3600 * 1000 });
-  }
-
-  // Also set env for resolve.js to read from KV
-  if (env.KV_NAMESPACE) process.env.KV_NAMESPACE = env.KV_NAMESPACE;
 
   // Set cookie in environment for resolve.js provider_session fallback
   process.env.HDREZKA_COOKIE = cookie;
 
-
   const rows = await d1(
-    `SELECT id, mal_id, COALESCE(romaji, title) AS title FROM anime_id_map JOIN anime ON anime.id = anime_id_map.anime_id WHERE hdrezka_slug IS NULL AND id % ? = ? ORDER BY id LIMIT ?`,
+    `SELECT anime_id, mal_id, COALESCE(romaji, title) AS title FROM anime_id_map JOIN anime ON anime.id = anime_id_map.anime_id WHERE hdrezka_slug IS NULL AND anime_id % ? = ? ORDER BY anime_id LIMIT ?`,
     [SHARDS, SHARD, LIMIT],
   );
   console.log(`shard ${SHARD}/${SHARDS}: ${rows.length} candidates`);
@@ -87,7 +79,7 @@ async function main() {
       const best = hits.map((h) => ({ ...h, s: score(row.title, h.title) }))
         .sort((a, b) => b.s - a.s)[0];
       if (best && best.s >= 60) {
-        await d1(`UPDATE anime_id_map SET hdrezka_slug = ? WHERE id = ?`, [best.slug, row.id]);
+        await d1(`UPDATE anime_id_map SET hdrezka_slug = ? WHERE anime_id = ?`, [best.slug, row.anime_id]);
         await d1(
           `INSERT INTO anime_provider_mapping (anime_id, provider_id, provider_slug) VALUES (?, 'hdrezka', ?) ON CONFLICT DO NOTHING`,
           [row.anime_id, best.slug],
@@ -104,7 +96,7 @@ async function main() {
 
   await d1(
     `INSERT INTO provider_sync_state (provider_id, shard, cursor_id, updated_at) VALUES ('hdrezka', ?, ?, ?) ON CONFLICT(provider_id, shard) DO UPDATE SET cursor_id = excluded.cursor_id, updated_at = excluded.updated_at`,
-    [SHARD, rows.at(-1)?.id ?? 0, Date.now()],
+    [SHARD, rows.at(-1)?.anime_id ?? '', Date.now()],
   );
 
   console.log(`shard ${SHARD}: mapped ${mapped}, gated ${gated}`);
