@@ -439,7 +439,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   servers.push(
     makeServer({
       id: 'hdrezka:1080p',
-      name: 'HDRezka · 1080p (Japanese)',
+      name: 'HDRezka · Original (Japanese)',
       provider: 'hdrezka',
       streamUrl: resolveUrl({ audio: 'sub', provider: 'hdrezka', server: '1080p' }),
       type: 'mp4',
@@ -450,16 +450,40 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       audioTracks: jaAudio,
     }),
     makeServer({
-      id: 'hdrezka:1080p-dub',
-      name: 'HDRezka · 1080p (RU Dub)',
+      id: 'hdrezka:studioband-dub',
+      name: 'HDRezka · Studio Band (RU Dub)',
       provider: 'hdrezka',
-      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: '1080p-dub' }),
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'studioband-dub' }),
       type: 'mp4',
       quality: '1080p',
       audio: 'dub',
       status: hasRezkaBridge ? 'ready' : 'unavailable',
       unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
-      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Studio Band Dub', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:anilibria-dub',
+      name: 'HDRezka · AniLibria (RU Dub)',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'anilibria-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'AniLibria Dub', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:tvshows-dub',
+      name: 'HDRezka · TVShows (RU Dub)',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'tvshows-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'TVShows Dub', default: true }],
     })
   );
 
@@ -1062,9 +1086,23 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     // Construct primary server entry
     const resolvedAudio = typeof meta.audio === 'string' ? meta.audio : audio;
-    const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || cleanPrimaryServer.includes('-dub') || resolvedAudio === 'russian');
+    const srvParamLower = String(cleanPrimaryServer || '').toLowerCase();
+    const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || srvParamLower.includes('dub') || resolvedAudio === 'russian');
+    let rezkaSuffix = 'studioband-dub';
+    let rezkaStudioName = 'Studio Band';
+    if (srvParamLower.includes('anilibria') || meta.audioTracks?.[0]?.label?.includes('AniLibria')) {
+      rezkaSuffix = 'anilibria-dub';
+      rezkaStudioName = 'AniLibria';
+    } else if (srvParamLower.includes('tvshows') || meta.audioTracks?.[0]?.label?.includes('TVShows')) {
+      rezkaSuffix = 'tvshows-dub';
+      rezkaStudioName = 'TVShows';
+    } else if (!isRezkaDub) {
+      rezkaSuffix = '1080p';
+      rezkaStudioName = 'Original';
+    }
+
     const activeServerId = prov === 'hdrezka'
-      ? (isRezkaDub ? 'hdrezka:1080p-dub' : 'hdrezka:1080p')
+      ? `hdrezka:${rezkaSuffix}`
       : `${prov}:${cleanPrimaryServer}`;
     let primaryServerName = formatServerName(prov, cleanPrimaryServer);
     if (audio === 'dub' && resolvedAudio === 'sub') {
@@ -1088,7 +1126,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const primaryServer = {
       id: activeServerId,
-      name: prov === 'hdrezka' ? (isRezkaDub ? 'HDRezka · 1080p (RU Dub)' : 'HDRezka · 1080p (Japanese)') : primaryServerName,
+      name: prov === 'hdrezka' ? (isRezkaDub ? `HDRezka · ${rezkaStudioName} (RU Dub)` : 'HDRezka · Original (Japanese)') : primaryServerName,
       provider: prov,
       status: 'ready',
       streamUrl,
@@ -1098,7 +1136,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : resolvedAudio,
       audioTracks: prov === 'hdrezka'
         ? (isRezkaDub
-          ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+          ? [{ id: 'audio-ru', language: 'ru', label: `${rezkaStudioName} Dub`, default: true }]
           : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }])
         : primaryAudioTracks,
       subtitles,

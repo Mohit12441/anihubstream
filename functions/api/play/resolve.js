@@ -185,8 +185,18 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             } catch {}
           }
           if (rezkaId) {
-            // Translator loop: try each translator_id until one resolves the stream
-            const TRANSLATORS = (audio === 'sub' || audio === 'ja') ? ['238', '105', '19', '565'] : ['105', '19', '565', '238', '318', '115'];
+            // Translator selection: map studio subservers to their upstream translator_ids
+            const srvLower = String(rawServerParam || serverParam || '').toLowerCase();
+            let targetTr = null;
+            if (srvLower.includes('anilibria') || srvLower.includes('19')) targetTr = '19';
+            else if (srvLower.includes('tvshows') || srvLower.includes('565')) targetTr = '565';
+            else if (srvLower.includes('studioband') || srvLower.includes('105')) targetTr = '105';
+            else if (srvLower.includes('original') || srvLower.includes('238')) targetTr = '238';
+
+            const isDubAudio = audio === 'dub' || audio === 'russian' || (targetTr && targetTr !== '238') || srvLower.includes('dub');
+            const TRANSLATORS = targetTr
+              ? [targetTr, ...(isDubAudio ? ['105', '19', '565', '238', '318', '115'] : ['238', '105', '19', '565'])]
+              : (isDubAudio ? ['105', '19', '565', '238', '318', '115'] : ['238', '105', '19', '565']);
             let rawPayload = null;
             let subtitleRaw = null;
             let resolvedTid = null;
@@ -233,11 +243,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     });
                   }
                 }
-                const isRezkaDub = resolvedTid !== '238' && (audio === 'dub' || serverParam?.includes('-dub'));
+                const isRezkaDub = resolvedTid !== '238' && (audio === 'dub' || isDubAudio);
+                let rezkaSuffix = 'studioband-dub';
+                let rezkaStudioName = 'Studio Band';
+                if (resolvedTid === '19' || srvLower.includes('anilibria')) {
+                  rezkaSuffix = 'anilibria-dub';
+                  rezkaStudioName = 'AniLibria';
+                } else if (resolvedTid === '565' || srvLower.includes('tvshows')) {
+                  rezkaSuffix = 'tvshows-dub';
+                  rezkaStudioName = 'TVShows';
+                } else if (!isRezkaDub || resolvedTid === '238') {
+                  rezkaSuffix = '1080p';
+                  rezkaStudioName = 'Original';
+                }
+
                 return ok({
                   server: {
-                    id: isRezkaDub ? 'hdrezka:1080p-dub' : 'hdrezka:1080p',
-                    name: isRezkaDub ? 'HDRezka · 1080p (RU Dub)' : 'HDRezka · 1080p (Japanese)',
+                    id: isRezkaDub ? `hdrezka:${rezkaSuffix}` : 'hdrezka:1080p',
+                    name: isRezkaDub ? `HDRezka · ${rezkaStudioName} (RU Dub)` : 'HDRezka · Original (Japanese)',
                     provider: 'hdrezka',
                     status: 'ready',
                     streamUrl: chosen.url,
@@ -245,7 +268,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     quality: chosen.quality || '1080p',
                     audio: isRezkaDub ? 'dub' : 'sub',
                     audioTracks: isRezkaDub
-                      ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+                      ? [{ id: 'audio-ru', language: 'ru', label: `${rezkaStudioName} Dub`, default: true }]
                       : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }],
                     subtitles: rezkaSubs,
                   }
@@ -530,12 +553,26 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             : null;
 
         const resolvedAudio = typeof metaData.audio === 'string' ? metaData.audio : audio;
-        const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || rawServerParam?.includes('-dub') || resolvedAudio === 'russian');
+        const srvParamLower = String(rawServerParam || serverParam || '').toLowerCase();
+        const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || srvParamLower.includes('dub') || resolvedAudio === 'russian');
+        let rezkaSuffix = 'studioband-dub';
+        let rezkaStudioName = 'Studio Band';
+        if (srvParamLower.includes('anilibria') || metaData.audioTracks?.[0]?.label?.includes('AniLibria')) {
+          rezkaSuffix = 'anilibria-dub';
+          rezkaStudioName = 'AniLibria';
+        } else if (srvParamLower.includes('tvshows') || metaData.audioTracks?.[0]?.label?.includes('TVShows')) {
+          rezkaSuffix = 'tvshows-dub';
+          rezkaStudioName = 'TVShows';
+        } else if (!isRezkaDub) {
+          rezkaSuffix = '1080p';
+          rezkaStudioName = 'Original';
+        }
+
         const cleanServerId = prov === 'hdrezka'
-          ? (isRezkaDub ? '1080p-dub' : '1080p')
+          ? rezkaSuffix
           : (rawServerParam || 'HD-1');
         let serverName = prov === 'hdrezka'
-          ? (isRezkaDub ? 'HDRezka · 1080p (RU Dub)' : 'HDRezka · 1080p (Japanese)')
+          ? (isRezkaDub ? `HDRezka · ${rezkaStudioName} (RU Dub)` : 'HDRezka · Original (Japanese)')
           : formatServerName(prov, serverParam || 'HD-1');
         if (audio === 'dub' && resolvedAudio === 'sub') {
           serverName += ' (Sub Only)';
@@ -543,7 +580,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
         const resolvedAudioTracks = prov === 'hdrezka'
           ? (isRezkaDub
-            ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+            ? [{ id: 'audio-ru', language: 'ru', label: `${rezkaStudioName} Dub`, default: true }]
             : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }])
           : (rawAudioMeta
             ? rawAudioMeta.map((t, i) => ({

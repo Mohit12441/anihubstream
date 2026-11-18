@@ -64,8 +64,10 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta', name: 'AniPM · Beta', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta-dub', name: 'AniPM · Beta (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hdrezka:1080p', name: 'HDRezka · 1080p (Japanese)', provider: 'hdrezka', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'mp4' },
-  { id: 'hdrezka:1080p-dub', name: 'HDRezka · 1080p (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:1080p', name: 'HDRezka · Original (Japanese)', provider: 'hdrezka', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:studioband-dub', name: 'HDRezka · Studio Band (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:anilibria-dub', name: 'HDRezka · AniLibria (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:tvshows-dub', name: 'HDRezka · TVShows (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 
@@ -865,8 +867,9 @@ export function Watch() {
                   {currentSubservers.map((s) => {
                     const isSelected = s.id === activeServerId;
                     const isUnavailable = s.status === 'unavailable';
-                    const name = s.name || cleanServerName(s);
+                    const name = cleanServerName(s);
                     const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
+                    const isRezkaDub = isRezka && (s.audio === 'dub' || s.id.includes('-dub'));
                     return (
                       <button
                         key={s.id}
@@ -878,7 +881,7 @@ export function Watch() {
                       >
                         <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
                         <span>{name}</span>
-                        {isRezka && <span className="watch__rezka-sub-tag">RU Dub</span>}
+                        {isRezka && <span className="watch__rezka-sub-tag">{isRezkaDub ? 'RU Dub' : 'Sub'}</span>}
                         {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
                         {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
                       </button>

@@ -263,9 +263,18 @@ export async function sources(epRef, opts = {}) {
   const id = parts[0];
   const season = parts[1] || '1';
   const ep = parts[2] || '1';
-  const wantsSub = opts.audio === 'sub' || opts.audio === 'ja' || opts.audioType === 'sub';
-  const defaultTr = wantsSub ? '238' : '105';
-  let translator = opts.translatorId || (wantsSub ? (parts[3] === '238' ? '238' : defaultTr) : (parts[3] !== '238' ? parts[3] : defaultTr));
+  const srv = String(opts.server || opts.serverParam || opts.translatorId || '').toLowerCase();
+  let requestedTr = opts.translatorId || null;
+  if (!requestedTr) {
+    if (srv.includes('anilibria') || srv.includes('19')) requestedTr = '19';
+    else if (srv.includes('tvshows') || srv.includes('565')) requestedTr = '565';
+    else if (srv.includes('studioband') || srv.includes('105')) requestedTr = '105';
+    else if (srv.includes('original') || srv.includes('238')) requestedTr = '238';
+  }
+  const isExplicitDub = srv.includes('dub') || (requestedTr && requestedTr !== '238');
+  const wantsSub = !isExplicitDub && (opts.audio === 'sub' || opts.audio === 'ja' || opts.audioType === 'sub');
+  const defaultTr = wantsSub ? '238' : (requestedTr || '105');
+  let translator = requestedTr || (wantsSub ? (parts[3] === '238' ? '238' : defaultTr) : (parts[3] !== '238' ? parts[3] : defaultTr));
 
   const candidateTranslators = wantsSub
     ? [translator, '238', '105', '19', '565']

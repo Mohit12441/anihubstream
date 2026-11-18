@@ -16,7 +16,7 @@ export function cleanServerName(server: PlayServer): string {
   let raw = server.name || server.id;
   if (raw.includes('·')) raw = raw.split('·')[1].trim();
   if (raw.includes(':')) raw = raw.split(':')[1].trim();
-  raw = raw.replace(/\s*\((?:sub|dub|hindi)\)/i, '').trim();
+  raw = raw.replace(/\s*\((?:sub|dub|hindi|ru dub|japanese)\)/i, '').trim();
   return raw;
 }
 

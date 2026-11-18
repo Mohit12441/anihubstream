@@ -656,12 +656,12 @@ const server = http.createServer(async (req, res) => {
               const epList = details.episodes || [];
               const targetEp = epList.find((e) => e.number === ep) || (ep === 1 ? epList[0] : null);
               if (targetEp) {
-                const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio, audio }).catch(() => null);
+                const src = await adapter.sources(targetEp.id || targetEp.ref, { audioType: audio, audio, server: serverParam }).catch(() => null);
                 const firstEmbed = src?.embedUrl || (Array.isArray(src?.embeds) && src.embeds[0]) || (Array.isArray(src?.direct) && src.direct[0]?.url) || src?.direct?.[0] || src?.rawUrl;
                 if (firstEmbed && adapter.resolve) {
                   const embedPayload = adapter.id === 'hdrezka' ? src : firstEmbed;
                   const safeQuality = (adapter.id === 'hdrezka' && String(serverParam || '').toLowerCase().includes('ultra')) ? '1080p' : serverParam;
-                  const res = await adapter.resolve(embedPayload, { quality: safeQuality, audio, skip: src?.skip, subtitles: src?.subtitle }).catch(() => null);
+                  const res = await adapter.resolve(embedPayload, { quality: safeQuality, audio, server: serverParam, skip: src?.skip, subtitles: src?.subtitle }).catch(() => null);
                   const streamCandidate = res?.master?.url || res?.streamUrl;
                   if (streamCandidate) {
                     if (res.kind === 'embed' || res.type === 'embed' || streamCandidate.includes('morencius') || (!streamCandidate.includes('.m3u8') && !streamCandidate.includes('.mp4') && streamCandidate.includes('/embed'))) {

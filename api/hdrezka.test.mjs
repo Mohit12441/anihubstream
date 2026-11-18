@@ -127,7 +127,7 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     assert.equal(res.status, 200);
     const json = await res.json();
     const rezkaSub = json.servers.find((s) => s.id === 'hdrezka:1080p');
-    const rezkaDub = json.servers.find((s) => s.id === 'hdrezka:1080p-dub');
+    const rezkaDub = json.servers.find((s) => s.id.startsWith('hdrezka:') && s.id.includes('-dub'));
     assert.ok(rezkaSub || rezkaDub, 'Should include hdrezka servers');
     if (rezkaDub) {
       assert.equal(rezkaDub.status, 'ready');
@@ -137,5 +137,25 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
       assert.equal(rezkaSub.status, 'ready');
       assert.ok(rezkaSub.name.includes('(Japanese)'));
     }
+  });
+
+  it('registers individual Russian studio sub-servers (Studio Band, AniLibria, TVShows)', async () => {
+    const req = new Request('http://127.0.0.1:8795/api/play?id=demon-slayer-bridged&ep=1');
+    const res = await onPlayGet({ request: req, env: { STREAM_BRIDGE_URL: 'http://127.0.0.1:8795' } });
+    assert.equal(res.status, 200);
+    const json = await res.json();
+    const studioBand = json.servers.find((s) => s.id === 'hdrezka:studioband-dub');
+    const aniLibria = json.servers.find((s) => s.id === 'hdrezka:anilibria-dub');
+    const tvShows = json.servers.find((s) => s.id === 'hdrezka:tvshows-dub');
+    const original = json.servers.find((s) => s.id === 'hdrezka:1080p');
+
+    assert.ok(studioBand, 'Must include Studio Band dub server');
+    assert.ok(aniLibria, 'Must include AniLibria dub server');
+    assert.ok(tvShows, 'Must include TVShows dub server');
+    assert.ok(original, 'Must include Original sub server');
+    assert.ok(studioBand.name.includes('Studio Band'));
+    assert.ok(aniLibria.name.includes('AniLibria'));
+    assert.ok(tvShows.name.includes('TVShows'));
+    assert.ok(original.name.includes('Original'));
   });
 });

@@ -179,7 +179,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   if (norm === 'anikoto') return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
   if (norm === 'aniwatch') return isDub ? 'aniwatch:HD-1-dub' : 'aniwatch:HD-1';
   if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';
-  if (norm === 'hdrezka') return isDub ? 'hdrezka:1080p-dub' : 'hdrezka:1080p';
+  if (norm === 'hdrezka') return isDub ? 'hdrezka:studioband-dub' : 'hdrezka:1080p';
   return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;
 }
 
