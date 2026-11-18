@@ -376,13 +376,13 @@ export function Watch() {
 
   /* Fallback toast notification when requested provider differs from resolved stream */
   useEffect(() => {
-    if (!currentStream?.provider || !targetProvider || targetProvider === 'auto') return;
-    if (currentStream.provider === targetProvider) return;
+    if (!isStreamResolved || !currentStream?.provider || !targetProvider || targetProvider === 'auto') return;
+    if (currentStream.provider.toLowerCase() === targetProvider.toLowerCase()) return;
     const key = `${targetProvider}->${currentStream.provider}`;
     if (lastFallbackNotified.current === key) return;
     lastFallbackNotified.current = key;
     notify(`Requested ${targetProvider} unavailable — streaming from ${currentStream.provider}`);
-  }, [currentStream?.provider, targetProvider, notify]);
+  }, [currentStream?.provider, targetProvider, notify, isStreamResolved]);
 
   /* Lazy/eager server list fetch from Layer 1 API */
   useEffect(() => {
@@ -779,6 +779,8 @@ export function Watch() {
   const handleSelectProvider = (provId: string) => {
     const targetKey = provId.toLowerCase();
     const defaultSrvId = serverIdFromProvider(targetKey, prefs.audio);
+    setIsStreamResolved(false);
+    setCurrentStream(null);
     setActiveServerId(defaultSrvId);
     const newParams = new URLSearchParams(params);
     newParams.delete('title');

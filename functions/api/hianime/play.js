@@ -2,8 +2,9 @@
 import { HttpError, errorResponse, ok, withEdgeCache } from '../_lib.js';
 import { resolveZokoEmbedEdge } from './_zoko.js';
 import { isMegaplayTokenValid, resolveMegaplayEmbed } from '../_megaplay.js';
+import { resolveHiAnimeV2Direct } from './_hianime_v2.js';
 
-const HIANIME_MAIN = 'https://animehot.cc';
+const HIANIME_MAIN = 'https://hianimex.com.in';
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 const STREAM_CACHE_TTL_MS = 20 * 60 * 1000; // 20 minutes
 
@@ -94,7 +95,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       const megaDirectUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${audio}`;
 
       // Race ZokoAnime and MegaPlay in parallel for minimum cold-start time
-      const zokoRace = resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) })
+      const zokoRace = resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) })
         .then((r) => (r?.masterUrl ? { type: 'zoko', res: r } : null))
         .catch(() => null);
 
@@ -134,89 +135,28 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
     }
 
-    // --- STEP 4: Upstream API Fallback (if deterministic derivation missed) ---
+    // --- STEP 4: Upstream HiAnime v2 Ajax Fallback (if deterministic derivation missed) ---
     if (!streamResult) {
-      let animeId = '';
-
-      if (/^[0-9a-f]{24}$/i.test(slug)) {
-        animeId = slug;
-      } else {
-        const animeRes = await fetch(`${HIANIME_MAIN}/api/anime/${encodeURIComponent(slug).replace(/%3A/gi, ':')}`, {
-          headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, Accept: 'application/json' },
-          signal: AbortSignal.timeout(3500),
-        });
-
-        if (animeRes.ok) {
-          const aData = await animeRes.json();
-          animeId = aData?.anime?._id || '';
-          if (aData?.anime?.title) animeTitle = aData.anime.title;
-          if (!malId && aData?.anime?.mal_id) malId = Number(aData.anime.mal_id) || null;
-        }
-      }
-
-      if (!animeId) {
-        throw new HttpError(404, 'not_found', `HiAnime could not find anime ID for "${slug}"`);
-      }
-
-      const epRes = await fetch(`${HIANIME_MAIN}/api/episodes/${animeId}?start=${ep}&end=${ep}`, {
-        headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, Accept: 'application/json' },
-        signal: AbortSignal.timeout(3500),
+      const v2Res = await resolveHiAnimeV2Direct({
+        slug,
+        animeId: malId,
+        ep,
+        audio,
+        server: serverPref || 'HD-1',
       });
 
-      if (!epRes.ok) {
-        throw new HttpError(404, 'not_found', `HiAnime episode ${ep} not found for "${slug}"`);
-      }
-
-      const epData = await epRes.json();
-      const epRow = (Array.isArray(epData?.episodes) ? epData.episodes : []).find(
-        (r) => Number(r.episodeNumber) === ep
-      ) || epData?.episodes?.[0];
-
-      if (!epRow) {
-        throw new HttpError(404, 'not_found', `HiAnime episode ${ep} has no available streams`);
-      }
-
-      const linkGroup = epRow.link || {};
-      const wantedEmbeds = Array.isArray(linkGroup[audio]) && linkGroup[audio].length > 0
-        ? linkGroup[audio]
-        : (Array.isArray(linkGroup.sub) ? linkGroup.sub : []);
-
-      if (wantedEmbeds.length === 0) {
-        throw new HttpError(404, 'not_found', `No ${audio.toUpperCase()} embeds found for episode ${ep}`);
-      }
-
-      const zokoEmbed = wantedEmbeds.find((u) => /zokoanime/i.test(u));
-      const megaEmbed = wantedEmbeds.find((u) => /megaplay/i.test(u));
-
-      if (zokoEmbed && (!serverPref.includes('mega') || !megaEmbed)) {
-        const zokoRes = await resolveZokoEmbedEdge(zokoEmbed, { signal: AbortSignal.timeout(3500) });
-        if (zokoRes?.masterUrl) {
-          streamResult = {
-            streamUrl: zokoRes.masterUrl,
-            referer: 'https://zokoanime.video/',
-            quality: zokoRes.defaultQuality || '1080p',
-            subtitles: [],
-            skip: zokoRes.skip,
-          };
-          selectedServerName = 'HD-1';
-        }
-      }
-
-      if (!streamResult && megaEmbed) {
-        const megaRes = await resolveMegaplayEmbed(megaEmbed);
-        if (megaRes?.streamUrl) {
-          streamResult = {
-            streamUrl: megaRes.streamUrl,
-            referer: 'https://megaplay.buzz/',
-            quality: megaRes.quality || '1080p',
-            subtitles: (megaRes.subtitles || []).map((sub) => ({
-              ...sub,
-              url: formatProxyUrl(sub.url, 'https://megaplay.buzz/', origin),
-            })),
-            skip: megaRes.intro || megaRes.outro ? { intro: megaRes.intro, outro: megaRes.outro } : null,
-          };
-          selectedServerName = 'HD-2';
-        }
+      if (v2Res?.streamUrl) {
+        streamResult = {
+          streamUrl: v2Res.streamUrl,
+          referer: v2Res.referer,
+          quality: v2Res.quality || '1080p',
+          subtitles: (v2Res.subtitles || []).map((sub) => ({
+            ...sub,
+            url: formatProxyUrl(sub.url, v2Res.referer, origin),
+          })),
+          skip: v2Res.skip,
+        };
+        selectedServerName = v2Res.serverName || 'HD-1';
       }
     }
 

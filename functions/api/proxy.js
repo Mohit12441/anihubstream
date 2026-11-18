@@ -30,6 +30,7 @@ const ALLOWED_STREAMING_DOMAINS = [
   'abyssplayer.com',
   'sssrr.org',
   'animehot.cc',
+  'hianimex.com.in',
   'dramahot.top',
   'drama1.cfd',
   'zokoanime.video',
@@ -109,7 +110,7 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '', prov
   // 3. Verified stream CDN pattern:
   // Upstream extractors (like Megaplay, AniKoto, HiAnime) dynamically rotate domain names for CDN video chunks.
   // Any public non-private domain requested with a trusted streaming Referer and anime media asset path/extension is authorized.
-  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun', 'rezka.ag'];
+  const trustedReferers = ['megaplay.buzz', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'hianimex.com.in', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun', 'rezka.ag'];
   const hasTrustedReferer = customReferer && trustedReferers.some((r) => customReferer.includes(r));
   if (hasTrustedReferer) {
     const isStreamAsset =

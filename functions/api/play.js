@@ -2,6 +2,7 @@
 import { HttpError, buildAudioTracks, cleanDisplayTitle, deriveSlugCandidates, errorResponse, findAnimeByCandidates, formatServerName, json, ok, withEdgeCache } from './_lib.js';
 import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
+import { resolveHiAnimeV2Direct } from './hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from './_anipm.js';
 import { rezkaFetch, parseStreams, hdrezkaMeta } from '../_lib/hdrezka.js';
 
@@ -790,6 +791,25 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 provider: 'hianime',
                 skip: zokoRes.skip,
               };
+            }
+            if (!direct) {
+              const v2Res = await resolveHiAnimeV2Direct({
+                slug: availableSlugs.hianime || animeRow?.slug || id,
+                animeId: resolvedMalId,
+                ep,
+                audio,
+                server: serverParam || 'HD-1',
+              });
+              if (v2Res?.streamUrl) {
+                direct = {
+                  streamUrl: v2Res.streamUrl,
+                  referer: v2Res.referer,
+                  quality: v2Res.quality || '1080p',
+                  subtitles: v2Res.subtitles || [],
+                  provider: 'hianime',
+                  skip: v2Res.skip,
+                };
+              }
             }
           }
           if (!direct && requested !== 'hdrezka') {
