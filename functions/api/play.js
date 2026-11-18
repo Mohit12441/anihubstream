@@ -12,7 +12,16 @@ const ANISKIP_BASE = 'https://api.aniskip.com/v2';
 
 // In-worker ephemeral memory cache for direct streams (avoids burning D1 monthly write quota)
 const STREAM_MEM_CACHE = new Map();
+const STREAM_MEM_MAX_SIZE = 1000;
 const STREAM_MEM_TTL_MS = 20 * 60 * 1000;
+
+function setStreamMemCache(key, value) {
+  if (STREAM_MEM_CACHE.size >= STREAM_MEM_MAX_SIZE) {
+    const oldestKey = STREAM_MEM_CACHE.keys().next().value;
+    if (oldestKey) STREAM_MEM_CACHE.delete(oldestKey);
+  }
+  STREAM_MEM_CACHE.set(key, value);
+}
 
 function formatLanguageLabel(code) {
   if (!code) return 'English';
@@ -760,7 +769,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (cached?.data) {
               const parsed = JSON.parse(cached.data);
               if (parsed?.streamUrl && isMegaplayTokenValid(parsed.streamUrl)) {
-                STREAM_MEM_CACHE.set(cacheKey, { data: parsed, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
+                setStreamMemCache(cacheKey, { data: parsed, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
                 return parsed;
               }
             }
@@ -934,7 +943,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           }
           if (direct?.streamUrl) {
             // shortcut: in-memory cache only; avoids exhausting Cloudflare D1 monthly write quota on ephemeral 20-min tokens
-            STREAM_MEM_CACHE.set(cacheKey, { data: direct, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
+            setStreamMemCache(cacheKey, { data: direct, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
           }
           return direct;
         } catch {
