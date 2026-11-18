@@ -18,6 +18,18 @@ describe('HiAnime End-to-End Integration Suite', () => {
     assert.equal(primary.provider, 'hianime');
     assert.equal(primary.status, 'ready');
     assert.ok(primary.streamUrl.includes('proxy') || primary.streamUrl.includes('m3u8') || primary.streamUrl.includes('resolve'));
+
+    // Verify all 3 HiAnime sub mirrors appear
+    const hianimeSubServers = data.servers.filter(s => s.provider === 'hianime' && s.audio === 'sub');
+    assert.ok(hianimeSubServers.some(s => s.id === 'hianime:HD-1'), 'HD-1 sub mirror must be present');
+    assert.ok(hianimeSubServers.some(s => s.id === 'hianime:HD-2'), 'HD-2 sub mirror must be present');
+    assert.ok(hianimeSubServers.some(s => s.id === 'hianime:HD-3'), 'HD-3 sub mirror must be present');
+
+    // Verify all 3 HiAnime dub mirrors appear
+    const hianimeDubServers = data.servers.filter(s => s.provider === 'hianime' && s.audio === 'dub');
+    assert.ok(hianimeDubServers.some(s => s.id === 'hianime:HD-1-dub'), 'HD-1 dub mirror must be present');
+    assert.ok(hianimeDubServers.some(s => s.id === 'hianime:HD-2-dub'), 'HD-2 dub mirror must be present');
+    assert.ok(hianimeDubServers.some(s => s.id === 'hianime:HD-3-dub'), 'HD-3 dub mirror must be present');
   });
 
   it('/api/play/resolve resolves HiAnime v2 stream directly with 200 OK and ready status', async () => {

@@ -385,24 +385,32 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
     })
   );
 
-  const servers = [
-    ...anikotoSubs,
-    ...anikotoDubs,
+  const hianimeSubs = ['HD-1', 'HD-2', 'HD-3'].map((srv) =>
     makeServer({
-      id: 'hianime:HD-1',
-      name: 'HiAnime · HD-1',
+      id: `hianime:${srv}`,
+      name: `HiAnime · ${srv}`,
       provider: 'hianime',
-      streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD-1' }),
-    }),
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: srv }),
+    })
+  );
+
+  const hianimeDubs = ['HD-1', 'HD-2', 'HD-3'].map((srv) =>
     makeServer({
-      id: 'hianime:HD-1-dub',
-      name: 'HiAnime · HD-1 (DUB)',
+      id: `hianime:${srv}-dub`,
+      name: `HiAnime · ${srv} (DUB)`,
       provider: 'hianime',
-      streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: 'HD-1' }),
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: srv }),
       type: 'hls',
       audio: 'dub',
       audioTracks: enDub,
-    }),
+    })
+  );
+
+  const servers = [
+    ...anikotoSubs,
+    ...anikotoDubs,
+    ...hianimeSubs,
+    ...hianimeDubs,
     makeServer({
       id: 'aniwatch:HD-1',
       name: 'AniWatch · HD-1',
@@ -1079,13 +1087,17 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     let prov = meta.provider || (requested !== 'auto' ? requested : 'anikoto');
     if (meta.provider === 'hdrezka' || requested === 'hdrezka') {
       prov = meta.provider || 'hdrezka';
-    } else if (cleanPrimaryServer.includes('HD-1') || cleanPrimaryServer.includes('HD-2') || cleanPrimaryServer.includes('Vidstream') || meta.provider === 'anikoto' || (meta.master && meta.master.includes('nexabloom'))) {
+    } else if (requested && requested !== 'auto') {
+      prov = requested;
+    } else if (cleanPrimaryServer.includes('Vidstream') || meta.provider === 'anikoto') {
       prov = 'anikoto';
     }
     const proxyBase = `${url.origin}/api/proxy`;
     const masterPath = meta.master || meta.streamUrl || '';
     const isDirectVoidboost = prov === 'hdrezka' || masterPath.includes('voidboost');
-    const activeReferer = isDirectVoidboost ? '' : (meta.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
+    const activeReferer = isDirectVoidboost
+      ? ''
+      : (meta.referer || (prov === 'hianime' ? (masterPath.includes('zoko') ? 'https://zokoanime.video/' : 'https://megaplay.buzz/') : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
     let streamUrl;
     if (isDirectVoidboost && masterPath.startsWith('http')) {
       streamUrl = masterPath;

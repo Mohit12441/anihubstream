@@ -526,7 +526,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const proxyBase = `${url.origin}/api/proxy`;
         const masterPath = metaData.master || metaData.streamUrl || '';
         const isDirectVoidboost = prov === 'hdrezka' || masterPath.includes('voidboost');
-        const activeReferer = isDirectVoidboost ? '' : (metaData.referer || (prov === 'hianime' ? 'https://zokoanime.video/' : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
+        const activeReferer = isDirectVoidboost ? '' : (metaData.referer || (prov === 'hianime' ? (masterPath.includes('zoko') ? 'https://zokoanime.video/' : 'https://megaplay.buzz/') : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
         let streamUrl;
         if (isDirectVoidboost && masterPath.startsWith('http')) {
           streamUrl = masterPath;
