@@ -23,6 +23,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const url = new URL(request.url);
         const animeIdParam = url.searchParams.get('anime_id') || url.searchParams.get('id') || '';
         const titleParam = url.searchParams.get('title') || '';
+        const malIdParam = url.searchParams.get('malId') || url.searchParams.get('mal_id') || url.searchParams.get('mal') || '';
         const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
         const provider = url.searchParams.get('provider') || 'auto';
         const rawServerParam = url.searchParams.get('server') || '';
@@ -109,7 +110,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
 
         const resolvedTitle = meta.title || animeId;
-        let resolvedMalId = meta.mal_id || 0;
+        let resolvedMalId = meta.mal_id || (Number.parseInt(malIdParam, 10) || 0);
         const anilistParam = url.searchParams.get('anilist') || '';
         const anilistIdFromParam = /^\d+$/.test(anilistParam) ? Number.parseInt(anilistParam, 10) : 0;
         let resolvedAnilistId = meta?.anilist_id || anilistIdFromParam || (/^\d+$/.test(animeIdParam) ? Number.parseInt(animeIdParam, 10) : 0);
@@ -309,7 +310,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (!directRes) {
               if (provider === 'hianime') {
                 const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-                const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
+                const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
                 if (zokoRes?.masterUrl) {
                   directRes = {
                     streamUrl: zokoRes.masterUrl,
@@ -344,7 +345,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
               }));
 
-              const effectiveProvider = directRes?.provider || 'fallback';
+              const effectiveProvider = (provider && provider !== 'auto' && (provider === 'aniwatch' || provider === 'hianime'))
+                ? provider
+                : (directRes?.provider || 'fallback');
               const cleanServerId = rawServerParam || 'HD-1';
               const serverIdWithAudio = audio === 'dub' && !cleanServerId.includes('-dub') ? `${cleanServerId}-dub` : cleanServerId;
               const serverNameWithAudio = audio === 'dub' && !serverParam.includes('(DUB)') ? `${serverParam || 'HD-1'} (DUB)` : (serverParam || 'HD-1');
@@ -613,6 +616,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         return errorResponse(err);
       }
     },
-    { allowedParams: ['anime_id', 'id', 'title', 'ep', 'audio', 'provider', 'server', 'anilist'], waitUntil },
+    { allowedParams: ['anime_id', 'id', 'title', 'ep', 'audio', 'provider', 'server', 'anilist', 'malId', 'mal_id', 'mal'], waitUntil },
   );
 };

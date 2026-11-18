@@ -174,6 +174,6 @@ export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub', serv
   if (!res) return null;
   return {
     ...res,
-    provider: 'anikoto',
+    provider: provider || 'anikoto',
   };
 }

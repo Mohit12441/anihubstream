@@ -385,6 +385,15 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: 'HD-1' }),
     }),
     makeServer({
+      id: 'hianime:HD-1-dub',
+      name: 'HiAnime · HD-1 (DUB)',
+      provider: 'hianime',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: 'HD-1' }),
+      type: 'hls',
+      audio: 'dub',
+      audioTracks: enDub,
+    }),
+    makeServer({
       id: 'aniwatch:HD-1',
       name: 'AniWatch · HD-1',
       provider: 'aniwatch',
@@ -614,8 +623,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const availableSlugs = {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
-      hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || null,
-      aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || null,
+      hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : null),
+      aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : null),
       anipm: resolvedAnilistId ? String(resolvedAnilistId) : (animeRow?.anilist_id ? String(animeRow.anilist_id) : null),
       hdrezka: pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || null,
     };
@@ -771,7 +780,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           }
           if (!direct && requested === 'hianime') {
             const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-            const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
+            const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
             if (zokoRes?.masterUrl) {
               direct = {
                 streamUrl: zokoRes.masterUrl,
@@ -790,7 +799,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (!direct && availableSlugs.hianime && requested !== 'hianime') {
             try {
               const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
-              const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(1200) });
+              const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
               if (zokoRes?.masterUrl) {
                 direct = {
                   streamUrl: zokoRes.masterUrl,
@@ -959,10 +968,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           url: sub.url ? (isDirectNoReferrer ? sub.url : `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}`) : '',
         }));
 
-        const effectiveProvider = directRes.provider || 'anikoto';
-        const cleanServerId = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
+        const effectiveProvider = (requested && requested !== 'auto' && (requested === 'aniwatch' || requested === 'hianime'))
+          ? requested
+          : (directRes.provider || 'anikoto');
+        const rawServer = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
           ? 'HD-1'
           : (serverParam || 'HD-1');
+        const cleanServerId = rawServer.replace(/-dub$/i, '');
         const primaryServer = {
           id: `${effectiveProvider}:${cleanServerId}${audio === 'dub' ? '-dub' : ''}`,
           name: formatServerName(effectiveProvider, `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`),
