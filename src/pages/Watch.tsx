@@ -64,7 +64,8 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta', name: 'AniPM · Beta', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta-dub', name: 'AniPM · Beta (DUB)', provider: 'anipm', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hdrezka:1080p', name: 'HDRezka · 1080p (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'russian', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:1080p', name: 'HDRezka · 1080p (Japanese)', provider: 'hdrezka', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'hdrezka:1080p-dub', name: 'HDRezka · 1080p (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 

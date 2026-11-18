@@ -233,20 +233,20 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     });
                   }
                 }
-                const isJa = resolvedTid === '238' || audio === 'sub';
+                const isRezkaDub = resolvedTid !== '238' && (audio === 'dub' || serverParam?.includes('-dub'));
                 return ok({
                   server: {
-                    id: 'hdrezka:1080p',
-                    name: isJa ? 'HDRezka · 1080p (Japanese)' : 'HDRezka · 1080p (RU Dub)',
+                    id: isRezkaDub ? 'hdrezka:1080p-dub' : 'hdrezka:1080p',
+                    name: isRezkaDub ? 'HDRezka · 1080p (RU Dub)' : 'HDRezka · 1080p (Japanese)',
                     provider: 'hdrezka',
                     status: 'ready',
                     streamUrl: chosen.url,
                     type: 'mp4',
                     quality: chosen.quality || '1080p',
-                    audio: isJa ? 'sub' : 'russian',
-                    audioTracks: isJa
-                      ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
-                      : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                    audio: isRezkaDub ? 'dub' : 'sub',
+                    audioTracks: isRezkaDub
+                      ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+                      : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }],
                     subtitles: rezkaSubs,
                   }
                 }, { cache: 'public, max-age=300, s-maxage=600' });
@@ -530,18 +530,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             : null;
 
         const resolvedAudio = typeof metaData.audio === 'string' ? metaData.audio : audio;
-        const cleanServerId = (prov === 'hdrezka' && (!rawServerParam || rawServerParam.toLowerCase().includes('ultra')))
-          ? '1080p'
+        const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || rawServerParam?.includes('-dub') || resolvedAudio === 'russian');
+        const cleanServerId = prov === 'hdrezka'
+          ? (isRezkaDub ? '1080p-dub' : '1080p')
           : (rawServerParam || 'HD-1');
         let serverName = prov === 'hdrezka'
-          ? `HDRezka · ${cleanServerId} (${resolvedAudio === 'russian' ? 'RU Dub' : 'Japanese'})`
+          ? (isRezkaDub ? 'HDRezka · 1080p (RU Dub)' : 'HDRezka · 1080p (Japanese)')
           : formatServerName(prov, serverParam || 'HD-1');
         if (audio === 'dub' && resolvedAudio === 'sub') {
           serverName += ' (Sub Only)';
         }
 
         const resolvedAudioTracks = prov === 'hdrezka'
-          ? (resolvedAudio === 'russian'
+          ? (isRezkaDub
             ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
             : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }])
           : (rawAudioMeta
@@ -560,9 +561,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           status: 'ready',
           streamUrl,
           referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
-          type: metaData.type || (resolvedAudio === 'dub' ? 'dub' : (metaData.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls')),
+          type: metaData.type || (resolvedAudio === 'dub' || isRezkaDub ? 'dub' : (metaData.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls')),
           quality: metaData.quality || '1080p',
-          audio: resolvedAudio,
+          audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : resolvedAudio,
           audioTracks: resolvedAudioTracks,
           subtitles,
           downloads,

@@ -126,10 +126,16 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     const res = await onPlayGet({ request: req, env: { STREAM_BRIDGE_URL: 'http://127.0.0.1:8795' } });
     assert.equal(res.status, 200);
     const json = await res.json();
-    const rezkaServer = json.servers.find((s) => s.id === 'hdrezka:1080p' || s.id === 'hdrezka:ultra');
-    assert.ok(rezkaServer);
-    assert.equal(rezkaServer.status, 'ready');
-    assert.equal(rezkaServer.unavailableReason, null);
-    assert.ok(rezkaServer.name.includes('(RU Dub)'), 'Server name should include RU Dub badge');
+    const rezkaSub = json.servers.find((s) => s.id === 'hdrezka:1080p');
+    const rezkaDub = json.servers.find((s) => s.id === 'hdrezka:1080p-dub');
+    assert.ok(rezkaSub || rezkaDub, 'Should include hdrezka servers');
+    if (rezkaDub) {
+      assert.equal(rezkaDub.status, 'ready');
+      assert.ok(rezkaDub.name.includes('(RU Dub)'));
+    }
+    if (rezkaSub) {
+      assert.equal(rezkaSub.status, 'ready');
+      assert.ok(rezkaSub.name.includes('(Japanese)'));
+    }
   });
 });

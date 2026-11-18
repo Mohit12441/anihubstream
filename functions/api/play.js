@@ -439,12 +439,24 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   servers.push(
     makeServer({
       id: 'hdrezka:1080p',
-      name: 'HDRezka · 1080p (RU Dub)',
+      name: 'HDRezka · 1080p (Japanese)',
       provider: 'hdrezka',
-      streamUrl: resolveUrl({ audio: 'russian', provider: 'hdrezka', server: '1080p' }),
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'hdrezka', server: '1080p' }),
       type: 'mp4',
       quality: '1080p',
-      audio: 'russian',
+      audio: 'sub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: jaAudio,
+    }),
+    makeServer({
+      id: 'hdrezka:1080p-dub',
+      name: 'HDRezka · 1080p (RU Dub)',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: '1080p-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
       status: hasRezkaBridge ? 'ready' : 'unavailable',
       unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
       audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
@@ -1049,8 +1061,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }));
 
     // Construct primary server entry
-    const activeServerId = `${prov}:${cleanPrimaryServer}`;
     const resolvedAudio = typeof meta.audio === 'string' ? meta.audio : audio;
+    const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || cleanPrimaryServer.includes('-dub') || resolvedAudio === 'russian');
+    const activeServerId = prov === 'hdrezka'
+      ? (isRezkaDub ? 'hdrezka:1080p-dub' : 'hdrezka:1080p')
+      : `${prov}:${cleanPrimaryServer}`;
     let primaryServerName = formatServerName(prov, cleanPrimaryServer);
     if (audio === 'dub' && resolvedAudio === 'sub') {
       primaryServerName += ' (Sub Only)';
@@ -1071,21 +1086,20 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }))
       : buildAudioTracks(resolvedAudio);
 
-    const isRezkaJa = prov === 'hdrezka' && (resolvedAudio === 'sub' || resolvedAudio === 'ja');
     const primaryServer = {
       id: activeServerId,
-      name: prov === 'hdrezka' ? `HDRezka · ${cleanPrimaryServer} (${isRezkaJa ? 'Japanese' : 'RU Dub'})` : primaryServerName,
+      name: prov === 'hdrezka' ? (isRezkaDub ? 'HDRezka · 1080p (RU Dub)' : 'HDRezka · 1080p (Japanese)') : primaryServerName,
       provider: prov,
       status: 'ready',
       streamUrl,
       referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
       type: meta.type || (meta.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
-      audio: prov === 'hdrezka' ? (isRezkaJa ? 'sub' : 'russian') : resolvedAudio,
+      audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : resolvedAudio,
       audioTracks: prov === 'hdrezka'
-        ? (isRezkaJa
-          ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
-          : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }])
+        ? (isRezkaDub
+          ? [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]
+          : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }])
         : primaryAudioTracks,
       subtitles,
       thumbnails: meta.thumbnails?.url
