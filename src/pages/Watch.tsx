@@ -962,15 +962,23 @@ export function Watch() {
             initialPartyRoom={params.get('party')}
           />
 
-          {/* PROMINENT EPISODE TITLE & QUICK NAV */}
+          {/* PROMINENT SERIES & EPISODE TITLE HEADER & QUICK NAV */}
           <div className="watch__title-strip">
             <div className="watch__title-strip-left">
-              <span className="watch__title-ep-tag">EP {idx}</span>
-              <h1 className="watch__title-text">
-                {episode?.title && episode.title.trim().toLowerCase() !== `episode ${idx}`
-                  ? episode.title
-                  : anime.title}
-              </h1>
+              <div className="watch__title-context">
+                <span className="watch__title-series-name">{anime.title}</span>
+                {anime.season && (
+                  <span className="watch__title-season-tag">Season {anime.season}</span>
+                )}
+              </div>
+              <div className="watch__title-heading-row">
+                <span className="watch__title-ep-tag">EP {idx}</span>
+                <h1 className="watch__title-text">
+                  {episode?.title && episode.title.trim().toLowerCase() !== `episode ${idx}`
+                    ? episode.title
+                    : `Episode ${idx}`}
+                </h1>
+              </div>
             </div>
             <div className="watch__title-nav">
               <button
@@ -1220,12 +1228,6 @@ export function Watch() {
 
                   <div className="watch__ep-info">
                     <div className="watch__ep-head">
-                      <h2>
-                        Episode {idx}
-                        {episode?.title && episode.title.trim().toLowerCase() !== `episode ${idx}` ? (
-                          <span className="watch__ep-subtitle">: {episode.title}</span>
-                        ) : null}
-                      </h2>
                       <div className="watch__ep-chips">
                         {isStreamResolved && <span className="badge badge--accent">1080p HD</span>}
                         <span className="badge">{prefs.audio === 'dub' ? 'English Dub' : 'Japanese Sub'}</span>
