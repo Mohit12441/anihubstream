@@ -2,14 +2,13 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   BookmarkPlus,
+  ChevronDown,
   ChevronRight,
   Clock,
   Download,
   Heart,
   Info,
-  Layers,
   ListVideo,
-  Mic,
   Play,
   Server,
   Share2,
@@ -19,6 +18,7 @@ import {
 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
+import { ServerModal } from '../components/player/ServerModal';
 import { cleanServerName } from '../components/player/ServerPopover';
 import type { PlayServer } from '../components/player/PlayerInput';
 import { providerFromId, serverIdFromProvider } from '../data/servers';
@@ -300,6 +300,7 @@ export function Watch() {
   const [theatre, setTheatre] = useState(false);
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
+  const [serverModalOpen, setServerModalOpen] = useState(false);
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
@@ -942,230 +943,122 @@ export function Watch() {
             initialPartyRoom={params.get('party')}
           />
 
-          {/* EXTERNAL PROVIDER & SUBSERVER SELECTOR */}
-          <div className="watch__servers-external">
-            {/* Top row: Providers (AniKoto, HDRezka, HiAnime, AniWatch, AniPM, P2P) */}
-            <div className="watch__ext-row watch__ext-providers-row">
-              <span className="watch__ext-label">
-                <Layers size={13} aria-hidden="true" />
-                <span>Provider:</span>
-              </span>
-              <div className="watch__ext-pill-list">
-                {displayProviders.map((p) => {
-                  const pId = p.id.toLowerCase();
-                  const isActive =
-                    activeProvider.toLowerCase() === pId ||
-                    (pId === 'torrent' && activeProvider.toLowerCase() === 'p2p') ||
-                    p.name.toLowerCase() === activeProvider.toLowerCase();
-                  const isRezka = pId === 'hdrezka';
-                  return (
-                    <button
-                      key={p.id}
-                      type="button"
-                      className={`watch__ext-provider-pill watch__ext-prov--${pId}${isActive ? ' is-active' : ''}`}
-                      onClick={() => handleSelectProvider(p.id)}
-                      title={`Switch streaming provider to ${p.name}`}
-                    >
-                      <span className={`watch__ext-prov-dot${isRezka ? ' is-rezka' : ''}`} />
-                      <span className="watch__ext-prov-name">{p.name}</span>
-                      {isRezka && <span className="watch__rezka-badge">MP4</span>}
-                      {isActive && <span className="watch__ext-active-badge">Active</span>}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Bottom row: Mirrors for active provider (SUB & DUB rows when both available) */}
-            {providerScopedServers.sub.length > 0 && providerScopedServers.dub.length > 0 ? (
-              <>
-                <div className="watch__ext-row watch__ext-subservers-row">
-                  <span className="watch__ext-label">
-                    <Server size={13} aria-hidden="true" />
-                    <span>{activeProvider} SUB:</span>
-                  </span>
-                  <div className="watch__ext-subservers-list">
-                    {providerScopedServers.sub.map((s) => {
-                      const isSelected = s.id === activeServerId;
-                      const isUnavailable = s.status === 'unavailable';
-                      const name = cleanServerName(s);
-                      const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
-                      return (
-                        <button
-                          key={s.id}
-                          type="button"
-                          disabled={isUnavailable}
-                          className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
-                          onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
-                          title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
-                        >
-                          <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
-                          <span>{name}</span>
-                          {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
-                          {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                <div className="watch__ext-row watch__ext-subservers-row" style={{ marginTop: '0.35rem' }}>
-                  <span className="watch__ext-label">
-                    <Mic size={13} aria-hidden="true" />
-                    <span>{activeProvider} DUB:</span>
-                  </span>
-                  <div className="watch__ext-subservers-list">
-                    {providerScopedServers.dub.map((s) => {
-                      const isSelected = s.id === activeServerId;
-                      const isUnavailable = s.status === 'unavailable';
-                      const name = cleanServerName(s);
-                      const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
-                      return (
-                        <button
-                          key={s.id}
-                          type="button"
-                          disabled={isUnavailable}
-                          className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
-                          onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
-                          title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
-                        >
-                          <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
-                          <span>{name}</span>
-                          {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
-                          {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            ) : currentSubservers.length > 0 ? (
-              <div className="watch__ext-row watch__ext-subservers-row">
-                <span className="watch__ext-label">
-                  <Server size={13} aria-hidden="true" />
-                  <span>{activeProvider} Mirrors ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}):</span>
-                </span>
-                <div className="watch__ext-subservers-list">
-                  {currentSubservers.map((s) => {
-                    const isSelected = s.id === activeServerId;
-                    const isUnavailable = s.status === 'unavailable';
-                    const name = cleanServerName(s);
-                    const isRezka = s.id.toLowerCase().includes('hdrezka') || (s.provider || '').toLowerCase() === 'hdrezka';
-                    const isRezkaDub = isRezka && (s.audio === 'dub' || s.id.includes('-dub'));
-                    return (
-                      <button
-                        key={s.id}
-                        type="button"
-                        disabled={isUnavailable}
-                        className={`watch__ext-subserver-btn${isSelected ? ' is-active' : ''}${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' opacity-50 cursor-not-allowed' : ''}`}
-                        onClick={!isUnavailable ? () => handleSelectServer(s) : undefined}
-                        title={isUnavailable ? (s.unavailableReason || 'Unavailable') : `Switch to ${s.name}`}
-                      >
-                        <span className={`watch__ext-subserver-dot${isRezka ? ' is-rezka' : ''}${isUnavailable ? ' bg-amber-400' : ''}`} />
-                        <span>{name}</span>
-                        {isRezka && <span className="watch__rezka-sub-tag">{isRezkaDub ? 'RU Dub' : 'Sub'}</span>}
-                        {isUnavailable && <span className="text-[10px] text-amber-400 ml-1 font-semibold">({s.unavailableReason || 'Unavailable'})</span>}
-                        {isSelected && !isUnavailable && <span className="watch__ext-active-badge">Active</span>}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            ) : null}
-          </div>
-
-          {/* STREAM UTILITY TOOLBAR */}
-          <div className="watch__toolbar">
-            {/* Quick Episode Navigation */}
-            <div className="watch__tb-nav">
-              <button
-                type="button"
-                className="watch__tb-btn"
-                onClick={goPrev}
-                disabled={idx <= 1}
-                title="Previous Episode"
-                aria-label="Previous Episode"
-              >
-                <SkipBack size={15} />
-                <span className="watch__tb-label">Prev</span>
-              </button>
-              <button
-                type="button"
-                className="watch__tb-ep-badge watch__tb-ep-btn"
-                onClick={() => setEpDrawerOpen(true)}
-                title="View all episodes (open drawer)"
-                aria-label={`Episode ${idx} of ${last}. Click to open episode list.`}
-              >
-                <ListVideo size={13} className="watch__tb-ep-icon" aria-hidden="true" />
-                <span>EP</span>
-                <strong>{idx}</strong>
-                <span className="watch__tb-ep-total">/ {last}</span>
-              </button>
-              <button
-                type="button"
-                className="watch__tb-btn"
-                onClick={goNext}
-                disabled={idx >= last}
-                title="Next Episode"
-                aria-label="Next Episode"
-              >
-                <span className="watch__tb-label">Next</span>
-                <SkipForward size={15} />
-              </button>
-            </div>
-
-            {/* Quick Audio Switcher */}
-            <div className="watch__tb-stream">
-              <div className="watch__tb-audio-switch" role="group" aria-label="Audio selection">
+          {/* UNIFIED STREAM CONTROL BAR */}
+          <div className="watch__control-bar">
+            {/* Left: Episode Navigation & Title */}
+            <div className="watch__cb-left">
+              <div className="watch__cb-ep-nav">
                 <button
                   type="button"
-                  className={`watch__tb-audio-pill${prefs.audio !== 'dub' ? ' is-active' : ''}`}
+                  className="watch__cb-nav-btn"
+                  onClick={goPrev}
+                  disabled={idx <= 1}
+                  title="Previous Episode"
+                  aria-label="Previous Episode"
+                >
+                  <SkipBack size={14} aria-hidden="true" />
+                  <span>Prev</span>
+                </button>
+                <button
+                  type="button"
+                  className="watch__cb-ep-btn"
+                  onClick={() => setEpDrawerOpen(true)}
+                  title="View all episodes (open drawer)"
+                  aria-label={`Episode ${idx} of ${last}. Click to open episode list.`}
+                >
+                  <ListVideo size={13} aria-hidden="true" />
+                  <span>EP <strong>{idx}</strong> <small>/ {last}</small></span>
+                </button>
+                <button
+                  type="button"
+                  className="watch__cb-nav-btn"
+                  onClick={goNext}
+                  disabled={idx >= last}
+                  title="Next Episode"
+                  aria-label="Next Episode"
+                >
+                  <span>Next</span>
+                  <SkipForward size={14} aria-hidden="true" />
+                </button>
+              </div>
+              {episode?.title && (
+                <span className="watch__cb-ep-title" title={episode.title}>
+                  {episode.title}
+                </span>
+              )}
+            </div>
+
+            {/* Center: Audio Toggle & Server Selector Trigger */}
+            <div className="watch__cb-center">
+              <div className="watch__cb-audio-toggle" role="group" aria-label="Audio selection">
+                <button
+                  type="button"
+                  className={`watch__cb-audio-pill${prefs.audio !== 'dub' ? ' is-active' : ''}`}
                   onClick={() => switchAudioMode('sub')}
                   aria-pressed={prefs.audio !== 'dub'}
                 >
-                  <span className="watch__tb-audio-dot" />
                   <span>SUB</span>
                 </button>
                 {hasDubForProvider && (
                   <button
                     type="button"
-                    className={`watch__tb-audio-pill${prefs.audio === 'dub' ? ' is-active' : ''}`}
+                    className={`watch__cb-audio-pill${prefs.audio === 'dub' ? ' is-active' : ''}`}
                     onClick={() => switchAudioMode('dub')}
                     aria-pressed={prefs.audio === 'dub'}
                   >
-                    <span className="watch__tb-audio-dot" />
                     <span>DUB</span>
                   </button>
                 )}
               </div>
-            </div>
 
-            {/* Quick Utility Actions */}
-            <div className="watch__tb-actions">
+              {/* Single Server Dropdown Button */}
               <button
                 type="button"
-                className={`watch__tb-btn${inList ? ' is-active' : ''}`}
+                className="watch__cb-server-btn"
+                onClick={() => setServerModalOpen(true)}
+                title="Change streaming provider or mirror"
+                aria-label={`Current server: ${activeProvider} ${cleanServerName(activeServer || { id: activeServerId, name: activeServerId })}. Click to switch.`}
+              >
+                <Server size={14} className="watch__cb-server-icon" aria-hidden="true" />
+                <span className="watch__cb-server-status-dot" />
+                <span className="watch__cb-server-text">
+                  <span className="watch__cb-server-prov">{activeProvider}</span>
+                  <span className="watch__cb-server-name">
+                    ({activeServer ? cleanServerName(activeServer) : (activeServerId.includes(':') ? activeServerId.split(':')[1] : activeServerId)})
+                  </span>
+                </span>
+                <ChevronDown size={14} className="watch__cb-server-chevron" aria-hidden="true" />
+              </button>
+            </div>
+
+            {/* Right: Quick Actions */}
+            <div className="watch__cb-actions">
+              <button
+                type="button"
+                className={`watch__cb-action-btn${inList ? ' is-active' : ''}`}
                 onClick={() => void save()}
                 disabled={busy}
                 title={inList ? 'In My List' : 'Add to My List'}
+                aria-label={inList ? 'In My List' : 'Add to My List'}
               >
-                <BookmarkPlus size={16} />
-                <span className="watch__tb-label">{busy ? 'Saving…' : inList ? 'Saved' : 'List'}</span>
+                <BookmarkPlus size={15} aria-hidden="true" />
+                <span className="watch__cb-action-label">{busy ? 'Saving…' : inList ? 'Saved' : 'List'}</span>
               </button>
 
               <button
                 type="button"
-                className="watch__tb-btn"
+                className="watch__cb-action-btn"
                 onClick={() => setDownloadOpen(true)}
-                title="Download Episode (High Speed Kiwi CDN)"
+                title="Download Episode"
+                aria-label="Download Episode"
               >
-                <Download size={16} />
-                <span className="watch__tb-label">Download</span>
+                <Download size={15} aria-hidden="true" />
+                <span className="watch__cb-action-label">Download</span>
               </button>
 
               <button
                 type="button"
-                className="watch__tb-btn"
+                className="watch__cb-action-btn"
                 onClick={() => {
                   void navigator.clipboard
                     ?.writeText(window.location.href)
@@ -1173,14 +1066,14 @@ export function Watch() {
                     .catch(() => notify(window.location.href));
                 }}
                 title="Share Episode"
+                aria-label="Share Episode"
               >
-                <Share2 size={16} />
-                <span className="watch__tb-label">Share</span>
+                <Share2 size={15} aria-hidden="true" />
               </button>
 
               <button
                 type="button"
-                className={`watch__tb-btn watch__tb-fav${faved ? ' is-faved' : ''}`}
+                className={`watch__cb-action-btn watch__tb-fav${faved ? ' is-faved' : ''}`}
                 onClick={() => {
                   toggleFavourite(anime.id);
                   notify(faved ? 'Removed from favourites.' : 'Saved to favourites.');
@@ -1188,7 +1081,7 @@ export function Watch() {
                 title={faved ? 'Remove from Favourites' : 'Add to Favourites'}
                 aria-pressed={faved}
               >
-                <Heart size={16} fill={faved ? 'currentColor' : 'none'} />
+                <Heart size={15} fill={faved ? 'currentColor' : 'none'} aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -1429,6 +1322,19 @@ export function Watch() {
         currentStream={currentStream}
         activeProvider={targetProvider || currentStream?.provider || (activeServerId ? providerFromId(activeServerId).split(':')[0] : 'anikoto')}
         notify={notify}
+      />
+
+      <ServerModal
+        isOpen={serverModalOpen}
+        onClose={() => setServerModalOpen(false)}
+        activeProviderId={activeProviderKey}
+        activeServerId={activeServerId}
+        currentAudio={prefs.audio === 'dub' ? 'dub' : 'sub'}
+        providerRegistry={providerRegistry}
+        displayProviders={displayProviders}
+        onSelectServer={handleSelectServer}
+        onSelectProvider={handleSelectProvider}
+        onSwitchAudio={switchAudioMode}
       />
     </div>
   );
