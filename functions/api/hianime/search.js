@@ -35,19 +35,24 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const cleanQ = normalizeSearch(q);
 
         // Call upstream HiAnime search
-        const res = await fetch(`${HIANIME_MAIN}/search?keyword=${encodeURIComponent(cleanQ)}`, {
-          headers: {
-            'User-Agent': USER_AGENT,
-            Referer: `${HIANIME_MAIN}/`,
-          },
-          signal: AbortSignal.timeout(4500),
-        });
+        let html = '';
+        try {
+          const res = await fetch(`${HIANIME_MAIN}/search?keyword=${encodeURIComponent(cleanQ)}`, {
+            headers: {
+              'User-Agent': USER_AGENT,
+              Referer: `${HIANIME_MAIN}/`,
+            },
+            signal: AbortSignal.timeout(6000),
+          });
 
-        if (!res.ok) {
-          throw new HttpError(res.status, 'upstream_error', `HiAnime search failed: HTTP ${res.status}`);
+          if (res.ok) {
+            html = await res.text();
+          }
+        } catch (_) {}
+
+        if (!html) {
+          return ok({ ok: true, data: { results: [], total: 0 } });
         }
-
-        const html = await res.text();
         const cardRegex = /<div class="[^"]*flw-item[^"]*"[\s\S]*?<img\s+[^>]*(?:data-src|src)="([^"]+)"[\s\S]*?<a\s+[^>]*href="\/watch\/([^"?]+)"[^>]*title="([^"]+)"[^>]*data-id="([^"]+)"/gi;
         const results = [];
         let m;

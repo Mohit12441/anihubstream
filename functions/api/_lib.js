@@ -814,7 +814,16 @@ export function formatServerName(provider, serverId) {
   };
   const base = provNames[provider?.toLowerCase()] || (provider ? provider.toUpperCase() : 'Server');
   if (!serverId || serverId === 'default') return base;
-  const cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
+  let cleanServer = String(serverId).replace(/^.*?\s*·\s*/, '').trim();
+  if (provider?.toLowerCase() === 'hianime') {
+    if (/^HD-1(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
+      cleanServer = cleanServer.replace(/HD-1/i, 'HD-1 [MegaPlay]');
+    } else if (/^HD-2(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
+      cleanServer = cleanServer.replace(/HD-2/i, 'HD-2 [MegaVid]');
+    } else if (/^HD-3(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
+      cleanServer = cleanServer.replace(/HD-3/i, 'HD-3 [Zoko]');
+    }
+  }
   return `${base} · ${cleanServer}`;
 }
 

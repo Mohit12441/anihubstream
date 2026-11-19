@@ -388,7 +388,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   const hianimeSubs = ['HD-1', 'HD-2', 'HD-3'].map((srv) =>
     makeServer({
       id: `hianime:${srv}`,
-      name: `HiAnime · ${srv}`,
+      name: formatServerName('hianime', srv),
       provider: 'hianime',
       streamUrl: resolveUrl({ audio: 'sub', provider: 'hianime', server: srv }),
     })
@@ -397,7 +397,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   const hianimeDubs = ['HD-1', 'HD-2', 'HD-3'].map((srv) =>
     makeServer({
       id: `hianime:${srv}-dub`,
-      name: `HiAnime · ${srv} (DUB)`,
+      name: formatServerName('hianime', `${srv} (DUB)`),
       provider: 'hianime',
       streamUrl: resolveUrl({ audio: 'dub', provider: 'hianime', server: srv }),
       type: 'hls',
@@ -798,7 +798,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
           }
           if (!direct && requested === 'hianime') {
-            if (resolvedMalId > 0) {
+            const requestedHiServer = (serverParam || 'HD-3').replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim().toUpperCase();
+            if (requestedHiServer === 'HD-3' && resolvedMalId > 0) {
               const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
               const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
               if (zokoRes?.masterUrl) {
@@ -818,7 +819,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 animeId: resolvedMalId || '',
                 ep,
                 audio,
-                server: serverParam || 'HD-1',
+                server: requestedHiServer,
               });
               if (v2Res?.streamUrl) {
                 direct = {
@@ -831,8 +832,22 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 };
               }
             }
+            if (!direct && resolvedMalId > 0) {
+              const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
+              const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
+              if (zokoRes?.masterUrl) {
+                direct = {
+                  streamUrl: zokoRes.masterUrl,
+                  referer: 'https://zokoanime.video/',
+                  quality: zokoRes.defaultQuality || '1080p',
+                  subtitles: zokoRes.subtitles || [],
+                  provider: 'hianime',
+                  skip: zokoRes.skip,
+                };
+              }
+            }
           }
-          if (!direct && requested !== 'hdrezka') {
+          if (!direct && requested !== 'hdrezka' && requested !== 'hianime') {
             direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: (requested === 'anipm' ? undefined : requested) });
           }
           // Multi-provider direct fallback if primary provider has not uploaded the episode yet
@@ -1011,21 +1026,23 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const effectiveProvider = (requested && requested !== 'auto' && (requested === 'aniwatch' || requested === 'hianime'))
           ? requested
           : (directRes.provider || 'anikoto');
+        const defaultForProv = (effectiveProvider === 'hianime') ? 'HD-3' : 'HD-1';
         const rawServer = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
           ? 'HD-1'
-          : (serverParam || 'HD-1');
-        const cleanServerId = rawServer.replace(/-dub$/i, '');
+          : (serverParam || defaultForProv);
+        const isDub = audio === 'dub' || rawServer.toLowerCase().includes('-dub');
+        const cleanServerId = rawServer.replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
         const primaryServer = {
-          id: `${effectiveProvider}:${cleanServerId}${audio === 'dub' ? '-dub' : ''}`,
-          name: formatServerName(effectiveProvider, `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`),
+          id: `${effectiveProvider}:${cleanServerId}${isDub ? '-dub' : ''}`,
+          name: formatServerName(effectiveProvider, `${cleanServerId}${isDub ? ' (DUB)' : ''}`),
           provider: effectiveProvider,
           status: 'ready',
           streamUrl: finalStreamUrl,
           referrerPolicy: directRes.referrerPolicy,
           betaUrlCandidates: directRes.betaUrlCandidates,
-          type: audio === 'dub' ? 'dub' : 'hls',
+          type: isDub ? 'dub' : 'hls',
           quality: directRes.quality || '1080p',
-          audio,
+          audio: isDub ? 'dub' : 'sub',
           audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
             ? directRes.audioTracks
             : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
@@ -1083,7 +1100,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const meta = bridgeRes;
     const session = meta.session || '';
-    const cleanPrimaryServer = String(serverParam || (requested === 'hdrezka' ? '1080p' : 'HD-1')).replace(/^.*?\s*·\s*/, '').replace(/^ultra$/i, '1080p').trim();
+    const defaultForProv = requested === 'hdrezka' ? '1080p' : (requested === 'hianime' ? 'HD-3' : 'HD-1');
+    const cleanPrimaryServer = String(serverParam || defaultForProv).replace(/^.*?\s*·\s*/, '').replace(/\[.*?\]/g, '').replace(/^ultra$/i, '1080p').trim();
     let prov = meta.provider || (requested !== 'auto' ? requested : 'anikoto');
     if (meta.provider === 'hdrezka' || requested === 'hdrezka') {
       prov = meta.provider || 'hdrezka';
@@ -1157,10 +1175,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       rezkaStudioName = 'Original';
     }
 
+    const isDub = audio === 'dub' || resolvedAudio === 'dub' || cleanPrimaryServer.toLowerCase().includes('-dub');
+    const cleanServerId = cleanPrimaryServer.replace(/-dub$/i, '').trim();
     const activeServerId = prov === 'hdrezka'
       ? `hdrezka:${rezkaSuffix}`
-      : `${prov}:${cleanPrimaryServer}`;
-    let primaryServerName = formatServerName(prov, cleanPrimaryServer);
+      : `${prov}:${cleanServerId}${isDub ? '-dub' : ''}`;
+    let primaryServerName = formatServerName(prov, `${cleanServerId}${isDub ? ' (DUB)' : ''}`);
     if (audio === 'dub' && resolvedAudio === 'sub') {
       primaryServerName += ' (Sub Only)';
     }
@@ -1189,7 +1209,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
       type: meta.type || (meta.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls'),
       quality: meta.quality || '1080p',
-      audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : resolvedAudio,
+      audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : (isDub ? 'dub' : 'sub'),
       audioTracks: prov === 'hdrezka'
         ? (isRezkaDub
           ? [{ id: 'audio-ru', language: 'ru', label: `${rezkaStudioName} Dub`, default: true }]

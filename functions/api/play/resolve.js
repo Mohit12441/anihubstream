@@ -370,9 +370,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               const effectiveProvider = (provider && provider !== 'auto' && (provider === 'aniwatch' || provider === 'hianime'))
                 ? provider
                 : (directRes?.provider || 'fallback');
-              const cleanServerId = rawServerParam || 'HD-1';
-              const serverIdWithAudio = audio === 'dub' && !cleanServerId.includes('-dub') ? `${cleanServerId}-dub` : cleanServerId;
-              const serverNameWithAudio = audio === 'dub' && !serverParam.includes('(DUB)') ? `${serverParam || 'HD-1'} (DUB)` : (serverParam || 'HD-1');
+              const defaultTarget = effectiveProvider === 'hianime' ? 'HD-3' : 'HD-1';
+              const cleanServerId = (rawServerParam || defaultTarget).replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
+              const serverIdWithAudio = audio === 'dub' ? `${cleanServerId}-dub` : cleanServerId;
+              const serverNameWithAudio = `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`;
               const resolvedServer = {
                 id: `${effectiveProvider}:${serverIdWithAudio}`,
                 name: formatServerName(effectiveProvider, serverNameWithAudio),
@@ -381,7 +382,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 streamUrl: proxiedStreamUrl,
                 type: audio === 'dub' ? 'dub' : 'hls',
                 quality: directRes.quality || '1080p',
-                audio,
+                audio: audio === 'dub' ? 'dub' : 'sub',
                 audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
                   ? directRes.audioTracks
                   : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
@@ -593,12 +594,14 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           rezkaStudioName = 'Original';
         }
 
+        const isDub = audio === 'dub' || resolvedAudio === 'dub';
+        const defaultSrv = prov === 'hianime' ? 'HD-3' : 'HD-1';
         const cleanServerId = prov === 'hdrezka'
           ? rezkaSuffix
-          : (rawServerParam || 'HD-1');
+          : `${(rawServerParam || defaultSrv).replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim()}${isDub ? '-dub' : ''}`;
         let serverName = prov === 'hdrezka'
           ? (isRezkaDub ? `HDRezka · ${rezkaStudioName} (RU Dub)` : 'HDRezka · Original (Japanese)')
-          : formatServerName(prov, serverParam || 'HD-1');
+          : formatServerName(prov, `${(serverParam || defaultSrv).replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim()}${isDub ? ' (DUB)' : ''}`);
         if (audio === 'dub' && resolvedAudio === 'sub') {
           serverName += ' (Sub Only)';
         }
@@ -623,9 +626,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           status: 'ready',
           streamUrl,
           referrerPolicy: isDirectVoidboost ? 'no-referrer' : undefined,
-          type: metaData.type || (resolvedAudio === 'dub' || isRezkaDub ? 'dub' : (metaData.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls')),
+          type: metaData.type || (isDub || isRezkaDub ? 'dub' : (metaData.kind === 'progressive' || isDirectVoidboost ? 'mp4' : 'hls')),
           quality: metaData.quality || '1080p',
-          audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : resolvedAudio,
+          audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : (isDub ? 'dub' : 'sub'),
           audioTracks: resolvedAudioTracks,
           subtitles,
           downloads,

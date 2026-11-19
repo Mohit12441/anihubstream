@@ -60,12 +60,12 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'anikoto:Vidstream-2-dub', name: 'AniKoto · Vidstream-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anikoto:Vidstream-1-dub', name: 'AniKoto · Vidstream-1 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anikoto:HD-2-dub', name: 'AniKoto · HD-2 (DUB)', provider: 'anikoto', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hianime:HD-1', name: 'HiAnime · HD-1', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hianime:HD-2', name: 'HiAnime · HD-2', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hianime:HD-3', name: 'HiAnime · HD-3', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hianime:HD-1-dub', name: 'HiAnime · HD-1 (DUB)', provider: 'hianime', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hianime:HD-2-dub', name: 'HiAnime · HD-2 (DUB)', provider: 'hianime', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
-  { id: 'hianime:HD-3-dub', name: 'HiAnime · HD-3 (DUB)', provider: 'hianime', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-3', name: 'HiAnime · HD-3 [Zoko]', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-1', name: 'HiAnime · HD-1 [MegaPlay]', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-2', name: 'HiAnime · HD-2 [MegaVid]', provider: 'hianime', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-3-dub', name: 'HiAnime · HD-3 [Zoko] (DUB)', provider: 'hianime', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-1-dub', name: 'HiAnime · HD-1 [MegaPlay] (DUB)', provider: 'hianime', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
+  { id: 'hianime:HD-2-dub', name: 'HiAnime · HD-2 [MegaVid] (DUB)', provider: 'hianime', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'aniwatch:HD-1', name: 'AniWatch · HD-1', provider: 'aniwatch', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'aniwatch:HD-1-dub', name: 'AniWatch · HD-1 (DUB)', provider: 'aniwatch', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'anipm:beta', name: 'AniPM · Beta', provider: 'anipm', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
@@ -266,9 +266,14 @@ export function Watch() {
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const rawSrv = params.get('server');
     const srvParam = (targetProvider === 'hdrezka' && rawSrv?.toLowerCase().includes('ultra')) ? '1080p' : rawSrv;
+    const isDub = (params.get('audio') || prefs.audio) === 'dub';
     if (srvParam) {
-      const base = srvParam.includes(':') ? srvParam : `${targetProvider || 'anikoto'}:${srvParam}`;
-      return (prefs.audio === 'dub' && !base.includes('-dub')) ? `${base}-dub` : base;
+      const cleanSrv = srvParam.replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
+      if (srvParam.includes(':')) {
+        return isDub ? `${cleanSrv}-dub` : cleanSrv;
+      }
+      const provPrefix = targetProvider || 'anikoto';
+      return isDub ? `${provPrefix}:${cleanSrv}-dub` : `${provPrefix}:${cleanSrv}`;
     }
     return targetProvider
       ? serverIdFromProvider(targetProvider, prefs.audio)
@@ -451,15 +456,18 @@ export function Watch() {
           let matchedServer: PlayServer | null = null;
 
           if (explicitServer) {
-            const fullTargetId = explicitServer.includes(':')
-              ? explicitServer
-              : (targetProvider ? `${targetProvider}:${explicitServer}` : explicitServer);
+            const cleanExplicit = explicitServer.replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
+            const targetId = explicitServer.includes(':')
+              ? (isDub ? `${cleanExplicit}-dub` : cleanExplicit)
+              : (targetProvider ? `${targetProvider}:${cleanExplicit}${isDub ? '-dub' : ''}` : cleanExplicit);
             matchedServer = mergedServers.find((s: PlayServer) => {
-              if (s.id.toLowerCase() === fullTargetId.toLowerCase()) return true;
+              if (s.id.toLowerCase() === targetId.toLowerCase()) return true;
               if (targetProvider && s.provider?.toLowerCase() !== targetProvider && !s.id.toLowerCase().startsWith(`${targetProvider}:`)) {
                 return false;
               }
-              return s.id === explicitServer || s.id.endsWith(`:${explicitServer}`) || s.id.endsWith(`:${explicitServer}-dub`);
+              return isDub
+                ? (s.id.endsWith(`:${cleanExplicit}-dub`) || s.id === `${cleanExplicit}-dub`)
+                : (s.id.endsWith(`:${cleanExplicit}`) || s.id === cleanExplicit);
             }) || null;
           }
 
@@ -793,7 +801,7 @@ export function Watch() {
     newParams.delete('title');
     newParams.delete('poster');
     newParams.set('provider', newProv);
-    const serverNameOnly = server.id.includes(':') ? server.id.split(':')[1].replace(/-dub$/i, '').replace(/-sub$/i, '') : server.id;
+    const serverNameOnly = (server.id.includes(':') ? server.id.split(':')[1] : server.id).replace(/-dub$/i, '').replace(/-sub$/i, '').replace(/\[.*?\]/g, '').trim();
     newParams.set('server', serverNameOnly);
     if (srvAudio === 'dub') {
       newParams.set('audio', 'dub');
