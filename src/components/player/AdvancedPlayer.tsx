@@ -812,6 +812,7 @@ export function AdvancedPlayer(props: Props) {
               className="player__embed-frame"
               title={`${anime.title} Episode ${episode.n}`}
               allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
               loading="eager"

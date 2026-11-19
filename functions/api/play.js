@@ -4,6 +4,7 @@ import { resolveMegaplayDirect, isMegaplayTokenValid } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 import { resolveHiAnimeV2Direct } from './hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from './_anipm.js';
+import { resolveAniWatchDirect } from './_aniwatch.js';
 import { rezkaFetch, parseStreams, hdrezkaMeta } from '../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 2_000;
@@ -893,11 +894,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               }
             }
           }
-          if (!direct && requested !== 'hdrezka' && requested !== 'hianime') {
+          if (!direct && requested === 'aniwatch') {
+            direct = await resolveAniWatchDirect({
+              slug: availableSlugs.aniwatch || animeRow?.aniwatch_slug || id,
+              ep,
+              audio,
+              server: serverParam || 'MGCLD',
+            });
+          }
+          if (!direct && requested !== 'hdrezka' && requested !== 'hianime' && requested !== 'aniwatch') {
             direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: (requested === 'anipm' ? undefined : requested) });
           }
           // Multi-provider direct fallback if primary provider has not uploaded the episode yet
-          if (!direct && availableSlugs.hianime && requested !== 'hianime') {
+          if (!direct && availableSlugs.hianime && requested !== 'hianime' && requested !== 'aniwatch') {
             try {
               const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
               const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
@@ -1058,9 +1067,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     if (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl)) {
       if (directRes?.streamUrl) {
         const proxyBase = `${url.origin}/api/proxy`;
+        const isEmbedDirect = directRes.type === 'embed' || directRes.kind === 'embed';
         const isDirectNoReferrer = directRes.referrerPolicy === 'no-referrer' || directRes.provider === 'anipm';
         const activeReferer = directRes.referer || (directRes.provider === 'anipm' ? 'https://beta.cno.to/' : 'https://megaplay.buzz/');
-        const finalStreamUrl = isDirectNoReferrer ? directRes.streamUrl : `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
+        const finalStreamUrl = isEmbedDirect ? directRes.streamUrl : (isDirectNoReferrer ? directRes.streamUrl : `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`);
 
         const subtitles = (directRes.subtitles || []).map((sub) => ({
           ...sub,
@@ -1075,7 +1085,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const defaultForProv = (effectiveProvider === 'hianime') ? 'HD-3' : (effectiveProvider === 'aniwatch' ? 'MGCLD' : 'HD-1');
         const rawServer = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
           ? 'HD-1'
-          : (serverParam || defaultForProv);
+          : ((effectiveProvider === 'aniwatch' && (!serverParam || serverParam.toUpperCase() === 'HD-1')) ? 'MGCLD' : (serverParam || defaultForProv));
         const isDub = audio === 'dub' || rawServer.toLowerCase().includes('-dub');
         const cleanServerId = rawServer.replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
         const primaryServer = {
@@ -1086,9 +1096,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           streamUrl: finalStreamUrl,
           referrerPolicy: directRes.referrerPolicy,
           betaUrlCandidates: directRes.betaUrlCandidates,
-          type: isDub ? 'dub' : 'hls',
+          type: isEmbedDirect ? 'embed' : (isDub ? 'dub' : 'hls'),
           quality: directRes.quality || '1080p',
           audio: isDub ? 'dub' : 'sub',
+          hardcodedSubs: Boolean(directRes.hardcodedSubs),
           audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
             ? directRes.audioTracks
             : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)

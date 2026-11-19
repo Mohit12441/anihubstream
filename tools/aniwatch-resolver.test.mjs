@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { formatServerName } from '../functions/api/_lib.js';
+import { resolveAniWatchDirect } from '../functions/api/_aniwatch.js';
 import { onRequestGet as hianimePlayGet } from '../functions/api/hianime/play.js';
 import { onRequestGet as resolveGet } from '../functions/api/play/resolve.js';
 
@@ -18,6 +19,54 @@ test('formatServerName formats HiAnime subservers with isolated names', () => {
   assert.equal(formatServerName('hianime', 'HD-2'), 'HiAnime · HD-2 [MegaVid]');
   assert.equal(formatServerName('hianime', 'HD-3'), 'HiAnime · HD-3 [Zoko]');
   assert.equal(formatServerName('hianime', 'HD-3 (DUB)'), 'HiAnime · HD-3 [Zoko] (DUB)');
+});
+
+test('resolveAniWatchDirect scrapes real embed and tags hardcodedSubs', async () => {
+  // Mock global fetch to return sample aniwatch HTML
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    if (String(url).includes('aniwatch.one')) {
+      const sampleHtml = `
+        <div class="player-servers">
+          <div id="servers-content">
+            <div class="ps_-block ps_-block-sub servers-sub">
+              <div class="ps__-title"><i class="fas fa-closed-captioning"></i> SUB:</div>
+              <div class="ps__-list">
+                <div class="item server-item" data-type="sub" data-url="https://mfw09.org/e/sample-mgcld"><a class="btn active">MGCLD</a></div>
+                <div class="item server-item" data-type="sub" data-url="https://mfw09.org/e/sample-byfms"><a class="btn">BYFMS</a></div>
+                <div class="item server-item" data-type="sub" data-url="https://playmogo.com/e/sample-dghg"><a class="btn">DGHG</a></div>
+              </div>
+            </div>
+            <div class="ps_-block ps_-block-dub servers-dub">
+              <div class="ps__-title"><i class="fas fa-microphone"></i> DUB:</div>
+              <div class="ps__-list">
+                <div class="item server-item" data-type="dub" data-url="https://mfw09.org/e/sample-dub-mgcld"><a class="btn">MGCLD</a></div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      return new Response(sampleHtml, { status: 200 });
+    }
+    return originalFetch(url);
+  };
+
+  try {
+    const res = await resolveAniWatchDirect({
+      slug: 'ore-dake-level-up-na-ken-season-2-arise-from-the-shadow-82064',
+      ep: 1,
+      audio: 'sub',
+      server: 'DGHG',
+    });
+
+    assert.ok(res, 'Must return direct AniWatch result');
+    assert.equal(res.provider, 'aniwatch');
+    assert.equal(res.serverName, 'DGHG');
+    assert.equal(res.streamUrl, 'https://playmogo.com/e/sample-dghg');
+    assert.equal(res.type, 'embed');
+    assert.equal(res.hardcodedSubs, true);
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
 });
 
 test('HiAnime edge play endpoint returns all 3 subservers with cache-isolated keys', async () => {
@@ -82,29 +131,4 @@ test('HiAnime edge play endpoint returns all 3 subservers with cache-isolated ke
 
   // Requesting HD-1 should NOT hit HD-3 cache (isolated cache key)
   assert.equal(streamCacheMap.has('hianime:solo-leveling:1:sub:HD-1'), false);
-});
-
-test('Resolve endpoint rejects raw ad-heavy embed iframes', async () => {
-  const mockEnv = {
-    ANIHUB: {
-      prepare: (sql) => ({
-        bind: () => ({
-          first: async () => ({
-            id: 'test-ad-anime',
-            title: 'Test Ad Anime',
-            status: 'Finished',
-            mal_id: 11111,
-          }),
-        }),
-      }),
-    },
-    STREAM_BRIDGE_URL: 'http://127.0.0.1:9999',
-  };
-
-  const req = new Request('http://localhost/api/play/resolve?anime_id=test-ad-anime&ep=1&provider=aniwatch&server=MGCLD');
-  const res = await resolveGet({ request: req, env: mockEnv, waitUntil: () => {} });
-  // Must fail safely instead of exposing malicious third-party popup embeds
-  assert.ok(res.status >= 400);
-  const body = await res.json();
-  assert.ok(body.error === 'not_found' || body.error === 'provider_error' || body.error === 'upstream_timeout');
 });

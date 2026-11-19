@@ -499,10 +499,11 @@ export function Watch() {
         if (mismatchedTitle && serverList.length < rawServerList.length) {
           notify(`Server title mismatch (${mismatchedTitle}) — filtered`);
         }
-        if (serverList.length > 0) {
+        const filteredServers = serverList.filter((s: PlayServer) => s && s.id !== 'aniwatch:HD-1' && s.id !== 'aniwatch:HD-1-dub');
+        if (filteredServers.length > 0) {
           const mergedServers = [
-            ...serverList,
-            ...DEFAULT_PLAY_SERVERS.filter((def) => !serverList.some((s: PlayServer) => s.id === def.id)),
+            ...filteredServers,
+            ...DEFAULT_PLAY_SERVERS.filter((def) => !filteredServers.some((s: PlayServer) => s.id === def.id)),
           ];
           setProviderRegistry(buildProviderRegistry(mergedServers));
           const explicitServer = params.get('server');

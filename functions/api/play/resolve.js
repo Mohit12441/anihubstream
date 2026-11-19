@@ -4,6 +4,7 @@ import { resolveMegaplayDirect, isMegaplayTokenValid } from '../_megaplay.js';
 import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 import { resolveHiAnimeV2Direct } from '../hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from '../_anipm.js';
+import { resolveAniWatchDirect } from '../_aniwatch.js';
 import { hdrezkaMeta, rezkaFetch, parseStreams } from '../../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 15_000;
@@ -349,7 +350,14 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                   }
                 }
               }
-              if (!directRes && resolvedMalId > 0) {
+              if (provider === 'aniwatch') {
+                directRes = await resolveAniWatchDirect({
+                  slug: providerSlug || animeIdParam || animeId || titleParam,
+                  ep,
+                  audio,
+                  server: serverParam || 'MGCLD',
+                });
+              } else if (!directRes && resolvedMalId > 0) {
                 if (provider === 'hianime') {
                   const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}?color=ffbade`;
                   const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
@@ -376,8 +384,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
             if (directRes?.streamUrl) {
               const proxyBase = `${url.origin}/api/proxy`;
+              const isEmbedDirect = directRes.type === 'embed' || directRes.kind === 'embed';
               const activeReferer = directRes.referer || (provider === 'hianime' ? 'https://zokoanime.video/' : 'https://megaplay.buzz/');
-              const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
+              const proxiedStreamUrl = isEmbedDirect
+                ? directRes.streamUrl
+                : `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`;
 
               const subtitles = (directRes.subtitles || []).map((sub) => ({
                 ...sub,
@@ -400,9 +411,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 provider: effectiveProvider,
                 status: 'ready',
                 streamUrl: proxiedStreamUrl,
-                type: audio === 'dub' ? 'dub' : 'hls',
+                type: isEmbedDirect ? 'embed' : (audio === 'dub' ? 'dub' : 'hls'),
                 quality: directRes.quality || '1080p',
                 audio: audio === 'dub' ? 'dub' : 'sub',
+                hardcodedSubs: Boolean(directRes.hardcodedSubs),
                 audioTracks: (Array.isArray(directRes?.audioTracks) && directRes.audioTracks.length > 0)
                   ? directRes.audioTracks
                   : (Array.isArray(directRes?.audio) && directRes.audio.length > 0)
@@ -561,7 +573,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           streamUrl = `${bridgeBase}${masterPath}`;
         }
 
-        if (metaData.kind === 'embed' || metaData.type === 'embed' || streamUrl.includes('morencius') || (!streamUrl.includes('.m3u8') && !streamUrl.includes('.mp4') && streamUrl.includes('/embed'))) {
+        const isAllowedEmbed = (prov === 'aniwatch') && (masterPath.includes('mfw09.org') || masterPath.includes('playmogo.com'));
+        if (!isAllowedEmbed && (metaData.kind === 'embed' || metaData.type === 'embed' || streamUrl.includes('morencius') || (!streamUrl.includes('.m3u8') && !streamUrl.includes('.mp4') && streamUrl.includes('/embed')))) {
           throw new HttpError(404, 'not_found', 'Direct stream not available; embeds disabled');
         }
 
