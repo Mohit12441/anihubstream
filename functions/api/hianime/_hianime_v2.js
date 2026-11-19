@@ -91,7 +91,7 @@ export async function extractDirectStreamFromEmbed(embedUrl, deps = {}) {
       });
       if (mvRes.ok) {
         const mvData = await mvRes.json();
-        if (mvData?.source) {
+        if (mvData?.source && !mvData.source.includes('s-90.megavid.se')) {
           const skip = mvData.chapters?.length ? {
             intro: mvData.chapters.find((c) => /intro/i.test(c.title)) ? [mvData.chapters.find((c) => /intro/i.test(c.title)).start, mvData.chapters.find((c) => /intro/i.test(c.title)).end] : null,
             outro: mvData.chapters.find((c) => /outro/i.test(c.title)) ? [mvData.chapters.find((c) => /outro/i.test(c.title)).start, mvData.chapters.find((c) => /outro/i.test(c.title)).end] : null,
@@ -158,14 +158,22 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
       numericId = slug;
     } else {
       try {
-        const searchRes = await fetch(`${HIANIME_MAIN}/search?keyword=${encodeURIComponent(slug.replace(/[-_]+/g, ' '))}`, {
-          headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/` },
-          signal: AbortSignal.timeout(4000),
-        });
-        if (searchRes.ok) {
-          const searchHtml = await searchRes.text();
-          const idMatch = /href="\/[^"]*-([0-9]+)(?:\?[^"]*)?"/i.exec(searchHtml);
-          if (idMatch) numericId = idMatch[1];
+        const words = slug.replace(/[-_]+/g, ' ').trim().split(/\s+/).filter(Boolean);
+        const queries = [words.join(' '), words.slice(0, 3).join(' ')];
+        for (const q of queries) {
+          if (!q) continue;
+          const searchRes = await fetch(`${HIANIME_MAIN}/search?keyword=${encodeURIComponent(q)}`, {
+            headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/` },
+            signal: AbortSignal.timeout(4000),
+          });
+          if (searchRes.ok) {
+            const searchHtml = await searchRes.text();
+            const idMatch = /href="\/watch\/[^"?]*-([0-9]+)(?:\?[^"]*)?"/i.exec(searchHtml);
+            if (idMatch) {
+              numericId = idMatch[1];
+              break;
+            }
+          }
         }
       } catch (_) {}
     }

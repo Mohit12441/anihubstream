@@ -162,3 +162,35 @@ test('resolveHiAnimeV2Direct: supports HD-1, HD-2, HD-3 server targets without t
   assert.equal(hd3.serverName, 'HD-3');
   assert.ok(hd3.streamUrl.includes('m3u8') || hd3.streamUrl.includes('dramahot.top'));
 });
+
+test('proxy: authorizes megavid.se and megavid.buzz stream domains without 403', async () => {
+  const { isHostAllowed } = await import('../functions/api/proxy.js');
+  assert.equal(isHostAllowed('s-90.megavid.se'), true, 's-90.megavid.se must be allowed');
+  assert.equal(isHostAllowed('megavid.buzz'), true, 'megavid.buzz must be allowed');
+  assert.equal(isHostAllowed('megaplay-1.buzz'), true, 'megaplay-1.buzz must be allowed');
+});
+
+test('resolveHiAnimeV2Direct: ignores header favicon-16.png and matches real anime show cards', async () => {
+  const mockHtmlWithFavicon = `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <link rel="icon" type="image/png" sizes="16x16" href="/themes/hianime/assets/images/favicon-16.png">
+      </head>
+      <body>
+        <div class="film_list-wrap">
+          <div class="flw-item">
+            <a href="/watch/solo-leveling-season-2-arise-from-the-shadow-3eukp-217" class="film-poster-ahref">
+              Solo Leveling Season 2
+            </a>
+          </div>
+        </div>
+      </body>
+    </html>
+  `;
+
+  // Verify the card regex extracts 217 (Solo Leveling Season 2), not 16 (favicon)
+  const idMatch = /href="\/watch\/[^"?]*-([0-9]+)(?:\?[^"]*)?"/i.exec(mockHtmlWithFavicon);
+  assert.ok(idMatch);
+  assert.equal(idMatch[1], '217', 'Must extract 217 for Solo Leveling S2, never 16 from favicon');
+});

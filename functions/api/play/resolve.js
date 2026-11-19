@@ -298,7 +298,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 ).bind(cacheKey, Date.now()).first();
                 if (cached?.data) {
                   const parsed = JSON.parse(cached.data);
-                  if (parsed?.streamUrl && isMegaplayTokenValid(parsed.streamUrl)) {
+                  if (parsed?.streamUrl && !parsed.streamUrl.includes('s-90.megavid.se') && isMegaplayTokenValid(parsed.streamUrl)) {
                     directRes = parsed;
                   }
                 }
@@ -306,27 +306,43 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
             if (!directRes) {
               if (provider === 'hianime') {
-                const srvTarget = (serverParam || 'HD-1').replace(/-dub$/i, '').toUpperCase();
-                const numericHiAnimeId = (providerSlug && /-([0-9]+)$/.test(providerSlug))
-                  ? /-([0-9]+)$/.exec(providerSlug)[1]
-                  : '';
-                const v2Res = await resolveHiAnimeV2Direct({
-                  slug: providerSlug || animeIdParam || animeId || titleParam,
-                  animeId: numericHiAnimeId,
-                  ep,
-                  audio,
-                  server: srvTarget,
-                  malId: resolvedMalId,
-                });
-                if (v2Res?.streamUrl) {
-                  directRes = {
-                    streamUrl: v2Res.streamUrl,
-                    referer: v2Res.referer || (srvTarget === 'HD-3' ? 'https://zokoanime.video/' : (srvTarget === 'HD-2' ? 'https://megavid.buzz/' : 'https://megaplay.buzz/')),
-                    quality: v2Res.quality || '1080p',
-                    subtitles: v2Res.subtitles || [],
-                    provider: 'hianime',
-                    skip: v2Res.skip,
-                  };
+                const srvTarget = (serverParam || 'HD-3').replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim().toUpperCase();
+                if (srvTarget === 'HD-3' && resolvedMalId > 0) {
+                  const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}?color=ffbade`;
+                  const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
+                  if (zokoRes?.masterUrl) {
+                    directRes = {
+                      streamUrl: zokoRes.masterUrl,
+                      referer: 'https://zokoanime.video/',
+                      quality: zokoRes.defaultQuality || '1080p',
+                      subtitles: zokoRes.subtitles || [],
+                      provider: 'hianime',
+                      skip: zokoRes.skip,
+                    };
+                  }
+                }
+                if (!directRes) {
+                  const numericHiAnimeId = (providerSlug && /-([0-9]+)$/.test(providerSlug))
+                    ? /-([0-9]+)$/.exec(providerSlug)[1]
+                    : '';
+                  const v2Res = await resolveHiAnimeV2Direct({
+                    slug: providerSlug || animeIdParam || animeId || titleParam,
+                    animeId: numericHiAnimeId,
+                    ep,
+                    audio,
+                    server: srvTarget,
+                    malId: resolvedMalId,
+                  });
+                  if (v2Res?.streamUrl) {
+                    directRes = {
+                      streamUrl: v2Res.streamUrl,
+                      referer: v2Res.referer || (srvTarget === 'HD-3' ? 'https://zokoanime.video/' : (srvTarget === 'HD-2' ? 'https://megavid.buzz/' : 'https://megaplay.buzz/')),
+                      quality: v2Res.quality || '1080p',
+                      subtitles: v2Res.subtitles || [],
+                      provider: 'hianime',
+                      skip: v2Res.skip,
+                    };
+                  }
                 }
               }
               if (!directRes && resolvedMalId > 0) {
