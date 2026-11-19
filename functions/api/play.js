@@ -929,7 +929,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const canUseEdgeDirect =
       requested === 'anikoto' ||
       requested === 'hianime' ||
-      requested === 'aniwatch' ||
       serverParam.toLowerCase().includes('mega') ||
       serverParam.toLowerCase().includes('hd') ||
       serverParam.toLowerCase().includes('vidstream');
@@ -1211,9 +1210,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           url: sub.url ? (isDirectNoReferrer ? sub.url : `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}`) : '',
         }));
 
-        const effectiveProvider = (requested && requested !== 'auto' && (requested === 'aniwatch' || requested === 'hianime'))
-          ? requested
-          : (directRes.provider || 'anikoto');
+        const effectiveProvider = directRes.provider || (requested && requested !== 'auto' ? requested : 'anikoto');
         const defaultForProv = (effectiveProvider === 'hianime') ? 'HD-3' : (effectiveProvider === 'aniwatch' ? 'MGCLD' : 'HD-1');
         const rawServer = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
           ? 'HD-1'
@@ -1262,7 +1259,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           episode: ep,
           malId: resolvedMalId || null,
           scopedProvider: requested,
-          scopedProviderUnavailable: requested === 'hdrezka' ? (directRes.provider !== 'hdrezka') : false,
+          scopedProviderUnavailable: (requested && requested !== 'auto') ? (directRes.provider !== requested) : false,
           servers: serverList,
           providers: buildProviderRegistryBuckets(serverList),
           aniskip: aniskipData || null,

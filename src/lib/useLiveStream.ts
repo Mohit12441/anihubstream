@@ -339,7 +339,8 @@ export function useLiveStream(o: Options) {
           setFallbackToEmbed(true);
         } else {
           try {
-            const r = await fetch(`/api/aw/extract?u=${encodeURIComponent(info.master)}`, { cache: 'no-store' });
+            const mockParam = (typeof window !== 'undefined' && window.location.search.includes('mock_extract_null=1')) ? '&mock_null=1' : '';
+            const r = await fetch(`/api/aw/extract?u=${encodeURIComponent(info.master)}${mockParam}`, { cache: 'no-store' });
             const { m3u8 } = await r.json();
             if (m3u8) {
               sourceUrl = `/api/aw/proxy?u=${encodeURIComponent(m3u8)}`;
@@ -359,9 +360,11 @@ export function useLiveStream(o: Options) {
 
       const url = bridgeUrl(info.master);
       const finalUrl = (!forceEmbed && sourceUrl) ? sourceUrl : url;
-      const isFinalHls = (info.type === 'native-extract' && !forceEmbed)
-        ? true
-        : (info.kind === 'hls' || info.type === 'hls' || finalUrl.includes('.m3u8') || finalUrl.includes('.m3u') || finalUrl.includes('/api/aw/proxy?u='));
+      const isFinalHls = forceEmbed
+        ? false
+        : (info.type === 'native-extract' && !forceEmbed)
+          ? true
+          : (info.kind === 'hls' || info.type === 'hls' || finalUrl.includes('.m3u8') || finalUrl.includes('.m3u') || finalUrl.includes('/api/aw/proxy?u='));
       const isFinalProgressive = !isFinalHls && (
         info.kind === 'progressive' ||
         info.container === 'matroska' ||

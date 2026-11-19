@@ -407,9 +407,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 url: sub.url ? `${proxyBase}?url=${encodeURIComponent(sub.url)}&referer=${encodeURIComponent(activeReferer)}` : '',
               }));
 
-              const effectiveProvider = (provider && provider !== 'auto' && (provider === 'aniwatch' || provider === 'hianime'))
-                ? provider
-                : (directRes?.provider || 'fallback');
+              const effectiveProvider = directRes?.provider || (provider && provider !== 'auto' ? provider : 'fallback');
               const defaultTarget = effectiveProvider === 'aniwatch' ? 'MGCLD' : (effectiveProvider === 'hianime' ? 'HD-3' : 'HD-1');
               const cleanServerId = (rawServerParam || defaultTarget).replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
               const serverIdWithAudio = audio === 'dub' ? `${cleanServerId}-dub` : cleanServerId;

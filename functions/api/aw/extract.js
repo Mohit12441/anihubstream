@@ -269,6 +269,10 @@ export const onRequest = async (context) => {
   }
 
   const reqUrl = new URL(request.url);
+  if (reqUrl.searchParams.get('mock_null') === '1') {
+    return json({ m3u8: null });
+  }
+
   const { code, origin } = extractCodeAndOrigin(reqUrl, body);
 
   if (!code) {
