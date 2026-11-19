@@ -527,6 +527,43 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
   return servers;
 }
 
+function buildProviderRegistryBuckets(serversList) {
+  const buckets = {};
+  if (!Array.isArray(serversList)) return buckets;
+  for (const s of serversList) {
+    if (!s || !s.id) continue;
+    const providerKey = (s.provider || (s.id.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
+    const normalizedKey = providerKey.includes('torrent') || providerKey.includes('p2p') ? 'p2p' : providerKey;
+    if (!buckets[normalizedKey]) {
+      const displayName =
+        normalizedKey === 'anikoto' ? 'AniKoto' :
+        normalizedKey === 'hianime' ? 'HiAnime' :
+        normalizedKey === 'aniwatch' ? 'AniWatch' :
+        normalizedKey === 'anipm' ? 'AniPM' :
+        normalizedKey === 'hdrezka' ? 'HDRezka' :
+        normalizedKey === 'p2p' ? 'P2P Swarm' :
+        normalizedKey.toUpperCase();
+      buckets[normalizedKey] = {
+        id: normalizedKey,
+        name: displayName,
+        status: 'ready',
+        servers: { sub: [], dub: [] },
+      };
+    }
+    const isDub = s.audio === 'dub' || (s.type && s.type.toLowerCase() === 'dub') || s.id.includes('-dub');
+    if (isDub) {
+      if (!buckets[normalizedKey].servers.dub.some((x) => x.id === s.id)) {
+        buckets[normalizedKey].servers.dub.push(s);
+      }
+    } else {
+      if (!buckets[normalizedKey].servers.sub.some((x) => x.id === s.id)) {
+        buckets[normalizedKey].servers.sub.push(s);
+      }
+    }
+  }
+  return buckets;
+}
+
 /**
  * Universal Layer 1 Play Endpoint:
  * Resolves unified player payload containing multi-server candidate list,
@@ -734,6 +771,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           return ok({
             server: primaryServer,
             servers: allServers,
+            providers: buildProviderRegistryBuckets(allServers),
             allServers,
             availableProviders: getAvailableProvidersList(),
             subtitles: betaRes.subtitles || [],
@@ -1053,18 +1091,21 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           downloads: [],
         };
 
+        const serverList = [
+          primaryServer,
+          ...defaultServers
+            .filter((s) => s.id !== primaryServer.id)
+            .map((s) => (s.subtitles?.length ? s : (subtitles.length ? { ...s, subtitles } : s))),
+        ];
+
         return ok({
           title: resolvedTitle,
           episode: ep,
           malId: resolvedMalId || null,
           scopedProvider: requested,
           scopedProviderUnavailable: requested === 'hdrezka' ? (directRes.provider !== 'hdrezka') : false,
-          servers: [
-            primaryServer,
-            ...defaultServers
-              .filter((s) => s.id !== primaryServer.id)
-              .map((s) => (s.subtitles?.length ? s : (subtitles.length ? { ...s, subtitles } : s))),
-          ],
+          servers: serverList,
+          providers: buildProviderRegistryBuckets(serverList),
           aniskip: aniskipData || null,
           providerHealth,
           availableProviders: getAvailableProvidersList(),
@@ -1341,6 +1382,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       scopedProvider: requested,
       scopedProviderUnavailable: isScopedUnavailable,
       servers: allServers,
+      providers: buildProviderRegistryBuckets(allServers),
       aniskip: {
         op: finalOp,
         ed: finalEd,

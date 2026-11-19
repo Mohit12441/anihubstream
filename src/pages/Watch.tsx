@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
-import { cleanServerName, getProvider } from '../components/player/ServerPopover';
+import { cleanServerName } from '../components/player/ServerPopover';
 import type { PlayServer } from '../components/player/PlayerInput';
 import { providerFromId, serverIdFromProvider } from '../data/servers';
 import { AnimeCard } from '../components/AnimeCard';
@@ -76,6 +76,54 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'hdrezka:tvshows-dub', name: 'HDRezka · TVShows (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
+
+export interface ProviderBundle {
+  id: string;
+  name: string;
+  status: 'ready' | 'loading' | 'error' | 'unavailable';
+  servers: {
+    sub: PlayServer[];
+    dub: PlayServer[];
+  };
+}
+
+export type ProviderRegistry = Record<string, ProviderBundle>;
+
+export function buildProviderRegistry(servers: PlayServer[]): ProviderRegistry {
+  const registry: ProviderRegistry = {};
+  for (const s of servers) {
+    if (!s || !s.id) continue;
+    const raw = (s.provider || (s.id.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
+    const key = raw.includes('torrent') || raw.includes('p2p') ? 'p2p' : raw;
+    if (!registry[key]) {
+      const displayName =
+        key === 'anikoto' ? 'AniKoto' :
+        key === 'hianime' ? 'HiAnime' :
+        key === 'aniwatch' ? 'AniWatch' :
+        key === 'anipm' ? 'AniPM' :
+        key === 'hdrezka' ? 'HDRezka' :
+        key === 'p2p' ? 'P2P Swarm' :
+        key.charAt(0).toUpperCase() + key.slice(1);
+      registry[key] = {
+        id: key,
+        name: displayName,
+        status: 'ready',
+        servers: { sub: [], dub: [] },
+      };
+    }
+    const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub' || (s.type || '').toLowerCase() === 'dub';
+    if (isDub) {
+      if (!registry[key].servers.dub.some((x) => x.id === s.id)) {
+        registry[key].servers.dub.push(s);
+      }
+    } else {
+      if (!registry[key].servers.sub.some((x) => x.id === s.id)) {
+        registry[key].servers.sub.push(s);
+      }
+    }
+  }
+  return registry;
+}
 
 export function Watch() {
   const { id = '', ep } = useParams<{ id: string; ep?: string }>();
@@ -255,7 +303,7 @@ export function Watch() {
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
-  const [playServers, setPlayServers] = useState<PlayServer[]>(DEFAULT_PLAY_SERVERS);
+  const [providerRegistry, setProviderRegistry] = useState<ProviderRegistry>(() => buildProviderRegistry(DEFAULT_PLAY_SERVERS));
   const [_scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const [_providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
   const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
@@ -295,50 +343,36 @@ export function Watch() {
     ];
   }, [availableProvidersList]);
 
-  const activeProvider = useMemo(() => {
-    const raw = targetProvider || (activeServerId ? (activeServerId.includes(':') ? activeServerId.split(':')[0] : '') : 'anikoto');
-    if (raw.toLowerCase().includes('anipm')) return 'AniPM';
-    if (raw.toLowerCase().includes('anikoto')) return 'AniKoto';
-    if (raw.toLowerCase().includes('hianime')) return 'HiAnime';
-    if (raw.toLowerCase().includes('aniwatch')) return 'AniWatch';
-    if (raw.toLowerCase().includes('hdrezka')) return 'HDRezka';
-    if (raw.toLowerCase().includes('torrent') || raw.toLowerCase().includes('p2p')) return 'P2P';
-    return raw ? raw.charAt(0).toUpperCase() + raw.slice(1) : 'AniKoto';
+  const activeProviderKey = useMemo(() => {
+    const raw = (targetProvider || (activeServerId ? (activeServerId.includes(':') ? activeServerId.split(':')[0] : '') : 'anikoto')).toLowerCase();
+    return raw.includes('torrent') || raw.includes('p2p') ? 'p2p' : raw;
   }, [targetProvider, activeServerId]);
 
-  const audioMatchingServers = useMemo(() => {
-    const isDub = prefs.audio === 'dub';
-    const filtered = playServers.filter((s) => {
-      const sDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
-      return isDub ? sDub : !sDub;
-    });
-    return filtered.length > 0 ? filtered : playServers;
-  }, [playServers, prefs.audio]);
+  const activeProviderBundle = useMemo<ProviderBundle | null>(() => {
+    return providerRegistry[activeProviderKey] || providerRegistry['anikoto'] || null;
+  }, [providerRegistry, activeProviderKey]);
+
+  const activeProvider = useMemo(() => {
+    if (activeProviderBundle) return activeProviderBundle.name;
+    const raw = activeProviderKey;
+    if (raw === 'anipm') return 'AniPM';
+    if (raw === 'anikoto') return 'AniKoto';
+    if (raw === 'hianime') return 'HiAnime';
+    if (raw === 'aniwatch') return 'AniWatch';
+    if (raw === 'hdrezka') return 'HDRezka';
+    if (raw === 'p2p') return 'P2P';
+    return raw ? raw.charAt(0).toUpperCase() + raw.slice(1) : 'AniKoto';
+  }, [activeProviderBundle, activeProviderKey]);
 
   const providerScopedServers = useMemo(() => {
-    const targetKey = activeProvider.toLowerCase();
-
-    // Strict provider isolation: ONLY servers from this specific provider are allowed
-    const scoped = playServers.filter((s) => {
-      const p = (s.provider || (s.id.includes(':') ? s.id.split(':')[0] : '')).toLowerCase();
-      if (targetKey === 'anipm') return p === 'anipm' || s.id.startsWith('anipm:');
-      if (targetKey === 'anikoto') return p === 'anikoto' || s.id.startsWith('anikoto:');
-      if (targetKey === 'hianime') return p === 'hianime' || s.id.startsWith('hianime:');
-      if (targetKey === 'aniwatch') return p === 'aniwatch' || s.id.startsWith('aniwatch:');
-      if (targetKey === 'hdrezka') return p === 'hdrezka' || s.id.startsWith('hdrezka:');
-      if (targetKey === 'p2p') return p === 'torrent' || s.id.startsWith('torrent:');
-      return p === targetKey;
-    });
-
-    const subList = scoped.filter((s) => !s.id.includes('-dub') && (s.audio || '').toLowerCase() !== 'dub');
-    const dubList = scoped.filter((s) => s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub');
-
+    const subList = activeProviderBundle?.servers.sub || [];
+    const dubList = activeProviderBundle?.servers.dub || [];
     return {
-      all: scoped,
+      all: [...subList, ...dubList],
       sub: subList,
       dub: dubList,
     };
-  }, [playServers, activeProvider]);
+  }, [activeProviderBundle]);
 
   const currentSubservers = useMemo(() => {
     const isDub = prefs.audio === 'dub';
@@ -351,8 +385,8 @@ export function Watch() {
   const activeServer = useMemo(() => {
     const match = currentSubservers.find((s) => s.id === activeServerId);
     if (match) return match;
-    return currentSubservers[0] || playServers[0] || null;
-  }, [currentSubservers, activeServerId, playServers]);
+    return currentSubservers[0] || null;
+  }, [currentSubservers, activeServerId]);
 
   useEffect(() => {
     if (!targetProvider) return;
@@ -364,18 +398,14 @@ export function Watch() {
   }, [targetProvider, prefs.audio]);
 
   const hasDubForProvider = useMemo(() => {
-    const provServers = playServers.filter((s) => getProvider(s).toLowerCase() === activeProvider.toLowerCase());
-    return provServers.some((s) => s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub');
-  }, [playServers, activeProvider]);
+    return (activeProviderBundle?.servers.dub.length ?? 0) > 0;
+  }, [activeProviderBundle]);
 
   const switchAudioMode = (targetAudio: 'sub' | 'dub') => {
     if (prefs.audio === targetAudio) return;
     patch({ audio: targetAudio });
-    const matching = playServers.find((s) => {
-      const isProv = getProvider(s).toLowerCase() === activeProvider.toLowerCase();
-      const isDub = s.id.includes('-dub') || (s.audio || '').toLowerCase() === 'dub';
-      return isProv && (targetAudio === 'dub' ? isDub : !isDub);
-    });
+    const targetServers = targetAudio === 'dub' ? activeProviderBundle?.servers.dub : activeProviderBundle?.servers.sub;
+    const matching = targetServers && targetServers.length > 0 ? targetServers[0] : null;
     if (matching) {
       handleSelectServer(matching);
     } else {
@@ -450,7 +480,7 @@ export function Watch() {
             ...serverList,
             ...DEFAULT_PLAY_SERVERS.filter((def) => !serverList.some((s: PlayServer) => s.id === def.id)),
           ];
-          setPlayServers(mergedServers);
+          setProviderRegistry(buildProviderRegistry(mergedServers));
           const explicitServer = params.get('server');
           const isDub = (prefs.audio ?? 'sub') === 'dub';
           let matchedServer: PlayServer | null = null;
@@ -814,7 +844,13 @@ export function Watch() {
 
   const handleSelectProvider = (provId: string) => {
     const targetKey = provId.toLowerCase();
-    const defaultSrvId = serverIdFromProvider(targetKey, prefs.audio);
+    const normalizedKey = targetKey.includes('torrent') || targetKey.includes('p2p') ? 'p2p' : targetKey;
+    const targetBundle = providerRegistry[normalizedKey];
+    const isDub = prefs.audio === 'dub';
+    const bundleServers = targetBundle ? (isDub && targetBundle.servers.dub.length > 0 ? targetBundle.servers.dub : targetBundle.servers.sub) : [];
+    const defaultSrv = bundleServers[0] || null;
+    const defaultSrvId = defaultSrv?.id || serverIdFromProvider(targetKey, prefs.audio);
+
     setIsStreamResolved(false);
     setCurrentStream(null);
     setActiveServerId(defaultSrvId);
@@ -900,7 +936,7 @@ export function Watch() {
             onStreamInfo={setCurrentStream}
             serverId={activeServerId}
             onServerChange={setActiveServerId}
-            servers={audioMatchingServers}
+            servers={currentSubservers}
             onSelectServer={handleSelectServer}
             initialServer={activeServer}
             initialPartyRoom={params.get('party')}

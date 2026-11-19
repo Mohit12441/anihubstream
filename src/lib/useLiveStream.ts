@@ -193,9 +193,13 @@ export function useLiveStream(o: Options) {
     void (async () => {
       try {
         if (!fresh && o.initialSource && o.initialSource.master && isMegaplayTokenValid(o.initialSource.master)) {
-          setInfo(o.initialSource);
-          prefetchEpisode(o.animeId, o.episode + 1, o.audio, o.provider ?? 'auto');
-          return;
+          const initProv = (o.initialSource.provider || '').toLowerCase();
+          const reqProv = (o.provider || '').toLowerCase();
+          if (!reqProv || reqProv === 'auto' || !initProv || initProv === reqProv) {
+            setInfo(o.initialSource);
+            prefetchEpisode(o.animeId, o.episode + 1, o.audio, o.provider ?? 'auto');
+            return;
+          }
         }
 
         if (o.provider !== 'anipm') {
@@ -211,16 +215,6 @@ export function useLiveStream(o: Options) {
         let res = await bridgeResolve(o.animeId, o.episode, o.audio, o.provider ?? 'auto', o.server);
         if (cancel) return;
         if (isResolveFailure(res)) {
-          /* if explicit provider failed or timed out, attempt auto fallback before failing */
-          if (o.provider && o.provider !== 'auto') {
-            const autoRes = await bridgeResolve(o.animeId, o.episode, o.audio, 'auto');
-            if (cancel) return;
-            if (!isResolveFailure(autoRes)) {
-              setInfo(autoRes);
-              prefetchEpisode(o.animeId, o.episode + 1, o.audio, 'auto');
-              return;
-            }
-          }
           /* a dub ask for an episode that has no dubbed file falls back to the original
              rather than leaving the viewer with an error — the audio the episode actually
              carries wins over the stored intent */
@@ -230,15 +224,13 @@ export function useLiveStream(o: Options) {
             if (!isResolveFailure(sub)) {
               setAudioFallback(true);
               setInfo(sub);
-              // Prefetch next episode in the background
               prefetchEpisode(o.animeId, o.episode + 1, 'sub', o.provider ?? 'auto', o.server);
               return;
             }
-            res = sub;
           }
           setRetryable(TRANSIENT_REFUSALS.has(res.error));
           setStatus(res.error === 'BRIDGE_UNREACHABLE' ? 'unavailable' : 'error');
-          setError(res.message ? `${res.error} — ${res.message}` : res.error);
+          setError(res.message ? `${res.error} — ${res.message}` : (res.error || 'The stream could not be loaded.'));
           return;
         }
         setInfo(res);

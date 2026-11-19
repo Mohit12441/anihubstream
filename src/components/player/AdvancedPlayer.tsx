@@ -126,6 +126,11 @@ export function AdvancedPlayer(props: Props) {
 
   const initialSource = useMemo<BridgeSource | null>(() => {
     if (!initialServer?.streamUrl || initialServer.streamUrl.includes('/api/play/resolve')) return null;
+    const initProv = (initialServer.provider || (initialServer.id.includes(':') ? initialServer.id.split(':')[0] : '')).toLowerCase();
+    const curProv = (provider || '').toLowerCase();
+    if (initProv && curProv && initProv !== curProv && curProv !== 'auto') {
+      return null;
+    }
     return {
       session: initialServer.id,
       provider: initialServer.provider,

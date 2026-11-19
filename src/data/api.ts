@@ -130,6 +130,7 @@ export interface PlayResponse {
   providerHealth?: Record<string, { status?: string; latencyMs?: number }>;
   availableProviders?: { id: string; name: string; available: boolean; status?: string; latencyMs?: number }[];
   servers?: any[];
+  providers?: Record<string, any>;
   server?: any;
   subtitles?: any[];
   skip?: any;
