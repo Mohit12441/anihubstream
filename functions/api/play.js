@@ -413,7 +413,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       name: formatServerName('aniwatch', srv),
       provider: 'aniwatch',
       streamUrl: resolveUrl({ audio: 'sub', provider: 'aniwatch', server: srv }),
-      type: 'embed',
+      type: 'native-extract',
       hardcodedSubs: true,
     })
   );
@@ -424,7 +424,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       name: formatServerName('aniwatch', `${srv} (DUB)`),
       provider: 'aniwatch',
       streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: srv }),
-      type: 'embed',
+      type: 'native-extract',
       audio: 'dub',
       audioTracks: enDub,
     })
@@ -843,7 +843,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       ]);
 
       if (aniwatchRes?.streamUrl) {
-        const nativeExtract = /^(MGCLD|BYFMS)$/i.test(cleanServerId) && (() => {
+        const nativeExtract = /^(MGCLD|BYFMS|DGHG)$/i.test(cleanServerId) && (() => {
           try {
             return /(^|\.)mfw09\.org$/.test(new URL(aniwatchRes.streamUrl).hostname);
           } catch {
@@ -953,7 +953,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             ).bind(cacheKey, Date.now()).first();
             if (cached?.data) {
               const parsed = JSON.parse(cached.data);
-              if (parsed?.streamUrl && isMegaplayTokenValid(parsed.streamUrl)) {
+              if (parsed?.streamUrl && !parsed.streamUrl.includes('playmogo.com') && isMegaplayTokenValid(parsed.streamUrl)) {
                 setStreamMemCache(cacheKey, { data: parsed, expiresAt: Date.now() + STREAM_MEM_TTL_MS });
                 return parsed;
               }
@@ -1217,7 +1217,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           : ((effectiveProvider === 'aniwatch' && (!serverParam || serverParam.toUpperCase() === 'HD-1')) ? 'MGCLD' : (serverParam || defaultForProv));
         const isDub = audio === 'dub' || rawServer.toLowerCase().includes('-dub');
         const cleanServerId = rawServer.replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
-        const nativeExtract = /^(MGCLD|BYFMS)$/i.test(cleanServerId) && (() => {
+        const nativeExtract = /^(MGCLD|BYFMS|DGHG)$/i.test(cleanServerId) && (() => {
           try {
             return /(^|\.)mfw09\.org$/.test(new URL(directRes.streamUrl).hostname);
           } catch {

@@ -140,6 +140,18 @@ export async function resolveAniWatchDirect({ slug, title, ep = 1, audio = 'sub'
     // 3. Fallback
     if (!match) match = parsed[0];
 
+    // If targetServer is DGHG and its upstream URL is on playmogo.com (which has purged video resources),
+    // automatically fail-over to the working MGCLD or BYFMS mirror for the same audio type.
+    if (match && match.serverName === 'DGHG' && match.embedUrl.includes('playmogo.com')) {
+      const workingMirror = parsed.find((p) => p.type === targetAudio && /^(MGCLD|BYFMS)$/i.test(p.serverName));
+      if (workingMirror) {
+        match = {
+          ...workingMirror,
+          serverName: 'DGHG',
+        };
+      }
+    }
+
     return {
       streamUrl: match.embedUrl,
       referer: 'https://aniwatch.one/',

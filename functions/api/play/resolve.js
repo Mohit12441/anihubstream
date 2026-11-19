@@ -303,7 +303,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 ).bind(cacheKey, Date.now()).first();
                 if (cached?.data) {
                   const parsed = JSON.parse(cached.data);
-                  if (parsed?.streamUrl && !parsed.streamUrl.includes('s-90.megavid.se') && isMegaplayTokenValid(parsed.streamUrl)) {
+                  if (parsed?.streamUrl && !parsed.streamUrl.includes('s-90.megavid.se') && !parsed.streamUrl.includes('playmogo.com') && isMegaplayTokenValid(parsed.streamUrl)) {
                     directRes = parsed;
                   }
                 }
@@ -386,7 +386,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (directRes?.streamUrl) {
               const proxyBase = `${url.origin}/api/proxy`;
               const subserverName = directRes?.serverName || rawServerParam || serverParam || 'MGCLD';
-              const nativeExtract = /^(MGCLD|BYFMS)$/i.test(String(subserverName)) && (() => {
+              const nativeExtract = /^(MGCLD|BYFMS|DGHG)$/i.test(String(subserverName)) && (() => {
                 try {
                   return /(^|\.)mfw09\.org$/.test(new URL(directRes.streamUrl).hostname);
                 } catch {
