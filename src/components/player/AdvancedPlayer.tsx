@@ -730,6 +730,8 @@ export function AdvancedPlayer(props: Props) {
     liveReady &&
     !live.info?.master?.includes('.m3u8') &&
     !live.info?.master?.includes('/api/proxy') &&
+    live.info?.type !== 'native-extract' &&
+    initialServer?.type !== 'native-extract' &&
     (
       live.info?.kind === 'embed' ||
       live.info?.type === 'embed' ||

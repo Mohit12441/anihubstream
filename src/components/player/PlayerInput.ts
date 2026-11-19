@@ -50,7 +50,7 @@ export interface PlayServer {
   status: 'ready' | 'loading' | 'error' | 'unavailable';
   unavailableReason?: string;
   streamUrl: string;
-  type: 'hls' | 'mp4' | 'embed';
+  type: 'hls' | 'mp4' | 'embed' | 'native-extract';
   quality?: string;
   audio?: string;
   hardcodedSubs?: boolean;
@@ -66,7 +66,7 @@ export interface PlayServer {
 
 export interface PlayerInput {
   src: string;
-  type: 'hls' | 'mp4' | 'embed';
+  type: 'hls' | 'mp4' | 'embed' | 'native-extract';
   title?: string;
   episodeNumber?: number;
   startTime: number;

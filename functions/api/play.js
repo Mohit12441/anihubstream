@@ -1091,6 +1091,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           : ((effectiveProvider === 'aniwatch' && (!serverParam || serverParam.toUpperCase() === 'HD-1')) ? 'MGCLD' : (serverParam || defaultForProv));
         const isDub = audio === 'dub' || rawServer.toLowerCase().includes('-dub');
         const cleanServerId = rawServer.replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
+        const nativeExtract = /^(MGCLD|BYFMS)$/i.test(cleanServerId) && (() => {
+          try {
+            return /(^|\.)mfw09\.org$/.test(new URL(directRes.streamUrl).hostname);
+          } catch {
+            return false;
+          }
+        })();
         const primaryServer = {
           id: `${effectiveProvider}:${cleanServerId}${isDub ? '-dub' : ''}`,
           name: formatServerName(effectiveProvider, `${cleanServerId}${isDub ? ' (DUB)' : ''}`),
@@ -1099,7 +1106,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           streamUrl: finalStreamUrl,
           referrerPolicy: directRes.referrerPolicy,
           betaUrlCandidates: directRes.betaUrlCandidates,
-          type: isEmbedDirect ? 'embed' : (isDub ? 'dub' : 'hls'),
+          type: nativeExtract ? 'native-extract' : (isEmbedDirect ? 'embed' : (isDub ? 'dub' : 'hls')),
+          kind: nativeExtract ? 'hls' : undefined,
           quality: directRes.quality || '1080p',
           audio: isDub ? 'dub' : 'sub',
           hardcodedSubs: Boolean(directRes.hardcodedSubs),

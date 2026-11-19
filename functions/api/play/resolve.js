@@ -385,7 +385,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             }
             if (directRes?.streamUrl) {
               const proxyBase = `${url.origin}/api/proxy`;
-              const isEmbedDirect = directRes.type === 'embed' || directRes.kind === 'embed';
+              const subserverName = directRes?.serverName || rawServerParam || serverParam || 'MGCLD';
+              const nativeExtract = /^(MGCLD|BYFMS)$/i.test(String(subserverName)) && (() => {
+                try {
+                  return /(^|\.)mfw09\.org$/.test(new URL(directRes.streamUrl).hostname);
+                } catch {
+                  return false;
+                }
+              })();
+              const isEmbedDirect = nativeExtract || directRes.type === 'embed' || directRes.kind === 'embed';
               const activeReferer = directRes.referer || (provider === 'hianime' ? 'https://zokoanime.video/' : 'https://megaplay.buzz/');
               const proxiedStreamUrl = isEmbedDirect
                 ? directRes.streamUrl
@@ -412,7 +420,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 provider: effectiveProvider,
                 status: 'ready',
                 streamUrl: proxiedStreamUrl,
-                type: isEmbedDirect ? 'embed' : (audio === 'dub' ? 'dub' : 'hls'),
+                type: nativeExtract ? 'native-extract' : (isEmbedDirect ? 'embed' : (audio === 'dub' ? 'dub' : 'hls')),
+                kind: nativeExtract ? 'hls' : (isEmbedDirect ? 'embed' : 'hls'),
                 quality: directRes.quality || '1080p',
                 audio: audio === 'dub' ? 'dub' : 'sub',
                 hardcodedSubs: Boolean(directRes.hardcodedSubs),

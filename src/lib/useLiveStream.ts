@@ -328,21 +328,57 @@ export function useLiveStream(o: Options) {
     v.addEventListener('seeked', onClearBuffer);
 
     let hls: Hls | null = null;
+    let forceEmbed = false;
     void (async () => {
+      // Native-extract must run before bridgeUrl touches the embed URL.
+      let sourceUrl = '';
+      if (info.type === 'native-extract') {
+        if (!info.master) {
+          forceEmbed = true;
+        } else {
+          try {
+            const r = await fetch(`/api/aw/extract?u=${encodeURIComponent(info.master)}`, { cache: 'no-store' });
+            const { m3u8 } = await r.json();
+            if (m3u8) {
+              sourceUrl = `/api/aw/proxy?u=${encodeURIComponent(m3u8)}`;
+            } else {
+              forceEmbed = true;
+            }
+          } catch {
+            forceEmbed = true;
+          }
+        }
+      }
+
       const url = bridgeUrl(info.master);
-      const isHls = info.kind === 'hls' || info.type === 'hls' || url.includes('.m3u8') || url.includes('.m3u');
-      const isProgressive = !isHls && (
+      const finalUrl = (!forceEmbed && sourceUrl) ? sourceUrl : url;
+      const isFinalHls = (info.type === 'native-extract' && !forceEmbed)
+        ? true
+        : (info.kind === 'hls' || info.type === 'hls' || finalUrl.includes('.m3u8') || finalUrl.includes('.m3u') || finalUrl.includes('/api/aw/proxy?u='));
+      const isFinalProgressive = !isFinalHls && (
         info.kind === 'progressive' ||
         info.container === 'matroska' ||
         info.container === 'mp4' ||
-        url.includes('.mp4') ||
-        url.includes('.mkv')
+        finalUrl.includes('.mp4') ||
+        finalUrl.includes('.mkv')
       );
+      const isHls = isFinalHls;
+      const isProgressive = isFinalProgressive;
+
+      if (info.type === 'native-extract') {
+        console.log('[Playback] native-extract resolved', {
+          kind: info.kind,
+          forceEmbed,
+          source: sourceUrl ? 'proxy' : 'none',
+          hls: isHls,
+        });
+      }
 
       if (
         !isHls &&
         !url.includes('/api/proxy') &&
         (
+          forceEmbed ||
           info.kind === 'embed' ||
           info.type === 'embed'
         )
@@ -359,8 +395,8 @@ export function useLiveStream(o: Options) {
         return;
       }
 
-      if (isProgressive) {
-        v.src = url;
+      if (isProgressive && !(info.type === 'native-extract' && !forceEmbed)) {
+        v.src = sourceUrl || url;
         v.load();
         return;
       }
@@ -368,7 +404,7 @@ export function useLiveStream(o: Options) {
       const { default: HlsCtor, FetchLoader } = await import('hls.js');
       if (cancelled) return;
 
-      let sourceUrl = url;
+      if (!sourceUrl) sourceUrl = url;
 
       if (HlsCtor.isSupported()) {
         let p2p: P2PEngine | null = null;

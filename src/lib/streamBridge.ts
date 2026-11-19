@@ -292,7 +292,10 @@ export async function bridgeResolve(
         body = {
           session: s.id,
           provider: s.provider,
-          kind: s.type === 'mp4' ? 'progressive' : (s.type === 'embed' ? 'embed' : 'hls'),
+          kind: s.type === 'embed' ? 'embed'
+            : s.type === 'native-extract' ? 'hls'
+            : s.type === 'mp4' ? 'progressive'
+            : 'hls',
           type: s.type || 'hls',
           title: animeId,
           episode: { number: ep, title: `Episode ${ep}` },
