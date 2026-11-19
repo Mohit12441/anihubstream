@@ -1056,8 +1056,8 @@ export function AdvancedPlayer(props: Props) {
             subOn={prefs.subtitles.enabled}
             subLang={prefs.subtitles.language}
             onToggleCaptions={toggleCaptions}
-            serverOpen={menu.kind === 'server'}
-            onToggleServer={props.servers && props.servers.length > 0 ? () => setMenu((m) => (m.kind === 'server' ? { kind: 'none' } : { kind: 'server' })) : undefined}
+            serverOpen={false}
+            onToggleServer={undefined}
             servers={props.servers}
             activeServerId={props.serverId || ''}
             onSelectServer={(s) => {

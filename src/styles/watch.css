@@ -2275,3 +2275,288 @@
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   Episode Title Strip (Prominent Episode Header & Quick Nav)
+   ========================================================================== */
+.watch__title-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, rgba(20, 24, 38, 0.75), rgba(12, 14, 24, 0.85));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.watch__title-strip-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+.watch__title-ep-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent, #e50914) 20%, rgba(255, 255, 255, 0.05));
+  border: 1px solid color-mix(in srgb, var(--accent, #e50914) 45%, transparent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.watch__title-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.watch__title-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Anchored Server Dropdown Menu (No screen dimming, compact & fast)
+   ========================================================================== */
+.watch__cb-server-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.watch__cb-server-chevron.is-rotated {
+  transform: rotate(180deg);
+}
+
+.watch__cb-server-btn.is-open {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: color-mix(in srgb, var(--accent, #e50914) 70%, rgba(255, 255, 255, 0.25));
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent, #e50914) 25%, transparent);
+}
+
+.watch__server-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 360px;
+  max-width: 90vw;
+  background: #0d111c;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 14px;
+  z-index: 100;
+  animation: watchDropdownFadeIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@keyframes watchDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.watch__sd-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.watch__sd-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+}
+
+.watch__sd-prov-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.watch__sd-prov-pill {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.watch__sd-prov-pill:hover:not(.is-active) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.watch__sd-prov-pill.is-active {
+  background: var(--accent, #e50914);
+  border-color: var(--accent, #e50914);
+  color: #fff;
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--accent, #e50914) 40%, transparent);
+}
+
+.watch__sd-mirrors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.watch__sd-mirrors-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.watch__sd-count {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.watch__sd-mirrors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 220px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.watch__sd-mirror-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  font-size: 12.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.14s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.watch__sd-mirror-item:hover:not(.is-active):not(.is-disabled) {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.watch__sd-mirror-item.is-active {
+  background: color-mix(in srgb, var(--accent, #e50914) 15%, rgba(255, 255, 255, 0.04));
+  border-color: color-mix(in srgb, var(--accent, #e50914) 60%, transparent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.watch__sd-mirror-item.is-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.watch__sd-mirror-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.watch__sd-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.watch__sd-dot.is-active {
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.7);
+}
+
+.watch__sd-dot.is-amber {
+  background: #f59e0b;
+}
+
+.watch__sd-mirror-name {
+  color: inherit;
+}
+
+.watch__sd-mirror-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.watch__sd-quality {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.watch__sd-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--accent, #e50914);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .watch__title-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+  .watch__title-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .watch__title-text {
+    font-size: 14px;
+  }
+  .watch__server-dropdown {
+    width: 290px;
+  }
+}
+

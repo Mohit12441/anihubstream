@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
-import { ServerModal } from '../components/player/ServerModal';
 import { cleanServerName } from '../components/player/ServerPopover';
 import type { PlayServer } from '../components/player/PlayerInput';
 import { providerFromId, serverIdFromProvider } from '../data/servers';
@@ -300,7 +299,8 @@ export function Watch() {
   const [theatre, setTheatre] = useState(false);
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
-  const [serverModalOpen, setServerModalOpen] = useState(false);
+  const [serverDropdownOpen, setServerDropdownOpen] = useState(false);
+  const serverDropdownRef = useRef<HTMLDivElement>(null);
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
@@ -422,6 +422,25 @@ export function Watch() {
       notify(`Audio switched to ${targetAudio.toUpperCase()}`);
     }
   };
+
+  /* Close server dropdown on outside click or Escape */
+  useEffect(() => {
+    if (!serverDropdownOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (serverDropdownRef.current && !serverDropdownRef.current.contains(e.target as Node)) {
+        setServerDropdownOpen(false);
+      }
+    };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setServerDropdownOpen(false);
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [serverDropdownOpen]);
 
   /* Reset stream resolved state on anime or episode change */
   useEffect(() => {
@@ -943,53 +962,56 @@ export function Watch() {
             initialPartyRoom={params.get('party')}
           />
 
+          {/* PROMINENT EPISODE TITLE & QUICK NAV */}
+          <div className="watch__title-strip">
+            <div className="watch__title-strip-left">
+              <span className="watch__title-ep-tag">EP {idx}</span>
+              <h1 className="watch__title-text">
+                {episode?.title && episode.title.trim().toLowerCase() !== `episode ${idx}`
+                  ? episode.title
+                  : anime.title}
+              </h1>
+            </div>
+            <div className="watch__title-nav">
+              <button
+                type="button"
+                className="watch__cb-nav-btn"
+                onClick={goPrev}
+                disabled={idx <= 1}
+                title="Previous Episode"
+                aria-label="Previous Episode"
+              >
+                <SkipBack size={14} aria-hidden="true" />
+                <span>Prev</span>
+              </button>
+              <button
+                type="button"
+                className="watch__cb-ep-btn"
+                onClick={() => setEpDrawerOpen(true)}
+                title="View all episodes (open drawer)"
+                aria-label={`Episode ${idx} of ${last}. Click to open episode list.`}
+              >
+                <ListVideo size={13} aria-hidden="true" />
+                <span>EP <strong>{idx}</strong> <small>/ {last}</small></span>
+              </button>
+              <button
+                type="button"
+                className="watch__cb-nav-btn"
+                onClick={goNext}
+                disabled={idx >= last}
+                title="Next Episode"
+                aria-label="Next Episode"
+              >
+                <span>Next</span>
+                <SkipForward size={14} aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
           {/* UNIFIED STREAM CONTROL BAR */}
           <div className="watch__control-bar">
-            {/* Left: Episode Navigation & Title */}
+            {/* Left: Audio Toggle & Server Selector Dropdown */}
             <div className="watch__cb-left">
-              <div className="watch__cb-ep-nav">
-                <button
-                  type="button"
-                  className="watch__cb-nav-btn"
-                  onClick={goPrev}
-                  disabled={idx <= 1}
-                  title="Previous Episode"
-                  aria-label="Previous Episode"
-                >
-                  <SkipBack size={14} aria-hidden="true" />
-                  <span>Prev</span>
-                </button>
-                <button
-                  type="button"
-                  className="watch__cb-ep-btn"
-                  onClick={() => setEpDrawerOpen(true)}
-                  title="View all episodes (open drawer)"
-                  aria-label={`Episode ${idx} of ${last}. Click to open episode list.`}
-                >
-                  <ListVideo size={13} aria-hidden="true" />
-                  <span>EP <strong>{idx}</strong> <small>/ {last}</small></span>
-                </button>
-                <button
-                  type="button"
-                  className="watch__cb-nav-btn"
-                  onClick={goNext}
-                  disabled={idx >= last}
-                  title="Next Episode"
-                  aria-label="Next Episode"
-                >
-                  <span>Next</span>
-                  <SkipForward size={14} aria-hidden="true" />
-                </button>
-              </div>
-              {episode?.title && (
-                <span className="watch__cb-ep-title" title={episode.title}>
-                  {episode.title}
-                </span>
-              )}
-            </div>
-
-            {/* Center: Audio Toggle & Server Selector Trigger */}
-            <div className="watch__cb-center">
               <div className="watch__cb-audio-toggle" role="group" aria-label="Audio selection">
                 <button
                   type="button"
@@ -1011,24 +1033,87 @@ export function Watch() {
                 )}
               </div>
 
-              {/* Single Server Dropdown Button */}
-              <button
-                type="button"
-                className="watch__cb-server-btn"
-                onClick={() => setServerModalOpen(true)}
-                title="Change streaming provider or mirror"
-                aria-label={`Current server: ${activeProvider} ${cleanServerName(activeServer || { id: activeServerId, name: activeServerId })}. Click to switch.`}
-              >
-                <Server size={14} className="watch__cb-server-icon" aria-hidden="true" />
-                <span className="watch__cb-server-status-dot" />
-                <span className="watch__cb-server-text">
-                  <span className="watch__cb-server-prov">{activeProvider}</span>
-                  <span className="watch__cb-server-name">
-                    ({activeServer ? cleanServerName(activeServer) : (activeServerId.includes(':') ? activeServerId.split(':')[1] : activeServerId)})
+              {/* Single Server Dropdown Menu (Anchored directly under button, no screen dimming!) */}
+              <div className="watch__cb-server-wrap" ref={serverDropdownRef}>
+                <button
+                  type="button"
+                  className={`watch__cb-server-btn${serverDropdownOpen ? ' is-open' : ''}`}
+                  onClick={() => setServerDropdownOpen((prev) => !prev)}
+                  title="Select streaming provider and mirror"
+                  aria-expanded={serverDropdownOpen}
+                >
+                  <Server size={14} className="watch__cb-server-icon" aria-hidden="true" />
+                  <span className="watch__cb-server-status-dot" />
+                  <span className="watch__cb-server-text">
+                    <span className="watch__cb-server-prov">{activeProvider}</span>
+                    <span className="watch__cb-server-name">
+                      ({activeServer ? cleanServerName(activeServer) : (activeServerId.includes(':') ? activeServerId.split(':')[1] : activeServerId)})
+                    </span>
                   </span>
-                </span>
-                <ChevronDown size={14} className="watch__cb-server-chevron" aria-hidden="true" />
-              </button>
+                  <ChevronDown size={14} className={`watch__cb-server-chevron${serverDropdownOpen ? ' is-rotated' : ''}`} aria-hidden="true" />
+                </button>
+
+                {serverDropdownOpen && (
+                  <div className="watch__server-dropdown" role="menu">
+                    {/* Provider Tabs */}
+                    <div className="watch__sd-head">
+                      <span className="watch__sd-label">Streaming Provider:</span>
+                    </div>
+                    <div className="watch__sd-prov-list">
+                      {displayProviders.map((p) => {
+                        const pKey = p.id.toLowerCase().includes('torrent') || p.id.toLowerCase().includes('p2p') ? 'p2p' : p.id.toLowerCase();
+                        const isSelected = activeProviderKey === pKey;
+                        return (
+                          <button
+                            key={p.id}
+                            type="button"
+                            className={`watch__sd-prov-pill${isSelected ? ' is-active' : ''}`}
+                            onClick={() => handleSelectProvider(p.id)}
+                          >
+                            <span>{p.name}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {/* Active Provider Mirrors */}
+                    <div className="watch__sd-mirrors-container">
+                      <div className="watch__sd-mirrors-head">
+                        <span className="watch__sd-label">{activeProvider} ({prefs.audio === 'dub' ? 'DUB' : 'SUB'}) Mirrors:</span>
+                        <span className="watch__sd-count">{currentSubservers.length} available</span>
+                      </div>
+                      <div className="watch__sd-mirrors-list">
+                        {currentSubservers.map((s) => {
+                          const isSelected = s.id === activeServerId;
+                          const isUnavailable = s.status === 'unavailable';
+                          const name = cleanServerName(s);
+                          return (
+                            <button
+                              key={s.id}
+                              type="button"
+                              disabled={isUnavailable}
+                              className={`watch__sd-mirror-item${isSelected ? ' is-active' : ''}${isUnavailable ? ' is-disabled' : ''}`}
+                              onClick={() => {
+                                handleSelectServer(s);
+                                setServerDropdownOpen(false);
+                              }}
+                            >
+                              <div className="watch__sd-mirror-left">
+                                <span className={`watch__sd-dot${isSelected ? ' is-active' : isUnavailable ? ' is-amber' : ''}`} />
+                                <span className="watch__sd-mirror-name">{name}</span>
+                              </div>
+                              <div className="watch__sd-mirror-right">
+                                <span className="watch__sd-quality">{s.quality || '1080p'}</span>
+                                {isSelected && <span className="watch__sd-badge">Active</span>}
+                              </div>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Right: Quick Actions */}
@@ -1322,19 +1407,6 @@ export function Watch() {
         currentStream={currentStream}
         activeProvider={targetProvider || currentStream?.provider || (activeServerId ? providerFromId(activeServerId).split(':')[0] : 'anikoto')}
         notify={notify}
-      />
-
-      <ServerModal
-        isOpen={serverModalOpen}
-        onClose={() => setServerModalOpen(false)}
-        activeProviderId={activeProviderKey}
-        activeServerId={activeServerId}
-        currentAudio={prefs.audio === 'dub' ? 'dub' : 'sub'}
-        providerRegistry={providerRegistry}
-        displayProviders={displayProviders}
-        onSelectServer={handleSelectServer}
-        onSelectProvider={handleSelectProvider}
-        onSwitchAudio={switchAudioMode}
       />
     </div>
   );
