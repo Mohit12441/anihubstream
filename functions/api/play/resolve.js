@@ -353,6 +353,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               if (provider === 'aniwatch') {
                 directRes = await resolveAniWatchDirect({
                   slug: providerSlug || animeIdParam || animeId || titleParam,
+                  title: resolvedTitle || titleParam,
                   ep,
                   audio,
                   server: serverParam || 'MGCLD',
@@ -431,6 +432,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           } catch {
             // Fall back to external stream bridge
           }
+        }
+
+        if (provider === 'aniwatch') {
+          throw new HttpError(404, 'not_found', 'AniWatch mirrors currently unavailable for this episode');
         }
 
         const bridgeBase = env.STREAM_BRIDGE_URL || 'http://127.0.0.1:8795';

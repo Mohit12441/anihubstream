@@ -132,3 +132,46 @@ test('HiAnime edge play endpoint returns all 3 subservers with cache-isolated ke
   // Requesting HD-1 should NOT hit HD-3 cache (isolated cache key)
   assert.equal(streamCacheMap.has('hianime:solo-leveling:1:sub:HD-1'), false);
 });
+
+test('resolveAniWatchDirect searches by title when given unnumbered catalog slug', async () => {
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url) => {
+    const sUrl = String(url);
+    if (sUrl.includes('/search?keyword=')) {
+      return new Response('<a href="/watch/ore-dake-level-up-na-ken-season-2-arise-from-the-shadow-82064">Match</a>', { status: 200 });
+    }
+    if (sUrl.includes('/watch/ore-dake-level-up-na-ken-season-2-arise-from-the-shadow-82064/episode/1')) {
+      const sampleHtml = `
+        <div class="player-servers">
+          <div id="servers-content">
+            <div class="ps_-block ps_-block-sub servers-sub">
+              <div class="ps__-title">SUB:</div>
+              <div class="ps__-list">
+                <div class="item server-item" data-type="sub" data-url="https://playmogo.com/e/real-dghg"><a class="btn">DGHG</a></div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      return new Response(sampleHtml, { status: 200 });
+    }
+    return new Response('Not Found', { status: 404 });
+  };
+
+  try {
+    const res = await resolveAniWatchDirect({
+      slug: 'solo-leveling-season-2-arise-from-the-shadow',
+      title: 'Solo Leveling Season 2: Arise from the Shadow',
+      ep: 1,
+      audio: 'sub',
+      server: 'DGHG',
+    });
+
+    assert.ok(res);
+    assert.equal(res.provider, 'aniwatch');
+    assert.equal(res.streamUrl, 'https://playmogo.com/e/real-dghg');
+    assert.equal(res.serverName, 'DGHG');
+    assert.equal(res.type, 'embed');
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+});

@@ -899,6 +899,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (!direct && requested === 'aniwatch') {
             direct = await resolveAniWatchDirect({
               slug: availableSlugs.aniwatch || animeRow?.aniwatch_slug || id,
+              title: resolvedTitle || animeRow?.title,
               ep,
               audio,
               server: serverParam || 'MGCLD',
@@ -1031,7 +1032,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         }
       })(),
       (async () => {
-        if (!bridgeBase || requested === 'anipm') return null;
+        if (!bridgeBase || requested === 'anipm' || requested === 'aniwatch') return null;
         if (requested === 'hdrezka' && !hasRezkaBridge) return null;
         try {
           const resolveBridgeUrl = new URL(`${bridgeBase}/resolve`);
