@@ -5,6 +5,34 @@ const extractCache = new Map();
 const EXTRACT_CACHE_TTL_MS = 5 * 60 * 1000;
 const MAX_POW_DIFFICULTY = 20;
 
+// In-memory per-IP token bucket for abuse damping (Note: ephemeral per edge isolate, no cross-edge KV synchronization)
+const RATE_LIMIT_BUCKET = new Map();
+const RATE_LIMIT_CAPACITY = 30; // 30 requests burst capacity
+const RATE_LIMIT_REFILL_PER_SEC = 2; // 2 requests/sec (120 req/min)
+
+function isRateLimited(clientIp) {
+  if (!clientIp) return false;
+  const now = Date.now();
+  let bucket = RATE_LIMIT_BUCKET.get(clientIp);
+  if (!bucket) {
+    bucket = { tokens: RATE_LIMIT_CAPACITY - 1, lastRefill: now };
+    RATE_LIMIT_BUCKET.set(clientIp, bucket);
+    if (RATE_LIMIT_BUCKET.size > 5000) {
+      const oldest = RATE_LIMIT_BUCKET.keys().next().value;
+      if (oldest) RATE_LIMIT_BUCKET.delete(oldest);
+    }
+    return false;
+  }
+  const elapsedSec = (now - bucket.lastRefill) / 1000;
+  bucket.tokens = Math.min(RATE_LIMIT_CAPACITY, bucket.tokens + elapsedSec * RATE_LIMIT_REFILL_PER_SEC);
+  bucket.lastRefill = now;
+  if (bucket.tokens >= 1) {
+    bucket.tokens -= 1;
+    return false;
+  }
+  return true;
+}
+
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 
 const be = 512;
@@ -224,6 +252,22 @@ export const onRequest = async (context) => {
     }
   }
 
+  const clientOrigin = request.headers.get('origin') || '';
+  const host = request.headers.get('host') || '';
+  if (clientOrigin) {
+    try {
+      const origHost = new URL(clientOrigin).host;
+      if (origHost !== host && !origHost.includes('localhost') && !origHost.includes('127.0.0.1') && !origHost.includes('anihubstream')) {
+        return json({ error: 'forbidden' }, 403);
+      }
+    } catch {}
+  }
+
+  const clientIp = request.headers.get('cf-connecting-ip') || request.headers.get('x-forwarded-for') || '127.0.0.1';
+  if (isRateLimited(clientIp)) {
+    return json({ error: 'rate limited', m3u8: null }, 429);
+  }
+
   const reqUrl = new URL(request.url);
   const { code, origin } = extractCodeAndOrigin(reqUrl, body);
 
@@ -255,7 +299,12 @@ export const onRequest = async (context) => {
     const captchaJson = await captchaRes.json().catch(() => null);
     const payload = (captchaJson && (captchaJson.data || captchaJson)) || {};
     if (!loggedCaptchaPayload) {
-      console.warn('[aw/extract] captcha payload', payload);
+      console.warn('[aw/extract] cold-start captcha payload:', {
+        algorithm: payload.algorithm || 'unknown',
+        pow_difficulty: payload.pow_difficulty ?? payload.difficulty ?? null,
+        unit: payload.difficultyType || payload.difficulty_unit || payload.unit || 'bits',
+        raw: payload,
+      });
       loggedCaptchaPayload = true;
     }
 

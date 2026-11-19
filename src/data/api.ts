@@ -143,6 +143,7 @@ export interface PlayResponse {
 
 export const getPlay = (query: PlayQuery, init?: RequestInit): Promise<PlayResponse> => {
   const params = new URLSearchParams();
+  params.set('v', '2');
   for (const [key, value] of Object.entries(query)) {
     if (value !== undefined && value !== null && value !== '') params.set(key, String(value));
   }

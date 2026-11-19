@@ -1427,6 +1427,6 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         return errorResponse(err);
       }
     },
-    { allowedParams: ['id', 'animeId', 'title', 'malId', 'ep', 'audio', 'provider', 'server', 'anilist'], waitUntil },
+    { allowedParams: ['id', 'animeId', 'title', 'malId', 'ep', 'audio', 'provider', 'server', 'anilist', 'v'], waitUntil },
   );
 };

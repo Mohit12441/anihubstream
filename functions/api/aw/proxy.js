@@ -188,7 +188,7 @@ export const onRequest = async (context) => {
     if (parsedTarget.pathname.endsWith('.m4s') || parsedTarget.pathname.endsWith('.mp4')) contentType = 'video/mp4';
     else if (parsedTarget.pathname.endsWith('.webm')) contentType = 'video/webm';
     responseHeaders.set('Content-Type', upstreamRes.headers.get('content-type') || contentType);
-    responseHeaders.set('Cache-Control', 'public, max-age=86400');
+    responseHeaders.set('Cache-Control', 'public, max-age=86400, s-maxage=86400');
 
     if (upstreamRes.status >= 400) {
       return new Response(null, { status: upstreamRes.status, headers: responseHeaders });
