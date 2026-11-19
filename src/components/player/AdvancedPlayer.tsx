@@ -524,6 +524,10 @@ export function AdvancedPlayer(props: Props) {
   );
 
   const toggleCaptions = useCallback(() => {
+    if (initialServer?.hardcodedSubs) {
+      notify('This server has subtitles inbuilt directly in the video.');
+      return;
+    }
     props.patchSubs({ enabled: !prefs.subtitles.enabled });
     notify(
       prefs.subtitles.enabled
@@ -533,7 +537,7 @@ export function AdvancedPlayer(props: Props) {
           : 'Captions on — this stream carries no caption track, so nothing is shown.',
     );
     wake();
-  }, [prefs.subtitles.enabled, wake, live.subName, props]);
+  }, [initialServer?.hardcodedSubs, prefs.subtitles.enabled, wake, live.subName, props, notify]);
 
   /* ---------- tell the viewer what the caption track actually did ---------- */
   const subNoticeRef = useRef<string | null>(null);
@@ -722,6 +726,18 @@ export function AdvancedPlayer(props: Props) {
     if (e.pointerType !== 'touch') wake();
   };
 
+  const isEmbed = Boolean(
+    liveReady &&
+    !live.info?.master?.includes('.m3u8') &&
+    !live.info?.master?.includes('/api/proxy') &&
+    (
+      live.info?.kind === 'embed' ||
+      live.info?.type === 'embed' ||
+      initialServer?.type === 'embed'
+    )
+  );
+  const resolvedEmbedUrl = isEmbed ? (live.info?.master || initialServer?.streamUrl) : null;
+
   /* ---------- caption line ---------- */
   const effectiveCueTime = Math.max(0, engine.time + (prefs.subtitles.offset || 0));
   const liveCues = liveReady ? live.cuesAt(effectiveCueTime) : [];
@@ -729,7 +745,7 @@ export function AdvancedPlayer(props: Props) {
      covers this instant. Gating on engine.playing deleted the caption the moment anyone
      stopped the video — the audit caught it at 6.13s on Jujutsu Kaisen. "Ended" is the
      one non-playing state where the line goes, because the picture is over. */
-  const showCaptions = prefs.subtitles.enabled && !engine.ended && liveCues.length > 0;
+  const showCaptions = !isEmbed && !initialServer?.hardcodedSubs && prefs.subtitles.enabled && !engine.ended && liveCues.length > 0;
 
   const canSeek = engine.canSeek !== false;
   const skipTarget = canSeek
@@ -742,17 +758,6 @@ export function AdvancedPlayer(props: Props) {
       : engine.inRecap
         ? 'Skip Recap'
         : 'Skip';
-
-  const isEmbed = Boolean(
-    liveReady &&
-    !live.info?.master?.includes('.m3u8') &&
-    !live.info?.master?.includes('/api/proxy') &&
-    (
-      live.info?.kind === 'embed' ||
-      live.info?.type === 'embed'
-    )
-  );
-  const resolvedEmbedUrl = isEmbed ? live.info?.master : null;
 
   useEffect(() => {
     if (!isEmbed || !resolvedEmbedUrl) {

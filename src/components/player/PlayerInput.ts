@@ -53,6 +53,7 @@ export interface PlayServer {
   type: 'hls' | 'mp4' | 'embed';
   quality?: string;
   audio?: string;
+  hardcodedSubs?: boolean;
   resolvedTitle?: string;
   audioTracks?: AudioTrack[];
   subtitles?: SubtitleTrack[];

@@ -413,6 +413,8 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       name: formatServerName('aniwatch', srv),
       provider: 'aniwatch',
       streamUrl: resolveUrl({ audio: 'sub', provider: 'aniwatch', server: srv }),
+      type: 'embed',
+      hardcodedSubs: true,
     })
   );
 
@@ -422,7 +424,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       name: formatServerName('aniwatch', `${srv} (DUB)`),
       provider: 'aniwatch',
       streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: srv }),
-      type: 'hls',
+      type: 'embed',
       audio: 'dub',
       audioTracks: enDub,
     })
