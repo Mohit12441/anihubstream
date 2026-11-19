@@ -284,11 +284,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           provider === 'aniwatch' ||
           serverParam.toLowerCase().includes('mega') ||
           serverParam.toLowerCase().includes('hd') ||
-          serverParam.toLowerCase().includes('vidstream');
+          serverParam.toLowerCase().includes('vidstream') ||
+          serverParam.toLowerCase().includes('mgcld') ||
+          serverParam.toLowerCase().includes('byfms') ||
+          serverParam.toLowerCase().includes('dghg');
 
         if ((resolvedMalId > 0 || provider === 'hianime') && canUseEdgeDirect) {
           try {
-            const srvKey = (serverParam || 'HD-1').replace(/-dub$/i, '').toUpperCase();
+            const defaultSrv = provider === 'aniwatch' ? 'MGCLD' : (provider === 'hianime' ? 'HD-3' : 'HD-1');
+            const srvKey = (serverParam || defaultSrv).replace(/-dub$/i, '').toUpperCase();
             const cacheKey = `stream:${provider || 'auto'}:${srvKey}:${resolvedMalId || animeId}:${ep}:${audio}`;
             let directRes = null;
             if (env.ANIHUB) {
@@ -386,7 +390,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               const effectiveProvider = (provider && provider !== 'auto' && (provider === 'aniwatch' || provider === 'hianime'))
                 ? provider
                 : (directRes?.provider || 'fallback');
-              const defaultTarget = effectiveProvider === 'hianime' ? 'HD-3' : 'HD-1';
+              const defaultTarget = effectiveProvider === 'aniwatch' ? 'MGCLD' : (effectiveProvider === 'hianime' ? 'HD-3' : 'HD-1');
               const cleanServerId = (rawServerParam || defaultTarget).replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim();
               const serverIdWithAudio = audio === 'dub' ? `${cleanServerId}-dub` : cleanServerId;
               const serverNameWithAudio = `${cleanServerId}${audio === 'dub' ? ' (DUB)' : ''}`;

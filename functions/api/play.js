@@ -406,26 +406,34 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
     })
   );
 
+  const aniwatchSubs = ['MGCLD', 'BYFMS', 'DGHG'].map((srv) =>
+    makeServer({
+      id: `aniwatch:${srv}`,
+      name: formatServerName('aniwatch', srv),
+      provider: 'aniwatch',
+      streamUrl: resolveUrl({ audio: 'sub', provider: 'aniwatch', server: srv }),
+    })
+  );
+
+  const aniwatchDubs = ['MGCLD', 'BYFMS', 'DGHG'].map((srv) =>
+    makeServer({
+      id: `aniwatch:${srv}-dub`,
+      name: formatServerName('aniwatch', `${srv} (DUB)`),
+      provider: 'aniwatch',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: srv }),
+      type: 'hls',
+      audio: 'dub',
+      audioTracks: enDub,
+    })
+  );
+
   const servers = [
     ...anikotoSubs,
     ...anikotoDubs,
     ...hianimeSubs,
     ...hianimeDubs,
-    makeServer({
-      id: 'aniwatch:HD-1',
-      name: 'AniWatch · HD-1',
-      provider: 'aniwatch',
-      streamUrl: resolveUrl({ audio: 'sub', provider: 'aniwatch', server: 'HD-1' }),
-    }),
-    makeServer({
-      id: 'aniwatch:HD-1-dub',
-      name: 'AniWatch · HD-1 (DUB)',
-      provider: 'aniwatch',
-      streamUrl: resolveUrl({ audio: 'dub', provider: 'aniwatch', server: 'HD-1' }),
-      type: 'hls',
-      audio: 'dub',
-      audioTracks: enDub,
-    }),
+    ...aniwatchSubs,
+    ...aniwatchDubs,
   ];
 
   let anilistId = resolvedAnilistId || animeRow?.anilist_id;
@@ -1064,7 +1072,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const effectiveProvider = (requested && requested !== 'auto' && (requested === 'aniwatch' || requested === 'hianime'))
           ? requested
           : (directRes.provider || 'anikoto');
-        const defaultForProv = (effectiveProvider === 'hianime') ? 'HD-3' : 'HD-1';
+        const defaultForProv = (effectiveProvider === 'hianime') ? 'HD-3' : (effectiveProvider === 'aniwatch' ? 'MGCLD' : 'HD-1');
         const rawServer = (effectiveProvider === 'anikoto' && (!serverParam || serverParam.toLowerCase() === 'beta'))
           ? 'HD-1'
           : (serverParam || defaultForProv);

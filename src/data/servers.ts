@@ -61,7 +61,7 @@ export const ANIWATCH_SERVER: StreamServer = {
   },
   sourceUrl: 'http://127.0.0.1:8795',
   responseMs: 0,
-  note: 'Fastest Megaplay CDN with direct REST endpoints and multi-language subtitle tracks.',
+  note: 'Multi-server streaming with MegaCloud, Filemoon, and DokiCloud ad-free mirrors.',
 };
 
 export const HIANIME_SERVER: StreamServer = {
@@ -177,7 +177,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   const norm = provider.toLowerCase();
   if (norm === 'hianime') return isDub ? 'hianime:HD-3-dub' : 'hianime:HD-3';
   if (norm === 'anikoto') return isDub ? 'anikoto:HD-1-dub' : 'anikoto:HD-1';
-  if (norm === 'aniwatch') return isDub ? 'aniwatch:HD-1-dub' : 'aniwatch:HD-1';
+  if (norm === 'aniwatch') return isDub ? 'aniwatch:MGCLD-dub' : 'aniwatch:MGCLD';
   if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';
   if (norm === 'hdrezka') return isDub ? 'hdrezka:studioband-dub' : 'hdrezka:1080p';
   return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;

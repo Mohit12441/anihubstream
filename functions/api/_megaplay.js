@@ -161,13 +161,13 @@ export async function resolveMegaplayDirect({ malId, ep = 1, audio = 'sub', serv
   if (!malId || malId <= 0) return null;
 
   const lang = audio === 'dub' ? 'dub' : 'sub';
-  const cleanServer = (server || 'HD-1').toLowerCase();
+  const cleanServer = (server || (provider === 'aniwatch' ? 'MGCLD' : 'HD-1')).toLowerCase();
   let embedUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${lang}`;
-  if (cleanServer.includes('hd-1')) {
+  if (cleanServer.includes('hd-1') || cleanServer.includes('mgcld')) {
     embedUrl += '?s=tcdn';
-  } else if (cleanServer.includes('vidstream-1')) {
+  } else if (cleanServer.includes('vidstream-1') || cleanServer.includes('byfms')) {
     embedUrl = `https://megaplay.buzz/videojs/stream/mal/${malId}/${ep}/${lang}`;
-  } else if (cleanServer.includes('hd-2')) {
+  } else if (cleanServer.includes('hd-2') || cleanServer.includes('dghg')) {
     embedUrl = `https://megaplay-1.buzz/stream/mal/${malId}/${ep}/${lang}`;
   }
   const res = await resolveMegaplayEmbed(embedUrl);

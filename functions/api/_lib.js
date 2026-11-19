@@ -823,6 +823,14 @@ export function formatServerName(provider, serverId) {
     } else if (/^HD-3(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
       cleanServer = cleanServer.replace(/HD-3/i, 'HD-3 [Zoko]');
     }
+  } else if (provider?.toLowerCase() === 'aniwatch') {
+    if (/^MGCLD(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
+      cleanServer = cleanServer.replace(/MGCLD/i, 'MGCLD [MegaCloud]');
+    } else if (/^BYFMS(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
+      cleanServer = cleanServer.replace(/BYFMS/i, 'BYFMS [Filemoon]');
+    } else if (/^DGHG(\b|-dub|\s|\(|$)/i.test(cleanServer) && !cleanServer.includes('[')) {
+      cleanServer = cleanServer.replace(/DGHG/i, 'DGHG [DokiCloud]');
+    }
   }
   return `${base} · ${cleanServer}`;
 }
