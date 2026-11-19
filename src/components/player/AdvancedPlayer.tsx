@@ -727,15 +727,19 @@ export function AdvancedPlayer(props: Props) {
   };
 
   const isEmbed = Boolean(
-    liveReady &&
-    !live.info?.master?.includes('.m3u8') &&
-    !live.info?.master?.includes('/api/proxy') &&
-    live.info?.type !== 'native-extract' &&
-    initialServer?.type !== 'native-extract' &&
-    (
-      live.info?.kind === 'embed' ||
-      live.info?.type === 'embed' ||
-      initialServer?.type === 'embed'
+    liveReady && (
+      live.fallbackToEmbed ||
+      (
+        !live.info?.master?.includes('.m3u8') &&
+        !live.info?.master?.includes('/api/proxy') &&
+        live.info?.type !== 'native-extract' &&
+        initialServer?.type !== 'native-extract' &&
+        (
+          live.info?.kind === 'embed' ||
+          live.info?.type === 'embed' ||
+          initialServer?.type === 'embed'
+        )
+      )
     )
   );
   const resolvedEmbedUrl = isEmbed ? (live.info?.master || initialServer?.streamUrl) : null;

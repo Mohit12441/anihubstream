@@ -2,32 +2,75 @@
 
 const ANIWATCH_SLUG_CACHE = new Map();
 
-/**
- * Searches aniwatch.one to resolve the real slug
- * @param {string} query
- */
-export async function searchAniWatchSlug(query) {
-  if (!query) return null;
-  const cleanQ = query.replace(/^aniwatch:/i, '').replace(/[-_]+/g, ' ').trim();
-  const cached = ANIWATCH_SLUG_CACHE.get(cleanQ.toLowerCase());
-  if (cached) return cached;
-
+async function fetchAniWatchItems(keyword) {
+  if (!keyword || !keyword.trim()) return [];
   try {
-    const res = await fetch(`https://aniwatch.one/search?keyword=${encodeURIComponent(cleanQ)}`, {
+    const res = await fetch(`https://aniwatch.one/search?keyword=${encodeURIComponent(keyword.trim())}`, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       },
       signal: AbortSignal.timeout(4000),
     });
-    if (!res.ok) return null;
+    if (!res.ok) return [];
     const html = await res.text();
-    const match = html.match(/\/watch\/([a-zA-Z0-9_\-]+-\d+)/i);
-    if (match && match[1]) {
-      ANIWATCH_SLUG_CACHE.set(cleanQ.toLowerCase(), match[1]);
-      return match[1];
+    const itemRegex = /<div class="flw-item">[\s\S]*?<a\s+[^>]*href="\/watch\/([a-zA-Z0-9_\-]+-\d+)"[^>]*title="([^"]+)"/gi;
+    const items = [];
+    let m;
+    while ((m = itemRegex.exec(html)) !== null) {
+      items.push({ slug: m[1], title: m[2].trim() });
     }
-  } catch (_) {}
+    return items;
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Searches aniwatch.one to resolve the real slug
+ * @param {string} query
+ */
+export async function searchAniWatchSlug(query) {
+  if (!query) return null;
+  const rawClean = query.replace(/^aniwatch:/i, '').trim();
+  const cached = ANIWATCH_SLUG_CACHE.get(rawClean.toLowerCase());
+  if (cached) return cached;
+
+  const candidates = [];
+  const cleanSpaced = rawClean.replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+  candidates.push(cleanSpaced);
+
+  // If query contains season (e.g. "solo leveling season 2 arise from the shadow" or "solo-leveling-season-2")
+  const sMatch = cleanSpaced.match(/(.*?)(?:\s*[-–—:]\s*|\s+)(season\s*\d+|\b\d+(?:st|nd|rd|th)?\s*season)/i);
+  if (sMatch) {
+    candidates.push(`${sMatch[1].trim()} ${sMatch[2].trim()}`);
+  }
+
+  // Subtitle strip: split by colons or dashes
+  const mainPart = rawClean.split(/[-–—:]/)[0].replace(/[-_]+/g, ' ').trim();
+  if (mainPart && !candidates.includes(mainPart)) {
+    candidates.push(mainPart);
+  }
+
+  for (const cand of candidates) {
+    const items = await fetchAniWatchItems(cand);
+    if (items.length > 0) {
+      const lowerQ = rawClean.toLowerCase();
+      const seasonMatch = lowerQ.match(/season\s*(\d+)/i) || lowerQ.match(/\s(\d+)$/);
+      if (seasonMatch) {
+        const sNum = seasonMatch[1];
+        const matchSeason = items.find((it) => new RegExp(`(season\\s*${sNum}|\\b${sNum}(st|nd|rd|th)?\\s*season|\\b${sNum}\\b)`, 'i').test(it.title));
+        if (matchSeason) {
+          ANIWATCH_SLUG_CACHE.set(rawClean.toLowerCase(), matchSeason.slug);
+          return matchSeason.slug;
+        }
+      }
+
+      ANIWATCH_SLUG_CACHE.set(rawClean.toLowerCase(), items[0].slug);
+      return items[0].slug;
+    }
+  }
+
   return null;
 }
 

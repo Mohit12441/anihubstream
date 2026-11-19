@@ -111,6 +111,7 @@ export function useLiveStream(o: Options) {
   const freshRef = useRef(false);
   /* set when a dub ask had to fall back to the original (episode carries no dub) */
   const [audioFallback, setAudioFallback] = useState(false);
+  const [fallbackToEmbed, setFallbackToEmbed] = useState(false);
   /* A single failed probe can be a transient blip (cold tunnel, a loaded
      network) — re-probe with growing gaps before leaving the viewer offline.
      Reset on any successful probe and on the overlay's manual Retry. */
@@ -202,7 +203,7 @@ export function useLiveStream(o: Options) {
           }
         }
 
-        if (o.provider !== 'anipm') {
+        if (o.provider !== 'anipm' && o.provider !== 'aniwatch') {
           const up = await bridgeHealth(fresh);
           if (cancel) return;
           if (!up) {
@@ -335,19 +336,25 @@ export function useLiveStream(o: Options) {
       if (info.type === 'native-extract') {
         if (!info.master) {
           forceEmbed = true;
+          setFallbackToEmbed(true);
         } else {
           try {
             const r = await fetch(`/api/aw/extract?u=${encodeURIComponent(info.master)}`, { cache: 'no-store' });
             const { m3u8 } = await r.json();
             if (m3u8) {
               sourceUrl = `/api/aw/proxy?u=${encodeURIComponent(m3u8)}`;
+              setFallbackToEmbed(false);
             } else {
               forceEmbed = true;
+              setFallbackToEmbed(true);
             }
           } catch {
             forceEmbed = true;
+            setFallbackToEmbed(true);
           }
         }
+      } else {
+        setFallbackToEmbed(false);
       }
 
       const url = bridgeUrl(info.master);
@@ -839,6 +846,7 @@ export function useLiveStream(o: Options) {
     error,
     /** a dub ask fell back to the original because this episode has no dub file */
     audioFallback,
+    fallbackToEmbed,
     duration,
     cues,
     /** the caption tracks this stream really carries */

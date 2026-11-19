@@ -792,6 +792,135 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             thumbnails: null,
           });
         }
+
+        const unavailableServer = {
+          id: serverId,
+          name: serverName,
+          provider: 'anipm',
+          status: 'unavailable',
+          unavailableReason: betaRes?.unavailableReason || 'Could not resolve AniPM Beta stream for this episode.',
+          streamUrl: null,
+          referrerPolicy: 'no-referrer',
+          type: 'hls',
+          quality: '1080p',
+          audio: isDub ? 'dub' : 'sub',
+          audioTracks: [],
+          subtitles: [],
+        };
+        const allServers = [unavailableServer, ...defaultServers.filter((s) => s.id !== serverId)];
+        return ok({
+          server: unavailableServer,
+          servers: allServers,
+          providers: buildProviderRegistryBuckets(allServers),
+          allServers,
+          scopedProvider: 'anipm',
+          scopedProviderUnavailable: true,
+          availableProviders: getAvailableProvidersList(),
+          subtitles: [],
+          audioTracks: [],
+          audio: isDub ? 'dub' : 'sub',
+          skip: aniskipData,
+          thumbnails: null,
+        });
+    }
+
+    // FAST ROUTE FOR ANIWATCH: Strict isolation — never call stream bridge or fallback to AniKoto/Megaplay!
+    if (requested === 'aniwatch' || /^(mgcld|byfms|dghg)/i.test(serverParam)) {
+      const isDub = audio === 'dub' || serverParam?.toLowerCase().includes('dub');
+      const cleanServerId = (serverParam || 'MGCLD').replace(/-dub$/i, '').replace(/\[.*?\]/g, '').trim().toUpperCase();
+      const serverId = `aniwatch:${cleanServerId}${isDub ? '-dub' : ''}`;
+      const serverName = formatServerName('aniwatch', `${cleanServerId}${isDub ? ' (DUB)' : ''}`);
+
+      const [aniwatchRes, aniskipData] = await Promise.all([
+        resolveAniWatchDirect({
+          slug: availableSlugs.aniwatch || animeRow?.aniwatch_slug || id,
+          title: resolvedTitle || animeRow?.title,
+          ep,
+          audio,
+          server: cleanServerId,
+        }),
+        resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id).catch(() => null),
+      ]);
+
+      if (aniwatchRes?.streamUrl) {
+        const nativeExtract = /^(MGCLD|BYFMS)$/i.test(cleanServerId) && (() => {
+          try {
+            return /(^|\.)mfw09\.org$/.test(new URL(aniwatchRes.streamUrl).hostname);
+          } catch {
+            return false;
+          }
+        })();
+
+        const primaryServer = {
+          id: serverId,
+          name: serverName,
+          provider: 'aniwatch',
+          status: 'ready',
+          streamUrl: aniwatchRes.streamUrl,
+          referrerPolicy: 'no-referrer',
+          type: nativeExtract ? 'native-extract' : 'embed',
+          kind: nativeExtract ? 'hls' : 'embed',
+          quality: '1080p',
+          audio: isDub ? 'dub' : 'sub',
+          hardcodedSubs: true,
+          audioTracks: isDub ? buildAudioTracks('dub') : [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }],
+          subtitles: [],
+          downloads: [],
+        };
+
+        const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== serverId)];
+        return ok({
+          title: resolvedTitle,
+          episode: ep,
+          malId: resolvedMalId || null,
+          scopedProvider: 'aniwatch',
+          scopedProviderUnavailable: false,
+          server: primaryServer,
+          servers: allServers,
+          providers: buildProviderRegistryBuckets(allServers),
+          allServers,
+          availableProviders: getAvailableProvidersList(),
+          subtitles: [],
+          audioTracks: primaryServer.audioTracks,
+          audio: isDub ? 'dub' : 'sub',
+          skip: aniskipData,
+          thumbnails: null,
+        }, {
+          cache: 'public, max-age=300, s-maxage=600',
+        });
+      }
+
+      const unavailableServer = {
+        id: serverId,
+        name: serverName,
+        provider: 'aniwatch',
+        status: 'unavailable',
+        unavailableReason: 'Could not resolve AniWatch stream for this episode.',
+        streamUrl: null,
+        referrerPolicy: 'no-referrer',
+        type: 'embed',
+        quality: '1080p',
+        audio: isDub ? 'dub' : 'sub',
+        audioTracks: [],
+        subtitles: [],
+      };
+      const allServers = [unavailableServer, ...defaultServers.filter((s) => s.id !== serverId)];
+      return ok({
+        server: unavailableServer,
+        servers: allServers,
+        providers: buildProviderRegistryBuckets(allServers),
+        allServers,
+        scopedProvider: 'aniwatch',
+        scopedProviderUnavailable: true,
+        availableProviders: getAvailableProvidersList(),
+        subtitles: [],
+        audioTracks: [],
+        audio: isDub ? 'dub' : 'sub',
+        skip: aniskipData,
+        thumbnails: null,
+      }, {
+        cache: 'no-store, no-cache, must-revalidate',
+      });
     }
 
     // Determine Stream Bridge base (fallback to local bridge on 8795)
@@ -905,11 +1034,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               server: serverParam || 'MGCLD',
             });
           }
-          if (!direct && requested !== 'hdrezka' && requested !== 'hianime' && requested !== 'aniwatch') {
-            direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: (requested === 'anipm' ? undefined : requested) });
+          if (!direct && requested !== 'hdrezka' && requested !== 'hianime' && requested !== 'aniwatch' && requested !== 'anipm') {
+            direct = await resolveMegaplayDirect({ malId: resolvedMalId, ep, audio, server: serverParam, provider: requested });
           }
           // Multi-provider direct fallback if primary provider has not uploaded the episode yet
-          if (!direct && availableSlugs.hianime && requested !== 'hianime' && requested !== 'aniwatch') {
+          if (!direct && availableSlugs.hianime && requested !== 'hianime' && requested !== 'aniwatch' && requested !== 'anipm') {
             try {
               const zokoDirectUrl = `https://zokoanime.video/stream/mal/${resolvedMalId}/${ep}/${audio}`;
               const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) });
@@ -925,7 +1054,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               }
             } catch {}
           }
-          if (!direct && resolvedAnilistId && requested !== 'anipm') {
+          if (!direct && resolvedAnilistId && requested !== 'anipm' && requested !== 'aniwatch') {
             try {
               const betaRes = await resolveAniPmBetaDirect({
                 anilistId: resolvedAnilistId,
@@ -1072,7 +1201,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const proxyBase = `${url.origin}/api/proxy`;
         const isEmbedDirect = directRes.type === 'embed' || directRes.kind === 'embed';
         const isDirectNoReferrer = directRes.referrerPolicy === 'no-referrer' || directRes.provider === 'anipm';
-        const activeReferer = directRes.referer || (directRes.provider === 'anipm' ? 'https://beta.cno.to/' : 'https://megaplay.buzz/');
+        const activeReferer = directRes.referer || (directRes.provider === 'anipm' ? 'https://beta.cno.to/' : (directRes.provider === 'aniwatch' ? 'https://aniwatch.one/' : 'https://megaplay.buzz/'));
         const finalStreamUrl = isEmbedDirect ? directRes.streamUrl : (isDirectNoReferrer ? directRes.streamUrl : `${proxyBase}?url=${encodeURIComponent(directRes.streamUrl)}&referer=${encodeURIComponent(activeReferer)}`);
 
         const subtitles = (directRes.subtitles || []).map((sub) => ({
@@ -1186,7 +1315,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const isDirectVoidboost = prov === 'hdrezka' || masterPath.includes('voidboost');
     const activeReferer = isDirectVoidboost
       ? ''
-      : (meta.referer || (prov === 'hianime' ? (masterPath.includes('zoko') ? 'https://zokoanime.video/' : 'https://megaplay.buzz/') : (prov === 'aniwatch' || prov === 'anikoto' ? 'https://megaplay.buzz/' : '')));
+      : (meta.referer || (prov === 'hianime' ? (masterPath.includes('zoko') ? 'https://zokoanime.video/' : 'https://megaplay.buzz/') : (prov === 'aniwatch' ? 'https://aniwatch.one/' : (prov === 'anikoto' ? 'https://megaplay.buzz/' : ''))));
     let streamUrl;
     if (isDirectVoidboost && masterPath.startsWith('http')) {
       streamUrl = masterPath;
