@@ -1,6 +1,9 @@
 // @ts-check
 
 let loggedCaptchaPayload = false;
+const extractCache = new Map();
+const EXTRACT_CACHE_TTL_MS = 5 * 60 * 1000;
+const MAX_POW_DIFFICULTY = 20;
 
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 
@@ -87,6 +90,26 @@ function toHex(words) {
   let out = '';
   for (let i = 0; i < words.length; i++) out += words[i].toString(16).padStart(8, '0');
   return out;
+}
+
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { 'content-type': 'application/json; charset=utf-8' },
+  });
+}
+
+async function fetchWithRetry(url, options = {}, attempts = 2) {
+  let lastErr = null;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fetch(url, { ...options, signal: AbortSignal.timeout(20_000) });
+    } catch (err) {
+      lastErr = err;
+      if (i < attempts - 1) await new Promise((r) => setTimeout(r, 400));
+    }
+  }
+  throw lastErr || new Error('fetch failed');
 }
 
 function extractCodeAndOrigin(reqUrl, body) {
@@ -205,10 +228,12 @@ export const onRequest = async (context) => {
   const { code, origin } = extractCodeAndOrigin(reqUrl, body);
 
   if (!code) {
-    return new Response(JSON.stringify({ m3u8: null }), {
-      status: 200,
-      headers: { 'content-type': 'application/json; charset=utf-8' },
-    });
+    return json({ m3u8: null });
+  }
+
+  const cached = extractCache.get(code);
+  if (cached && cached.expiresAt > Date.now()) {
+    return json({ m3u8: cached.m3u8 });
   }
 
   const commonHeaders = {
@@ -221,11 +246,10 @@ export const onRequest = async (context) => {
   let m3u8 = null;
   try {
     // 1. POST captcha challenge
-    const captchaRes = await fetch(`${origin}/api/videos/${encodeURIComponent(code)}/embed/captcha`, {
+    const captchaRes = await fetchWithRetry(`${origin}/api/videos/${encodeURIComponent(code)}/embed/captcha`, {
       method: 'POST',
       headers: { ...commonHeaders, 'Content-Type': 'application/json' },
       body: JSON.stringify({}),
-      signal: AbortSignal.timeout(15000),
     });
     if (!captchaRes.ok) throw new Error('captcha challenge failed');
     const captchaJson = await captchaRes.json().catch(() => null);
@@ -236,8 +260,12 @@ export const onRequest = async (context) => {
     }
 
     const powNonce = payload.pow_nonce ?? payload.powNonce ?? payload.nonce ?? payload.challenge ?? payload.salt ?? payload.prefix ?? payload.seed ?? '';
-    const powDifficulty = payload.pow_difficulty ?? payload.powDifficulty ?? payload.difficulty ?? payload.bits ?? payload.bytes ?? 4;
+    const powDifficulty = Number(payload.pow_difficulty ?? payload.difficulty ?? 0);
     const powToken = payload.pow_token ?? payload.powToken ?? payload.token ?? payload.captchaToken ?? payload.captcha_token ?? '';
+    if (Number.isFinite(powDifficulty) && powDifficulty > MAX_POW_DIFFICULTY) {
+      console.warn('[aw/extract] difficulty too high, falling back to embed', { powDifficulty, max: MAX_POW_DIFFICULTY });
+      return json({ m3u8: null });
+    }
     const target = payload.target ?? payload.prefix ?? payload.hashPrefix ?? payload.difficultyTarget ?? payload.targetPrefix ?? null;
     const unitHint = payload.difficultyType ?? payload.difficulty_unit ?? payload.unit ?? payload.mode ?? payload.type ?? payload.algorithm ?? '';
     const allHints = [unitHint, payload.unit, payload.mode, payload.algorithm, payload.difficultyType, payload.difficulty_unit, payload.type].filter(Boolean).join(' ');
@@ -256,7 +284,7 @@ export const onRequest = async (context) => {
 
     // Solve PoW with custom gr hash; input = pow_nonce + ":" + solution.
     const CHUNK = 150;
-    const MAX_NONCE = 20_000_000;
+    const MAX_NONCE = 5_000_000;
     const startTs = Date.now();
     async function solvePow() {
       for (let base = 0; base < MAX_NONCE; base += CHUNK) {
@@ -275,7 +303,7 @@ export const onRequest = async (context) => {
           }
           if (ok) return String(nonces[i]);
         }
-        if (Date.now() - startTs > 20000) return null;
+        if (Date.now() - startTs > 60000) return null;
       }
       return null;
     }
@@ -288,11 +316,10 @@ export const onRequest = async (context) => {
     ];
     let verifyRes = null;
     for (const vp of verifyPaths) {
-      const r = await fetch(vp, {
+      const r = await fetchWithRetry(vp, {
         method: 'POST',
         headers: { ...commonHeaders, 'Content-Type': 'application/json' },
         body: JSON.stringify({ pow_token: powToken, solution: String(solution) }),
-        signal: AbortSignal.timeout(15000),
       });
       verifyRes = r;
       if (r.ok) break;
@@ -313,7 +340,7 @@ export const onRequest = async (context) => {
       // 3. POST embed/playback with a captcha token and decrypt the payload.
       const token = String(vpayload.token || vpayload.captchaToken || vpayload.captcha_token || '');
       if (!token) throw new Error('captcha token missing');
-      const playbackRes = await fetch(`${origin}/api/videos/${encodeURIComponent(code)}/embed/playback`, {
+      const playbackRes = await fetchWithRetry(`${origin}/api/videos/${encodeURIComponent(code)}/embed/playback`, {
         method: 'POST',
         headers: {
           ...commonHeaders,
@@ -323,7 +350,6 @@ export const onRequest = async (context) => {
           'X-Embed-Referer': `${origin}/e/${encodeURIComponent(code)}`,
         },
         body: JSON.stringify({ fingerprint: { token: 'x', viewer_id: 'x', device_id: 'x', confidence: 0 } }),
-        signal: AbortSignal.timeout(15000),
       });
       console.warn('[aw/extract] playback status', playbackRes.status);
       if (!playbackRes.ok) throw new Error('playback fetch failed');
@@ -337,14 +363,13 @@ export const onRequest = async (context) => {
       m3u8 = decrypted ? m3u8FromPlaybackJson(decrypted, origin) : null;
     }
   } catch (err) {
-    console.error('[aw/extract] failed', err && (err.stack || err.message || err));
+    console.warn('[aw/extract] extraction failed, falling back to embed:', err && (err.message || err));
     m3u8 = null;
   }
 
-  return new Response(JSON.stringify({ m3u8 }), {
-    status: 200,
-    headers: { 'content-type': 'application/json; charset=utf-8' },
-  });
+  console.warn('[aw/extract] result', m3u8 ? 'ok' : 'null');
+  if (m3u8) extractCache.set(code, { m3u8, expiresAt: Date.now() + EXTRACT_CACHE_TTL_MS });
+  return json({ m3u8 });
 };
 
 export const onRequestGet = onRequest;

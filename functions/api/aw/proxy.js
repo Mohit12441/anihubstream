@@ -13,6 +13,7 @@ const ALLOWED_AW_HOSTS = [
   'fastly.net',
   'fastlylb.net',
   'owphbf24.com',
+  'r66nv9ed.com',
   'sprintcdn.com',
 ];
 
