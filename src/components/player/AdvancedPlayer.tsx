@@ -811,13 +811,12 @@ export function AdvancedPlayer(props: Props) {
           style={isEmbed ? { display: 'none' } : undefined}
         />
         {isEmbed && resolvedEmbedUrl && (
-          <div className="player__embed-wrapper" style={{ position: 'absolute', inset: 0, zIndex: 2 }}>
+          <div className="player__embed-wrapper" style={{ position: 'absolute', inset: 0, zIndex: 2, overflow: 'hidden', borderRadius: 'inherit' }}>
             <iframe
               src={resolvedEmbedUrl}
               className="player__embed-frame"
               title={`${anime.title} Episode ${episode.n}`}
               allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-              sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
               loading="eager"
