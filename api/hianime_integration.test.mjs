@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 describe('HiAnime End-to-End Integration Suite', () => {
   it('/api/play resolves HiAnime by slug without mal_id and marks scopedProviderUnavailable as false', async () => {
     const playModule = await import('../functions/api/play.js');
-    const req = new Request('http://localhost:8899/api/play?id=solo-leveling&ep=1&provider=hianime&server=HD-1&audio=sub');
+    const req = new Request('http://localhost:8899/api/play?id=solo-leveling&ep=1&provider=hianime&server=HD-3&audio=sub');
     const res = await playModule.onRequestGet({ request: req, env: {}, waitUntil: () => {} });
     
     assert.equal(res.status, 200);
@@ -19,15 +19,13 @@ describe('HiAnime End-to-End Integration Suite', () => {
     assert.equal(primary.status, 'ready');
     assert.ok(primary.streamUrl.includes('proxy') || primary.streamUrl.includes('m3u8') || primary.streamUrl.includes('resolve'));
 
-    // Verify all 3 HiAnime sub mirrors appear
+    // Verify HiAnime sub mirrors appear
     const hianimeSubServers = data.servers.filter(s => s.provider === 'hianime' && s.audio === 'sub');
-    assert.ok(hianimeSubServers.some(s => s.id === 'hianime:HD-1'), 'HD-1 sub mirror must be present');
     assert.ok(hianimeSubServers.some(s => s.id === 'hianime:HD-2'), 'HD-2 sub mirror must be present');
     assert.ok(hianimeSubServers.some(s => s.id === 'hianime:HD-3'), 'HD-3 sub mirror must be present');
 
-    // Verify all 3 HiAnime dub mirrors appear
+    // Verify HiAnime dub mirrors appear
     const hianimeDubServers = data.servers.filter(s => s.provider === 'hianime' && s.audio === 'dub');
-    assert.ok(hianimeDubServers.some(s => s.id === 'hianime:HD-1-dub'), 'HD-1 dub mirror must be present');
     assert.ok(hianimeDubServers.some(s => s.id === 'hianime:HD-2-dub'), 'HD-2 dub mirror must be present');
     assert.ok(hianimeDubServers.some(s => s.id === 'hianime:HD-3-dub'), 'HD-3 dub mirror must be present');
   });
@@ -47,13 +45,12 @@ describe('HiAnime End-to-End Integration Suite', () => {
     assert.ok(primary.name.includes('HD-3 [Zoko] (DUB)'), 'Name must include host tag and DUB label');
 
     const hianimeSubs = data.servers.filter(s => s.provider === 'hianime' && s.audio === 'sub');
-    assert.equal(hianimeSubs.length, 3, 'Must retain all 3 sub mirrors');
-    assert.ok(hianimeSubs.some(s => s.id === 'hianime:HD-1'), 'HD-1 must remain in SUB');
+    assert.equal(hianimeSubs.length, 2, 'Must retain both sub mirrors');
     assert.ok(hianimeSubs.some(s => s.id === 'hianime:HD-2'), 'HD-2 must remain in SUB');
     assert.ok(hianimeSubs.some(s => s.id === 'hianime:HD-3'), 'HD-3 must remain in SUB');
 
     const hianimeDubs = data.servers.filter(s => s.provider === 'hianime' && s.audio === 'dub');
-    assert.equal(hianimeDubs.length, 3, 'Must have exactly 3 dub mirrors with no duplicates');
+    assert.equal(hianimeDubs.length, 2, 'Must have exactly 2 dub mirrors with no duplicates');
     const dubIds = hianimeDubs.map(s => s.id);
     assert.equal(new Set(dubIds).size, dubIds.length, 'No duplicate server IDs allowed in DUB');
   });

@@ -128,12 +128,29 @@ export const HDREZKA_SERVER: StreamServer = {
   note: 'Direct Voidboost CDN 1080p Ultra MP4 download and progressive stream.',
 };
 
+export const HINDIFLIX_SERVER: StreamServer = {
+  id: 'hindiflix-live',
+  name: 'HindiFlix',
+  region: 'Hindi Dubbed (Direct CDN)',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['Hindi (dub)'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Direct high-speed MP4 streaming with native Hindi dubbed audio track.',
+};
+
 export const SERVERS: StreamServer[] = [
   LIVE_SERVER,
   ANIWATCH_SERVER,
   HIANIME_SERVER,
   ANIPM_SERVER,
   HDREZKA_SERVER,
+  HINDIFLIX_SERVER,
 ];
 
 const ALL_PROVIDER_IDS = [
@@ -142,6 +159,7 @@ const ALL_PROVIDER_IDS = [
   'anikoto',
   'anipm',
   'hdrezka',
+  'hindiflix',
 ];
 
 export function providerFromId(serverId: string): string {
@@ -180,6 +198,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   if (norm === 'aniwatch') return isDub ? 'aniwatch:MGCLD-dub' : 'aniwatch:MGCLD';
   if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';
   if (norm === 'hdrezka') return isDub ? 'hdrezka:studioband-dub' : 'hdrezka:1080p';
+  if (norm === 'hindiflix') return 'hindiflix:hindi-dub';
   return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;
 }
 

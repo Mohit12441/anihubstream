@@ -47,7 +47,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     // --- STEP 1: Fast D1 Search (<10ms) ---
     if (env.ANIHUB) {
       try {
-        const likeTerm = `%${q.toLowerCase()}%`;
+        const likeTerm = safeLikePattern(q);
         const d1Rows = await env.ANIHUB.prepare(
           `SELECT a.id, a.title, a.native, a.art, a.key_art,
                   a.rating, a.year, a.episode_total, a.kind, m.mal_id,

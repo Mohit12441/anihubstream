@@ -52,7 +52,7 @@ test('Component: AnimeDetail page exists and imports useAnimeDetail', () => {
 
   const content = fs.readFileSync(detailPath, 'utf8');
   assert.ok(content.includes('useAnimeDetail'), 'AnimeDetail must use useAnimeDetail hook');
-  assert.ok(content.includes('/api/play?id='), 'AnimeDetail must preview available servers');
+  assert.ok(content.includes('getCleanWatchUrl'), 'AnimeDetail must generate clean watch links for episodes');
 });
 
 test('Edge Middleware: functions/_middleware.js uses url.origin and handles /anime/:id and /watchlist', () => {

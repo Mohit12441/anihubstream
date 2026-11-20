@@ -144,10 +144,15 @@ export async function resolveMegaplayEmbed(embedUrl) {
       default: t.default === true || idx === 0,
     }));
 
+  const thumbTrack = (payload.tracks || []).find(
+    (t) => t.kind === 'thumbnails' || t.file?.includes('thumbnails.vtt') || t.file?.includes('/preview/') || t.file?.includes('sprite')
+  );
+
   return {
     streamUrl,
     quality: '1080p',
     subtitles,
+    thumbnails: thumbTrack?.file ? { url: thumbTrack.file } : null,
     intro: payload.intro || null,
     outro: payload.outro || null,
   };

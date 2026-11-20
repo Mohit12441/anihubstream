@@ -115,7 +115,7 @@ export function Header() {
   };
 
   const handleSuggestionClick = (hit: any) => {
-    navigate(`/anime/${hit.id}`);
+    navigate(`/watch/${encodeURIComponent(hit.id)}/1`);
     setQ('');
     setOpen(false);
     clearSuggestions();

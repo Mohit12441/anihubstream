@@ -47,9 +47,9 @@ export function PlayerTimeline({
 
   const dynamicThumbEnabled =
     cues.length === 0 &&
-    Boolean(streamUrl) &&
+    (Boolean(streamUrl) || Boolean(primaryVideoEl)) &&
     streamKind !== 'embed' &&
-    !streamUrl?.includes('/api/play/resolve');
+    (!streamUrl || !streamUrl.includes('/api/play/resolve'));
 
   const {
     thumbUrl: dynamicThumb,

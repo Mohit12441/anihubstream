@@ -12,7 +12,6 @@ import {
 import {
   ACCENTS,
   ASPECTS,
-  QUALITIES,
   SPEEDS,
   SUB_LANG_NAMES,
   subLangLabel,
@@ -130,7 +129,7 @@ export function PlayerSettings({
           ? 'Preferences are stored on this device only.'
           : tab === 'quality'
             ? (qualities && qualities.length <= 1
-                ? 'Stream is direct 1080p source. 720p & 360p available via Download.'
+                ? 'Server provides direct single-quality source. Adaptive bitrate is not required.'
                 : 'Quality switches instantly via adaptive bitrate levels.')
             : tab === 'aspect'
               ? 'Fit letterboxes and Fill crops the frame. Ratios never stretch the artwork.'
@@ -208,43 +207,50 @@ export function PlayerSettings({
 
       {tab === 'quality' && (
         <PopGroup title="Resolution">
-          <PopRow
-            radio
-            label="Auto"
-            note="Adaptive Bitrate (ABR)"
-            active={currentQualityIndex === -1}
-            onClick={() => {
-              patch({ quality: 'auto' });
-              onQualityPick?.(-1, 'Auto');
-            }}
-          />
-          {qualities && qualities.length > 0 ? (
-            qualities.map((q) => (
+          {qualities && qualities.length > 1 ? (
+            <>
               <PopRow
-                key={q.id}
                 radio
-                label={q.label}
-                note={qualities.length === 1 ? 'direct source' : undefined}
-                active={currentQualityIndex === q.index}
+                label="Auto"
+                note="Adaptive Bitrate (ABR)"
+                active={currentQualityIndex === -1}
                 onClick={() => {
-                  patch({ quality: q.label as any });
-                  onQualityPick?.(q.index, q.label);
+                  patch({ quality: 'auto' });
+                  onQualityPick?.(-1, 'Auto');
                 }}
               />
-            ))
+              {qualities.map((q) => (
+                <PopRow
+                  key={q.id}
+                  radio
+                  label={q.label}
+                  active={currentQualityIndex === q.index}
+                  onClick={() => {
+                    patch({ quality: q.label as any });
+                    onQualityPick?.(q.index, q.label);
+                  }}
+                />
+              ))}
+            </>
+          ) : qualities && qualities.length === 1 ? (
+            <PopRow
+              radio
+              label={qualities[0].label}
+              note="Direct Source (Server Default)"
+              active={true}
+              onClick={() => {
+                patch({ quality: qualities[0].label as any });
+                onQualityPick?.(qualities[0].index, qualities[0].label);
+              }}
+            />
           ) : (
-            QUALITIES.filter((q) => q.id !== 'auto').map((q) => (
-              <PopRow
-                key={q.id}
-                radio
-                label={q.label}
-                active={prefs.quality === q.id}
-                onClick={() => {
-                  patch({ quality: q.id });
-                  onQualityPick?.(-1, q.label);
-                }}
-              />
-            ))
+            <PopRow
+              radio
+              label={currentQualityLabel && currentQualityLabel !== 'Auto' ? currentQualityLabel : '1080p'}
+              note="Direct Source (Server Default)"
+              active={true}
+              onClick={() => {}}
+            />
           )}
         </PopGroup>
       )}

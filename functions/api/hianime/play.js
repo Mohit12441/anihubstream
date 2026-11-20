@@ -1,7 +1,6 @@
 // @ts-check
-import { HttpError, errorResponse, ok, withEdgeCache } from '../_lib.js';
+import { HttpError, buildAudioTracks, errorResponse, ok, withEdgeCache } from '../_lib.js';
 import { resolveZokoEmbedEdge } from './_zoko.js';
-import { isMegaplayTokenValid, resolveMegaplayEmbed } from '../_megaplay.js';
 import { resolveHiAnimeV2Direct } from './_hianime_v2.js';
 
 const HIANIME_MAIN = 'https://hianimex.com.in';
@@ -54,7 +53,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         if (cached && typeof cached.data === 'string') {
           const parsed = JSON.parse(cached.data);
           const serverUrl = parsed?.data?.servers?.[0]?.streamUrl || '';
-          if (serverUrl && isMegaplayTokenValid(serverUrl, 1200)) {
+          if (serverUrl) {
             return ok({
               ...parsed,
               source: 'cache',
@@ -91,60 +90,21 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }
 
     // --- STEP 3: Deterministic Embed Derivation & Server Targeting ---
-    if (malId && malId > 0) {
+    if (malId && malId > 0 && serverPref === 'HD-3') {
       const zokoDirectUrl = `https://zokoanime.video/stream/mal/${malId}/${ep}/${audio}`;
-      const megaDirectUrl = `https://megaplay.buzz/stream/mal/${malId}/${ep}/${audio}`;
-
-      let firstHit = null;
-
-      if (serverPref === 'HD-3') {
-        const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
-        if (zokoRes?.masterUrl) {
-          firstHit = { type: 'zoko', res: zokoRes };
-        }
-      } else if (serverPref === 'HD-1') {
-        const megaRes = await resolveMegaplayEmbed(megaDirectUrl).catch(() => null);
-        if (megaRes?.streamUrl) {
-          firstHit = { type: 'mega', res: megaRes };
-        }
-      } else {
-        const zokoRace = resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) })
-          .then((r) => (r?.masterUrl ? { type: 'zoko', res: r } : null))
-          .catch(() => null);
-
-        const megaRace = resolveMegaplayEmbed(megaDirectUrl)
-          .then((r) => (r?.streamUrl ? { type: 'mega', res: r } : null))
-          .catch(() => null);
-
-        firstHit = await Promise.race([
-          zokoRace.then((res) => (res ? res : megaRace)),
-          megaRace.then((res) => (res ? res : zokoRace)),
-        ]);
-      }
-
-      if (firstHit && firstHit.res) {
-        if (firstHit.type === 'zoko') {
-          streamResult = {
-            streamUrl: firstHit.res.masterUrl,
-            referer: 'https://zokoanime.video/',
-            quality: firstHit.res.defaultQuality || '1080p',
-            subtitles: [],
-            skip: firstHit.res.skip,
-          };
-          selectedServerName = 'HD-3';
-        } else {
-          streamResult = {
-            streamUrl: firstHit.res.streamUrl,
-            referer: 'https://megaplay.buzz/',
-            quality: firstHit.res.quality || '1080p',
-            subtitles: (firstHit.res.subtitles || []).map((sub) => ({
-              ...sub,
-              url: formatProxyUrl(sub.url, 'https://megaplay.buzz/', origin),
-            })),
-            skip: firstHit.res.intro || firstHit.res.outro ? { intro: firstHit.res.intro, outro: firstHit.res.outro } : null,
-          };
-          selectedServerName = 'HD-1';
-        }
+      const zokoRes = await resolveZokoEmbedEdge(zokoDirectUrl, { signal: AbortSignal.timeout(3500) }).catch(() => null);
+      if (zokoRes?.masterUrl) {
+        streamResult = {
+          streamUrl: zokoRes.masterUrl,
+          referer: 'https://zokoanime.video/',
+          quality: zokoRes.defaultQuality || '1080p',
+          subtitles: (zokoRes.subtitles || []).map((sub) => ({
+            ...sub,
+            url: formatProxyUrl(sub.url, 'https://zokoanime.video/', origin),
+          })),
+          skip: zokoRes.skip,
+        };
+        selectedServerName = 'HD-3';
       }
     }
 
@@ -180,9 +140,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const proxiedStreamUrl = formatProxyUrl(streamResult.streamUrl, streamResult.referer, origin);
 
     const serverDefinitions = [
-      { id: 'HD-1', name: 'HD-1 [MegaPlay]' },
-      { id: 'HD-2', name: 'HD-2 [MegaVid]' },
       { id: 'HD-3', name: 'HD-3 [Zoko]' },
+      { id: 'HD-2', name: 'HD-2 [MegaVid]' },
     ];
 
     const allServers = serverDefinitions.map((def) => {
@@ -199,7 +158,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         type: audio === 'dub' ? 'dub' : 'hls',
         quality: isSelected ? streamResult.quality : '1080p',
         audio,
-        audioTracks: [{ id: 'ja', language: 'ja', label: 'Japanese (Original)', default: true }],
+        audioTracks: buildAudioTracks(audio),
         subtitles: isSelected ? (streamResult.subtitles || []) : [],
         downloads: [],
       };

@@ -141,13 +141,13 @@ export async function extractDirectStreamFromEmbed(embedUrl, deps = {}) {
  * @param {string|number} [options.animeId]
  * @param {number} [options.ep=1]
  * @param {string} [options.audio='sub']
- * @param {string} [options.server='HD-1']
+ * @param {string} [options.server='HD-3']
  * @param {number} [options.malId=0]
  * @returns {Promise<{ streamUrl: string, referer: string, subtitles: any[], quality?: string, skip?: any, serverName?: string } | null>}
  */
-export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, audio = 'sub', server = 'HD-1', malId = 0 }) {
+export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, audio = 'sub', server = 'HD-3', malId = 0 }) {
   let numericId = String(animeId || '').trim();
-  const targetServerName = (server || 'HD-1').replace(/-dub$/i, '').toUpperCase();
+  const targetServerName = (server || 'HD-3').replace(/-dub$/i, '').toUpperCase();
   const wantedAudio = audio === 'dub' ? 'dub' : 'sub';
 
   if (!numericId && slug) {
@@ -200,7 +200,8 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
             const servers = parseHiAnimeServers(serversData?.html || '');
             const matchingServers = servers.filter((s) => s.type === wantedAudio);
             const chosenServer = matchingServers.find((s) => s.name.toUpperCase() === targetServerName) ||
-              matchingServers.find((s) => s.name.toUpperCase() === 'HD-1') ||
+              matchingServers.find((s) => s.name.toUpperCase() === 'HD-3') ||
+              matchingServers.find((s) => s.name.toUpperCase() === 'HD-2') ||
               matchingServers[0];
 
             if (chosenServer?.id) {

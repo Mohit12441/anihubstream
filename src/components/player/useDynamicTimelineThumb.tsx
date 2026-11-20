@@ -23,6 +23,7 @@ export function useDynamicTimelineThumb({
   const [thumbUrl, setThumbUrl] = useState<string | null>(null);
   const [isSeeking, setIsSeeking] = useState(false);
   const [hasHovered, setHasHovered] = useState(false);
+  const [hiddenVideo, setHiddenVideo] = useState<HTMLVideoElement | null>(null);
 
   const hiddenVideoRef = useRef<HTMLVideoElement | null>(null);
   const hlsRef = useRef<Hls | null>(null);
@@ -32,6 +33,13 @@ export function useDynamicTimelineThumb({
   const pendingSeekRef = useRef<number | null>(null);
   const isMountedRef = useRef(true);
 
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
+
   // Lazy activation: only load secondary media pipeline after user first touches/hovers the timeline
   useEffect(() => {
     if (hoverTime !== null && !hasHovered) {
@@ -39,15 +47,20 @@ export function useDynamicTimelineThumb({
     }
   }, [hoverTime, hasHovered]);
 
-  // Setup media loading on secondary hidden video (lazily initialized)
+  // Clear thumbnail cache only when switching stream source
   useEffect(() => {
-    isMountedRef.current = true;
     cacheRef.current.clear();
     setThumbUrl(null);
     setIsSeeking(false);
+  }, [streamUrl]);
 
-    const video = hiddenVideoRef.current;
-    if (!enabled || !hasHovered || !streamUrl || streamKind === 'embed' || !video) {
+  // Setup media loading on secondary hidden video (lazily initialized)
+  useEffect(() => {
+    isMountedRef.current = true;
+
+    const video = hiddenVideo;
+    const activeUrl = streamUrl || (primaryVideoEl?.currentSrc && !primaryVideoEl.currentSrc.startsWith('blob:') ? primaryVideoEl.currentSrc : null);
+    if (!enabled || !hasHovered || !activeUrl || streamKind === 'embed' || !video) {
       if (hlsRef.current) {
         hlsRef.current.destroy();
         hlsRef.current = null;
@@ -62,10 +75,10 @@ export function useDynamicTimelineThumb({
     let cancelled = false;
 
     const setupMedia = async () => {
-      const isProgressive = streamKind === 'progressive' || streamUrl.endsWith('.mp4');
+      const isProgressive = streamKind === 'progressive' || activeUrl.endsWith('.mp4');
 
       if (isProgressive) {
-        video.src = streamUrl;
+        video.src = activeUrl;
         video.load();
         return;
       }
@@ -93,7 +106,7 @@ export function useDynamicTimelineThumb({
 
           hlsRef.current = hls;
           hls.attachMedia(video);
-          hls.loadSource(streamUrl);
+          hls.loadSource(activeUrl);
 
           hls.on(HlsCtor.Events.MANIFEST_PARSED, (_evt, data) => {
             if (cancelled || !data.levels || data.levels.length === 0) return;
@@ -114,7 +127,7 @@ export function useDynamicTimelineThumb({
             // Non-fatal frame extract errors fall back cleanly to fallbackArt
           });
         } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-          video.src = streamUrl;
+          video.src = activeUrl;
           video.load();
         }
       } catch {
@@ -126,7 +139,6 @@ export function useDynamicTimelineThumb({
 
     return () => {
       cancelled = true;
-      isMountedRef.current = false;
       if (hlsRef.current) {
         hlsRef.current.destroy();
         hlsRef.current = null;
@@ -136,7 +148,7 @@ export function useDynamicTimelineThumb({
         video.load();
       }
     };
-  }, [streamUrl, streamKind, enabled, hasHovered]);
+  }, [streamUrl, streamKind, enabled, hasHovered, hiddenVideo]);
 
   // Network optimization: pause secondary HLS segment fetching when user leaves timeline
   useEffect(() => {
@@ -197,18 +209,42 @@ export function useDynamicTimelineThumb({
 
     const onLoadedMetadata = () => {
       if (pendingSeekRef.current !== null && video.readyState >= 1) {
-        video.currentTime = pendingSeekRef.current;
+        if (hlsRef.current) {
+          hlsRef.current.startLoad(pendingSeekRef.current);
+        }
+        try {
+          video.currentTime = pendingSeekRef.current;
+        } catch {}
       }
     };
 
     video.addEventListener('seeked', onSeeked);
     video.addEventListener('loadedmetadata', onLoadedMetadata);
+    video.addEventListener('canplay', onLoadedMetadata);
 
     return () => {
       video.removeEventListener('seeked', onSeeked);
       video.removeEventListener('loadedmetadata', onLoadedMetadata);
+      video.removeEventListener('canplay', onLoadedMetadata);
     };
   }, [captureFrame]);
+
+  // Continuously sample frames from primary playing video into cache for instant timeline scrubbing
+  useEffect(() => {
+    if (!primaryVideoEl) return;
+    let lastSample = -10;
+    const onTimeUpdate = () => {
+      const cur = Math.round(primaryVideoEl.currentTime);
+      if (Math.abs(cur - lastSample) >= 2) {
+        lastSample = cur;
+        captureFrame(cur, primaryVideoEl);
+      }
+    };
+    primaryVideoEl.addEventListener('timeupdate', onTimeUpdate);
+    return () => {
+      primaryVideoEl.removeEventListener('timeupdate', onTimeUpdate);
+    };
+  }, [primaryVideoEl, captureFrame]);
 
   // Debounced seek dispatch triggered by timeline hover
   useEffect(() => {
@@ -217,11 +253,28 @@ export function useDynamicTimelineThumb({
     const roundedT = Math.round(hoverTime);
     const clampedT = Math.max(0, Math.min(hoverTime, duration));
 
-    // 1. Instant cache hit
+    // 1. Instant exact cache hit
     if (cacheRef.current.has(roundedT)) {
       setThumbUrl(cacheRef.current.get(roundedT)!);
       setIsSeeking(false);
       return;
+    }
+
+    // 1b. Nearest cached frame gives instant visual continuity while seeking exact frame
+    let nearestUrl: string | null = null;
+    let minDiff = Infinity;
+    for (const [k, url] of cacheRef.current.entries()) {
+      const diff = Math.abs(k - roundedT);
+      if (diff < minDiff) {
+        minDiff = diff;
+        nearestUrl = url;
+      }
+    }
+    if (nearestUrl) {
+      setThumbUrl(nearestUrl);
+    } else if (primaryVideoEl && primaryVideoEl.readyState >= 2) {
+      // Seed initial frame from current playback position
+      captureFrame(Math.round(primaryVideoEl.currentTime), primaryVideoEl);
     }
 
     // 2. Instant capture from primary video if hovering within 2.5s of current playback
@@ -236,20 +289,30 @@ export function useDynamicTimelineThumb({
       clearTimeout(seekTimerRef.current);
     }
 
-    // 3. Debounced seek on secondary hidden video (90ms)
+    // 3. Debounced seek on secondary hidden video (100ms)
     seekTimerRef.current = setTimeout(() => {
       const video = hiddenVideoRef.current;
       if (!video) return;
 
       pendingSeekRef.current = clampedT;
-      if (video.readyState >= 1) {
+      if (hlsRef.current) {
+        hlsRef.current.startLoad(clampedT);
+      }
+      if (video.readyState >= 1 && !video.seeking) {
         try {
           video.currentTime = clampedT;
         } catch {
           setIsSeeking(false);
         }
       }
-    }, 90);
+
+      // Safety fallback: if seeked event doesn't fire within 400ms but frames are ready
+      setTimeout(() => {
+        if (isMountedRef.current && video.readyState >= 2) {
+          captureFrame(clampedT);
+        }
+      }, 400);
+    }, 100);
 
     return () => {
       if (seekTimerRef.current) {
@@ -261,7 +324,47 @@ export function useDynamicTimelineThumb({
   // Offscreen fixed position (with non-zero opacity) forces Chromium GPU layout & decoding
   const hiddenVideoElement = enabled && hasHovered ? (
     <video
-      ref={hiddenVideoRef}
+      ref={(el) => {
+        hiddenVideoRef.current = el;
+        setHiddenVideo(el);
+      }}
+      onSeeked={() => {
+        const v = hiddenVideoRef.current;
+        if (!v) return;
+        const target = v.currentTime;
+        captureFrame(target, v);
+        if (pendingSeekRef.current !== null && Math.abs(pendingSeekRef.current - v.currentTime) > 1.5) {
+          const nextTarget = pendingSeekRef.current;
+          if (hlsRef.current) {
+            hlsRef.current.startLoad(nextTarget);
+          }
+          try {
+            v.currentTime = nextTarget;
+          } catch {}
+        }
+      }}
+      onLoadedMetadata={() => {
+        const v = hiddenVideoRef.current;
+        if (v && pendingSeekRef.current !== null && v.readyState >= 1) {
+          if (hlsRef.current) {
+            hlsRef.current.startLoad(pendingSeekRef.current);
+          }
+          try {
+            v.currentTime = pendingSeekRef.current;
+          } catch {}
+        }
+      }}
+      onCanPlay={() => {
+        const v = hiddenVideoRef.current;
+        if (v && pendingSeekRef.current !== null && v.readyState >= 1 && !v.seeking) {
+          if (hlsRef.current) {
+            hlsRef.current.startLoad(pendingSeekRef.current);
+          }
+          try {
+            v.currentTime = pendingSeekRef.current;
+          } catch {}
+        }
+      }}
       style={{
         position: 'fixed',
         top: '-9999px',

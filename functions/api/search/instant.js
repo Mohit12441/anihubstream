@@ -89,7 +89,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         // Fallback to indexed LIKE search if anime_fts virtual table is not yet provisioned in D1
         engineUsed = 'd1_fallback';
         const folded = foldSearch(q);
-        const pattern = `%${folded}%`;
+        const pattern = safeLikePattern(folded);
+        const rawPattern = safeLikePattern(q);
         rows = await env.ANIHUB.prepare(
           `SELECT a.id, a.title, a.native, a.year, a.rating, a.season, a.kind, a.status, a.art, a.key_art, a.accent, a.synopsis
            FROM anime a
@@ -97,7 +98,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
            ORDER BY a.rating DESC, a.year DESC
            LIMIT ?3`
         )
-          .bind(pattern, `%${q}%`, limit)
+          .bind(pattern, rawPattern, limit)
           .all()
           .catch(() => ({ results: [] }));
       }

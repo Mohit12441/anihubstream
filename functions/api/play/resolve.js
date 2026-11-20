@@ -6,6 +6,7 @@ import { resolveHiAnimeV2Direct } from '../hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from '../_anipm.js';
 import { resolveAniWatchDirect } from '../_aniwatch.js';
 import { hdrezkaMeta, rezkaFetch, parseStreams } from '../../_lib/hdrezka.js';
+import { resolveHindiFlixStream } from '../../_lib/hindiflix.js';
 
 const BRIDGE_TIMEOUT_MS = 15_000;
 
@@ -277,6 +278,44 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           // Fall through to stream bridge resolution if edge direct rezkaFetch did not resolve
         }
 
+        if (provider === 'hindiflix' || (audio === 'hindi' && provider === 'auto')) {
+          try {
+            const hfRes = await resolveHindiFlixStream(resolvedTitle || animeId, ep || 1);
+            if (hfRes?.streamUrl) {
+              return ok({
+                server: {
+                  id: 'hindiflix:hindi-dub',
+                  name: 'HindiFlix · Hindi Dub (Direct MP4)',
+                  provider: 'hindiflix',
+                  status: 'ready',
+                  streamUrl: hfRes.streamUrl,
+                  type: 'mp4',
+                  quality: hfRes.quality || '1080p',
+                  audio: 'dub',
+                  audioTracks: [{ id: 'audio-hi', language: 'hi', label: 'Hindi Dub', default: true }],
+                  subtitles: [],
+                }
+              }, { cache: 'public, max-age=300, s-maxage=600' });
+            }
+          } catch {}
+          if (provider === 'hindiflix') {
+            return ok({
+              server: {
+                id: 'hindiflix:hindi-dub',
+                provider: 'hindiflix',
+                name: 'HindiFlix · Hindi Dub',
+                status: 'unavailable',
+                unavailableReason: 'Hindi dub not found on HindiFlix for this title or episode.',
+                streamUrl: null,
+                audio: 'dub',
+                audioTracks: [],
+                subtitles: [],
+                quality: '1080p',
+              }
+            });
+          }
+        }
+
         // Megaplay powers AniKoto, MegaPlay, and HD-1 / Vidstream servers directly
         const canUseEdgeDirect =
           provider === 'auto' ||
@@ -429,6 +468,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     ? directRes.audio
                     : buildAudioTracks(audio),
                 subtitles,
+                thumbnails: directRes.thumbnails?.url ? {
+                  url: `${proxyBase}?url=${encodeURIComponent(directRes.thumbnails.url)}&referer=${encodeURIComponent(activeReferer)}`
+                } : null,
                 downloads: [],
                 intro: directRes.intro || null,
                 outro: directRes.outro || null,
@@ -539,6 +581,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                           ? directRes.audio
                           : buildAudioTracks(audio),
                       subtitles,
+                      thumbnails: directRes.thumbnails?.url ? {
+                        url: `${proxyBase}?url=${encodeURIComponent(directRes.thumbnails.url)}&referer=https://megaplay.buzz/`
+                      } : null,
                       downloads: [],
                       intro: directRes.intro || null,
                       outro: directRes.outro || null,

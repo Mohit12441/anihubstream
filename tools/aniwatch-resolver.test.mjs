@@ -61,7 +61,7 @@ test('resolveAniWatchDirect scrapes real embed and tags hardcodedSubs', async ()
     assert.ok(res, 'Must return direct AniWatch result');
     assert.equal(res.provider, 'aniwatch');
     assert.equal(res.serverName, 'DGHG');
-    assert.equal(res.streamUrl, 'https://playmogo.com/e/sample-dghg');
+    assert.equal(res.streamUrl, 'https://mfw09.org/e/sample-mgcld');
     assert.equal(res.type, 'embed');
     assert.equal(res.hardcodedSubs, true);
   } finally {
@@ -138,7 +138,7 @@ test('resolveAniWatchDirect searches by title when given unnumbered catalog slug
   globalThis.fetch = async (url) => {
     const sUrl = String(url);
     if (sUrl.includes('/search?keyword=')) {
-      return new Response('<a href="/watch/ore-dake-level-up-na-ken-season-2-arise-from-the-shadow-82064">Match</a>', { status: 200 });
+      return new Response('<div class="flw-item"><a href="/watch/ore-dake-level-up-na-ken-season-2-arise-from-the-shadow-82064" title="Solo Leveling Season 2: Arise from the Shadow">Match</a></div>', { status: 200 });
     }
     if (sUrl.includes('/watch/ore-dake-level-up-na-ken-season-2-arise-from-the-shadow-82064/episode/1')) {
       const sampleHtml = `

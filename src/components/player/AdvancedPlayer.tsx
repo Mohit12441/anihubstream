@@ -1029,7 +1029,7 @@ export function AdvancedPlayer(props: Props) {
                 ? bridgeUrl(live.info.master)
                 : (initialServer?.streamUrl && !initialServer.streamUrl.includes('/api/play/resolve')
                   ? bridgeUrl(initialServer.streamUrl)
-                  : null)
+                  : (live.videoEl?.currentSrc || live.videoEl?.src || null))
             }
             streamKind={
               live.info?.kind ||
@@ -1055,13 +1055,13 @@ export function AdvancedPlayer(props: Props) {
             onMute={() => patch({ muted: !prefs.muted })}
             speed={prefs.speed}
             quality={
-              live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
-                ? live.levels[live.currentLevelIndex].label
-                : prefs.quality !== 'auto'
-                  ? prefs.quality
-                  : live.info
-                    ? `${live.info.quality}p`
-                    : 'Auto'
+              live.levels.length > 1
+                ? (live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
+                    ? live.levels[live.currentLevelIndex].label
+                    : 'Auto')
+                : (live.levels.length === 1
+                    ? live.levels[0].label
+                    : (live.info ? `${live.info.quality}p` : '1080p'))
             }
             onQuality={() => setMenu({ kind: 'settings', tab: 'quality' })}
             subOn={prefs.subtitles.enabled}
@@ -1138,11 +1138,13 @@ export function AdvancedPlayer(props: Props) {
               qualities={live.levels.map((l) => ({ id: String(l.height), label: l.label, index: l.index }))}
               currentQualityIndex={live.currentLevelIndex}
               currentQualityLabel={
-                live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
-                  ? live.levels[live.currentLevelIndex].label
-                  : prefs.quality !== 'auto'
-                    ? prefs.quality
-                    : 'Auto'
+                live.levels.length > 1
+                  ? (live.currentLevelIndex >= 0 && live.levels[live.currentLevelIndex]
+                      ? live.levels[live.currentLevelIndex].label
+                      : 'Auto')
+                  : (live.levels.length === 1
+                      ? live.levels[0].label
+                      : (live.info ? `${live.info.quality}p` : '1080p'))
               }
               onQualityPick={(index, label) => {
                 live.setQualityLevel(index);

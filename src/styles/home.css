@@ -442,7 +442,7 @@ html[data-theme='light'] .hero__lede {
   justify-content: space-between;
   gap: 24px;
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: clamp(36px, 5vw, 56px);
 }
 
 .hero-slideshow__content {

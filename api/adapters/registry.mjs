@@ -4,6 +4,7 @@ import * as hianime from '../hianime.mjs';
 import * as aniwatch from '../aniwatch.mjs';
 import * as anipm from '../anipm.mjs';
 import * as hdrezka from './hdrezka.mjs';
+import * as hindiflix from './hindiflix.mjs';
 
 /**
  * @typedef {Object} AdapterDefinition
@@ -88,6 +89,18 @@ registerAdapter({
   details: (slug, opts) => hdrezka.details(slug, opts),
   sources: (epId, opts) => hdrezka.sources(epId, opts),
   resolve: (embed, opts) => hdrezka.resolve(embed, opts),
+});
+
+registerAdapter({
+  id: 'hindiflix',
+  name: 'HindiFlix',
+  supportedAudio: ['dub'],
+  defaultType: 'mp4',
+  priority: 75,
+  search: (q, opts) => hindiflix.search(q, opts),
+  details: (slug, opts) => hindiflix.details(slug, opts),
+  sources: (epId, opts) => hindiflix.sources(epId, opts),
+  resolve: (embed, opts) => hindiflix.resolveStream(embed, opts),
 });
 
 registerAdapter({

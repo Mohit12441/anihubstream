@@ -2,19 +2,17 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles } from 'lucide-react';
 import { Embers } from './Embers';
-import { genreIcon } from './genreIcons';
 import { artKeyUrl } from '../data/model';
-import type { Anime, Genre } from '../data/model';
+import type { Anime } from '../data/model';
 import { usePrefersReducedMotion } from '../lib/motion';
 
 interface Props {
   items: Anime[];
-  genres: Genre[];
 }
 
 const AUTOPLAY_DELAY_MS = 6000;
 
-export function HeroSlideshow({ items, genres }: Props) {
+export function HeroSlideshow({ items }: Props) {
   const reduced = usePrefersReducedMotion();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -131,7 +129,6 @@ export function HeroSlideshow({ items, genres }: Props) {
 
   const current = activeItems[currentIndex];
   const accentColor = current.accent || '#ff1f4a';
-  const genresToShow = genres.slice(0, 8);
   const isUpcoming = current.status === 'Upcoming' || current.status === 'NOT_YET_RELEASED';
   const hasNoEpisodes = isUpcoming || (current.status === 'Ongoing' && (current.episodeCount ?? 0) === 0);
 
@@ -208,7 +205,10 @@ export function HeroSlideshow({ items, genres }: Props) {
 
           {/* Title */}
           <h1 className="hero-slideshow__title">
-            <Link to={`/anime/${current.id}`} className="hero-slideshow__title-link">
+            <Link
+              to={hasNoEpisodes ? `/anime/${current.id}` : `/watch/${current.id}/1`}
+              className="hero-slideshow__title-link"
+            >
               {current.title}
             </Link>
           </h1>
@@ -329,38 +329,6 @@ export function HeroSlideshow({ items, genres }: Props) {
                 </button>
               );
             })}
-          </div>
-        </div>
-      </div>
-
-      {/* Direct Genre Navigation Strip */}
-      <div className="hero-slideshow__genre-strip shell">
-        <div className="hero-slideshow__genre-strip-inner" role="navigation" aria-label="Explore Anime by Genre">
-          <span className="hero-slideshow__genre-label">
-            <Sparkles size={14} aria-hidden="true" />
-            <span>Explore Genres:</span>
-          </span>
-          <div className="hero-slideshow__genre-list">
-            {genresToShow.map((g) => {
-              const Icon = genreIcon(g.id);
-              return (
-                <Link
-                  key={g.id}
-                  to={`/anime?genre=${encodeURIComponent(g.id)}`}
-                  className="hero-slideshow__genre-pill"
-                  style={{ '--pc': g.accent } as React.CSSProperties}
-                  title={`Browse all ${g.label} anime`}
-                >
-                  <span className="hero-slideshow__genre-icon">
-                    <Icon size={14} aria-hidden="true" />
-                  </span>
-                  <span>{g.label}</span>
-                </Link>
-              );
-            })}
-            <Link to="/genres" className="hero-slideshow__genre-pill hero-slideshow__genre-pill--all">
-              <span>All Genres &rarr;</span>
-            </Link>
           </div>
         </div>
       </div>

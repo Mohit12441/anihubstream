@@ -18,10 +18,10 @@ import '../styles/home.css';
 
 const MOODS = [
   {
-    to: '/genres',
-    label: 'Browse',
-    title: 'Explore Genres',
-    copy: 'Neon-lit shelves for every mood',
+    to: '/anime?sort=rating',
+    label: 'Rankings',
+    title: 'Top Rated Anime',
+    copy: 'All-time masterpieces and fan favourites',
     art: artUrl('/art/genres-purple.jpg'),
     pc: '#a24bff',
   },
@@ -121,7 +121,7 @@ export function Home() {
 
   return (
     <div className="page home">
-      <HeroSlideshow items={home.trending} genres={GENRES} />
+      <HeroSlideshow items={home.trending} />
 
       <div className="home__rows shell">
         {status !== 'ready' ? (

@@ -275,7 +275,7 @@ export async function bridgeResolve(
     try {
       let resolveEndpoint = '';
       const srvParam = server ? `&server=${encodeURIComponent(server)}` : '';
-      if (provider === 'anipm' || provider === 'hdrezka' || provider === 'hianime' || provider === 'aniwatch' || activeBase === '') {
+      if (provider === 'anipm' || provider === 'hdrezka' || provider === 'hianime' || provider === 'aniwatch' || provider === 'hindiflix' || activeBase === '') {
         resolveEndpoint = `/api/play/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${srvParam}`;
       } else {
         resolveEndpoint = bridgeUrl(`/resolve?anime_id=${encodeURIComponent(animeId)}&ep=${ep}&audio=${audio}&provider=${encodeURIComponent(provider)}${srvParam}`);
@@ -313,6 +313,7 @@ export async function bridgeResolve(
             name: sub.label || sub.name || 'English',
             url: sub.url || sub.proxyUrl || sub.uri || '',
           })),
+          thumbnails: s.thumbnails?.url ? { url: s.thumbnails.url } : null,
           downloads: s.downloads || [],
         };
       } else {

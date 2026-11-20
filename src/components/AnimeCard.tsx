@@ -27,7 +27,12 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
   const { history } = useLibrary();
   const resume = history.find((h) => h.anime.id === anime.id);
   const cleanTitle = cleanAnimeTitle(anime.title);
-  const to = `/anime/${anime.id}`;
+  const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
+  const explicitEp = episode ? Number.parseInt(episode.replace(/[^\d]/g, ''), 10) : null;
+  const targetEp = explicitEp && explicitEp > 0
+    ? explicitEp
+    : (resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1);
+  const to = isUpcoming ? `/anime/${anime.id}` : `/watch/${encodeURIComponent(anime.id)}/${targetEp}`;
   const tint = rank ? rankTint[(rank - 1) % rankTint.length] : anime.accent;
 
   const hoverTimer = useRef<number | null>(null);

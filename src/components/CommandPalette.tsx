@@ -229,7 +229,7 @@ export function CommandPalette() {
       if (hits.length > 0) {
         const hit = hits[selectedIndex];
         if (hit) {
-          navigate(`/anime/${hit.id}`);
+          navigate(`/watch/${encodeURIComponent(hit.id)}/1`);
           setOpen(false);
         }
       } else {
@@ -304,7 +304,7 @@ export function CommandPalette() {
                       onMouseEnter={() => setSelectedIndex(idx)}
                       onClick={() => {
                         soundFx.playClick();
-                        navigate(`/anime/${hit.id}`);
+                        navigate(`/watch/${encodeURIComponent(hit.id)}/1`);
                         setOpen(false);
                       }}
                     >

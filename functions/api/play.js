@@ -386,7 +386,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
     })
   );
 
-  const hianimeSubs = ['HD-1', 'HD-2', 'HD-3'].map((srv) =>
+  const hianimeSubs = ['HD-3', 'HD-2'].map((srv) =>
     makeServer({
       id: `hianime:${srv}`,
       name: formatServerName('hianime', srv),
@@ -395,7 +395,7 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
     })
   );
 
-  const hianimeDubs = ['HD-1', 'HD-2', 'HD-3'].map((srv) =>
+  const hianimeDubs = ['HD-3', 'HD-2'].map((srv) =>
     makeServer({
       id: `hianime:${srv}-dub`,
       name: formatServerName('hianime', `${srv} (DUB)`),
@@ -522,6 +522,21 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       status: hasRezkaBridge ? 'ready' : 'unavailable',
       unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
       audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'TVShows Dub', default: true }],
+    })
+  );
+
+  servers.push(
+    makeServer({
+      id: 'hindiflix:hindi-dub',
+      name: 'HindiFlix · Hindi Dub (Direct MP4)',
+      provider: 'hindiflix',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hindiflix', server: 'hindi-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: 'ready',
+      audioTracks: [{ id: 'audio-hi', language: 'hi', label: 'Hindi Dub', default: true }],
+      subtitles: [],
     })
   );
 
@@ -688,7 +703,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     }
 
     const availableSlugs = {
-      anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || null,
+      anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || (id || null),
       hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : (id || null)),
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : null),
       anipm: resolvedAnilistId ? String(resolvedAnilistId) : (animeRow?.anilist_id ? String(animeRow.anilist_id) : null),
@@ -705,6 +720,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'aniwatch', name: 'AniWatch', available: Boolean(availableSlugs.aniwatch), ...(providerHealth.aniwatch || {}) },
       { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || { status: 'healthy', latencyMs: 70 }) },
       { id: 'hdrezka', name: 'HDRezka', available: hasRezkaBridge, unavailableReason: hasRezkaBridge ? null : 'Proxy Required', ...(providerHealth.hdrezka || { status: hasRezkaBridge ? 'healthy' : 'offline', latencyMs: 85 }) },
+      { id: 'hindiflix', name: 'HindiFlix', available: true, unavailableReason: null, status: 'healthy', latencyMs: 65, hasDub: true },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import {
   BookmarkPlus,
@@ -6,17 +6,10 @@ import {
   ChevronRight,
   Clock,
   Film,
-  Globe,
   Heart,
-  Layers,
   Music,
   Play,
-  Radio,
-  Server,
-  Shield,
-  Sparkles,
   Star,
-  Zap,
 } from 'lucide-react';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
@@ -26,44 +19,9 @@ import { AiringCountdown } from '../components/AiringCountdown';
 import { FranchiseTimeline } from '../components/franchise/FranchiseTimeline';
 import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel, type AnimeTheme } from '../data/model';
-import { getPlay } from '../data/api';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import { getCleanWatchUrl } from '../data/servers';
-import { DEFAULT_PLAY_SERVERS } from './Watch';
 import '../styles/anime-detail.css';
-
-interface ServerPreview {
-  id: string;
-  name: string;
-  status: string;
-  provider?: string;
-  unavailableReason?: string;
-  quality?: string;
-  audio?: string;
-  streamUrl?: string | null;
-  audioTracks?: any[];
-  subtitles?: any[];
-}
-
-function getProviderIcon(provId: string) {
-  switch (provId) {
-    case 'anikoto':
-      return <Zap size={14} className="text-amber-400" />;
-    case 'hdrezka':
-      return <Film size={14} className="text-amber-400" />;
-    case 'hianime':
-      return <Sparkles size={14} className="text-sky-400" />;
-    case 'aniwatch':
-      return <Globe size={14} className="text-emerald-400" />;
-    case 'anipm':
-      return <Shield size={14} className="text-rose-400" />;
-    case 'torrent':
-    case 'p2p':
-      return <Radio size={14} className="text-purple-400" />;
-    default:
-      return <Server size={14} className="text-blue-400" />;
-  }
-}
 
 export function AnimeDetail() {
   const { id = '' } = useParams<{ id: string }>();
@@ -79,108 +37,12 @@ export function AnimeDetail() {
   const { genreLabel } = useCatalogue();
   const { has, isBusy, toggle, favourites, toggleFavourite, history } = useLibrary();
 
-  const [servers, setServers] = useState<ServerPreview[]>(DEFAULT_PLAY_SERVERS);
-  const [serversLoading, setServersLoading] = useState(false);
-  const [selectedProviderId, setSelectedProviderId] = useState<string>('anikoto');
   const [themes, setThemes] = useState<AnimeTheme[]>([]);
-
-  const groupedProviders = useMemo(() => {
-    const map = new Map<string, {
-      id: string;
-      name: string;
-      status: string;
-      unavailableReason?: string;
-      mirrorCount: number;
-      hasDub: boolean;
-    }>();
-
-    for (const s of servers) {
-      if (s.id?.startsWith('anipm:settlar')) continue;
-      const provKey = (s.provider || (s.id?.includes(':') ? s.id.split(':')[0] : 'anikoto')).toLowerCase();
-      const existing = map.get(provKey);
-      const isUnavailable = s.status === 'unavailable';
-      const hasDub = provKey === 'anipm' || Boolean(s.id?.includes('-dub') || s.audio === 'dub');
-
-      if (!existing) {
-        let displayName = 'P2P Swarm';
-        if (provKey === 'anikoto') displayName = 'AniKoto';
-        else if (provKey === 'hdrezka') displayName = 'HDRezka';
-        else if (provKey === 'hianime') displayName = 'HiAnime';
-        else if (provKey === 'aniwatch') displayName = 'AniWatch';
-        else if (provKey === 'anipm') displayName = 'AniPM';
-
-        map.set(provKey, {
-          id: provKey,
-          name: displayName,
-          status: isUnavailable ? 'unavailable' : 'ready',
-          unavailableReason: s.unavailableReason,
-          mirrorCount: isUnavailable ? 0 : 1,
-          hasDub,
-        });
-      } else {
-        if (!isUnavailable) {
-          existing.mirrorCount++;
-          existing.status = 'ready';
-        }
-        if (hasDub) existing.hasDub = true;
-      }
-    }
-
-    const order = ['anikoto', 'hdrezka', 'hianime', 'aniwatch', 'anipm', 'torrent'];
-    return Array.from(map.values()).sort((a, b) => {
-      const idxA = order.indexOf(a.id);
-      const idxB = order.indexOf(b.id);
-      return (idxA !== -1 ? idxA : 99) - (idxB !== -1 ? idxB : 99);
-    });
-  }, [servers]);
 
   // Theme songs (OP/ED) arrive directly with anime detail
   useEffect(() => {
     setThemes(anime?.themes || []);
   }, [anime?.themes]);
-
-  // Fetch servers available for episode 1 (/api/play?id=) only for aired anime
-  useEffect(() => {
-    if (!id || anime?.status === 'Upcoming' || anime?.status === 'NOT_YET_RELEASED') {
-      setServersLoading(false);
-      return;
-    }
-    let active = true;
-    setServersLoading(true);
-
-    getPlay({ id, ep: 1 })
-      .then((data) => {
-        if (!active || !data) return;
-        if (Array.isArray(data.servers)) {
-          const mapped: ServerPreview[] = data.servers.map((s: any) => ({
-            id: s.id || s.name,
-            name: s.name || 'HD Server',
-            provider: s.provider,
-            status: s.status || 'ready',
-            unavailableReason: s.unavailableReason,
-            quality: s.quality || '1080p',
-            audio: s.audio || (s.id?.includes('-dub') ? 'dub' : 'sub'),
-            audioTracks: s.audioTracks || [],
-            subtitles: s.subtitles || [],
-          }));
-          setServers(mapped);
-          setSelectedProviderId((prev) => {
-            const valid = mapped.some((s) => (s.provider || '').toLowerCase() === prev && s.status !== 'unavailable');
-            if (valid) return prev;
-            const ready = mapped.find((s) => s.status !== 'unavailable');
-            return (ready?.provider || 'anikoto').toLowerCase();
-          });
-        }
-      })
-      .catch(() => {})
-      .finally(() => {
-        if (active) setServersLoading(false);
-      });
-
-    return () => {
-      active = false;
-    };
-  }, [id, anime?.status]);
 
   useSEO({
     title: anime ? `${anime.title} — Watch Online & Episode Guide | AniHubStream` : 'Anime Details | AniHubStream',
@@ -211,8 +73,8 @@ export function AnimeDetail() {
   const epCount = isUpcoming ? 0 : (anime.episodes?.length || anime.episodeCount || 0);
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
-  const getWatchUrl = (targetEpNum: number, provId = selectedProviderId) => {
-    return getCleanWatchUrl(anime.id, targetEpNum, provId);
+  const getWatchUrl = (targetEpNum: number) => {
+    return getCleanWatchUrl(anime.id, targetEpNum);
   };
 
   return (
@@ -366,87 +228,6 @@ export function AnimeDetail() {
                   <span>{resume?.episodeNumber ? `Resume Episode ${resume.episodeNumber}` : 'Watch Episode 1'}</span>
                 </Link>
               )}
-            </div>
-
-            {/* Multi-Source Streaming Providers */}
-            <div className="ad-servers-box">
-              <div className="ad-servers-header">
-                <Server size={15} color="#38bdf8" />
-                <span>Multi-Source Streaming Providers</span>
-              </div>
-              <div className="mt-3">
-                {serversLoading ? (
-                  <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Checking provider availability...</span>
-                ) : groupedProviders.length > 0 ? (
-                  <div className="ad-providers-grid">
-                    {groupedProviders.map((p) => {
-                      const isSelected = selectedProviderId === p.id;
-                      const isUnavailable = p.status === 'unavailable';
-                      return (
-                        <button
-                          key={p.id}
-                          type="button"
-                          disabled={isUnavailable}
-                          onClick={() => {
-                            setSelectedProviderId(p.id);
-                            navigate(getWatchUrl(targetEp, p.id));
-                          }}
-                          className={`ad-provider-card${isSelected ? ' is-selected' : ''}${isUnavailable ? ' is-unavailable' : ''}`}
-                        >
-                          <div className="ad-provider-top">
-                            <span className="ad-provider-icon">{getProviderIcon(p.id)}</span>
-                            {isUnavailable ? (
-                              <span className="ad-provider-badge ad-provider-badge--unavailable">
-                                <span className="ad-provider-pulse-dot" />
-                                <span>Unavailable</span>
-                              </span>
-                            ) : isSelected ? (
-                              <span className="ad-provider-badge ad-provider-badge--selected">
-                                <span className="ad-provider-pulse-dot" />
-                                <span>Selected</span>
-                              </span>
-                            ) : (
-                              <span className="ad-provider-badge ad-provider-badge--ready">
-                                <span className="ad-provider-pulse-dot" />
-                                <span>Ready</span>
-                              </span>
-                            )}
-                          </div>
-                          <div className="ad-provider-body">
-                            <span className="ad-provider-name">{p.name}</span>
-                          </div>
-                          <div className="ad-provider-meta">
-                            {isUnavailable ? (
-                              <span className="ad-provider-reason" title={p.unavailableReason}>
-                                {p.unavailableReason || 'Offline'}
-                              </span>
-                            ) : (
-                              <>
-                                <span className="ad-provider-mirrors">
-                                  <Layers size={12} className="opacity-70" />
-                                  <span>{p.mirrorCount} Mirror{p.mirrorCount === 1 ? '' : 's'}</span>
-                                </span>
-                                <div className="ad-provider-tags">
-                                  {p.id === 'hdrezka' ? (
-                                    <span className="ad-provider-tag" style={{ background: 'rgba(245, 158, 11, 0.22)', color: '#fbbf24', border: '1px solid rgba(245, 158, 11, 0.35)' }}>ULTRA MP4</span>
-                                  ) : (
-                                    <>
-                                      <span className="ad-provider-tag ad-provider-tag--sub">SUB</span>
-                                      {p.hasDub && <span className="ad-provider-tag ad-provider-tag--dub">DUB</span>}
-                                    </>
-                                  )}
-                                </div>
-                              </>
-                            )}
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <span style={{ fontSize: '0.85rem', color: '#64748b' }}>Fast Edge CDN & P2P available on player</span>
-                )}
-              </div>
             </div>
           </div>
         </div>

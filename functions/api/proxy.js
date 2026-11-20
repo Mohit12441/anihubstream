@@ -73,6 +73,8 @@ const ALLOWED_STREAMING_DOMAINS = [
   'voidboost.net',
   'voidboost.one',
   'streamguard.cc',
+  'hindiflix.cc',
+  'storage.hindiflix.cc',
   'example.com', // for test mock fixtures
 ];
 
