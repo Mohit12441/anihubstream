@@ -23,6 +23,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const titleParam = url.searchParams.get('title') || '';
         const malIdParam = url.searchParams.get('malId') || url.searchParams.get('mal_id') || url.searchParams.get('mal') || '';
         const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
+        let season = Math.max(1, Number.parseInt(url.searchParams.get('season') ?? '1', 10) || 1);
+        if (!url.searchParams.has('season')) {
+          const sMatch = (animeIdParam || titleParam || '').match(/(?:season|part|s)[-_ ]*(\d+)/i);
+          if (sMatch) season = Math.max(1, Number.parseInt(sMatch[1], 10) || 1);
+        }
         const provider = url.searchParams.get('provider') || 'auto';
         const rawServerParam = url.searchParams.get('server') || '';
         let serverParam = rawServerParam;
@@ -193,6 +198,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               } catch {}
             }
           }
+          let rawPayload = null;
+          let subtitleRaw = null;
+          let resolvedTid = null;
           if (rezkaId) {
             // Translator selection: map studio subservers to their upstream translator_ids
             const srvLower = String(rawServerParam || serverParam || '').toLowerCase();
@@ -200,36 +208,40 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (srvLower.includes('anilibria') || srvLower.includes('19')) targetTr = '19';
             else if (srvLower.includes('tvshows') || srvLower.includes('565')) targetTr = '565';
             else if (srvLower.includes('studioband') || srvLower.includes('105')) targetTr = '105';
-            else if (srvLower.includes('original') || srvLower.includes('238')) targetTr = '238';
+            else if (srvLower.includes('original') || srvLower.includes('238') || srvLower.includes('1080p')) targetTr = '238';
 
             const isDubAudio = audio === 'dub' || audio === 'russian' || (targetTr && targetTr !== '238') || srvLower.includes('dub');
             const TRANSLATORS = targetTr
-              ? [targetTr, ...(isDubAudio ? ['105', '19', '565', '238', '318', '115'] : ['238', '105', '19', '565'])]
-              : (isDubAudio ? ['105', '19', '565', '238', '318', '115'] : ['238', '105', '19', '565']);
-            let rawPayload = null;
-            let subtitleRaw = null;
-            let resolvedTid = null;
-            for (const tid of TRANSLATORS) {
-              const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
-                method: 'POST',
-                headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
-                body: new URLSearchParams({
-                  id: String(rezkaId),
-                  translator_id: tid,
-                  season: '1',
-                  episode: String(ep || 1),
-                  action: 'get_stream',
-                }).toString(),
-              });
-              if (res && res.ok) {
-                const data = await res.json().catch(() => null);
-                if (data?.success && data?.url) {
-                  rawPayload = data.url;
-                  subtitleRaw = data.subtitle;
-                  resolvedTid = tid;
-                  break;
+              ? [targetTr]
+              : (isDubAudio ? ['105', '19', '565'] : ['238', '105']);
+            const sCandidates = [String(season)];
+            if (season > 1) sCandidates.push('1');
+            for (const sNum of sCandidates) {
+              for (const tid of TRANSLATORS) {
+                const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
+                  method: 'POST',
+                  headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
+                  body: new URLSearchParams({
+                    id: String(rezkaId),
+                    translator_id: tid,
+                    season: sNum,
+                    episode: String(ep || 1),
+                    action: 'get_stream',
+                  }).toString(),
+                });
+                if (res) {
+                  const text = await res.text().catch(() => '');
+                  let data = null;
+                  try { data = JSON.parse(text); } catch {}
+                  if (data?.success && data?.url) {
+                    rawPayload = data.url;
+                    subtitleRaw = data.subtitle;
+                    resolvedTid = tid;
+                    break;
+                  }
                 }
               }
+              if (rawPayload) break;
             }
             if (rawPayload) {
               const streams = parseStreams(rawPayload);

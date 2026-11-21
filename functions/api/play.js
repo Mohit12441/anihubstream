@@ -609,7 +609,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const titleParam = url.searchParams.get('title') || '';
     const malIdParam = url.searchParams.get('malId') || '';
     const ep = Math.max(1, Number.parseInt(url.searchParams.get('ep') ?? '1', 10) || 1);
-    const season = Math.max(1, Number.parseInt(url.searchParams.get('season') ?? '1', 10) || 1);
+    let season = Math.max(1, Number.parseInt(url.searchParams.get('season') ?? '1', 10) || 1);
+    if (!url.searchParams.has('season')) {
+      const sMatch = (id || titleParam || '').match(/(?:season|part|s)[-_ ]*(\d+)/i);
+      if (sMatch) season = Math.max(1, Number.parseInt(sMatch[1], 10) || 1);
+    }
     const audio = url.searchParams.get('audio') === 'hindi' ? 'hindi' : url.searchParams.get('audio') === 'dub' ? 'dub' : 'sub';
     const rawProvider = url.searchParams.get('provider') || '';
     let serverParam = url.searchParams.get('server') || '';
@@ -760,6 +764,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const resolveUrl = (extra) => {
       const p = new URLSearchParams({ anime_id: id, ep: String(ep), ...extra });
+      if (season && season > 1 && !p.has('season')) p.set('season', String(season));
       return `/api/play/resolve?${p}`;
     };
 
@@ -1110,7 +1115,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 if (kvMeta?.ok && kvMeta.payload) {
                   rawPayload = kvMeta.payload;
                 } else {
-                  const trCandidates = (audio === 'sub' || audio === 'ja') ? ['238', '105', '19'] : ['105', '19', '565', '238'];
+                const sCandidates = season > 1 ? [String(season), '1'] : ['1', '2'];
+                const trCandidates = (audio === 'sub' || audio === 'ja') ? ['238', '105', '19'] : ['105', '19', '565', '238'];
+                for (const sNum of sCandidates) {
                   for (const tr of trCandidates) {
                     const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
                       method: 'POST',
@@ -1118,7 +1125,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       body: new URLSearchParams({
                         id: String(rezkaId),
                         translator_id: tr,
-                        season: String(season || 1),
+                        season: sNum,
                         episode: String(ep || 1),
                         action: 'get_stream',
                       }).toString(),
@@ -1133,6 +1140,8 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       }
                     }
                   }
+                  if (rawPayload) break;
+                }
                 }
 
                 if (rawPayload) {
