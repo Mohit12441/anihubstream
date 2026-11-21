@@ -4,7 +4,6 @@ import {
   Film,
   LayoutGrid,
   List,
-  Loader2,
   Play,
   Search as SearchIcon,
   Sparkles,
@@ -14,7 +13,6 @@ import {
 import { useSEO } from '../lib/useSEO';
 import { useToast } from '../lib/Toast';
 import { ProviderRow, type ProviderSearchResult } from '../components/search/ProviderRow';
-import { CategoryPills, type CategoryPillItem } from '../components/ui/CategoryPills';
 import { searchFederated } from '../data/api';
 import { getCleanWatchUrl } from '../data/servers';
 import '../styles/pages.css';
@@ -43,7 +41,7 @@ export interface SearchAnimeItem {
   status?: string;
   episodeTotal?: number;
   genres: string[];
-  providers: SearchProviderBadge[];
+  providers?: SearchProviderBadge[];
 }
 
 interface FederatedSearchResponse {
@@ -51,17 +49,9 @@ interface FederatedSearchResponse {
   total: number;
   count: number;
   results?: SearchAnimeItem[];
-  providers: Record<string, ProviderSearchResult[]>;
+  providers?: Record<string, ProviderSearchResult[]>;
   source?: string;
 }
-
-const PROVIDER_NAMES: Record<string, { name: string; badge: string; color: string; icon: string }> = {
-  anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1', icon: '⚡' },
-  hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899', icon: '🌸' },
-  aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6', icon: '🛡️' },
-  anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6', icon: '⚡' },
-  hdrezka: { name: 'HDRezka', badge: 'Ultra MP4', color: '#f59e0b', icon: '🎬' },
-};
 
 const POPULAR_SEARCHES = [
   'Frieren',
@@ -75,6 +65,17 @@ const POPULAR_SEARCHES = [
   'Bleach',
 ];
 
+const PROVIDER_METAS: Record<string, { name: string; badge: string; color: string }> = {
+  anikoto: { name: 'AniKoto', badge: 'HLS 1080p', color: '#6366f1' },
+  hianime: { name: 'HiAnime', badge: 'Multi-Quality', color: '#ec4899' },
+  aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
+  anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6' },
+  hdrezka: { name: 'HDRezka', badge: 'Ultra MP4', color: '#f59e0b' },
+};
+
+// In-memory instant cache for sub-millisecond query recovery
+const searchCache = new Map<string, FederatedSearchResponse>();
+
 export function Search() {
   const [params, setParams] = useSearchParams();
   const query = params.get('q') || '';
@@ -82,10 +83,9 @@ export function Search() {
 
   const [term, setTerm] = useState(query);
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState<FederatedSearchResponse | null>(null);
+  const [data, setData] = useState<FederatedSearchResponse | null>(() => searchCache.get(query.trim()) || null);
 
-  // Filters & Layout State
-  const [selectedProvider, setSelectedProvider] = useState<string>('all');
+  // Filters State (Clean & focused on anime metadata, zero server options)
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'trending' | 'rating' | 'year'>('trending');
   const [viewMode, setViewMode] = useState<'grid' | 'shelves'>('grid');
@@ -101,7 +101,7 @@ export function Search() {
     setTerm(query);
   }, [query]);
 
-  // Debounce search input (250ms) to auto-update URL query
+  // Debounce search input (180ms) for snappy auto-updating URL
   useEffect(() => {
     const trimmed = term.trim();
     if (trimmed === query) return;
@@ -112,16 +112,23 @@ export function Search() {
       } else {
         setParams({}, { replace: true });
       }
-    }, 250);
+    }, 180);
 
     return () => clearTimeout(timer);
   }, [term, query, setParams]);
 
-  // Fetch search data with AbortController for instant live cancellation
+  // Fetch search data with memory cache & AbortController
   useEffect(() => {
     const activeQuery = query.trim();
     if (!activeQuery) {
       setData(null);
+      setLoading(false);
+      return;
+    }
+
+    // Hit in-memory cache instantly
+    if (searchCache.has(activeQuery)) {
+      setData(searchCache.get(activeQuery)!);
       setLoading(false);
       return;
     }
@@ -131,6 +138,7 @@ export function Search() {
 
     searchFederated(activeQuery, { signal: controller.signal })
       .then((json: FederatedSearchResponse) => {
+        searchCache.set(activeQuery, json);
         setData(json);
         setLoading(false);
       })
@@ -156,18 +164,11 @@ export function Search() {
     setParams({ q: t });
   };
 
-  // Filtered & Sorted Deduplicated Anime Results for Grid View
-  const filteredGridItems = useMemo<SearchAnimeItem[]>(() => {
+  // Filtered & Sorted Deduplicated Anime Results
+  const filteredItems = useMemo<SearchAnimeItem[]>(() => {
     if (!data?.results) return [];
 
     let items = [...data.results];
-
-    // Filter by Provider
-    if (selectedProvider !== 'all') {
-      items = items.filter((item) =>
-        item.providers?.some((p) => p.id === selectedProvider)
-      );
-    }
 
     // Filter by Status
     if (selectedStatus !== 'all') {
@@ -184,44 +185,13 @@ export function Search() {
     }
 
     return items;
-  }, [data?.results, selectedProvider, selectedStatus, sortBy]);
-
-  // Provider Filter Pills with Result Counts
-  const categoryPills = useMemo<CategoryPillItem[]>(() => {
-    const totalTitles = data?.total || data?.count || 0;
-    const pills: CategoryPillItem[] = [
-      {
-        id: 'all',
-        label: 'All Providers',
-        count: totalTitles,
-        color: 'var(--brand, #6366f1)',
-      },
-    ];
-
-    for (const [key, meta] of Object.entries(PROVIDER_NAMES)) {
-      const count = data?.results
-        ? data.results.filter((item) => item.providers?.some((p) => p.id === key)).length
-        : (data?.providers?.[key]?.length || 0);
-
-      pills.push({
-        id: key,
-        label: `${meta.icon} ${meta.name}`,
-        badge: meta.badge,
-        count,
-        color: meta.color,
-      });
-    }
-
-    return pills;
-  }, [data]);
+  }, [data?.results, selectedStatus, sortBy]);
 
   // Classic Grouped Providers for Shelves View
   const renderedShelves = useMemo(() => {
     if (!data?.providers) return [];
-    const entries = Object.entries(data.providers).filter(([_, items]) => items && items.length > 0);
-    if (selectedProvider === 'all') return entries;
-    return entries.filter(([key]) => key === selectedProvider);
-  }, [data, selectedProvider]);
+    return Object.entries(data.providers).filter(([_, items]) => items && items.length > 0);
+  }, [data]);
 
   return (
     <div className="page search-page shell" style={{ padding: '40px 0 80px' }}>
@@ -231,10 +201,10 @@ export function Search() {
           Search Anime
         </h1>
         <p style={{ color: '#94a3b8', fontSize: '0.95rem', marginBottom: '24px' }}>
-          Search thousands of anime series and movies with real-time metadata and multi-server HD streaming.
+          Search thousands of anime series and movies with real-time metadata and instant HD streaming.
         </p>
 
-        {/* Live Search Input with Instant Clear and Loading Indicator */}
+        {/* Live Search Input with Instant Clear */}
         <div style={{ position: 'relative', width: '100%', marginBottom: '16px' }}>
           <SearchIcon
             size={19}
@@ -254,7 +224,7 @@ export function Search() {
             onKeyDown={(e) => {
               if (e.key === 'Escape') handleClear();
             }}
-            placeholder="Search titles, characters, alternate romanizations, or franchises..."
+            placeholder="Search anime by title, character, or alternate romanization..."
             style={{
               width: '100%',
               padding: '16px 46px 16px 48px',
@@ -323,16 +293,33 @@ export function Search() {
         </div>
       </div>
 
-      {/* Loading Bar Indicator */}
-      {loading && (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '40px 0', gap: '14px' }}>
-          <Loader2 size={36} className="animate-spin" style={{ color: 'var(--brand, #6366f1)' }} />
-          <span style={{ color: '#94a3b8', fontSize: '0.9rem' }}>Searching across streaming mirrors...</span>
+      {/* Loading Skeleton Indicator */}
+      {loading && !data && (
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+            gap: '20px',
+            marginTop: '24px',
+          }}
+        >
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div
+              key={i}
+              style={{
+                background: 'rgba(255, 255, 255, 0.03)',
+                borderRadius: '12px',
+                height: '340px',
+                animation: 'pulse 1.5s infinite ease-in-out',
+                border: '1px solid rgba(255, 255, 255, 0.05)',
+              }}
+            />
+          ))}
         </div>
       )}
 
       {/* Empty State */}
-      {!loading && data && data.count === 0 && (
+      {!loading && data && data.results && data.results.length === 0 && (
         <div style={{ textAlign: 'center', padding: '60px 20px', background: 'rgba(255,255,255,0.02)', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.06)' }}>
           <Film size={48} style={{ opacity: 0.3, marginBottom: '16px', color: '#94a3b8' }} />
           <h2 style={{ fontSize: '1.25rem', color: '#e2e8f0', marginBottom: '8px', fontWeight: 600 }}>No anime titles found for "{query}"</h2>
@@ -343,9 +330,9 @@ export function Search() {
       )}
 
       {/* Results Section */}
-      {!loading && data && data.count > 0 && (
+      {data && data.results && data.results.length > 0 && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {/* Controls Bar: Provider Pills + Facets + Layout Toggle */}
+          {/* Clean Controls Bar (Results Count & Sort/Status Filters, Zero Server Pills) */}
           <div
             style={{
               display: 'flex',
@@ -357,16 +344,12 @@ export function Search() {
               borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             }}
           >
-            {/* Provider Filter Tabs */}
-            <div style={{ overflowX: 'auto', maxWidth: '100%' }}>
-              <CategoryPills
-                categories={categoryPills}
-                activeId={selectedProvider}
-                onSelect={setSelectedProvider}
-              />
+            {/* Results Count Summary */}
+            <div style={{ fontSize: '0.92rem', color: '#94a3b8', fontWeight: 500 }}>
+              Showing <span style={{ color: '#f8fafc', fontWeight: 700 }}>{filteredItems.length}</span> {filteredItems.length === 1 ? 'anime' : 'anime titles'} for <span style={{ color: 'var(--brand, #6366f1)' }}>"{query}"</span>
             </div>
 
-            {/* Layout Toggle & Status Filter */}
+            {/* Filter, Sort & View Mode Controls */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
               {/* Status Filter */}
               <select
@@ -377,8 +360,8 @@ export function Search() {
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   borderRadius: '8px',
                   color: '#cbd5e1',
-                  padding: '6px 12px',
-                  fontSize: '0.8rem',
+                  padding: '7px 12px',
+                  fontSize: '0.82rem',
                   outline: 'none',
                   cursor: 'pointer',
                 }}
@@ -397,8 +380,8 @@ export function Search() {
                   border: '1px solid rgba(255, 255, 255, 0.1)',
                   borderRadius: '8px',
                   color: '#cbd5e1',
-                  padding: '6px 12px',
-                  fontSize: '0.8rem',
+                  padding: '7px 12px',
+                  fontSize: '0.82rem',
                   outline: 'none',
                   cursor: 'pointer',
                 }}
@@ -408,7 +391,7 @@ export function Search() {
                 <option value="year" style={{ background: '#0f172a' }}>Sort: Newest Year</option>
               </select>
 
-              {/* View Mode Switcher */}
+              {/* View Mode Toggle */}
               <div
                 style={{
                   display: 'flex',
@@ -422,7 +405,7 @@ export function Search() {
                 <button
                   type="button"
                   onClick={() => setViewMode('grid')}
-                  title="Responsive Grid View"
+                  title="Grid View"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -435,7 +418,6 @@ export function Search() {
                     cursor: 'pointer',
                     fontSize: '0.78rem',
                     fontWeight: 600,
-                    transition: 'all 0.15s ease',
                   }}
                 >
                   <LayoutGrid size={15} /> Grid
@@ -443,7 +425,7 @@ export function Search() {
                 <button
                   type="button"
                   onClick={() => setViewMode('shelves')}
-                  title="Grouped Provider Shelves"
+                  title="Shelves View"
                   style={{
                     display: 'flex',
                     alignItems: 'center',
@@ -456,7 +438,6 @@ export function Search() {
                     cursor: 'pointer',
                     fontSize: '0.78rem',
                     fontWeight: 600,
-                    transition: 'all 0.15s ease',
                   }}
                 >
                   <List size={15} /> Shelves
@@ -465,20 +446,17 @@ export function Search() {
             </div>
           </div>
 
-          {/* VIEW MODE 1: Unified Deduplicated Grid */}
+          {/* VIEW MODE 1: Clean, Fast & High-Performance Anime Grid */}
           {viewMode === 'grid' && (
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
                 gap: '20px',
               }}
             >
-              {filteredGridItems.map((item) => {
-                const primaryProvider = selectedProvider !== 'all'
-                  ? selectedProvider
-                  : (item.providers?.[0]?.id || 'anikoto');
-                const primaryWatchUrl = getCleanWatchUrl(item.slug || item.id, 1, primaryProvider);
+              {filteredItems.map((item) => {
+                const watchUrl = getCleanWatchUrl(item.slug || item.id, 1);
 
                 return (
                   <div
@@ -494,9 +472,9 @@ export function Search() {
                     }}
                     className="search-grid-card"
                   >
-                    {/* Card Poster with Click to Watch */}
+                    {/* Card Poster with 1-Click Watch Link */}
                     <Link
-                      to={primaryWatchUrl}
+                      to={watchUrl}
                       state={{ title: item.title, poster: item.art || item.coverUrl }}
                       style={{
                         position: 'relative',
@@ -599,9 +577,9 @@ export function Search() {
                     </Link>
 
                     {/* Card Content & Metadata */}
-                    <div style={{ padding: '12px', display: 'flex', flexDirection: 'column', flex: 1, gap: '8px' }}>
+                    <div style={{ padding: '12px', display: 'flex', flexDirection: 'column', flex: 1, gap: '6px' }}>
                       <Link
-                        to={primaryWatchUrl}
+                        to={watchUrl}
                         style={{
                           textDecoration: 'none',
                           color: 'inherit',
@@ -616,6 +594,7 @@ export function Search() {
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap',
+                            transition: 'color 0.15s ease',
                           }}
                           title={item.title}
                         >
@@ -642,40 +621,26 @@ export function Search() {
                         )}
                       </div>
 
-                      {/* Direct Provider Launch Buttons */}
-                      <div style={{ marginTop: 'auto', paddingTop: '8px', borderTop: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                        <div style={{ fontSize: '0.68rem', color: '#64748b', marginBottom: '6px', fontWeight: 600 }}>
-                          STREAM DIRECT:
-                        </div>
-                        <div style={{ display: 'flex', gap: '5px', flexWrap: 'wrap' }}>
-                          {item.providers?.map((prov) => (
-                            <Link
-                              key={`${item.id}-${prov.id}`}
-                              to={getCleanWatchUrl(item.slug || item.id, 1, prov.id)}
-                              state={{ title: item.title, poster: item.art || item.coverUrl }}
-                              title={`Watch on ${prov.name}`}
+                      {/* Genres Pills */}
+                      {item.genres && item.genres.length > 0 && (
+                        <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap', marginTop: 'auto', paddingTop: '6px' }}>
+                          {item.genres.slice(0, 3).map((g) => (
+                            <span
+                              key={g}
                               style={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: '3px',
-                                padding: '3px 8px',
-                                borderRadius: '5px',
-                                fontSize: '0.72rem',
-                                fontWeight: 600,
-                                textDecoration: 'none',
-                                background: `${prov.color}20`,
-                                color: prov.color,
-                                border: `1px solid ${prov.color}40`,
-                                transition: 'all 0.15s ease',
+                                fontSize: '0.68rem',
+                                color: '#94a3b8',
+                                background: 'rgba(255, 255, 255, 0.04)',
+                                padding: '1px 6px',
+                                borderRadius: '4px',
+                                textTransform: 'capitalize',
                               }}
-                              onClick={(e) => e.stopPropagation()}
                             >
-                              <span>{prov.icon || '▶'}</span>
-                              <span>{prov.name}</span>
-                            </Link>
+                              {g}
+                            </span>
                           ))}
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -683,26 +648,17 @@ export function Search() {
             </div>
           )}
 
-          {/* VIEW MODE 2: Grouped Shelves View */}
+          {/* VIEW MODE 2: Shelves Mode */}
           {viewMode === 'shelves' && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
-              {renderedShelves.map(([providerKey, items]) => {
-                const meta = PROVIDER_NAMES[providerKey] || {
-                  name: providerKey.toUpperCase(),
-                  badge: 'Provider',
-                  color: '#6366f1',
-                  icon: '▶',
-                };
-
-                return (
-                  <ProviderRow
-                    key={providerKey}
-                    providerKey={providerKey}
-                    meta={meta}
-                    items={items}
-                  />
-                );
-              })}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+              {renderedShelves.map(([providerKey, items]) => (
+                <ProviderRow
+                  key={providerKey}
+                  providerKey={providerKey}
+                  meta={PROVIDER_METAS[providerKey] || { name: providerKey.toUpperCase(), badge: 'Stream', color: '#6366f1' }}
+                  items={items}
+                />
+              ))}
             </div>
           )}
         </div>
