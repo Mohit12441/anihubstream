@@ -1,8 +1,6 @@
 // @ts-check
 
 const ANIWATCH_SLUG_CACHE = new Map();
-const ANIWATCH_EPISODE_CACHE = new Map();
-const ANIWATCH_CACHE_TTL = 30 * 60 * 1000;
 
 async function fetchAniWatchItems(keyword) {
   if (!keyword || !keyword.trim()) return [];
@@ -90,45 +88,32 @@ export async function resolveAniWatchDirect({ slug, title, ep = 1, audio = 'sub'
   }
 
   if (!targetSlug) return null;
-  const epKey = `${targetSlug}:${ep}`;
   const epUrl = `https://aniwatch.one/watch/${targetSlug}/episode/${ep}`;
 
   try {
     let html = '';
-    const cachedHtml = ANIWATCH_EPISODE_CACHE.get(epKey);
-    if (cachedHtml && Date.now() < cachedHtml.expires) {
-      html = cachedHtml.html;
-    } else {
-      const res = await fetch(epUrl, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        },
-        signal: AbortSignal.timeout(4500),
-      });
+    const res = await fetch(epUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      },
+      signal: AbortSignal.timeout(4500),
+    });
 
-      if (res.status === 404 && !/-\d+$/.test(targetSlug)) {
-        const found = await searchAniWatchSlug(title || targetSlug);
-        if (found && found !== targetSlug) {
-          targetSlug = found;
-          const retryRes = await fetch(`https://aniwatch.one/watch/${targetSlug}/episode/${ep}`, {
-            headers: {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
-            },
-            signal: AbortSignal.timeout(4500),
-          });
-          if (retryRes.ok) html = await retryRes.text();
-        }
-      } else if (res.ok) {
-        html = await res.text();
-      }
-
-      if (html) {
-        ANIWATCH_EPISODE_CACHE.set(epKey, {
-          html,
-          expires: Date.now() + ANIWATCH_CACHE_TTL,
+    if (res.status === 404 && !/-\d+$/.test(targetSlug)) {
+      const found = await searchAniWatchSlug(title || targetSlug);
+      if (found && found !== targetSlug) {
+        targetSlug = found;
+        const retryRes = await fetch(`https://aniwatch.one/watch/${targetSlug}/episode/${ep}`, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+          },
+          signal: AbortSignal.timeout(4500),
         });
+        if (retryRes.ok) html = await retryRes.text();
       }
+    } else if (res.ok) {
+      html = await res.text();
     }
 
     if (!html) return null;
