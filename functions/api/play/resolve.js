@@ -304,13 +304,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       ? [{ id: 'audio-ru', language: 'ru', label: `${studioInfo.name} Dub`, default: true }]
                       : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]);
 
+                const proxyBase = `${url.origin}/api/proxy`;
+                const proxiedStreamUrl = `${proxyBase}?url=${encodeURIComponent(chosen.url)}&p=hdrezka`;
+
                 return ok({
                   server: {
                     id: isRezkaDub ? `hdrezka:${studioInfo.suffix}` : 'hdrezka:1080p',
                     name: `HDRezka · ${studioLabel}`,
                     provider: 'hdrezka',
                     status: 'ready',
-                    streamUrl: chosen.url,
+                    streamUrl: proxiedStreamUrl,
                     type: 'mp4',
                     quality: chosen.quality || '1080p',
                     audio: isRezkaDub ? 'dub' : 'sub',
@@ -667,7 +670,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         const activeReferer = isDirectVoidboost ? '' : (metaData.referer || (prov === 'hianime' ? (masterPath.includes('zoko') ? 'https://zokoanime.video/' : 'https://megaplay.buzz/') : (prov === 'aniwatch' ? 'https://aniwatch.one/' : (prov === 'anikoto' ? 'https://megaplay.buzz/' : ''))));
         let streamUrl;
         if (isDirectVoidboost && masterPath.startsWith('http')) {
-          streamUrl = masterPath;
+          streamUrl = `${proxyBase}?url=${encodeURIComponent(masterPath)}&p=hdrezka`;
         } else if (masterPath.includes('/api/proxy')) {
           streamUrl = masterPath.startsWith('http') ? masterPath : `${url.origin}${masterPath}`;
         } else if (masterPath.startsWith('http')) {

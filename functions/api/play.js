@@ -766,7 +766,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       } catch {}
     }
 
-    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL || env?.STREAM_KV || env?.HDREZKA_COOKIE);
+    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL);
 
     const availableSlugs = {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || (id || null),
