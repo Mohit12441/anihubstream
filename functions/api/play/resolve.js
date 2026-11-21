@@ -293,7 +293,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }],
                     subtitles: rezkaSubs,
                   }
-                }, { cache: 'public, max-age=300, s-maxage=600' });
+                }, { cache: 'no-store, no-cache, must-revalidate' });
               }
             }
           }
@@ -611,7 +611,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       outro: directRes.outro || null,
                     };
 
-                    return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
+                    return ok({ server: resolvedServer }, { cache: 'no-store, no-cache, must-revalidate' });
                   }
                 }
             } catch {
