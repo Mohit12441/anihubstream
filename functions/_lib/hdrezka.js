@@ -1,7 +1,44 @@
 // @ts-check
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 const BASE = 'https://hdrezka-home.tv';
-const MAX_AGE = 6 * 3600 * 1000;
+const MAX_AGE = 30 * 24 * 3600 * 1000;
+
+/**
+ * Searches HDRezka for a series/movie and returns its numeric ID.
+ * @param {any} env
+ * @param {string} title
+ * @returns {Promise<string | null>}
+ */
+export async function searchRezka(env, title) {
+  if (!title || typeof title !== 'string') return null;
+  const clean = title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  if (!clean) return null;
+
+  const cacheKey = `hdrezka:id:${clean}`;
+  if (env?.STREAM_KV) {
+    try {
+      const cached = await env.STREAM_KV.get(cacheKey);
+      if (cached) return cached;
+    } catch {}
+  }
+
+  const { res } = await rezkaFetch(env, `/search/?do=search&subaction=search&q=${encodeURIComponent(title)}`);
+  if (!res || !res.ok) return null;
+  const html = await res.text().catch(() => '');
+  if (!html || html.includes('Проверяем, что вы не бот')) return null;
+
+  const idMatch = html.match(/data-id="(\d+)"/) || html.match(/\/(?:series|animation|cartoons|films)\/(\d+)-[a-z0-9-]+\.html/i);
+  if (idMatch && idMatch[1]) {
+    const foundId = idMatch[1];
+    if (env?.STREAM_KV) {
+      try {
+        await env.STREAM_KV.put(cacheKey, foundId, { expirationTtl: 30 * 24 * 3600 });
+      } catch {}
+    }
+    return foundId;
+  }
+  return null;
+}
 
 /**
  * Executes an authenticated fetch against HDRezka using cookie stored in KV or env secret.

@@ -5,7 +5,7 @@ import { resolveZokoEmbedEdge } from '../hianime/_zoko.js';
 import { resolveHiAnimeV2Direct } from '../hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from '../_anipm.js';
 import { resolveAniWatchDirect } from '../_aniwatch.js';
-import { hdrezkaMeta, rezkaFetch, parseStreams } from '../../_lib/hdrezka.js';
+import { hdrezkaMeta, rezkaFetch, parseStreams, searchRezka } from '../../_lib/hdrezka.js';
 import { resolveHindiFlixStream } from '../../_lib/hindiflix.js';
 
 const BRIDGE_TIMEOUT_MS = 15_000;
@@ -182,6 +182,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               ).bind(animeId).first();
               if (row?.provider_slug) rezkaId = row.provider_slug;
             } catch {}
+          }
+          if (!rezkaId) {
+            rezkaId = await searchRezka(env, resolvedTitle || animeId);
+            if (rezkaId && env.ANIHUB) {
+              try {
+                await env.ANIHUB.prepare(
+                  "INSERT OR IGNORE INTO anime_provider_mapping (anime_id, provider_id, provider_slug) VALUES (?1, 'hdrezka', ?2)"
+                ).bind(animeId, rezkaId).run();
+              } catch {}
+            }
           }
           if (rezkaId) {
             // Translator selection: map studio subservers to their upstream translator_ids

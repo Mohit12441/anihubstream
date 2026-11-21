@@ -5,7 +5,7 @@ import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 import { resolveHiAnimeV2Direct } from './hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from './_anipm.js';
 import { resolveAniWatchDirect } from './_aniwatch.js';
-import { rezkaFetch, parseStreams, hdrezkaMeta } from '../_lib/hdrezka.js';
+import { rezkaFetch, parseStreams, hdrezkaMeta, searchRezka } from '../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 2_000;
 const ANISKIP_TIMEOUT_MS = 500;
@@ -1091,6 +1091,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                   if (row?.provider_slug) rezkaId = row.provider_slug;
                 } catch {}
               }
+              if (!rezkaId) {
+                rezkaId = await searchRezka(env, resolvedTitle || id);
+                if (rezkaId && env.ANIHUB) {
+                  try {
+                    await env.ANIHUB.prepare(
+                      "INSERT OR IGNORE INTO anime_provider_mapping (anime_id, provider_id, provider_slug) VALUES (?1, 'hdrezka', ?2)"
+                    ).bind(id, rezkaId).run();
+                  } catch {}
+                }
+              }
               if (rezkaId) {
                 // KV-first read of pre-cached metadata ahead of live fetch
                 const kvMeta = await hdrezkaMeta(env, rezkaId, season, ep);
@@ -1287,7 +1297,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       }
 
       const isScopedUnavailable = requested === 'hdrezka'
-        ? (!hasRezkaBridge || !bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka')
+        ? (!hasRezkaBridge && !directRes && (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka'))
         : (requested !== 'torrent' && !availableSlugs[requested]);
       let serversToReturn = defaultServers;
       if (requested && requested !== 'auto') {
@@ -1542,7 +1552,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     const isScopedUnavailable = Boolean(
       requested && requested !== 'auto' && (
         requested === 'hdrezka'
-          ? (!hasRezkaBridge || !bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka')
+          ? (!hasRezkaBridge && !directRes && (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka'))
           : (requested !== 'torrent' && !availableSlugs[requested])
       )
     );

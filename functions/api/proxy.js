@@ -68,6 +68,8 @@ const ALLOWED_STREAMING_DOMAINS = [
   'fastly.net',
   'rezka.ag',
   'hdrezka.ag',
+  'hdrezka.me',
+  'hdrezka-home.tv',
   'rezkify.com',
   'voidboost.cc',
   'voidboost.net',
