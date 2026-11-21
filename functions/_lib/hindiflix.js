@@ -18,13 +18,13 @@ export async function resolveHindiFlixStream(title, ep = 1) {
 
   const queries = [];
   const rawClean = String(title).replace(/[-_]+/g, ' ').trim();
-  const seasonMatch = /(?:season\s*(\d+)|s(\d+))/i.exec(String(title));
-  const seasonNum = seasonMatch ? (seasonMatch[1] || seasonMatch[2]) : null;
+  const seasonMatch = /(?:season\s*(\d+)|s(\d+)|(\d+)(?:st|nd|rd|th)\s*season)/i.exec(rawClean);
+  const seasonNum = seasonMatch ? (seasonMatch[1] || seasonMatch[2] || seasonMatch[3]) : null;
 
-  // Primary base name: strip subtitle suffixes
-  const baseName = String(title)
-    .split(/[-–—:]/)[0]
-    .replace(/\s*\(Season \d+\)|\s*Season \d+/i, '')
+  // Primary base name: strip subtitle suffixes and season suffixes
+  const baseName = rawClean
+    .split(/[:]/)[0]
+    .replace(/\s*\(Season \d+\)|\s*Season \d+.*$|\s*\d+(?:st|nd|rd|th)\s*season.*$/i, '')
     .trim();
 
   if (seasonNum && baseName) {
@@ -34,7 +34,7 @@ export async function resolveHindiFlixStream(title, ep = 1) {
   if (baseName && !queries.includes(baseName)) {
     queries.push(baseName);
   }
-  const strippedTitle = rawClean.replace(/\s*\(Season \d+\)|\s*Season \d+/i, '').trim();
+  const strippedTitle = rawClean.replace(/\s*\(Season \d+\)|\s*Season \d+.*$|\s*\d+(?:st|nd|rd|th)\s*season.*$/i, '').trim();
   if (strippedTitle && !queries.includes(strippedTitle)) {
     queries.push(strippedTitle);
   }
@@ -72,19 +72,31 @@ export async function resolveHindiFlixStream(title, ep = 1) {
     if (!hits.length) return null;
 
     let hit = hits[0];
-    if (seasonNum) {
-      const matchedHit = hits.find((h) => {
+    const targetSeason = seasonNum || '1';
+
+    // Prioritize matching the target season (e.g. season-1, season 1, s01, s1)
+    const matchedHit = hits.find((h) => {
+      const link = (h.post_link || '').toLowerCase();
+      const t = (h.post_title || '').toLowerCase();
+      return (
+        link.includes(`season-${targetSeason}`) ||
+        t.includes(`season ${targetSeason}`) ||
+        t.includes(`(season ${targetSeason})`) ||
+        t.includes(`s0${targetSeason}`) ||
+        t.includes(`s${targetSeason}`)
+      );
+    });
+
+    if (matchedHit) {
+      hit = matchedHit;
+    } else if (targetSeason === '1') {
+      // If asking for Season 1 (or default base series), avoid sequels like Season 2, 3, etc.
+      const nonSequelHit = hits.find((h) => {
         const link = (h.post_link || '').toLowerCase();
         const t = (h.post_title || '').toLowerCase();
-        return (
-          link.includes(`season-${seasonNum}`) ||
-          t.includes(`season ${seasonNum}`) ||
-          t.includes(`(season ${seasonNum})`) ||
-          t.includes(`s0${seasonNum}`) ||
-          t.includes(`s${seasonNum}`)
-        );
+        return !/season[- ]([2-9]|\d{2})/i.test(link) && !/season[- ]([2-9]|\d{2})/i.test(t);
       });
-      if (matchedHit) hit = matchedHit;
+      if (nonSequelHit) hit = nonSequelHit;
     }
 
     const seriesRes = await fetch(hit.post_link, {
