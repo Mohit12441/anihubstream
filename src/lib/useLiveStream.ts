@@ -317,13 +317,24 @@ export function useLiveStream(o: Options) {
     };
     const onWaiting = () => setBuffering(true);
     const onClearBuffer = () => setBuffering(false);
+    const onStalled = () => {
+      if (v.readyState < 3 && !v.paused) {
+        setBuffering(true);
+      }
+    };
+    const onTimeUpdate = () => {
+      if (v.readyState >= 3) {
+        setBuffering(false);
+      }
+    };
 
     v.addEventListener('loadedmetadata', onMetadata);
     v.addEventListener('loadeddata', onMetadata);
     v.addEventListener('error', onError);
     v.addEventListener('playing', onPlaying);
     v.addEventListener('waiting', onWaiting);
-    v.addEventListener('stalled', onWaiting);
+    v.addEventListener('stalled', onStalled);
+    v.addEventListener('timeupdate', onTimeUpdate);
     const onCanPlay = () => { onClearBuffer(); markReady(); };
     v.addEventListener('canplay', onCanPlay);
     v.addEventListener('seeked', onClearBuffer);
@@ -605,7 +616,8 @@ export function useLiveStream(o: Options) {
       v.removeEventListener('error', onError);
       v.removeEventListener('playing', onPlaying);
       v.removeEventListener('waiting', onWaiting);
-      v.removeEventListener('stalled', onWaiting);
+      v.removeEventListener('stalled', onStalled);
+      v.removeEventListener('timeupdate', onTimeUpdate);
       v.removeEventListener('canplay', onCanPlay);
       v.removeEventListener('seeked', onClearBuffer);
       hls?.destroy();

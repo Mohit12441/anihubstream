@@ -162,15 +162,16 @@ export function PlayerSettings({
             icon={<AudioWaveform size={16} aria-hidden="true" />}
             label="Audio"
             value={
-              hlsAudioTracks && hlsAudioTracks.length > 0 && currentHlsAudioTrack !== undefined && currentHlsAudioTrack !== -1 && hlsAudioTracks[currentHlsAudioTrack]
+              activeAudioLabel ||
+              (hlsAudioTracks && hlsAudioTracks.length > 0 && currentHlsAudioTrack !== undefined && currentHlsAudioTrack !== -1 && hlsAudioTracks[currentHlsAudioTrack]
                 ? (hlsAudioTracks[currentHlsAudioTrack].name && !hlsAudioTracks[currentHlsAudioTrack].name.startsWith('Audio Track')
                     ? hlsAudioTracks[currentHlsAudioTrack].name
                     : (playingAudio === 'dub' ? 'English (Dub)' : 'Japanese (Original)'))
                 : (playingAudio === 'dub'
                     ? 'English (Dub)'
                     : playingAudio === 'hindi'
-                      ? 'Hindi'
-                      : 'Japanese (Original)')
+                      ? 'Hindi Dub'
+                      : 'Japanese (Original)'))
             }
             onClick={() => onTab('audio')}
           />
@@ -178,10 +179,12 @@ export function PlayerSettings({
             icon={<Captions size={16} aria-hidden="true" />}
             label="Subtitles"
             value={
-              prefs.subtitles.enabled
-                ? (subTracks.find((t) => t.key === prefs.subtitles.language || t.name === prefs.subtitles.language)?.label ??
-                  subLangLabel(prefs.subtitles.language))
-                : 'Off'
+              (!subTracks || subTracks.length === 0)
+                ? 'None'
+                : prefs.subtitles.enabled
+                  ? (subTracks.find((t) => t.key === prefs.subtitles.language || t.name === prefs.subtitles.language)?.label ??
+                    subLangLabel(prefs.subtitles.language))
+                  : 'Off'
             }
             onClick={() => onTab('subs')}
           />

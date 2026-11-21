@@ -139,7 +139,7 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     }
   });
 
-  it('registers individual Russian studio sub-servers (Studio Band, AniLibria, TVShows)', async () => {
+  it('registers individual Russian studio sub-servers (Studio Band, AniLibria, TVShows) and Ukrainian dub studios', async () => {
     const req = new Request('http://127.0.0.1:8795/api/play?id=demon-slayer-bridged&ep=1');
     const res = await onPlayGet({ request: req, env: { STREAM_BRIDGE_URL: 'http://127.0.0.1:8795' } });
     assert.equal(res.status, 200);
@@ -148,14 +148,25 @@ describe('HDRezka Subsystem & Adapter Tests', () => {
     const aniLibria = json.servers.find((s) => s.id === 'hdrezka:anilibria-dub');
     const tvShows = json.servers.find((s) => s.id === 'hdrezka:tvshows-dub');
     const original = json.servers.find((s) => s.id === 'hdrezka:1080p');
+    const fanvox = json.servers.find((s) => s.id === 'hdrezka:fanvoxua-ua-dub');
+    const lifecycle = json.servers.find((s) => s.id === 'hdrezka:lifecycle-ua-dub');
+    const amanogawa = json.servers.find((s) => s.id === 'hdrezka:amanogawa-ua-dub');
+    const hindiflix = json.servers.find((s) => s.id === 'hindiflix:hindi-dub');
 
     assert.ok(studioBand, 'Must include Studio Band dub server');
     assert.ok(aniLibria, 'Must include AniLibria dub server');
     assert.ok(tvShows, 'Must include TVShows dub server');
     assert.ok(original, 'Must include Original sub server');
+    assert.ok(fanvox, 'Must include FanVoxUA Ukrainian dub server');
+    assert.ok(lifecycle, 'Must include Lifecycle Ukrainian dub server');
+    assert.ok(amanogawa, 'Must include Amanogawa Ukrainian dub server');
+    assert.ok(hindiflix, 'Must include HindiFlix server');
     assert.ok(studioBand.name.includes('Studio Band'));
     assert.ok(aniLibria.name.includes('AniLibria'));
     assert.ok(tvShows.name.includes('TVShows'));
     assert.ok(original.name.includes('Original'));
+    assert.ok(fanvox.name.includes('FanVoxUA') && fanvox.name.includes('UA Dub'));
+    assert.equal(fanvox.audioTracks[0].language, 'uk');
+    assert.equal(hindiflix.audioTracks[0].language, 'hi');
   });
 });

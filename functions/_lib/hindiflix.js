@@ -15,36 +15,85 @@ const DEFAULT_HEADERS = {
  */
 export async function resolveHindiFlixStream(title, ep = 1) {
   if (!title) return null;
-  const cleanTitle = title.replace(/\s*\(Season \d+\)|\s*Season \d+/i, '').trim();
+
+  const queries = [];
+  const rawClean = String(title).replace(/[-_]+/g, ' ').trim();
+  const seasonMatch = /(?:season\s*(\d+)|s(\d+))/i.exec(String(title));
+  const seasonNum = seasonMatch ? (seasonMatch[1] || seasonMatch[2]) : null;
+
+  // Primary base name: strip subtitle suffixes
+  const baseName = String(title)
+    .split(/[-–—:]/)[0]
+    .replace(/\s*\(Season \d+\)|\s*Season \d+/i, '')
+    .trim();
+
+  if (seasonNum && baseName) {
+    queries.push(`${baseName} Season ${seasonNum}`);
+    queries.push(`${baseName} ${seasonNum}`);
+  }
+  if (baseName && !queries.includes(baseName)) {
+    queries.push(baseName);
+  }
+  const strippedTitle = rawClean.replace(/\s*\(Season \d+\)|\s*Season \d+/i, '').trim();
+  if (strippedTitle && !queries.includes(strippedTitle)) {
+    queries.push(strippedTitle);
+  }
+  if (rawClean && !queries.includes(rawClean)) {
+    queries.push(rawClean);
+  }
 
   try {
-    // 1. Search HindiFlix via AJAX
-    const searchRes = await fetch(`${HINDIFLIX_BASE}/wp-admin/admin-ajax.php`, {
-      method: 'POST',
-      headers: {
-        ...DEFAULT_HEADERS,
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-      body: new URLSearchParams({
-        action: 'ts_ac_do_search',
-        ts_ac_query: cleanTitle,
-      }).toString(),
-    });
+    // 1. Search HindiFlix via AJAX across candidate queries
+    let hits = [];
+    for (const q of queries) {
+      const searchRes = await fetch(`${HINDIFLIX_BASE}/wp-admin/admin-ajax.php`, {
+        method: 'POST',
+        headers: {
+          ...DEFAULT_HEADERS,
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: new URLSearchParams({
+          action: 'ts_ac_do_search',
+          ts_ac_query: q,
+        }).toString(),
+      });
 
-    if (!searchRes.ok) return null;
-    const data = await searchRes.json().catch(() => null);
-    const hits = data?.anime?.[0]?.all || [];
+      if (searchRes.ok) {
+        const data = await searchRes.json().catch(() => null);
+        const found = data?.anime?.[0]?.all || [];
+        if (found.length) {
+          hits = found;
+          break;
+        }
+      }
+    }
+
     if (!hits.length) return null;
 
-    const hit = hits[0];
+    let hit = hits[0];
+    if (seasonNum) {
+      const matchedHit = hits.find((h) => {
+        const link = (h.post_link || '').toLowerCase();
+        const t = (h.post_title || '').toLowerCase();
+        return (
+          link.includes(`season-${seasonNum}`) ||
+          t.includes(`season ${seasonNum}`) ||
+          t.includes(`(season ${seasonNum})`) ||
+          t.includes(`s0${seasonNum}`) ||
+          t.includes(`s${seasonNum}`)
+        );
+      });
+      if (matchedHit) hit = matchedHit;
+    }
+
     const seriesRes = await fetch(hit.post_link, {
       headers: DEFAULT_HEADERS,
     });
     if (!seriesRes.ok) return null;
 
     const seriesHtml = await seriesRes.text();
-    const epRegex = /<a[^>]+href="(https:\/\/hindiflix\.cc\/[^"]*episode-(\d+)[^"]*)"[^>]*>/gi;
+    const epRegex = /<a[^>]+href="(https:\/\/hindiflix\.cc\/[^"]*(?:episode|ep)-(\d+)[^"]*)"[^>]*>/gi;
     let targetUrl = null;
     let firstUrl = null;
     let match;

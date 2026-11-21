@@ -528,6 +528,10 @@ export function AdvancedPlayer(props: Props) {
       notify('This server has subtitles inbuilt directly in the video.');
       return;
     }
+    if (!live.subTracks || live.subTracks.length === 0) {
+      notify('No subtitles available for this stream.');
+      return;
+    }
     props.patchSubs({ enabled: !prefs.subtitles.enabled });
     notify(
       prefs.subtitles.enabled
@@ -537,7 +541,7 @@ export function AdvancedPlayer(props: Props) {
           : 'Captions on — this stream carries no caption track, so nothing is shown.',
     );
     wake();
-  }, [initialServer?.hardcodedSubs, prefs.subtitles.enabled, wake, live.subName, props, notify]);
+  }, [initialServer?.hardcodedSubs, live.subTracks, prefs.subtitles.enabled, wake, live.subName, props, notify]);
 
   /* ---------- tell the viewer what the caption track actually did ---------- */
   const subNoticeRef = useRef<string | null>(null);
@@ -1061,10 +1065,10 @@ export function AdvancedPlayer(props: Props) {
                     : 'Auto')
                 : (live.levels.length === 1
                     ? live.levels[0].label
-                    : (live.info ? `${live.info.quality}p` : '1080p'))
+                    : (live.info?.quality ? (String(live.info.quality).endsWith('p') ? String(live.info.quality) : `${live.info.quality}p`) : '1080p'))
             }
             onQuality={() => setMenu({ kind: 'settings', tab: 'quality' })}
-            subOn={prefs.subtitles.enabled}
+            subOn={prefs.subtitles.enabled && Boolean(live.subTracks && live.subTracks.length > 0)}
             subLang={prefs.subtitles.language}
             onToggleCaptions={toggleCaptions}
             serverOpen={false}
@@ -1113,18 +1117,21 @@ export function AdvancedPlayer(props: Props) {
               subState={live.subState}
               subReady={liveReady}
               playingAudio={
-                (activeServer?.id.includes('-dub') || activeServer?.audio === 'dub' || live.info?.audio === 'dub' || (prefs.audio === 'dub' && !activeServer?.id.includes('-sub')))
-                  ? 'dub'
-                  : (activeServer?.id.includes('hindi') || live.info?.audio === 'hindi' || prefs.audio === 'hindi')
-                    ? 'hindi'
+                (activeServer?.id.includes('hindi') || activeServer?.audio === 'hindi' || live.info?.audio === 'hindi' || prefs.audio === 'hindi')
+                  ? 'hindi'
+                  : (activeServer?.id.includes('-dub') || activeServer?.audio === 'dub' || live.info?.audio === 'dub' || (prefs.audio === 'dub' && !activeServer?.id.includes('-sub')))
+                    ? 'dub'
                     : 'sub'
               }
               activeAudioLabel={
                 activeServer?.audioTracks?.[0]?.label ||
                 (live.info?.audioTracks?.[0] as any)?.label ||
                 live.info?.audioTracks?.[0]?.name ||
+                (activeServer?.id.includes('hindi') ? 'Hindi Dub' : undefined) ||
                 (activeServer?.id.startsWith('hdrezka:')
-                  ? (activeServer.id.includes('dub') ? 'Russian Dub' : 'Japanese (Original)')
+                  ? (activeServer.id.includes('ua') || activeServer.id.includes('uk') || activeServer.name?.includes('🇺🇦')
+                      ? 'Ukrainian Dub 🇺🇦'
+                      : (activeServer.id.includes('dub') ? 'Russian Dub' : 'Japanese (Original)'))
                   : undefined)
               }
               audioList={null}
@@ -1144,7 +1151,7 @@ export function AdvancedPlayer(props: Props) {
                       : 'Auto')
                   : (live.levels.length === 1
                       ? live.levels[0].label
-                      : (live.info ? `${live.info.quality}p` : '1080p'))
+                      : (live.info?.quality ? (String(live.info.quality).endsWith('p') ? String(live.info.quality) : `${live.info.quality}p`) : '1080p'))
               }
               onQualityPick={(index, label) => {
                 live.setQualityLevel(index);

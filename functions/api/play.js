@@ -522,6 +522,66 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       status: hasRezkaBridge ? 'ready' : 'unavailable',
       unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
       audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'TVShows Dub', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:jam-dub',
+      name: 'HDRezka · JAM (RU Dub)',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'jam-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'JAM Dub', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:dreamcast-dub',
+      name: 'HDRezka · DreamCast (RU Dub)',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'dreamcast-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-ru', language: 'ru', label: 'DreamCast Dub', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:fanvoxua-ua-dub',
+      name: 'HDRezka · FanVoxUA (UA Dub) 🇺🇦',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'fanvoxua-ua-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-uk', language: 'uk', label: 'FanVoxUA Dub 🇺🇦', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:lifecycle-ua-dub',
+      name: 'HDRezka · Lifecycle (UA Dub) 🇺🇦',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'lifecycle-ua-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-uk', language: 'uk', label: 'Lifecycle Dub 🇺🇦', default: true }],
+    }),
+    makeServer({
+      id: 'hdrezka:amanogawa-ua-dub',
+      name: 'HDRezka · Amanogawa (UA Dub) 🇺🇦',
+      provider: 'hdrezka',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'hdrezka', server: 'amanogawa-ua-dub' }),
+      type: 'mp4',
+      quality: '1080p',
+      audio: 'dub',
+      status: hasRezkaBridge ? 'ready' : 'unavailable',
+      unavailableReason: hasRezkaBridge ? null : 'Proxy Required',
+      audioTracks: [{ id: 'audio-uk', language: 'uk', label: 'Amanogawa Dub 🇺🇦', default: true }],
     })
   );
 
@@ -530,10 +590,10 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
       id: 'hindiflix:hindi-dub',
       name: 'HindiFlix · Hindi Dub (Direct MP4)',
       provider: 'hindiflix',
-      streamUrl: resolveUrl({ audio: 'dub', provider: 'hindiflix', server: 'hindi-dub' }),
+      streamUrl: resolveUrl({ audio: 'hindi', provider: 'hindiflix', server: 'hindi-dub' }),
       type: 'mp4',
       quality: '1080p',
-      audio: 'dub',
+      audio: 'hindi',
       status: 'ready',
       audioTracks: [{ id: 'audio-hi', language: 'hi', label: 'Hindi Dub', default: true }],
       subtitles: [],
@@ -706,18 +766,19 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       } catch {}
     }
 
+    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL || env?.STREAM_KV || env?.HDREZKA_COOKIE);
+
     const availableSlugs = {
       anikoto: animeRow?.anikoto_slug || pmRows.find((p) => p.provider_id === 'anikoto')?.provider_slug || (id || null),
       hianime: animeRow?.hianime_slug || pmRows.find((p) => p.provider_id === 'hianime')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : (id || null)),
       aniwatch: animeRow?.aniwatch_slug || pmRows.find((p) => p.provider_id === 'aniwatch')?.provider_slug || (resolvedMalId > 0 ? String(resolvedMalId) : null),
       anipm: resolvedAnilistId ? String(resolvedAnilistId) : (animeRow?.anilist_id ? String(animeRow.anilist_id) : null),
-      hdrezka: pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || null,
+      hdrezka: pmRows.find((p) => p.provider_id === 'hdrezka')?.provider_slug || (hasRezkaBridge ? (id || 'available') : null),
     };
 
     const rawRequested = (url.searchParams.get('provider') || '').toLowerCase().trim();
     let requested = rawRequested;
 
-    const hasRezkaBridge = Boolean(env?.STREAM_BRIDGE_URL || env?.STREAM_KV || env?.HDREZKA_COOKIE);
     const getAvailableProvidersList = () => [
       { id: 'anikoto', name: 'AniKoto', available: Boolean(availableSlugs.anikoto), ...(providerHealth.anikoto || {}) },
       { id: 'hianime', name: 'HiAnime', available: Boolean(availableSlugs.hianime), ...(providerHealth.hianime || {}) },
@@ -1115,33 +1176,50 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 if (kvMeta?.ok && kvMeta.payload) {
                   rawPayload = kvMeta.payload;
                 } else {
-                const sCandidates = season > 1 ? [String(season), '1'] : ['1', '2'];
-                const trCandidates = (audio === 'sub' || audio === 'ja') ? ['238', '105', '19'] : ['105', '19', '565', '238'];
-                for (const sNum of sCandidates) {
-                  for (const tr of trCandidates) {
-                    const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
-                      method: 'POST',
-                      headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
-                      body: new URLSearchParams({
-                        id: String(rezkaId),
-                        translator_id: tr,
-                        season: sNum,
-                        episode: String(ep || 1),
-                        action: 'get_stream',
-                      }).toString(),
-                    });
-                    if (res && res.ok) {
-                      const data = await res.json().catch(() => null);
-                      if (data?.success && data?.url) {
-                        rawPayload = data.url;
-                        subtitleRaw = data.subtitle;
-                        resolvedTranslator = tr;
-                        break;
+                  const srvLower = String(serverParam || '').toLowerCase();
+                  let targetTr = null;
+                  if (srvLower.includes('fanvox') || srvLower.includes('444')) targetTr = '444';
+                  else if (srvLower.includes('lifecycle') || srvLower.includes('487')) targetTr = '487';
+                  else if (srvLower.includes('amanogawa') || srvLower.includes('518')) targetTr = '518';
+                  else if (srvLower.includes('jam') || srvLower.includes('115')) targetTr = '115';
+                  else if (srvLower.includes('dreamcast') || srvLower.includes('477')) targetTr = '477';
+                  else if (srvLower.includes('anilibria') || srvLower.includes('19')) targetTr = '19';
+                  else if (srvLower.includes('tvshows') || srvLower.includes('565')) targetTr = '565';
+                  else if (srvLower.includes('studioband') || srvLower.includes('105')) targetTr = '105';
+                  else if (srvLower.includes('original') || srvLower.includes('238') || srvLower.includes('1080p')) targetTr = '238';
+
+                  const isUaRequested = targetTr === '444' || targetTr === '487' || targetTr === '518' || srvLower.includes('-ua-') || srvLower.includes('ukr');
+                  const sCandidates = season > 1 ? [String(season), '1'] : ['1', '2'];
+                  const trCandidates = targetTr
+                    ? [targetTr]
+                    : (isUaRequested
+                        ? ['444', '487', '518']
+                        : ((audio === 'sub' || audio === 'ja') ? ['238', '105', '19'] : ['105', '19', '565', '115', '477', '444', '238']));
+                  for (const sNum of sCandidates) {
+                    for (const tr of trCandidates) {
+                      const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
+                        method: 'POST',
+                        headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
+                        body: new URLSearchParams({
+                          id: String(rezkaId),
+                          translator_id: tr,
+                          season: sNum,
+                          episode: String(ep || 1),
+                          action: 'get_stream',
+                        }).toString(),
+                      });
+                      if (res && res.ok) {
+                        const data = await res.json().catch(() => null);
+                        if (data?.success && data?.url) {
+                          rawPayload = data.url;
+                          subtitleRaw = data.subtitle;
+                          resolvedTranslator = tr;
+                          break;
+                        }
                       }
                     }
+                    if (rawPayload) break;
                   }
-                  if (rawPayload) break;
-                }
                 }
 
                 if (rawPayload) {
@@ -1166,6 +1244,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       }
                     }
 
+                    const isUaAudio = resolvedTranslator === '444' || resolvedTranslator === '487' || resolvedTranslator === '518';
                     const isJaAudio = resolvedTranslator === '238' || (audio === 'sub' && !resolvedTranslator);
                     direct = {
                       streamUrl: chosen.url,
@@ -1173,10 +1252,12 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                       type: 'mp4',
                       provider: 'hdrezka',
                       referrerPolicy: 'no-referrer',
-                      audio: isJaAudio ? 'sub' : 'russian',
+                      audio: isJaAudio ? 'sub' : (isUaAudio ? 'dub' : 'russian'),
                       audioTracks: isJaAudio
                         ? [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]
-                        : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }],
+                        : (isUaAudio
+                            ? [{ id: 'audio-uk', language: 'uk', label: 'Ukrainian Dub 🇺🇦', default: true }]
+                            : [{ id: 'audio-ru', language: 'ru', label: 'Russian Dub', default: true }]),
                       subtitles: rezkaSubs,
                       direct: pool,
                     };
@@ -1393,18 +1474,33 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
     // Construct primary server entry
     const resolvedAudio = typeof meta.audio === 'string' ? meta.audio : audio;
     const srvParamLower = String(cleanPrimaryServer || '').toLowerCase();
-    const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || srvParamLower.includes('dub') || resolvedAudio === 'russian');
+    const isRezkaDub = prov === 'hdrezka' && (audio === 'dub' || srvParamLower.includes('dub') || resolvedAudio === 'russian' || resolvedAudio === 'ukrainian' || srvParamLower.includes('ua'));
     let rezkaSuffix = 'studioband-dub';
-    let rezkaStudioName = 'Studio Band';
-    if (srvParamLower.includes('anilibria') || meta.audioTracks?.[0]?.label?.includes('AniLibria')) {
+    let rezkaStudioName = 'Studio Band (RU Dub)';
+    if (srvParamLower.includes('fanvox') || srvParamLower.includes('444')) {
+      rezkaSuffix = 'fanvoxua-ua-dub';
+      rezkaStudioName = 'FanVoxUA (UA Dub) 🇺🇦';
+    } else if (srvParamLower.includes('lifecycle') || srvParamLower.includes('487')) {
+      rezkaSuffix = 'lifecycle-ua-dub';
+      rezkaStudioName = 'Lifecycle (UA Dub) 🇺🇦';
+    } else if (srvParamLower.includes('amanogawa') || srvParamLower.includes('518')) {
+      rezkaSuffix = 'amanogawa-ua-dub';
+      rezkaStudioName = 'Amanogawa (UA Dub) 🇺🇦';
+    } else if (srvParamLower.includes('jam') || srvParamLower.includes('115')) {
+      rezkaSuffix = 'jam-dub';
+      rezkaStudioName = 'JAM (RU Dub)';
+    } else if (srvParamLower.includes('dreamcast') || srvParamLower.includes('477')) {
+      rezkaSuffix = 'dreamcast-dub';
+      rezkaStudioName = 'DreamCast (RU Dub)';
+    } else if (srvParamLower.includes('anilibria') || meta.audioTracks?.[0]?.label?.includes('AniLibria')) {
       rezkaSuffix = 'anilibria-dub';
-      rezkaStudioName = 'AniLibria';
+      rezkaStudioName = 'AniLibria (RU Dub)';
     } else if (srvParamLower.includes('tvshows') || meta.audioTracks?.[0]?.label?.includes('TVShows')) {
       rezkaSuffix = 'tvshows-dub';
-      rezkaStudioName = 'TVShows';
+      rezkaStudioName = 'TVShows (RU Dub)';
     } else if (!isRezkaDub) {
       rezkaSuffix = '1080p';
-      rezkaStudioName = 'Original';
+      rezkaStudioName = 'Original (Japanese)';
     }
 
     const isDub = audio === 'dub' || resolvedAudio === 'dub' || cleanPrimaryServer.toLowerCase().includes('-dub');
@@ -1434,7 +1530,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     const primaryServer = {
       id: activeServerId,
-      name: prov === 'hdrezka' ? (isRezkaDub ? `HDRezka · ${rezkaStudioName} (RU Dub)` : 'HDRezka · Original (Japanese)') : primaryServerName,
+      name: prov === 'hdrezka' ? `HDRezka · ${rezkaStudioName}` : primaryServerName,
       provider: prov,
       status: 'ready',
       streamUrl,
@@ -1443,9 +1539,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       quality: meta.quality || '1080p',
       audio: prov === 'hdrezka' ? (isRezkaDub ? 'dub' : 'sub') : (isDub ? 'dub' : 'sub'),
       audioTracks: prov === 'hdrezka'
-        ? (isRezkaDub
-          ? [{ id: 'audio-ru', language: 'ru', label: `${rezkaStudioName} Dub`, default: true }]
-          : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }])
+        ? (rezkaSuffix.includes('ua')
+          ? [{ id: 'audio-uk', language: 'uk', label: rezkaStudioName, default: true }]
+          : (isRezkaDub
+            ? [{ id: 'audio-ru', language: 'ru', label: rezkaStudioName, default: true }]
+            : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]))
         : primaryAudioTracks,
       subtitles,
       thumbnails: meta.thumbnails?.url

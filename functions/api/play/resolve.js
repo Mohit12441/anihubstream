@@ -204,16 +204,40 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           if (rezkaId) {
             // Translator selection: map studio subservers to their upstream translator_ids
             const srvLower = String(rawServerParam || serverParam || '').toLowerCase();
+            const REZKA_STUDIO_MAP = {
+              '105': { suffix: 'studioband-dub', name: 'Studio Band', lang: 'ru' },
+              '565': { suffix: 'tvshows-dub', name: 'TVShows', lang: 'ru' },
+              '19':  { suffix: 'anilibria-dub', name: 'AniLibria', lang: 'ru' },
+              '115': { suffix: 'jam-dub', name: 'JAM', lang: 'ru' },
+              '477': { suffix: 'dreamcast-dub', name: 'DreamCast', lang: 'ru' },
+              '608': { suffix: 'anibaza-dub', name: 'AniBaza', lang: 'ru' },
+              '618': { suffix: 'todubbing-dub', name: 'TO Dubbing', lang: 'ru' },
+              '635': { suffix: 'youkai-dub', name: 'Youkai Studio', lang: 'ru' },
+              '444': { suffix: 'fanvoxua-ua-dub', name: 'FanVoxUA 🇺🇦', lang: 'uk' },
+              '487': { suffix: 'lifecycle-ua-dub', name: 'Lifecycle 🇺🇦', lang: 'uk' },
+              '518': { suffix: 'amanogawa-ua-dub', name: 'Amanogawa 🇺🇦', lang: 'uk' },
+              '238': { suffix: '1080p', name: 'Original', lang: 'ja' },
+            };
+
             let targetTr = null;
-            if (srvLower.includes('anilibria') || srvLower.includes('19')) targetTr = '19';
+            if (srvLower.includes('fanvox') || srvLower.includes('444')) targetTr = '444';
+            else if (srvLower.includes('lifecycle') || srvLower.includes('487')) targetTr = '487';
+            else if (srvLower.includes('amanogawa') || srvLower.includes('518')) targetTr = '518';
+            else if (srvLower.includes('jam') || srvLower.includes('115')) targetTr = '115';
+            else if (srvLower.includes('dreamcast') || srvLower.includes('477')) targetTr = '477';
+            else if (srvLower.includes('anibaza') || srvLower.includes('608')) targetTr = '608';
+            else if (srvLower.includes('todubbing') || srvLower.includes('618')) targetTr = '618';
+            else if (srvLower.includes('youkai') || srvLower.includes('635')) targetTr = '635';
+            else if (srvLower.includes('anilibria') || srvLower.includes('19')) targetTr = '19';
             else if (srvLower.includes('tvshows') || srvLower.includes('565')) targetTr = '565';
             else if (srvLower.includes('studioband') || srvLower.includes('105')) targetTr = '105';
             else if (srvLower.includes('original') || srvLower.includes('238') || srvLower.includes('1080p')) targetTr = '238';
 
-            const isDubAudio = audio === 'dub' || audio === 'russian' || (targetTr && targetTr !== '238') || srvLower.includes('dub');
+            const isUaDub = targetTr === '444' || targetTr === '487' || targetTr === '518' || srvLower.includes('-ua-') || srvLower.includes('ukr');
+            const isDubAudio = isUaDub || audio === 'dub' || audio === 'russian' || audio === 'ukrainian' || (targetTr && targetTr !== '238') || srvLower.includes('dub');
             const TRANSLATORS = targetTr
               ? [targetTr]
-              : (isDubAudio ? ['105', '19', '565'] : ['238', '105']);
+              : (isUaDub ? ['444', '487', '518'] : (isDubAudio ? ['105', '19', '565', '115', '477', '608', '618', '635'] : ['238', '105']));
             const sCandidates = [String(season)];
             if (season > 1) sCandidates.push('1');
             for (const sNum of sCandidates) {
@@ -264,33 +288,33 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     });
                   }
                 }
-                const isRezkaDub = resolvedTid !== '238' && (audio === 'dub' || isDubAudio);
-                let rezkaSuffix = 'studioband-dub';
-                let rezkaStudioName = 'Studio Band';
-                if (resolvedTid === '19' || srvLower.includes('anilibria')) {
-                  rezkaSuffix = 'anilibria-dub';
-                  rezkaStudioName = 'AniLibria';
-                } else if (resolvedTid === '565' || srvLower.includes('tvshows')) {
-                  rezkaSuffix = 'tvshows-dub';
-                  rezkaStudioName = 'TVShows';
-                } else if (!isRezkaDub || resolvedTid === '238') {
-                  rezkaSuffix = '1080p';
-                  rezkaStudioName = 'Original';
-                }
+                const studioInfo = REZKA_STUDIO_MAP[resolvedTid] || {
+                  suffix: isUaDub ? 'fanvoxua-ua-dub' : 'studioband-dub',
+                  name: isUaDub ? 'FanVoxUA 🇺🇦' : 'StudioBand',
+                  lang: isUaDub ? 'uk' : 'ru',
+                };
+                const isRezkaDub = resolvedTid !== '238' && (isDubAudio || isUaDub);
+                const serverLang = studioInfo.lang;
+                const studioLabel = serverLang === 'uk'
+                  ? `${studioInfo.name} (UA Dub)`
+                  : (isRezkaDub ? `${studioInfo.name} (RU Dub)` : 'Original (Japanese)');
+                const serverAudioTrack = serverLang === 'uk'
+                  ? [{ id: 'audio-uk', language: 'uk', label: `${studioInfo.name} Dub 🇺🇦`, default: true }]
+                  : (isRezkaDub
+                      ? [{ id: 'audio-ru', language: 'ru', label: `${studioInfo.name} Dub`, default: true }]
+                      : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }]);
 
                 return ok({
                   server: {
-                    id: isRezkaDub ? `hdrezka:${rezkaSuffix}` : 'hdrezka:1080p',
-                    name: isRezkaDub ? `HDRezka · ${rezkaStudioName} (RU Dub)` : 'HDRezka · Original (Japanese)',
+                    id: isRezkaDub ? `hdrezka:${studioInfo.suffix}` : 'hdrezka:1080p',
+                    name: `HDRezka · ${studioLabel}`,
                     provider: 'hdrezka',
                     status: 'ready',
                     streamUrl: chosen.url,
                     type: 'mp4',
                     quality: chosen.quality || '1080p',
                     audio: isRezkaDub ? 'dub' : 'sub',
-                    audioTracks: isRezkaDub
-                      ? [{ id: 'audio-ru', language: 'ru', label: `${rezkaStudioName} Dub`, default: true }]
-                      : [{ id: 'audio-ja', language: 'ja', label: 'Japanese (Original)', default: true }],
+                    audioTracks: serverAudioTrack,
                     subtitles: rezkaSubs,
                   }
                 }, { cache: 'no-store, no-cache, must-revalidate' });
@@ -304,16 +328,18 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           try {
             const hfRes = await resolveHindiFlixStream(resolvedTitle || animeId, ep || 1);
             if (hfRes?.streamUrl) {
+              const proxyBase = `${url.origin}/api/proxy`;
+              const proxiedUrl = `${proxyBase}?url=${encodeURIComponent(hfRes.streamUrl)}&referer=${encodeURIComponent('https://hindiflix.cc/')}`;
               return ok({
                 server: {
                   id: 'hindiflix:hindi-dub',
                   name: 'HindiFlix · Hindi Dub (Direct MP4)',
                   provider: 'hindiflix',
                   status: 'ready',
-                  streamUrl: hfRes.streamUrl,
+                  streamUrl: proxiedUrl,
                   type: 'mp4',
                   quality: hfRes.quality || '1080p',
-                  audio: 'dub',
+                  audio: 'hindi',
                   audioTracks: [{ id: 'audio-hi', language: 'hi', label: 'Hindi Dub', default: true }],
                   subtitles: [],
                 }
@@ -329,7 +355,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 status: 'unavailable',
                 unavailableReason: 'Hindi dub not found on HindiFlix for this title or episode.',
                 streamUrl: null,
-                audio: 'dub',
+                audio: 'hindi',
                 audioTracks: [],
                 subtitles: [],
                 quality: '1080p',
