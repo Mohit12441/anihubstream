@@ -1,4 +1,5 @@
 import { onRequestGet as sitemapHandler } from './sitemap.xml.js';
+import { onRequestGet as feedHandler } from './feed.xml.js';
 
 export async function onRequest(context) {
   const { request, next, env } = context;
@@ -9,12 +10,19 @@ export async function onRequest(context) {
     return sitemapHandler(context);
   }
 
+  if (path === '/feed.xml' || path === '/rss.xml') {
+    return feedHandler(context);
+  }
+
   if (path === '/robots.txt') {
     const robots = [
       'User-agent: *',
       'Allow: /',
       'Allow: /anime',
       'Allow: /watch',
+      'Allow: /embed',
+      'Allow: /feed.xml',
+      'Allow: /rss.xml',
       'Allow: /api/anime',
       'Allow: /api/genres',
       'Allow: /api/home',
