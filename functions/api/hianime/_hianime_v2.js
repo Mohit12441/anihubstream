@@ -133,6 +133,10 @@ export async function extractDirectStreamFromEmbed(embedUrl, deps = {}) {
   return null;
 }
 
+const HIANIME_EPISODES_CACHE = new Map();
+const HIANIME_SLUG_ID_CACHE = new Map();
+const HIANIME_CACHE_TTL = 30 * 60 * 1000;
+
 /**
  * Resolves a HiAnime v2 stream directly without iframe/ads using official v2 Ajax endpoints.
  * 
@@ -149,6 +153,13 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
   let numericId = String(animeId || '').trim();
   const targetServerName = (server || 'HD-3').replace(/-dub$/i, '').toUpperCase();
   const wantedAudio = audio === 'dub' ? 'dub' : 'sub';
+
+  if (!numericId && slug) {
+    const cachedId = HIANIME_SLUG_ID_CACHE.get(slug);
+    if (cachedId) {
+      numericId = cachedId;
+    }
+  }
 
   if (!numericId && slug) {
     const suffixMatch = /-([0-9]+)$/.exec(slug);
@@ -171,6 +182,7 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
             const idMatch = /href="\/watch\/[^"?]*-([0-9]+)(?:\?[^"]*)?"/i.exec(searchHtml);
             if (idMatch) {
               numericId = idMatch[1];
+              HIANIME_SLUG_ID_CACHE.set(slug, numericId);
               break;
             }
           }
@@ -182,13 +194,30 @@ export async function resolveHiAnimeV2Direct({ slug = '', animeId = '', ep = 1, 
   // 1. Try resolving via official HiAnime v2 API
   if (numericId) {
     try {
-      const epListRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/list/${numericId}`, {
-        headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
-        signal: AbortSignal.timeout(3500),
-      });
-      if (epListRes.ok) {
-        const epListData = await epListRes.json();
-        const episodes = parseHiAnimeEpisodeList(epListData?.html || '');
+      let episodes = null;
+      const cachedEps = HIANIME_EPISODES_CACHE.get(numericId);
+      if (cachedEps && Date.now() < cachedEps.expires) {
+        episodes = cachedEps.episodes;
+      }
+
+      if (!episodes) {
+        const epListRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/list/${numericId}`, {
+          headers: { 'User-Agent': USER_AGENT, Referer: `${HIANIME_MAIN}/`, 'X-Requested-With': 'XMLHttpRequest' },
+          signal: AbortSignal.timeout(3500),
+        });
+        if (epListRes.ok) {
+          const epListData = await epListRes.json();
+          episodes = parseHiAnimeEpisodeList(epListData?.html || '');
+          if (episodes.length > 0) {
+            HIANIME_EPISODES_CACHE.set(numericId, {
+              episodes,
+              expires: Date.now() + HIANIME_CACHE_TTL,
+            });
+          }
+        }
+      }
+
+      if (episodes && episodes.length > 0) {
         const targetEp = episodes.find((e) => e.number === Number(ep)) || episodes[0];
         if (targetEp?.id) {
           const serversRes = await fetch(`${HIANIME_MAIN}/ajax/v2/episode/servers?episodeId=${targetEp.id}`, {

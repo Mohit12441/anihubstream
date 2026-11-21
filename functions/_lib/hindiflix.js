@@ -7,6 +7,10 @@ const DEFAULT_HEADERS = {
   'Origin': HINDIFLIX_BASE,
 };
 
+const HINDIFLIX_SERIES_CACHE = new Map();
+const HINDIFLIX_STREAM_CACHE = new Map();
+const HINDIFLIX_CACHE_TTL = 30 * 60 * 1000;
+
 /**
  * Searches and extracts direct stream payload for an anime title and episode on HindiFlix.
  * @param {string} title
@@ -15,6 +19,12 @@ const DEFAULT_HEADERS = {
  */
 export async function resolveHindiFlixStream(title, ep = 1) {
   if (!title) return null;
+
+  const streamKey = `${String(title).toLowerCase().trim()}:${ep}`;
+  const cachedStream = HINDIFLIX_STREAM_CACHE.get(streamKey);
+  if (cachedStream && Date.now() < cachedStream.expires) {
+    return cachedStream.data;
+  }
 
   const queries = [];
   const rawClean = String(title).replace(/[-_]+/g, ' ').trim();
@@ -43,10 +53,10 @@ export async function resolveHindiFlixStream(title, ep = 1) {
   }
 
   try {
-    // 1. Search HindiFlix via AJAX across candidate queries
+    // 1. Search HindiFlix via AJAX in parallel across candidate queries
     let hits = [];
-    for (const q of queries) {
-      const searchRes = await fetch(`${HINDIFLIX_BASE}/wp-admin/admin-ajax.php`, {
+    const searchPromises = queries.slice(0, 3).map((q) =>
+      fetch(`${HINDIFLIX_BASE}/wp-admin/admin-ajax.php`, {
         method: 'POST',
         headers: {
           ...DEFAULT_HEADERS,
@@ -57,15 +67,18 @@ export async function resolveHindiFlixStream(title, ep = 1) {
           action: 'ts_ac_do_search',
           ts_ac_query: q,
         }).toString(),
-      });
+        signal: AbortSignal.timeout(3500),
+      })
+        .then((res) => (res.ok ? res.json() : null))
+        .then((data) => data?.anime?.[0]?.all || [])
+        .catch(() => [])
+    );
 
-      if (searchRes.ok) {
-        const data = await searchRes.json().catch(() => null);
-        const found = data?.anime?.[0]?.all || [];
-        if (found.length) {
-          hits = found;
-          break;
-        }
+    const results = await Promise.all(searchPromises);
+    for (const resHits of results) {
+      if (resHits.length > 0) {
+        hits = resHits;
+        break;
       }
     }
 
@@ -99,12 +112,24 @@ export async function resolveHindiFlixStream(title, ep = 1) {
       if (nonSequelHit) hit = nonSequelHit;
     }
 
-    const seriesRes = await fetch(hit.post_link, {
-      headers: DEFAULT_HEADERS,
-    });
-    if (!seriesRes.ok) return null;
-
-    const seriesHtml = await seriesRes.text();
+    let seriesHtml = '';
+    const cachedSeries = HINDIFLIX_SERIES_CACHE.get(hit.post_link);
+    if (cachedSeries && Date.now() < cachedSeries.expires) {
+      seriesHtml = cachedSeries.html;
+    } else {
+      const seriesRes = await fetch(hit.post_link, {
+        headers: DEFAULT_HEADERS,
+        signal: AbortSignal.timeout(4000),
+      });
+      if (!seriesRes.ok) return null;
+      seriesHtml = await seriesRes.text();
+      if (seriesHtml) {
+        HINDIFLIX_SERIES_CACHE.set(hit.post_link, {
+          html: seriesHtml,
+          expires: Date.now() + HINDIFLIX_CACHE_TTL,
+        });
+      }
+    }
     const epRegex = /<a[^>]+href="(https:\/\/hindiflix\.cc\/[^"]*(?:episode|ep)-(\d+)[^"]*)"[^>]*>/gi;
     let targetUrl = null;
     let firstUrl = null;
@@ -141,11 +166,22 @@ export async function resolveHindiFlixStream(title, ep = 1) {
     if (directUrl.includes('720p')) quality = '720p';
     else if (directUrl.includes('480p')) quality = '480p';
 
-    return {
+    const resData = {
       streamUrl: directUrl,
       type: 'mp4',
       quality,
     };
+
+    if (HINDIFLIX_STREAM_CACHE.size >= 500) {
+      const first = HINDIFLIX_STREAM_CACHE.keys().next().value;
+      if (first) HINDIFLIX_STREAM_CACHE.delete(first);
+    }
+    HINDIFLIX_STREAM_CACHE.set(streamKey, {
+      data: resData,
+      expires: Date.now() + HINDIFLIX_CACHE_TTL,
+    });
+
+    return resData;
   } catch {
     return null;
   }

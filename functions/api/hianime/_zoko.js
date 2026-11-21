@@ -32,6 +32,9 @@ export function decodeZokoPayloadEdge(html) {
   }
 }
 
+const ZOKO_CACHE = new Map();
+const ZOKO_CACHE_TTL = 20 * 60 * 1000;
+
 /**
  * Resolves a ZokoAnime embed URL into a streamable master M3U8 on Cloudflare Edge.
  *
@@ -41,6 +44,13 @@ export function decodeZokoPayloadEdge(html) {
  * @returns {Promise<{ masterUrl: string, headers: Record<string, string>, defaultQuality?: string, skip?: any, subtitles?: any[] } | null>}
  */
 export async function resolveZokoEmbedEdge(embedUrl, { signal } = {}) {
+  if (!embedUrl) return null;
+  const now = Date.now();
+  const cached = ZOKO_CACHE.get(embedUrl);
+  if (cached && now < cached.expires) {
+    return cached.data;
+  }
+
   try {
     const res = await fetch(embedUrl, {
       headers: {
@@ -72,7 +82,7 @@ export async function resolveZokoEmbedEdge(embedUrl, { signal } = {}) {
         };
       });
 
-    return {
+    const result = {
       masterUrl: payload.src,
       headers: {
         Referer: 'https://zokoanime.video/',
@@ -82,6 +92,14 @@ export async function resolveZokoEmbedEdge(embedUrl, { signal } = {}) {
       skip: payload.skip || null,
       subtitles,
     };
+
+    if (ZOKO_CACHE.size >= 500) {
+      const first = ZOKO_CACHE.keys().next().value;
+      if (first) ZOKO_CACHE.delete(first);
+    }
+    ZOKO_CACHE.set(embedUrl, { data: result, expires: Date.now() + ZOKO_CACHE_TTL });
+
+    return result;
   } catch {
     return null;
   }

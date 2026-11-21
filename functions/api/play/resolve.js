@@ -9,6 +9,7 @@ import { hdrezkaMeta, rezkaFetch, parseStreams, searchRezka } from '../../_lib/h
 import { resolveHindiFlixStream } from '../../_lib/hindiflix.js';
 
 const BRIDGE_TIMEOUT_MS = 15_000;
+const REZKA_TID_CACHE = new Map();
 
 /**
  * Lazy Server Stream Resolution Endpoint
@@ -17,8 +18,13 @@ const BRIDGE_TIMEOUT_MS = 15_000;
  * GET /api/play/resolve?anime_id=<id>&ep=<ep>&audio=<audio>&provider=<prov>&server=<server>
  */
 export const onRequestGet = async ({ request, env, waitUntil }) => {
-  try {
-    const url = new URL(request.url);
+  return withEdgeCache(
+    request,
+    env,
+    1200,
+    async () => {
+      try {
+        const url = new URL(request.url);
         const animeIdParam = url.searchParams.get('anime_id') || url.searchParams.get('id') || '';
         const titleParam = url.searchParams.get('title') || '';
         const malIdParam = url.searchParams.get('malId') || url.searchParams.get('mal_id') || url.searchParams.get('mal') || '';
@@ -160,7 +166,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                 subtitles: betaRes.subtitles || [],
                 quality: '1080p',
               }
-            });
+            }, { cache: 'public, max-age=600, s-maxage=1800' });
           }
           return ok({
             server: {
@@ -235,13 +241,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
             const isUaDub = targetTr === '444' || targetTr === '487' || targetTr === '518' || srvLower.includes('-ua-') || srvLower.includes('ukr');
             const isDubAudio = isUaDub || audio === 'dub' || audio === 'russian' || audio === 'ukrainian' || (targetTr && targetTr !== '238') || srvLower.includes('dub');
-            const TRANSLATORS = targetTr
+
+            const tidCacheKey = `${rezkaId}:${isUaDub ? 'ua' : (isDubAudio ? 'dub' : 'sub')}`;
+            const stickyTid = REZKA_TID_CACHE.get(tidCacheKey);
+
+            let candidateTranslators = targetTr
               ? [targetTr]
-              : (isUaDub ? ['444', '487', '518'] : (isDubAudio ? ['105', '19', '565', '115', '477', '608', '618', '635'] : ['238', '105']));
-            const sCandidates = [String(season)];
-            if (season > 1) sCandidates.push('1');
-            for (const sNum of sCandidates) {
-              for (const tid of TRANSLATORS) {
+              : (stickyTid ? [stickyTid] : (isUaDub ? ['444', '487', '518'] : (isDubAudio ? ['105', '19', '565', '115', '477', '608', '618', '635'] : ['238', '105'])));
+
+            const probeRezkaStream = async (tid, sNum) => {
+              try {
                 const { res } = await rezkaFetch(env, '/ajax/get_cdn_series/', {
                   method: 'POST',
                   headers: { 'content-type': 'application/x-www-form-urlencoded', 'x-requested-with': 'XMLHttpRequest' },
@@ -253,14 +262,48 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     action: 'get_stream',
                   }).toString(),
                 });
-                if (res) {
-                  const text = await res.text().catch(() => '');
-                  let data = null;
-                  try { data = JSON.parse(text); } catch {}
-                  if (data?.success && data?.url) {
-                    rawPayload = data.url;
-                    subtitleRaw = data.subtitle;
-                    resolvedTid = tid;
+                if (!res) return null;
+                const text = await res.text().catch(() => '');
+                let data = null;
+                try { data = JSON.parse(text); } catch {}
+                if (data?.success && data?.url) {
+                  return { rawPayload: data.url, subtitleRaw: data.subtitle, tid };
+                }
+              } catch {}
+              return null;
+            };
+
+            const sCandidates = [String(season)];
+            if (season > 1) sCandidates.push('1');
+
+            for (const sNum of sCandidates) {
+              // Probe candidate translators in parallel batches of 3
+              for (let i = 0; i < candidateTranslators.length; i += 3) {
+                const batch = candidateTranslators.slice(i, i + 3);
+                const results = await Promise.all(batch.map((tid) => probeRezkaStream(tid, sNum)));
+                const hit = results.find((r) => r && r.rawPayload);
+                if (hit) {
+                  rawPayload = hit.rawPayload;
+                  subtitleRaw = hit.subtitleRaw;
+                  resolvedTid = hit.tid;
+                  REZKA_TID_CACHE.set(tidCacheKey, hit.tid);
+                  break;
+                }
+              }
+              if (rawPayload) break;
+
+              // If stickyTid failed, fall back to the complete translator list
+              if (!rawPayload && stickyTid && candidateTranslators.length === 1) {
+                candidateTranslators = isUaDub ? ['444', '487', '518'] : (isDubAudio ? ['105', '19', '565', '115', '477', '608', '618', '635'] : ['238', '105']);
+                for (let i = 0; i < candidateTranslators.length; i += 3) {
+                  const batch = candidateTranslators.slice(i, i + 3);
+                  const results = await Promise.all(batch.map((tid) => probeRezkaStream(tid, sNum)));
+                  const hit = results.find((r) => r && r.rawPayload);
+                  if (hit) {
+                    rawPayload = hit.rawPayload;
+                    subtitleRaw = hit.subtitleRaw;
+                    resolvedTid = hit.tid;
+                    REZKA_TID_CACHE.set(tidCacheKey, hit.tid);
                     break;
                   }
                 }
@@ -320,7 +363,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                     audioTracks: serverAudioTrack,
                     subtitles: rezkaSubs,
                   }
-                }, { cache: 'no-store, no-cache, must-revalidate' });
+                }, { cache: 'public, max-age=1200, s-maxage=1200' });
               }
             }
           }
@@ -777,8 +820,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           outro: metaData.skip?.outro ? { start: metaData.skip.outro[0], end: metaData.skip.outro[1] } : undefined,
         };
 
-        return ok({ server: resolvedServer }, { cache: 'no-store' });
+        return ok({ server: resolvedServer }, { cache: 'public, max-age=600, s-maxage=1800' });
       } catch (err) {
         return errorResponse(err);
       }
+    },
+    { allowedParams: ['anime_id', 'id', 'title', 'malid', 'ep', 'season', 'provider', 'server', 'audio'], waitUntil }
+  );
 };

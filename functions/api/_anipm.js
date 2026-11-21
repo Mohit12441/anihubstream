@@ -23,6 +23,10 @@ const KNOWN_SLUGS = {
   163132: 'oshi-no-ko-2nd-season',
 };
 
+const ANIPM_ANILIST_MAP = new Map();
+const ANIPM_META_CACHE = new Map();
+const ANIPM_CACHE_TTL = 30 * 60 * 1000;
+
 /**
  * Resolves AniPM Beta Master playlist dynamically for any anime.
  * 1. Resolves AniList ID from ID, trailing ID patterns, known slugs, or AniList GraphQL search.
@@ -37,6 +41,14 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
   }
   if (!targetAnilist && /^\d+$/.test(String(title))) {
     targetAnilist = Number(title);
+  }
+
+  // Check in-memory mapping cache
+  if (!targetAnilist && (title || slug)) {
+    const cacheKey = (title || slug).toLowerCase().trim();
+    if (ANIPM_ANILIST_MAP.has(cacheKey)) {
+      targetAnilist = ANIPM_ANILIST_MAP.get(cacheKey);
+    }
   }
 
   // Check trailing AniList ID pattern (e.g., "solo-leveling-151807" or "anime-101922")
@@ -77,6 +89,7 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
           const gqlData = await gqlRes.json();
           if (gqlData?.data?.Media?.id) {
             targetAnilist = Number(gqlData.data.Media.id);
+            ANIPM_ANILIST_MAP.set((title || slug).toLowerCase().trim(), targetAnilist);
           }
         }
       }
@@ -100,20 +113,34 @@ export async function resolveAniPmBetaDirect({ anilistId, ep = 1, title = '', sl
   const epNum = Number.parseInt(String(ep || 1).replace(/\D+/g, ''), 10) || 1;
   const paddedEp = 'E' + String(epNum).padStart(4, '0');
 
-  // Query AniPM Beta API for canonical slug & availability
+  // Query AniPM Beta API for canonical slug & availability (with memory cache)
   let betaMeta = null;
   let notFound = false;
-  try {
-    const metaRes = await fetch(`https://ani.pm/api/anime/beta-server/${targetAnilist}`, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
-      signal: AbortSignal.timeout(2500),
-    });
-    if (metaRes.status === 404) {
-      notFound = true;
-    } else if (metaRes.ok) {
-      betaMeta = await metaRes.json();
-    }
-  } catch {}
+
+  const cachedMeta = ANIPM_META_CACHE.get(targetAnilist);
+  if (cachedMeta && Date.now() < cachedMeta.expires) {
+    betaMeta = cachedMeta.data;
+  }
+
+  if (!betaMeta) {
+    try {
+      const metaRes = await fetch(`https://ani.pm/api/anime/beta-server/${targetAnilist}`, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+        signal: AbortSignal.timeout(2500),
+      });
+      if (metaRes.status === 404) {
+        notFound = true;
+      } else if (metaRes.ok) {
+        betaMeta = await metaRes.json();
+        if (betaMeta) {
+          ANIPM_META_CACHE.set(targetAnilist, {
+            data: betaMeta,
+            expires: Date.now() + ANIPM_CACHE_TTL,
+          });
+        }
+      }
+    } catch {}
+  }
 
   if (notFound) {
     return {

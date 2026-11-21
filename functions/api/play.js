@@ -278,8 +278,17 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
   return null;
 }
 
+const ANIME_META_CACHE = new Map();
+const ANIME_META_CACHE_TTL = 10 * 60 * 1000;
+
 async function lookupAnimeMetadata(db, id, ep) {
   if (!db || !id) return { id, animeRow: null };
+  const cacheKey = `${id}:${ep}`;
+  const cached = ANIME_META_CACHE.get(cacheKey);
+  if (cached && Date.now() < cached.expires) {
+    return cached.data;
+  }
+
   let resolvedId = id;
   try {
     const r = await db.prepare('SELECT to_id FROM anime_redirect WHERE from_id = ?1').bind(resolvedId).first();
@@ -342,7 +351,13 @@ async function lookupAnimeMetadata(db, id, ep) {
     } catch {}
   }
 
-  return { id: resolvedId, animeRow };
+  const resData = { id: resolvedId, animeRow };
+  if (ANIME_META_CACHE.size >= 1000) {
+    const first = ANIME_META_CACHE.keys().next().value;
+    if (first) ANIME_META_CACHE.delete(first);
+  }
+  ANIME_META_CACHE.set(cacheKey, { data: resData, expires: Date.now() + ANIME_META_CACHE_TTL });
+  return resData;
 }
 
 function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolvedTitle, hasRezkaBridge = false }) {
@@ -1680,7 +1695,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       providerHealth,
       availableProviders: getAvailableProvidersList(),
     }, {
-      cache: 'no-store, no-cache, must-revalidate',
+      cache: isScopedUnavailable ? 'no-store, no-cache, must-revalidate' : 'public, max-age=300, s-maxage=600',
     });
   } catch (err) {
         return errorResponse(err);

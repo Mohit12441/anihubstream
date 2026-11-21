@@ -34,7 +34,7 @@ import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
 import { useSEO } from '../lib/useSEO';
 import { SLUG_REDIRECTS } from '../data/redirects';
-import { prefetchEpisode, type BridgeSource } from '../lib/streamBridge';
+import { bridgeResolve, prefetchEpisode, type BridgeSource } from '../lib/streamBridge';
 import { warmStreamOrigins } from '../lib/warmConnections';
 import '../styles/watch.css';
 import '../styles/player.css';
@@ -758,6 +758,20 @@ export function Watch() {
     }, 120_000);
     return () => window.clearTimeout(timer);
   }, [anime, epNum, prefs.audio]);
+
+  // Background pre-resolve runner-up server for instant server switching
+  useEffect(() => {
+    if (!isStreamResolved || !anime?.id || currentSubservers.length <= 1) return;
+    const backupServer = currentSubservers.find((s) => s.id !== activeServerId && s.status !== 'unavailable');
+    if (!backupServer) return;
+
+    const timer = window.setTimeout(() => {
+      const prov = backupServer.provider || (backupServer.id.includes(':') ? backupServer.id.split(':')[0] : 'auto');
+      const srvName = backupServer.id.includes(':') ? backupServer.id.split(':')[1] : backupServer.id;
+      void bridgeResolve(anime.id, epNum, prefs.audio ?? 'sub', prov, srvName);
+    }, 3500);
+    return () => window.clearTimeout(timer);
+  }, [isStreamResolved, anime?.id, epNum, activeServerId, currentSubservers, prefs.audio]);
 
   const save = async () => {
     if (!anime) return;

@@ -85,12 +85,29 @@ export function isMegaplayTokenValid(urlOrToken, maxAgeSec = 1800) {
   }
 }
 
+const MEGAPLAY_SOURCE_CACHE = new Map();
+const MEGAPLAY_CACHE_TTL = 15 * 60 * 1000;
+
 /**
  * Edge Resolver: Resolves Megaplay stream directly from an embed URL
  * @param {string} embedUrl
  */
 export async function resolveMegaplayEmbed(embedUrl) {
   if (!embedUrl || typeof embedUrl !== 'string') return null;
+
+  const now = Date.now();
+  const cached = MEGAPLAY_SOURCE_CACHE.get(embedUrl);
+  if (cached && now < cached.expires) {
+    const freshToken = await buildToken(cached.fileUrl);
+    return {
+      streamUrl: freshToken ? `${cached.fileUrl}?token=${freshToken}` : cached.fileUrl,
+      quality: '1080p',
+      subtitles: cached.subtitles,
+      thumbnails: cached.thumbnails,
+      intro: cached.intro,
+      outro: cached.outro,
+    };
+  }
 
   const embedRes = await fetch(embedUrl, {
     headers: {
@@ -147,12 +164,28 @@ export async function resolveMegaplayEmbed(embedUrl) {
   const thumbTrack = (payload.tracks || []).find(
     (t) => t.kind === 'thumbnails' || t.file?.includes('thumbnails.vtt') || t.file?.includes('/preview/') || t.file?.includes('sprite')
   );
+  const thumbObj = thumbTrack?.file ? { url: thumbTrack.file } : null;
+
+  if (fileUrl) {
+    if (MEGAPLAY_SOURCE_CACHE.size >= 500) {
+      const firstKey = MEGAPLAY_SOURCE_CACHE.keys().next().value;
+      if (firstKey) MEGAPLAY_SOURCE_CACHE.delete(firstKey);
+    }
+    MEGAPLAY_SOURCE_CACHE.set(embedUrl, {
+      fileUrl,
+      subtitles,
+      thumbnails: thumbObj,
+      intro: payload.intro || null,
+      outro: payload.outro || null,
+      expires: Date.now() + MEGAPLAY_CACHE_TTL,
+    });
+  }
 
   return {
     streamUrl,
     quality: '1080p',
     subtitles,
-    thumbnails: thumbTrack?.file ? { url: thumbTrack.file } : null,
+    thumbnails: thumbObj,
     intro: payload.intro || null,
     outro: payload.outro || null,
   };
