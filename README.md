@@ -1,6 +1,13 @@
 # AniHubStream
 
+[![Official Website](https://img.shields.io/badge/Website-anihubstream.com-ff4757?style=for-the-badge&logo=google-chrome&logoColor=white)](https://anihubstream.com)
+[![Watch Anime Online](https://img.shields.io/badge/Stream-Free%20HD%20Anime-6366f1?style=for-the-badge)](https://anihubstream.com)
+[![Watch Party](https://img.shields.io/badge/Watch%20Together-Live%20Sync-22c55e?style=for-the-badge)](https://anihubstream.com)
+[![RSS Feed](https://img.shields.io/badge/RSS-Feed-orange?style=for-the-badge&logo=rss)](https://anihubstream.com/feed.xml)
+
 High-performance, serverless anime streaming platform built on Cloudflare Pages, Workers, D1 (SQLite), and edge KV caching. Delivers high-bitrate video directly from edge CDNs to the browser with zero-read edge shield caching and automatic multi-provider fallback.
+
+Official portal: [https://anihubstream.com](https://anihubstream.com) | RSS Feed: [https://anihubstream.com/feed.xml](https://anihubstream.com/feed.xml)
 
 ---
 

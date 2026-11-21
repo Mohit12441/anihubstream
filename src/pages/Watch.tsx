@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
+import { ShareModal } from '../components/ShareModal';
 import { cleanServerName } from '../components/player/ServerPopover';
 import type { PlayServer } from '../components/player/PlayerInput';
 import { providerFromId, serverIdFromProvider } from '../data/servers';
@@ -301,6 +302,7 @@ export function Watch() {
   const [theatre, setTheatre] = useState(false);
   const [isStreamResolved, setIsStreamResolved] = useState(false);
   const [downloadOpen, setDownloadOpen] = useState(false);
+  const [shareOpen, setShareOpen] = useState(false);
   const [serverDropdownOpen, setServerDropdownOpen] = useState(false);
   const serverDropdownRef = useRef<HTMLDivElement>(null);
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
@@ -1169,16 +1171,12 @@ export function Watch() {
               <button
                 type="button"
                 className="watch__cb-action-btn"
-                onClick={() => {
-                  void navigator.clipboard
-                    ?.writeText(window.location.href)
-                    .then(() => notify('Link copied to clipboard.'))
-                    .catch(() => notify(window.location.href));
-                }}
-                title="Share Episode"
-                aria-label="Share Episode"
+                onClick={() => setShareOpen(true)}
+                title="Share & Embed Episode"
+                aria-label="Share & Embed Episode"
               >
                 <Share2 size={15} aria-hidden="true" />
+                <span className="watch__cb-action-label">Share</span>
               </button>
 
               <button
@@ -1426,6 +1424,14 @@ export function Watch() {
         currentStream={currentStream}
         activeProvider={targetProvider || currentStream?.provider || (activeServerId ? providerFromId(activeServerId).split(':')[0] : 'anikoto')}
         notify={notify}
+      />
+
+      <ShareModal
+        isOpen={shareOpen}
+        onClose={() => setShareOpen(false)}
+        title={anime?.title || 'Anime Episode'}
+        animeId={anime?.id || ''}
+        episodeNumber={episode?.n || 1}
       />
     </div>
   );

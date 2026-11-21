@@ -27,6 +27,7 @@ const Privacy = lazy(() => import('./pages/Privacy').then((m) => ({ default: m.P
 const Terms = lazy(() => import('./pages/Terms').then((m) => ({ default: m.Terms })));
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })));
 const Search = lazy(() => import('./pages/Search').then((m) => ({ default: m.Search })));
+const Embed = lazy(() => import('./pages/Embed').then((m) => ({ default: m.Embed })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 function ScrollToTop() {
@@ -39,7 +40,8 @@ function ScrollToTop() {
 
 export function App() {
   const { pathname } = useLocation();
-  const bare = pathname === '/discover';
+  const isEmbed = pathname.startsWith('/embed');
+  const bare = pathname === '/discover' || isEmbed;
 
   useMouseGlow();
   useScrollReveal();
@@ -65,12 +67,16 @@ export function App() {
         Skip to content
       </a>
       <ScrollToTop />
-      <AmbientBackground />
-      <SakuraEasterEgg />
-      <DomainExpansion />
-      <CommandPalette />
-      <QuickViewModal />
-      <BackToTop />
+      {!isEmbed && (
+        <>
+          <AmbientBackground />
+          <SakuraEasterEgg />
+          <DomainExpansion />
+          <CommandPalette />
+          <QuickViewModal />
+          <BackToTop />
+        </>
+      )}
       {!bare && <Header />}
       <main id="main">
         <div className="page-transition-wrap" key={pathname}>
@@ -79,6 +85,8 @@ export function App() {
               <Route path="/" element={<Home />} />
               <Route path="/watch/:id" element={<Watch />} />
               <Route path="/watch/:id/:ep" element={<Watch />} />
+              <Route path="/embed/:id" element={<Embed />} />
+              <Route path="/embed/:id/:ep" element={<Embed />} />
               <Route path="/anime" element={<AnimeCatalogue />} />
               <Route path="/anime/:id" element={<AnimeDetail />} />
               <Route path="/genres" element={<Genres />} />
@@ -97,7 +105,7 @@ export function App() {
           </Suspense>
         </div>
       </main>
-      <Footer />
+      {!bare && <Footer />}
     </>
   );
 }

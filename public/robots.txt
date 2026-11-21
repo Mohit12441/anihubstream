@@ -2,6 +2,9 @@ User-agent: *
 Allow: /
 Allow: /anime
 Allow: /watch
+Allow: /embed
+Allow: /feed.xml
+Allow: /rss.xml
 Allow: /api/anime
 Allow: /api/genres
 Allow: /api/home
