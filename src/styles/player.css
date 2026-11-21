@@ -1774,6 +1774,74 @@
   line-height: 1.5;
 }
 
+.party-profile-box {
+  margin: 12px 0 16px 0;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.party-profile-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.party-profile-view {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.party-profile-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.party-edit-icon-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.party-edit-icon-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.party-profile-edit {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.party-name-input {
+  padding: 4px 8px;
+  font-size: 12px;
+  height: 28px;
+}
+
+.party-save-btn {
+  padding: 4px 8px;
+  background: var(--pl-accent, #6366f1);
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+}
+
 .party-btn {
   display: inline-flex;
   align-items: center;
@@ -1916,6 +1984,130 @@
 
 .party-leave-btn:hover {
   background: rgba(248, 113, 113, 0.15);
+}
+
+.party-user-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.party-user-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.party-user-icon {
+  color: #818cf8;
+}
+
+.party-watching-as {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.party-name-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 2px 7px;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+}
+
+.party-name-chip:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #38bdf8;
+}
+
+.party-chip-edit-icon {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.party-inline-name-edit {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.party-input-sm {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #6366f1;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 6px;
+  width: 100px;
+  outline: none;
+}
+
+.party-name-save-btn-sm,
+.party-name-cancel-btn-sm {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  padding: 3px 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s ease;
+}
+
+.party-name-save-btn-sm:hover {
+  background: #22c55e;
+}
+
+.party-name-cancel-btn-sm:hover {
+  background: #ef4444;
+}
+
+.party-sync-status-compact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.party-member-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  font-size: 11px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.party-member-chip.is-current-user {
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(99, 102, 241, 0.12);
+}
+
+.party-member-name {
+  font-weight: 600;
+}
+
+.party-you-tag {
+  color: #818cf8;
+  font-weight: 700;
+  font-size: 10px;
 }
 
 .party-sync-status {

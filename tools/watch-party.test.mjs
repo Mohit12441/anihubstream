@@ -8,6 +8,8 @@ import {
   shouldSync,
   getMemberColor,
   PARTY_EMOJIS,
+  getStoredUsername,
+  setStoredUsername,
 } from '../src/lib/watchParty.ts';
 import {
   encodeWsFrame,
@@ -15,6 +17,7 @@ import {
   getRooms,
   clearRooms,
 } from '../api/party-relay.mjs';
+import { onRequest as partySyncHandler } from '../functions/api/party/sync.js';
 
 test('Watch Party Room Codes', () => {
   const code = generateRoomCode();
@@ -111,4 +114,61 @@ test('Party Relay In-Memory Rooms State', () => {
   clearRooms();
   const rooms = getRooms();
   assert.equal(rooms.size, 0);
+});
+
+test('Watch Party Username Management and Storage', () => {
+  // Test fallback generation when window is undefined in node
+  const defaultUser = getStoredUsername();
+  assert.ok(defaultUser && typeof defaultUser === 'string');
+
+  // Test setStoredUsername does not throw in node env
+  assert.doesNotThrow(() => {
+    setStoredUsername('OtakuWarrior');
+  });
+});
+
+test('Cloudflare Edge Watch Party Sync Fallback Handler (/api/party/sync)', async () => {
+  const roomId = 'AH-TEST';
+
+  // 1. Post a play/pause event to edge sync endpoint
+  const postReq = new Request('http://localhost/api/party/sync', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      roomId,
+      senderId: 'usr_abc123',
+      message: {
+        type: 'PLAYBACK_STATE',
+        payload: {
+          playing: false,
+          time: 154.2,
+          rate: 1,
+          action: 'pause',
+          senderId: 'usr_abc123',
+          senderName: 'Tanjiro',
+          timestamp: Date.now(),
+        },
+      },
+    }),
+  });
+
+  const postRes = await partySyncHandler({ request: postReq, env: {} });
+  assert.equal(postRes.status, 200);
+  const postData = await postRes.json();
+  assert.equal(postData.ok, true);
+
+  // 2. Fetch room events via GET
+  const getReq = new Request(`http://localhost/api/party/sync?room=${roomId}&since=0`, {
+    method: 'GET',
+  });
+
+  const getRes = await partySyncHandler({ request: getReq, env: {} });
+  assert.equal(getRes.status, 200);
+  const getData = await getRes.json();
+  assert.ok(Array.isArray(getData.events));
+  assert.equal(getData.events.length, 1);
+  assert.equal(getData.events[0].type, 'PLAYBACK_STATE');
+  assert.equal(getData.events[0].payload.action, 'pause');
+  assert.equal(getData.events[0].payload.senderName, 'Tanjiro');
+  assert.equal(getData.state.time, 154.2);
 });

@@ -293,6 +293,16 @@ function handleClientMessage(roomId, userId, socket, data) {
     broadcastToRoom(roomId, data);
   } else if (data.type === 'REACTION') {
     broadcastToRoom(roomId, data);
+  } else if (data.type === 'USER_UPDATE') {
+    const client = room.members.get(userId);
+    if (client && data.payload?.name) {
+      client.member.name = String(data.payload.name).slice(0, 24);
+    }
+    const memberList = Array.from(room.members.values()).map((m) => m.member);
+    broadcastToRoom(roomId, {
+      type: 'MEMBERS_UPDATE',
+      payload: memberList,
+    });
   } else if (data.type === 'JOIN_ROOM') {
     if (data.user) {
       const client = room.members.get(userId);

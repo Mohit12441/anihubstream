@@ -34,7 +34,31 @@ export interface PartyPlaybackState {
   rate: number;
   timestamp: number; // millisecond timestamp
   senderId: string;
+  senderName?: string;
   action?: 'play' | 'pause' | 'seek' | 'heartbeat';
+}
+
+const STORAGE_USERNAME_KEY = 'anihub_party_username';
+
+export function getStoredUsername(): string {
+  if (typeof window === 'undefined') return 'Viewer';
+  try {
+    const saved = localStorage.getItem(STORAGE_USERNAME_KEY);
+    if (saved && saved.trim()) {
+      return saved.trim().slice(0, 24);
+    }
+  } catch {}
+  return `Otaku_${Math.floor(100 + Math.random() * 900)}`;
+}
+
+export function setStoredUsername(name: string): void {
+  if (typeof window === 'undefined') return;
+  try {
+    const clean = name.trim().slice(0, 24);
+    if (clean) {
+      localStorage.setItem(STORAGE_USERNAME_KEY, clean);
+    }
+  } catch {}
 }
 
 export interface PartyRoom {
@@ -130,11 +154,14 @@ export class WatchPartyClient {
   public user: PartyMember;
   public isHost: boolean;
   public room: PartyRoom;
+  public status: 'connecting' | 'connected' | 'fallback' = 'connecting';
 
   private ws: WebSocket | null = null;
   private channel: BroadcastChannel | null = null;
   private listeners: Set<PartyEventCallback> = new Set();
   private isApplyingRemoteState: boolean = false;
+  private fallbackPollTimer: any = null;
+  private lastPollTimestamp: number = 0;
 
   constructor(
     roomId: string,
@@ -148,10 +175,12 @@ export class WatchPartyClient {
     this.episodeNumber = episodeNumber;
     this.isHost = isHost;
 
+    const savedName = getStoredUsername();
+    const effectiveName = (username && username !== 'Viewer') ? username : savedName;
     const userId = `usr_${Math.random().toString(36).slice(2, 9)}`;
     this.user = {
       id: userId,
-      name: username.slice(0, 20),
+      name: effectiveName.slice(0, 24),
       isHost,
       color: getMemberColor(userId),
       joinedAt: Date.now(),
@@ -169,6 +198,7 @@ export class WatchPartyClient {
         rate: 1,
         timestamp: Date.now(),
         senderId: userId,
+        senderName: this.user.name,
       },
       createdAt: Date.now(),
     };
@@ -197,6 +227,9 @@ export class WatchPartyClient {
         this.ws = new WebSocket(wsUrl);
 
         this.ws.onopen = () => {
+          this.status = 'connected';
+          this.emit('status', { status: 'connected' });
+          this.stopFallbackPolling();
           this.sendWsMessage({
             type: 'JOIN_ROOM',
             roomId: this.roomId,
@@ -210,18 +243,91 @@ export class WatchPartyClient {
             this.handleIncomingMessage(data);
           } catch {}
         };
-      } catch {}
+
+        this.ws.onerror = () => {
+          this.startFallbackPolling();
+        };
+
+        this.ws.onclose = () => {
+          this.startFallbackPolling();
+        };
+      } catch {
+        this.startFallbackPolling();
+      }
+    } else {
+      this.startFallbackPolling();
     }
   }
 
+  private startFallbackPolling() {
+    if (this.fallbackPollTimer) return;
+    this.status = 'fallback';
+    this.emit('status', { status: 'fallback' });
+
+    // Initial announce to HTTP sync endpoint
+    this.postToHttpSync({
+      type: 'JOIN_ROOM',
+      roomId: this.roomId,
+      user: this.user,
+    });
+
+    this.fallbackPollTimer = setInterval(() => {
+      this.pollHttpSync();
+    }, 1200);
+  }
+
+  private stopFallbackPolling() {
+    if (this.fallbackPollTimer) {
+      clearInterval(this.fallbackPollTimer);
+      this.fallbackPollTimer = null;
+    }
+  }
+
+  private async pollHttpSync() {
+    if (typeof window === 'undefined') return;
+    try {
+      const res = await fetch(`/api/party/sync?room=${encodeURIComponent(this.roomId)}&since=${this.lastPollTimestamp}`);
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data && data.events && Array.isArray(data.events)) {
+        for (const evt of data.events) {
+          this.handleIncomingMessage(evt);
+        }
+      }
+      this.lastPollTimestamp = Date.now();
+    } catch {}
+  }
+
+  private async postToHttpSync(msg: any) {
+    if (typeof window === 'undefined') return;
+    try {
+      await fetch('/api/party/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          roomId: this.roomId,
+          message: msg,
+          senderId: this.user.id,
+        }),
+      });
+    } catch {}
+  }
+
   private sendWsMessage(msg: any) {
+    let sentViaWs = false;
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-      this.ws.send(JSON.stringify(msg));
+      try {
+        this.ws.send(JSON.stringify(msg));
+        sentViaWs = true;
+      } catch {}
     }
     if (this.channel) {
       try {
         this.channel.postMessage(msg);
       } catch {}
+    }
+    if (!sentViaWs && this.status === 'fallback') {
+      this.postToHttpSync(msg);
     }
   }
 
@@ -236,8 +342,22 @@ export class WatchPartyClient {
       this.emit('state', state);
     } else if (msg.type === 'MEMBERS_UPDATE') {
       const members = msg.payload as PartyMember[];
-      this.room.members = members;
-      this.emit('members', members);
+      if (Array.isArray(members)) {
+        // Ensure current user is in members list with latest state
+        const hasMe = members.some(m => m.id === this.user.id);
+        const effectiveMembers = hasMe ? members : [...members, this.user];
+        this.room.members = effectiveMembers;
+        this.emit('members', effectiveMembers);
+      }
+    } else if (msg.type === 'USER_UPDATE') {
+      const payload = msg.payload as { id: string; name: string };
+      if (payload && payload.id && payload.name) {
+        const found = this.room.members.find(m => m.id === payload.id);
+        if (found) {
+          found.name = payload.name;
+          this.emit('members', [...this.room.members]);
+        }
+      }
     } else if (msg.type === 'CHAT_MESSAGE') {
       this.emit('message', msg.payload);
     } else if (msg.type === 'REACTION') {
@@ -259,12 +379,36 @@ export class WatchPartyClient {
   }
 
   /**
+   * Updates user display name, saves locally, and notifies peers
+   */
+  public updateUsername(newName: string) {
+    const clean = newName.trim().slice(0, 24);
+    if (!clean) return;
+
+    this.user.name = clean;
+    setStoredUsername(clean);
+
+    // Update in room members
+    const me = this.room.members.find(m => m.id === this.user.id);
+    if (me) {
+      me.name = clean;
+    }
+    this.emit('members', [...this.room.members]);
+
+    this.sendWsMessage({
+      type: 'USER_UPDATE',
+      roomId: this.roomId,
+      payload: { id: this.user.id, name: clean },
+    });
+  }
+
+  /**
    * Broadcasts local playback action (play, pause, seek) to all connected peers
    */
   public broadcastPlayback(
     playing: boolean,
     time: number,
-    action: 'play' | 'pause' | 'seek' = 'play',
+    action: 'play' | 'pause' | 'seek' | 'heartbeat' = 'play',
     rate: number = 1
   ) {
     if (this.isApplyingRemoteState) return;
@@ -275,6 +419,7 @@ export class WatchPartyClient {
       rate,
       timestamp: Date.now(),
       senderId: this.user.id,
+      senderName: this.user.name,
       action,
     };
 
@@ -338,6 +483,7 @@ export class WatchPartyClient {
   }
 
   public destroy() {
+    this.stopFallbackPolling();
     if (this.channel) {
       try {
         this.channel.close();

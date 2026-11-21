@@ -19,7 +19,7 @@ import { PlayerSettings, type SettingsTab } from './PlayerSettings';
 import { PlayerTimeline } from './PlayerTimeline';
 import { NextEpisodeOverlay } from './NextEpisodeOverlay';
 import { WatchPartyPanel } from './WatchPartyPanel';
-import { WatchPartyClient, calculateDrift, shouldSync } from '../../lib/watchParty';
+import { WatchPartyClient, calculateDrift, shouldSync, getStoredUsername, type PartyPlaybackState } from '../../lib/watchParty';
 import { captionAnchor, captionStyle } from './captionStyle';
 import { AmbilightGlow } from './AmbilightGlow';
 import type { PlayServer, AudioTrack } from './PlayerInput';
@@ -257,12 +257,14 @@ export function AdvancedPlayer(props: Props) {
   const [partyClient, setPartyClient] = useState<WatchPartyClient | null>(null);
   const [partyOpen, setPartyOpen] = useState(false);
   const [partyDrift, setPartyDrift] = useState(0);
+  const isApplyingRemoteSyncRef = useRef(false);
 
   const handleInitParty = useCallback((code: string, isHost: boolean) => {
     if (partyClient) {
       partyClient.destroy();
     }
-    const client = new WatchPartyClient(code, anime.id, episode.n, 'Viewer', isHost);
+    const username = getStoredUsername();
+    const client = new WatchPartyClient(code, anime.id, episode.n, username, isHost);
     setPartyClient(client);
     setPartyOpen(true);
     notify(`Connected to Watch Party: ${client.roomId}`);
@@ -289,44 +291,78 @@ export function AdvancedPlayer(props: Props) {
     };
   }, [partyClient]);
 
-  // Sync playback from remote party messages
+  // Sync playback from remote party messages (Play, Pause, Seek, Drift)
   useEffect(() => {
     if (!partyClient) return;
 
     const unsub = partyClient.subscribe((event) => {
       if (event.type === 'state') {
-        const remoteState = event.payload;
-        const drift = calculateDrift(engineRef.current.time, remoteState);
-        setPartyDrift(drift);
+        const remoteState: PartyPlaybackState = event.payload;
+        if (!remoteState || remoteState.senderId === partyClient.user.id) return;
 
-        if (shouldSync(drift)) {
-          partyClient.setApplyingRemoteState(true);
-          const targetTime = remoteState.playing
-            ? remoteState.time + Math.max(0, (Date.now() - remoteState.timestamp) / 1000) * (remoteState.rate || 1)
-            : remoteState.time;
+        isApplyingRemoteSyncRef.current = true;
+        partyClient.setApplyingRemoteState(true);
+
+        const action = remoteState.action;
+        const actor = remoteState.senderName || 'Peer';
+
+        if (action === 'pause' || (!remoteState.playing && engineRef.current.playing)) {
+          // Explicit pause command: halt playback immediately and sync playhead
+          if (typeof remoteState.time === 'number') {
+            engineRef.current.seek(remoteState.time);
+          }
+          engineRef.current.pause();
+          notify(`${actor} paused the video`);
+        } else if (action === 'play' || (remoteState.playing && !engineRef.current.playing)) {
+          // Explicit resume command: calculate elapsed time and resume playback
+          const elapsed = Math.max(0, (Date.now() - remoteState.timestamp) / 1000) * (remoteState.rate || 1);
+          const targetTime = remoteState.time + elapsed;
           engineRef.current.seek(targetTime);
+          engineRef.current.play();
+          notify(`${actor} resumed playback`);
+        } else if (action === 'seek') {
+          // Explicit timeline jump: jump to targeted time position immediately
+          engineRef.current.seek(remoteState.time);
           if (remoteState.playing && !engineRef.current.playing) {
             engineRef.current.play();
           } else if (!remoteState.playing && engineRef.current.playing) {
             engineRef.current.pause();
           }
-          setTimeout(() => {
-            partyClient.setApplyingRemoteState(false);
-          }, 350);
+          notify(`${actor} jumped to ${stamp(remoteState.time)}`);
+        } else {
+          // Background heartbeat drift check
+          const drift = calculateDrift(engineRef.current.time, remoteState);
+          setPartyDrift(drift);
+          if (shouldSync(drift)) {
+            const targetTime = remoteState.playing
+              ? remoteState.time + Math.max(0, (Date.now() - remoteState.timestamp) / 1000) * (remoteState.rate || 1)
+              : remoteState.time;
+            engineRef.current.seek(targetTime);
+            if (remoteState.playing && !engineRef.current.playing) {
+              engineRef.current.play();
+            } else if (!remoteState.playing && engineRef.current.playing) {
+              engineRef.current.pause();
+            }
+          }
         }
+
+        setTimeout(() => {
+          isApplyingRemoteSyncRef.current = false;
+          partyClient.setApplyingRemoteState(false);
+        }, 400);
       }
     });
 
     return () => {
       unsub();
     };
-  }, [partyClient]);
+  }, [partyClient, notify]);
 
   // Periodic heartbeat broadcast for host
   useEffect(() => {
     if (!partyClient || !partyClient.isHost) return;
     const interval = setInterval(() => {
-      partyClient.broadcastPlayback(engineRef.current.playing, engineRef.current.time, 'play', prefs.speed);
+      partyClient.broadcastPlayback(engineRef.current.playing, engineRef.current.time, 'heartbeat', prefs.speed);
     }, 4000);
     return () => clearInterval(interval);
   }, [partyClient, prefs.speed]);
@@ -342,23 +378,25 @@ export function AdvancedPlayer(props: Props) {
   }, [partyClient]);
 
   const handlePartyTogglePlay = useCallback(() => {
+    if (isApplyingRemoteSyncRef.current) return;
     if (engine.playing) {
       engine.pause();
       if (partyClient) {
-        partyClient.broadcastPlayback(false, engine.time, 'pause', prefs.speed);
+        partyClient.broadcastPlayback(false, engineRef.current.time, 'pause', prefs.speed);
       }
     } else {
       engine.play();
       if (partyClient) {
-        partyClient.broadcastPlayback(true, engine.time, 'play', prefs.speed);
+        partyClient.broadcastPlayback(true, engineRef.current.time, 'play', prefs.speed);
       }
     }
   }, [engine, partyClient, prefs.speed]);
 
   const handlePartySeek = useCallback((t: number) => {
+    if (isApplyingRemoteSyncRef.current) return;
     engine.seek(t);
     if (partyClient) {
-      partyClient.broadcastPlayback(engine.playing, t, 'seek', prefs.speed);
+      partyClient.broadcastPlayback(engineRef.current.playing, t, 'seek', prefs.speed);
     }
   }, [engine, partyClient, prefs.speed]);
 
@@ -513,6 +551,13 @@ export function AdvancedPlayer(props: Props) {
     [engine, wake],
   );
 
+  const handlePartyJump = useCallback((delta: number) => {
+    jump(delta);
+    if (partyClient && !isApplyingRemoteSyncRef.current) {
+      partyClient.broadcastPlayback(engineRef.current.playing, engineRef.current.time + delta, 'seek', prefs.speed);
+    }
+  }, [jump, partyClient, prefs.speed]);
+
   const volume = useCallback(
     (v: number) => {
       const nv = Math.min(1, Math.max(0, Math.round(v * 100) / 100));
@@ -608,19 +653,19 @@ export function AdvancedPlayer(props: Props) {
   run.current = (a: ShortcutAction) => {
     switch (a) {
       case 'toggle':
-        engine.toggle();
+        handlePartyTogglePlay();
         break;
       case 'back5':
-        jump(-5);
+        handlePartyJump(-5);
         break;
       case 'fwd5':
-        jump(5);
+        handlePartyJump(5);
         break;
       case 'back10':
-        jump(-10);
+        handlePartyJump(-10);
         break;
       case 'fwd10':
-        jump(10);
+        handlePartyJump(10);
         break;
       case 'volUp':
         volume(prefs.muted ? 0.5 : prefs.volume + 0.1);
@@ -713,7 +758,7 @@ export function AdvancedPlayer(props: Props) {
     if (isDouble) {
       tap.current = { t: 0, x: 0, timer: 0, visible: prev.visible };
       const r = e.currentTarget.getBoundingClientRect();
-      jump(e.clientX - r.left < r.width / 2 ? -10 : 10);
+      handlePartyJump(e.clientX - r.left < r.width / 2 ? -10 : 10);
       return;
     }
     // decide from the state *before* pointerdown revealed the chrome, otherwise a tap
@@ -932,7 +977,7 @@ export function AdvancedPlayer(props: Props) {
           <button
             type="button"
             className="player__big"
-            onClick={engine.toggle}
+            onClick={handlePartyTogglePlay}
             aria-label={engine.time > 1 ? `Resume ${anime.title} episode ${episode.n}` : `Play episode ${episode.n}`}
           >
             <Play size={30} fill="currentColor" strokeWidth={0} aria-hidden="true" />
@@ -944,7 +989,7 @@ export function AdvancedPlayer(props: Props) {
             type="button"
             className="pl__resume"
             onClick={() => {
-              engine.seek(0);
+              handlePartySeek(0);
               notify('Restarted this episode from 0:00.');
             }}
             aria-label="Restart from the beginning"
@@ -1047,8 +1092,8 @@ export function AdvancedPlayer(props: Props) {
           <PlayerControls
             playing={engine.playing}
             onToggle={handlePartyTogglePlay}
-            onBack10={() => jump(-10)}
-            onFwd10={() => jump(10)}
+            onBack10={() => handlePartyJump(-10)}
+            onFwd10={() => handlePartyJump(10)}
             hasPrev={hasPrev}
             hasNext={hasNext}
             onPrev={onPrev}

@@ -8,6 +8,8 @@ import {
   Radio,
   Crown,
   Sparkles,
+  Edit2,
+  User,
 } from 'lucide-react';
 import {
   WatchPartyClient,
@@ -17,6 +19,8 @@ import {
   PARTY_EMOJIS,
   generateRoomCode,
   normalizeRoomCode,
+  getStoredUsername,
+  setStoredUsername,
 } from '../../lib/watchParty';
 
 interface Props {
@@ -42,6 +46,10 @@ export function WatchPartyPanel({
   const [copied, setCopied] = useState(false);
   const [joinCodeInput, setJoinCodeInput] = useState('');
   const [floatingReactions, setFloatingReactions] = useState<PartyReaction[]>([]);
+  const [displayName, setDisplayName] = useState(getStoredUsername());
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [tempName, setTempName] = useState('');
+  const [connStatus, setConnStatus] = useState<'connected' | 'connecting' | 'fallback'>('connected');
   const chatScrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,10 +60,13 @@ export function WatchPartyPanel({
     }
 
     setMembers(partyClient.room.members);
+    setConnStatus(partyClient.status);
 
     const unsubscribe = partyClient.subscribe((event) => {
       if (event.type === 'members') {
         setMembers(event.payload);
+      } else if (event.type === 'status') {
+        setConnStatus(event.payload.status);
       } else if (event.type === 'message') {
         setMessages((prev) => [...prev.slice(-49), event.payload]);
       } else if (event.type === 'reaction') {
@@ -114,6 +125,17 @@ export function WatchPartyPanel({
     }
   };
 
+  const handleSaveName = (newName: string) => {
+    const clean = newName.trim().slice(0, 24);
+    if (!clean) return;
+    setStoredUsername(clean);
+    setDisplayName(clean);
+    if (partyClient) {
+      partyClient.updateUsername(clean);
+    }
+    setIsEditingName(false);
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -148,7 +170,7 @@ export function WatchPartyPanel({
       </div>
 
       {!partyClient ? (
-        /* Not in a Room View */
+        /* Not in a Room View (Setup) */
         <div className="party-setup-view">
           <div className="party-hero-card">
             <Sparkles size={28} className="party-sparkle-icon" />
@@ -157,6 +179,53 @@ export function WatchPartyPanel({
               Stream synchronized playback with friends with real-time playhead drift
               compensation, viewer presence, and live reactions.
             </p>
+
+            {/* User display name setting */}
+            <div className="party-profile-box">
+              <span className="party-profile-label">Your Name:</span>
+              {isEditingName ? (
+                <div className="party-profile-edit">
+                  <input
+                    type="text"
+                    value={tempName}
+                    onChange={(e) => setTempName(e.target.value)}
+                    maxLength={24}
+                    placeholder="Enter nickname"
+                    className="party-input party-name-input"
+                    autoFocus
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleSaveName(tempName);
+                      if (e.key === 'Escape') setIsEditingName(false);
+                    }}
+                  />
+                  <button
+                    type="button"
+                    className="party-action-btn party-save-btn"
+                    onClick={() => handleSaveName(tempName)}
+                    aria-label="Save name"
+                  >
+                    <Check size={14} />
+                  </button>
+                </div>
+              ) : (
+                <div className="party-profile-view">
+                  <span className="party-profile-val">{displayName}</span>
+                  <button
+                    type="button"
+                    className="party-edit-icon-btn"
+                    onClick={() => {
+                      setTempName(displayName);
+                      setIsEditingName(true);
+                    }}
+                    title="Change your display name"
+                    aria-label="Edit display name"
+                  >
+                    <Edit2 size={13} />
+                  </button>
+                </div>
+              )}
+            </div>
+
             <button
               type="button"
               className="party-btn party-btn-primary"
@@ -218,35 +287,98 @@ export function WatchPartyPanel({
             </div>
           </div>
 
-          {/* Sync Drift Status */}
-          <div className="party-sync-status">
-            <span
-              className={`party-sync-dot ${
-                Math.abs(drift) < 1.0 ? 'is-synced' : 'is-drifting'
-              }`}
-            />
-            <span className="party-sync-text">
-              {Math.abs(drift) < 1.0
-                ? 'Synced with room'
-                : `Drift: ${drift > 0 ? '+' : ''}${drift.toFixed(1)}s (compensating...)`}
-            </span>
+          {/* User Display Name & Connection Status Bar */}
+          <div className="party-user-status-bar">
+            <div className="party-user-info">
+              <User size={13} className="party-user-icon" />
+              <span className="party-watching-as">You:</span>
+              {isEditingName ? (
+                <div className="party-inline-name-edit">
+                  <input
+                    type="text"
+                    value={tempName}
+                    onChange={(e) => setTempName(e.target.value)}
+                    maxLength={24}
+                    className="party-input-sm"
+                    autoFocus
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') handleSaveName(tempName);
+                      if (e.key === 'Escape') setIsEditingName(false);
+                    }}
+                  />
+                  <button
+                    type="button"
+                    className="party-name-save-btn-sm"
+                    onClick={() => handleSaveName(tempName)}
+                    title="Save name"
+                  >
+                    <Check size={12} />
+                  </button>
+                  <button
+                    type="button"
+                    className="party-name-cancel-btn-sm"
+                    onClick={() => setIsEditingName(false)}
+                    title="Cancel"
+                  >
+                    <X size={12} />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  className="party-name-chip"
+                  onClick={() => {
+                    setTempName(partyClient.user.name || displayName);
+                    setIsEditingName(true);
+                  }}
+                  title="Click to edit your display name"
+                >
+                  <span className="party-chip-name">{partyClient.user.name}</span>
+                  <Edit2 size={11} className="party-chip-edit-icon" />
+                </button>
+              )}
+            </div>
+
+            <div className="party-sync-status-compact">
+              <span
+                className={`party-sync-dot ${
+                  Math.abs(drift) < 1.0 ? 'is-synced' : 'is-drifting'
+                }`}
+              />
+              <span className="party-sync-text">
+                {Math.abs(drift) < 1.0
+                  ? (connStatus === 'connected' ? 'Synced (Live)' : 'Synced (Edge)')
+                  : `${drift > 0 ? '+' : ''}${drift.toFixed(1)}s`}
+              </span>
+            </div>
           </div>
 
-          {/* Connected Members Avatars */}
-          <div className="party-members-strip">
-            {members.map((m) => (
-              <div
-                key={m.id}
-                className="party-member-avatar"
-                style={{ backgroundColor: m.color }}
-                title={`${m.name}${m.isHost ? ' (Host)' : ''}`}
-              >
-                <span>{m.name.charAt(0).toUpperCase()}</span>
-                {m.isHost && (
-                  <Crown size={10} className="party-crown-badge" aria-label="Host" />
-                )}
-              </div>
-            ))}
+          {/* Connected Members List */}
+          <div className="party-members-strip" aria-label="Room participants">
+            {members.map((m) => {
+              const isMe = m.id === partyClient.user.id;
+              return (
+                <div
+                  key={m.id}
+                  className={`party-member-chip ${isMe ? 'is-current-user' : ''}`}
+                  title={`${m.name}${m.isHost ? ' (Host)' : ''}${isMe ? ' (You)' : ''}`}
+                >
+                  <div
+                    className="party-member-avatar"
+                    style={{ backgroundColor: m.color }}
+                  >
+                    <span>{m.name.charAt(0).toUpperCase()}</span>
+                    {m.isHost && (
+                      <Crown size={10} className="party-crown-badge" aria-label="Host" />
+                    )}
+                  </div>
+                  <span className="party-member-name">
+                    {m.name}
+                    {isMe && <span className="party-you-tag"> (You)</span>}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
           {/* Live Chat Messages Feed */}
@@ -269,6 +401,7 @@ export function WatchPartyPanel({
                       style={{ color: msg.color }}
                     >
                       {msg.senderName}
+                      {msg.senderId === partyClient.user.id ? ' (You)' : ''}
                     </span>
                     <span className="party-message-time">
                       {new Date(msg.timestamp).toLocaleTimeString([], {
