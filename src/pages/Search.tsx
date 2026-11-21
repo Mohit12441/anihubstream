@@ -93,6 +93,7 @@ export function Search() {
   useSEO({
     title: query ? `Search results for "${query}" | AniHubStream` : 'Search Anime — Free Anime Streaming | AniHubStream',
     description: 'Search thousands of subbed and dubbed anime series and movies with instant HD streaming on AniHubStream.',
+    noindex: true,
   });
 
   // Keep input in sync with URL

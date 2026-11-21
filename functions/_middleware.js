@@ -21,8 +21,17 @@ export async function onRequest(context) {
       'Allow: /api/schedule',
       'Allow: /api/stats',
       'Allow: /api/search',
+      'Allow: /api/img',
+      'Disallow: /search',
+      'Disallow: /*?s=',
+      'Disallow: /*?genre=',
+      'Disallow: /*?status=',
+      'Disallow: /*?format=',
+      'Disallow: /*?sort=',
       'Disallow: /api/',
       'Disallow: /mylist',
+      'Disallow: /my-list',
+      'Disallow: /watchlist',
       '',
       'User-agent: GPTBot',
       'Allow: /',
@@ -127,6 +136,16 @@ export async function onRequest(context) {
     path.endsWith('.webmanifest') ||
     path.endsWith('.txt')
   ) {
+    if (path.startsWith('/api/') || path === '/api') {
+      const apiRes = await next();
+      const apiHeaders = new Headers(apiRes.headers);
+      apiHeaders.set('X-Robots-Tag', 'noindex, nofollow');
+      return new Response(apiRes.body, {
+        status: apiRes.status,
+        statusText: apiRes.statusText,
+        headers: apiHeaders,
+      });
+    }
     return next();
   }
 
@@ -339,6 +358,52 @@ export async function onRequest(context) {
             epLinksHtml = `<section class="crawler-episodes" style="margin-top:1.5rem;"><h2>Episode Guide</h2><nav aria-label="Episode List" style="display:flex;flex-wrap:wrap;align-items:center;">${links.join('')}</nav></section>`;
           }
 
+          let relatedHtml = '';
+          if (env.ANIHUB) {
+            try {
+              const relStmt = row.kind
+                ? env.ANIHUB.prepare(`SELECT id, title, year FROM anime WHERE kind = ?1 AND id != ?2 ORDER BY rating DESC LIMIT 5`).bind(row.kind, id)
+                : env.ANIHUB.prepare(`SELECT id, title, year FROM anime WHERE id != ?1 ORDER BY rating DESC LIMIT 5`).bind(id);
+              const { results: relResults } = await relStmt.all().catch(() => ({ results: [] }));
+              if (relResults && relResults.length) {
+                const relLinks = relResults.map(r =>
+                  `<a href="${origin}/anime/${r.id}" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem 0.5rem 0.25rem 0;">${(r.title || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])}${r.year ? ` (${r.year})` : ''}</a>`
+                ).join('');
+                relatedHtml = `<section class="crawler-related" style="margin-top:2rem;border-top:1px solid #2e2e42;padding-top:1.5rem;"><h2>If you liked ${safeTitle}, you might like...</h2><nav aria-label="Related Anime Recommendations" style="display:flex;flex-wrap:wrap;margin-top:0.75rem;">${relLinks}</nav></section>`;
+              }
+            } catch (_) {}
+          }
+          if (!relatedHtml) {
+            const fallbackRelated = [
+              ['solo-leveling', 'Solo Leveling'],
+              ['jujutsu-kaisen', 'Jujutsu Kaisen'],
+              ['demon-slayer', 'Demon Slayer'],
+              ['one-piece', 'One Piece'],
+              ['attack-on-titan', 'Attack on Titan'],
+            ].filter(([slug]) => slug !== id).slice(0, 4);
+            const relLinks = fallbackRelated.map(([slug, name]) =>
+              `<a href="${origin}/anime/${slug}" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem 0.5rem 0.25rem 0;">${name}</a>`
+            ).join('');
+            relatedHtml = `<section class="crawler-related" style="margin-top:2rem;border-top:1px solid #2e2e42;padding-top:1.5rem;"><h2>If you liked ${safeTitle}, you might like...</h2><nav aria-label="Related Anime Recommendations" style="display:flex;flex-wrap:wrap;margin-top:0.75rem;">${relLinks}</nav></section>`;
+          }
+
+          const productionText = (
+            `${animeTitle}${yearStr} is an officially catalogued ${row.kind ? row.kind.toLowerCase() : 'anime'} series originating from Japan${row.year ? ` in ${row.year}` : ''}. ` +
+            (row.episode_total && row.episode_total > 1
+              ? `The complete story spans ${row.episode_total} episodes, delivering structured narrative pacing from the opening premiere through to the season finale. `
+              : `The title is indexed with verified episodic guides and complete airdate archives. `) +
+            (row.rating > 0
+              ? `With an aggregated viewer score of ${Number(row.rating).toFixed(1)}/10, it maintains active engagement across our global anime community. `
+              : '') +
+            `Production metadata, alternative native titles, and broadcast schedules are verified against AniList, Kitsu, and MyAnimeList to guarantee accurate viewing documentation.`
+          ).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+
+          const streamingText = (
+            `Viewers can watch ${animeTitle} online free in full high definition (1080p and 720p) with fast cloud playback on AniHubStream. ` +
+            `Audio and subtitle options feature the original Japanese voice cast with multi-language subtitle synchronizations, alongside English dubbed audio streams where released. ` +
+            `With built-in AniSkip technology, episode openings and endings are automatically detected to let you skip intros and outros seamlessly on desktop, tablet, and mobile devices.`
+          ).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+
           preHtml = `<main class="crawler-content" style="padding:2rem;max-width:850px;margin:0 auto;line-height:1.6;color:#e2e8f0;">` +
             `<h1>Watch ${safeTitle}${yearStr}${epHeading} Online Free</h1>` +
             (safeNative ? `<p class="native-title" lang="ja" style="font-size:1.15rem;color:#94a3b8;margin-top:-0.5rem;">${safeNative}</p>` : '') +
@@ -350,10 +415,19 @@ export async function onRequest(context) {
             `</div>` +
             (safeEpSynopsis ? `<section class="crawler-episode-synopsis" style="margin:1.5rem 0;background:#181824;padding:1rem;border-radius:6px;border-left:4px solid #ff1f4a;"><h2>Episode ${epNum} Overview</h2><p>${safeEpSynopsis}</p></section>` : '') +
             `<section class="crawler-synopsis" style="margin:1.5rem 0;">` +
-              `<h2>Series Synopsis</h2>` +
+              `<h2>Series Synopsis & Overview</h2>` +
               `<p>${safeSynopsis}</p>` +
             `</section>` +
+            `<section class="crawler-production" style="margin:1.5rem 0;">` +
+              `<h2>Production & Broadcast Details</h2>` +
+              `<p>${productionText}</p>` +
+            `</section>` +
+            `<section class="crawler-streaming-guide" style="margin:1.5rem 0;">` +
+              `<h2>Streaming Quality & Audio Options</h2>` +
+              `<p>${streamingText}</p>` +
+            `</section>` +
             epLinksHtml +
+            relatedHtml +
             `<p style="margin-top:2rem;"><a href="${origin}/watch/${id}${epNum ? `/${epNum}` : ''}" style="display:inline-block;padding:0.75rem 1.5rem;background:#ff1f4a;color:#fff;border-radius:6px;font-weight:bold;text-decoration:none;">Stream ${safeTitle} Now</a></p>` +
           `</main>`;
         }
@@ -542,14 +616,48 @@ export async function onRequest(context) {
   } else if (path === '/discover') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Discover Trending Anime</h1><p>Explore currently trending anime titles, seasonal fan favorites, top-rated series, and recommended hidden gems updated in real-time from community watch metrics.</p></main>`;
   } else if (path === '/' || path === '') {
+    const topHomeSlugs = [
+      ['solo-leveling', 'Solo Leveling'],
+      ['jujutsu-kaisen', 'Jujutsu Kaisen'],
+      ['demon-slayer', 'Demon Slayer'],
+      ['one-piece', 'One Piece'],
+      ['attack-on-titan', 'Attack on Titan'],
+      ['sousou-no-frieren', 'Frieren: Beyond Journey\'s End'],
+      ['chainsaw-man', 'Chainsaw Man'],
+      ['bleach', 'Bleach: Thousand-Year Blood War'],
+      ['naruto-shippuden', 'Naruto Shippuden'],
+      ['hunter-x-hunter-2011', 'Hunter x Hunter'],
+      ['death-note', 'Death Note'],
+      ['my-hero-academia', 'My Hero Academia'],
+      ['spy-x-family', 'Spy x Family'],
+      ['vinland-saga', 'Vinland Saga'],
+      ['black-clover', 'Black Clover'],
+      ['mushoku-tensei-jobless-reincarnation', 'Mushoku Tensei'],
+      ['blue-lock', 'Blue Lock'],
+      ['kaiju-no-8', 'Kaiju No. 8'],
+      ['tokyo-ghoul', 'Tokyo Ghoul'],
+      ['haikyuu', 'Haikyu!!'],
+      ['sword-art-online', 'Sword Art Online'],
+      ['fullmetal-alchemist-brotherhood', 'Fullmetal Alchemist: Brotherhood'],
+      ['overlord', 'Overlord'],
+      ['dr-stone', 'Dr. STONE'],
+      ['re-zero-starting-life-in-another-world', 'Re:Zero'],
+    ];
+    const topHomeLinks = topHomeSlugs.map(([slug, name]) =>
+      `<a href="/anime/${slug}" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem;">${name}</a>`
+    ).join(' ');
+
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
 <h1>AniHubStream — Watch High Quality Anime Online Free Anytime, Anywhere</h1>
 <p>Welcome to AniHubStream, the next-generation anime streaming platform offering seamless high-definition anime playback, synchronized subtitle streams, instant server switching, and comprehensive episodic navigation across all major releases. Stream subbed and dubbed anime with ultra-low latency, clean weekly broadcast schedules, community ratings, and full episode guides.</p>
-<section aria-labelledby="crawler-popular-anime">
+<section aria-labelledby="crawler-popular-anime" style="margin:2rem 0;">
 <h2 id="crawler-popular-anime">Popular & Trending Anime Series</h2>
-<p>Stream trending anime series including Jujutsu Kaisen, Demon Slayer, Solo Leveling, One Piece, Attack on Titan, Chainsaw Man, Frieren: Beyond Journey's End, Bleach, and DanDaDan in full HD with zero ads.</p>
+<p>Stream trending anime series in full HD with zero ads:</p>
+<nav aria-label="Popular Anime" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;">
+${topHomeLinks}
+</nav>
 <nav aria-label="Quick Links" style="display:flex;gap:0.75rem;flex-wrap:wrap;margin:1rem 0;">
-<a href="/anime" style="color:#ff1f4a;text-decoration:underline;">Browse Full Catalogue</a> |
+<a href="/anime" style="color:#ff1f4a;text-decoration:underline;font-weight:bold;">Browse All 3,200+ Anime</a> |
 <a href="/genres" style="color:#ff1f4a;text-decoration:underline;">All Anime Genres</a> |
 <a href="/schedule" style="color:#ff1f4a;text-decoration:underline;">Broadcast Schedule</a> |
 <a href="/discover" style="color:#ff1f4a;text-decoration:underline;">Discover Trending Anime</a>
@@ -696,5 +804,36 @@ ${topAnimeHtml}
     });
   }
 
-  return rewriter.transform(response);
+  // Determine if this page should have noindex, follow (internal search & parameter filter facets)
+  const isSearchPath = path === '/search' || path.startsWith('/search/');
+  const hasFilterParams = url.searchParams.has('q') ||
+    url.searchParams.has('s') ||
+    url.searchParams.has('genre') ||
+    url.searchParams.has('status') ||
+    url.searchParams.has('format') ||
+    url.searchParams.has('sort') ||
+    url.searchParams.has('tag') ||
+    url.searchParams.has('page');
+  const shouldNoIndex = isSearchPath || (hasFilterParams && path !== '/');
+
+  if (shouldNoIndex) {
+    rewriter = rewriter.on('head', {
+      element(e) {
+        e.append(`\n    <meta name="robots" content="noindex, follow">`, { html: true });
+      },
+    });
+  }
+
+  const finalResponse = rewriter.transform(response);
+  if (shouldNoIndex) {
+    const finalHeaders = new Headers(finalResponse.headers);
+    finalHeaders.set('X-Robots-Tag', 'noindex, follow');
+    return new Response(finalResponse.body, {
+      status: finalResponse.status,
+      statusText: finalResponse.statusText,
+      headers: finalHeaders,
+    });
+  }
+
+  return finalResponse;
 }

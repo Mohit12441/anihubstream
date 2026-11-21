@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
-    "build:pages": "tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
+    "sitemap:generate": "node scripts/generate-sitemap.mjs",
+    "build": "node scripts/generate-sitemap.mjs && tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
+    "build:pages": "node scripts/generate-sitemap.mjs && tsc --noEmit && vite build --mode pages --outDir dist-pages --emptyOutDir",
     "typecheck": "tsc --noEmit",
     "test": "node --test api/*.test.mjs tools/*.test.mjs tools/meilisearch/*.test.mjs cloud-sync/*.test.mjs scripts/anubis.test.mjs",
     "test:cache": "node --test tools/zero-read.test.mjs",

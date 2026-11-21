@@ -51,6 +51,7 @@ export function Genres() {
       : 'Anime Genres & Categories | AniHubStream',
     description: 'Browse anime by genre: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Slice of Life, and more.',
     canonicalUrl: genre ? `${origin}/genres?genre=${encodeURIComponent(genre)}` : `${origin}/genres`,
+    noindex: Boolean(genre),
   });
 
   const pick = (id: string) => {

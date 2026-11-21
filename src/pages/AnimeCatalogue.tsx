@@ -57,6 +57,9 @@ export function AnimeCatalogue() {
       ? 'popularity'
       : (sortParam as SortId | null) ?? (searching ? 'relevance' : 'popularity');
 
+  const pageParam = Math.max(1, parseInt(params.get('page') || '1', 10) || 1);
+  const hasFilters = Boolean(q || genre) || status !== 'All' || kind !== 'All' || Boolean(sortParam && sortParam !== 'popularity') || pageParam > 1;
+
   useEffect(() => setTerm(q), [q]);
 
   useSEO({
@@ -67,6 +70,7 @@ export function AnimeCatalogue() {
         : 'Anime Catalogue — Discover Series & Movies | AniHubStream',
     description: 'Explore the full AniHubStream anime catalogue. Filter by genre, release year, format (TV, Movie, OVA), and rating.',
     canonicalUrl: 'https://anihubstream.com/anime',
+    noindex: hasFilters,
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
@@ -98,7 +102,7 @@ export function AnimeCatalogue() {
   const [capped, setCapped] = useState(false);
   const [busy, setBusy] = useState<'load' | 'more' | null>('load');
   const [fetchError, setFetchError] = useState<string | null>(null);
-  const pageNo = useRef(1);
+  const pageNo = useRef(pageParam);
   const gridRef = useRef<HTMLUListElement | null>(null);
 
   useFlipGrid(gridRef, [rows, view, status, kind, sort]);
@@ -107,8 +111,8 @@ export function AnimeCatalogue() {
     let live = true;
     setBusy('load');
     setFetchError(null);
-    pageNo.current = 1;
-    listCatalogue({ ...query, page: 1 })
+    pageNo.current = pageParam;
+    listCatalogue({ ...query, page: pageParam })
       .then((r) => {
         if (!live) return;
         setRows(r.results.map(hydrateCard));
@@ -155,7 +159,6 @@ export function AnimeCatalogue() {
   };
 
   const clearAll = () => setParams(new URLSearchParams(), { replace: true });
-  const hasFilters = Boolean(q || genre) || status !== 'All' || kind !== 'All';
   const rawMatching = hasFilters ? (total ?? null) : (stats?.titles ?? total ?? null);
   const rawAiring = stats ? stats.ongoing : null;
   const matchingText = useTextScramble(rawMatching);
@@ -406,6 +409,26 @@ export function AnimeCatalogue() {
                 </span>
               )}
             </div>
+            {total !== null && total > PAGE_SIZE && (
+              <nav aria-label="Catalogue pagination" className="catalogue__pagination-nav" style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+                {Array.from({ length: Math.min(Math.ceil(total / PAGE_SIZE), 8) }, (_, i) => i + 1).map((p) => {
+                  const pParams = new URLSearchParams(params);
+                  pParams.set('page', String(p));
+                  const isCurrent = pageNo.current === p;
+                  return (
+                    <a
+                      key={p}
+                      href={`/anime?${pParams.toString()}`}
+                      className={`btn btn--sm ${isCurrent ? 'btn--primary' : 'btn--ghost'}`}
+                      style={{ padding: '0.35rem 0.75rem', textDecoration: 'none' }}
+                      aria-current={isCurrent ? 'page' : undefined}
+                    >
+                      Page {p}
+                    </a>
+                  );
+                })}
+              </nav>
+            )}
           </>
         ) : (
           <div className="empty" role="status">

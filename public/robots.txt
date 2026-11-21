@@ -8,8 +8,17 @@ Allow: /api/home
 Allow: /api/schedule
 Allow: /api/stats
 Allow: /api/search
+Allow: /api/img
+Disallow: /search
+Disallow: /*?s=
+Disallow: /*?genre=
+Disallow: /*?status=
+Disallow: /*?format=
+Disallow: /*?sort=
 Disallow: /api/
 Disallow: /mylist
+Disallow: /my-list
+Disallow: /watchlist
 
 # Explicit AI Search Engine & LLM Crawler Access
 User-agent: GPTBot

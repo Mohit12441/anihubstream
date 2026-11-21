@@ -49,18 +49,8 @@ export async function onRequestGet(context) {
           loc: `${origin}/anime/${row.id}`,
           lastmod,
           changefreq: 'weekly',
-          priority: '0.9',
+          priority: '0.8',
         });
-
-        // 2. Episode 1 deep link for episodic series (Focuses crawl budget on highest-volume search queries)
-        if (row.episode_total && row.episode_total > 1) {
-          animeUrls.push({
-            loc: `${origin}/watch/${row.id}/1`,
-            lastmod,
-            changefreq: 'weekly',
-            priority: '0.8',
-          });
-        }
       }
     } catch (e) {
       console.error('Failed to generate dynamic sitemap entries:', e);
