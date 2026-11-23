@@ -5,6 +5,7 @@ import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
 import { resolveHiAnimeV2Direct } from './hianime/_hianime_v2.js';
 import { resolveAniPmBetaDirect } from './_anipm.js';
 import { resolveAniWatchDirect } from './_aniwatch.js';
+import { resolveAnimeSaltDirect } from './_animesalt.js';
 import { rezkaFetch, parseStreams, hdrezkaMeta, searchRezka } from '../_lib/hdrezka.js';
 
 const BRIDGE_TIMEOUT_MS = 2_000;
@@ -617,6 +618,25 @@ function buildDefaultServers(resolveUrl, { resolvedAnilistId, animeRow, resolved
 
   servers.push(
     makeServer({
+      id: 'animesalt:nekomux',
+      name: 'AnimeSalt · Multi-Audio (Hindi/Eng/Jap)',
+      provider: 'animesalt',
+      streamUrl: resolveUrl({ audio: 'dub', provider: 'animesalt', server: 'nekomux' }),
+      type: 'hls',
+      quality: '1080p',
+      audio: 'dub',
+      status: 'ready',
+      audioTracks: [
+        { id: 'animesalt-hi', language: 'hi', label: 'Hindi (Multi-Audio)', default: true },
+        { id: 'animesalt-en', language: 'en', label: 'English Dub', default: false },
+        { id: 'animesalt-ja', language: 'ja', label: 'Japanese', default: false },
+      ],
+      subtitles: [],
+    })
+  );
+
+  servers.push(
+    makeServer({
       id: 'torrent:P2P-1',
       name: 'P2P Swarm · WebTorrent',
       provider: 'torrent',
@@ -801,6 +821,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'anipm', name: 'AniPM', available: Boolean(availableSlugs.anipm), ...(providerHealth.anipm || { status: 'healthy', latencyMs: 70 }) },
       { id: 'hdrezka', name: 'HDRezka', available: hasRezkaBridge, unavailableReason: hasRezkaBridge ? null : 'Proxy Required', ...(providerHealth.hdrezka || { status: hasRezkaBridge ? 'healthy' : 'offline', latencyMs: 85 }) },
       { id: 'hindiflix', name: 'HindiFlix', available: true, unavailableReason: null, status: 'healthy', latencyMs: 65, hasDub: true },
+      { id: 'animesalt', name: 'AnimeSalt', available: true, unavailableReason: null, status: 'healthy', latencyMs: 55, hasDub: true },
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
@@ -1013,6 +1034,99 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         subtitles: [],
         audioTracks: [],
         audio: isDub ? 'dub' : 'sub',
+        skip: aniskipData,
+        thumbnails: null,
+      }, {
+        cache: 'no-store, no-cache, must-revalidate',
+      });
+    }
+
+    // FAST ROUTE FOR ANIMESALT: Native HLS extraction with ad-free proxying
+    if (requested === 'animesalt') {
+      const isDub = audio === 'dub' || serverParam?.toLowerCase().includes('dub') || true;
+      const serverId = 'animesalt:nekomux';
+      const serverName = 'AnimeSalt · Multi-Audio (Hindi/Eng/Jap)';
+
+      const [animesaltRes, aniskipData] = await Promise.all([
+        resolveAnimeSaltDirect({
+          title: resolvedTitle || animeRow?.title,
+          ep,
+          season,
+          audio,
+          signal: request.signal,
+        }),
+        resolveSkipTimes(env.ANIHUB, resolvedMalId, ep, durationSeconds, rawEpisodeMarkers, id).catch(() => null),
+      ]);
+
+      if (animesaltRes?.streamUrl) {
+        const proxyBase = `${url.origin}/api/proxy`;
+        const finalStreamUrl = `${proxyBase}?url=${encodeURIComponent(animesaltRes.streamUrl)}&referer=${encodeURIComponent(animesaltRes.referer)}&p=animesalt`;
+
+        const primaryServer = {
+          id: serverId,
+          name: serverName,
+          provider: 'animesalt',
+          status: 'ready',
+          streamUrl: finalStreamUrl,
+          type: 'hls',
+          quality: '1080p',
+          audio: 'dub',
+          audioTracks: animesaltRes.audioTracks || [],
+          subtitles: [],
+          downloads: [],
+        };
+
+        const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== serverId)];
+        return ok({
+          title: resolvedTitle,
+          episode: ep,
+          malId: resolvedMalId || null,
+          scopedProvider: 'animesalt',
+          scopedProviderUnavailable: false,
+          server: primaryServer,
+          servers: allServers,
+          providers: buildProviderRegistryBuckets(allServers),
+          allServers,
+          availableProviders: getAvailableProvidersList(),
+          subtitles: [],
+          audioTracks: primaryServer.audioTracks,
+          audio: 'dub',
+          skip: aniskipData,
+          thumbnails: null,
+        }, {
+          cache: 'public, max-age=300, s-maxage=600',
+        });
+      }
+
+      const unavailableServer = {
+        id: serverId,
+        name: serverName,
+        provider: 'animesalt',
+        status: 'unavailable',
+        unavailableReason: 'Episode not found on AnimeSalt',
+        streamUrl: '',
+        type: 'hls',
+        quality: '1080p',
+        audio: 'dub',
+        audioTracks: [],
+        subtitles: [],
+        downloads: [],
+      };
+      const allServers = [unavailableServer, ...defaultServers.filter((s) => s.id !== serverId)];
+      return ok({
+        title: resolvedTitle,
+        episode: ep,
+        malId: resolvedMalId || null,
+        server: unavailableServer,
+        servers: allServers,
+        providers: buildProviderRegistryBuckets(allServers),
+        allServers,
+        scopedProvider: 'animesalt',
+        scopedProviderUnavailable: true,
+        availableProviders: getAvailableProvidersList(),
+        subtitles: [],
+        audioTracks: [],
+        audio: 'dub',
         skip: aniskipData,
         thumbnails: null,
       }, {

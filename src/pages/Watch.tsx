@@ -77,6 +77,7 @@ export const DEFAULT_PLAY_SERVERS: PlayServer[] = [
   { id: 'hdrezka:studioband-dub', name: 'HDRezka · Studio Band (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'hdrezka:anilibria-dub', name: 'HDRezka · AniLibria (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
   { id: 'hdrezka:tvshows-dub', name: 'HDRezka · TVShows (RU Dub)', provider: 'hdrezka', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'mp4' },
+  { id: 'animesalt:nekomux', name: 'AnimeSalt · Multi-Audio', provider: 'animesalt', quality: '1080p', audio: 'dub', status: 'ready', streamUrl: '', type: 'hls' },
   { id: 'torrent:P2P-1', name: 'P2P Swarm · WebTorrent', provider: 'torrent', quality: '1080p', audio: 'sub', status: 'ready', streamUrl: '', type: 'hls' },
 ];
 
@@ -105,6 +106,7 @@ export function buildProviderRegistry(servers: PlayServer[]): ProviderRegistry {
         key === 'aniwatch' ? 'AniWatch' :
         key === 'anipm' ? 'AniPM' :
         key === 'hdrezka' ? 'HDRezka' :
+        key === 'animesalt' ? 'AnimeSalt' :
         key === 'p2p' ? 'P2P Swarm' :
         key.charAt(0).toUpperCase() + key.slice(1);
       registry[key] = {

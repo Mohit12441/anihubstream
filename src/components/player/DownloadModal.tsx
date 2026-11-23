@@ -76,6 +76,12 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     badge: 'Hindi Dub / Multi-Audio',
     description: 'Direct MP4 & batch ZIP downloads with Hindi dubbed and multi-audio tracks.',
   },
+  animesalt: {
+    name: 'AnimeSalt',
+    color: '#06b6d4',
+    badge: 'Multi-Audio (Mega / Direct)',
+    description: 'High-speed Mega and direct MP4 downloads in 1080p, 720p, and 480p with Indian regional multi-audio.',
+  },
 };
 
 export function DownloadModal({
@@ -97,6 +103,7 @@ export function DownloadModal({
     if (clean.includes('hdrezka')) return 'hdrezka';
     if (clean.includes('hindiflix')) return 'hindiflix';
     if (clean.includes('animehindidub')) return 'animehindidub';
+    if (clean.includes('animesalt')) return 'animesalt';
     return 'anikoto';
   }, [activeProvider, currentStream]);
 
@@ -115,6 +122,7 @@ export function DownloadModal({
     'hdrezka',
     'hindiflix',
     'animehindidub',
+    'animesalt',
   ]);
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedCommand, setCopiedCommand] = useState(false);
@@ -165,7 +173,7 @@ export function DownloadModal({
         if (!live) return;
         if (data?.ok && data?.data) {
           let items: DownloadItem[] = data.data.downloads || [];
-          if (items.length === 0 && currentStream && selectedProvider !== 'animehindidub') {
+          if (items.length === 0 && currentStream && selectedProvider !== 'animehindidub' && selectedProvider !== 'animesalt') {
             const activeUrl = currentStream.master || (currentStream as any).streamUrl;
             if (activeUrl) {
               const provName = currentMeta.name;
@@ -189,7 +197,7 @@ export function DownloadModal({
           setStreamUrl(data.data.streamUrl || (items[0]?.url ?? null));
           setCommand(data.data.command || null);
           if (Array.isArray(data.data.availableProviders) && data.data.availableProviders.length > 0) {
-            const merged = Array.from(new Set([...data.data.availableProviders, 'hindiflix', 'animehindidub']));
+            const merged = Array.from(new Set([...data.data.availableProviders, 'hindiflix', 'animehindidub', 'animesalt']));
             setAvailableProviders(merged);
           }
           if (items.length === 0 || data.data.available === false) {

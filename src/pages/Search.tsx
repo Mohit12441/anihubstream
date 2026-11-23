@@ -71,6 +71,7 @@ const PROVIDER_METAS: Record<string, { name: string; badge: string; color: strin
   aniwatch: { name: 'AniWatch', badge: 'Megaplay', color: '#3b82f6' },
   anipm: { name: 'AniPM', badge: 'Settlar HLS', color: '#8b5cf6' },
   hdrezka: { name: 'HDRezka', badge: 'Ultra MP4', color: '#f59e0b' },
+  animesalt: { name: 'AnimeSalt', badge: 'Multi-Audio', color: '#06b6d4' },
 };
 
 // In-memory instant cache for sub-millisecond query recovery
