@@ -666,9 +666,9 @@ export const CARD_COLUMNS = `
   a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank, a.alt_seasons,
   a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season, a.sched_episode,
   a.sched_sub_at, a.sched_dub_at,
-  a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
+  a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space, a.episodes_json,
   (SELECT group_concat(genre_id) FROM anime_genre ag WHERE ag.anime_id = a.id) AS genre_ids,
-  (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) AS episode_count
+  COALESCE(a.episode_total, (SELECT count(*) FROM episode e WHERE e.anime_id = a.id)) AS episode_count
 `;
 
 /* Slim column selection for shelves, schedule, and home feeds — skips heavy correlated

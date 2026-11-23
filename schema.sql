@@ -51,6 +51,10 @@ CREATE TABLE IF NOT EXISTS anime (
      older production D1 too, and there ALTER TABLE is the only way in: cloud-sync/schema.sql
      carries that statement for exactly that case, and re-running it here is a harmless
      'duplicate column name', which apply-schema counts as already_present. */
+  /* Cached serialized JSON array of episode objects for long/finished titles.
+     Allows /api/anime/:id to load hundreds of episodes in 1 single row read
+     instead of scanning hundreds of individual rows in the episode table. */
+  episodes_json  TEXT,
   catalogue_synced_at INTEGER
 );
 

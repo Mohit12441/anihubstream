@@ -151,14 +151,41 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
     }
 
     const fallbackArt = card.key_art || card.art || '';
-    const { results: episodeRows } = await env.ANIHUB.prepare(
-      `SELECT id, n, title, runtime, runtime_seconds, thumb, synopsis, markers, airdate, external_id
-         FROM episode WHERE anime_id = ?1 ORDER BY n`,
-    )
-      .bind(card.id)
-      .all();
+    let episodes = [];
 
-    let episodes = episodeRows.map((r) => episodeFromRow(r, fallbackArt));
+    // 1. Check if serialized episodes_json is already stored on the anime row (1 single row read!)
+    if (card.episodes_json) {
+      try {
+        const parsed = JSON.parse(card.episodes_json);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          episodes = parsed;
+        }
+      } catch {}
+    }
+
+    // 2. Fall back to scanning the episode table only when episodes_json is absent
+    if (episodes.length === 0) {
+      const { results: episodeRows } = await env.ANIHUB.prepare(
+        `SELECT id, n, title, runtime, runtime_seconds, thumb, synopsis, markers, airdate, external_id
+           FROM episode WHERE anime_id = ?1 ORDER BY n`,
+      )
+        .bind(card.id)
+        .all();
+
+      episodes = episodeRows.map((r) => episodeFromRow(r, fallbackArt));
+
+      // Asynchronously backfill serialized episodes_json for finished series with >= 12 episodes
+      // (e.g. One Piece, Naruto, Bleach) so all future cold misses take ZERO episode table queries!
+      const isFinished = card.status === 'Finished' || card.status === 'Completed';
+      if (isFinished && episodes.length >= 12 && !card.episodes_json) {
+        waitUntil?.(
+          env.ANIHUB.prepare(`UPDATE anime SET episodes_json = ?1 WHERE id = ?2`)
+            .bind(JSON.stringify(episodes), card.id)
+            .run()
+            .catch(() => {})
+        );
+      }
+    }
 
     const isUpcoming = card.status === 'Upcoming' || card.status === 'NOT_YET_RELEASED';
 
