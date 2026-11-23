@@ -280,7 +280,7 @@ async function resolveSkipTimes(db, malId, ep, duration, rawEpisodeMarkers, anim
 }
 
 const ANIME_META_CACHE = new Map();
-const ANIME_META_CACHE_TTL = 10 * 60 * 1000;
+const ANIME_META_CACHE_TTL = 60 * 60 * 1000; // 1 hour metadata cache in isolate memory
 
 async function lookupAnimeMetadata(db, id, ep) {
   if (!db || !id) return { id, animeRow: null };

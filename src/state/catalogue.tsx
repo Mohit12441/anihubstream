@@ -226,7 +226,7 @@ export function useAnimeDetail(id: string): AnimeDetail {
         related: isSameAnime ? s.related : [],
       };
     });
-    getAnime(id)
+    getAnime(id, nonce > 0)
       .then((d) => {
         if (!live) return;
         const { episodes, related, ...card } = d;

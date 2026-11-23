@@ -109,8 +109,31 @@ export const getStats = () =>
 export const getGenres = () => request<ListBody<ApiGenre>>('/genres');
 export const getSchedule = () =>
   request<{ seasons: string[]; days: { day: number; dayLabel: string; entries: ApiCard[] }[] }>('/schedule');
-export const getAnime = (id: string) =>
-  request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[]; themes?: AnimeTheme[] }>(`/anime/${encodeURIComponent(id)}`);
+const ANIME_CLIENT_CACHE = new Map<string, { time: number; data: any }>();
+const ANIME_CACHE_TTL = 5 * 60 * 1000; // 5 minutes in-memory cache
+
+export const clearAnimeCache = (id?: string) => {
+  if (id) {
+    ANIME_CLIENT_CACHE.delete(id.trim().toLowerCase());
+  } else {
+    ANIME_CLIENT_CACHE.clear();
+  }
+};
+
+export const getAnime = async (id: string, forceFresh = false) => {
+  const cacheKey = id.trim().toLowerCase();
+  if (!forceFresh) {
+    const hit = ANIME_CLIENT_CACHE.get(cacheKey);
+    if (hit && Date.now() - hit.time < ANIME_CACHE_TTL) {
+      return hit.data;
+    }
+  }
+  const data = await request<ApiCard & { episodes: ApiEpisode[]; related: ApiCard[]; themes?: AnimeTheme[] }>(
+    `/anime/${encodeURIComponent(id)}`
+  );
+  ANIME_CLIENT_CACHE.set(cacheKey, { time: Date.now(), data });
+  return data;
+};
 
 export interface PlayQuery {
   id: string;

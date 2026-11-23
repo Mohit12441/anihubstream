@@ -13,7 +13,7 @@ const SLUG_REDIRECTS = {
 const PROVIDER_PREFIX_REGEX = /^(?:hianime|anikoto|aniwatch|watchanimeworld|animewave|animekai):/i;
 
 export const onRequestGet = async ({ request, params, env, waitUntil }) => {
-  return withEdgeCache(request, env, 86400, async () => {
+  return withEdgeCache(request, env, 604800, async () => {
   try {
     const id = decodeURIComponent(params.id);
     if (!/^[A-Za-z0-9_.:\-!()'"+~@, %]{1,200}$/.test(id)) {
@@ -205,7 +205,8 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
 
     // Auto-inject cached AniSkip markers if episode rows have empty markers
     const malId = card.skip_key_id || (card.source_ids ? JSON.parse(card.source_ids)?.mal : null);
-    if (malId && episodes.length > 0) {
+    const hasUnpopulatedMarkers = episodes.some((ep) => !ep.markers || ep.markers.length === 0);
+    if (malId && episodes.length > 0 && hasUnpopulatedMarkers) {
       try {
         const { results: cachedSkip } = await env.ANIHUB.prepare(
           `SELECT key, data FROM stream_cache WHERE key LIKE ?1 AND expires_at > ?2`
@@ -247,13 +248,12 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
                 a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season,
                 a.episode_total, a.source_ids, a.skip_key_id, a.skip_key_space,
                 (SELECT group_concat(genre_id) FROM anime_genre ag2 WHERE ag2.anime_id = a.id) AS genre_ids,
-                (SELECT count(*) FROM episode e2 WHERE e2.anime_id = a.id) AS episode_count
+                a.episode_total AS episode_count
            FROM anime_genre ag
            JOIN anime a ON a.id = ag.anime_id
-          WHERE ag.genre_id IN (SELECT genre_id FROM anime_genre WHERE anime_id = ?1)
+          WHERE ag.genre_id = (SELECT genre_id FROM anime_genre WHERE anime_id = ?1 LIMIT 1)
             AND a.id <> ?1
-          GROUP BY a.id
-          ORDER BY count(*) DESC, a.rating DESC
+          ORDER BY a.rating DESC
           LIMIT 6`,
       )
         .bind(card.id)
@@ -273,7 +273,7 @@ export const onRequestGet = async ({ request, params, env, waitUntil }) => {
     const themeRows = themeRes?.results || [];
 
     const isOngoing = card.status === 'Ongoing' || card.status === 'Airing';
-    const cacheTtl = isOngoing ? 1800 : 86400;
+    const cacheTtl = isOngoing ? 3600 : 604800;
 
     return ok({
       ...cardFromRow(card),
