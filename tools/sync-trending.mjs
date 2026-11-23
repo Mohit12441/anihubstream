@@ -9,9 +9,9 @@
 
 import { DatabaseSync } from 'node:sqlite';
 import { d1Query, d1All } from '../cloud-sync/d1.mjs';
-import { findSqlitePath } from './discover-titles.mjs';
+import { findSqlitePath, wrangler } from './discover-titles.mjs';
 
-export { findSqlitePath };
+export { findSqlitePath, wrangler };
 
 const TRENDING_QUERY = `
   query($n: Int) {
@@ -70,18 +70,19 @@ export async function fetchTrendingAniList(limit = 50) {
 }
 
 /**
- * Synchronize trending ranks into D1 SQLite or remote REST API
+ * Synchronize trending ranks into D1 SQLite or remote REST API / wrangler CLI
  * @param {Object} [options]
  * @param {DatabaseSync} [options.db]
+ * @param {boolean} [options.isRemote=false]
  * @param {number} [options.limit=50]
  * @param {boolean} [options.quiet=false]
  * @returns {Promise<{ ok: boolean, updated: number, cleared: number, totalTrending: number, durationMs: number }>}
  */
-export async function syncTrendingRanks({ db = null, limit = 50, quiet = false } = {}) {
+export async function syncTrendingRanks({ db = null, isRemote = process.argv.includes('--remote'), limit = 50, quiet = false } = {}) {
   const start = Date.now();
   const hasRestCreds = Boolean(process.env.CF_API_TOKEN && process.env.CF_ACCOUNT_ID && process.env.CF_DATABASE_ID);
 
-  if (!db && !hasRestCreds) {
+  if (!db && !isRemote && !hasRestCreds) {
     const sqlitePath = findSqlitePath();
     if (!sqlitePath) {
       if (!quiet) console.error('[sync-trending] Local D1 SQLite database not found.');
@@ -179,6 +180,60 @@ export async function syncTrendingRanks({ db = null, limit = 50, quiet = false }
       if (!rankedSlugs.has(id)) {
         await d1Query('UPDATE anime SET trend_rank = NULL WHERE id = ?1', [id]);
         clearedCount++;
+      }
+    }
+  } else if (isRemote) {
+    // Remote D1 execution via wrangler CLI fallback
+    const output = wrangler([
+      'd1', 'execute', 'anihub', '--remote', '--json', '--command', `
+        SELECT anime_id, anilist_id
+        FROM anime_id_map
+        WHERE anilist_id IS NOT NULL
+        UNION
+        SELECT id as anime_id, CAST(json_extract(source_ids, '$.anilist') AS INTEGER) as anilist_id
+        FROM anime
+        WHERE json_extract(source_ids, '$.anilist') IS NOT NULL
+      `,
+    ]);
+    const parsed = JSON.parse(output);
+    const idRows = parsed[0]?.results || [];
+
+    const trendOutput = wrangler([
+      'd1', 'execute', 'anihub', '--remote', '--json', '--command', `
+        SELECT id FROM anime WHERE trend_rank IS NOT NULL
+      `,
+    ]);
+    const trendParsed = JSON.parse(trendOutput);
+    const currentTrending = trendParsed[0]?.results || [];
+
+    const sqlEscape = (val) => `'${String(val).replace(/'/g, "''")}'`;
+    const remoteSql = [];
+
+    for (const row of idRows) {
+      const anilistId = Number(row.anilist_id);
+      const animeId = String(row.anime_id);
+
+      if (rankMap.has(anilistId)) {
+        const rank = rankMap.get(anilistId);
+        rankedSlugs.add(animeId);
+        remoteSql.push(`UPDATE anime SET trend_rank = ${rank} WHERE id = ${sqlEscape(animeId)} AND (trend_rank IS NULL OR trend_rank != ${rank});`);
+        updatedCount++;
+      }
+    }
+
+    for (const row of currentTrending) {
+      const id = String(row.id);
+      if (!rankedSlugs.has(id)) {
+        remoteSql.push(`UPDATE anime SET trend_rank = NULL WHERE id = ${sqlEscape(id)};`);
+        clearedCount++;
+      }
+    }
+
+    if (remoteSql.length > 0) {
+      const CHUNK = 50;
+      for (let i = 0; i < remoteSql.length; i += CHUNK) {
+        const batch = remoteSql.slice(i, i + CHUNK).join('\n');
+        wrangler(['d1', 'execute', 'anihub', '--remote', '--command', batch]);
       }
     }
   }

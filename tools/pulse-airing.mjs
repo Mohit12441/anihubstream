@@ -31,7 +31,7 @@ async function main() {
   let trendRes = { totalTrending: 0 };
   if (includeTrending) {
     console.log('► Stage 1: Syncing global trending ranks from AniList (24h Daily Cadence)...');
-    trendRes = await syncTrendingRanks({ quiet: false });
+    trendRes = await syncTrendingRanks({ isRemote, quiet: false });
   } else {
     console.log('► Stage 1: Skipped trending ranks (scheduled on 24-hour daily cadence; use --trending to force).');
   }

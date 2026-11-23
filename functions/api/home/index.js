@@ -7,7 +7,7 @@ const ROW_LIMIT = 20;
 const FRESH_FROM_YEAR = 2024;
 
 export const onRequestGet = async ({ request, env, waitUntil }) => {
-  return withEdgeCache(request, env, 1800, async () => {
+  return withEdgeCache(request, env, 180, async () => {
   try {
     const url = new URL(request.url);
     const provider = (url.searchParams.get('provider') || '').toLowerCase().trim();
@@ -46,7 +46,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       fresh: fresh.results.map((r) => cardFromRowSlim(r, 0)),
       added: added.results.map((r) => cardFromRowSlim(r, 0)),
     }, {
-      cache: 'public, max-age=120, s-maxage=1800, stale-while-revalidate=300',
+      cache: 'public, max-age=60, s-maxage=180, stale-while-revalidate=120',
       headers: { vary: 'Accept-Encoding' },
     });
   } catch (err) {

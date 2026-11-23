@@ -157,7 +157,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         capped: results.length >= SEARCH_SCAN_MAX,
         results: slice.map((x) => cardFromRow(x.r)),
       }, {
-        cache: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=600',
+        cache: 'public, max-age=60, s-maxage=300, stale-while-revalidate=120',
       });
     }
 
@@ -179,7 +179,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     return ok(
       { page, limit, total: total?.n ?? 0, count: results.length, results: results.map(cardFromRow) },
-      { cache: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=600' }
+      { cache: 'public, max-age=60, s-maxage=300, stale-while-revalidate=120' }
     );
   } catch (err) {
     return errorResponse(err);
