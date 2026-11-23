@@ -27,6 +27,10 @@ interface DownloadItem {
   type: 'direct' | 'portal' | 'stream' | 'stream-download';
   format?: string;
   referer?: string;
+  isBatch?: boolean;
+  fileSize?: string;
+  audioLabel?: string;
+  season?: string;
 }
 
 const PROVIDER_METAS: Record<string, { name: string; color: string; badge: string; description: string }> = {
@@ -66,6 +70,12 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     badge: 'Hindi Dub Direct MP4',
     description: 'Direct high-speed MP4 downloads with Hindi dubbed audio track.',
   },
+  animehindidub: {
+    name: 'AnimeHindiDub',
+    color: '#ff6600',
+    badge: 'Hindi Dub / Multi-Audio',
+    description: 'Direct MP4 & batch ZIP downloads with Hindi dubbed and multi-audio tracks.',
+  },
 };
 
 export function DownloadModal({
@@ -86,6 +96,7 @@ export function DownloadModal({
     if (clean.includes('anipm')) return 'anipm';
     if (clean.includes('hdrezka')) return 'hdrezka';
     if (clean.includes('hindiflix')) return 'hindiflix';
+    if (clean.includes('animehindidub')) return 'animehindidub';
     return 'anikoto';
   }, [activeProvider, currentStream]);
 
@@ -103,6 +114,7 @@ export function DownloadModal({
     'anipm',
     'hdrezka',
     'hindiflix',
+    'animehindidub',
   ]);
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedCommand, setCopiedCommand] = useState(false);
@@ -153,7 +165,7 @@ export function DownloadModal({
         if (!live) return;
         if (data?.ok && data?.data) {
           let items: DownloadItem[] = data.data.downloads || [];
-          if (items.length === 0 && currentStream) {
+          if (items.length === 0 && currentStream && selectedProvider !== 'animehindidub') {
             const activeUrl = currentStream.master || (currentStream as any).streamUrl;
             if (activeUrl) {
               const provName = currentMeta.name;
@@ -504,15 +516,20 @@ export function DownloadModal({
                           <span className="dl-modal__badge dl-modal__badge--stream">
                             STREAM &rarr; VIDEO
                           </span>
+                        ) : item.isBatch ? (
+                          <span className="dl-modal__badge" style={{ backgroundColor: 'rgba(255, 102, 0, 0.2)', color: '#ff9933', borderColor: 'rgba(255, 102, 0, 0.4)' }}>
+                            BATCH {item.format || 'ZIP'}
+                          </span>
                         ) : item.type === 'portal' ? (
                           <span className="dl-modal__badge" style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', color: '#aaa', borderColor: 'rgba(255, 255, 255, 0.15)' }}>
-                            EXTERNAL MIRROR
+                            DIRECT GATEWAY
                           </span>
                         ) : null}
                       </div>
                       <div className="dl-modal__item-meta">
                         <span className="dl-modal__meta-chip">Format: {item.format || (isStreamDownload ? 'TS / MP4' : 'MP4')}</span>
-                        <span className="dl-modal__meta-chip">Audio: {item.audio.toUpperCase()}</span>
+                        {item.fileSize && <span className="dl-modal__meta-chip">Size: {item.fileSize}</span>}
+                        <span className="dl-modal__meta-chip">Audio: {item.audioLabel || item.audio.toUpperCase()}</span>
                       </div>
 
                       {/* Active In-Browser Download Progress Bar */}

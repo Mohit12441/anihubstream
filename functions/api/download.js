@@ -16,6 +16,7 @@ import { resolveAniPmBetaDirect } from './_anipm.js';
 import { resolveAniWatchDirect } from './_aniwatch.js';
 import { searchRezka, hdrezkaMeta } from '../_lib/hdrezka.js';
 import { resolveHindiFlixStream } from '../_lib/hindiflix.js';
+import { resolveAnimeHindiDubDownloads } from './_animehindidub.js';
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 const CACHE_TTL_MS = 20 * 60 * 1000; // 20 minutes
@@ -351,6 +352,7 @@ export const onRequestGet = async ({ request, env }) => {
       'anipm',
       'hdrezka',
       'hindiflix',
+      'animehindidub',
     ]);
     let match = null;
 
@@ -752,13 +754,28 @@ export const onRequestGet = async ({ request, env }) => {
       } catch {}
       downloadPage = `https://hindiflix.cc/?s=${encodeURIComponent(animeTitle)}`;
 
+    } else if (provider === 'animehindidub') {
+      try {
+        const ahdRes = await resolveAnimeHindiDubDownloads(animeTitle, ep, request.signal);
+        if (ahdRes.downloads?.length) {
+          downloads.push(...ahdRes.downloads);
+        }
+        if (ahdRes.downloadPage) {
+          downloadPage = ahdRes.downloadPage;
+        }
+      } catch {}
+      if (!downloadPage) {
+        downloadPage = `https://animehindidub.net/?s=${encodeURIComponent(animeTitle)}`;
+      }
+
     } else {
       downloadPage = `https://megaplay.buzz/stream/mal/${malId || cleanSlug}/${ep}/${audio}`;
     }
 
     // --- Resilient Multi-Provider Fallback Cascade ---
     // If the requested provider produced 0 downloads, check AniPM or MegaPlay so the user gets valid download options
-    if (downloads.length === 0) {
+    // (Explicit AnimeHindiDub requests remain strictly scoped to Hindi Dub downloads without false streaming fallbacks)
+    if (downloads.length === 0 && provider !== 'animehindidub') {
       // Fallback attempt A: AniPM Beta
       try {
         const betaFallback = await resolveAniPmBetaDirect({
