@@ -31,7 +31,7 @@ export const onRequestGet = async ({ request, env }) => {
     const url = new URL(request.url);
     const animeId = strParam(url, 'animeId');
     const episodeNParam = url.searchParams.get('episodeN');
-    const episodeN = episodeNParam !== null && episodeNParam !== '' ? intParam(url, 'episodeN', 0) : null;
+    const episodeN = episodeNParam !== null && episodeNParam !== '' ? intParam(url, 'episodeN', 0, 5000, 0) : null;
     const userUid = strParam(url, 'userUid');
 
     if (!animeId) {
@@ -52,19 +52,30 @@ export const onRequestGet = async ({ request, env }) => {
       conditions.push('c.episode_n IS NULL');
     }
 
+    const hasUser = Boolean(userUid && typeof userUid === 'string' && userUid.trim());
+    const queryBindings = [...bindings];
+    let joinSql = '';
+    let hasLikedSelect = '0 AS has_liked';
+
+    if (hasUser) {
+      joinSql = `LEFT JOIN comment_like cl ON cl.comment_id = c.id AND cl.user_uid = ?${bindings.length + 1}`;
+      queryBindings.push(userUid.trim());
+      hasLikedSelect = 'CASE WHEN cl.user_uid IS NOT NULL THEN 1 ELSE 0 END AS has_liked';
+    }
+
     const sql = `
       SELECT c.id, c.anime_id, c.episode_n, c.parent_id,
              c.author_name, c.author_uid, c.author_avatar,
              c.content, c.has_spoiler, c.likes, c.is_pinned,
              c.created_at, c.updated_at,
-             EXISTS(SELECT 1 FROM comment_like cl WHERE cl.comment_id = c.id AND cl.user_uid = ?${bindings.length + 1}) AS has_liked
+             ${hasLikedSelect}
       FROM comment c
+      ${joinSql}
       WHERE ${conditions.join(' AND ')}
       ORDER BY c.is_pinned DESC, c.created_at DESC
       LIMIT 100
     `;
 
-    const queryBindings = [...bindings, userUid || ''];
     const { results } = await db.prepare(sql).bind(...queryBindings).all();
 
     // Reconstruct nested thread tree (parent -> replies)

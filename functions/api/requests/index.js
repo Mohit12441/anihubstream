@@ -1,4 +1,4 @@
-import { errorResponse, ok, strParam, intParam } from '../_lib.js';
+import { errorResponse, fail, ok, strParam, intParam } from '../_lib.js';
 
 // SHA-256 helper for privacy-preserving rate limiting
 async function hashIp(ip, salt = 'anihub-req-salt-v1') {
@@ -17,8 +17,8 @@ export const onRequestGet = async ({ request, env }) => {
     const sort = strParam(url, 'sort') || 'popular';
     const q = strParam(url, 'q');
     const userUid = strParam(url, 'userUid');
-    const page = Math.max(1, intParam(url, 'page', 1));
-    const limit = Math.min(50, Math.max(1, intParam(url, 'limit', 20)));
+    const page = intParam(url, 'page', 1, 1000, 1);
+    const limit = intParam(url, 'limit', 1, 50, 20);
     const offset = (page - 1) * limit;
 
     const db = env.ANIHUB;
@@ -43,26 +43,43 @@ export const onRequestGet = async ({ request, env }) => {
 
     // 1. Fetch total count
     const countSql = `SELECT COUNT(*) AS total FROM anime_request r ${whereClause}`;
-    const totalRow = await db.prepare(countSql).bind(...params).first();
+    const countStmt = db.prepare(countSql);
+    const totalRow = params.length > 0 ? await countStmt.bind(...params).first() : await countStmt.first();
     const total = totalRow?.total ?? 0;
 
     // 2. Fetch paginated list
+    const hasUser = Boolean(userUid && typeof userUid === 'string' && userUid.trim());
+    const listParams = [];
+    let joinSql = '';
+    let hasVotedSelect = '0 AS has_voted';
+
+    if (hasUser) {
+      joinSql = 'LEFT JOIN anime_request_vote v ON v.request_id = r.id AND v.user_uid = ?';
+      listParams.push(userUid.trim());
+      hasVotedSelect = 'CASE WHEN v.user_uid IS NOT NULL THEN 1 ELSE 0 END AS has_voted';
+    }
+
+    if (params.length > 0) {
+      listParams.push(...params);
+    }
+
     const listSql = `
       SELECT r.id, r.title, r.native_title, r.anilist_id, r.mal_id, r.year, r.notes,
              r.status, r.vote_count, r.requester_name, r.requester_uid, r.anime_id,
              r.created_at, r.updated_at,
-             EXISTS(SELECT 1 FROM anime_request_vote v WHERE v.request_id = r.id AND v.user_uid = ?) AS has_voted
+             ${hasVotedSelect}
       FROM anime_request r
+      ${joinSql}
       ${whereClause}
       ORDER BY ${orderClause}
-      LIMIT ? OFFSET ?
+      LIMIT ${limit} OFFSET ${offset}
     `;
 
-    const listParams = [userUid || '', ...params, limit, offset];
-    const { results } = await db.prepare(listSql).bind(...listParams).all();
+    const listStmt = db.prepare(listSql);
+    const { results } = listParams.length > 0 ? await listStmt.bind(...listParams).all() : await listStmt.all();
 
     return ok({
-      requests: results.map((r) => ({
+      requests: (results || []).map((r) => ({
         id: r.id,
         title: r.title,
         nativeTitle: r.native_title,
@@ -86,7 +103,7 @@ export const onRequestGet = async ({ request, env }) => {
       cache: 'public, max-age=10, s-maxage=30, stale-while-revalidate=60',
     });
   } catch (err) {
-    return errorResponse(err);
+    return fail(500, 'internal', err?.message || String(err));
   }
 };
 
