@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { extname, resolve, sep } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..', 'dist-pages');
-const PORT = Number(process.env.PORT || 8787);
+const PORT = process.env.PORT !== undefined ? Number(process.env.PORT) : 8787;
 
 /* The bundle talks to same-origin /api, and this machine does not run Pages Functions — so
    without a forwarder, every page served through the tunnel (app.anihubstream.com) shows the
@@ -161,9 +161,11 @@ const server = createServer(async (req, res) => {
 });
 
 // 127.0.0.1 on purpose: cloudflared talks to this locally, the LAN never sees it.
-server.listen(PORT, '127.0.0.1', () =>
+server.listen(PORT, '127.0.0.1', () => {
+  const addr = server.address();
+  const boundPort = typeof addr === 'object' && addr ? addr.port : PORT;
   console.log(
-    `anihub frontend: http://127.0.0.1:${PORT} root=${ROOT}` +
+    `anihub frontend: http://127.0.0.1:${boundPort} root=${ROOT}` +
       (API_UPSTREAM ? ` api->${API_UPSTREAM}` : ' api=disabled')
-  )
-);
+  );
+});

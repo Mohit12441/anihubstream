@@ -72,29 +72,35 @@ const startUpstream = async () => {
   upstreamUrl = `http://127.0.0.1:${srv.address().port}`;
 };
 
-/** @param {Record<string,string>} env */
-const startOrigin = async (env) => {
-  const port = env.PORT;
+/** @param {Record<string,string>} [env] */
+const startOrigin = async (env = {}) => {
   const proc = spawn(process.execPath, [SERVER], {
     cwd: ROOT,
-    env: { ...process.env, ANIHUB_API_UPSTREAM: upstreamUrl, ...env },
+    env: { ...process.env, ANIHUB_API_UPSTREAM: upstreamUrl, PORT: '0', ...env },
     stdio: ['ignore', 'pipe', 'pipe'],
     windowsHide: true,
   });
   let noise = '';
   proc.stderr.on('data', (c) => { noise += String(c); });
+  let stdoutData = '';
+  proc.stdout.on('data', (c) => { stdoutData += String(c); });
+
   const until = Date.now() + 10_000;
   for (;;) {
     if (proc.exitCode !== null) throw new Error(`origin exited ${proc.exitCode}: ${noise}`);
-    try {
-      await fetch(`http://127.0.0.1:${port}/`, { signal: AbortSignal.timeout(500) });
-      break;
-    } catch {
-      if (Date.now() > until) throw new Error(`origin did not bind :${port} — ${noise || 'no output'}`);
-      await new Promise((r) => setTimeout(r, 100));
+    const match = stdoutData.match(/http:\/\/127\.0\.0\.1:(\d+)/);
+    if (match) {
+      const port = Number(match[1]);
+      try {
+        await fetch(`http://127.0.0.1:${port}/`, { signal: AbortSignal.timeout(500) });
+        return { proc, base: `http://127.0.0.1:${port}`, port };
+      } catch {
+        // waiting for listener to accept connections
+      }
     }
+    if (Date.now() > until) throw new Error(`origin did not bind port — ${noise || stdoutData || 'no output'}`);
+    await new Promise((r) => setTimeout(r, 50));
   }
-  return { proc, base: `http://127.0.0.1:${port}`, port };
 };
 
 const origins = [];
@@ -118,7 +124,7 @@ const lastHop = () => seen[seen.length - 1];
 
 describe('1. what the forwarder relays', () => {
   let origin;
-  before(async () => { origin = await withOrigin({ PORT: String(await freePort()) }); });
+  before(async () => { origin = await withOrigin(); });
 
   it('answers /api with the upstream JSON, status and headers — never with index.html', async () => {
     const res = await fetch(`${origin.base}/api/anime?limit=2&sort=rating`);
@@ -189,7 +195,7 @@ describe('1. what the forwarder relays', () => {
   });
 
   it('answers 502 JSON when the upstream cannot be reached at all', async () => {
-    const down = await withOrigin({ PORT: String(await freePort()), ANIHUB_API_UPSTREAM: `http://127.0.0.1:${await freePort()}` });
+    const down = await withOrigin({ ANIHUB_API_UPSTREAM: `http://127.0.0.1:${await freePort()}` });
     const res = await fetch(`${down.base}/api/anime`);
     assert.equal(res.status, 502);
     assert.equal(res.headers.get('content-type'), 'application/json; charset=utf-8');
@@ -200,7 +206,7 @@ describe('1. what the forwarder relays', () => {
 
 describe('2. what the origin refuses before any socket opens', () => {
   let origin;
-  before(async () => { origin = await withOrigin({ PORT: String(await freePort()) }); });
+  before(async () => { origin = await withOrigin(); });
 
   it('refuses a method the API does not speak with 405 JSON', async () => {
     const before_ = seen.length;
@@ -225,7 +231,7 @@ describe('2. what the origin refuses before any socket opens', () => {
 
 describe('3. what must keep being files', () => {
   let origin;
-  before(async () => { origin = await withOrigin({ PORT: String(await freePort()) }); });
+  before(async () => { origin = await withOrigin(); });
 
   it('does not touch a non-/api path, however it is spelled', async () => {
     const before_ = seen.length;
@@ -238,7 +244,7 @@ describe('3. what must keep being files', () => {
   });
 
   it('serves the SPA itself when the forwarder is turned off', async () => {
-    const off = await withOrigin({ PORT: String(await freePort()), ANIHUB_API_UPSTREAM: '' });
+    const off = await withOrigin({ ANIHUB_API_UPSTREAM: '' });
     const before_ = seen.length;
     const res = await fetch(`${off.base}/api/anime`);
     assert.equal(seen.length, before_, 'with no upstream configured nothing is forwarded');
