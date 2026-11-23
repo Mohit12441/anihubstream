@@ -361,7 +361,10 @@ export const cardFromRowSlim = (r, maxSynopsisLen = 0) => ({
       : {
           day: r.sched_day,
           dayLabel: r.sched_day_label,
+          date: r.sched_date,
           time: r.sched_time,
+          season: r.sched_season,
+          episode: r.sched_episode ?? null,
           subAt: r.sched_sub_at ?? null,
           dubAt: r.sched_dub_at ?? null,
         },
@@ -673,7 +676,8 @@ export const CARD_COLUMNS = `
 export const CARD_COLUMNS_SLIM = `
   a.id, a.title, a.year, a.rating, a.season, a.kind, a.status,
   a.art, a.key_art, a.accent, a.synopsis, a.rank, a.trend_rank,
-  a.sched_day, a.sched_day_label, a.sched_time, a.sched_sub_at, a.sched_dub_at,
+  a.sched_day, a.sched_day_label, a.sched_date, a.sched_time, a.sched_season, a.sched_episode,
+  a.sched_sub_at, a.sched_dub_at,
   a.episode_total,
   (SELECT group_concat(genre_id) FROM anime_genre ag WHERE ag.anime_id = a.id) AS genre_ids
 `;

@@ -62,6 +62,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           MODE: 'delta'
           CLOUD_CREATES_ROWS: '1'
+          CLOUD_OWNS_SCHEDULE: '1'
           LEGACY_WRITER_ACTIVE: '1'
         run: |
           TARGET="${{ github.event.client_payload.target || github.event.inputs.target || 'all' }}"

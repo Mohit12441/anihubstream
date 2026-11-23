@@ -3,7 +3,7 @@ import { CARD_COLUMNS_SLIM, cardFromRowSlim, errorResponse, ok, strParam, withEd
 const WEEK = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
 export const onRequestGet = async ({ request, env, waitUntil }) => {
-  return withEdgeCache(request, env, 3600, async () => {
+  return withEdgeCache(request, env, 900, async () => {
   try {
     const url = new URL(request.url);
     const season = strParam(url, 'season');
@@ -22,7 +22,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     return ok(
       { seasons: [...new Set(results.map((r) => r.sched_season).filter(Boolean))].sort(), days },
-      { cache: 'public, max-age=120, s-maxage=3600, stale-while-revalidate=300', headers: { vary: 'Accept-Encoding' } },
+      { cache: 'public, max-age=120, s-maxage=900, stale-while-revalidate=300', headers: { vary: 'Accept-Encoding' } },
     );
   } catch (err) {
     return errorResponse(err);
