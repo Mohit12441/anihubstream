@@ -79,7 +79,12 @@ export function Header() {
   useEffect(() => {
     const trimmed = q.trim();
     if (!trimmed) {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort();
+        abortControllerRef.current = null;
+      }
       setSuggestions([]);
+      setLoading(false);
       return;
     }
     const handler = setTimeout(() => {
@@ -92,10 +97,12 @@ export function Header() {
       setLoading(true);
       searchInstant(trimmed, 8, { signal: controller.signal })
         .then(data => {
+          if (controller.signal.aborted) return;
           setSuggestions(data.hits || []);
           setLoading(false);
         })
         .catch(() => {
+          if (controller.signal.aborted) return;
           setSuggestions([]);
           setLoading(false);
         });
@@ -105,8 +112,10 @@ export function Header() {
 
   const clearSuggestions = () => {
     setSuggestions([]);
+    setLoading(false);
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
+      abortControllerRef.current = null;
     }
   };
 
@@ -122,17 +131,55 @@ export function Header() {
   };
 
   const renderSuggestions = () => {
-    if (loading) {
-      return <div className="suggestions-loading">Loading…</div>;
+    const trimmed = q.trim();
+    if (!trimmed) return null;
+
+    if (loading && !suggestions.length) {
+      return (
+        <div className="suggestions-loading" role="status" aria-live="polite">
+          <span className="suggestions-spinner" aria-hidden="true" />
+          <span>Searching anime…</span>
+        </div>
+      );
     }
-    if (!suggestions.length) return null;
+
+    if (!loading && !suggestions.length) {
+      return (
+        <div className="suggestions-empty" role="status" aria-live="polite">
+          <span>No anime found for "{trimmed}"</span>
+        </div>
+      );
+    }
+
     return (
-      <ul className="instant-suggestions" role="listbox">
+      <ul className="instant-suggestions" role="listbox" aria-label="Suggestions">
         {suggestions.map((hit: any) => (
-          <li key={hit.id} className="suggestion-item" onClick={() => handleSuggestionClick(hit)}>
-            <img src={hit.art} alt="" className="suggestion-thumb" />
-            <span className="suggestion-title">{hit.title}</span>
-            {hit.year && <span className="suggestion-year">{hit.year}</span>}
+          <li
+            key={hit.id}
+            className="suggestion-item"
+            role="option"
+            tabIndex={0}
+            onClick={() => handleSuggestionClick(hit)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleSuggestionClick(hit);
+              }
+            }}
+          >
+            {hit.art ? (
+              <img src={hit.art} alt="" className="suggestion-thumb" loading="lazy" />
+            ) : (
+              <div className="suggestion-thumb-placeholder" aria-hidden="true" />
+            )}
+            <div className="suggestion-info">
+              <span className="suggestion-title">{hit.title}</span>
+              <span className="suggestion-meta">
+                {hit.year ? <span className="suggestion-year">{hit.year}</span> : null}
+                {hit.kind ? <span className="suggestion-kind">{hit.kind}</span> : null}
+                {hit.rating > 0 ? <span className="suggestion-rating">★ {hit.rating}</span> : null}
+              </span>
+            </div>
           </li>
         ))}
       </ul>
@@ -194,6 +241,11 @@ export function Header() {
                 placeholder="Search anime..."
                 value={q}
                 onChange={handleInputChange}
+                onKeyDown={(e) => {
+                  if (e.key === 'Escape') {
+                    clearSuggestions();
+                  }
+                }}
                 autoComplete="off"
               />
               <button

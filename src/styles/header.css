@@ -104,7 +104,7 @@ html[data-theme='light'] .wordmark__oni {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  width: max(100%, 280px);
+  width: max(100%, 320px);
   background: var(--bg-card, #12151f);
   border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
   border-radius: 12px;
@@ -117,11 +117,12 @@ html[data-theme='light'] .wordmark__oni {
   overflow-y: auto;
 }
 
-.suggestions-loading {
+.suggestions-loading,
+.suggestions-empty {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  width: max(100%, 280px);
+  width: max(100%, 320px);
   background: var(--bg-card, #12151f);
   border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
   border-radius: 12px;
@@ -131,6 +132,20 @@ html[data-theme='light'] .wordmark__oni {
   font-size: 0.85rem;
   color: var(--text-3, #94a3b8);
   z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.suggestions-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--accent, #e50914);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .suggestion-item {
@@ -143,8 +158,10 @@ html[data-theme='light'] .wordmark__oni {
   transition: background 0.15s ease;
 }
 
-.suggestion-item:hover {
+.suggestion-item:hover,
+.suggestion-item:focus-visible {
   background: rgba(255, 255, 255, 0.08);
+  outline: none;
 }
 
 .suggestion-thumb {
@@ -155,6 +172,21 @@ html[data-theme='light'] .wordmark__oni {
   flex-shrink: 0;
 }
 
+.suggestion-thumb-placeholder {
+  width: 32px;
+  height: 44px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.suggestion-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
 .suggestion-title {
   font-size: 0.88rem;
   font-weight: 600;
@@ -162,13 +194,32 @@ html[data-theme='light'] .wordmark__oni {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex: 1;
+}
+
+.suggestion-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-3, #94a3b8);
+  margin-top: 2px;
+}
+
+.suggestion-kind {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.suggestion-rating {
+  color: #fbbf24;
+  font-weight: 600;
 }
 
 .suggestion-year {
   font-size: 0.75rem;
   color: var(--text-3, #94a3b8);
-  margin-left: auto;
 }
 
 /* ---------- primary nav ---------- */
@@ -383,7 +434,9 @@ html[data-theme='light'] .wordmark__oni {
   .site-header .site-header__profile {
     display: none;
   }
-  .mobile-nav__suggestions .instant-suggestions {
+  .mobile-nav__suggestions .instant-suggestions,
+  .mobile-nav__suggestions .suggestions-loading,
+  .mobile-nav__suggestions .suggestions-empty {
     position: static;
     width: 100%;
     max-height: 240px;
