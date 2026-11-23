@@ -174,7 +174,9 @@ export const normalizeArtUrl = (url: string | null | undefined): string => {
 export const artKeyUrl = (key: string | null | undefined) => {
   const k = normalizeArtUrl(key);
   if (!k) return '';
-  return /^https?:\/\//i.test(k) ? k : artUrl(`/art/${k}.jpg`);
+  if (/^https?:\/\//i.test(k)) return k;
+  if (k === 'hero-demon') return artUrl('/art/hero-demon.webp');
+  return artUrl(`/art/${k}.jpg`);
 };
 
 /** 'mm:ss' runtime label -> total seconds. */

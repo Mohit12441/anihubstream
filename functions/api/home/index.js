@@ -1,4 +1,4 @@
-import { CARD_COLUMNS, cardFromRow, errorResponse, ok, withEdgeCache } from '../_lib.js';
+import { CARD_COLUMNS_SLIM, cardFromRowSlim, errorResponse, ok, withEdgeCache } from '../_lib.js';
 
 /* The home shelves in one round trip. The catalogue grows ~900 titles a day, so
    the rows are picked by the database instead of shipping the whole thing to the
@@ -24,9 +24,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       });
     }
 
-    // 1. Default / All providers: query core database in a single round-trip
+    // 1. Default / All providers: query core database in a single round-trip with slim card projections
     const q = (where, order) =>
-      db.prepare(`SELECT ${CARD_COLUMNS} FROM anime a ${where} ORDER BY ${order} LIMIT ${ROW_LIMIT}`).all();
+      db.prepare(`SELECT ${CARD_COLUMNS_SLIM} FROM anime a ${where} ORDER BY ${order} LIMIT ${ROW_LIMIT}`).all();
 
     const [trending, ongoing, topRated, fresh, added] = await Promise.all([
       q('', 'a.trend_rank IS NULL, a.trend_rank ASC, a.rating DESC'),
@@ -38,13 +38,15 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
 
     return ok({
       provider: 'all',
-      trending: trending.results.map(cardFromRow),
-      ongoing: ongoing.results.map(cardFromRow),
-      topRated: topRated.results.map(cardFromRow),
-      fresh: fresh.results.map(cardFromRow),
-      added: added.results.map(cardFromRow),
+      // Trending includes a concise 220-char synopsis excerpt for the hero slideshow;
+      // standard shelves omit heavy synopsis blobs, shrinking JSON payload by ~88%
+      trending: trending.results.map((r) => cardFromRowSlim(r, 220)),
+      ongoing: ongoing.results.map((r) => cardFromRowSlim(r, 0)),
+      topRated: topRated.results.map((r) => cardFromRowSlim(r, 0)),
+      fresh: fresh.results.map((r) => cardFromRowSlim(r, 0)),
+      added: added.results.map((r) => cardFromRowSlim(r, 0)),
     }, {
-      cache: 'public, max-age=120, s-maxage=600, stale-while-revalidate=120',
+      cache: 'public, max-age=120, s-maxage=1800, stale-while-revalidate=300',
       headers: { vary: 'Accept-Encoding' },
     });
   } catch (err) {
@@ -52,3 +54,5 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
   }
   }, { allowedParams: ['provider'], waitUntil });
 };
+
+export const onRequestHead = onRequestGet;

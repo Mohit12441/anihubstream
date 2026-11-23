@@ -17,9 +17,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         accent: g.accent,
         animeCount: g.anime_count,
       })),
-    }, { cache: 'public, max-age=120, s-maxage=900, stale-while-revalidate=60', headers: { vary: 'Accept-Encoding' } });
+    }, { cache: 'public, max-age=300, s-maxage=86400, stale-while-revalidate=600', headers: { vary: 'Accept-Encoding' } });
   } catch (err) {
     return errorResponse(err);
   }
   }, { allowedParams: [], waitUntil });
 };
+
+export const onRequestHead = onRequestGet;
