@@ -11,6 +11,8 @@ const STREAM_ORIGINS = [
   'https://anikoto.cz',
   'https://anikototv.to',
   'https://mapper.nekostream.site',
+  'https://animesalt.top',
+  'https://animehindidub.in',
 ];
 
 const warmed = new Set<string>();

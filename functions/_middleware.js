@@ -924,6 +924,25 @@ ${topAnimeHtml}
     finalHeaders.set('Cache-Control', 'public, max-age=60, s-maxage=3600, stale-while-revalidate=86400');
   }
 
+  // Cloudflare Early Hints (103) Link headers for pre-warming DNS, fonts, and critical page APIs
+  const earlyHints = [
+    '<https://s4.anilist.co>; rel=preconnect',
+    '<https://fonts.googleapis.com>; rel=preconnect',
+    '<https://fonts.gstatic.com>; rel=preconnect; crossorigin',
+  ];
+  if (path.startsWith('/watch/') && watchMatch?.[1]) {
+    earlyHints.push(`</api/anime/${encodeURIComponent(watchMatch[1])}>; rel=preload; as=fetch; crossorigin`);
+  } else if (path.startsWith('/anime/') && animeMatch?.[1]) {
+    earlyHints.push(`</api/anime/${encodeURIComponent(animeMatch[1])}>; rel=preload; as=fetch; crossorigin`);
+  } else if (path === '/' || path === '') {
+    earlyHints.push('</api/home>; rel=preload; as=fetch; crossorigin');
+  } else if (path === '/schedule') {
+    earlyHints.push('</api/schedule>; rel=preload; as=fetch; crossorigin');
+  } else if (path === '/genres') {
+    earlyHints.push('</api/genres>; rel=preload; as=fetch; crossorigin');
+  }
+  finalHeaders.set('Link', earlyHints.join(', '));
+
   const deliveredResponse = new Response(finalResponse.body, {
     status: finalResponse.status,
     statusText: finalResponse.statusText,
