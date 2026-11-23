@@ -40,7 +40,7 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     name: 'HiAnime',
     color: '#a855f7',
     badge: 'Direct Multi-Quality',
-    description: 'High-speed MP4 downloads with individual quality selection and web portal.',
+    description: 'High-speed MP4 downloads with individual quality selection.',
   },
   aniwatch: {
     name: 'AniWatch',
@@ -94,7 +94,6 @@ export function DownloadModal({
   const [loading, setLoading] = useState(false);
   const [providerError, setProviderError] = useState<string | null>(null);
   const [downloads, setDownloads] = useState<DownloadItem[]>([]);
-  const [downloadPage, setDownloadPage] = useState<string | null>(null);
   const [streamUrl, setStreamUrl] = useState<string | null>(null);
   const [command, setCommand] = useState<string | null>(null);
   const [availableProviders, setAvailableProviders] = useState<string[]>([
@@ -175,7 +174,6 @@ export function DownloadModal({
             }
           }
           setDownloads(items);
-          setDownloadPage(data.data.downloadPage || null);
           setStreamUrl(data.data.streamUrl || (items[0]?.url ?? null));
           setCommand(data.data.command || null);
           if (Array.isArray(data.data.availableProviders) && data.data.availableProviders.length > 0) {
@@ -215,7 +213,6 @@ export function DownloadModal({
             }
           }
           setDownloads([]);
-          setDownloadPage(null);
           setStreamUrl(null);
           setCommand(null);
           setProviderError(
@@ -250,7 +247,6 @@ export function DownloadModal({
             }
           }
           setDownloads([]);
-          setDownloadPage(null);
           setStreamUrl(null);
           setCommand(null);
           setProviderError(
@@ -643,17 +639,6 @@ export function DownloadModal({
                   </div>
                 </div>
               )}
-
-              {downloadPage && (
-                <button
-                  type="button"
-                  className="btn btn--ghost btn--sm dl-modal__portal-btn"
-                  onClick={() => window.open(downloadPage, '_blank', 'noopener,noreferrer')}
-                >
-                  <ExternalLink size={14} aria-hidden="true" />
-                  Open {currentMeta.name} Web Page
-                </button>
-              )}
             </div>
           )}
 
@@ -680,16 +665,6 @@ export function DownloadModal({
                 >
                   {copiedCommand ? <Check size={14} aria-hidden="true" /> : <Terminal size={14} aria-hidden="true" />}
                   Copy yt-dlp Command
-                </button>
-              )}
-              {downloadPage && (
-                <button
-                  type="button"
-                  className="btn btn--ghost btn--sm"
-                  onClick={() => window.open(downloadPage, '_blank', 'noopener,noreferrer')}
-                >
-                  <ExternalLink size={14} aria-hidden="true" />
-                  Web Portal
                 </button>
               )}
             </div>
