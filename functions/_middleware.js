@@ -620,9 +620,69 @@ export async function onRequest(context) {
       preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Genres & Categories</h1><p>Browse thousands of anime series categorized across diverse genres: Action, Adventure, Comedy, Drama, Fantasy, Romance, Sci-Fi, Supernatural, Mystery, Slice of Life, and more. Each genre collection features complete episode listings, release dates, and high-definition video playback. Whether you are looking for adrenaline-fueled shounen battles, heartwarming romance, mind-bending psychological thrillers, or relaxing slice-of-life comedy, AniHubStream provides seamless navigation and fast edge-streamed video.</p><p>All entries are catalogued with rich metadata, studio attributions, voice actor credits, and airing countdowns. Enjoy ad-free anime streaming with multiple provider fallbacks, subtitle options, and automatic intro skip functionality on any device.</p></main>`;
     }
   } else if (path === '/schedule') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Anime Broadcast Schedule</h1><p>Discover when new anime episodes air weekly with local timezone conversion. Stay updated on premiere dates, seasonal broadcast slots, and episode countdowns.</p></main>`;
+    let scheduleLinksHtml = '';
+    if (env.ANIHUB) {
+      try {
+        const { results } = await env.ANIHUB.prepare(
+          `SELECT id, title, sched_day, sched_time, rating FROM anime WHERE sched_day IS NOT NULL ORDER BY sched_day, sched_time LIMIT 35`
+        ).all().catch(() => ({ results: [] }));
+        if (results && results.length) {
+          const daysMap = { 1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday', 7: 'Sunday' };
+          const byDay = {};
+          for (const item of results) {
+            const d = daysMap[item.sched_day] || 'Weekly';
+            if (!byDay[d]) byDay[d] = [];
+            const safeItemTitle = (item.title || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+            byDay[d].push(`<a href="/anime/${item.id}" style="display:inline-block;padding:0.35rem 0.75rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem;">${safeItemTitle}</a>`);
+          }
+          scheduleLinksHtml = Object.entries(byDay).map(([dayName, links]) =>
+            `<div style="margin:1rem 0;"><h3 style="color:#ff1f4a;margin-bottom:0.5rem;">${dayName}</h3><div style="display:flex;flex-wrap:wrap;gap:0.35rem;">${links.join(' ')}</div></div>`
+          ).join('');
+        }
+      } catch (_) {}
+    }
+    if (!scheduleLinksHtml) {
+      const fallbackAiring = [
+        ['solo-leveling', 'Solo Leveling'],
+        ['jujutsu-kaisen', 'Jujutsu Kaisen'],
+        ['bleach', 'Bleach: Thousand-Year Blood War'],
+        ['one-piece', 'One Piece'],
+        ['blue-lock', 'Blue Lock'],
+        ['dandadan', 'DanDaDan'],
+        ['re-zero-starting-life-in-another-world', 'Re:Zero'],
+      ];
+      scheduleLinksHtml = fallbackAiring.map(([slug, name]) =>
+        `<a href="/anime/${slug}" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;margin:0.25rem;">${name}</a>`
+      ).join(' ');
+    }
+
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
+<h1>Weekly Anime Broadcast Schedule — Airing Episodes & Release Times</h1>
+<p>Track live weekly broadcast schedules for currently airing anime series. Stay updated on episode premiere dates, broadcast time slots, and new episode airings with automatic local timezone conversion. Stream every newly released episode in full high definition with English subtitles and dubs as soon as it broadcasts.</p>
+<section aria-labelledby="crawler-schedule-list" style="margin:2rem 0;">
+<h2 id="crawler-schedule-list">Currently Airing Weekly Anime Series</h2>
+${scheduleLinksHtml}
+</section>
+<p style="margin-top:2rem;"><a href="/anime" style="color:#ff1f4a;text-decoration:underline;font-weight:bold;">Explore Full Anime Catalogue</a> &bull; <a href="/" style="color:#ff1f4a;text-decoration:underline;">Return to Homepage</a></p>
+</main>`;
   } else if (path === '/discover') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Discover Trending Anime</h1><p>Explore currently trending anime titles, seasonal fan favorites, top-rated series, and recommended hidden gems updated in real-time from community watch metrics.</p></main>`;
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
+<h1>Discover Trending & Top-Rated Anime</h1>
+<p>Explore currently trending anime titles, seasonal fan favorites, top-rated series, and recommended hidden gems updated in real-time from community watch metrics.</p>
+<section aria-labelledby="crawler-discover-links" style="margin:1.5rem 0;">
+<h2 id="crawler-discover-links">Featured Anime Franchises</h2>
+<nav aria-label="Featured Series" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:1rem 0;">
+<a href="/anime/solo-leveling" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Solo Leveling</a>
+<a href="/anime/jujutsu-kaisen" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Jujutsu Kaisen</a>
+<a href="/anime/demon-slayer" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Demon Slayer</a>
+<a href="/anime/one-piece" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">One Piece</a>
+<a href="/anime/attack-on-titan" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Attack on Titan</a>
+<a href="/anime/sousou-no-frieren" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Frieren</a>
+<a href="/anime/chainsaw-man" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Chainsaw Man</a>
+<a href="/anime/bleach" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Bleach</a>
+</nav>
+</section>
+</main>`;
   } else if (path === '/' || path === '') {
     const topHomeSlugs = [
       ['solo-leveling', 'Solo Leveling'],
@@ -692,10 +752,10 @@ ${topHomeLinks}
       const topSlugs = [
         ['solo-leveling', 'Solo Leveling'],
         ['jujutsu-kaisen', 'Jujutsu Kaisen'],
-        ['demon-slayer-kimetsu-no-yaiba', 'Demon Slayer'],
+        ['demon-slayer', 'Demon Slayer'],
         ['one-piece', 'One Piece'],
         ['attack-on-titan', 'Attack on Titan'],
-        ['frieren-beyond-journeys-end', 'Frieren: Beyond Journey\'s End'],
+        ['sousou-no-frieren', 'Frieren: Beyond Journey\'s End'],
         ['chainsaw-man', 'Chainsaw Man'],
         ['bleach', 'Bleach: Thousand-Year Blood War'],
         ['naruto-shippuden', 'Naruto Shippuden'],
