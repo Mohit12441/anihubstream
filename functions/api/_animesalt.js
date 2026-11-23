@@ -254,19 +254,72 @@ async function extractNekomuxHls(episodeHtml, episodeUrl, signal) {
 /**
  * Extracts available audio languages from Abyss multi-language payload
  * @param {string} episodeHtml
- * @returns {string[]}
+ * @returns {Array<{ language: string; link?: string }>}
  */
 function extractAvailableLanguages(episodeHtml) {
   const abyssMatch = episodeHtml.match(/abyss-multilang\.php\?data=([A-Za-z0-9+/=]+)/);
   if (abyssMatch) {
     try {
       const decoded = JSON.parse(atob(abyssMatch[1]));
-      if (Array.isArray(decoded)) {
-        return decoded.map((d) => d.language).filter(Boolean);
+      if (Array.isArray(decoded) && decoded.length > 0) {
+        return decoded;
       }
     } catch {}
   }
-  return ['Hindi', 'English', 'Japanese'];
+  return [
+    { language: 'Hindi' },
+    { language: 'English' },
+    { language: 'Japanese' }
+  ];
+}
+
+/**
+ * Extracts external subtitle track from AnimeSalt episode HTML or embedded multi-stream player
+ * @param {string} episodeHtml
+ * @param {AbortSignal} [signal]
+ * @returns {Promise<Array<{ lang: string; url: string; default: boolean }>>}
+ */
+async function extractSubtitles(episodeHtml, signal) {
+  const subtitles = [];
+
+  // 1. Check direct subtitle URLs in HTML
+  let subMatch = episodeHtml.match(/playerjsSubtitle\s*=\s*["'](?:\[([^\]]+)\])?([^"']+)["']/i);
+  let subUrl = subMatch ? subMatch[2] : null;
+  let subLang = subMatch && subMatch[1] ? subMatch[1] : 'English';
+
+  // 2. Check multi-server embed player (Ravok or similar) if not in outer HTML
+  if (!subUrl) {
+    const multiMatch = episodeHtml.match(/https:\/\/(?:ravok\.buzz|[^"'\s]+)\/video\/[a-zA-Z0-9]+/i);
+    if (multiMatch) {
+      try {
+        const res = await fetch(multiMatch[0], {
+          headers: {
+            'user-agent': USER_AGENT,
+            referer: `${BASE_URL}/`,
+          },
+          signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(4000)]) : AbortSignal.timeout(4000),
+        });
+        if (res.ok) {
+          const rHtml = await res.text();
+          const rMatch = rHtml.match(/playerjsSubtitle\s*=\s*["'](?:\[([^\]]+)\])?([^"']+)["']/i);
+          if (rMatch) {
+            subLang = rMatch[1] || 'English';
+            subUrl = rMatch[2];
+          }
+        }
+      } catch {}
+    }
+  }
+
+  if (subUrl) {
+    subtitles.push({
+      lang: subLang,
+      url: `/api/proxy?url=${encodeURIComponent(subUrl)}&referer=${encodeURIComponent('https://ravok.buzz/')}&type=sub`,
+      default: true,
+    });
+  }
+
+  return subtitles;
 }
 
 /**
@@ -296,24 +349,45 @@ export async function resolveAnimeSaltDirect({ title, ep = 1, season = 1, audio 
   const masterM3u8 = await extractNekomuxHls(pageData.html, pageData.episodeUrl, signal);
   if (!masterM3u8) return null;
 
-  const languages = extractAvailableLanguages(pageData.html);
-  const audioTracks = languages.map((lang, idx) => ({
-    id: `animesalt-${lang.toLowerCase()}`,
-    language: lang.toLowerCase() === 'hindi' ? 'hi' : (lang.toLowerCase() === 'english' ? 'en' : (lang.toLowerCase() === 'japanese' ? 'ja' : lang.toLowerCase().slice(0, 2))),
-    label: `${lang} Dub`,
-    default: idx === 0,
-  }));
+  const rawLanguages = extractAvailableLanguages(pageData.html);
+  const audioTracks = rawLanguages.map((item, idx) => {
+    const lang = typeof item === 'string' ? item : item.language;
+    const l = (lang || '').toLowerCase();
+    const code = l === 'hindi' ? 'hi'
+      : l === 'english' ? 'en'
+      : l === 'japanese' ? 'ja'
+      : l === 'tamil' ? 'ta'
+      : l === 'telugu' ? 'te'
+      : l === 'malayalam' ? 'ml'
+      : l === 'bengali' ? 'bn'
+      : l === 'kannada' ? 'kn'
+      : l === 'marathi' ? 'mr'
+      : l === 'korean' ? 'ko'
+      : l.slice(0, 2);
+
+    return {
+      id: `animesalt-${code}`,
+      language: code,
+      label: `${lang} Dub`,
+      default: idx === 0,
+    };
+  });
+
+  const [subtitles, dlResult] = await Promise.all([
+    extractSubtitles(pageData.html, signal).catch(() => []),
+    resolveAnimeSaltDownloads(title, ep, season, signal).catch(() => ({ downloads: [], downloadPage: null })),
+  ]);
 
   return {
     streamUrl: masterM3u8,
     referer: 'https://player.nekomux.com/',
-    quality: '1080p',
+    quality: '480p',
     provider: 'animesalt',
     type: 'hls',
-    audio: audio === 'dub' ? 'dub' : 'sub',
+    audio: audio === 'sub' ? 'sub' : 'dub',
     audioTracks,
-    subtitles: [],
-    downloads: [],
+    subtitles,
+    downloads: dlResult.downloads || [],
   };
 }
 

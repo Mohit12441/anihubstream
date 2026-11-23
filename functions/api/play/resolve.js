@@ -423,6 +423,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
             if (asRes?.streamUrl) {
               const proxyBase = `${url.origin}/api/proxy`;
               const proxiedUrl = `${proxyBase}?url=${encodeURIComponent(asRes.streamUrl)}&referer=${encodeURIComponent(asRes.referer)}&p=animesalt`;
+              const formattedSubs = (asRes.subtitles || []).map((s) => ({
+                ...s,
+                url: s.url.startsWith('http') ? s.url : `${url.origin}${s.url}`,
+              }));
               return ok({
                 server: {
                   id: 'animesalt:nekomux',
@@ -431,10 +435,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
                   status: 'ready',
                   streamUrl: proxiedUrl,
                   type: 'hls',
-                  quality: '1080p',
-                  audio: 'dub',
+                  quality: asRes.quality || '480p',
+                  audio: audio === 'sub' ? 'sub' : 'dub',
                   audioTracks: asRes.audioTracks || [],
-                  subtitles: [],
+                  subtitles: formattedSubs,
+                  downloads: asRes.downloads || [],
                 }
               }, { cache: 'public, max-age=300, s-maxage=600' });
             }

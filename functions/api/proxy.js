@@ -81,6 +81,9 @@ const ALLOWED_STREAMING_DOMAINS = [
   'play.nekomux.com',
   'player.nekomux.com',
   'animesalttv.to',
+  'ravok.buzz',
+  'as-cdn27.top',
+  'as-cdn31.top',
   'example.com', // for test mock fixtures
 ];
 
@@ -117,11 +120,14 @@ export function isHostAllowed(hostname, targetUrl = '', customReferer = '', prov
   if (provider === 'beta' && (host.endsWith('.top') || host.endsWith('.cno.to'))) {
     return true;
   }
+  if ((provider === 'animesalt' || host.startsWith('as-cdn')) && host.endsWith('.top')) {
+    return true;
+  }
 
   // 3. Verified stream CDN pattern:
   // Upstream extractors (like Megaplay, AniKoto, HiAnime) dynamically rotate domain names for CDN video chunks.
   // Any public non-private domain requested with a trusted streaming Referer and anime media asset path/extension is authorized.
-  const trustedReferers = ['megaplay.buzz', 'megavid.buzz', 'megavid.se', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'hianimex.com.in', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun', 'rezka.ag', 'player.nekomux.com', 'animesalttv.to'];
+  const trustedReferers = ['megaplay.buzz', 'megavid.buzz', 'megavid.se', 'anikoto.cz', 'abyssplayer.com', 'aniwatchtv.to', 'aniwatch.co.at', 'hianime.to', 'hianimex.com.in', 'zokoanime.video', 'dramahot.top', 'animehot.cc', 'beta.cno.to', 'cno.to', 'ani.pm', 'settlar.io', 'vidnest.fun', 'rezka.ag', 'player.nekomux.com', 'animesalttv.to', 'ravok.buzz'];
   const hasTrustedReferer = customReferer && trustedReferers.some((r) => customReferer.includes(r));
   if (hasTrustedReferer) {
     const isStreamAsset =
@@ -348,7 +354,9 @@ export const onRequest = async (context) => {
       targetUrl.includes('.vtt') ||
       parsedTarget.pathname.endsWith('.vtt') ||
       targetUrl.includes('.srt') ||
-      parsedTarget.pathname.endsWith('.srt');
+      parsedTarget.pathname.endsWith('.srt') ||
+      reqUrl.searchParams.get('type') === 'sub' ||
+      reqUrl.searchParams.get('type') === 'subtitle';
 
     // 2. Cloudflare Cache API for immutable segments & subtitles
     // @ts-ignore
@@ -477,11 +485,15 @@ export const onRequest = async (context) => {
 
     // 4. Subtitle Handling
     if (isSubtitle) {
+      let subText = await upstreamRes.text();
+      if (!subText.trim().startsWith('WEBVTT')) {
+        subText = 'WEBVTT\n\n' + subText.replace(/(\d+:\d+:\d+),(\d+)/g, '$1.$2');
+      }
       responseHeaders.set('Content-Type', 'text/vtt; charset=utf-8');
       responseHeaders.set('Cache-Control', 'public, max-age=86400, s-maxage=86400');
       responseHeaders.set('X-Edge-Cache', 'MISS');
 
-      return new Response(upstreamRes.body, {
+      return new Response(subText, {
         status: upstreamRes.status,
         headers: responseHeaders,
       });

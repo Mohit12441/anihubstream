@@ -1061,6 +1061,10 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       if (animesaltRes?.streamUrl) {
         const proxyBase = `${url.origin}/api/proxy`;
         const finalStreamUrl = `${proxyBase}?url=${encodeURIComponent(animesaltRes.streamUrl)}&referer=${encodeURIComponent(animesaltRes.referer)}&p=animesalt`;
+        const formattedSubtitles = (animesaltRes.subtitles || []).map((s) => ({
+          ...s,
+          url: s.url.startsWith('http') ? s.url : `${url.origin}${s.url}`,
+        }));
 
         const primaryServer = {
           id: serverId,
@@ -1069,11 +1073,11 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           status: 'ready',
           streamUrl: finalStreamUrl,
           type: 'hls',
-          quality: '1080p',
-          audio: 'dub',
+          quality: animesaltRes.quality || '480p',
+          audio: audio === 'sub' ? 'sub' : 'dub',
           audioTracks: animesaltRes.audioTracks || [],
-          subtitles: [],
-          downloads: [],
+          subtitles: formattedSubtitles,
+          downloads: animesaltRes.downloads || [],
         };
 
         const allServers = [primaryServer, ...defaultServers.filter((s) => s.id !== serverId)];
