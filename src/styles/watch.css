@@ -1763,13 +1763,6 @@
   gap: 8px;
 }
 
-.dl-modal__tabs-header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
 .dl-modal__tabs-label {
   font-size: 0.76rem;
   font-weight: 700;
@@ -1778,83 +1771,23 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.dl-modal__tabs-controls {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.dl-modal__tabs-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.85);
-  cursor: pointer;
-  transition: all 0.15s ease;
-  padding: 0;
-}
-
-.dl-modal__tabs-arrow:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.28);
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-.dl-modal__tabs-arrow:disabled {
-  opacity: 0.2;
-  cursor: default;
-  pointer-events: none;
-}
-
-.dl-modal__tabs-wrap {
-  position: relative;
-  width: 100%;
-}
-
 .dl-modal__tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.dl-modal__tabs::-webkit-scrollbar {
-  height: 4px;
-}
-
-.dl-modal__tabs::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 4px;
-}
-
-.dl-modal__tabs::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.22);
-  border-radius: 4px;
-}
-
-.dl-modal__tabs::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.4);
+  align-items: center;
+  padding: 2px 0 6px;
 }
 
 .dl-modal__tab {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 6px 13px;
   border-radius: var(--r-full, 999px);
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
@@ -1864,13 +1797,15 @@
 
 .dl-modal__tab:hover {
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .dl-modal__tab--active {
   color: #fff;
   background: color-mix(in srgb, var(--prov-color, #ff3366) 24%, rgba(255, 255, 255, 0.08));
   border-color: color-mix(in srgb, var(--prov-color, #ff3366) 65%, transparent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--prov-color, #ff3366) 35%, transparent);
 }
 
 .dl-modal__tab-dot {

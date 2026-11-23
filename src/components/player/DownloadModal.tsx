@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo, useRef } from 'react';
-import { Check, Copy, Download, ExternalLink, Film, Loader2, Sparkles, X, Terminal, AlertCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Check, Copy, Download, ExternalLink, Film, Loader2, Sparkles, X, Terminal, AlertCircle } from 'lucide-react';
 import type { Anime, Episode } from '../../data/model';
 import type { BridgeSource } from '../../lib/streamBridge';
 import { downloadHlsStream, type DownloadProgress } from '../../lib/hlsDownloader';
@@ -131,50 +131,6 @@ export function DownloadModal({
   const [downloadProgress, setDownloadProgress] = useState<DownloadProgress | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  // Horizontal server tabs scroll navigation
-  const tabsRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
-
-  const checkScroll = () => {
-    if (!tabsRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = tabsRef.current;
-    setCanScrollLeft(scrollLeft > 4);
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 4);
-  };
-
-  const scrollTabs = (direction: 'left' | 'right') => {
-    if (!tabsRef.current) return;
-    const amount = direction === 'left' ? -180 : 180;
-    tabsRef.current.scrollBy({ left: amount, behavior: 'smooth' });
-    setTimeout(checkScroll, 250);
-  };
-
-  const handleTabsWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    if (tabsRef.current && e.deltaY !== 0) {
-      tabsRef.current.scrollLeft += e.deltaY;
-      checkScroll();
-    }
-  };
-
-  // Re-check scroll buttons on resize & tab changes
-  useEffect(() => {
-    checkScroll();
-    const handleResize = () => checkScroll();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [availableProviders, isOpen]);
-
-  // Automatically scroll selected provider into view
-  useEffect(() => {
-    if (!tabsRef.current) return;
-    const activeBtn = tabsRef.current.querySelector('.dl-modal__tab--active') as HTMLElement | null;
-    if (activeBtn) {
-      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
-    }
-    setTimeout(checkScroll, 300);
-  }, [selectedProvider, availableProviders]);
-
   // Clean up any running download on unmount or close
   useEffect(() => {
     return () => {
@@ -233,7 +189,8 @@ export function DownloadModal({
           setStreamUrl(data.data.streamUrl || (items[0]?.url ?? null));
           setCommand(data.data.command || null);
           if (Array.isArray(data.data.availableProviders) && data.data.availableProviders.length > 0) {
-            setAvailableProviders(data.data.availableProviders);
+            const merged = Array.from(new Set([...data.data.availableProviders, 'hindiflix', 'animehindidub']));
+            setAvailableProviders(merged);
           }
           if (items.length === 0 || data.data.available === false) {
             setProviderError(
@@ -455,62 +412,29 @@ export function DownloadModal({
         <div className="dl-modal__body">
           {/* Provider Selection Tabs */}
           <div className="dl-modal__tabs-section">
-            <div className="dl-modal__tabs-header-row">
-              <label className="dl-modal__tabs-label">Provider Catalog Source:</label>
-              <div className="dl-modal__tabs-controls">
-                <button
-                  type="button"
-                  className="dl-modal__tabs-arrow"
-                  onClick={() => scrollTabs('left')}
-                  disabled={!canScrollLeft}
-                  aria-label="Scroll providers left"
-                  title="Scroll left"
-                >
-                  <ChevronLeft size={15} />
-                </button>
-                <button
-                  type="button"
-                  className="dl-modal__tabs-arrow"
-                  onClick={() => scrollTabs('right')}
-                  disabled={!canScrollRight}
-                  aria-label="Scroll providers right"
-                  title="Scroll right"
-                >
-                  <ChevronRight size={15} />
-                </button>
-              </div>
-            </div>
-            <div className="dl-modal__tabs-wrap">
-              <div
-                ref={tabsRef}
-                className="dl-modal__tabs"
-                role="tablist"
-                aria-label="Select Anime Provider"
-                onScroll={checkScroll}
-                onWheel={handleTabsWheel}
-              >
-                {availableProviders.map((provKey) => {
-                  const meta = PROVIDER_METAS[provKey] || { name: provKey.toUpperCase(), color: '#888' };
-                  const isSelected = selectedProvider === provKey;
-                  return (
-                    <button
-                      key={provKey}
-                      type="button"
-                      role="tab"
-                      aria-selected={isSelected}
-                      className={`dl-modal__tab ${isSelected ? 'dl-modal__tab--active' : ''}`}
-                      style={{ '--prov-color': meta.color } as React.CSSProperties}
-                      onClick={() => {
-                        if (!downloadingItem) setSelectedProvider(provKey);
-                      }}
-                      disabled={Boolean(downloadingItem)}
-                    >
-                      <span>{meta.name}</span>
-                      {isSelected && <span className="dl-modal__tab-dot" />}
-                    </button>
-                  );
-                })}
-              </div>
+            <label className="dl-modal__tabs-label">Provider Catalog Source ({availableProviders.length} Available):</label>
+            <div className="dl-modal__tabs" role="tablist" aria-label="Select Anime Provider">
+              {availableProviders.map((provKey) => {
+                const meta = PROVIDER_METAS[provKey] || { name: provKey.toUpperCase(), color: '#888' };
+                const isSelected = selectedProvider === provKey;
+                return (
+                  <button
+                    key={provKey}
+                    type="button"
+                    role="tab"
+                    aria-selected={isSelected}
+                    className={`dl-modal__tab ${isSelected ? 'dl-modal__tab--active' : ''}`}
+                    style={{ '--prov-color': meta.color } as React.CSSProperties}
+                    onClick={() => {
+                      if (!downloadingItem) setSelectedProvider(provKey);
+                    }}
+                    disabled={Boolean(downloadingItem)}
+                  >
+                    <span>{meta.name}</span>
+                    {isSelected && <span className="dl-modal__tab-dot" />}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
