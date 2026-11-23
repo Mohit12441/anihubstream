@@ -1369,15 +1369,6 @@ export function Watch() {
                 </div>
               </div>
             )}
-
-            {/* Episode Discussion & Threaded Comments */}
-            <div style={{ marginTop: '24px' }}>
-              <CommentsSection
-                animeId={anime.id}
-                animeTitle={anime.title}
-                currentEpisode={episode?.n}
-              />
-            </div>
           </div>
         </div>
 
@@ -1408,6 +1399,15 @@ export function Watch() {
             onCloseDrawer={() => setEpDrawerOpen(false)}
           />
         )}
+      </div>
+
+      {/* Episode Discussion & Threaded Comments */}
+      <div className="watch__comments shell" style={{ marginTop: '2.5rem' }}>
+        <CommentsSection
+          animeId={anime.id}
+          animeTitle={anime.title}
+          currentEpisode={episode?.n}
+        />
       </div>
 
       <section className="watch__more shell" aria-labelledby="watch-more">

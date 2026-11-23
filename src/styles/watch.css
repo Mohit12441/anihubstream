@@ -162,20 +162,60 @@
 }
 .eps__list--grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
   gap: 8px;
-  padding: 12px;
+  padding: 10px;
 }
 .eps__list--grid .eps__item {
   flex-direction: column;
-  padding: 8px 6px;
+  align-items: center;
+  padding: 6px 4px;
   text-align: center;
+  gap: 5px;
 }
 .eps__list--grid .eps__thumb {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
 }
 .eps__list--grid .eps__body {
   width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.eps__list--grid .eps__ep-title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 100%;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.eps__list--grid .eps__ep-title-row > span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.eps__list--grid .eps__seen {
+  font-size: 9.5px;
+  font-weight: 600;
+  padding: 1px 4px;
+  border-radius: 4px;
+  line-height: 1.2;
+}
+/* Crucial: hide verbose title text and OP/ED markers in grid view to prevent card overflow */
+.eps__list--grid .eps__title,
+.eps__list--grid .eps__run {
+  display: none !important;
 }
 .eps__item {
   display: flex;
@@ -255,6 +295,7 @@
   gap: 6px;
   font-size: 11px;
   margin-top: 2px;
+  flex-wrap: wrap;
 }
 .eps__time-val {
   color: #64748b;
@@ -2261,6 +2302,30 @@
 }
 
 @media (max-width: 600px) {
+  .watch__control-bar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+  .watch__cb-left {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .watch__cb-server-btn {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .watch__cb-server-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   .watch__cb-ep-title {
     display: none;
   }
@@ -2270,13 +2335,9 @@
   .watch__cb-action-btn {
     padding: 0 9px;
   }
-  .watch__cb-center {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .watch__cb-server-btn {
-    flex: 1;
-    justify-content: center;
+  .watch__cb-actions {
+    margin-left: auto;
+    flex-shrink: 0;
   }
 }
 

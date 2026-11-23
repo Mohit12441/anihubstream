@@ -72,18 +72,18 @@ export function PlayerControls(p: Props) {
           {p.playing ? <Pause size={20} /> : <Play size={20} fill="currentColor" strokeWidth={0} />}
         </button>
 
-        <button type="button" className="pl__btn" onClick={p.onBack10} aria-label="Back 10 seconds">
+        <button type="button" className="pl__btn pl__btn--seek pl__btn--back10" onClick={p.onBack10} aria-label="Back 10 seconds">
           <Rewind size={18} aria-hidden="true" />
           <span className="pl__btn-tag">10</span>
         </button>
-        <button type="button" className="pl__btn" onClick={p.onFwd10} aria-label="Forward 10 seconds">
+        <button type="button" className="pl__btn pl__btn--seek pl__btn--fwd10" onClick={p.onFwd10} aria-label="Forward 10 seconds">
           <FastForward size={18} aria-hidden="true" />
           <span className="pl__btn-tag">10</span>
         </button>
 
         <button
           type="button"
-          className="pl__btn"
+          className="pl__btn pl__btn--ep-nav pl__btn--ep-prev"
           onClick={p.onPrev}
           disabled={!p.hasPrev}
           aria-disabled={!p.hasPrev}
@@ -93,7 +93,7 @@ export function PlayerControls(p: Props) {
         </button>
         <button
           type="button"
-          className="pl__btn"
+          className="pl__btn pl__btn--ep-nav pl__btn--ep-next"
           onClick={p.onNext}
           disabled={!p.hasNext}
           aria-disabled={!p.hasNext}
@@ -105,7 +105,7 @@ export function PlayerControls(p: Props) {
         <div className="pl__vol-wrap">
           <button
             type="button"
-            className={`pl__btn${p.muted ? ' is-on' : ''}`}
+            className={`pl__btn pl__btn--vol${p.muted ? ' is-on' : ''}`}
             onClick={p.onMute}
             aria-label={p.muted || p.volume === 0 ? 'Unmute' : 'Mute'}
           >

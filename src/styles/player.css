@@ -1441,9 +1441,14 @@
   /* Hide non-essential secondary controls on small screens */
   .pl__sim,
   .pl__vol,
+  .pl__vol-wrap,
+  .pl__btn--vol,
   .pl__btn--theatre,
   .pl__btn--pip,
-  .pl__pill {
+  .pl__pill,
+  .pl__btn--server,
+  .pl__btn--party,
+  .pl__btn--ep-nav {
     display: none !important;
   }
   /* Time formatting: strictly separate and truncate if needed */
@@ -1557,21 +1562,25 @@
   }
 }
 
-/* Portrait phones and ultra-compact mobile viewports (<= 440px) */
-@media (max-width: 440px) {
+/* Portrait phones and ultra-compact mobile viewports (<= 480px) */
+@media (max-width: 480px) {
   .player__bar {
-    padding: 14px 6px 4px;
+    padding: 12px 6px 4px;
   }
   .player,
   .player[data-density='compact'] {
     --pl-btn: 34px;
-    --pl-gap: 1px;
+    --pl-gap: 2px;
   }
   .pl__ctrls {
-    gap: 2px;
+    gap: 3px;
+    padding: 0 2px;
   }
   .pl__left {
-    gap: 1px;
+    gap: 4px;
+  }
+  .pl__btn--seek {
+    display: none !important;
   }
   .pl__btn {
     width: 34px;
@@ -1583,20 +1592,23 @@
     height: 36px;
   }
   /* On portrait screens, Server is accessed via Settings popover */
-  .pl__lab--server {
+  .pl__lab--server,
+  .pl__btn--server {
     display: none !important;
   }
   .pl__time {
     padding-left: 2px;
-    font-size: 10.5px;
+    font-size: 11px;
+    font-weight: 600;
   }
   .pl__lab--quality {
-    padding: 2px 5px;
-    font-size: 10px;
+    padding: 2px 6px;
+    font-size: 10.5px;
+    font-weight: 700;
     min-height: 26px;
   }
   .pl__right {
-    gap: 1px;
+    gap: 3px;
   }
 }
 

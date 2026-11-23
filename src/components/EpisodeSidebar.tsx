@@ -291,7 +291,7 @@ export function EpisodeSidebar({
                     </span>
                     <span className="eps__body">
                       <b className="eps__ep-title-row">
-                        <span>Episode {ep.n}</span>
+                        <span>{viewMode === 'grid' ? `EP ${ep.n}` : `Episode ${ep.n}`}</span>
                         {s.status === 'watched' && (
                           <em className="eps__seen">
                             <Check size={11} aria-hidden="true" /> Watched

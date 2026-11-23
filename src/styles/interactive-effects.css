@@ -1118,6 +1118,24 @@ footer {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(255, 31, 74, 0.7);
 }
 
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+    width: 38px;
+    height: 38px;
+    opacity: 0.85;
+  }
+}
+
+/* Suppress floating back-to-top when drawers, popovers, or modals are active */
+body:has(.eps--drawer) .back-to-top,
+body:has(.modal-backdrop) .back-to-top,
+body:has(.dl-modal) .back-to-top,
+body:has(.req-modal-overlay) .back-to-top {
+  display: none !important;
+}
+
 /* ---------- 24. Quick View Modal ---------- */
 .quick-view-overlay {
   position: fixed;
