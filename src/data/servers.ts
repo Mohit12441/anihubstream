@@ -144,6 +144,22 @@ export const HINDIFLIX_SERVER: StreamServer = {
   note: 'Direct high-speed MP4 streaming with native Hindi dubbed audio track.',
 };
 
+export const ANIMESALT_SERVER: StreamServer = {
+  id: 'animesalt-live',
+  name: 'AnimeSalt',
+  region: 'Multi-Audio (Hindi / Regional)',
+  status: 'online',
+  capabilities: {
+    qualities: ['auto', '1080p', '720p', '480p'],
+    subtitleLanguages: [],
+    subtitleType: 'none',
+    audioLanguages: ['Hindi', 'Tamil', 'Telugu', 'English', 'Japanese'],
+  },
+  sourceUrl: 'http://127.0.0.1:8795',
+  responseMs: 0,
+  note: 'Native HLS multi-audio streaming with Hindi, Tamil, Telugu, English, and Japanese tracks.',
+};
+
 export const SERVERS: StreamServer[] = [
   LIVE_SERVER,
   ANIWATCH_SERVER,
@@ -151,6 +167,7 @@ export const SERVERS: StreamServer[] = [
   ANIPM_SERVER,
   HDREZKA_SERVER,
   HINDIFLIX_SERVER,
+  ANIMESALT_SERVER,
 ];
 
 const ALL_PROVIDER_IDS = [
@@ -160,6 +177,7 @@ const ALL_PROVIDER_IDS = [
   'anipm',
   'hdrezka',
   'hindiflix',
+  'animesalt',
 ];
 
 export function providerFromId(serverId: string): string {
@@ -199,6 +217,7 @@ export function serverIdFromProvider(provider?: string, audio?: string): string 
   if (norm === 'anipm') return isDub ? 'anipm:beta-dub' : 'anipm:beta';
   if (norm === 'hdrezka') return isDub ? 'hdrezka:studioband-dub' : 'hdrezka:1080p';
   if (norm === 'hindiflix') return 'hindiflix:hindi-dub';
+  if (norm === 'animesalt') return 'animesalt:nekomux';
   return isDub ? `${norm}:HD-1-dub` : `${norm}:HD-1`;
 }
 

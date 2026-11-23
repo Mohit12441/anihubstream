@@ -20,7 +20,7 @@ export function cleanServerName(server: PlayServer): string {
   return raw;
 }
 
-export const PROVIDER_ORDER = ['AniKoto', 'HiAnime', 'AniWatch', 'AniPM', 'HDRezka', 'P2P'];
+export const PROVIDER_ORDER = ['AniKoto', 'HiAnime', 'AniWatch', 'AniPM', 'HDRezka', 'HindiFlix', 'AnimeSalt', 'P2P'];
 
 export function getProvider(server: PlayServer): string {
   const p = (server.provider || (server.id.includes(':') ? server.id.split(':')[0] : 'anikoto')).toLowerCase();
@@ -29,6 +29,8 @@ export function getProvider(server: PlayServer): string {
   if (p.includes('aniwatch')) return 'AniWatch';
   if (p.includes('anipm')) return 'AniPM';
   if (p.includes('hdrezka')) return 'HDRezka';
+  if (p.includes('hindiflix')) return 'HindiFlix';
+  if (p.includes('animesalt')) return 'AnimeSalt';
   if (p.includes('torrent') || p.includes('p2p')) return 'P2P';
   return p.charAt(0).toUpperCase() + p.slice(1);
 }

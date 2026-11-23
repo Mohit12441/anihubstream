@@ -203,7 +203,7 @@ export function useLiveStream(o: Options) {
           }
         }
 
-        if (o.provider !== 'anipm' && o.provider !== 'aniwatch' && o.provider !== 'hdrezka' && o.provider !== 'hindiflix') {
+        if (o.provider !== 'anipm' && o.provider !== 'aniwatch' && o.provider !== 'hdrezka' && o.provider !== 'hindiflix' && o.provider !== 'animesalt') {
           const up = await bridgeHealth(fresh);
           if (cancel) return;
           if (!up) {

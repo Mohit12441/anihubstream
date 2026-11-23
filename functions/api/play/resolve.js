@@ -7,6 +7,7 @@ import { resolveAniPmBetaDirect } from '../_anipm.js';
 import { resolveAniWatchDirect } from '../_aniwatch.js';
 import { hdrezkaMeta, rezkaFetch, parseStreams, searchRezka } from '../../_lib/hdrezka.js';
 import { resolveHindiFlixStream } from '../../_lib/hindiflix.js';
+import { resolveAnimeSaltDirect } from '../_animesalt.js';
 
 const BRIDGE_TIMEOUT_MS = 15_000;
 const REZKA_TID_CACHE = new Map();
@@ -408,6 +409,50 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
               }
             });
           }
+        }
+
+        if (provider === 'animesalt') {
+          try {
+            const asRes = await resolveAnimeSaltDirect({
+              title: resolvedTitle || animeId,
+              ep: ep || 1,
+              season: 1,
+              audio,
+              signal: request.signal,
+            });
+            if (asRes?.streamUrl) {
+              const proxyBase = `${url.origin}/api/proxy`;
+              const proxiedUrl = `${proxyBase}?url=${encodeURIComponent(asRes.streamUrl)}&referer=${encodeURIComponent(asRes.referer)}&p=animesalt`;
+              return ok({
+                server: {
+                  id: 'animesalt:nekomux',
+                  name: 'AnimeSalt · Multi-Audio (Hindi/Eng/Jap)',
+                  provider: 'animesalt',
+                  status: 'ready',
+                  streamUrl: proxiedUrl,
+                  type: 'hls',
+                  quality: '1080p',
+                  audio: 'dub',
+                  audioTracks: asRes.audioTracks || [],
+                  subtitles: [],
+                }
+              }, { cache: 'public, max-age=300, s-maxage=600' });
+            }
+          } catch {}
+          return ok({
+            server: {
+              id: 'animesalt:nekomux',
+              provider: 'animesalt',
+              name: 'AnimeSalt · Multi-Audio',
+              status: 'unavailable',
+              unavailableReason: 'Stream not found on AnimeSalt for this episode.',
+              streamUrl: null,
+              audio: 'dub',
+              audioTracks: [],
+              subtitles: [],
+              quality: '1080p',
+            }
+          });
         }
 
         // Megaplay powers AniKoto, MegaPlay, and HD-1 / Vidstream servers directly

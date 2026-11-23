@@ -317,7 +317,7 @@ export function Watch() {
   const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
   const targetProvider = (
     params.get('provider') ||
-    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : '')
+    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : id?.startsWith('animesalt:') ? 'animesalt' : '')
   ).toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const rawSrv = params.get('server');
@@ -347,6 +347,8 @@ export function Watch() {
       { id: 'hianime', name: 'HiAnime', available: true },
       { id: 'aniwatch', name: 'AniWatch', available: true },
       { id: 'anipm', name: 'AniPM', available: true },
+      { id: 'hindiflix', name: 'HindiFlix', available: true },
+      { id: 'animesalt', name: 'AnimeSalt', available: true },
       { id: 'torrent', name: 'P2P Swarm', available: true },
     ];
   }, [availableProvidersList]);
