@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { MessageSquare, Heart, CornerDownRight, AlertTriangle, Send, Clock } from 'lucide-react';
 import { getUserPersona, saveUserPersona, AVATAR_PRESETS } from '../lib/userSession';
 
@@ -51,6 +51,29 @@ export function CommentsSection({ animeId, animeTitle, currentEpisode = null, on
     return AVATAR_PRESETS.find((a) => a.id === persona.avatar) || AVATAR_PRESETS[0];
   }, [persona.avatar]);
 
+  // Viewport Lazy-Load State (IntersectionObserver)
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [hasEnteredViewport, setHasEnteredViewport] = useState(false);
+
+  useEffect(() => {
+    if (hasEnteredViewport || !containerRef.current) return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setHasEnteredViewport(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setHasEnteredViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [hasEnteredViewport]);
+
   // Load comments
   const fetchComments = async () => {
     if (!animeId) return;
@@ -71,8 +94,10 @@ export function CommentsSection({ animeId, animeTitle, currentEpisode = null, on
   };
 
   useEffect(() => {
-    fetchComments();
-  }, [animeId, currentEpisode, activeTab]);
+    if (hasEnteredViewport) {
+      fetchComments();
+    }
+  }, [animeId, currentEpisode, activeTab, hasEnteredViewport]);
 
   // Timestamp seeker helper
   const handleTimestampClick = (timeStr: string) => {
@@ -273,7 +298,7 @@ export function CommentsSection({ animeId, animeTitle, currentEpisode = null, on
   };
 
   return (
-    <div className="comments-section">
+    <div className="comments-section" ref={containerRef}>
       <div className="comments-header-bar">
         <div className="comments-title-wrap">
           <MessageSquare size={20} className="comments-title-icon" />

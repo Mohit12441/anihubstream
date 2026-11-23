@@ -278,7 +278,6 @@ export function EpisodeSidebar({
                     onClick={() => handleSelectEp(ep.n)}
                     onMouseEnter={() => {
                       warmStreamOrigins();
-                      prefetchEpisode(anime.title, ep.n, 'sub');
                     }}
                     aria-current={isCurrent ? 'true' : undefined}
                   >
