@@ -14,26 +14,26 @@ name: AniHub Automatic Sync
 
 on:
   schedule:
-    # Runs every 6 hours at minute 0 (00:00, 06:00, 12:00, 18:00 UTC)
-    - cron: '0 */6 * * *'
+    # Runs every 4 hours to keep trending ranks and airing schedules constantly fresh
+    - cron: '0 */4 * * *'
   repository_dispatch:
     types: [pulse, daily, daily-sync, providers, providers-sync, catalog-sync, all]
   workflow_dispatch:
     inputs:
       target:
-        description: 'Sync target (pulse, daily, providers, all)'
+        description: 'Sync target (all, pulse, providers, discover)'
         required: false
-        default: 'pulse'
+        default: 'all'
         type: choice
         options:
-          - pulse
-          - daily
-          - providers
           - all
+          - pulse
+          - discover
+          - providers
       limit:
-        description: 'New anime discovery limit (for daily/all target)'
+        description: 'New anime discovery limit'
         required: false
-        default: '3'
+        default: '5'
 
 permissions:
   contents: write
@@ -53,55 +53,49 @@ jobs:
         with:
           node-version: '24.19'
 
-      - name: Execute Sync Pipeline
+      - name: Execute Automated Sync Pipeline
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          MODE: 'delta'
+          CLOUD_CREATES_ROWS: '1'
+          LEGACY_WRITER_ACTIVE: '1'
         run: |
-          TARGET="${{ github.event.client_payload.target || github.event.inputs.target }}"
-          DISCOVERY_LIMIT="${{ github.event.inputs.limit || '3' }}"
+          TARGET="${{ github.event.client_payload.target || github.event.inputs.target || 'all' }}"
+          DISCOVERY_LIMIT="${{ github.event.inputs.limit || '5' }}"
 
-          # Handle scheduled triggers based on current UTC time:
-          # - Sunday 03:xx UTC -> weekly multi-provider maintenance
-          # - Daily 00:xx UTC -> 24-hour trending & new anime discovery
-          # - 06:xx, 12:xx, 18:xx UTC -> airing countdowns & schedule pulse
-          if [ -z "$TARGET" ]; then
-            DOW=$(date -u +%u)
-            HOUR=$(date -u +%H)
-            if [ "$DOW" = "7" ] && [ "$HOUR" = "03" ]; then
-              TARGET="providers"
-            elif [ "$HOUR" = "00" ]; then
-              TARGET="daily"
-            else
-              TARGET="pulse"
-            fi
+          echo "============================================================"
+          echo "AniHubStream Automated Sync: Target = $TARGET"
+          echo "============================================================"
+
+          # 1. ALWAYS Sync Global Trending Ranks (AniList Top 50) & Airing Schedules (Runs on every cron)
+          echo "🔥 [STEP 1] Syncing Global Trending Ranks (AniList Top 50) & Airing Schedules..."
+          node tools/pulse-airing.mjs --remote --trending
+
+          # 2. Ingest New Anime to Continuously Grow the Catalogue
+          if [ "$TARGET" != "providers" ]; then
+            echo "🌱 [STEP 2A] Syncing & Ingesting New Catalog Titles from HiAnime API..."
+            node cloud-sync/sync-hianime.mjs || true
+
+            echo "🔍 [STEP 2B] Discovering Trending AniList Releases & Queueing Pending Titles..."
+            node cloud-sync/discover.mjs --limit=$DISCOVERY_LIMIT || true
+
+            echo "📦 [STEP 2C] Creating Rows in D1 from Discovery Queue..."
+            MODE=delta CLOUD_CREATES_ROWS=1 LEGACY_WRITER_ACTIVE=1 node cloud-sync/sync-anilist.mjs || true
+          fi
+
+          # 3. Synchronize Multi-Provider Mappings (AniKoto, HiAnime, AniWatch, HindiFlix, HDRezka)
+          if [ "$TARGET" != "pulse" ]; then
+            echo "⚡ [STEP 3] Synchronizing Multi-Provider Mappings & Video Sources..."
+            node cloud-sync/sync-providers.mjs || true
           fi
 
           echo "============================================================"
-          echo "AniHubStream Sync Pipeline: Target = $TARGET"
+          echo "✅ Sync Pipeline Execution Completed Successfully!"
           echo "============================================================"
-
-          if [ "$TARGET" = "providers" ] || [ "$TARGET" = "providers-sync" ]; then
-            echo "⚡ [WEEKLY] Synchronizing Multi-Provider Mappings & Franchise Graph..."
-            node cloud-sync/sync-providers.mjs --force
-
-          elif [ "$TARGET" = "daily" ] || [ "$TARGET" = "daily-sync" ] || [ "$TARGET" = "catalog-sync" ] || [ "$TARGET" = "all" ]; then
-            echo "📅 [24-HOUR DAILY] Syncing Airing Schedules + Global Trending Ranks..."
-            node tools/pulse-airing.mjs --remote --trending
-
-            echo "🌱 [24-HOUR DAILY] Ingesting New Seasonal Anime (Limit: $DISCOVERY_LIMIT, Remote D1)..."
-            node tools/discover-titles.mjs --limit=$DISCOVERY_LIMIT --remote || true
-
-            echo "⚡ [24-HOUR DAILY] Normalizing Provider Mappings & Ratings..."
-            node cloud-sync/sync-providers.mjs --force || true
-
-          else
-            echo "⏱️ [6-HOUR PULSE] Syncing AniList Broadcast Schedules & Episode Countdowns..."
-            node tools/pulse-airing.mjs --remote
-          fi
 
       - name: Commit newly discovered sources
         env:
@@ -115,12 +109,9 @@ jobs:
             git add tools/catalogue-sources.json
             git commit -m "chore(sync): record newly discovered anime [skip ci]"
             git push origin master
-            echo "New anime recorded and pushed! Running provider mapping update..."
-            node cloud-sync/sync-providers.mjs --force || true
           fi
 
       - name: Notify search engines (IndexNow & Google)
-        if: github.event.client_payload.target != 'pulse' && github.event.inputs.target != 'pulse'
         env:
           GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
         run: |

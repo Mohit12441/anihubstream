@@ -19,11 +19,12 @@ import { autoSyncEpisodes } from './auto-sync-episodes.mjs';
 
 async function main() {
   const isRemote = process.argv.includes('--remote');
-  const includeTrending = process.argv.includes('--trending');
+  // Trending ranks are enabled by default for remote D1 runs or when --trending is passed
+  const includeTrending = process.argv.includes('--trending') || (isRemote && !process.argv.includes('--no-trending'));
   const start = Date.now();
 
   console.log('====================================================');
-  console.log(`⏱️ AniHubStream Airing Pulse (Mode: ${isRemote ? 'Remote D1' : 'Local SQLite'}, Trending: ${includeTrending ? 'Enabled' : 'Skipped (Daily)'})`);
+  console.log(`⏱️ AniHubStream Airing Pulse (Mode: ${isRemote ? 'Remote D1' : 'Local SQLite'}, Trending: ${includeTrending ? 'Enabled' : 'Skipped'})`);
   console.log('====================================================\n');
 
   // Stage 1: Global Trending Ranks (AniList GraphQL, runs daily via --trending)

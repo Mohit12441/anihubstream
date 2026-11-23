@@ -25,7 +25,6 @@
     "rezka:check": "node scripts/push-cookie.mjs --check",
     "rezka:clear": "node scripts/push-cookie.mjs --clear",
     "rezka:auto": "node scripts/rezka-auto.mjs",
-    "rezka:sync": "node scripts/rezka-sync.mjs",
     "rezka:health": "node scripts/rezka-health.mjs",
     "start:local": "node tools/start-local.mjs",
     "supervise": "node tools/supervise-origin.mjs",
