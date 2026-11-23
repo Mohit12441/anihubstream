@@ -837,7 +837,7 @@ export const onRequestGet = async ({ request, env }) => {
     }
 
     const bridgeBase = env.STREAM_BRIDGE_URL || '';
-    if (downloads.length === 0 && bridgeBase) {
+    if (downloads.length === 0 && bridgeBase && provider !== 'animehindidub') {
       try {
         const bRes = await fetch(`${bridgeBase}/downloads?title=${encodeURIComponent(animeTitle)}&ep=${ep}`);
         if (bRes.ok) {

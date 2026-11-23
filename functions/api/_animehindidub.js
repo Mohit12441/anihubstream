@@ -39,6 +39,56 @@ function deriveSearchCandidates(rawTitle) {
 }
 
 /**
+ * Normalizes title for phonetic/token comparison
+ * @param {string} s
+ * @returns {string}
+ */
+function cleanTitle(s) {
+  return (s || '')
+    .replace(/&#\d+;/g, '')
+    .replace(/&[a-z]+;/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Validates that candidate title is a legitimate match for query title
+ * @param {string} query
+ * @param {string} candidate
+ * @returns {boolean}
+ */
+function isStrictTitleMatch(query, candidate) {
+  const q = cleanTitle(query);
+  const c = cleanTitle(candidate);
+  if (!q || !c) return false;
+
+  // Exact match
+  if (q === c) return true;
+
+  // Substring match if substantial
+  if (c.includes(q) || q.includes(c)) return true;
+
+  // Token / keyword matching
+  const stopWords = new Set(['the', 'a', 'an', 'and', 'or', 'in', 'on', 'at', 'of', 'for', 'to', 'season', 'part', 'movie', 'tv']);
+  const qTokens = q.split(' ').filter((w) => w.length >= 2 && !stopWords.has(w));
+  const cTokens = new Set(c.split(' ').filter((w) => w.length >= 2 && !stopWords.has(w)));
+
+  if (qTokens.length === 0) return q === c;
+
+  let matches = 0;
+  for (const token of qTokens) {
+    if (cTokens.has(token) || Array.from(cTokens).some((ct) => ct.includes(token) || token.includes(ct))) {
+      matches++;
+    }
+  }
+
+  const matchRatio = matches / qTokens.length;
+  return matchRatio >= 0.7;
+}
+
+/**
  * Searches AnimeHindiDub WordPress REST API for a matching series or movie
  * @param {string} title
  * @param {AbortSignal} [signal]
@@ -57,15 +107,16 @@ export async function searchAnimeHindiDub(title, signal) {
       if (seriesRes.ok) {
         const items = await seriesRes.json();
         if (Array.isArray(items) && items.length > 0) {
-          // Find best title match
-          const qLower = q.toLowerCase();
-          const best = items.find((it) => it.title?.rendered?.toLowerCase().includes(qLower)) || items[0];
-          return {
-            link: best.link || `${BASE_URL}/series/${best.slug}/`,
-            title: best.title?.rendered || q,
-            slug: best.slug,
-            type: 'series',
-          };
+          // Strictly match query or title against candidate post titles
+          const matched = items.find((it) => isStrictTitleMatch(q, it.title?.rendered) || isStrictTitleMatch(title, it.title?.rendered));
+          if (matched) {
+            return {
+              link: matched.link || `${BASE_URL}/series/${matched.slug}/`,
+              title: matched.title?.rendered || q,
+              slug: matched.slug,
+              type: 'series',
+            };
+          }
         }
       }
     } catch (_) {}
@@ -79,14 +130,16 @@ export async function searchAnimeHindiDub(title, signal) {
       if (movieRes.ok) {
         const items = await movieRes.json();
         if (Array.isArray(items) && items.length > 0) {
-          const qLower = q.toLowerCase();
-          const best = items.find((it) => it.title?.rendered?.toLowerCase().includes(qLower)) || items[0];
-          return {
-            link: best.link || `${BASE_URL}/movies/${best.slug}/`,
-            title: best.title?.rendered || q,
-            slug: best.slug,
-            type: 'movie',
-          };
+          // Strictly match query or title against candidate movie titles
+          const matched = items.find((it) => isStrictTitleMatch(q, it.title?.rendered) || isStrictTitleMatch(title, it.title?.rendered));
+          if (matched) {
+            return {
+              link: matched.link || `${BASE_URL}/movies/${matched.slug}/`,
+              title: matched.title?.rendered || q,
+              slug: matched.slug,
+              type: 'movie',
+            };
+          }
         }
       }
     } catch (_) {}
@@ -109,10 +162,7 @@ export async function resolveAnimeHindiDubDownloads(animeTitle, ep, signal) {
   try {
     const matched = await searchAnimeHindiDub(animeTitle, signal);
     if (!matched || !matched.link) {
-      return {
-        downloads: [],
-        downloadPage: `${BASE_URL}/?s=${encodeURIComponent(animeTitle)}`,
-      };
+      return emptyResult;
     }
 
     const downloadPage = matched.link;
@@ -205,8 +255,8 @@ function parseDownloadRow(rowHtml, ep, seasonName) {
     if (!isNaN(epNum) && epNum === ep) matchesEpisode = true;
   }
 
-  // Include if directly matches episode or is a full batch ZIP containing it
-  if (!matchesEpisode && !isBatch) {
+  // Strictly require episode match: never return an out-of-range batch for a different episode
+  if (!matchesEpisode) {
     return null;
   }
 
