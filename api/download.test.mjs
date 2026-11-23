@@ -32,6 +32,12 @@ describe('HLS Downloader Unit Tests & Format Detection', () => {
     // Full origin proxied URL should also remain intact
     const fullOrigin = 'http://127.0.0.1:8899/api/proxy?url=https%3A%2F%2Fcdn.example.com';
     assert.equal(resolveProxyUrl(fullOrigin), fullOrigin);
+
+    // AniPM and AniWatch proxy paths should not be double-wrapped
+    const anipmProxy = '/api/test-proxy?u=https%3A%2F%2Fbeta.cno.to%2Fhls%2Fmaster.m3u8';
+    assert.equal(resolveProxyUrl(anipmProxy), anipmProxy);
+    const awProxy = '/api/aw/proxy?u=https%3A%2F%2Fmfw09.org%2Fseg1.ts';
+    assert.equal(resolveProxyUrl(awProxy), awProxy);
   });
 
   test('parseMasterVariants parses resolutions and orders highest quality first', () => {
@@ -88,5 +94,30 @@ seg-3.ts`;
     assert.equal(body.data.available, false);
     assert.equal(body.data.downloads.length, 0);
     assert.ok(typeof body.data.error === 'string' && body.data.error.includes('not currently available'));
+  });
+
+  test('api/download exposes all 6 major providers in availableProviders list', async () => {
+    const { onRequestGet } = await import('../functions/api/download.js');
+    const req = new Request('http://127.0.0.1:8899/api/download?id=solo-leveling&provider=anipm&ep=1');
+    const res = await onRequestGet({ request: req, env: {} });
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.equal(body.ok, true);
+    const providers = body.data.availableProviders;
+    assert.ok(providers.includes('anipm'));
+    assert.ok(providers.includes('aniwatch'));
+    assert.ok(providers.includes('anikoto'));
+    assert.ok(providers.includes('hianime'));
+    assert.ok(providers.includes('hdrezka'));
+    assert.ok(providers.includes('hindiflix'));
+  });
+
+  test('streamEpisodePipe handles direct MP4 streams with video/mp4 Content-Disposition on HEAD request', async () => {
+    const { streamEpisodePipe } = await import('../functions/api/download.js');
+    const req = new Request('http://127.0.0.1:8899/api/download?mode=pipe', { method: 'HEAD' });
+    const res = await streamEpisodePipe('https://example.com/video.mp4', 'https://example.com', '1080p', 'Solo Leveling', 1, req);
+    assert.equal(res.status, 200);
+    assert.equal(res.headers.get('content-type'), 'video/mp4');
+    assert.ok(res.headers.get('content-disposition')?.includes('Solo_Leveling_EP1_1080p.mp4'));
   });
 });

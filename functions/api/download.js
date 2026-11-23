@@ -1,7 +1,21 @@
 // @ts-check
-import { HttpError, errorResponse, ok, resolveMalId, parseMasterVariants, parseMediaSegments } from './_lib.js';
+import {
+  HttpError,
+  errorResponse,
+  ok,
+  resolveMalId,
+  parseMasterVariants,
+  parseMediaSegments,
+  deriveSlugCandidates,
+  findAnimeByCandidates,
+} from './_lib.js';
 import { resolveMegaplayDirect } from './_megaplay.js';
 import { resolveZokoEmbedEdge } from './hianime/_zoko.js';
+import { resolveHiAnimeV2Direct } from './hianime/_hianime_v2.js';
+import { resolveAniPmBetaDirect } from './_anipm.js';
+import { resolveAniWatchDirect } from './_aniwatch.js';
+import { searchRezka, hdrezkaMeta } from '../_lib/hdrezka.js';
+import { resolveHindiFlixStream } from '../_lib/hindiflix.js';
 
 const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 const CACHE_TTL_MS = 20 * 60 * 1000; // 20 minutes
@@ -115,7 +129,7 @@ async function extractHianimeDownloads(malId, ep, audio, signal) {
 }
 
 /**
- * Streams media segments directly over HTTP with Content-Disposition
+ * Streams media segments or direct MP4 files over HTTP with Content-Disposition
  * @param {string} masterUrl
  * @param {string} referer
  * @param {string} requestedQuality
@@ -124,6 +138,47 @@ async function extractHianimeDownloads(malId, ep, audio, signal) {
  * @param {Request} request
  */
 export async function streamEpisodePipe(masterUrl, referer, requestedQuality, animeTitle, ep, request) {
+  const safeTitle = (animeTitle || 'anime').replace(/[^a-zA-Z0-9_-]/g, '_');
+
+  // Direct MP4 handling: if target stream is an MP4 file, stream it directly with video/mp4 Content-Disposition
+  const isDirectMp4 = masterUrl.toLowerCase().includes('.mp4') || (!masterUrl.toLowerCase().includes('.m3u8') && !masterUrl.toLowerCase().includes('master'));
+  if (isDirectMp4) {
+    const filename = `${safeTitle}_EP${ep}_${requestedQuality || '1080p'}.mp4`;
+    if (request.method === 'HEAD') {
+      return new Response(null, {
+        status: 200,
+        headers: {
+          'Content-Type': 'video/mp4',
+          'Content-Disposition': `attachment; filename="${filename}"`,
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Expose-Headers': 'Content-Disposition',
+        },
+      });
+    }
+
+    const mp4Res = await fetch(masterUrl, {
+      headers: { 'User-Agent': USER_AGENT, Referer: referer },
+      signal: AbortSignal.timeout(25_000),
+    });
+
+    if (!mp4Res.ok) {
+      throw new HttpError(502, 'upstream_error', `Failed to stream MP4 media (${mp4Res.status})`);
+    }
+
+    return new Response(mp4Res.body, {
+      status: 200,
+      headers: {
+        'Content-Type': 'video/mp4',
+        'Content-Disposition': `attachment; filename="${filename}"`,
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Expose-Headers': 'Content-Disposition',
+      },
+    });
+  }
+
+  // HLS stream handling: fetch playlist, select variant, stitch .ts segments
   const masterRes = await fetch(masterUrl, {
     headers: { 'User-Agent': USER_AGENT, Referer: referer },
     signal: AbortSignal.timeout(10_000),
@@ -163,7 +218,6 @@ export async function streamEpisodePipe(masterUrl, referer, requestedQuality, an
     throw new HttpError(502, 'no_segments', 'No media segments found in stream playlist');
   }
 
-  const safeTitle = animeTitle.replace(/[^a-zA-Z0-9_-]/g, '_');
   const filename = `${safeTitle}_EP${ep}_${requestedQuality || 'video'}.ts`;
 
   if (request.method === 'HEAD') {
@@ -263,6 +317,8 @@ export const onRequestGet = async ({ request, env }) => {
       else if (rawId.startsWith('anikoto:')) provider = 'anikoto';
       else if (rawId.startsWith('aniwatch:')) provider = 'aniwatch';
       else if (rawId.startsWith('anipm:')) provider = 'anipm';
+      else if (rawId.startsWith('hdrezka:')) provider = 'hdrezka';
+      else if (rawId.startsWith('hindiflix:')) provider = 'hindiflix';
       else provider = 'anikoto';
     }
 
@@ -283,57 +339,87 @@ export const onRequestGet = async ({ request, env }) => {
       } catch (_) {}
     }
 
-    // --- STEP 2: D1 Metadata & MAL ID Lookup ---
+    // --- STEP 2: D1 Metadata & MAL / AniList ID Lookup ---
     let malId = null;
-    let animeTitle = cleanSlug;
-    const availableProviders = new Set();
+    let anilistId = null;
+    let animeTitle = cleanSlug.replace(/[-_]+/g, ' ');
+    let resolvedId = cleanSlug;
+    const availableProviders = new Set([
+      'anikoto',
+      'aniwatch',
+      'hianime',
+      'anipm',
+      'hdrezka',
+      'hindiflix',
+    ]);
+    let match = null;
 
     if (env.ANIHUB) {
       try {
-        const match = await env.ANIHUB.prepare(
-          `SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids, m.mal_id, m.anikoto_slug, m.hianime_slug, m.aniwatch_slug, m.waw_slug
-           FROM anime a
-           LEFT JOIN anime_id_map m ON a.id = m.anime_id
-           WHERE a.id = ?1 OR m.anikoto_slug = ?1 OR m.hianime_slug = ?1 OR lower(a.title) = lower(?1)
-           LIMIT 1`
-        ).bind(cleanSlug).first();
+        const redir = await env.ANIHUB.prepare(
+          'SELECT to_id FROM anime_redirect WHERE from_id = ?1'
+        ).bind(resolvedId).first();
+        if (redir?.to_id) resolvedId = redir.to_id;
+      } catch {}
 
-        if (match) {
-          malId = Number(match.mal_id) || resolveMalId(match.source_ids, match.skip_key_id, match.skip_key_space);
-          if (match.title) animeTitle = match.title;
-          if (match.anikoto_slug) availableProviders.add('anikoto');
-          if (match.hianime_slug) availableProviders.add('hianime');
-          if (match.aniwatch_slug) availableProviders.add('aniwatch');
-        } else {
-          const provMatch = await env.ANIHUB.prepare(
-            `SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids, m.provider_id
-             FROM anime_provider_mapping m
-             JOIN anime a ON a.id = m.anime_id
-             WHERE m.provider_slug = ?1 LIMIT 1`
-          ).bind(cleanSlug).first().catch(() => null);
+      try {
+        match = await env.ANIHUB.prepare(`
+          SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids,
+                 m.mal_id, m.anilist_id, m.kitsu_id,
+                 m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
+          FROM anime a
+          LEFT JOIN anime_id_map m ON a.id = m.anime_id
+          WHERE a.id = ?1 OR m.anikoto_slug = ?1 OR m.hianime_slug = ?1 OR lower(a.title) = lower(?1)
+          LIMIT 1
+        `).bind(resolvedId).first();
+      } catch {}
 
-          if (provMatch) {
-            malId = resolveMalId(provMatch.source_ids, provMatch.skip_key_id, provMatch.skip_key_space);
-            if (provMatch.title) animeTitle = provMatch.title;
-            if (provMatch.provider_id) availableProviders.add(provMatch.provider_id);
+      if (!match) {
+        try {
+          const candidates = deriveSlugCandidates(resolvedId);
+          const found = await findAnimeByCandidates(env.ANIHUB, candidates);
+          if (found?.id) {
+            resolvedId = found.id;
+            match = await env.ANIHUB.prepare(`
+              SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids,
+                     m.mal_id, m.anilist_id, m.kitsu_id,
+                     m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
+              FROM anime a
+              LEFT JOIN anime_id_map m ON a.id = m.anime_id
+              WHERE a.id = ?1
+              LIMIT 1
+            `).bind(resolvedId).first();
           }
+        } catch {}
+      }
+
+      if (!match) {
+        try {
+          const cleanPattern = `%${resolvedId.replace(/[-_]+/g, '%').slice(0, 30)}%`;
+          match = await env.ANIHUB.prepare(`
+            SELECT a.id, a.title, a.skip_key_id, a.skip_key_space, a.source_ids,
+                   m.mal_id, m.anilist_id, m.kitsu_id,
+                   m.anikoto_slug, m.hianime_slug, m.aniwatch_slug
+            FROM anime a
+            LEFT JOIN anime_id_map m ON a.id = m.anime_id
+            WHERE a.id LIKE ?1 OR LOWER(a.title) LIKE ?1
+            LIMIT 1
+          `).bind(cleanPattern).first();
+        } catch {}
+      }
+
+      if (match) {
+        malId = Number(match.mal_id) || resolveMalId(match.source_ids, match.skip_key_id, match.skip_key_space);
+        if (match.source_ids) {
+          try {
+            const parsed = typeof match.source_ids === 'string' ? JSON.parse(match.source_ids) : match.source_ids;
+            if (parsed?.anilist) anilistId = Number(parsed.anilist);
+            if (!malId && parsed?.mal) malId = Number(parsed.mal);
+          } catch {}
         }
-
-        const mapRows = await env.ANIHUB.prepare(
-          `SELECT provider_id FROM anime_provider_mapping WHERE anime_id = ?1 OR provider_slug = ?1`
-        ).bind(cleanSlug).all();
-
-        if (mapRows?.results?.length) {
-          for (const row of mapRows.results) {
-            if (row.provider_id) availableProviders.add(row.provider_id);
-          }
-        }
-      } catch (_) {}
-    }
-
-    if (availableProviders.size === 0) {
-      availableProviders.add('anikoto');
-      availableProviders.add('hianime');
+        if (!anilistId && match.anilist_id) anilistId = Number(match.anilist_id);
+        if (match.title) animeTitle = match.title;
+      }
     }
 
     let downloads = [];
@@ -343,17 +429,139 @@ export const onRequestGet = async ({ request, env }) => {
     let pipeReferer = 'https://megaplay.buzz/';
 
     // --- STEP 3: Provider-Specific Download Extraction ---
-    if (provider === 'anikoto') {
+    if (provider === 'anipm') {
+      const betaRes = await resolveAniPmBetaDirect({
+        anilistId: anilistId || 0,
+        ep,
+        title: animeTitle,
+        slug: cleanSlug,
+      }).catch(() => null);
+
+      if (betaRes?.streamUrl) {
+        masterUrlToPipe = betaRes.masterUrl || betaRes.streamUrl;
+        pipeReferer = 'https://beta.cno.to/';
+        streamUrl = betaRes.streamUrl;
+        downloads = [
+          {
+            name: 'AniPM · 1080p (Stream to Video)',
+            label: '1080p',
+            quality: '1080p',
+            url: betaRes.streamUrl,
+            proxiedUrl: betaRes.streamUrl,
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anipm&audio=${audio}&quality=1080p`,
+            provider: 'anipm',
+            audio,
+            type: 'stream-download',
+            format: 'TS / MP4',
+            referer: 'https://beta.cno.to/',
+          },
+          {
+            name: 'AniPM · 720p (Stream to Video)',
+            label: '720p',
+            quality: '720p',
+            url: betaRes.streamUrl,
+            proxiedUrl: betaRes.streamUrl,
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anipm&audio=${audio}&quality=720p`,
+            provider: 'anipm',
+            audio,
+            type: 'stream-download',
+            format: 'TS / MP4',
+            referer: 'https://beta.cno.to/',
+          },
+        ];
+      }
+      downloadPage = 'https://ani.pm/';
+
+    } else if (provider === 'aniwatch') {
+      const aniwatchRes = await resolveAniWatchDirect({
+        slug: match?.aniwatch_slug || cleanSlug,
+        title: animeTitle,
+        ep,
+        audio,
+        server: 'MGCLD',
+      }).catch(() => null);
+
+      if (aniwatchRes?.streamUrl) {
+        masterUrlToPipe = aniwatchRes.streamUrl;
+        pipeReferer = aniwatchRes.referer || 'https://aniwatch.one/';
+        streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(aniwatchRes.streamUrl)}&referer=${encodeURIComponent(pipeReferer)}`;
+        downloads = [
+          {
+            name: 'AniWatch · 1080p (Stream to Video)',
+            label: '1080p',
+            quality: '1080p',
+            url: aniwatchRes.streamUrl,
+            proxiedUrl: streamUrl,
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=1080p`,
+            provider: 'aniwatch',
+            audio,
+            type: 'stream-download',
+            format: 'TS / MP4',
+            referer: pipeReferer,
+          },
+          {
+            name: 'AniWatch · 720p (Stream to Video)',
+            label: '720p',
+            quality: '720p',
+            url: aniwatchRes.streamUrl,
+            proxiedUrl: streamUrl,
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=720p`,
+            provider: 'aniwatch',
+            audio,
+            type: 'stream-download',
+            format: 'TS / MP4',
+            referer: pipeReferer,
+          },
+        ];
+      }
+
+      if (downloads.length === 0 && malId) {
+        const directRes = await resolveMegaplayDirect({ malId, ep, audio }).catch(() => null);
+        if (directRes?.streamUrl) {
+          masterUrlToPipe = directRes.streamUrl;
+          pipeReferer = 'https://megaplay.buzz/';
+          streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
+          downloads = [
+            {
+              name: 'AniWatch · 1080p (Stream to Video)',
+              label: '1080p',
+              quality: '1080p',
+              url: directRes.streamUrl,
+              proxiedUrl: streamUrl,
+              pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=1080p`,
+              provider: 'aniwatch',
+              audio,
+              type: 'stream-download',
+              format: 'TS / MP4',
+              referer: 'https://megaplay.buzz/',
+            },
+            {
+              name: 'AniWatch · 720p (Stream to Video)',
+              label: '720p',
+              quality: '720p',
+              url: directRes.streamUrl,
+              proxiedUrl: streamUrl,
+              pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=720p`,
+              provider: 'aniwatch',
+              audio,
+              type: 'stream-download',
+              format: 'TS / MP4',
+              referer: 'https://megaplay.buzz/',
+            },
+          ];
+        }
+      }
+      downloadPage = `https://aniwatch.one/watch/${match?.aniwatch_slug || cleanSlug}/episode/${ep}`;
+
+    } else if (provider === 'anikoto') {
       if (malId) {
         downloads = await extractAnikotoDownloads(malId, ep, audio);
       }
-      // Resolve direct decrypted master playlist via MegaPlay
       const direct = malId ? await resolveMegaplayDirect({ malId, ep, audio }).catch(() => null) : null;
       if (direct?.streamUrl) {
         masterUrlToPipe = direct.streamUrl;
         pipeReferer = 'https://megaplay.buzz/';
         streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(direct.streamUrl)}&referer=https://megaplay.buzz/`;
-        // Add fallback stream-to-video only if no direct Kiwi mirrors exist
         if (downloads.length === 0) {
           downloads.push(
             {
@@ -384,13 +592,12 @@ export const onRequestGet = async ({ request, env }) => {
             }
           );
         }
-      } else {
+      } else if (!streamUrl) {
         streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(`https://megaplay.buzz/stream/mal/${malId || cleanSlug}/${ep}/${audio}`)}&referer=https://megaplay.buzz/`;
       }
       downloadPage = `https://anikoto.cz/watch/${cleanSlug}`;
 
     } else if (provider === 'hianime') {
-      // Resolve genuine HLS master stream from Zoko edge resolver
       const zokoRes = malId ? await resolveZokoEmbedEdge(`https://zokoanime.video/stream/mal/${malId}/${ep}/${audio}`).catch(() => null) : null;
 
       if (zokoRes?.masterUrl) {
@@ -423,29 +630,40 @@ export const onRequestGet = async ({ request, env }) => {
             type: 'stream-download',
             format: 'TS / MP4',
             referer: 'https://zokoanime.video/',
-          },
-          {
-            name: 'HiAnime · 360p (Stream to Video)',
-            label: '360p',
-            quality: '360p',
-            url: zokoRes.masterUrl,
+          }
+        );
+      } else {
+        const v2Res = await resolveHiAnimeV2Direct({
+          slug: match?.hianime_slug || cleanSlug,
+          ep,
+          audio,
+          malId: malId || 0,
+        }).catch(() => null);
+
+        if (v2Res?.streamUrl) {
+          masterUrlToPipe = v2Res.streamUrl;
+          pipeReferer = 'https://megaplay.buzz/';
+          streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(v2Res.streamUrl)}&referer=https://megaplay.buzz/`;
+          downloads.push({
+            name: 'HiAnime · 1080p (Stream to Video)',
+            label: '1080p',
+            quality: '1080p',
+            url: v2Res.streamUrl,
             proxiedUrl: streamUrl,
-            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=hianime&audio=${audio}&quality=360p`,
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=hianime&audio=${audio}&quality=1080p`,
             provider: 'hianime',
             audio,
             type: 'stream-download',
             format: 'TS / MP4',
-            referer: 'https://zokoanime.video/',
-          }
-        );
-      } else {
-        const directFallback = malId ? await resolveMegaplayDirect({ malId, ep, audio }).catch(() => null) : null;
-        if (directFallback?.streamUrl) {
-          masterUrlToPipe = directFallback.streamUrl;
-          pipeReferer = 'https://megaplay.buzz/';
-          streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(directFallback.streamUrl)}&referer=https://megaplay.buzz/`;
-          downloads.push(
-            {
+            referer: 'https://megaplay.buzz/',
+          });
+        } else if (malId) {
+          const directFallback = await resolveMegaplayDirect({ malId, ep, audio }).catch(() => null);
+          if (directFallback?.streamUrl) {
+            masterUrlToPipe = directFallback.streamUrl;
+            pipeReferer = 'https://megaplay.buzz/';
+            streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(directFallback.streamUrl)}&referer=https://megaplay.buzz/`;
+            downloads.push({
               name: 'HiAnime · 1080p (Stream to Video)',
               label: '1080p',
               quality: '1080p',
@@ -457,27 +675,11 @@ export const onRequestGet = async ({ request, env }) => {
               type: 'stream-download',
               format: 'TS / MP4',
               referer: 'https://megaplay.buzz/',
-            },
-            {
-              name: 'HiAnime · 720p (Stream to Video)',
-              label: '720p',
-              quality: '720p',
-              url: directFallback.streamUrl,
-              proxiedUrl: streamUrl,
-              pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=hianime&audio=${audio}&quality=720p`,
-              provider: 'hianime',
-              audio,
-              type: 'stream-download',
-              format: 'TS / MP4',
-              referer: 'https://megaplay.buzz/',
-            }
-          );
-        } else {
-          streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(`https://zokoanime.video/stream/mal/${malId || cleanSlug}/${ep}/${audio}`)}&referer=https://zokoanime.video/`;
+            });
+          }
         }
       }
 
-      // Also query Pahe mirrors and add as external portal links
       if (malId) {
         const mirrorRes = await extractHianimeDownloads(malId, ep, audio);
         if (mirrorRes.downloads?.length) {
@@ -490,74 +692,131 @@ export const onRequestGet = async ({ request, env }) => {
             });
           }
         }
-        if (mirrorRes.downloadPage) {
-          downloadPage = mirrorRes.downloadPage;
-        }
+        if (mirrorRes.downloadPage) downloadPage = mirrorRes.downloadPage;
       }
 
       if (!downloadPage) {
         downloadPage = `https://animehot.cc/watch/${cleanSlug}?ep=${ep}`;
       }
 
-    } else if (provider === 'aniwatch') {
-      // Resolve genuine direct decrypted stream via MegaPlay
-      const directRes = malId ? await resolveMegaplayDirect({ malId, ep, audio }).catch(() => null) : null;
+    } else if (provider === 'hdrezka') {
+      try {
+        const tid = await searchRezka(env, animeTitle);
+        if (tid) {
+          const rezkaData = await hdrezkaMeta(env, tid, 1, ep);
+          if (rezkaData?.streams?.length) {
+            for (const s of rezkaData.streams) {
+              downloads.push({
+                name: `HDRezka · ${s.quality} (Direct MP4)`,
+                label: s.quality,
+                quality: s.quality,
+                url: s.url,
+                proxiedUrl: `${url.origin}/api/proxy?url=${encodeURIComponent(s.url)}&p=hdrezka`,
+                pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=hdrezka&audio=${audio}&quality=${encodeURIComponent(s.quality)}`,
+                provider: 'hdrezka',
+                audio,
+                type: 'direct',
+                format: 'MP4',
+              });
+            }
+            if (downloads[0]) {
+              masterUrlToPipe = downloads[0].url;
+              streamUrl = downloads[0].proxiedUrl;
+            }
+          }
+        }
+      } catch {}
+      downloadPage = `https://hdrezka-home.tv/search/?q=${encodeURIComponent(animeTitle)}`;
 
-      if (directRes?.streamUrl) {
-        masterUrlToPipe = directRes.streamUrl;
-        pipeReferer = 'https://megaplay.buzz/';
-        streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(directRes.streamUrl)}&referer=https://megaplay.buzz/`;
-        downloads = [
-          {
-            name: 'AniWatch · 1080p (Stream to Video)',
-            label: '1080p',
-            quality: '1080p',
-            url: directRes.streamUrl,
+    } else if (provider === 'hindiflix') {
+      try {
+        const hfRes = await resolveHindiFlixStream(animeTitle, ep);
+        if (hfRes?.streamUrl) {
+          masterUrlToPipe = hfRes.streamUrl;
+          pipeReferer = 'https://hindiflix.cc/';
+          streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(hfRes.streamUrl)}&referer=https://hindiflix.cc/`;
+          downloads.push({
+            name: `HindiFlix · ${hfRes.quality || '1080p'} Hindi Dub (Direct MP4)`,
+            label: hfRes.quality || '1080p',
+            quality: hfRes.quality || '1080p',
+            url: hfRes.streamUrl,
             proxiedUrl: streamUrl,
-            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=1080p`,
-            provider: 'aniwatch',
-            audio,
-            type: 'stream-download',
-            format: 'TS / MP4',
-            referer: 'https://megaplay.buzz/',
-          },
-          {
-            name: 'AniWatch · 720p (Stream to Video)',
-            label: '720p',
-            quality: '720p',
-            url: directRes.streamUrl,
-            proxiedUrl: streamUrl,
-            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=720p`,
-            provider: 'aniwatch',
-            audio,
-            type: 'stream-download',
-            format: 'TS / MP4',
-            referer: 'https://megaplay.buzz/',
-          },
-          {
-            name: 'AniWatch · 360p (Stream to Video)',
-            label: '360p',
-            quality: '360p',
-            url: directRes.streamUrl,
-            proxiedUrl: streamUrl,
-            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=aniwatch&audio=${audio}&quality=360p`,
-            provider: 'aniwatch',
-            audio,
-            type: 'stream-download',
-            format: 'TS / MP4',
-            referer: 'https://megaplay.buzz/',
-          },
-        ];
-      } else {
-        downloads = [];
-        streamUrl = null;
-      }
-      downloadPage = `https://aniwatch.co.at/anime/${cleanSlug}/`;
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=hindiflix&audio=hindi&quality=1080p`,
+            provider: 'hindiflix',
+            audio: 'hindi',
+            type: 'direct',
+            format: 'MP4',
+            referer: 'https://hindiflix.cc/',
+          });
+        }
+      } catch {}
+      downloadPage = `https://hindiflix.cc/?s=${encodeURIComponent(animeTitle)}`;
 
     } else {
       downloadPage = `https://megaplay.buzz/stream/mal/${malId || cleanSlug}/${ep}/${audio}`;
-      downloads = [];
-      streamUrl = null;
+    }
+
+    // --- Resilient Multi-Provider Fallback Cascade ---
+    // If the requested provider produced 0 downloads, check AniPM or MegaPlay so the user gets valid download options
+    if (downloads.length === 0) {
+      // Fallback attempt A: AniPM Beta
+      try {
+        const betaFallback = await resolveAniPmBetaDirect({
+          anilistId: anilistId || 0,
+          ep,
+          title: animeTitle,
+          slug: cleanSlug,
+        });
+        if (betaFallback?.streamUrl) {
+          if (!masterUrlToPipe) {
+            masterUrlToPipe = betaFallback.masterUrl || betaFallback.streamUrl;
+            pipeReferer = 'https://beta.cno.to/';
+          }
+          if (!streamUrl) streamUrl = betaFallback.streamUrl;
+          downloads.push({
+            name: 'AniPM Mirror · 1080p (Stream to Video)',
+            label: '1080p',
+            quality: '1080p',
+            url: betaFallback.streamUrl,
+            proxiedUrl: betaRes?.streamUrl || betaFallback.streamUrl,
+            pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anipm&audio=${audio}&quality=1080p`,
+            provider: 'anipm',
+            audio,
+            type: 'stream-download',
+            format: 'TS / MP4',
+            referer: 'https://beta.cno.to/',
+          });
+        }
+      } catch {}
+
+      // Fallback attempt B: MegaPlay
+      if (downloads.length === 0 && malId) {
+        try {
+          const directFallback = await resolveMegaplayDirect({ malId, ep, audio });
+          if (directFallback?.streamUrl) {
+            if (!masterUrlToPipe) {
+              masterUrlToPipe = directFallback.streamUrl;
+              pipeReferer = 'https://megaplay.buzz/';
+            }
+            if (!streamUrl) {
+              streamUrl = `${url.origin}/api/proxy?url=${encodeURIComponent(directFallback.streamUrl)}&referer=https://megaplay.buzz/`;
+            }
+            downloads.push({
+              name: 'Fast Mirror · 1080p (Stream to Video)',
+              label: '1080p',
+              quality: '1080p',
+              url: directFallback.streamUrl,
+              proxiedUrl: streamUrl,
+              pipeUrl: `${url.origin}/api/download?mode=pipe&id=${encodeURIComponent(cleanSlug)}&ep=${ep}&provider=anikoto&audio=${audio}&quality=1080p`,
+              provider: 'anikoto',
+              audio,
+              type: 'stream-download',
+              format: 'TS / MP4',
+              referer: 'https://megaplay.buzz/',
+            });
+          }
+        } catch {}
+      }
     }
 
     const bridgeBase = env.STREAM_BRIDGE_URL || '';

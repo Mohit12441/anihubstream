@@ -60,6 +60,12 @@ const PROVIDER_METAS: Record<string, { name: string; color: string; badge: strin
     badge: 'Ultra Direct MP4',
     description: 'High-speed direct Voidboost CDN 1080p Ultra MP4 download.',
   },
+  hindiflix: {
+    name: 'HindiFlix',
+    color: '#f97316',
+    badge: 'Hindi Dub Direct MP4',
+    description: 'Direct high-speed MP4 downloads with Hindi dubbed audio track.',
+  },
 };
 
 export function DownloadModal({
@@ -79,6 +85,7 @@ export function DownloadModal({
     if (clean.includes('aniwatch')) return 'aniwatch';
     if (clean.includes('anipm')) return 'anipm';
     if (clean.includes('hdrezka')) return 'hdrezka';
+    if (clean.includes('hindiflix')) return 'hindiflix';
     return 'anikoto';
   }, [activeProvider, currentStream]);
 
@@ -90,7 +97,14 @@ export function DownloadModal({
   const [downloadPage, setDownloadPage] = useState<string | null>(null);
   const [streamUrl, setStreamUrl] = useState<string | null>(null);
   const [command, setCommand] = useState<string | null>(null);
-  const [availableProviders, setAvailableProviders] = useState<string[]>(['anikoto', 'hianime', 'aniwatch']);
+  const [availableProviders, setAvailableProviders] = useState<string[]>([
+    'anikoto',
+    'aniwatch',
+    'hianime',
+    'anipm',
+    'hdrezka',
+    'hindiflix',
+  ]);
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedCommand, setCopiedCommand] = useState(false);
 
@@ -139,10 +153,30 @@ export function DownloadModal({
       .then((data: any) => {
         if (!live) return;
         if (data?.ok && data?.data) {
-          const items = data.data.downloads || [];
+          let items: DownloadItem[] = data.data.downloads || [];
+          if (items.length === 0 && currentStream) {
+            const activeUrl = currentStream.master || (currentStream as any).streamUrl;
+            if (activeUrl) {
+              const provName = currentMeta.name;
+              items = [
+                {
+                  name: `${provName} · ${currentStream.quality || '1080p'} (Active Stream to Video)`,
+                  label: String(currentStream.quality || '1080p'),
+                  quality: String(currentStream.quality || '1080p'),
+                  url: activeUrl,
+                  proxiedUrl: activeUrl,
+                  pipeUrl: `/api/download?mode=pipe&id=${encodeURIComponent(anime.id)}&ep=${episode.n}&provider=${selectedProvider}&audio=${selectedAudio}&quality=${encodeURIComponent(String(currentStream.quality || '1080p'))}`,
+                  provider: selectedProvider,
+                  audio: selectedAudio,
+                  type: 'stream-download',
+                  format: 'TS / MP4',
+                },
+              ];
+            }
+          }
           setDownloads(items);
           setDownloadPage(data.data.downloadPage || null);
-          setStreamUrl(data.data.streamUrl || null);
+          setStreamUrl(data.data.streamUrl || (items[0]?.url ?? null));
           setCommand(data.data.command || null);
           if (Array.isArray(data.data.availableProviders) && data.data.availableProviders.length > 0) {
             setAvailableProviders(data.data.availableProviders);
@@ -156,6 +190,30 @@ export function DownloadModal({
             setProviderError(null);
           }
         } else {
+          if (currentStream) {
+            const activeUrl = currentStream.master || (currentStream as any).streamUrl;
+            if (activeUrl) {
+              const provName = currentMeta.name;
+              const fallbackItems: DownloadItem[] = [
+                {
+                  name: `${provName} · ${currentStream.quality || '1080p'} (Active Stream to Video)`,
+                  label: String(currentStream.quality || '1080p'),
+                  quality: String(currentStream.quality || '1080p'),
+                  url: activeUrl,
+                  proxiedUrl: activeUrl,
+                  pipeUrl: `/api/download?mode=pipe&id=${encodeURIComponent(anime.id)}&ep=${episode.n}&provider=${selectedProvider}&audio=${selectedAudio}&quality=${encodeURIComponent(String(currentStream.quality || '1080p'))}`,
+                  provider: selectedProvider,
+                  audio: selectedAudio,
+                  type: 'stream-download',
+                  format: 'TS / MP4',
+                },
+              ];
+              setDownloads(fallbackItems);
+              setStreamUrl(activeUrl);
+              setProviderError(null);
+              return;
+            }
+          }
           setDownloads([]);
           setDownloadPage(null);
           setStreamUrl(null);
@@ -167,6 +225,30 @@ export function DownloadModal({
       })
       .catch(() => {
         if (live) {
+          if (currentStream) {
+            const activeUrl = currentStream.master || (currentStream as any).streamUrl;
+            if (activeUrl) {
+              const provName = currentMeta.name;
+              const fallbackItems: DownloadItem[] = [
+                {
+                  name: `${provName} · ${currentStream.quality || '1080p'} (Active Stream to Video)`,
+                  label: String(currentStream.quality || '1080p'),
+                  quality: String(currentStream.quality || '1080p'),
+                  url: activeUrl,
+                  proxiedUrl: activeUrl,
+                  pipeUrl: `/api/download?mode=pipe&id=${encodeURIComponent(anime.id)}&ep=${episode.n}&provider=${selectedProvider}&audio=${selectedAudio}&quality=${encodeURIComponent(String(currentStream.quality || '1080p'))}`,
+                  provider: selectedProvider,
+                  audio: selectedAudio,
+                  type: 'stream-download',
+                  format: 'TS / MP4',
+                },
+              ];
+              setDownloads(fallbackItems);
+              setStreamUrl(activeUrl);
+              setProviderError(null);
+              return;
+            }
+          }
           setDownloads([]);
           setDownloadPage(null);
           setStreamUrl(null);

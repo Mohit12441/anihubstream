@@ -85,10 +85,28 @@ export function parseMediaSegments(text: string, baseUrl: string): string[] {
  */
 export function resolveProxyUrl(targetUrl: string, referer = 'https://megaplay.buzz/'): string {
   if (!targetUrl) return '';
-  // Avoid re-wrapping URLs that are already routed through /api/proxy
-  if (targetUrl.startsWith('/api/proxy') || targetUrl.includes('/api/proxy?url=')) {
+  // Avoid re-wrapping URLs that are already routed through any local proxy endpoint
+  if (
+    targetUrl.startsWith('/api/proxy') ||
+    targetUrl.startsWith('/api/test-proxy') ||
+    targetUrl.startsWith('/api/aw/proxy') ||
+    targetUrl.includes('/api/proxy?url=') ||
+    targetUrl.includes('/api/test-proxy?u=') ||
+    targetUrl.includes('/api/aw/proxy?u=')
+  ) {
     return targetUrl;
   }
+  try {
+    const parsed = new URL(targetUrl, typeof window !== 'undefined' ? window.location.origin : 'http://localhost');
+    if (
+      parsed.pathname.startsWith('/api/proxy') ||
+      parsed.pathname.startsWith('/api/test-proxy') ||
+      parsed.pathname.startsWith('/api/aw/proxy')
+    ) {
+      return parsed.pathname + parsed.search;
+    }
+  } catch {}
+
   return `/api/proxy?url=${encodeURIComponent(targetUrl)}&referer=${encodeURIComponent(referer)}`;
 }
 
@@ -132,11 +150,30 @@ export async function downloadHlsStream({
 }): Promise<Blob> {
   const proxiedMasterUrl = resolveProxyUrl(streamUrl, referer);
 
-  // 1. Fetch master playlist
+  // 1. Fetch master playlist or direct media
   const masterRes = await fetch(proxiedMasterUrl, { signal });
   if (!masterRes.ok) {
     throw new Error(`Failed to load stream master playlist (${masterRes.status})`);
   }
+
+  // Handle direct MP4 streams gracefully
+  const contentType = (masterRes.headers.get('content-type') || '').toLowerCase();
+  if (contentType.includes('video/mp4') || (streamUrl.toLowerCase().includes('.mp4') && !streamUrl.toLowerCase().includes('.m3u8'))) {
+    const buf = await masterRes.arrayBuffer();
+    const blob = new Blob([buf], { type: 'video/mp4' });
+    if (onProgress) {
+      onProgress({
+        loadedSegments: 1,
+        totalSegments: 1,
+        percent: 100,
+        bytesDownloaded: buf.byteLength,
+        formattedBytes: formatBytes(buf.byteLength),
+      });
+    }
+    triggerBrowserSave(blob, filename.replace(/\.ts$/, '.mp4'));
+    return blob;
+  }
+
   const masterText = await masterRes.text();
 
   // 2. Select variant or use directly if it is already a media playlist
