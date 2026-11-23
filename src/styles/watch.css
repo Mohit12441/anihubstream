@@ -1763,6 +1763,13 @@
   gap: 8px;
 }
 
+.dl-modal__tabs-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .dl-modal__tabs-label {
   font-size: 0.76rem;
   font-weight: 700;
@@ -1771,15 +1778,72 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+.dl-modal__tabs-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dl-modal__tabs-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.dl-modal__tabs-arrow:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.dl-modal__tabs-arrow:disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
+}
+
+.dl-modal__tabs-wrap {
+  position: relative;
+  width: 100%;
+}
+
 .dl-modal__tabs {
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  padding-bottom: 2px;
-  scrollbar-width: none;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
+
 .dl-modal__tabs::-webkit-scrollbar {
-  display: none;
+  height: 4px;
+}
+
+.dl-modal__tabs::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+
+.dl-modal__tabs::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 4px;
+}
+
+.dl-modal__tabs::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .dl-modal__tab {
