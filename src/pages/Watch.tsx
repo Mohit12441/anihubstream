@@ -37,6 +37,7 @@ import { useSEO } from '../lib/useSEO';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import { bridgeResolve, prefetchEpisode, type BridgeSource } from '../lib/streamBridge';
 import { warmStreamOrigins } from '../lib/warmConnections';
+import { CommentsSection } from '../components/CommentsSection';
 import '../styles/watch.css';
 import '../styles/player.css';
 
@@ -1368,6 +1369,15 @@ export function Watch() {
                 </div>
               </div>
             )}
+
+            {/* Episode Discussion & Threaded Comments */}
+            <div style={{ marginTop: '24px' }}>
+              <CommentsSection
+                animeId={anime.id}
+                animeTitle={anime.title}
+                currentEpisode={episode?.n}
+              />
+            </div>
           </div>
         </div>
 

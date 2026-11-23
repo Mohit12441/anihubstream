@@ -21,6 +21,7 @@ import { RecommendedShelf } from '../components/RecommendedShelf';
 import { ratingLabel, type AnimeTheme } from '../data/model';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import { getCleanWatchUrl } from '../data/servers';
+import { CommentsSection } from '../components/CommentsSection';
 import '../styles/anime-detail.css';
 
 export function AnimeDetail() {
@@ -334,6 +335,11 @@ export function AnimeDetail() {
             </div>
           </section>
         )}
+
+        {/* Comments & Community Discussion */}
+        <div style={{ marginTop: '3rem' }}>
+          <CommentsSection animeId={anime.id} animeTitle={anime.title} />
+        </div>
 
         {/* Recommendations */}
         {anime && (

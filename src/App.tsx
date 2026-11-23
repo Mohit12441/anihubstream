@@ -20,6 +20,7 @@ const AnimeCatalogue = lazy(() => import('./pages/AnimeCatalogue').then((m) => (
 const Genres = lazy(() => import('./pages/Genres').then((m) => ({ default: m.Genres })));
 const MyList = lazy(() => import('./pages/MyList').then((m) => ({ default: m.MyList })));
 const Schedule = lazy(() => import('./pages/Schedule').then((m) => ({ default: m.Schedule })));
+const Requests = lazy(() => import('./pages/Requests').then((m) => ({ default: m.Requests })));
 const Discover = lazy(() => import('./pages/Discover').then((m) => ({ default: m.Discover })));
 const About = lazy(() => import('./pages/About').then((m) => ({ default: m.About })));
 const Dmca = lazy(() => import('./pages/Dmca').then((m) => ({ default: m.Dmca })));
@@ -93,6 +94,7 @@ export function App() {
               <Route path="/my-list" element={<MyList />} />
               <Route path="/watchlist" element={<MyList />} />
               <Route path="/schedule" element={<Schedule />} />
+              <Route path="/requests" element={<Requests />} />
               <Route path="/discover" element={<Discover />} />
               <Route path="/search" element={<Search />} />
               <Route path="/about" element={<About />} />

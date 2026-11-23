@@ -326,6 +326,29 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
     }
 
     const durationMs = Date.now() - startedAt;
+
+    // Auto-fulfill any pending anime requests whose titles now exist in the catalogue
+    try {
+      await d1Query(
+        `UPDATE anime_request
+         SET status = 'completed',
+             anime_id = (
+               SELECT a.id FROM anime a
+               WHERE (anime_request.anilist_id IS NOT NULL AND json_extract(a.source_ids, '$.anilist') = anime_request.anilist_id)
+                  OR LOWER(a.title) = LOWER(anime_request.title)
+               LIMIT 1
+             ),
+             updated_at = CURRENT_TIMESTAMP
+         WHERE status IN ('pending', 'in_progress')
+           AND EXISTS (
+             SELECT 1 FROM anime a
+             WHERE (anime_request.anilist_id IS NOT NULL AND json_extract(a.source_ids, '$.anilist') = anime_request.anilist_id)
+                OR LOWER(a.title) = LOWER(anime_request.title)
+           )`
+      );
+    } catch (fulfillErr) {
+      console.warn('[hianime-sync] anime request auto-fulfillment check skipped:', fulfillErr?.message);
+    }
     const summary = {
       runId: RUN_ID,
       itemsProcessed,

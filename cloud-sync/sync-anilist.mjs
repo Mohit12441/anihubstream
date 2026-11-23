@@ -1079,6 +1079,29 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
     summary.budget_remaining = await spend.remaining().catch(() => 0);
     summary.duration_ms = Date.now() - startedAt;
     await setThrottle(THROTTLE_KEY, { ms: api.interval, consecutive: api.successes, at: new Date().toISOString() }).catch(() => {});
+    // Auto-fulfill any pending anime requests whose titles now exist in the catalogue
+    try {
+      await d1Query(
+        `UPDATE anime_request
+         SET status = 'completed',
+             anime_id = (
+               SELECT a.id FROM anime a
+               WHERE (anime_request.anilist_id IS NOT NULL AND json_extract(a.source_ids, '$.anilist') = anime_request.anilist_id)
+                  OR LOWER(a.title) = LOWER(anime_request.title)
+               LIMIT 1
+             ),
+             updated_at = CURRENT_TIMESTAMP
+         WHERE status IN ('pending', 'in_progress')
+           AND EXISTS (
+             SELECT 1 FROM anime a
+             WHERE (anime_request.anilist_id IS NOT NULL AND json_extract(a.source_ids, '$.anilist') = anime_request.anilist_id)
+                OR LOWER(a.title) = LOWER(anime_request.title)
+           )`
+      );
+    } catch (fulfillErr) {
+      console.warn('WARN anime request auto-fulfillment check skipped:', fulfillErr?.message);
+    }
+
     await releaseLease(LEASE, OWNER).catch((err) => console.warn(`WARN lease release failed: ${err.message}`));
     await recordRun({ runId: RUN_ID, endpoint: ENDPOINT, startedAt, durationMs: summary.duration_ms, exitReason, summary })
       .catch((err) => console.warn(`WARN run record failed: ${err.message}`));

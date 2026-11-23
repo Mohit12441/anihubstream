@@ -744,6 +744,21 @@ export function AdvancedPlayer(props: Props) {
     return () => document.removeEventListener('pointerdown', onDown);
   }, [open]);
 
+  /* External timestamp seek handler (e.g. from comment timestamp clicks) */
+  useEffect(() => {
+    const handleSeek = (e: Event) => {
+      const custom = e as CustomEvent<{ seconds?: number }>;
+      if (custom.detail && typeof custom.detail.seconds === 'number' && Number.isFinite(custom.detail.seconds)) {
+        engineRef.current.seek(custom.detail.seconds);
+        rootRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    };
+    window.addEventListener('anihub:seek', handleSeek);
+    return () => {
+      window.removeEventListener('anihub:seek', handleSeek);
+    };
+  }, []);
+
   /* ---------- tap / double-tap on the stage ---------- */
   const tap = useRef<{ t: number; x: number; timer: number; visible: boolean }>({ t: 0, x: 0, timer: 0, visible: true });
   useEffect(() => () => window.clearTimeout(tap.current.timer), []);
