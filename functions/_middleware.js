@@ -533,42 +533,79 @@ export async function onRequest(context) {
     title = 'Discover Trending & Popular Anime | AniHubStream';
     desc = 'Find your next favorite anime series. Browse trending releases, community favorites, and staff picks.';
   } else if (path === '/news') {
-    title = 'Anime News, Guides & Episode Schedules | AniHubStream';
-    desc = 'Explore the latest anime news, seasonal schedule breakdowns, top 10 rankings, and deep-dive analysis on AniHubStream.';
+    const pageParam = url.searchParams.get('page');
+    if (pageParam && parseInt(pageParam, 10) > 1) {
+      canonical = `${origin}/news?page=${parseInt(pageParam, 10)}`;
+      title = `Anime News, Industry Announcements & Broadcast Schedules (Page ${pageParam}) | AniHubStream`;
+    } else {
+      canonical = `${origin}/news`;
+      title = 'Anime News, Industry Announcements & Broadcast Schedules | AniHubStream';
+    }
+    desc = 'Track breaking anime news, studio production updates, release dates, staff and voice cast reveals, and seasonal broadcast schedules on AniHubStream.';
     jsonLd = {
       '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'AniHubStream Anime News & Editorial',
-      url: `${origin}/news`,
-      description: desc,
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          name: 'AniHubStream Anime News & Editorial Hub',
+          url: canonical,
+          description: desc,
+        },
+      ],
     };
   } else if (path.startsWith('/news/')) {
-    const slug = path.replace('/news/', '').replace(/\/$/, '');
+    const rawSlug = path.replace('/news/', '').replace(/\/$/, '');
+    const legacyRedirects = {
+      'hidive-announces-never-before-announced-new-simulcasts-to-be': 'hidive-announces-never-before-announced-new-simulcasts',
+      'mitei-hattoris-smile-manga-gets-live-action-series-with-global': 'mitei-hattoris-smile-manga-gets-live-action-series-with-global-release-plans',
+      'shiboyugi-playing-death-games-to-put-food-on-the-table-anime': 'shiboyugi-playing-death-games-to-put-food-on-the-table-anime-announces-sequel',
+      'naruto-shippuden-the-assembly-of-the-five-kage-telugu-dub-': 'naruto-shippuden-the-assembly-of-the-five-kage-telugu-dub',
+    };
+    if (legacyRedirects[rawSlug]) {
+      return Response.redirect(`${origin}/news/${legacyRedirects[rawSlug]}`, 301);
+    }
+    if (rawSlug.endsWith('-') || rawSlug.includes('---')) {
+      const cleanSlug = rawSlug.replace(/--+/g, '-').replace(/-+$/, '');
+      return Response.redirect(`${origin}/news/${cleanSlug}`, 301);
+    }
+    const slug = rawSlug;
+    ogType = 'article';
     const newsMap = {
       'spring-2026-anime-season-guide': {
-        title: 'Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates | AniHubStream',
-        desc: 'From battle shonen to supernatural mysteries, here is your definitive guide to the Spring 2026 anime season.',
+        title: 'Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates',
+        desc: 'The definitive broadcast preview for Spring 2026 — analyzing returning franchise powerhouses, studio production teams, premiere dates, and streaming platforms.',
+        author: 'AniHub Editorial Team',
+        image: `${origin}/images/banners/banner-spring-2026.jpg`,
       },
       'top-10-dark-fantasy-anime-masterpieces': {
-        title: 'Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked) | AniHubStream',
-        desc: 'A deep dive into the grittiest, most emotionally resonant dark fantasy anime ever produced.',
+        title: 'Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)',
+        desc: 'An authoritative, production-level ranking of the grittiest dark fantasy anime ever animated — analyzing animation pedigree, psychological weight, and unforgiving worldbuilding.',
+        author: 'Kenji Sato',
+        image: `${origin}/images/banners/banner-dark-fantasy.jpg`,
       },
       'solo-leveling-reawakening-complete-guide': {
-        title: 'Solo Leveling ReAwakening: Story Arcs, Power Scaling & Watch Guide | AniHubStream',
-        desc: 'Everything you need to know about Sung Jinwoo’s journey from E-Rank hunter to Monarch of Shadows.',
+        title: 'Solo Leveling ReAwakening: Story Arcs, Power Scaling & Watch Guide',
+        desc: 'Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows.',
+        author: 'AniHub Editorial Team',
+        image: `${origin}/images/banners/banner-solo-leveling.jpg`,
       },
       'best-isekai-anime-ranked-by-worldbuilding': {
-        title: 'The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action | AniHubStream',
-        desc: 'Move beyond generic reincarnation tropes. Standout isekai series with intricate magic systems and realism.',
+        title: 'The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action',
+        desc: 'Move beyond generic reincarnation tropes. These 15 standout isekai series elevate the genre with intricate magic systems, economic realism, and profound character growth.',
+        author: 'Elena Rostova',
+        image: `${origin}/images/banners/banner-isekai-worldbuilding.jpg`,
       },
     };
     const prettyTitle = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const item = newsMap[slug] || {
-      title: `${prettyTitle} | AniHubStream News`,
-      desc: `Read the latest breaking announcement, broadcast schedule, and studio production details for ${prettyTitle} on AniHubStream.`,
+      title: prettyTitle,
+      desc: `Read the latest verified announcement, broadcast schedule, and studio production details for ${prettyTitle} on AniHubStream.`,
+      author: 'AniHub Editorial Desk',
+      image: `${origin}/images/banners/banner-spring-2026.jpg`,
     };
-    title = item.title;
+    title = `${item.title} | AniHubStream News`;
     desc = item.desc;
+    ogImage = item.image;
     jsonLd = {
       '@context': 'https://schema.org',
       '@graph': [
@@ -577,12 +614,24 @@ export async function onRequest(context) {
           headline: item.title,
           description: item.desc,
           mainEntityOfPage: `${origin}/news/${slug}`,
+          image: [item.image],
           datePublished: '2026-11-25T10:00:00+00:00',
-          author: { '@type': 'Person', name: 'AniHub Editorial Desk' },
+          dateModified: '2026-11-25T10:00:00+00:00',
+          author: {
+            '@type': 'Person',
+            name: item.author,
+            url: `${origin}/about#editorial`,
+          },
           publisher: {
             '@type': 'Organization',
             name: 'AniHubStream',
             url: origin,
+            logo: {
+              '@type': 'ImageObject',
+              url: `${origin}/og.png`,
+              width: 1200,
+              height: 630,
+            },
           },
         },
         {
@@ -1058,7 +1107,16 @@ ${topAnimeHtml}
   if (jsonLd) {
     rewriter = rewriter.on('head', {
       element(e) {
-        e.append(`\n    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`, { html: true });
+        e.append(`\n    <script type="application/ld+json" id="page-schema">${JSON.stringify(jsonLd)}</script>`, { html: true });
+      },
+    });
+  }
+
+  // Preload homepage hero only on homepage
+  if (path === '/' || path === '') {
+    rewriter = rewriter.on('head', {
+      element(e) {
+        e.append(`\n    <link rel="preload" as="image" href="/art/hero-demon.webp" type="image/webp" fetchpriority="high" />`, { html: true });
       },
     });
   }
@@ -1072,6 +1130,7 @@ ${topAnimeHtml}
   }
 
   // Determine if this page should have noindex, follow (internal search & parameter filter facets)
+  // Note: /news?page=2 pagination is explicitly allowed to be indexed!
   const isSearchPath = path === '/search' || path.startsWith('/search/');
   const hasFilterParams = url.searchParams.has('q') ||
     url.searchParams.has('s') ||
@@ -1080,7 +1139,7 @@ ${topAnimeHtml}
     url.searchParams.has('format') ||
     url.searchParams.has('sort') ||
     url.searchParams.has('tag') ||
-    url.searchParams.has('page');
+    (url.searchParams.has('page') && path !== '/news');
   const shouldNoIndex = isSearchPath || (hasFilterParams && path !== '/');
 
   if (shouldNoIndex) {

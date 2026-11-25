@@ -174,12 +174,22 @@ export function generateNewsId(url) {
  * @returns {string}
  */
 export function slugifyTitle(title) {
-  return String(title || '')
+  let slug = String(title || '')
     .toLowerCase()
+    .replace(/[\u2010-\u2015\u2212]/g, ' ') // Clean dashes (en-dash, em-dash)
     .replace(/[^\w\s-]/g, '')
     .trim()
-    .replace(/\s+/g, '-')
-    .slice(0, 80);
+    .replace(/[\s_-]+/g, '-');
+
+  // Truncate at word boundary up to 75 chars
+  if (slug.length > 75) {
+    const cut = slug.slice(0, 75);
+    const lastHyphen = cut.lastIndexOf('-');
+    slug = lastHyphen > 30 ? cut.slice(0, lastHyphen) : cut;
+  }
+
+  // Strip leading and trailing hyphens
+  return slug.replace(/^-+|-+$/g, '');
 }
 
 /**
@@ -269,15 +279,21 @@ export function generateSeoTitle(rawTitle, matchedAnime, format = 'Anime') {
     }
   }
 
-  // Cap at 70 characters max with no broken words
+  // Cap at 70 characters max with no broken words and NO literal '...'
   if (clean.length > 70) {
-    const truncated = clean.slice(0, 67);
+    const truncated = clean.slice(0, 70);
     const lastSpace = truncated.lastIndexOf(' ');
-    clean = (lastSpace > 40 ? truncated.slice(0, lastSpace) : truncated) + '...';
+    clean = (lastSpace > 40 ? truncated.slice(0, lastSpace) : truncated).trim().replace(/[,;:. -]+$/, '');
   }
 
   return clean;
 }
+
+const STOP_TITLES = new Set([
+  'days', 'air', 'free', 'k', 'another', 'orange', 'monster', 'hero', 'bleach',
+  'alive', 'gate', 'major', 'touch', 'beck', 'given', 'nana', 'clover', 'special',
+  'clean', 'working', 'restart', 'cross', 'reset', 'level', 'prime', 'akira', 'claymore'
+]);
 
 /**
  * Checks if a string contains an anime title with word boundary regex
@@ -287,6 +303,15 @@ export function generateSeoTitle(rawTitle, matchedAnime, format = 'Anime') {
  */
 export function matchesTitle(text, title) {
   if (!text || !title || title.trim().length < 3) return false;
+  const lowerTitle = title.trim().toLowerCase();
+
+  // If title is a common English word/name, require exact franchise markers
+  if (STOP_TITLES.has(lowerTitle)) {
+    const escaped = title.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const strictRegex = new RegExp(`(^|\\s|[.,!?'":;()\\/\\-])${escaped}(\\s*(?:anime|season|film|movie|manga|trailer|tv|project|:)|\$)`, 'i');
+    return strictRegex.test(text);
+  }
+
   const escaped = title.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const regex = new RegExp(`(^|\\s|[.,!?'":;()\\/\\-])${escaped}($|\\s|[.,!?'":;()\\/\\-])`, 'i');
   return regex.test(text);
@@ -474,7 +499,8 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniL
     }
     if (aniListMeta.staff && aniListMeta.staff.length > 0) {
       const topStaff = aniListMeta.staff[0];
-      parts.push(`featuring key leadership under ${topStaff.role} ${topStaff.name}`);
+      const leadWord = parts.length === 0 ? 'Featuring' : 'featuring';
+      parts.push(`${leadWord} key leadership under ${topStaff.role} ${topStaff.name}`);
     }
     if (aniListMeta.source) {
       parts.push(`originating from ${aniListMeta.source}`);
@@ -620,10 +646,11 @@ export async function syncNews(options = {}) {
           if (match) imageUrl = match[1];
         }
 
-        // Entity matching early for dedup awareness
+        // Entity matching early for dedup awareness — ONLY match against headline, never snippet
         let matchedAnime = null;
-        for (const anime of catalog) {
-          if (matchesTitle(it.title, anime.title) || matchesTitle(it.contentSnippet || '', anime.title)) {
+        const sortedCatalog = [...catalog].sort((a, b) => b.title.length - a.title.length);
+        for (const anime of sortedCatalog) {
+          if (matchesTitle(it.title, anime.title)) {
             matchedAnime = anime;
             break;
           }
@@ -659,7 +686,19 @@ export async function syncNews(options = {}) {
     let aniListMeta = null;
     try {
       const searchTitle = item.matchedAnime ? item.matchedAnime.title : extractAnimeTitleForSearch(item.title);
-      aniListMeta = await fetchAniListMetadata(searchTitle);
+      if (searchTitle && searchTitle.length >= 3) {
+        const candidateMeta = await fetchAniListMetadata(searchTitle);
+        if (candidateMeta) {
+          const names = [candidateMeta.titleEnglish, candidateMeta.titleRomaji, searchTitle]
+            .filter(Boolean)
+            .map(s => s.toLowerCase());
+          const titleLower = item.title.toLowerCase();
+          const isCorrelated = names.some(n => n.length >= 4 && (titleLower.includes(n) || matchesTitle(titleLower, n)));
+          if (isCorrelated || item.matchedAnime) {
+            aniListMeta = candidateMeta;
+          }
+        }
+      }
     } catch {
       // Non-fatal, continues seamlessly
     }
@@ -683,6 +722,16 @@ export async function syncNews(options = {}) {
 
     const enrichedSummary = generateEditorialEnrichment(item, item.matchedAnime, item.source, aniListMeta);
 
+    // Normalize voiceCast so it always has character and actor name
+    const normalizedVoiceCast = (aniListMeta?.voiceCast || [])
+      .map((c) => ({
+        character: c.character || 'Character',
+        actor: c.actor || c.voiceActor || c.name || '',
+        voiceActor: c.actor || c.voiceActor || c.name || '',
+        name: c.actor || c.voiceActor || c.name || ''
+      }))
+      .filter((c) => Boolean(c.actor));
+
     enrichedNews.push({
       id: newsId,
       title: seoTitle,
@@ -697,7 +746,7 @@ export async function syncNews(options = {}) {
       imageUrl: finalImageUrl,
       studio: aniListMeta?.studio || null,
       staff: aniListMeta?.staff || [],
-      voiceCast: aniListMeta?.voiceCast || [],
+      voiceCast: normalizedVoiceCast,
       sourceMaterial: aniListMeta?.source || null,
       matchedAnime: item.matchedAnime ? {
         title: item.matchedAnime.title,

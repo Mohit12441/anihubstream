@@ -5,13 +5,27 @@ interface SEOProps {
   title?: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   type?: string;
+  publishedTime?: string;
+  author?: string;
   canonicalUrl?: string;
   jsonLd?: Record<string, unknown> | null;
   noindex?: boolean;
 }
 
-export function useSEO({ title, description, image, type = 'website', canonicalUrl, jsonLd, noindex = false }: SEOProps = {}) {
+export function useSEO({
+  title,
+  description,
+  image,
+  imageAlt,
+  type = 'website',
+  publishedTime,
+  author,
+  canonicalUrl,
+  jsonLd,
+  noindex = false,
+}: SEOProps = {}) {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -51,10 +65,52 @@ export function useSEO({ title, description, image, type = 'website', canonicalU
       if (ogImg) ogImg.setAttribute('content', image);
       const twImg = document.querySelector('meta[name="twitter:image"]');
       if (twImg) twImg.setAttribute('content', image);
+
+      // Remove fixed 1792x1024 dims if article image
+      const ogWidth = document.querySelector('meta[property="og:image:width"]');
+      const ogHeight = document.querySelector('meta[property="og:image:height"]');
+      if (type === 'article') {
+        if (ogWidth) ogWidth.remove();
+        if (ogHeight) ogHeight.remove();
+      }
+    }
+
+    if (imageAlt || title) {
+      const altText = imageAlt || title || 'AniHubStream';
+      const ogAlt = document.querySelector('meta[property="og:image:alt"]');
+      if (ogAlt) ogAlt.setAttribute('content', altText);
+      const twAlt = document.querySelector('meta[name="twitter:image:alt"]');
+      if (twAlt) twAlt.setAttribute('content', altText);
     }
 
     const ogType = document.querySelector('meta[property="og:type"]');
     if (ogType) ogType.setAttribute('content', type);
+
+    if (type === 'article') {
+      if (publishedTime) {
+        let pubMeta = document.querySelector('meta[property="article:published_time"]');
+        if (!pubMeta) {
+          pubMeta = document.createElement('meta');
+          pubMeta.setAttribute('property', 'article:published_time');
+          document.head.appendChild(pubMeta);
+        }
+        pubMeta.setAttribute('content', publishedTime);
+      }
+      if (author) {
+        let authMeta = document.querySelector('meta[property="article:author"]');
+        if (!authMeta) {
+          authMeta = document.createElement('meta');
+          authMeta.setAttribute('property', 'article:author');
+          document.head.appendChild(authMeta);
+        }
+        authMeta.setAttribute('content', author);
+      }
+    } else {
+      const pubMeta = document.querySelector('meta[property="article:published_time"]');
+      if (pubMeta) pubMeta.remove();
+      const authMeta = document.querySelector('meta[property="article:author"]');
+      if (authMeta) authMeta.remove();
+    }
 
     let twCard = document.querySelector('meta[name="twitter:card"]');
     if (!twCard) {
@@ -76,16 +132,18 @@ export function useSEO({ title, description, image, type = 'website', canonicalU
       metaRobots.setAttribute('content', 'index, follow');
     }
 
-    let script = document.querySelector('script[type="application/ld+json"]');
+    // Target dedicated page-schema element so website-schema is never overwritten
+    let pageScript = document.getElementById('page-schema') as HTMLScriptElement | null;
     if (jsonLd) {
-      if (!script) {
-        script = document.createElement('script');
-        script.setAttribute('type', 'application/ld+json');
-        document.head.appendChild(script);
+      if (!pageScript) {
+        pageScript = document.createElement('script');
+        pageScript.setAttribute('type', 'application/ld+json');
+        pageScript.id = 'page-schema';
+        document.head.appendChild(pageScript);
       }
-      script.textContent = JSON.stringify(jsonLd);
-    } else if (script) {
-      script.remove();
+      pageScript.textContent = JSON.stringify(jsonLd);
+    } else if (pageScript) {
+      pageScript.remove();
     }
-  }, [title, description, image, type, canonicalUrl, jsonLd, noindex, pathname]);
+  }, [title, description, image, imageAlt, type, publishedTime, author, canonicalUrl, jsonLd, noindex, pathname]);
 }

@@ -88,6 +88,43 @@ export function About() {
           </p>
         </section>
 
+        <section id="editorial" style={{ scrollMarginTop: 80 }}>
+          <h2><Shield size={20} className="inline-icon" /> Editorial Desk &amp; News Analysts</h2>
+          <p>
+            AniHubStream&rsquo;s editorial coverage is produced and curated by dedicated anime journalists, data specialists, and broadcast analysts committed to factual reporting and production-level analysis:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, marginTop: 16 }}>
+            <div style={{ padding: 16, background: 'rgba(255,255,255,0.04)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)' }}>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', color: '#fff' }}>Kenji Sato</h3>
+              <span style={{ fontSize: '0.8rem', color: 'var(--crimson)', fontWeight: 600 }}>Senior Anime Journalist</span>
+              <p style={{ margin: '8px 0 0', fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
+                Specializes in Japanese studio workflows, directorial retrospectives, and broadcast licensing agreements.
+              </p>
+            </div>
+            <div style={{ padding: 16, background: 'rgba(255,255,255,0.04)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)' }}>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', color: '#fff' }}>Elena Rostova</h3>
+              <span style={{ fontSize: '0.8rem', color: 'var(--cyan)', fontWeight: 600 }}>Anime Industry Correspondent</span>
+              <p style={{ margin: '8px 0 0', fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
+                Covers theatrical anime box office milestones, voice cast developments, and light novel multimedia adaptations.
+              </p>
+            </div>
+            <div style={{ padding: 16, background: 'rgba(255,255,255,0.04)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)' }}>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', color: '#fff' }}>Marcus Vance</h3>
+              <span style={{ fontSize: '0.8rem', color: 'var(--gold)', fontWeight: 600 }}>Broadcast Syndication Analyst</span>
+              <p style={{ margin: '8px 0 0', fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
+                Tracks worldwide simulcast windows, English simuldub launches, and streaming platform catalog expansions.
+              </p>
+            </div>
+            <div style={{ padding: 16, background: 'rgba(255,255,255,0.04)', borderRadius: 8, border: '1px solid rgba(255,255,255,0.08)' }}>
+              <h3 style={{ margin: '0 0 4px', fontSize: '1rem', color: '#fff' }}>Daiki Tanaka</h3>
+              <span style={{ fontSize: '0.8rem', color: '#a78bfa', fontWeight: 600 }}>Franchise Data Specialist</span>
+              <p style={{ margin: '8px 0 0', fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>
+                Curates seasonal release metrics, manga serialization anniversaries, and community score tracking.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section>
           <h2><Shield size={20} className="inline-icon" /> Community Attribution &amp; Rights</h2>
           <p>

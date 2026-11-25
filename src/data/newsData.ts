@@ -181,56 +181,71 @@ Browse our dedicated **Isekai** category shelf on AniHubStream to filter by subb
   },
 ];
 
+export function cleanExcerpt(text: string, maxChars = 155): string {
+  if (!text) return '';
+  const clean = text
+    .replace(/<[^>]+>/g, '')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (clean.length <= maxChars) return clean;
+  const cut = clean.slice(0, maxChars);
+  const lastSpace = cut.lastIndexOf(' ');
+  const trimmed = lastSpace > 50 ? cut.slice(0, lastSpace) : cut;
+  return trimmed.replace(/[,;:. -]+$/, '') + '...';
+}
+
 export function convertLiveNewsToArticle(item: any): NewsArticleItem {
   const title = item.originalTitle || item.title;
   const staffList = (item.staff || [])
     .map((s: any) => `- **${s.role}**: ${s.name}`)
     .join('\n');
   const castList = (item.voiceCast || [])
-    .map((c: any) => `- **${c.character || 'Voice Actor'}**: ${c.voiceActor || c.name}`)
+    .filter((c: any) => Boolean(c.actor || c.voiceActor || c.name))
+    .map((c: any) => `- **${c.character || 'Character'}**: ${c.actor || c.voiceActor || c.name}`)
     .join('\n');
 
   const content = `
-### Announcement & Key Industry Details
+## Announcement & Key Industry Details
 
 ${item.editorialSummary}
 
-${item.studio || staffList ? `### Animation Studio & Production Pedigree
+${item.studio || staffList ? `## Animation Studio & Production Pedigree
 ${item.studio ? `- **Lead Studio**: ${item.studio}\n` : ''}${staffList ? `\n**Production Leadership**:\n${staffList}\n` : ''}` : ''}
 
-${castList ? `### Featured Cast & Characters
+${castList ? `## Featured Cast & Characters
 ${castList}
 ` : ''}
 
-${item.sourceMaterial ? `### Source Material & Adaptation Context
+${item.sourceMaterial ? `## Source Material & Adaptation Context
 This release is adapted from the original **${item.sourceMaterial}**, expanding its reach across global broadcast and streaming syndication.
 ` : ''}
 
-### Broadcast Schedule & Where to Watch
+## Broadcast Schedule & Where to Watch
 Episodes are scheduled for synchronized international simulcast with original Japanese audio and official multi-language subtitles. AniHubStream tracks live countdown clocks, release days, and 1080p high-definition streams across all major broadcast series.
 
-### Primary Verification & Citation
-Full announcement details, official key visuals, and promotional trailers were originally published and verified by **[${item.source}](${item.sourceUrl})**.
+## Primary Verification & Citation
+Full announcement details, official key visuals, and promotional trailers were originally published and verified by [${item.source}](${item.sourceUrl}).
   `.trim();
 
-  const authorMap: Record<string, { name: string; role: string }> = {
-    'Anime News Network': { name: 'Kenji Sato', role: 'Senior Anime Journalist' },
-    'Anime Corner': { name: 'Elena Rostova', role: 'Anime Industry Correspondent' },
-    'Crunchyroll News': { name: 'Marcus Vance', role: 'Broadcast Syndication Analyst' },
-    'MyAnimeList': { name: 'Daiki Tanaka', role: 'Franchise Data Specialist' }
+  const authorMap: Record<string, { name: string; role: string; url: string }> = {
+    'Anime News Network': { name: 'Kenji Sato', role: 'Senior Anime Journalist', url: 'https://anihubstream.com/about#editorial' },
+    'Anime Corner': { name: 'Elena Rostova', role: 'Anime Industry Correspondent', url: 'https://anihubstream.com/about#editorial' },
+    'Crunchyroll News': { name: 'Marcus Vance', role: 'Broadcast Syndication Analyst', url: 'https://anihubstream.com/about#editorial' },
+    'MyAnimeList': { name: 'Daiki Tanaka', role: 'Franchise Data Specialist', url: 'https://anihubstream.com/about#editorial' }
   };
 
-  const authorInfo = authorMap[item.source] || { name: 'AniHub Editorial Desk', role: 'Anime News Curator' };
+  const authorInfo = authorMap[item.source] || { name: 'AniHub Editorial Desk', role: 'Anime News Curator', url: 'https://anihubstream.com/about#editorial' };
 
   return {
     slug: item.slug,
     title,
-    excerpt: item.editorialSummary.slice(0, 180).trim() + '...',
+    excerpt: cleanExcerpt(item.editorialSummary, 155),
     category: (item.category || 'Anime News') as any,
     author: authorInfo.name,
     authorRole: authorInfo.role,
     date: item.publishedAt ? item.publishedAt.split('T')[0] : '2026-11-25',
-    readTime: `${Math.max(2, Math.ceil((item.wordCount || 150) / 60))} min read`,
+    readTime: `${Math.max(2, Math.ceil((item.wordCount || 150) / 100))} min read`,
     coverImage: item.imageUrl || '/images/banners/banner-spring-2026.jpg',
     tags: [item.format || 'Anime', item.source, item.studio, item.matchedAnime?.title].filter(Boolean) as string[],
     relatedAnimeSlugs: item.matchedAnime ? [item.matchedAnime.slug] : [],
@@ -239,11 +254,12 @@ Full announcement details, official key visuals, and promotional trailers were o
 }
 
 export function getNewsArticleBySlug(slug: string): NewsArticleItem | undefined {
-  const staticArticle = NEWS_ARTICLES.find((a) => a.slug === slug);
+  const normalizedSlug = slug.replace(/--+/g, '-').replace(/-+$/, '');
+  const staticArticle = NEWS_ARTICLES.find((a) => a.slug === slug || a.slug === normalizedSlug);
   if (staticArticle) return staticArticle;
 
   if (Array.isArray(FEED_ITEMS)) {
-    const liveItem = FEED_ITEMS.find((item: any) => item.slug === slug);
+    const liveItem = FEED_ITEMS.find((item: any) => item.slug === slug || item.slug === normalizedSlug);
     if (liveItem) {
       return convertLiveNewsToArticle(liveItem);
     }

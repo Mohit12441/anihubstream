@@ -265,4 +265,25 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
       "Frieren"
     );
   });
+
+  await t.test('slugifyTitle cleans trailing hyphens, en-dashes, and truncates at word boundaries', () => {
+    const slug1 = slugifyTitle("Detective Conan 1214 Current ‒ Episode 1215 ‒ The Crimson");
+    assert.ok(!slug1.includes('--'));
+    assert.ok(!slug1.endsWith('-'));
+
+    const slug2 = slugifyTitle("Naruto Shippuden The Assembly of the Five Kage Telugu Dub ");
+    assert.ok(!slug2.endsWith('-'));
+
+    const longTitle = "A Extremely Long Anime Title That Exceeds Seventy Characters And Should Truncate Naturally Without Broken Words";
+    const slug3 = slugifyTitle(longTitle);
+    assert.ok(slug3.length <= 75);
+    assert.ok(!slug3.endsWith('-'));
+  });
+
+  await t.test('matchesTitle enforces strict franchise matching on stop titles to avoid false positives', () => {
+    assert.equal(matchesTitle("Takes Place in 30 Days Around Tokyo", "DAYS"), false);
+    assert.equal(matchesTitle("DAYS TV Anime Announces New Season", "DAYS"), true);
+    assert.equal(matchesTitle("New laundry detergent will bleach fabric", "Bleach"), false);
+    assert.equal(matchesTitle("Bleach: Thousand-Year Blood War Returns", "Bleach"), true);
+  });
 });

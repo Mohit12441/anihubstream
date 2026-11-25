@@ -62,7 +62,7 @@ function getAuthorForSource(source: string): { name: string; role: string } {
 const PAGE_SIZE = 12;
 
 export function News() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState<'live' | 'editorial'>('live');
   const [selectedCat, setSelectedCat] = useState('All');
   const [selectedSource, setSelectedSource] = useState('All Sources');
@@ -75,23 +75,26 @@ export function News() {
   useSEO({
     title: 'Anime News, Industry Announcements & Broadcast Schedules | AniHubStream',
     description: 'Track breaking anime news, studio production updates, release dates, staff and voice cast reveals, and seasonal broadcast schedules on AniHubStream.',
+    canonicalUrl: currentPage > 1 ? `https://anihubstream.com/news?page=${currentPage}` : 'https://anihubstream.com/news',
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [
         {
           '@type': 'CollectionPage',
           name: 'AniHubStream Anime News & Editorial Hub',
-          url: 'https://anihubstream.com/news',
+          url: currentPage > 1 ? `https://anihubstream.com/news?page=${currentPage}` : 'https://anihubstream.com/news',
           description: 'Track breaking anime news, studio production updates, release dates, and seasonal schedules.',
         },
         {
           '@type': 'ItemList',
-          itemListElement: liveNews.slice(0, 10).map((item, index) => ({
-            '@type': 'ListItem',
-            position: index + 1,
-            name: item.title,
-            url: `https://anihubstream.com/news/${item.slug}`,
-          })),
+          itemListElement: liveNews
+            .slice((currentPage - 1) * 12, currentPage * 12)
+            .map((item, index) => ({
+              '@type': 'ListItem',
+              position: (currentPage - 1) * 12 + index + 1,
+              name: item.title,
+              url: `https://anihubstream.com/news/${item.slug}`,
+            })),
         },
       ],
     },
@@ -160,12 +163,6 @@ export function News() {
     const start = (safePage - 1) * PAGE_SIZE;
     return filteredLiveNews.slice(start, start + PAGE_SIZE);
   }, [filteredLiveNews, safePage]);
-
-  const handlePageChange = (newPage: number) => {
-    if (newPage < 1 || newPage > totalPages) return;
-    setSearchParams({ page: String(newPage) });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <div className="page news-page shell">
@@ -536,30 +533,42 @@ export function News() {
             </div>
           )}
 
-          {/* Pagination Controls */}
+          {/* Pagination Controls with Real Crawlable Links and Rel Prev/Next */}
           {totalPages > 1 && (
             <nav className="live-wire-pagination" aria-label="News pagination">
-              <button
-                type="button"
-                className="btn btn--sm btn--ghost"
-                disabled={safePage <= 1}
-                onClick={() => handlePageChange(safePage - 1)}
-                style={{ opacity: safePage <= 1 ? 0.4 : 1, display: 'inline-flex', alignItems: 'center', gap: 4 }}
-              >
-                <ChevronLeft size={15} /> Prev
-              </button>
+              {safePage > 1 ? (
+                <Link
+                  to={safePage === 2 ? '/news' : `/news?page=${safePage - 1}`}
+                  rel="prev"
+                  className="btn btn--sm btn--ghost"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                  <ChevronLeft size={15} /> Prev
+                </Link>
+              ) : (
+                <span className="btn btn--sm btn--ghost" style={{ opacity: 0.4, cursor: 'not-allowed', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                  <ChevronLeft size={15} /> Prev
+                </span>
+              )}
               <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', padding: '0 8px' }}>
                 Page <b>{safePage}</b> of <b>{totalPages}</b>
               </span>
-              <button
-                type="button"
-                className="btn btn--sm btn--ghost"
-                disabled={safePage >= totalPages}
-                onClick={() => handlePageChange(safePage + 1)}
-                style={{ opacity: safePage >= totalPages ? 0.4 : 1, display: 'inline-flex', alignItems: 'center', gap: 4 }}
-              >
-                Next <ChevronRight size={15} />
-              </button>
+              {safePage < totalPages ? (
+                <Link
+                  to={`/news?page=${safePage + 1}`}
+                  rel="next"
+                  className="btn btn--sm btn--ghost"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
+                  Next <ChevronRight size={15} />
+                </Link>
+              ) : (
+                <span className="btn btn--sm btn--ghost" style={{ opacity: 0.4, cursor: 'not-allowed', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                  Next <ChevronRight size={15} />
+                </span>
+              )}
             </nav>
           )}
         </section>

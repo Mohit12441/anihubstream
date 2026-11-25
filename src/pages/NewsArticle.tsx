@@ -21,6 +21,14 @@ interface ParsedBlock {
   }>;
 }
 
+function renderMarkdown(str: string): string {
+  if (!str) return '';
+  return str
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);text-decoration:underline;font-weight:600;">$1</a>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+}
+
 function parseArticleBlocks(content: string): ParsedBlock[] {
   const lines = content.replace(/\r\n/g, '\n').split('\n');
   const blocks: ParsedBlock[] = [];
@@ -150,6 +158,10 @@ export function NewsArticle() {
     title: article ? `${article.title} | AniHubStream News` : 'Article Not Found | AniHubStream',
     description: article ? article.excerpt : 'The requested article could not be found.',
     image: article ? (article.coverImage.startsWith('http') ? article.coverImage : `https://anihubstream.com${article.coverImage}`) : undefined,
+    imageAlt: article ? `${article.title} — Official Visual` : undefined,
+    type: 'article',
+    publishedTime: article ? `${article.date}T10:00:00+00:00` : undefined,
+    author: article ? article.author : undefined,
     jsonLd: article
       ? {
           '@context': 'https://schema.org',
@@ -166,14 +178,18 @@ export function NewsArticle() {
                   '@type': 'Person',
                   name: article.author,
                   jobTitle: article.authorRole,
+                  url: 'https://anihubstream.com/about#editorial',
                 },
               ],
               publisher: {
                 '@type': 'Organization',
                 name: 'AniHubStream',
+                url: 'https://anihubstream.com',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://anihubstream.com/art/poster-shadow-hunter.jpg',
+                  url: 'https://anihubstream.com/og.png',
+                  width: 1200,
+                  height: 630,
                 },
               },
               mainEntityOfPage: {
@@ -280,6 +296,8 @@ export function NewsArticle() {
             src={article.coverImage}
             alt={article.title}
             className="article-cover"
+            width={1200}
+            height={675}
             loading="eager"
             decoding="async"
             onError={(e) => {
@@ -296,10 +314,10 @@ export function NewsArticle() {
         {allMentionedAnime.length > 0 && (
           <section className="mentioned-anime-section">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.95rem', fontWeight: 800, color: '#fff' }}>
+              <h2 style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.98rem', fontWeight: 800, color: '#fff', margin: 0 }}>
                 <Film size={18} style={{ color: 'var(--crimson)' }} />
                 Featured Anime In This Guide ({allMentionedAnime.length})
-              </div>
+              </h2>
               <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.5)' }}>
                 Click any series to start streaming in 1080p
               </span>
@@ -406,9 +424,7 @@ export function NewsArticle() {
                   <li
                     key={itemIdx}
                     dangerouslySetInnerHTML={{
-                      __html: item.raw
-                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                        .replace(/\*(.*?)\*/g, '<em>$1</em>'),
+                      __html: renderMarkdown(item.raw),
                     }}
                   />
                 ))}
@@ -420,9 +436,7 @@ export function NewsArticle() {
             <p
               key={idx}
               dangerouslySetInnerHTML={{
-                __html: (block.text || '')
-                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                  .replace(/\*(.*?)\*/g, '<em>$1</em>'),
+                __html: renderMarkdown(block.text || ''),
               }}
             />
           );
@@ -432,9 +446,9 @@ export function NewsArticle() {
         <div className="article-tags">
           <Tag size={15} style={{ color: 'var(--cyan)', marginRight: 4, alignSelf: 'center' }} />
           {article.tags.map((t) => (
-            <span key={t} className="article-tag">
+            <Link key={t} to={`/anime?search=${encodeURIComponent(t)}`} className="article-tag" title={`Search for ${t} on AniHub`}>
               #{t}
-            </span>
+            </Link>
           ))}
         </div>
 
@@ -451,9 +465,9 @@ export function NewsArticle() {
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
             <Sparkles size={20} style={{ color: 'var(--cyan)' }} />
-            <h4 style={{ margin: 0, fontSize: '1.15rem', color: '#fff', fontWeight: 800 }}>
+            <h3 style={{ margin: 0, fontSize: '1.15rem', color: '#fff', fontWeight: 800 }}>
               Ready to Stream on AniHubStream?
-            </h4>
+            </h3>
           </div>
           <p style={{ margin: '0 0 16px 0', fontSize: '0.92rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
             Stream all featured episodes in high-definition 1080p with subbed and dubbed audio, accurate schedules, skip-intro markers, and community ratings.
@@ -472,7 +486,7 @@ export function NewsArticle() {
       {/* Related Articles with Anime Chips */}
       {related.length > 0 && (
         <section style={{ marginTop: 60, paddingTop: 30, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-          <h3 style={{ fontSize: '1.3rem', marginBottom: 20, color: '#fff' }}>More Anime Guides</h3>
+          <h2 style={{ fontSize: '1.3rem', marginBottom: 20, color: '#fff' }}>More Anime Guides</h2>
           <div className="news-grid">
             {related.map((rel) => {
               const relEntities = (rel.relatedAnimeSlugs || [])
@@ -482,13 +496,13 @@ export function NewsArticle() {
               return (
                 <article key={rel.slug} className="news-card">
                   <Link to={`/news/${rel.slug}`} className="news-card__thumb-link">
-                    <img src={rel.coverImage} alt={rel.title} className="news-card__thumb" loading="lazy" />
+                    <img src={rel.coverImage} alt={rel.title} className="news-card__thumb" width={400} height={225} loading="lazy" />
                     <span className="news-card__category">{rel.category}</span>
                   </Link>
                   <div className="news-card__body">
-                    <h4 className="news-card__title">
+                    <h3 className="news-card__title" style={{ fontSize: '1rem', lineHeight: 1.4 }}>
                       <Link to={`/news/${rel.slug}`}>{rel.title}</Link>
-                    </h4>
+                    </h3>
                     <p className="news-card__excerpt">{rel.excerpt}</p>
 
                     {relEntities.length > 0 && (
