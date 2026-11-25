@@ -651,9 +651,10 @@ export async function syncNews(options = {}) {
     }
   }
 
-  // Write static outputs
+  // Write static outputs (both public/api/news.json and public/news-feed.json to avoid Cloudflare [[path]].js collisions)
   fs.writeFileSync(path.join(dataNewsDir, 'feed.json'), JSON.stringify(enrichedNews, null, 2));
   fs.writeFileSync(path.join(publicApiDir, 'news.json'), JSON.stringify(enrichedNews, null, 2));
+  fs.writeFileSync(path.resolve('public/news-feed.json'), JSON.stringify(enrichedNews, null, 2));
 
   console.log(`✅ Successfully enriched and wrote ${enrichedNews.length} news items.`);
 

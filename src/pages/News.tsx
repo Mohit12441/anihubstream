@@ -6,6 +6,7 @@ import { NEWS_ARTICLES } from '../data/newsData';
 import { resolveAnime } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
 import { useSEO } from '../lib/useSEO';
+import INITIAL_LIVE_NEWS from '../../data/news/feed.json';
 import '../styles/news.css';
 
 const CATEGORIES = ['All', 'Seasonal Guide', 'Rankings', 'Analysis'];
@@ -14,6 +15,7 @@ const LIVE_SOURCES = ['All Sources', 'Anime Corner', 'Anime News Network', 'MyAn
 interface LiveNewsItem {
   id: string;
   title: string;
+  originalTitle?: string;
   slug: string;
   source: string;
   sourceUrl: string;
@@ -34,11 +36,11 @@ interface LiveNewsItem {
 }
 
 export function News() {
-  const [activeTab, setActiveTab] = useState<'editorial' | 'live'>('editorial');
+  const [activeTab, setActiveTab] = useState<'live' | 'editorial'>('live');
   const [selectedCat, setSelectedCat] = useState('All');
   const [selectedSource, setSelectedSource] = useState('All Sources');
   const [searchQuery, setSearchQuery] = useState('');
-  const [liveNews, setLiveNews] = useState<LiveNewsItem[]>([]);
+  const [liveNews, setLiveNews] = useState<LiveNewsItem[]>(INITIAL_LIVE_NEWS as unknown as LiveNewsItem[]);
   const [liveLoading, setLiveLoading] = useState(false);
 
   useSEO({
@@ -54,17 +56,18 @@ export function News() {
   });
 
   useEffect(() => {
-    if (activeTab === 'live' && liveNews.length === 0) {
-      setLiveLoading(true);
-      fetch('/api/news.json')
-        .then((res) => (res.ok ? res.json() : []))
-        .then((data) => {
-          if (Array.isArray(data)) setLiveNews(data);
-        })
-        .catch(() => {})
-        .finally(() => setLiveLoading(false));
-    }
-  }, [activeTab, liveNews.length]);
+    // Refresh news from static CDN feed or /api/news
+    setLiveLoading(true);
+    fetch('/news-feed.json')
+      .then((res) => (res.ok ? res.json() : []))
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setLiveNews(data);
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLiveLoading(false));
+  }, []);
 
   const filteredEditorial = selectedCat === 'All'
     ? NEWS_ARTICLES
@@ -120,20 +123,8 @@ export function News() {
           </div>
         </div>
 
-        {/* Tab Switcher: Curated vs Live Wire */}
+        {/* Tab Switcher: Live Wire vs Curated Guides */}
         <div style={{ display: 'flex', gap: 12, marginTop: 20, borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: 12 }}>
-          <button
-            type="button"
-            className="btn btn--sm"
-            onClick={() => setActiveTab('editorial')}
-            style={{
-              background: activeTab === 'editorial' ? 'var(--crimson)' : 'rgba(255,255,255,0.06)',
-              color: '#fff',
-              fontWeight: 700,
-            }}
-          >
-            Curated Editorial Guides
-          </button>
           <button
             type="button"
             className="btn btn--sm"
@@ -148,7 +139,19 @@ export function News() {
             }}
           >
             <Radio size={15} style={{ color: activeTab === 'live' ? '#fff' : 'var(--cyan)' }} />
-            Trending Live Wire ({liveNews.length > 0 ? liveNews.length : 'Live'})
+            Trending Live Wire ({liveNews.length > 0 ? liveNews.length : '32'})
+          </button>
+          <button
+            type="button"
+            className="btn btn--sm"
+            onClick={() => setActiveTab('editorial')}
+            style={{
+              background: activeTab === 'editorial' ? 'var(--crimson)' : 'rgba(255,255,255,0.06)',
+              color: '#fff',
+              fontWeight: 700,
+            }}
+          >
+            Curated Editorial Guides ({NEWS_ARTICLES.length})
           </button>
         </div>
 

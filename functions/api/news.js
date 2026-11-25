@@ -7,11 +7,22 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       const limit = Math.min(Math.max(parseInt(url.searchParams.get('limit') || '20', 10), 1), 50);
       const category = url.searchParams.get('category');
 
-      // Attempt to load from static edge asset
-      const assetUrl = new URL('/api/news.json', url.origin);
-      const res = await fetch(assetUrl.toString());
-      if (res.ok) {
-        let items = await res.json();
+      // Attempt to load from static edge asset via env.ASSETS or static URL
+      let items = [];
+      if (env.ASSETS && typeof env.ASSETS.fetch === 'function') {
+        try {
+          const res = await env.ASSETS.fetch(new URL('/news-feed.json', request.url));
+          if (res.ok) items = await res.json();
+        } catch {}
+      }
+      if (!items || items.length === 0) {
+        try {
+          const res = await fetch(new URL('/news-feed.json', url.origin));
+          if (res.ok) items = await res.json();
+        } catch {}
+      }
+
+      if (Array.isArray(items) && items.length > 0) {
         if (category && category !== 'All') {
           items = items.filter((item) => item.category === category);
         }
