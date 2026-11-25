@@ -42,6 +42,11 @@ export function ShareModal({
 
   const socialLinks = [
     {
+      name: 'Discord Community',
+      url: 'https://discord.gg/yqkRvXPCVP',
+      color: '#5865F2',
+    },
+    {
       name: 'X (Twitter)',
       url: `https://twitter.com/intent/tweet?text=${shareText}&url=${encodedUrl}`,
       color: '#1da1f2',
