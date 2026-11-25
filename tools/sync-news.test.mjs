@@ -13,6 +13,9 @@ import {
   generateEditorialEnrichment,
   sanitizeXml,
   AI_EDITORIAL_SYSTEM_PROMPT,
+  SOURCES,
+  generateSeoTitle,
+  fetchOpenGraphImage,
 } from './sync-news.mjs';
 
 /**
@@ -228,5 +231,22 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     assert.ok(enriched.includes('Web Manhwa'));
     assert.ok(enriched.includes('8.4/10'));
     assert.ok(enriched.includes('AniHubStream'));
+  });
+
+  await t.test('SOURCES includes Anime Corner with valid feed URL', () => {
+    const ac = SOURCES.find(s => s.name === 'Anime Corner');
+    assert.ok(ac, 'Anime Corner must be in SOURCES');
+    assert.equal(ac.url, 'https://animecorner.me/feed/');
+  });
+
+  await t.test('generateSeoTitle creates clean, high-CTR titles within optimal length', () => {
+    const title1 = generateSeoTitle("Solo Leveling Season 2 Release Window Confirmed", { title: "Solo Leveling" });
+    assert.ok(title1.length <= 70);
+    assert.ok(title1.includes('Solo Leveling'));
+
+    const titleWithTag = generateSeoTitle("[Exclusive] Jujutsu Kaisen Culling Game Anime Adaptation - Anime Corner", { title: "Jujutsu Kaisen" });
+    assert.ok(!titleWithTag.includes('[Exclusive]'));
+    assert.ok(!titleWithTag.includes('- Anime Corner'));
+    assert.ok(titleWithTag.includes('Jujutsu Kaisen'));
   });
 });

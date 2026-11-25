@@ -9,7 +9,7 @@ import { useSEO } from '../lib/useSEO';
 import '../styles/news.css';
 
 const CATEGORIES = ['All', 'Seasonal Guide', 'Rankings', 'Analysis'];
-const LIVE_SOURCES = ['All Sources', 'Anime News Network', 'MyAnimeList', 'Crunchyroll News'];
+const LIVE_SOURCES = ['All Sources', 'Anime Corner', 'Anime News Network', 'MyAnimeList', 'Crunchyroll News'];
 
 interface LiveNewsItem {
   id: string;

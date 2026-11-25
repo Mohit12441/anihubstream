@@ -9,6 +9,7 @@ const ORIGIN = 'https://anihubstream.com';
 const INDEXNOW_KEY = '9f8b2c4e1a7d3f5b8a0c6e4d2f1a9b7c';
 
 export const SOURCES = [
+  { name: 'Anime Corner', url: 'https://animecorner.me/feed/' },
   { name: 'Anime News Network', url: 'https://www.animenewsnetwork.com/all/rss.xml' },
   { name: 'MyAnimeList', url: 'https://myanimelist.net/rss/news.xml' },
   { name: 'Crunchyroll News', url: 'https://www.crunchyroll.com/news/rss', fallbackUrl: 'https://www.crunchyroll.com/rss/anime' },
@@ -179,6 +180,75 @@ export function slugifyTitle(title) {
     .trim()
     .replace(/\s+/g, '-')
     .slice(0, 80);
+}
+
+/**
+ * Extracts OpenGraph image from article webpage (especially for Anime Corner, ANN, and Crunchyroll)
+ * @param {string} url
+ * @returns {Promise<string|null>}
+ */
+export async function fetchOpenGraphImage(url) {
+  if (!url || typeof url !== 'string' || !url.startsWith('http')) return null;
+  try {
+    const res = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 AniHubBot/1.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+      },
+      signal: AbortSignal.timeout(3500)
+    });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const match = html.match(/<meta\s+(?:property|name)=["']og:image["']\s+content=["']([^"']+)["']/i) ||
+                  html.match(/<meta\s+content=["']([^"']+)["']\s+(?:property|name)=["']og:image["']/i);
+    if (match && match[1] && !match[1].includes('avatar') && !match[1].includes('favicon')) {
+      return match[1].trim();
+    }
+  } catch {
+    // Non-fatal, falls back to metadata APIs
+  }
+  return null;
+}
+
+/**
+ * Generates an optimized SEO title targeting search engine carousels (Bing / Google News)
+ * Enforces 50-65 character sweet spot and high-intent franchise keywords.
+ * @param {string} rawTitle
+ * @param {object|null} matchedAnime
+ * @param {'Anime' | 'Manga' | 'Light Novel' | 'Visual Novel'} [format='Anime']
+ * @returns {string}
+ */
+export function generateSeoTitle(rawTitle, matchedAnime, format = 'Anime') {
+  if (!rawTitle) return 'Anime News & Industry Update';
+
+  // Clean raw title of common RSS artifacts
+  let clean = rawTitle
+    .replace(/^\[.*?\]\s*/, '') // Remove [Tags]
+    .replace(/\s*-\s*(?:Anime News Network|Crunchyroll|MyAnimeList|Anime Corner)$/i, '')
+    .trim();
+
+  // If already optimal length (45-68 chars) and contains matched anime, keep it clean
+  if (clean.length >= 45 && clean.length <= 68) {
+    return clean;
+  }
+
+  // If matched anime exists, ensure the anime title is front-loaded
+  if (matchedAnime && !clean.toLowerCase().startsWith(matchedAnime.title.toLowerCase())) {
+    const hasName = clean.toLowerCase().includes(matchedAnime.title.toLowerCase());
+    if (!hasName) {
+      const combined = `${matchedAnime.title}: ${clean}`;
+      if (combined.length <= 70) return combined;
+    }
+  }
+
+  // Cap at 70 characters max with no broken words
+  if (clean.length > 70) {
+    const truncated = clean.slice(0, 67);
+    const lastSpace = truncated.lastIndexOf(' ');
+    clean = (lastSpace > 40 ? truncated.slice(0, lastSpace) : truncated) + '...';
+  }
+
+  return clean;
 }
 
 /**
@@ -506,8 +576,9 @@ export async function syncNews(options = {}) {
 
   for (const item of uniqueItems) {
     const newsId = generateNewsId(item.link);
-    const slug = slugifyTitle(item.title);
     const format = detectFormatContext(item.title, item.snippet);
+    const seoTitle = generateSeoTitle(item.title, item.matchedAnime, format);
+    const slug = slugifyTitle(seoTitle || item.title);
 
     // Deep industry metadata enrichment via AniList GraphQL
     let aniListMeta = null;
@@ -518,11 +589,25 @@ export async function syncNews(options = {}) {
       // Non-fatal, continues seamlessly
     }
 
+    // Resolve HD image: use existing, or extract OpenGraph 1080p image from source page, or fallback to AniList/catalog
+    let finalImageUrl = item.imageUrl;
+    if (!finalImageUrl && item.link) {
+      try {
+        finalImageUrl = await fetchOpenGraphImage(item.link);
+      } catch {
+        // Non-fatal
+      }
+    }
+    if (!finalImageUrl) {
+      finalImageUrl = aniListMeta?.bannerImage || aniListMeta?.coverImage || item.matchedAnime?.art || null;
+    }
+
     const enrichedSummary = generateEditorialEnrichment(item, item.matchedAnime, item.source, aniListMeta);
 
     enrichedNews.push({
       id: newsId,
-      title: item.title,
+      title: seoTitle,
+      originalTitle: item.title,
       slug,
       source: item.source,
       sourceUrl: item.link,
@@ -530,7 +615,7 @@ export async function syncNews(options = {}) {
       timestamp: new Date(item.pubDate).getTime() || Date.now(),
       format,
       category: item.matchedAnime ? `${format} Franchise Update` : `${format} News`,
-      imageUrl: item.imageUrl || aniListMeta?.bannerImage || aniListMeta?.coverImage || item.matchedAnime?.art || null,
+      imageUrl: finalImageUrl,
       studio: aniListMeta?.studio || null,
       staff: aniListMeta?.staff || [],
       voiceCast: aniListMeta?.voiceCast || [],
@@ -574,6 +659,12 @@ export async function syncNews(options = {}) {
 
   // Generate Google News XML Sitemap
   generateNewsSitemap(enrichedNews);
+
+  // Automatically submit newly enriched news URLs to Bing & IndexNow
+  if (enrichedNews.length > 0) {
+    const topUrls = enrichedNews.slice(0, 15).map((a) => `${ORIGIN}/news/${a.slug}`);
+    await pingIndexNow(topUrls);
+  }
 
   return enrichedNews;
 }
