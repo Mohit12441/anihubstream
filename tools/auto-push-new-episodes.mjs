@@ -26,9 +26,14 @@ const LEDGER_PATH = path.resolve(__dirname, '.cache/pushed-episodes.json');
 
 /**
  * Reads BING_WEBMASTER_API_KEY from environment or root .env file
+ * @param {object} [options]
+ * @param {string} [options.apiKey]
+ * @param {boolean} [options.ignoreEnvFile]
  */
-function getBingApiKey() {
+function getBingApiKey(options = {}) {
+  if (options.apiKey !== undefined) return options.apiKey || null;
   if (process.env.BING_WEBMASTER_API_KEY) return process.env.BING_WEBMASTER_API_KEY;
+  if (options.ignoreEnvFile) return null;
   try {
     const envPath = path.resolve(__dirname, '../.env');
     if (fs.existsSync(envPath)) {
@@ -82,7 +87,7 @@ export function saveLedger(ledger) {
  * @returns {Promise<{ success: boolean, count: number, error?: string }>}
  */
 export async function submitUrlsToBing(urls, options = {}) {
-  const apiKey = options.apiKey || getBingApiKey();
+  const apiKey = getBingApiKey(options);
   const siteUrl = options.siteUrl || DEFAULT_SITE_URL;
 
   if (!apiKey) {

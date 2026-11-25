@@ -619,13 +619,107 @@ export async function onRequest(context) {
       `</section>` +
     `</main>`;
   } else if (path === '/dmca') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>DMCA & Copyright Policy</h1><p>AniHubStream respects intellectual property rights and complies with the Digital Millennium Copyright Act (DMCA). AniHubStream does not host media files on its servers; streams are embedded or linked from third-party services. If you believe your copyrighted work is accessible without authorization, please submit a formal takedown request containing the specific URL, description of work, and contact details.</p></main>`;
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;">
+      <h1>DMCA &amp; Copyright Policy</h1>
+      <p class="lead">Digital Millennium Copyright Act compliance, copyright verification guidelines, and formal takedown notice procedure for AniHubStream.</p>
+      <section>
+        <h2>1. Non-Hosting &amp; Information Indexing Disclaimer</h2>
+        <p>AniHubStream respects the intellectual property rights of creators, studios, and copyright owners worldwide. In compliance with 17 U.S.C. § 512 and international copyright conventions, AniHubStream operates strictly as an indexing aggregator and metadata directory. AniHubStream does not host, upload, encode, store, or manage any copyrighted video files, media streams, or digital content on its own infrastructure or Cloudflare edge servers. All media streams accessible through the platform are embedded, indexed, or linked from independent third-party video hosting services over the open internet.</p>
+      </section>
+      <section>
+        <h2>2. Submitting a Copyright Infringement Notice</h2>
+        <p>If you are a copyright holder, or an authorized representative thereof, and believe that content accessible through AniHubStream infringes upon your copyright, you may submit a formal notification under the Digital Millennium Copyright Act. To ensure prompt investigation and removal of the indexed reference, your notice must include the following information:</p>
+        <ul>
+          <li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+          <li>Identification of the copyrighted anime title, film, or creative work claimed to have been infringed.</li>
+          <li>Identification of the material claimed to be infringing, specifically including the direct AniHubStream webpage URL (e.g. <code>https://anihubstream.com/watch/[anime-id]/[episode-number]</code>) containing the link or embed.</li>
+          <li>Information reasonably sufficient to permit our designated agent to contact you, including legal name, physical address, telephone number, and official email address.</li>
+          <li>A statement that you have a good-faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.</li>
+          <li>A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>3. Designated Copyright Agent Contact</h2>
+        <p>Formal infringement notifications should be directed via electronic mail to our designated agent at:</p>
+        <p><strong>Designated Agent:</strong> Copyright &amp; Legal Compliance Division<br/><strong>Email:</strong> <a href="mailto:dmca@anihubstream.com">dmca@anihubstream.com</a><br/><strong>Response Timeline:</strong> Valid notices with specific URL references are reviewed and resolved within 24 to 48 business hours.</p>
+      </section>
+    </main>`;
   } else if (path === '/privacy') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Privacy Policy</h1><p>AniHubStream is committed to user privacy and minimal data retention. We do not require account registration to stream. Playback positions, preferences, and watchlist bookmarks are stored locally on your device using browser storage. Server logs are strictly anonymized for infrastructure health, caching performance, and DDoS prevention.</p></main>`;
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;">
+      <h1>Privacy Policy</h1>
+      <p class="lead">How AniHubStream protects viewer privacy, anonymous sessions, and device playback preferences.</p>
+      <section>
+        <h2>1. Anonymous Streaming by Default</h2>
+        <p>AniHubStream is architected from the ground up to respect user anonymity. You are never required to create an account, register an email address, or provide any personal identity data to browse our anime catalog or stream high-definition episodes. Viewers can freely explore weekly airing schedules, read episode guides, and watch anime without establishing personal profiles.</p>
+      </section>
+      <section>
+        <h2>2. Technical Cookies &amp; Local Storage Usage</h2>
+        <p>We use technical browser cookies and HTML5 Local Storage strictly for essential client-side playback functionality:</p>
+        <ul>
+          <li><strong>Playback Continuity:</strong> Remembering your audio preference (original Japanese audio or dubbed tracks), volume level, and subtitle customization settings across viewing sessions.</li>
+          <li><strong>Resume Timestamps:</strong> Storing exact playback timestamps locally on your device so you can seamlessly resume watching where you left off.</li>
+          <li><strong>Personal Watchlist:</strong> Maintaining your saved anime titles under "My List" directly within your browser’s local storage.</li>
+        </ul>
+        <p>We do not use tracking cookies for behavioral profiling, nor do we sell, lease, or monetize viewer browsing histories with third-party data brokers or behavioral advertising networks.</p>
+      </section>
+      <section>
+        <h2>3. Server Telemetry &amp; Infrastructure Security</h2>
+        <p>Standard network transmission logs (such as truncated IP addresses, user-agent headers, and requested URL paths) are processed transiently at the Cloudflare network boundary solely for DDoS mitigation, caching performance verification, and automated rate-limiting enforcement. These diagnostic logs are retained on a rolling basis and purged automatically.</p>
+      </section>
+      <section>
+        <h2>4. Contact Regarding Privacy Inquiries</h2>
+        <p>If you have any questions or concerns regarding our privacy standards and data handling practices, please contact us at <a href="mailto:contact@anihubstream.com">contact@anihubstream.com</a>.</p>
+      </section>
+    </main>`;
   } else if (path === '/terms') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Terms of Service</h1><p>Welcome to AniHubStream. By accessing our platform, you agree to these Terms of Service. AniHubStream provides an informational catalog and video streaming client for personal, non-commercial entertainment. Users agree not to misuse platform infrastructure, reverse-engineer proprietary services, or conduct automated scraping that degrades system stability.</p></main>`;
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;">
+      <h1>Terms of Service</h1>
+      <p class="lead">Terms and conditions governing the use of the AniHubStream anime exploration and streaming platform.</p>
+      <section>
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing, browsing, or utilizing the services provided by AniHubStream (&ldquo;we&rdquo;, &ldquo;our&rdquo;, or &ldquo;the platform&rdquo;), you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service. If you do not agree with any portion of these terms, your sole remedy is to immediately discontinue using the platform.</p>
+      </section>
+      <section>
+        <h2>2. Nature of the Service &amp; Content Aggregation</h2>
+        <p>AniHubStream functions as a digital anime encyclopedia, release schedule tracker, and automated video stream aggregator. AniHubStream does not host, upload, or store video media on its own infrastructure. Streaming playback links and external media embeds are aggregated from independent third-party sources on the internet. AniHubStream does not control and assumes no liability for the availability, operational uptime, or content hosted on external third-party services.</p>
+      </section>
+      <section>
+        <h2>3. Acceptable Use Policy</h2>
+        <p>You agree to access and use AniHubStream exclusively for personal, non-commercial entertainment and research purposes. You agree not to:</p>
+        <ul>
+          <li>Attempt to disrupt, overload, or impair platform infrastructure via automated scrapers, denial-of-service floods, or unauthorized API stress-testing.</li>
+          <li>Bypass or attempt to circumvent security controls, Cloudflare WAF protections, or edge rate limits.</li>
+          <li>Reverse-engineer or exploit proprietary video playback bridges for commercial distribution or mirroring.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>4. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+        <p>AniHubStream is provided on an &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; basis without warranties of any kind, either express or implied. We do not warrant that service availability will be error-free or uninterrupted. In no event shall AniHubStream or its contributors be held liable for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the platform.</p>
+      </section>
+    </main>`;
   } else if (path === '/contact') {
-    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Contact AniHubStream</h1><p>Have questions, suggestions, or need to report a playback issue? Contact the AniHubStream development and support team. We continuously refine stream health, subtitle rendering, and catalog accuracy.</p></main>`;
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;">
+      <h1>Contact AniHubStream</h1>
+      <p class="lead">Connect with the AniHubStream engineering and support team for platform inquiries, catalog metadata corrections, and copyright notices.</p>
+      <section>
+        <h2>1. General Inquiries &amp; Technical Support</h2>
+        <p>Have questions regarding feature updates, video player compatibility, or suggestions for improving AniHubStream? Our development team welcomes community feedback to continuously optimize stream stability and subtitle synchronization.</p>
+        <p><strong>General Support Email:</strong> <a href="mailto:contact@anihubstream.com">contact@anihubstream.com</a></p>
+      </section>
+      <section>
+        <h2>2. Bug Reports &amp; Metadata Corrections</h2>
+        <p>If you encounter an incorrect episode thumbnail, a broken video source, or mismatched Japanese/English romaji titles, please report it to our technical team. To help our automated verification systems replicate and resolve the issue quickly, please include:</p>
+        <ul>
+          <li>The specific anime title and episode number (e.g. <em>Solo Leveling Episode 12</em>).</li>
+          <li>The exact webpage URL where the issue occurred.</li>
+          <li>A brief description of the observed behavior (e.g. out-of-sync audio or missing subtitle track).</li>
+        </ul>
+      </section>
+      <section>
+        <h2>3. Copyright &amp; Legal Notices</h2>
+        <p>For formal copyright inquiries and DMCA takedown requests, please consult our <a href="/dmca">DMCA &amp; Copyright Policy</a> and submit your detailed claim directly to our designated agent at <a href="mailto:dmca@anihubstream.com">dmca@anihubstream.com</a>.</p>
+      </section>
+    </main>`;
   } else if (path === '/search') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:800px;margin:0 auto;line-height:1.6;"><h1>Federated Anime Search</h1><p>Search across thousands of subbed and dubbed anime series and movies. AniHubStream connects to high-speed stream providers with automatic server fallback and instant title matching.</p></main>`;
   } else if (path === '/watchlist' || path === '/my-list') {

@@ -11,7 +11,7 @@ test('auto-push: handles missing API key gracefully without throwing', async () 
   const prevKey = process.env.BING_WEBMASTER_API_KEY;
   try {
     delete process.env.BING_WEBMASTER_API_KEY;
-    const res = await submitUrlsToBing(['https://anihubstream.com/watch/solo-leveling/1']);
+    const res = await submitUrlsToBing(['https://anihubstream.com/watch/solo-leveling/1'], { ignoreEnvFile: true });
     assert.equal(res.success, false);
     assert.equal(res.error, 'missing_api_key');
     assert.equal(res.count, 0);
