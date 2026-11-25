@@ -849,14 +849,14 @@ ${scheduleLinksHtml}
 </main>`;
   } else if (path === '/news') {
     preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
-<h1>AniHubStream Anime News, Seasonal Guides & Rankings</h1>
+<h1>AniHubStream Anime News, Seasonal Guides &amp; Rankings</h1>
 <p>In-depth original editorial content, seasonal broadcast schedules, character analysis, and comprehensive anime rankings curated by the AniHubStream team.</p>
 <section style="margin:2rem 0;">
-<h2>Featured Editorial Articles & Guides</h2>
+<h2>Featured Editorial Articles &amp; Guides</h2>
 <ul style="list-style:none;padding:0;">
-<li style="margin-bottom:1.5rem;"><a href="/news/spring-2026-anime-season-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates</a><p>From high-octane battle shonen to atmospheric supernatural mysteries, here is your definitive guide to the blockbuster Spring 2026 anime season.</p></li>
-<li style="margin-bottom:1.5rem;"><a href="/news/top-10-dark-fantasy-anime-masterpieces" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)</a><p>A deep dive into the grittiest, most emotionally resonant dark fantasy anime ever produced, exploring worldbuilding, philosophical tension, and animation.</p></li>
-<li style="margin-bottom:1.5rem;"><a href="/news/solo-leveling-reawakening-complete-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Solo Leveling ReAwakening: Story Arcs, Power Scaling & Watch Guide</a><p>Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/spring-2026-anime-season-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Spring 2026 Anime Season Guide: Most Anticipated Releases &amp; Air Dates</a><p>From high-octane battle shonen to atmospheric supernatural mysteries, here is your definitive guide to the blockbuster Spring 2026 anime season. Featured series: <a href="/anime/solo-leveling" style="color:#24d3ee;">Solo Leveling</a> &bull; <a href="/anime/jujutsu-kaisen" style="color:#24d3ee;">Jujutsu Kaisen</a> &bull; <a href="/anime/demon-slayer" style="color:#24d3ee;">Demon Slayer</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/top-10-dark-fantasy-anime-masterpieces" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)</a><p>A deep dive into the grittiest, most emotionally resonant dark fantasy anime ever produced, exploring worldbuilding, philosophical tension, and animation. Featured series: <a href="/anime/jujutsu-kaisen" style="color:#24d3ee;">Jujutsu Kaisen</a> &bull; <a href="/anime/chainsaw-man" style="color:#24d3ee;">Chainsaw Man</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/solo-leveling-reawakening-complete-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Solo Leveling ReAwakening: Story Arcs, Power Scaling &amp; Watch Guide</a><p>Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows. Featured series: <a href="/anime/solo-leveling" style="color:#24d3ee;">Solo Leveling</a>.</p></li>
 <li style="margin-bottom:1.5rem;"><a href="/news/best-isekai-anime-ranked-by-worldbuilding" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action</a><p>Move beyond generic reincarnation tropes. These standout isekai series elevate the genre with intricate magic systems, economic realism, and profound character growth.</p></li>
 </ul>
 </section>
@@ -867,7 +867,7 @@ ${scheduleLinksHtml}
 <nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1rem;"><a href="/" style="color:#ff1f4a;">Home</a> &gt; <a href="/news" style="color:#ff1f4a;">News &amp; Guides</a></nav>
 <h1>AniHubStream Editorial Analysis: ${slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</h1>
 <p>Read full episode guides, seasonal release calendars, and character deep-dives on AniHubStream. Stream all featured anime episodes online free in 1080p high definition with multi-language subtitles and synchronized broadcast schedules.</p>
-<p style="margin-top:2rem;"><a href="/anime" style="color:#ff1f4a;font-weight:bold;">Browse All Anime Titles</a> &bull; <a href="/schedule" style="color:#ff1f4a;font-weight:bold;">View Airing Schedule</a> &bull; <a href="/news" style="color:#ff1f4a;font-weight:bold;">Back to News Hub</a></p>
+<p style="margin-top:2rem;"><a href="/anime/solo-leveling" style="color:#ff1f4a;font-weight:bold;">Watch Solo Leveling</a> &bull; <a href="/anime/jujutsu-kaisen" style="color:#ff1f4a;font-weight:bold;">Watch Jujutsu Kaisen</a> &bull; <a href="/anime/demon-slayer" style="color:#ff1f4a;font-weight:bold;">Watch Demon Slayer</a> &bull; <a href="/news" style="color:#24d3ee;">Back to News Hub</a></p>
 </main>`;
   } else if (path === '/' || path === '') {
     const topHomeSlugs = [
@@ -1088,7 +1088,11 @@ ${topAnimeHtml}
   // Optimize HTML edge caching for anonymous visitors on public canonical routes:
   // Edge cache for 1 hour, browser cache for 60s, stale-while-revalidate for 1 day
   if (!hasUserSession && finalResponse.status === 200) {
-    finalHeaders.set('Cache-Control', 'public, max-age=60, s-maxage=3600, stale-while-revalidate=86400');
+    if (path === '/news' || path.startsWith('/news/')) {
+      finalHeaders.set('Cache-Control', 'public, max-age=0, s-maxage=60, must-revalidate');
+    } else {
+      finalHeaders.set('Cache-Control', 'public, max-age=60, s-maxage=3600, stale-while-revalidate=86400');
+    }
   }
 
   // Cloudflare Early Hints (103) Link headers for pre-warming DNS, fonts, and critical page APIs
