@@ -42,6 +42,7 @@
     "sync:schedule": "node tools/sync-ongoing-schedules.mjs",
     "sync:providers": "node tools/local-sync-daemon.mjs --once --stage=providers",
     "sync:episodes": "node tools/local-sync-daemon.mjs --once --stage=episodes",
+    "sync:episodes:cloud": "node cloud-sync/sync-episodes.mjs",
     "sync:hianime": "node cloud-sync/sync-hianime.mjs",
     "sync:anilist": "node cloud-sync/sync-anilist.mjs",
     "sync:kitsu": "node cloud-sync/sync-kitsu.mjs",
@@ -61,6 +62,7 @@
     "bing:traffic": "bing-webmaster traffic",
     "bing:crawl": "bing-webmaster crawl",
     "bing:sitemaps": "bing-webmaster sitemaps",
+    "bing:auto-push": "node tools/auto-push-new-episodes.mjs",
     "indexnow": "node tools/indexnow.mjs",
     "indexnow:sitemap": "node tools/indexnow.mjs --sitemap"
   },

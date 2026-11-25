@@ -13,6 +13,7 @@
 import { randomUUID } from 'node:crypto';
 import { d1All, d1First, d1Query } from './d1.mjs';
 import { acquireLease, leaseKeeper, recordRun, releaseLease } from './state.mjs';
+import { notifySearchEnginesOfNewEpisodes } from '../tools/auto-push-new-episodes.mjs';
 
 const RUN_ID = randomUUID();
 const LEASE = 'episodes';
@@ -95,6 +96,7 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
   const keeper = leaseKeeper(LEASE, OWNER);
   let createdCount = 0;
   let enrichedCount = 0;
+  const createdUrls = [];
 
   try {
     await keeper();
@@ -190,11 +192,20 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
         );
 
         createdCount++;
+        createdUrls.push(`https://anihubstream.com/watch/${anime.id}/${n}`);
+        createdUrls.push(`https://anihubstream.com/watch/${anime.id}`);
         await sleep(100);
       }
     }
 
     console.log(`[sync-episodes] ✅ Completed pass: Created/updated ${createdCount} episodes (${enrichedCount} with AniSkip markers).`);
+
+    // Notify Bing Webmaster and IndexNow of newly released episode URLs
+    if (createdUrls.length > 0) {
+      await notifySearchEnginesOfNewEpisodes(createdUrls).catch((err) => {
+        console.warn('[sync-episodes] Search engine notification warning:', err.message);
+      });
+    }
 
     await recordRun(OWNER, Date.now(), {
       status: 'success',
@@ -202,7 +213,7 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
       markers_enriched: enrichedCount,
     });
 
-    return { status: 'success', created: createdCount, enriched: enrichedCount };
+    return { status: 'success', created: createdCount, enriched: enrichedCount, urls: createdUrls };
   } catch (err) {
     console.error('[sync-episodes] Fatal error in episode sync:', err);
     await recordRun(OWNER, Date.now(), { status: 'error', error: err.message }).catch(() => null);

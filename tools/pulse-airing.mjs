@@ -41,8 +41,12 @@ async function main() {
   const schedRes = await syncOngoingSchedules({ isRemote, quiet: false });
 
   // Stage 3: Newly released episodes delta (~10s)
-  if (!isRemote) {
-    console.log('\n► Stage 3: Checking newly released episodes...');
+  console.log('\n► Stage 3: Checking and generating newly released episodes...');
+  if (isRemote) {
+    const { syncEpisodes } = await import('../cloud-sync/sync-episodes.mjs');
+    const epRes = await syncEpisodes({ limit: 30 }).catch((err) => ({ error: err.message, created: 0 }));
+    console.log(`\n✓ Remote Episode check complete: ${epRes.created || 0} episodes created/updated.`);
+  } else {
     const epRes = await autoSyncEpisodes({ limit: 20, quiet: false });
     console.log(`\n✓ Episode check complete: ${epRes.episodesUpdated} episodes updated.`);
   }

@@ -60,6 +60,7 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY || '0f95f3641de8422999f1ab7d7acf9f53' }}
           MODE: 'delta'
           CLOUD_CREATES_ROWS: '1'
           CLOUD_OWNS_SCHEDULE: '1'
@@ -94,6 +95,10 @@ jobs:
             node cloud-sync/sync-providers.mjs || true
           fi
 
+          # 4. Generate Newly Aired Episodes & Auto-Push to Bing Webmaster + IndexNow
+          echo "🎬 [STEP 4] Syncing Newly Released Episodes & Auto-Pushing to Bing & IndexNow..."
+          node cloud-sync/sync-episodes.mjs || true
+
           echo "============================================================"
           echo "✅ Sync Pipeline Execution Completed Successfully!"
           echo "============================================================"
@@ -112,12 +117,17 @@ jobs:
             git push origin master
           fi
 
-      - name: Notify search engines (IndexNow & Google)
+      - name: Notify search engines (IndexNow, Bing, and Google)
         env:
           GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY || '0f95f3641de8422999f1ab7d7acf9f53' }}
         run: |
-          echo "📡 Notifying search engines via IndexNow..."
+          echo "📡 Notifying search engines via IndexNow & Bing..."
           node tools/indexnow.mjs --sitemap || true
+          if [ -n "$BING_WEBMASTER_API_KEY" ]; then
+            echo "🎯 Pinging Bing Webmaster Sitemap Feed..."
+            node tools/auto-push-new-episodes.mjs --urls=https://anihubstream.com/sitemap.xml,https://anihubstream.com/schedule || true
+          fi
           if [ -n "$GSC_KEY_JSON" ]; then
             echo "🔍 Submitting sitemap to Google Search Console..."
             echo "$GSC_KEY_JSON" > /tmp/gsc-key.json
