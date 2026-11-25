@@ -23,7 +23,7 @@ export function ShareModal({
 
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://anihubstream.com';
   const episodeUrl = `${origin}/watch/${animeId}/${episodeNumber}`;
-  const embedCode = `<iframe src="${origin}/embed/${animeId}/${episodeNumber}" width="100%" height="480" frameborder="0" allowfullscreen allow="autoplay; fullscreen; encrypted-media"></iframe>`;
+  const embedCode = `<iframe src="${origin}/embed/${animeId}/${episodeNumber}" width="100%" height="480" frameborder="0" allowfullscreen allow="autoplay; fullscreen; encrypted-media"></iframe>\n<p style="font-size:12px;margin-top:4px;"><a href="${episodeUrl}" target="_blank" rel="noopener">Watch ${title} Episode ${episodeNumber} on AniHubStream</a></p>`;
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(episodeUrl);
@@ -182,7 +182,7 @@ export function ShareModal({
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               <textarea
                 readOnly
-                rows={3}
+                rows={4}
                 value={embedCode}
                 style={{
                   width: '100%',

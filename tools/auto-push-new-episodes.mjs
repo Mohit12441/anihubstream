@@ -46,6 +46,27 @@ function getBingApiKey(options = {}) {
 }
 
 /**
+ * Reads DISCORD_WEBHOOK_URL from environment or root .env file
+ * @param {object} [options]
+ * @param {string} [options.discordWebhookUrl]
+ * @param {boolean} [options.ignoreEnvFile]
+ */
+function getDiscordWebhookUrl(options = {}) {
+  if (options.discordWebhookUrl !== undefined) return options.discordWebhookUrl || null;
+  if (process.env.DISCORD_WEBHOOK_URL) return process.env.DISCORD_WEBHOOK_URL;
+  if (options.ignoreEnvFile) return null;
+  try {
+    const envPath = path.resolve(__dirname, '../.env');
+    if (fs.existsSync(envPath)) {
+      const content = fs.readFileSync(envPath, 'utf8');
+      const match = content.match(/DISCORD_WEBHOOK_URL\s*=\s*(https:\/\/discord\.com\/api\/webhooks\/[^\s]+)/);
+      if (match && match[1]) return match[1];
+    }
+  } catch {}
+  return null;
+}
+
+/**
  * Loads the push ledger to prevent duplicate submissions within cooldown period
  * @returns {Record<string, number>}
  */
@@ -132,15 +153,76 @@ export async function submitUrlsToBing(urls, options = {}) {
 }
 
 /**
- * Notifies all search engines (Bing Webmaster API + IndexNow) for newly released URLs
+ * Broadcasts newly released anime episodes to Discord community channel via Webhook
+ * @param {string[]} urls
+ * @param {object} [options]
+ * @param {string} [options.discordWebhookUrl]
+ * @param {boolean} [options.ignoreEnvFile]
+ * @returns {Promise<{ success: boolean, count: number, skipped?: boolean, error?: string }>}
+ */
+export async function broadcastToDiscord(urls, options = {}) {
+  const webhookUrl = getDiscordWebhookUrl(options);
+  if (!webhookUrl) {
+    return { success: true, count: 0, skipped: true };
+  }
+
+  if (!urls || urls.length === 0) {
+    return { success: true, count: 0 };
+  }
+
+  const batch = Array.from(new Set(urls)).slice(0, 10);
+  const linksList = batch.map((u) => {
+    const cleanPath = u.replace(/^https?:\/\/anihubstream\.com\//, '');
+    return `• [${cleanPath}](${u})`;
+  }).join('\n');
+
+  try {
+    const res = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: 'AniHubStream Episode Bot',
+        avatar_url: 'https://anihubstream.com/favicon.svg',
+        embeds: [
+          {
+            title: '🎬 New Anime Episodes Released!',
+            description: `Fresh episodes are available to stream online now on AniHubStream in Sub & Dub:\n\n${linksList}`,
+            color: 6445550,
+            footer: {
+              text: 'AniHubStream • Free Anime Streaming & Episode Tracker',
+            },
+            timestamp: new Date().toISOString(),
+          },
+        ],
+      }),
+      signal: AbortSignal.timeout(10000),
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      console.warn(`[auto-push] ⚠️ Discord webhook HTTP ${res.status}: ${text}`);
+      return { success: false, count: 0, error: `HTTP ${res.status}: ${text}` };
+    }
+
+    console.log(`[auto-push] ✅ Broadcasted ${batch.length} episode links to Discord community!`);
+    return { success: true, count: batch.length };
+  } catch (err) {
+    console.warn('[auto-push] ⚠️ Discord webhook error:', err.message);
+    return { success: false, count: 0, error: err.message };
+  }
+}
+
+/**
+ * Notifies all search engines (Bing Webmaster API + IndexNow) and community channels for newly released URLs
  * @param {string[]} urls
  * @param {object} [options]
  * @param {boolean} [options.bypassLedger]
- * @returns {Promise<{ bingCount: number, indexNowCount: number, skippedCount: number }>}
+ * @param {string} [options.discordWebhookUrl]
+ * @returns {Promise<{ bingCount: number, indexNowCount: number, discordCount: number, skippedCount: number }>}
  */
 export async function notifySearchEnginesOfNewEpisodes(urls, options = {}) {
   if (!urls || urls.length === 0) {
-    return { bingCount: 0, indexNowCount: 0, skippedCount: 0 };
+    return { bingCount: 0, indexNowCount: 0, discordCount: 0, skippedCount: 0 };
   }
 
   const ledger = loadLedger();
@@ -161,7 +243,7 @@ export async function notifySearchEnginesOfNewEpisodes(urls, options = {}) {
 
   if (pendingUrls.length === 0) {
     console.log(`[auto-push] All ${urls.length} URLs were already notified within the last 24h. Skipping.`);
-    return { bingCount: 0, indexNowCount: 0, skippedCount };
+    return { bingCount: 0, indexNowCount: 0, discordCount: 0, skippedCount };
   }
 
   console.log(`\n📡 [auto-push] Notifying search engines for ${pendingUrls.length} newly aired episode/series URLs (${skippedCount} recently pushed skipped)...`);
@@ -179,6 +261,17 @@ export async function notifySearchEnginesOfNewEpisodes(urls, options = {}) {
     console.warn('[auto-push] ⚠️ IndexNow notification failed:', err.message);
   }
 
+  // 3. Broadcast to Discord Community (if configured)
+  let discordCount = 0;
+  try {
+    const dRes = await broadcastToDiscord(pendingUrls, options);
+    if (dRes?.success && !dRes.skipped) {
+      discordCount = dRes.count;
+    }
+  } catch (err) {
+    console.warn('[auto-push] ⚠️ Discord broadcast error:', err.message);
+  }
+
   // Update ledger
   for (const u of pendingUrls) {
     ledger[u] = now;
@@ -188,6 +281,7 @@ export async function notifySearchEnginesOfNewEpisodes(urls, options = {}) {
   return {
     bingCount: bingRes.count,
     indexNowCount,
+    discordCount,
     skippedCount,
   };
 }

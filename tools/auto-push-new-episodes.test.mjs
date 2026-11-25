@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   submitUrlsToBing,
+  broadcastToDiscord,
   notifySearchEnginesOfNewEpisodes,
   DEFAULT_SITE_URL,
 } from './auto-push-new-episodes.mjs';
@@ -70,6 +71,41 @@ test('auto-push: notifySearchEnginesOfNewEpisodes calls Bing and IndexNow', asyn
     });
     assert.ok(res.bingCount >= 0);
     assert.ok(res.indexNowCount >= 0);
+  } finally {
+    globalThis.fetch = origFetch;
+  }
+});
+
+test('auto-push: broadcastToDiscord skips cleanly when no webhook is set', async () => {
+  const res = await broadcastToDiscord(['https://anihubstream.com/watch/solo-leveling/1'], { ignoreEnvFile: true });
+  assert.equal(res.success, true);
+  assert.equal(res.skipped, true);
+  assert.equal(res.count, 0);
+});
+
+test('auto-push: broadcastToDiscord sends rich webhook payload when configured', async () => {
+  const origFetch = globalThis.fetch;
+  let sentPayload = null;
+  // @ts-ignore
+  globalThis.fetch = async (url, opts) => {
+    sentPayload = JSON.parse(opts.body);
+    return new Response(null, { status: 204 });
+  };
+
+  try {
+    const urls = [
+      'https://anihubstream.com/watch/solo-leveling/1',
+      'https://anihubstream.com/watch/solo-leveling/2',
+    ];
+    const res = await broadcastToDiscord(urls, {
+      discordWebhookUrl: 'https://discord.com/api/webhooks/mock/test',
+    });
+    assert.equal(res.success, true);
+    assert.equal(res.count, 2);
+    assert.ok(sentPayload);
+    assert.equal(sentPayload.username, 'AniHubStream Episode Bot');
+    assert.ok(sentPayload.embeds[0].description.includes('solo-leveling/1'));
+    assert.ok(sentPayload.embeds[0].description.includes('solo-leveling/2'));
   } finally {
     globalThis.fetch = origFetch;
   }
