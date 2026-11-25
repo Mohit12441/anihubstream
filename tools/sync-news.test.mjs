@@ -207,4 +207,26 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     assert.ok(sitemap.includes('http://www.google.com/schemas/sitemap-news/0.9'));
     assert.ok(sitemap.includes('AniHubStream News'));
   });
+
+  await t.test('generateEditorialEnrichment weaves AniList studio & staff metadata when provided', () => {
+    const item = {
+      title: "Solo Leveling Season 2 Trailer Released",
+      link: "https://example.com/sl-trailer",
+      contentSnippet: "A-1 Pictures unveils key art.",
+    };
+    const anime = { title: "Solo Leveling", slug: "solo-leveling" };
+    const mockAniList = {
+      studio: "A-1 Pictures",
+      staff: [{ role: "Director", name: "Shunsuke Nakashige" }],
+      source: "Web Manhwa",
+      score: "8.4"
+    };
+
+    const enriched = generateEditorialEnrichment(item, anime, 'Anime News Network', mockAniList);
+    assert.ok(enriched.includes('A-1 Pictures'));
+    assert.ok(enriched.includes('Shunsuke Nakashige'));
+    assert.ok(enriched.includes('Web Manhwa'));
+    assert.ok(enriched.includes('8.4/10'));
+    assert.ok(enriched.includes('AniHubStream'));
+  });
 });

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import Parser from 'rss-parser';
+import { fetchAniListMetadata } from './anilist-enricher.mjs';
 
 const ORIGIN = 'https://anihubstream.com';
 const INDEXNOW_KEY = '9f8b2c4e1a7d3f5b8a0c6e4d2f1a9b7c';
@@ -333,13 +334,15 @@ export function deduplicateNewsItems(items) {
 /**
  * Editorial Enrichment Layer: Generates original analytical commentary
  * protecting against Google's "Scaled Content Abuse" policy.
- * Uses diverse phrasing variations to avoid rigid 35-word boilerplate repetition.
+ * Uses diverse phrasing variations to avoid rigid 35-word boilerplate repetition,
+ * integrating rich studio and production staff facts when available.
  * @param {object} item
  * @param {object|null} matchedAnime
  * @param {string} sourceName
+ * @param {object|null} [aniListMeta]
  * @returns {string}
  */
-export function generateEditorialEnrichment(item, matchedAnime, sourceName) {
+export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniListMeta = null) {
   const title = item.title || 'Anime Industry Announcement';
   const rawSnippet = (item.contentSnippet || item.content || '').replace(/<[^>]+>/g, '').trim();
   const format = detectFormatContext(item.title, rawSnippet);
@@ -349,6 +352,28 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName) {
 
   let animeCallToAction = '';
   let formatContext = '';
+
+  // Integrate rich industry facts if AniList metadata was fetched
+  let industryPedigree = '';
+  if (aniListMeta) {
+    const parts = [];
+    if (aniListMeta.studio && aniListMeta.studio !== 'TBA') {
+      parts.push(`Animation production is spearheaded by ${aniListMeta.studio}`);
+    }
+    if (aniListMeta.staff && aniListMeta.staff.length > 0) {
+      const topStaff = aniListMeta.staff[0];
+      parts.push(`featuring key leadership under ${topStaff.role} ${topStaff.name}`);
+    }
+    if (aniListMeta.source) {
+      parts.push(`originating from ${aniListMeta.source}`);
+    }
+    if (aniListMeta.score) {
+      parts.push(`holding a strong ${aniListMeta.score}/10 community rating`);
+    }
+    if (parts.length > 0) {
+      industryPedigree = parts.join(', ') + '.';
+    }
+  }
 
   if (format !== 'Anime') {
     if (matchedAnime) {
@@ -391,6 +416,7 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName) {
   const commentary = [
     `The latest industry development regarding "${title}" signals noteworthy momentum for the ${format.toLowerCase()} landscape.`,
     rawSnippet ? `According to recent reporting, ${rawSnippet.slice(0, 180)}...` : '',
+    industryPedigree,
     formatContext,
     animeCallToAction,
     `Full reporting, official artwork, and complete announcement details were originally published by ${sourceName}.`
@@ -482,7 +508,17 @@ export async function syncNews(options = {}) {
     const newsId = generateNewsId(item.link);
     const slug = slugifyTitle(item.title);
     const format = detectFormatContext(item.title, item.snippet);
-    const enrichedSummary = generateEditorialEnrichment(item, item.matchedAnime, item.source);
+
+    // Deep industry metadata enrichment via AniList GraphQL
+    let aniListMeta = null;
+    try {
+      const searchTitle = item.matchedAnime ? item.matchedAnime.title : item.title.split(/[:\-\(\]]/)[0];
+      aniListMeta = await fetchAniListMetadata(searchTitle);
+    } catch {
+      // Non-fatal, continues seamlessly
+    }
+
+    const enrichedSummary = generateEditorialEnrichment(item, item.matchedAnime, item.source, aniListMeta);
 
     enrichedNews.push({
       id: newsId,
@@ -494,14 +530,18 @@ export async function syncNews(options = {}) {
       timestamp: new Date(item.pubDate).getTime() || Date.now(),
       format,
       category: item.matchedAnime ? `${format} Franchise Update` : `${format} News`,
-      imageUrl: item.imageUrl || item.matchedAnime?.art || null,
+      imageUrl: item.imageUrl || aniListMeta?.bannerImage || aniListMeta?.coverImage || item.matchedAnime?.art || null,
+      studio: aniListMeta?.studio || null,
+      staff: aniListMeta?.staff || [],
+      voiceCast: aniListMeta?.voiceCast || [],
+      sourceMaterial: aniListMeta?.source || null,
       matchedAnime: item.matchedAnime ? {
         title: item.matchedAnime.title,
         slug: item.matchedAnime.slug,
         streamUrl: `/anime/${item.matchedAnime.slug}`,
-        art: item.matchedAnime.art || null,
-        rating: item.matchedAnime.rating || null,
-        genres: item.matchedAnime.genres || [],
+        art: item.matchedAnime.art || aniListMeta?.coverImage || null,
+        rating: item.matchedAnime.rating || aniListMeta?.score || null,
+        genres: item.matchedAnime.genres?.length ? item.matchedAnime.genres : (aniListMeta?.genres || []),
       } : null,
       editorialSummary: enrichedSummary,
       wordCount: enrichedSummary.split(/\s+/).length,

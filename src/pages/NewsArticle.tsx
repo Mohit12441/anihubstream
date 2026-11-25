@@ -123,37 +123,72 @@ export function NewsArticle() {
   const { notify } = useToast();
   const article = slug ? getNewsArticleBySlug(slug) : undefined;
 
+  // Extract FAQs if present for Google FAQPage Rich Results Schema
+  const faqEntities: Array<{ '@type': 'Question'; name: string; acceptedAnswer: { '@type': 'Answer'; text: string } }> = [];
+  if (article) {
+    const faqSection = article.content.match(/### Frequently Asked Questions[\s\S]*?(?=###|$)/i);
+    if (faqSection) {
+      const qBlocks = faqSection[0].split(/- \*\*(.*?)\*\*/g);
+      for (let j = 1; j < qBlocks.length; j += 2) {
+        const question = (qBlocks[j] || '').replace(/\?$/, '').trim() + '?';
+        const answer = (qBlocks[j + 1] || '').trim();
+        if (question.length > 5 && answer.length > 5) {
+          faqEntities.push({
+            '@type': 'Question',
+            name: question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: answer,
+            },
+          });
+        }
+      }
+    }
+  }
+
   useSEO({
     title: article ? `${article.title} | AniHubStream` : 'Article Not Found | AniHubStream',
     description: article ? article.excerpt : 'The requested article could not be found.',
     jsonLd: article
       ? {
           '@context': 'https://schema.org',
-          '@type': 'NewsArticle',
-          headline: article.title,
-          description: article.excerpt,
-          image: [`https://anihubstream.com${article.coverImage}`],
-          datePublished: `${article.date}T10:00:00+00:00`,
-          dateModified: `${article.date}T10:00:00+00:00`,
-          author: [
+          '@graph': [
             {
-              '@type': 'Person',
-              name: article.author,
-              jobTitle: article.authorRole,
+              '@type': 'NewsArticle',
+              headline: article.title,
+              description: article.excerpt,
+              image: [`https://anihubstream.com${article.coverImage}`],
+              datePublished: `${article.date}T10:00:00+00:00`,
+              dateModified: `${article.date}T10:00:00+00:00`,
+              author: [
+                {
+                  '@type': 'Person',
+                  name: article.author,
+                  jobTitle: article.authorRole,
+                },
+              ],
+              publisher: {
+                '@type': 'Organization',
+                name: 'AniHubStream',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://anihubstream.com/art/poster-shadow-hunter.jpg',
+                },
+              },
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': `https://anihubstream.com/news/${article.slug}`,
+              },
             },
+            ...(faqEntities.length > 0
+              ? [
+                  {
+                    '@type': 'FAQPage',
+                    mainEntity: faqEntities,
+                  },
+                ]
+              : []),
           ],
-          publisher: {
-            '@type': 'Organization',
-            name: 'AniHubStream',
-            logo: {
-              '@type': 'ImageObject',
-              url: 'https://anihubstream.com/art/poster-shadow-hunter.jpg',
-            },
-          },
-          mainEntityOfPage: {
-            '@type': 'WebPage',
-            '@id': `https://anihubstream.com/news/${article.slug}`,
-          },
         }
       : undefined,
   });
