@@ -125,6 +125,31 @@ export async function fetchAniListMetadata(animeTitle) {
         actor: c.voiceActors[0]?.name?.full || ''
       }));
 
+    let bannerImage = media.bannerImage || null;
+    let coverImage = media.coverImage?.extraLarge || media.coverImage?.large || null;
+
+    // If AniList did not supply a wide banner, fallback to Kitsu's wide cover image
+    if (!bannerImage) {
+      try {
+        const kitsuRes = await fetch(`https://kitsu.app/api/edge/anime?filter[text]=${encodeURIComponent(cleanTitle)}`, {
+          headers: { 'Accept': 'application/vnd.api+json' },
+          signal: AbortSignal.timeout(4000)
+        });
+        if (kitsuRes.ok) {
+          const kitsuJson = await kitsuRes.json();
+          const kAnime = kitsuJson?.data?.[0]?.attributes;
+          if (kAnime?.coverImage?.large || kAnime?.coverImage?.original) {
+            bannerImage = kAnime.coverImage.large || kAnime.coverImage.original;
+          }
+          if (!coverImage && (kAnime?.posterImage?.large || kAnime?.posterImage?.original)) {
+            coverImage = kAnime.posterImage.large || kAnime.posterImage.original;
+          }
+        }
+      } catch {
+        // Non-fatal
+      }
+    }
+
     const result = {
       id: media.id,
       titleEnglish: media.title?.english || media.title?.romaji || cleanTitle,
@@ -142,8 +167,8 @@ export async function fetchAniListMetadata(animeTitle) {
       staff: staffList,
       voiceCast,
       synopsis: media.description ? media.description.replace(/<[^>]*>?/gm, '').trim() : '',
-      coverImage: media.coverImage?.extraLarge || media.coverImage?.large || null,
-      bannerImage: media.bannerImage || null
+      coverImage,
+      bannerImage
     };
 
     enrichmentCache.set(cleanTitle.toLowerCase(), result);

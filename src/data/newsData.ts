@@ -23,7 +23,7 @@ export const NEWS_ARTICLES: NewsArticleItem[] = [
     authorRole: 'Senior Anime Curator',
     date: '2026-03-20',
     readTime: '10 min read',
-    coverImage: '/art/genres-purple.jpg',
+    coverImage: '/images/banners/banner-spring-2026.jpg',
     tags: ['Spring 2026', 'Anime Schedule', 'Solo Leveling', 'Jujutsu Kaisen', 'Demon Slayer', 'One Piece'],
     relatedAnimeSlugs: ['solo-leveling', 'jujutsu-kaisen', 'demon-slayer', 'one-piece'],
     content: `
@@ -70,7 +70,7 @@ All flagship series air in synchronized broadcast windows. AniHubStream updates 
     authorRole: 'Anime Historian & Critic',
     date: '2026-03-15',
     readTime: '12 min read',
-    coverImage: '/art/discover-sunset.jpg',
+    coverImage: '/images/banners/banner-dark-fantasy.jpg',
     tags: ['Dark Fantasy', 'Rankings', 'Berserk', 'Jujutsu Kaisen', 'Chainsaw Man', 'Made in Abyss', 'Attack on Titan'],
     relatedAnimeSlugs: ['berserk', 'jujutsu-kaisen', 'chainsaw-man', 'made-in-abyss', 'attack-on-titan', 'demon-slayer'],
     content: `
@@ -131,7 +131,7 @@ All ten highlighted dark fantasy anime series are catalogued on AniHubStream wit
     authorRole: 'Action Specialist',
     date: '2026-03-08',
     readTime: '7 min read',
-    coverImage: '/art/schedule-blue.jpg',
+    coverImage: '/images/banners/banner-solo-leveling.jpg',
     tags: ['Solo Leveling', 'Manhwa', 'Sung Jinwoo', 'Power Scaling', 'A-1 Pictures'],
     relatedAnimeSlugs: ['solo-leveling'],
     content: `
@@ -158,7 +158,7 @@ To experience *Solo Leveling* without filler interruption, watch the mainline TV
     authorRole: 'Narrative Architect',
     date: '2026-02-28',
     readTime: '9 min read',
-    coverImage: '/art/genres-purple.jpg',
+    coverImage: '/images/banners/banner-isekai-worldbuilding.jpg',
     tags: ['Isekai', 'Fantasy', 'Worldbuilding', 'Magic Systems', 'Recommendations'],
     relatedAnimeSlugs: ['rezero', 'overlord', 'mushoku-tensei'],
     content: `

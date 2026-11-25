@@ -272,8 +272,8 @@ export function NewsArticle() {
             loading="eager"
             decoding="async"
             onError={(e) => {
-              if (e.currentTarget.src !== '/art/genres-purple.jpg') {
-                e.currentTarget.src = '/art/genres-purple.jpg';
+              if (e.currentTarget.src !== '/images/banners/banner-spring-2026.jpg') {
+                e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
               }
             }}
           />
