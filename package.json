@@ -55,6 +55,12 @@
     "gsc:sitemap": "node tools/gsc-telemetry.mjs --submit-sitemap",
     "gsc:delete-sitemap": "node tools/gsc-telemetry.mjs --delete-sitemap",
     "gsc:reset-sitemap": "node tools/gsc-telemetry.mjs --reset-sitemap",
+    "bing": "bing-webmaster",
+    "bing:summary": "bing-webmaster summary",
+    "bing:sites": "bing-webmaster sites",
+    "bing:traffic": "bing-webmaster traffic",
+    "bing:crawl": "bing-webmaster crawl",
+    "bing:sitemaps": "bing-webmaster sitemaps",
     "indexnow": "node tools/indexnow.mjs",
     "indexnow:sitemap": "node tools/indexnow.mjs --sitemap"
   },
@@ -69,6 +75,7 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "bing-webmaster": "^1.0.0",
     "typescript": "^5.7.2",
     "vite": "^5.4.11"
   }

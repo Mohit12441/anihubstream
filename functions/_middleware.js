@@ -305,7 +305,7 @@ export async function onRequest(context) {
             description: desc,
             image: ogImage,
             url: canonical,
-            inLanguage: ['ja', 'en'],
+            inLanguage: ['ja', 'en', 'hi'],
             countryOfOrigin: 'JP',
             speakable: {
               '@type': 'SpeakableSpecification',
