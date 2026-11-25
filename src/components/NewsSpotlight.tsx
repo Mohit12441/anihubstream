@@ -111,7 +111,7 @@ export function NewsSpotlight() {
         <div className="news-spotlight__grid">
           {liveArticles.map((article) => (
             <article key={article.id} className="news-card live-news-card">
-              <Link to="/news" className="news-card__thumb-link">
+              <Link to={`/news/${article.slug}`} className="news-card__thumb-link">
                 <img
                   src={article.imageUrl || '/images/banners/banner-spring-2026.jpg'}
                   alt={article.title}
@@ -142,7 +142,7 @@ export function NewsSpotlight() {
                 </div>
 
                 <h3 className="news-card__title">
-                  <Link to="/news">{article.title}</Link>
+                  <Link to={`/news/${article.slug}`}>{article.title}</Link>
                 </h3>
 
                 <p className="news-card__excerpt" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
@@ -155,7 +155,7 @@ export function NewsSpotlight() {
                       Stream {article.matchedAnime.title} <ArrowRight size={12} />
                     </Link>
                   ) : (
-                    <Link to="/news" className="news-card__read-link">
+                    <Link to={`/news/${article.slug}`} className="news-card__read-link">
                       Read Report <ArrowRight size={14} aria-hidden="true" />
                     </Link>
                   )}

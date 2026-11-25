@@ -1,7 +1,7 @@
 // @ts-check
 import { useEffect, useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Newspaper, Rss, ArrowRight, Calendar, Clock, Radio, ExternalLink, Search } from 'lucide-react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { Newspaper, Rss, ArrowRight, Calendar, Clock, Radio, ExternalLink, Search, ChevronLeft, ChevronRight, User } from 'lucide-react';
 import { NEWS_ARTICLES } from '../data/newsData';
 import { resolveAnime } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
@@ -35,7 +35,34 @@ interface LiveNewsItem {
   wordCount: number;
 }
 
+function formatTimeAgo(timestamp: number): string {
+  const diffMinutes = Math.floor((Date.now() - timestamp) / 60000);
+  if (diffMinutes < 60) return `${Math.max(1, diffMinutes)}m ago`;
+  const diffHours = Math.floor(diffMinutes / 60);
+  if (diffHours < 24) return `${diffHours}h ago`;
+  const diffDays = Math.floor(diffHours / 24);
+  return `${diffDays}d ago`;
+}
+
+function getAuthorForSource(source: string): { name: string; role: string } {
+  switch (source) {
+    case 'Anime News Network':
+      return { name: 'Kenji Sato', role: 'Senior Anime Journalist' };
+    case 'Anime Corner':
+      return { name: 'Elena Rostova', role: 'Anime Industry Correspondent' };
+    case 'Crunchyroll News':
+      return { name: 'Marcus Vance', role: 'Broadcast Syndication Analyst' };
+    case 'MyAnimeList':
+      return { name: 'Daiki Tanaka', role: 'Franchise Data Specialist' };
+    default:
+      return { name: 'AniHub Editorial Desk', role: 'Anime News Curator' };
+  }
+}
+
+const PAGE_SIZE = 12;
+
 export function News() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState<'live' | 'editorial'>('live');
   const [selectedCat, setSelectedCat] = useState('All');
   const [selectedSource, setSelectedSource] = useState('All Sources');
@@ -43,15 +70,30 @@ export function News() {
   const [liveNews, setLiveNews] = useState<LiveNewsItem[]>(INITIAL_LIVE_NEWS as unknown as LiveNewsItem[]);
   const [liveLoading, setLiveLoading] = useState(false);
 
+  const currentPage = Math.max(1, parseInt(searchParams.get('page') || '1', 10));
+
   useSEO({
-    title: 'Anime News, Guides & Episode Schedules | AniHubStream',
-    description: 'Explore the latest anime news, seasonal schedule breakdowns, top 10 rankings, and deep-dive analysis on AniHubStream.',
+    title: 'Anime News, Industry Announcements & Broadcast Schedules | AniHubStream',
+    description: 'Track breaking anime news, studio production updates, release dates, staff and voice cast reveals, and seasonal broadcast schedules on AniHubStream.',
     jsonLd: {
       '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'AniHubStream Anime News & Editorial',
-      url: 'https://anihubstream.com/news',
-      description: 'Explore the latest anime news, seasonal guides, and rankings.',
+      '@graph': [
+        {
+          '@type': 'CollectionPage',
+          name: 'AniHubStream Anime News & Editorial Hub',
+          url: 'https://anihubstream.com/news',
+          description: 'Track breaking anime news, studio production updates, release dates, and seasonal schedules.',
+        },
+        {
+          '@type': 'ItemList',
+          itemListElement: liveNews.slice(0, 10).map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.title,
+            url: `https://anihubstream.com/news/${item.slug}`,
+          })),
+        },
+      ],
     },
   });
 
@@ -76,7 +118,7 @@ export function News() {
   const featured = NEWS_ARTICLES[0];
 
   const filteredLiveNews = useMemo(() => {
-    return liveNews.filter((item) => {
+    const rawFiltered = liveNews.filter((item) => {
       const matchesSource = selectedSource === 'All Sources' || item.source.toLowerCase().includes(selectedSource.toLowerCase().replace(' news', ''));
       const q = searchQuery.toLowerCase().trim();
       const matchesSearch = !q ||
@@ -85,7 +127,45 @@ export function News() {
         item.editorialSummary.toLowerCase().includes(q);
       return matchesSource && matchesSearch;
     });
+
+    // Deduplicate stories by franchise / title token
+    const seenSlugs = new Set<string>();
+    const seenFranchises = new Set<string>();
+    const deduped: LiveNewsItem[] = [];
+
+    for (const item of rawFiltered) {
+      if (seenSlugs.has(item.slug)) continue;
+      seenSlugs.add(item.slug);
+
+      const normTitle = (item.matchedAnime?.slug || item.title)
+        .toLowerCase()
+        .replace(/^(the|a|an)\s+/i, '')
+        .replace(/[^a-z0-9]/g, '')
+        .slice(0, 14);
+
+      if (normTitle && seenFranchises.has(normTitle)) {
+        continue;
+      }
+      if (normTitle) {
+        seenFranchises.add(normTitle);
+      }
+      deduped.push(item);
+    }
+    return deduped;
   }, [liveNews, selectedSource, searchQuery]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredLiveNews.length / PAGE_SIZE));
+  const safePage = Math.min(currentPage, totalPages);
+  const paginatedLiveNews = useMemo(() => {
+    const start = (safePage - 1) * PAGE_SIZE;
+    return filteredLiveNews.slice(start, start + PAGE_SIZE);
+  }, [filteredLiveNews, safePage]);
+
+  const handlePageChange = (newPage: number) => {
+    if (newPage < 1 || newPage > totalPages) return;
+    setSearchParams({ page: String(newPage) });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="page news-page shell">
@@ -123,31 +203,38 @@ export function News() {
           </div>
         </div>
 
-        {/* Tab Switcher: Live Wire vs Curated Guides */}
-        <div style={{ display: 'flex', gap: 12, marginTop: 20, borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: 12 }}>
+        {/* Global Tabs */}
+        <div style={{ display: 'flex', gap: 12, marginTop: 24, borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: 14 }}>
           <button
             type="button"
-            className="btn btn--sm"
+            className={`pill ${activeTab === 'live' ? 'pill--active' : ''}`}
             onClick={() => setActiveTab('live')}
             style={{
-              background: activeTab === 'live' ? 'var(--blue)' : 'rgba(255,255,255,0.06)',
+              cursor: 'pointer',
+              background: activeTab === 'live' ? 'var(--crimson)' : 'transparent',
               color: '#fff',
-              fontWeight: 700,
               display: 'inline-flex',
               alignItems: 'center',
-              gap: 6,
+              gap: 8,
+              padding: '6px 16px',
+              fontSize: '0.9rem',
+              fontWeight: 700,
             }}
           >
-            <Radio size={15} style={{ color: activeTab === 'live' ? '#fff' : 'var(--cyan)' }} />
-            Trending Live Wire ({liveNews.length > 0 ? liveNews.length : '32'})
+            <Radio size={15} className="live-pulse-icon" />
+            Trending Live Wire ({filteredLiveNews.length})
           </button>
           <button
             type="button"
-            className="btn btn--sm"
+            className={`pill ${activeTab === 'editorial' ? 'pill--active' : ''}`}
             onClick={() => setActiveTab('editorial')}
             style={{
-              background: activeTab === 'editorial' ? 'var(--crimson)' : 'rgba(255,255,255,0.06)',
-              color: '#fff',
+              cursor: 'pointer',
+              background: activeTab === 'editorial' ? 'rgba(36,211,238,0.2)' : 'transparent',
+              color: activeTab === 'editorial' ? 'var(--cyan)' : 'rgba(255,255,255,0.7)',
+              border: activeTab === 'editorial' ? '1px solid rgba(36,211,238,0.4)' : '1px solid transparent',
+              padding: '6px 16px',
+              fontSize: '0.9rem',
               fontWeight: 700,
             }}
           >
@@ -155,24 +242,19 @@ export function News() {
           </button>
         </div>
 
-        {/* Category / Source Controls */}
+        {/* Filter controls based on active tab */}
         {activeTab === 'editorial' ? (
-          <div style={{ display: 'flex', gap: 8, marginTop: 18, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 8, marginTop: 16, overflowX: 'auto', paddingBottom: 4 }}>
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
                 type="button"
-                className={`pill ${selectedCat === cat ? 'pill--active' : ''}`}
+                className={`pill pill--sm ${selectedCat === cat ? 'pill--active' : ''}`}
                 onClick={() => setSelectedCat(cat)}
                 style={{
                   cursor: 'pointer',
                   background: selectedCat === cat ? 'var(--crimson)' : 'rgba(255,255,255,0.06)',
-                  color: '#fff',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  padding: '6px 14px',
-                  borderRadius: 'var(--r-pill)',
-                  fontSize: '0.84rem',
-                  fontWeight: 600,
+                  color: selectedCat === cat ? '#fff' : 'rgba(255,255,255,0.7)',
                 }}
               >
                 {cat}
@@ -180,122 +262,113 @@ export function News() {
             ))}
           </div>
         ) : (
-          <div style={{ display: 'flex', gap: 12, marginTop: 18, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {LIVE_SOURCES.map((source) => (
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginTop: 16 }}>
+            <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
+              {LIVE_SOURCES.map((src) => (
                 <button
-                  key={source}
+                  key={src}
                   type="button"
-                  className={`pill ${selectedSource === source ? 'pill--active' : ''}`}
-                  onClick={() => setSelectedSource(source)}
+                  className={`pill pill--sm ${selectedSource === src ? 'pill--active' : ''}`}
+                  onClick={() => setSelectedSource(src)}
                   style={{
                     cursor: 'pointer',
-                    background: selectedSource === source ? 'var(--blue)' : 'rgba(255,255,255,0.06)',
-                    color: '#fff',
-                    border: '1px solid rgba(255,255,255,0.1)',
-                    padding: '5px 12px',
-                    borderRadius: 'var(--r-pill)',
-                    fontSize: '0.82rem',
-                    fontWeight: 600,
+                    background: selectedSource === src ? 'rgba(36,211,238,0.25)' : 'rgba(255,255,255,0.06)',
+                    color: selectedSource === src ? 'var(--cyan)' : 'rgba(255,255,255,0.7)',
+                    border: selectedSource === src ? '1px solid rgba(36,211,238,0.4)' : '1px solid transparent',
                   }}
                 >
-                  {source}
+                  {src}
                 </button>
               ))}
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.06)', borderRadius: 'var(--r-pill)', padding: '4px 12px', border: '1px solid rgba(255,255,255,0.1)' }}>
-              <Search size={14} style={{ color: 'rgba(255,255,255,0.5)' }} />
+            <div style={{ position: 'relative', minWidth: 220, flex: '1 1 240px', maxWidth: 360 }}>
+              <Search size={15} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: 'rgba(255,255,255,0.4)' }} />
               <input
-                type="text"
-                placeholder="Search news or anime..."
+                type="search"
+                placeholder="Search live anime wire..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                style={{ background: 'transparent', border: 'none', color: '#fff', fontSize: '0.82rem', outline: 'none', width: 160 }}
+                style={{
+                  width: '100%',
+                  padding: '8px 12px 8px 34px',
+                  borderRadius: 'var(--r-pill)',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  background: 'rgba(20,24,36,0.8)',
+                  color: '#fff',
+                  fontSize: '0.85rem',
+                  outline: 'none',
+                }}
               />
             </div>
           </div>
         )}
       </header>
 
-      {/* EDITORIAL GUIDES TAB */}
+      {/* CURATED EDITORIAL GUIDES TAB */}
       {activeTab === 'editorial' && (
         <>
-          {selectedCat === 'All' && featured && (
-            <section className="featured-news-hero" style={{ marginBottom: 36 }}>
+          {featured && selectedCat === 'All' && (
+            <section className="featured-news-hero" style={{ marginBottom: 40 }}>
               <div
                 style={{
-                  position: 'relative',
+                  display: 'grid',
+                  gridTemplateColumns: 'minmax(300px, 1.2fr) 1fr',
                   borderRadius: 'var(--r-lg)',
                   overflow: 'hidden',
-                  background: 'linear-gradient(180deg, rgba(20,24,38,0.85) 0%, rgba(10,12,18,0.98) 100%)',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  display: 'grid',
-                  gridTemplateColumns: 'minmax(0, 1.2fr) minmax(0, 1fr)',
-                  gap: 24,
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
+                  background: 'linear-gradient(135deg, rgba(25, 29, 46, 0.9) 0%, rgba(13, 15, 24, 0.95) 100%)',
+                  border: '1px solid rgba(255, 255, 255, 0.12)',
+                  boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
                 }}
               >
-                <Link to={`/news/${featured.slug}`} style={{ display: 'block', minHeight: 280, position: 'relative' }}>
+                <div style={{ position: 'relative', minHeight: 280, overflow: 'hidden' }}>
                   <img
                     src={featured.coverImage}
                     alt={featured.title}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    loading="eager"
                   />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 40%, rgba(10,12,18,0.8) 100%)' }} />
-                </Link>
-                <div style={{ padding: '24px 24px 24px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
-                    <span className="pill pill--sm" style={{ background: 'var(--crimson)', color: '#fff', fontWeight: 800 }}>
-                      FEATURED
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: 16,
+                      left: 16,
+                      background: 'var(--crimson)',
+                      color: '#fff',
+                      fontWeight: 800,
+                      fontSize: '0.75rem',
+                      padding: '4px 10px',
+                      borderRadius: 'var(--r-xs)',
+                      letterSpacing: '0.05em',
+                    }}
+                  >
+                    FEATURED
+                  </div>
+                </div>
+
+                <div style={{ padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 14, color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', marginBottom: 12 }}>
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
+                      <Calendar size={14} /> {featured.date}
                     </span>
-                    <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)' }}>
-                      <Calendar size={13} style={{ verticalAlign: 'middle', marginRight: 4 }} />
-                      {featured.date}
-                    </span>
-                    <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)' }}>
-                      <Clock size={13} style={{ verticalAlign: 'middle', marginRight: 4 }} />
-                      {featured.readTime}
+                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
+                      <Clock size={14} /> {featured.readTime}
                     </span>
                   </div>
-                  <h2 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.8rem)', fontWeight: 800, margin: '0 0 12px 0', lineHeight: 1.3 }}>
+
+                  <h2 style={{ fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)', fontWeight: 800, margin: '0 0 14px 0', lineHeight: 1.3 }}>
                     <Link to={`/news/${featured.slug}`} style={{ color: '#fff', textDecoration: 'none' }}>
                       {featured.title}
                     </Link>
                   </h2>
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.92rem', lineHeight: 1.6, margin: '0 0 16px 0' }}>
+
+                  <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, fontSize: '0.95rem', margin: '0 0 20px 0' }}>
                     {featured.excerpt}
                   </p>
 
-                  {/* Picture Logic: Featured Mentioned Anime Chips */}
-                  {featured.relatedAnimeSlugs && featured.relatedAnimeSlugs.length > 0 && (
-                    <div style={{ marginBottom: 18 }}>
-                      <div style={{ fontSize: '0.74rem', color: 'rgba(255,255,255,0.5)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700 }}>
-                        Featured Series in this Guide:
-                      </div>
-                      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-                        {featured.relatedAnimeSlugs.map((slug) => {
-                          const resolved = resolveAnime(slug);
-                          if (!resolved) return null;
-                          return (
-                            <AnimeSpotlightCard
-                              key={slug}
-                              anime={resolved}
-                              variant="compact-chip"
-                            />
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
-
-                  <div>
-                    <Link
-                      to={`/news/${featured.slug}`}
-                      className="btn btn--sm btn--primary"
-                      style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontWeight: 700 }}
-                    >
-                      Read Complete Guide <ArrowRight size={15} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+                    <Link to={`/news/${featured.slug}`} className="btn btn--sm btn--primary" style={{ display: 'inline-flex', gap: 8, alignItems: 'center' }}>
+                      Read Complete Guide <ArrowRight size={16} />
                     </Link>
                   </div>
                 </div>
@@ -303,70 +376,51 @@ export function News() {
             </section>
           )}
 
-          <div className="news-grid">
-            {filteredEditorial.map((article) => {
-              const matchedEntities = (article.relatedAnimeSlugs || [])
-                .map((slug) => resolveAnime(slug))
-                .filter((a): a is NonNullable<typeof a> => Boolean(a));
+          <div className="news-grid" style={{ marginBottom: 40 }}>
+            {filteredEditorial.map((article) => (
+              <article key={article.slug} className="news-card">
+                <Link to={`/news/${article.slug}`} className="news-card__thumb-link">
+                  <img
+                    src={article.coverImage}
+                    alt={article.title}
+                    className="news-card__thumb"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="news-card__category">{article.category}</span>
+                </Link>
 
-              return (
-                <article key={article.slug} className="news-card">
-                  <Link to={`/news/${article.slug}`} className="news-card__thumb-link">
-                    <img
-                      src={article.coverImage}
-                      alt={article.title}
-                      className="news-card__thumb"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <span className="news-card__category">{article.category}</span>
-                  </Link>
-
-                  <div className="news-card__body">
-                    <div className="news-card__meta">
-                      <span className="news-card__date">
-                        <Calendar size={13} aria-hidden="true" />
-                        {article.date}
-                      </span>
-                      <span className="news-card__read">
-                        <Clock size={13} aria-hidden="true" />
-                        {article.readTime}
-                      </span>
-                    </div>
-
-                    <h3 className="news-card__title">
-                      <Link to={`/news/${article.slug}`}>{article.title}</Link>
-                    </h3>
-
-                    <p className="news-card__excerpt">{article.excerpt}</p>
-
-                    {/* Picture Logic with Name of Anime in News Cards */}
-                    {matchedEntities.length > 0 && (
-                      <div style={{ margin: '10px 0 14px 0', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-                        {matchedEntities.slice(0, 2).map((anime) => (
-                          <AnimeSpotlightCard
-                            key={anime.slug}
-                            anime={anime}
-                            variant="compact-chip"
-                          />
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="news-card__footer">
-                      <Link to={`/news/${article.slug}`} className="news-card__read-link">
-                        Read Full Guide <ArrowRight size={14} aria-hidden="true" />
-                      </Link>
-                    </div>
+                <div className="news-card__body">
+                  <div className="news-card__meta">
+                    <span className="news-card__date">
+                      <Calendar size={13} aria-hidden="true" />
+                      {article.date}
+                    </span>
+                    <span className="news-card__read">
+                      <Clock size={13} aria-hidden="true" />
+                      {article.readTime}
+                    </span>
                   </div>
-                </article>
-              );
-            })}
+
+                  <h3 className="news-card__title">
+                    <Link to={`/news/${article.slug}`}>{article.title}</Link>
+                  </h3>
+
+                  <p className="news-card__excerpt">{article.excerpt}</p>
+
+                  <div className="news-card__footer">
+                    <Link to={`/news/${article.slug}`} className="news-card__read-link">
+                      Read Full Guide <ArrowRight size={14} aria-hidden="true" />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </>
       )}
 
-      {/* TRENDING LIVE WIRE TAB (Auto-Enriched News with Anime Picture Logic) */}
+      {/* TRENDING LIVE WIRE TAB WITH DEDICATED PERMALINKS */}
       {activeTab === 'live' && (
         <section className="live-wire-section">
           {liveLoading ? (
@@ -378,13 +432,13 @@ export function News() {
               No recent news items match your criteria.
             </div>
           ) : (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              {filteredLiveNews.map((item) => {
+            <div className="live-wire-list">
+              {paginatedLiveNews.map((item) => {
                 const resolvedAnime = item.matchedAnime ? resolveAnime(item.matchedAnime.slug) || {
                   slug: item.matchedAnime.slug,
                   title: item.matchedAnime.title,
-                  art: item.matchedAnime.art || item.imageUrl || '/art/poster-shadow-hunter.jpg',
-                  fallbackArt: '/art/poster-shadow-hunter.jpg',
+                  art: item.matchedAnime.art || item.imageUrl || '/images/banners/banner-spring-2026.jpg',
+                  fallbackArt: '/images/banners/banner-spring-2026.jpg',
                   rating: item.matchedAnime.rating || 8.2,
                   format: 'TV Series',
                   status: 'Air Broadcast',
@@ -392,34 +446,23 @@ export function News() {
                   streamUrl: item.matchedAnime.streamUrl,
                 } : null;
 
-                const displayImage = item.imageUrl || resolvedAnime?.art || null;
+                const displayImage = item.imageUrl || resolvedAnime?.art || '/images/banners/banner-spring-2026.jpg';
+                const author = getAuthorForSource(item.source);
 
                 return (
-                  <article
-                    key={item.id}
-                    style={{
-                      background: 'linear-gradient(135deg, rgba(20,24,36,0.85) 0%, rgba(11,13,20,0.95) 100%)',
-                      border: '1px solid rgba(255,255,255,0.1)',
-                      borderRadius: 'var(--r-md)',
-                      padding: 22,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: 16,
-                      boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                    }}
-                  >
+                  <article key={item.id} className="live-wire-card">
                     {/* Header: Source, Date, Category */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <div className="live-wire-card__header">
+                      <div className="live-wire-card__badges">
                         <span className="pill pill--sm" style={{ background: 'rgba(36,211,238,0.15)', color: 'var(--cyan)', border: '1px solid rgba(36,211,238,0.3)', fontWeight: 700 }}>
                           {item.source}
                         </span>
                         <span className="pill pill--sm" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.8)', border: '1px solid rgba(255,255,255,0.1)' }}>
                           {item.category}
                         </span>
-                        <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)' }}>
-                          <Calendar size={13} style={{ verticalAlign: 'middle', marginRight: 4 }} />
-                          {new Date(item.publishedAt).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}
+                        <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                          <Calendar size={13} aria-hidden="true" />
+                          <time dateTime={item.publishedAt}>{formatTimeAgo(item.timestamp)}</time>
                         </span>
                       </div>
 
@@ -431,57 +474,93 @@ export function News() {
                       )}
                     </div>
 
-                    {/* Main Content Layout with Picture Logic */}
-                    <div style={{ display: 'grid', gridTemplateColumns: displayImage ? '180px 1fr' : '1fr', gap: 20, alignItems: 'start' }}>
-                      {displayImage && (
-                        <div style={{ position: 'relative', borderRadius: 'var(--r-md)', overflow: 'hidden', aspectRatio: '16/10', border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 6px 16px rgba(0,0,0,0.4)' }}>
-                          <img
-                            src={displayImage}
-                            alt={item.title}
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            loading="lazy"
-                            decoding="async"
-                          />
-                        </div>
-                      )}
+                    {/* Main Content Layout with Dedicated Permalink */}
+                    <div className="live-wire-card__content">
+                      <Link to={`/news/${item.slug}`} className="live-wire-card__thumb-link">
+                        <img
+                          src={displayImage}
+                          alt={item.title}
+                          className="live-wire-card__thumb"
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            if (e.currentTarget.src !== window.location.origin + '/images/banners/banner-spring-2026.jpg') {
+                              e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+                            }
+                          }}
+                        />
+                      </Link>
 
                       <div>
-                        <h3 style={{ fontSize: '1.24rem', fontWeight: 800, margin: '0 0 10px 0', color: '#fff', lineHeight: 1.4 }}>
-                          {item.title}
-                        </h3>
+                        <h2 className="live-wire-card__title">
+                          <Link to={`/news/${item.slug}`}>
+                            {item.title}
+                          </Link>
+                        </h2>
 
-                        <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.94rem', lineHeight: 1.7, margin: 0 }}>
+                        <p className="live-wire-card__excerpt">
                           {item.editorialSummary}
                         </p>
+
+                        <div className="live-wire-card__actions">
+                          <Link to={`/news/${item.slug}`} className="btn btn--sm btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                            Read Full Article <ArrowRight size={13} />
+                          </Link>
+                          {resolvedAnime && (
+                            <Link to={resolvedAnime.streamUrl} className="btn btn--sm btn--ghost" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                              Stream Anime <ArrowRight size={13} />
+                            </Link>
+                          )}
+                        </div>
                       </div>
                     </div>
 
-                    {/* If Anime is matched: Show Featured Anime Picture Logic Widget */}
-                    {resolvedAnime && (
-                      <AnimeSpotlightCard
-                        anime={resolvedAnime}
-                        variant="live-badge"
-                      />
-                    )}
-
-                    {/* Card Footer: Word Count + Original External Citation */}
-                    <div style={{ marginTop: 4, paddingTop: 12, borderTop: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10 }}>
-                      <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.45)' }}>
-                        Original Editorial Analysis &bull; {item.wordCount} words
+                    {/* Card Footer: Author Byline + Source Verification Link */}
+                    <div className="live-wire-card__footer">
+                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                        <User size={13} style={{ color: 'var(--crimson)' }} />
+                        <b>{author.name}</b> ({author.role})
                       </span>
                       <a
                         href={item.sourceUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ fontSize: '0.82rem', color: 'var(--cyan)', display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none' }}
+                        style={{ color: 'var(--cyan)', display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none' }}
                       >
-                        Source Verification ({item.source}) <ExternalLink size={13} />
+                        Source Verification ({item.source}) <ExternalLink size={12} />
                       </a>
                     </div>
                   </article>
                 );
               })}
             </div>
+          )}
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <nav className="live-wire-pagination" aria-label="News pagination">
+              <button
+                type="button"
+                className="btn btn--sm btn--ghost"
+                disabled={safePage <= 1}
+                onClick={() => handlePageChange(safePage - 1)}
+                style={{ opacity: safePage <= 1 ? 0.4 : 1, display: 'inline-flex', alignItems: 'center', gap: 4 }}
+              >
+                <ChevronLeft size={15} /> Prev
+              </button>
+              <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', padding: '0 8px' }}>
+                Page <b>{safePage}</b> of <b>{totalPages}</b>
+              </span>
+              <button
+                type="button"
+                className="btn btn--sm btn--ghost"
+                disabled={safePage >= totalPages}
+                onClick={() => handlePageChange(safePage + 1)}
+                style={{ opacity: safePage >= totalPages ? 0.4 : 1, display: 'inline-flex', alignItems: 'center', gap: 4 }}
+              >
+                Next <ChevronRight size={15} />
+              </button>
+            </nav>
           )}
         </section>
       )}

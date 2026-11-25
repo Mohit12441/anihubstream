@@ -1,7 +1,7 @@
 // @ts-check
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Play, Star, Sparkles, Film } from 'lucide-react';
-import { getNewsArticleBySlug, NEWS_ARTICLES } from '../data/newsData';
+import { getNewsArticleBySlug, getAllNewsArticles } from '../data/newsData';
 import { resolveAnime, findAnimeInText } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
 import { useSEO } from '../lib/useSEO';
@@ -147,8 +147,9 @@ export function NewsArticle() {
   }
 
   useSEO({
-    title: article ? `${article.title} | AniHubStream` : 'Article Not Found | AniHubStream',
+    title: article ? `${article.title} | AniHubStream News` : 'Article Not Found | AniHubStream',
     description: article ? article.excerpt : 'The requested article could not be found.',
+    image: article ? (article.coverImage.startsWith('http') ? article.coverImage : `https://anihubstream.com${article.coverImage}`) : undefined,
     jsonLd: article
       ? {
           '@context': 'https://schema.org',
@@ -157,7 +158,7 @@ export function NewsArticle() {
               '@type': 'NewsArticle',
               headline: article.title,
               description: article.excerpt,
-              image: [`https://anihubstream.com${article.coverImage}`],
+              image: [article.coverImage.startsWith('http') ? article.coverImage : `https://anihubstream.com${article.coverImage}`],
               datePublished: `${article.date}T10:00:00+00:00`,
               dateModified: `${article.date}T10:00:00+00:00`,
               author: [
@@ -179,6 +180,14 @@ export function NewsArticle() {
                 '@type': 'WebPage',
                 '@id': `https://anihubstream.com/news/${article.slug}`,
               },
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://anihubstream.com/' },
+                { '@type': 'ListItem', position: 2, name: 'Anime News', item: 'https://anihubstream.com/news' },
+                { '@type': 'ListItem', position: 3, name: article.title, item: `https://anihubstream.com/news/${article.slug}` },
+              ],
             },
             ...(faqEntities.length > 0
               ? [
@@ -214,7 +223,7 @@ export function NewsArticle() {
     }
   };
 
-  const related = NEWS_ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
+  const related = getAllNewsArticles().filter((a) => a.slug !== article.slug).slice(0, 3);
 
   // Picture Logic: Resolve anime mentioned in article or metadata
   const explicitAnime = (article.relatedAnimeSlugs || [])
@@ -233,9 +242,11 @@ export function NewsArticle() {
         <nav className="article-breadcrumb" aria-label="Breadcrumb">
           <Link to="/">Home</Link>
           <span>/</span>
-          <Link to="/news">News &amp; Editorial</Link>
+          <Link to="/news">News</Link>
           <span>/</span>
-          <span style={{ color: 'rgba(255,255,255,0.9)' }}>{article.category}</span>
+          <span style={{ color: 'rgba(255,255,255,0.9)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '300px' }}>
+            {article.title}
+          </span>
         </nav>
 
         <h1 className="article-header__title">{article.title}</h1>
@@ -247,7 +258,7 @@ export function NewsArticle() {
           </span>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
             <Calendar size={15} />
-            {article.date}
+            <time dateTime={`${article.date}T10:00:00Z`}>{article.date}</time>
           </span>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
             <Clock size={15} />

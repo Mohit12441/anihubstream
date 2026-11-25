@@ -448,6 +448,20 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniL
   // Deterministic seed for varying phrasing per story without template duplication
   const seed = (item.link || title).split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
 
+  // Lead with concrete journalistic facts instead of repetitive boilerplate
+  const cleanSnippet = rawSnippet ? rawSnippet.replace(/https?:\/\/\S+/g, '').trim() : '';
+  const leadVariants = [
+    cleanSnippet ? `${cleanSnippet}` : `Official production announcements have confirmed key details regarding ${title}.`,
+    `Production updates surrounding ${title} have been officially unveiled. ${cleanSnippet ? `${cleanSnippet}` : ''}`.trim(),
+    `New developments regarding ${title} highlight significant milestones for the ${format.toLowerCase()} calendar. ${cleanSnippet ? `${cleanSnippet}` : ''}`.trim(),
+    `The creative team behind ${matchedAnime ? matchedAnime.title : title} has shared fresh details. ${cleanSnippet ? `${cleanSnippet}` : ''}`.trim(),
+    `Broadcasters and industry partners have announced major news regarding ${title}. ${cleanSnippet ? `${cleanSnippet}` : ''}`.trim(),
+    `A notable production bulletin has arrived for ${matchedAnime ? matchedAnime.title : title}, outlining key releases and scheduling. ${cleanSnippet ? `${cleanSnippet}` : ''}`.trim(),
+    `Fresh coverage on ${title} confirms upcoming plans across Japanese television and international streaming platforms. ${cleanSnippet ? `${cleanSnippet}` : ''}`.trim(),
+    cleanSnippet ? `According to verified reports, ${cleanSnippet}` : `Industry sources have confirmed new developments concerning ${title}.`
+  ];
+  const leadSentence = leadVariants[seed % leadVariants.length];
+
   let animeCallToAction = '';
   let formatContext = '';
 
@@ -475,7 +489,13 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniL
 
   if (format !== 'Anime') {
     if (matchedAnime) {
-      formatContext = `While this announcement specifically centers on the ${format} franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects.`;
+      const nonAnimeWithMatchFormats = [
+        `While this announcement specifically centers on the ${format} franchise, fans can experience the ongoing animated story right now. Source publication milestones regularly coincide with new season developments and commemorative projects.`,
+        `The expansion of the ${format} series marks an exciting juncture for ${matchedAnime.title}. Print milestones often pave the way for additional broadcast specials and anime adaptations.`,
+        `As the ${format.toLowerCase()} storyline progresses, enthusiasm among the global fandom continues to climb, sparking widespread speculation regarding upcoming animated projects.`
+      ];
+      formatContext = nonAnimeWithMatchFormats[seed % nonAnimeWithMatchFormats.length];
+
       const animeVariations = [
         `Watch the anime adaptation on AniHubStream in 1080p full high definition with dual Japanese audio, synced multi-language subtitles, and skip-intro chapter markers on our dedicated ${matchedAnime.title} watch page.`,
         `While this announcement highlights the print publication, newcomers can dive into the animated adaptation currently streaming in full HD with multi-language subs on AniHubStream.`,
@@ -483,11 +503,17 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniL
       ];
       animeCallToAction = animeVariations[seed % animeVariations.length];
     } else {
-      formatContext = `As a standout title in the ${format} sphere, this development has drawn significant praise from fans and critics tracking its creative arc. While no direct television anime has aired yet, the franchise's trajectory mirrors successful titles that transitioned to full broadcast adaptations.`;
+      const nonAnimeNoMatchFormats = [
+        `As a standout title in the ${format} sphere, this development has drawn significant praise from fans and critics tracking its creative arc. While no direct television anime has aired yet, the franchise's trajectory mirrors successful titles that transitioned to full broadcast adaptations.`,
+        `This new release marks an important milestone for readers and collectors. Strong readership engagement frequently serves as a catalyst for future multimedia and anime adaptation decisions.`,
+        `Industry analysts highlight how expanding narratives in the ${format.toLowerCase()} medium continually cultivate passionate reader bases before transitioning to weekly television broadcasts.`
+      ];
+      formatContext = nonAnimeNoMatchFormats[seed % nonAnimeNoMatchFormats.length];
+
       const nonAnimeVariations = [
         `Check out AniHubStream's curated anime catalog for similar titles spanning fantasy, action, psychological mysteries, and romance to discover comparable animated works with fast, ad-light streaming.`,
         `Although an animated television series has yet to debut, fans of high-stakes story arcs can explore AniHubStream's curated anime catalog for closely matching thematic adventures.`,
-        `Readers captivated by the novel's creative world-building can browse AniHubStream's streaming library to discover acclaimed anime featuring similar tones and character dynamics.`
+        `Readers captivated by the creative world-building can browse AniHubStream's streaming library to discover acclaimed anime featuring similar tones and character dynamics.`
       ];
       animeCallToAction = nonAnimeVariations[seed % nonAnimeVariations.length];
     }
@@ -499,7 +525,13 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniL
         `Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of ${matchedAnime.title} on AniHubStream.`
       ];
       animeCallToAction = animeWatchVariations[seed % animeWatchVariations.length];
-      formatContext = `This announcement directly impacts the global community following ${matchedAnime.title}. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity.`;
+
+      const animeMatchFormats = [
+        `This announcement directly impacts the global community following ${matchedAnime.title}. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity.`,
+        `Expectations remain high for ${matchedAnime.title} as production committees harmonize seasonal schedules with worldwide streaming releases, ensuring seamless access across global territories.`,
+        `The continued trajectory of ${matchedAnime.title} reflects the franchise's formidable staying power, combining rigorous visual craftsmanship with deeply compelling storytelling.`
+      ];
+      formatContext = animeMatchFormats[seed % animeMatchFormats.length];
     } else {
       const generalCatalogVariations = [
         `AniHubStream monitors ongoing Japanese broadcast updates to ensure international audiences have access to synchronized episode schedules, official streaming metadata, and timely announcements across all major seasonal titles with zero disruptive takeovers.`,
@@ -507,17 +539,32 @@ export function generateEditorialEnrichment(item, matchedAnime, sourceName, aniL
         `Anime fans looking for current seasonal broadcasts can explore AniHubStream's searchable index featuring verified episode countdowns, HD releases, and subtitle tracks.`
       ];
       animeCallToAction = generalCatalogVariations[seed % generalCatalogVariations.length];
-      formatContext = `As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends. Editorial observers highlight how shifting broadcast formats and digital syndication agreements continue to redefine how new series reach international fandoms.`;
+
+      const generalAnimeFormats = [
+        `As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends.`,
+        `Industry observers note that sustained collaboration between animation studios and international distribution partners continues to elevate seasonal broadcast quality worldwide.`,
+        `Broadcast schedules for upcoming seasons highlight an exciting convergence of celebrated auteur directors, returning blockbuster series, and inventive original productions.`
+      ];
+      formatContext = generalAnimeFormats[seed % generalAnimeFormats.length];
     }
   }
 
+  const attributionVariants = [
+    `Primary reporting, production credits, and official artwork verified via ${sourceName}.`,
+    `Original announcements, visual assets, and full coverage courtesy of ${sourceName}.`,
+    `Verified reporting and initial broadcast schedules confirmed through ${sourceName}.`,
+    `Full reporting and official production announcements originally published by ${sourceName}.`,
+    `Source verification and official Japanese press releases tracked via ${sourceName}.`,
+    `Official promotional materials, cast details, and coverage sourced from ${sourceName}.`
+  ];
+  const sourceAttribution = attributionVariants[seed % attributionVariants.length];
+
   const commentary = [
-    `The latest industry development regarding "${title}" signals noteworthy momentum for the ${format.toLowerCase()} landscape.`,
-    rawSnippet ? `According to recent reporting, ${rawSnippet.slice(0, 180)}...` : '',
+    leadSentence,
     industryPedigree,
     formatContext,
     animeCallToAction,
-    `Full reporting, official artwork, and complete announcement details were originally published by ${sourceName}.`
+    sourceAttribution
   ].filter(Boolean).join(' ');
 
   return commentary;

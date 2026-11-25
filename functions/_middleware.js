@@ -562,25 +562,38 @@ export async function onRequest(context) {
         desc: 'Move beyond generic reincarnation tropes. Standout isekai series with intricate magic systems and realism.',
       },
     };
+    const prettyTitle = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
     const item = newsMap[slug] || {
-      title: 'Anime News & Editorial Guide | AniHubStream',
-      desc: 'Read in-depth anime analysis, seasonal guides, and rankings on AniHubStream.',
+      title: `${prettyTitle} | AniHubStream News`,
+      desc: `Read the latest breaking announcement, broadcast schedule, and studio production details for ${prettyTitle} on AniHubStream.`,
     };
     title = item.title;
     desc = item.desc;
     jsonLd = {
       '@context': 'https://schema.org',
-      '@type': 'NewsArticle',
-      headline: item.title,
-      description: item.desc,
-      mainEntityOfPage: `${origin}/news/${slug}`,
-      datePublished: '2026-03-20T10:00:00+00:00',
-      author: { '@type': 'Organization', name: 'AniHubStream Editorial' },
-      publisher: {
-        '@type': 'Organization',
-        name: 'AniHubStream',
-        url: origin,
-      },
+      '@graph': [
+        {
+          '@type': 'NewsArticle',
+          headline: item.title,
+          description: item.desc,
+          mainEntityOfPage: `${origin}/news/${slug}`,
+          datePublished: '2026-11-25T10:00:00+00:00',
+          author: { '@type': 'Person', name: 'AniHub Editorial Desk' },
+          publisher: {
+            '@type': 'Organization',
+            name: 'AniHubStream',
+            url: origin,
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${origin}/` },
+            { '@type': 'ListItem', position: 2, name: 'Anime News', item: `${origin}/news` },
+            { '@type': 'ListItem', position: 3, name: item.title, item: `${origin}/news/${slug}` },
+          ],
+        },
+      ],
     };
   } else if (path === '/about') {
     title = 'About AniHubStream — Free Anime Streaming Platform';
