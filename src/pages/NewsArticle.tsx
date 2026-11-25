@@ -8,6 +8,116 @@ import { useSEO } from '../lib/useSEO';
 import { useToast } from '../lib/Toast';
 import '../styles/news.css';
 
+interface ParsedBlock {
+  type: 'h2' | 'h3' | 'numbered-list' | 'bullet-list' | 'paragraph';
+  text?: string;
+  matchedAnime?: ReturnType<typeof resolveAnime>;
+  items?: Array<{
+    rank?: number;
+    raw: string;
+    title?: string;
+    body?: string;
+    matchedAnime?: ReturnType<typeof resolveAnime>;
+  }>;
+}
+
+function parseArticleBlocks(content: string): ParsedBlock[] {
+  const lines = content.replace(/\r\n/g, '\n').split('\n');
+  const blocks: ParsedBlock[] = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i].trim();
+
+    if (!line) {
+      i++;
+      continue;
+    }
+
+    // Heading 3
+    if (line.startsWith('### ')) {
+      const text = line.replace('### ', '').trim();
+      const matched = resolveAnime(text);
+      blocks.push({ type: 'h3', text, matchedAnime: matched });
+      i++;
+      continue;
+    }
+
+    // Heading 2
+    if (line.startsWith('## ')) {
+      const text = line.replace('## ', '').trim();
+      blocks.push({ type: 'h2', text });
+      i++;
+      continue;
+    }
+
+    // Numbered List (e.g. 1. **Berserk**: ...)
+    const numMatch = line.match(/^(\d+)\.\s+(.*)/);
+    if (numMatch) {
+      const items: ParsedBlock['items'] = [];
+      while (i < lines.length) {
+        const curr = lines[i].trim();
+        const m = curr.match(/^(\d+)\.\s+(.*)/);
+        if (!m) break;
+        const rank = parseInt(m[1], 10);
+        const textContent = m[2];
+
+        // Extract **Title**: Body if present
+        const boldMatch = textContent.match(/^\*\*(.*?)\*\*(.*)/);
+        let title = '';
+        let body = textContent;
+        if (boldMatch) {
+          title = boldMatch[1];
+          body = boldMatch[2].replace(/^[:\s-]+/, '').trim();
+        }
+
+        const matchedAnime = resolveAnime(title) || resolveAnime(textContent);
+
+        items.push({
+          rank,
+          raw: textContent,
+          title: title || undefined,
+          body: body || undefined,
+          matchedAnime: matchedAnime || undefined,
+        });
+        i++;
+      }
+      blocks.push({ type: 'numbered-list', items });
+      continue;
+    }
+
+    // Bullet List (e.g. - **Item**: ...)
+    if (line.startsWith('- ') || line.startsWith('* ')) {
+      const items: ParsedBlock['items'] = [];
+      while (i < lines.length) {
+        const curr = lines[i].trim();
+        if (!curr.startsWith('- ') && !curr.startsWith('* ')) break;
+        const textContent = curr.replace(/^[-*]\s+/, '');
+        items.push({ raw: textContent });
+        i++;
+      }
+      blocks.push({ type: 'bullet-list', items });
+      continue;
+    }
+
+    // Regular paragraph (accumulate consecutive non-empty lines that aren't headings or lists)
+    const paraLines: string[] = [];
+    while (i < lines.length) {
+      const curr = lines[i].trim();
+      if (!curr || curr.startsWith('#') || curr.match(/^\d+\.\s+/) || curr.startsWith('- ') || curr.startsWith('* ')) {
+        break;
+      }
+      paraLines.push(curr);
+      i++;
+    }
+    if (paraLines.length > 0) {
+      blocks.push({ type: 'paragraph', text: paraLines.join(' ') });
+    }
+  }
+
+  return blocks;
+}
+
 export function NewsArticle() {
   const { slug } = useParams<{ slug: string }>();
   const { notify } = useToast();
@@ -79,8 +189,8 @@ export function NewsArticle() {
   const textAnime = findAnimeInText(article.content);
   const allMentionedAnime = Array.from(new Map([...explicitAnime, ...textAnime].map((a) => [a.slug, a])).values());
 
-  // Render markdown-like sections cleanly with picture logic
-  const paragraphs = article.content.split('\n\n');
+  // Structured Block Parser for Rankings, Lists, Headings, and Spotlights
+  const blocks = parseArticleBlocks(article.content);
 
   return (
     <article className="page news-article-view shell">
@@ -120,7 +230,18 @@ export function NewsArticle() {
         </div>
 
         <div className="article-cover-wrap">
-          <img src={article.coverImage} alt={article.title} className="article-cover" />
+          <img
+            src={article.coverImage}
+            alt={article.title}
+            className="article-cover"
+            loading="eager"
+            decoding="async"
+            onError={(e) => {
+              if (e.currentTarget.src !== '/art/genres-purple.jpg') {
+                e.currentTarget.src = '/art/genres-purple.jpg';
+              }
+            }}
+          />
         </div>
       </div>
 
@@ -139,70 +260,111 @@ export function NewsArticle() {
             </div>
 
             <div className="mentioned-anime-grid">
-              {allMentionedAnime.map((anime) => (
-                <Link
-                  key={anime.slug}
-                  to={anime.streamUrl}
-                  className="mentioned-anime-card"
-                  title={`Stream ${anime.title} on AniHub`}
-                >
-                  <img
-                    src={anime.art}
-                    alt={anime.title}
-                    className="mentioned-anime-card__poster"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="mentioned-anime-card__info">
-                    <span className="mentioned-anime-card__title">{anime.title}</span>
-                    <span className="mentioned-anime-card__sub">
-                      <Star size={11} fill="currentColor" style={{ color: 'var(--gold)' }} />
-                      {anime.rating} • {anime.format}
-                    </span>
-                    <span style={{ fontSize: '0.72rem', color: 'var(--crimson-soft)', display: 'inline-flex', alignItems: 'center', gap: 3, fontWeight: 700, marginTop: 2 }}>
-                      <Play size={10} fill="currentColor" /> Stream Now
-                    </span>
-                  </div>
-                </Link>
-              ))}
+              {allMentionedAnime.map((anime) => {
+                const fallback = anime.fallbackArt || '/art/poster-shadow-hunter.jpg';
+                return (
+                  <Link
+                    key={anime.slug}
+                    to={anime.streamUrl}
+                    className="mentioned-anime-card"
+                    title={`Stream ${anime.title} on AniHub`}
+                  >
+                    <img
+                      src={anime.art}
+                      alt={anime.title}
+                      className="mentioned-anime-card__poster"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        if (e.currentTarget.src !== fallback) {
+                          e.currentTarget.src = fallback;
+                        }
+                      }}
+                    />
+                    <div className="mentioned-anime-card__info">
+                      <span className="mentioned-anime-card__title">{anime.title}</span>
+                      <span className="mentioned-anime-card__sub">
+                        <Star size={11} fill="currentColor" style={{ color: 'var(--gold)' }} />
+                        {anime.rating} • {anime.format}
+                      </span>
+                      <span style={{ fontSize: '0.72rem', color: 'var(--crimson-soft)', display: 'inline-flex', alignItems: 'center', gap: 3, fontWeight: 700, marginTop: 2 }}>
+                        <Play size={10} fill="currentColor" /> Stream Now
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         )}
 
-        {/* Article Body with Inline Anime Picture Cards */}
-        {paragraphs.map((p, i) => {
-          const trimmed = p.trim();
-
-          // Section Header: Check if it mentions a known anime title
-          if (trimmed.startsWith('### ')) {
-            const headingText = trimmed.replace('### ', '');
-            const matchedHeadingAnime = resolveAnime(headingText);
-
+        {/* Structured Article Blocks (Rankings, Sections, Bullets & Inline Anime Cards) */}
+        {blocks.map((block, idx) => {
+          if (block.type === 'h3') {
             return (
-              <div key={i}>
-                <h3>{headingText}</h3>
-                {/* If heading matches an anime like "1. Solo Leveling Season 2", show inline picture banner! */}
-                {matchedHeadingAnime && (
+              <div key={idx} style={{ marginTop: 28, marginBottom: 14 }}>
+                <h3>{block.text}</h3>
+                {block.matchedAnime && (
                   <AnimeSpotlightCard
-                    anime={matchedHeadingAnime}
+                    anime={block.matchedAnime}
                     variant="inline-banner"
-                    subtitle={`Featured in this section: Stream ${matchedHeadingAnime.title} with high-definition multi-source playback, synchronized subtitles, and zero ad takeovers on AniHubStream.`}
+                    subtitle={`Featured in this section: Stream ${block.matchedAnime.title} with high-definition multi-source playback, synchronized subtitles, and zero ad takeovers on AniHubStream.`}
                   />
                 )}
               </div>
             );
           }
 
-          if (trimmed.startsWith('## ')) {
-            return <h2 key={i}>{trimmed.replace('## ', '')}</h2>;
+          if (block.type === 'h2') {
+            return <h2 key={idx}>{block.text}</h2>;
           }
 
-          if (trimmed.startsWith('- ')) {
-            const items = trimmed.split('\n').map((item) => item.replace(/^- /, ''));
+          if (block.type === 'numbered-list') {
             return (
-              <ul key={i}>
-                {items.map((li, j) => (
-                  <li key={j} dangerouslySetInnerHTML={{ __html: li.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
+              <ol key={idx} className="article-numbered-list">
+                {block.items?.map((item, itemIdx) => (
+                  <li key={itemIdx} className="article-numbered-item">
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
+                        <strong style={{ fontSize: '1.05rem', color: '#fff' }}>
+                          {item.title || item.raw}
+                        </strong>
+                        {item.matchedAnime && (
+                          <Link
+                            to={item.matchedAnime.streamUrl}
+                            className="btn btn--xs btn--primary"
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '3px 10px', fontSize: '0.74rem' }}
+                            title={`Stream ${item.matchedAnime.title}`}
+                          >
+                            <Play size={10} fill="currentColor" /> Stream on AniHub
+                          </Link>
+                        )}
+                      </div>
+                      {item.body && (
+                        <p style={{ margin: 0, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.94rem', lineHeight: 1.6 }}>
+                          {item.body}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            );
+          }
+
+          if (block.type === 'bullet-list') {
+            return (
+              <ul key={idx} className="article-bullet-list">
+                {block.items?.map((item, itemIdx) => (
+                  <li
+                    key={itemIdx}
+                    dangerouslySetInnerHTML={{
+                      __html: item.raw
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>'),
+                    }}
+                  />
                 ))}
               </ul>
             );
@@ -210,9 +372,9 @@ export function NewsArticle() {
 
           return (
             <p
-              key={i}
+              key={idx}
               dangerouslySetInnerHTML={{
-                __html: trimmed
+                __html: (block.text || '')
                   .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
                   .replace(/\*(.*?)\*/g, '<em>$1</em>'),
               }}

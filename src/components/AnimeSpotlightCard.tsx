@@ -12,6 +12,8 @@ interface Props {
 }
 
 export function AnimeSpotlightCard({ anime, variant = 'inline-banner', subtitle, className = '' }: Props) {
+  const fallback = anime.fallbackArt || '/art/poster-shadow-hunter.jpg';
+
   if (variant === 'compact-chip') {
     return (
       <Link
@@ -25,6 +27,12 @@ export function AnimeSpotlightCard({ anime, variant = 'inline-banner', subtitle,
           className="anime-spotlight-chip__thumb"
           loading="lazy"
           decoding="async"
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            if (e.currentTarget.src !== fallback) {
+              e.currentTarget.src = fallback;
+            }
+          }}
         />
         <span className="anime-spotlight-chip__title">{anime.title}</span>
         {anime.rating && (
@@ -46,6 +54,12 @@ export function AnimeSpotlightCard({ anime, variant = 'inline-banner', subtitle,
             className="anime-live-spotlight__poster"
             loading="lazy"
             decoding="async"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              if (e.currentTarget.src !== fallback) {
+                e.currentTarget.src = fallback;
+              }
+            }}
           />
         </div>
         <div className="anime-live-spotlight__body">
@@ -95,6 +109,12 @@ export function AnimeSpotlightCard({ anime, variant = 'inline-banner', subtitle,
             className="anime-spotlight-banner__poster"
             loading="lazy"
             decoding="async"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              if (e.currentTarget.src !== fallback) {
+                e.currentTarget.src = fallback;
+              }
+            }}
           />
           <div className="anime-spotlight-banner__play-hover">
             <Play size={24} fill="#fff" />

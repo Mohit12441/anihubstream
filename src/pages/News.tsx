@@ -381,6 +381,7 @@ export function News() {
                   slug: item.matchedAnime.slug,
                   title: item.matchedAnime.title,
                   art: item.matchedAnime.art || item.imageUrl || '/art/poster-shadow-hunter.jpg',
+                  fallbackArt: '/art/poster-shadow-hunter.jpg',
                   rating: item.matchedAnime.rating || 8.2,
                   format: 'TV Series',
                   status: 'Air Broadcast',

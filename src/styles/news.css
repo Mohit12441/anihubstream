@@ -530,19 +530,76 @@
   border-radius: var(--r-xs);
 }
 
-/* Mentioned Anime Grid in Articles */
+/* Article Structured Lists & Numbered Rankings */
+.article-numbered-list {
+  list-style: none;
+  counter-reset: ranking-counter;
+  padding: 0;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.article-numbered-item {
+  counter-increment: ranking-counter;
+  position: relative;
+  background: rgba(22, 26, 40, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--crimson);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: 16px 20px 16px 58px;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: transform var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
+}
+
+.article-numbered-item:hover {
+  transform: translateX(4px);
+  border-color: rgba(255, 31, 74, 0.35);
+}
+
+.article-numbered-item::before {
+  content: '#' counter(ranking-counter);
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--crimson-soft);
+  line-height: 1;
+  font-family: monospace;
+}
+
+.article-bullet-list {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article-bullet-list li {
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .mentioned-anime-section {
   margin: 32px 0;
   padding: 20px;
-  background: rgba(18, 22, 34, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 22, 34, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--r-lg);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .mentioned-anime-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
   margin-top: 14px;
 }
 
@@ -551,7 +608,7 @@
   gap: 12px;
   align-items: center;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--r-md);
   padding: 10px;
   text-decoration: none;
@@ -559,17 +616,20 @@
 }
 
 .mentioned-anime-card:hover {
-  background: rgba(255, 31, 74, 0.1);
-  border-color: rgba(255, 31, 74, 0.35);
+  background: rgba(255, 31, 74, 0.12);
+  border-color: rgba(255, 31, 74, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .mentioned-anime-card__poster {
-  width: 52px;
-  height: 72px;
+  width: 56px;
+  min-width: 56px;
+  height: 80px;
   border-radius: var(--r-sm);
   object-fit: cover;
-  flex-shrink: 0;
+  background: #141724;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .mentioned-anime-card__info {
@@ -577,10 +637,11 @@
   flex-direction: column;
   gap: 4px;
   min-width: 0;
+  overflow: hidden;
 }
 
 .mentioned-anime-card__title {
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: #fff;
   white-space: nowrap;
@@ -589,25 +650,48 @@
 }
 
 .mentioned-anime-card__sub {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: var(--cyan);
   display: inline-flex;
   align-items: center;
   gap: 4px;
 }
 
+/* Mobile & Tablet Responsiveness */
 @media (max-width: 768px) {
+  .page-head {
+    margin-bottom: 20px !important;
+  }
+  .featured-news-hero > div {
+    grid-template-columns: 1fr !important;
+  }
+  .featured-news-hero > div > div {
+    padding: 20px !important;
+  }
   .anime-spotlight-banner__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     text-align: center;
+    gap: 16px;
+    padding: 18px;
   }
   .anime-spotlight-banner__poster-wrap {
-    max-width: 180px;
+    max-width: 140px;
     margin: 0 auto;
   }
   .anime-spotlight-banner__tags,
   .anime-spotlight-banner__actions {
     justify-content: center;
+  }
+  .mentioned-anime-grid {
+    grid-template-columns: 1fr;
+  }
+  .article-numbered-item {
+    padding: 14px 16px 14px 44px;
+    font-size: 0.92rem;
+  }
+  .article-numbered-item::before {
+    left: 14px;
+    top: 14px;
   }
 }
 
