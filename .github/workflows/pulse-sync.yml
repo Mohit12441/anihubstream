@@ -99,22 +99,27 @@ jobs:
           echo "🎬 [STEP 4] Syncing Newly Released Episodes & Auto-Pushing to Bing & IndexNow..."
           node cloud-sync/sync-episodes.mjs || true
 
+          # 5. Sync Anime News, Enriched SEO & Sitemaps
+          echo "📰 [STEP 5] Syncing Trending Anime News, Enriched SEO & Sitemaps..."
+          node tools/sync-news.mjs || true
+
           echo "============================================================"
           echo "✅ Sync Pipeline Execution Completed Successfully!"
           echo "============================================================"
 
-      - name: Commit newly discovered sources
+      - name: Commit newly discovered sources and news updates
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_DATABASE_ID: ${{ secrets.CF_DATABASE_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: |
-          if [ -n "$(git status --porcelain tools/catalogue-sources.json)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add tools/catalogue-sources.json
-            git commit -m "chore(sync): record newly discovered anime [skip ci]"
-            git push origin master
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tools/catalogue-sources.json data/news/feed.json public/api/news.json public/sitemap-news.xml public/feed.xml public/rss.xml
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(sync): record newly discovered anime & news updates [skip ci]"
+            git pull origin master --rebase || true
+            git push origin HEAD:master
           fi
 
       - name: Notify search engines (IndexNow, Bing, and Google)
