@@ -113,32 +113,39 @@ export function loadCatalogTitles() {
       try {
         const data = JSON.parse(fs.readFileSync(path.join(catalogDir, file), 'utf8'));
         if (data.title) {
-          catalog.push({ title: String(data.title), slug });
+          catalog.push({
+            title: String(data.title),
+            slug,
+            art: data.art || null,
+            key_art: data.key_art || null,
+            rating: data.rating || null,
+            genres: data.genres || [],
+          });
         }
       } catch {}
     }
   }
 
-  // Common franchise aliases for higher match rate
+  // Common franchise aliases with artwork
   const aliases = [
-    { title: 'Solo Leveling', slug: 'solo-leveling' },
-    { title: 'Jujutsu Kaisen', slug: 'jujutsu-kaisen' },
-    { title: 'Demon Slayer', slug: 'demon-slayer' },
-    { title: 'Kimetsu no Yaiba', slug: 'demon-slayer' },
-    { title: 'One Piece', slug: 'one-piece' },
-    { title: 'Chainsaw Man', slug: 'chainsaw-man' },
-    { title: 'Attack on Titan', slug: 'attack-on-titan' },
-    { title: 'Shingeki no Kyojin', slug: 'attack-on-titan' },
-    { title: 'Frieren', slug: 'sousou-no-frieren' },
-    { title: 'Bleach', slug: 'bleach' },
-    { title: 'My Hero Academia', slug: 'my-hero-academia' },
-    { title: 'Boku no Hero Academia', slug: 'my-hero-academia' },
-    { title: 'Blue Box', slug: 'blue-box' },
-    { title: 'DanDaDan', slug: 'dandadan' },
-    { title: 'Spy x Family', slug: 'spy-x-family' },
-    { title: 'Oshi no Ko', slug: 'oshi-no-ko' },
-    { title: 'Psyren', slug: 'psyren' },
-    { title: 'Mahoutsukai no Yoru', slug: 'mahoutsukai-no-yoru' },
+    { title: 'Solo Leveling', slug: 'solo-leveling', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151807-it355ZgzquUd.png', rating: 8.4, genres: ['Action', 'Fantasy'] },
+    { title: 'Jujutsu Kaisen', slug: 'jujutsu-kaisen', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx113415-bbBWj4pEFScM.jpg', rating: 8.6, genres: ['Action', 'Supernatural'] },
+    { title: 'Demon Slayer', slug: 'demon-slayer', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-PEn1CTyeRepq.png', rating: 8.5, genres: ['Action', 'Fantasy'] },
+    { title: 'Kimetsu no Yaiba', slug: 'demon-slayer', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101922-PEn1CTyeRepq.png', rating: 8.5, genres: ['Action', 'Fantasy'] },
+    { title: 'One Piece', slug: 'one-piece', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21-YCDoj1EkASI2.jpg', rating: 8.8, genres: ['Action', 'Adventure'] },
+    { title: 'Chainsaw Man', slug: 'chainsaw-man', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx127230-FloCoGoZOAOH.png', rating: 8.3, genres: ['Action', 'Dark Fantasy'] },
+    { title: 'Attack on Titan', slug: 'attack-on-titan', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-C6FPmWm59CyP.jpg', rating: 8.9, genres: ['Action', 'Drama'] },
+    { title: 'Shingeki no Kyojin', slug: 'attack-on-titan', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-C6FPmWm59CyP.jpg', rating: 8.9, genres: ['Action', 'Drama'] },
+    { title: 'Frieren', slug: 'sousou-no-frieren', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-n2bF3NnELNsq.jpg', rating: 9.1, genres: ['Adventure', 'Drama', 'Fantasy'] },
+    { title: 'Bleach', slug: 'bleach', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b269-vG04i169kCqM.png', rating: 8.1, genres: ['Action', 'Supernatural'] },
+    { title: 'My Hero Academia', slug: 'my-hero-academia', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-oBMb98nHqjHG.jpg', rating: 7.9, genres: ['Action', 'Super Power'] },
+    { title: 'Boku no Hero Academia', slug: 'my-hero-academia', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21459-oBMb98nHqjHG.jpg', rating: 7.9, genres: ['Action', 'Super Power'] },
+    { title: 'Blue Box', slug: 'blue-box', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx170881-2wWj1P3V1Rrh.jpg', rating: 8.1, genres: ['Romance', 'Sports'] },
+    { title: 'DanDaDan', slug: 'dandadan', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx171018-8mN479U3hF6C.jpg', rating: 8.5, genres: ['Action', 'Comedy', 'Supernatural'] },
+    { title: 'Spy x Family', slug: 'spy-x-family', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx140960-vN3RJZXxDdqu.jpg', rating: 8.4, genres: ['Action', 'Comedy'] },
+    { title: 'Oshi no Ko', slug: 'oshi-no-ko', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx150672-3yq9bT2rUq39.jpg', rating: 8.6, genres: ['Drama', 'Mystery'] },
+    { title: 'Psyren', slug: 'psyren', art: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/medium/bx44388-z2P9R0aB2a2F.jpg', rating: 7.8, genres: ['Action', 'Supernatural', 'Sci-Fi'] },
+    { title: 'Mahoutsukai no Yoru', slug: 'mahoutsukai-no-yoru', art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx143977-wL9X4W4C5a5D.jpg', rating: 8.2, genres: ['Supernatural', 'Mystery'] },
   ];
 
   for (const alias of aliases) {
@@ -487,10 +494,14 @@ export async function syncNews(options = {}) {
       timestamp: new Date(item.pubDate).getTime() || Date.now(),
       format,
       category: item.matchedAnime ? `${format} Franchise Update` : `${format} News`,
+      imageUrl: item.imageUrl || item.matchedAnime?.art || null,
       matchedAnime: item.matchedAnime ? {
         title: item.matchedAnime.title,
         slug: item.matchedAnime.slug,
-        streamUrl: `/anime/${item.matchedAnime.slug}`
+        streamUrl: `/anime/${item.matchedAnime.slug}`,
+        art: item.matchedAnime.art || null,
+        rating: item.matchedAnime.rating || null,
+        genres: item.matchedAnime.genres || [],
       } : null,
       editorialSummary: enrichedSummary,
       wordCount: enrichedSummary.split(/\s+/).length,

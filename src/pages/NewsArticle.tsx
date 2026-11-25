@@ -1,6 +1,9 @@
+// @ts-check
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, Clock, User, ArrowLeft, Share2, Tag } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Play, Star, Sparkles, Film } from 'lucide-react';
 import { getNewsArticleBySlug, NEWS_ARTICLES } from '../data/newsData';
+import { resolveAnime, findAnimeInText } from '../data/animeResolver';
+import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
 import { useSEO } from '../lib/useSEO';
 import { useToast } from '../lib/Toast';
 import '../styles/news.css';
@@ -68,7 +71,15 @@ export function NewsArticle() {
 
   const related = NEWS_ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
 
-  // Render markdown-like sections cleanly
+  // Picture Logic: Resolve anime mentioned in article or metadata
+  const explicitAnime = (article.relatedAnimeSlugs || [])
+    .map((s) => resolveAnime(s))
+    .filter((a): a is NonNullable<typeof a> => Boolean(a));
+
+  const textAnime = findAnimeInText(article.content);
+  const allMentionedAnime = Array.from(new Map([...explicitAnime, ...textAnime].map((a) => [a.slug, a])).values());
+
+  // Render markdown-like sections cleanly with picture logic
   const paragraphs = article.content.split('\n\n');
 
   return (
@@ -114,14 +125,78 @@ export function NewsArticle() {
       </div>
 
       <div className="article-content" style={{ margin: '0 auto' }}>
+        {/* Featured Series Showcase Bar (Picture Logic with Name of Anime) */}
+        {allMentionedAnime.length > 0 && (
+          <section className="mentioned-anime-section">
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.95rem', fontWeight: 800, color: '#fff' }}>
+                <Film size={18} style={{ color: 'var(--crimson)' }} />
+                Featured Anime In This Guide ({allMentionedAnime.length})
+              </div>
+              <span style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.5)' }}>
+                Click any series to start streaming in 1080p
+              </span>
+            </div>
+
+            <div className="mentioned-anime-grid">
+              {allMentionedAnime.map((anime) => (
+                <Link
+                  key={anime.slug}
+                  to={anime.streamUrl}
+                  className="mentioned-anime-card"
+                  title={`Stream ${anime.title} on AniHub`}
+                >
+                  <img
+                    src={anime.art}
+                    alt={anime.title}
+                    className="mentioned-anime-card__poster"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="mentioned-anime-card__info">
+                    <span className="mentioned-anime-card__title">{anime.title}</span>
+                    <span className="mentioned-anime-card__sub">
+                      <Star size={11} fill="currentColor" style={{ color: 'var(--gold)' }} />
+                      {anime.rating} • {anime.format}
+                    </span>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--crimson-soft)', display: 'inline-flex', alignItems: 'center', gap: 3, fontWeight: 700, marginTop: 2 }}>
+                      <Play size={10} fill="currentColor" /> Stream Now
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Article Body with Inline Anime Picture Cards */}
         {paragraphs.map((p, i) => {
           const trimmed = p.trim();
+
+          // Section Header: Check if it mentions a known anime title
           if (trimmed.startsWith('### ')) {
-            return <h3 key={i}>{trimmed.replace('### ', '')}</h3>;
+            const headingText = trimmed.replace('### ', '');
+            const matchedHeadingAnime = resolveAnime(headingText);
+
+            return (
+              <div key={i}>
+                <h3>{headingText}</h3>
+                {/* If heading matches an anime like "1. Solo Leveling Season 2", show inline picture banner! */}
+                {matchedHeadingAnime && (
+                  <AnimeSpotlightCard
+                    anime={matchedHeadingAnime}
+                    variant="inline-banner"
+                    subtitle={`Featured in this section: Stream ${matchedHeadingAnime.title} with high-definition multi-source playback, synchronized subtitles, and zero ad takeovers on AniHubStream.`}
+                  />
+                )}
+              </div>
+            );
           }
+
           if (trimmed.startsWith('## ')) {
             return <h2 key={i}>{trimmed.replace('## ', '')}</h2>;
           }
+
           if (trimmed.startsWith('- ')) {
             const items = trimmed.split('\n').map((item) => item.replace(/^- /, ''));
             return (
@@ -132,6 +207,7 @@ export function NewsArticle() {
               </ul>
             );
           }
+
           return (
             <p
               key={i}
@@ -154,25 +230,29 @@ export function NewsArticle() {
           ))}
         </div>
 
-        {/* Backlink & Internal Link Box */}
+        {/* Backlink & Internal Streaming Call-to-Action */}
         <div
           style={{
             marginTop: 36,
-            padding: 20,
-            background: 'linear-gradient(135deg, rgba(255, 31, 74, 0.08) 0%, rgba(36, 211, 238, 0.08) 100%)',
-            border: '1px solid rgba(255, 255, 255, 0.12)',
-            borderRadius: 'var(--r-md)',
+            padding: 24,
+            background: 'linear-gradient(135deg, rgba(255, 31, 74, 0.1) 0%, rgba(36, 211, 238, 0.1) 100%)',
+            border: '1px solid rgba(255, 255, 255, 0.15)',
+            borderRadius: 'var(--r-lg)',
+            boxShadow: '0 12px 28px rgba(0,0,0,0.3)',
           }}
         >
-          <h4 style={{ margin: '0 0 8px 0', fontSize: '1.05rem', color: '#fff' }}>
-            Ready to Stream?
-          </h4>
-          <p style={{ margin: '0 0 14px 0', fontSize: '0.88rem', color: 'rgba(255,255,255,0.75)' }}>
-            Stream all featured episodes in high-definition 1080p with subbed and dubbed audio, accurate schedules, and skip-intro markers.
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+            <Sparkles size={20} style={{ color: 'var(--cyan)' }} />
+            <h4 style={{ margin: 0, fontSize: '1.15rem', color: '#fff', fontWeight: 800 }}>
+              Ready to Stream on AniHubStream?
+            </h4>
+          </div>
+          <p style={{ margin: '0 0 16px 0', fontSize: '0.92rem', color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>
+            Stream all featured episodes in high-definition 1080p with subbed and dubbed audio, accurate schedules, skip-intro markers, and community ratings.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Link to="/anime" className="btn btn--sm btn--primary">
-              Browse Catalogue
+            <Link to="/anime" className="btn btn--sm btn--primary" style={{ fontWeight: 700 }}>
+              Browse Anime Catalogue
             </Link>
             <Link to="/schedule" className="btn btn--sm btn--ghost">
               Check Airing Schedule
@@ -181,25 +261,39 @@ export function NewsArticle() {
         </div>
       </div>
 
-      {/* Related Articles */}
+      {/* Related Articles with Anime Chips */}
       {related.length > 0 && (
         <section style={{ marginTop: 60, paddingTop: 30, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
           <h3 style={{ fontSize: '1.3rem', marginBottom: 20, color: '#fff' }}>More Anime Guides</h3>
           <div className="news-grid">
-            {related.map((rel) => (
-              <article key={rel.slug} className="news-card">
-                <Link to={`/news/${rel.slug}`} className="news-card__thumb-link">
-                  <img src={rel.coverImage} alt={rel.title} className="news-card__thumb" loading="lazy" />
-                  <span className="news-card__category">{rel.category}</span>
-                </Link>
-                <div className="news-card__body">
-                  <h4 className="news-card__title">
-                    <Link to={`/news/${rel.slug}`}>{rel.title}</Link>
-                  </h4>
-                  <p className="news-card__excerpt">{rel.excerpt}</p>
-                </div>
-              </article>
-            ))}
+            {related.map((rel) => {
+              const relEntities = (rel.relatedAnimeSlugs || [])
+                .map((s) => resolveAnime(s))
+                .filter((a): a is NonNullable<typeof a> => Boolean(a));
+
+              return (
+                <article key={rel.slug} className="news-card">
+                  <Link to={`/news/${rel.slug}`} className="news-card__thumb-link">
+                    <img src={rel.coverImage} alt={rel.title} className="news-card__thumb" loading="lazy" />
+                    <span className="news-card__category">{rel.category}</span>
+                  </Link>
+                  <div className="news-card__body">
+                    <h4 className="news-card__title">
+                      <Link to={`/news/${rel.slug}`}>{rel.title}</Link>
+                    </h4>
+                    <p className="news-card__excerpt">{rel.excerpt}</p>
+
+                    {relEntities.length > 0 && (
+                      <div style={{ margin: '10px 0 14px 0', display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                        {relEntities.slice(0, 2).map((a) => (
+                          <AnimeSpotlightCard key={a.slug} anime={a} variant="compact-chip" />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
       )}

@@ -9,10 +9,17 @@
     "timestamp": 1795586480000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176246-ndH8bKh7cmzf.jpg",
     "matchedAnime": {
       "title": "mono",
       "slug": "mono",
-      "streamUrl": "/anime/mono"
+      "streamUrl": "/anime/mono",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx176246-ndH8bKh7cmzf.jpg",
+      "rating": 7.6,
+      "genres": [
+        "comedy",
+        "slice-of-life"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Supporting Cast for 'Cheat Fuyo' Announced\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following mono. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 112
@@ -27,10 +34,21 @@
     "timestamp": 1795579733000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx47-4CR68arv452h.jpg",
     "matchedAnime": {
       "title": "Akira",
       "slug": "akira",
-      "streamUrl": "/anime/akira"
+      "streamUrl": "/anime/akira",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx47-4CR68arv452h.jpg",
+      "rating": 7.9,
+      "genres": [
+        "action",
+        "adventure",
+        "horror",
+        "mystery",
+        "sci-fi",
+        "supernatural"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Historie Anime's Video Unveils More Cast & Staff, Theme Songs, January 8 Debut\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Akira. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of Akira on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 119
@@ -45,6 +63,7 @@
     "timestamp": 1795576373000,
     "format": "Anime",
     "category": "Anime News",
+    "imageUrl": null,
     "matchedAnime": null,
     "editorialSummary": "The latest industry development regarding \"'Haru to Gen ~70-sai, Hajimete Kosodate~' Anime's Teaser Reveals More Cast, Ending Song\" signals noteworthy momentum for the anime landscape. As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends. Editorial observers highlight how shifting broadcast formats and digital syndication agreements continue to redefine how new series reach international fandoms. Anime fans looking for current seasonal broadcasts can explore AniHubStream's searchable index featuring verified episode countdowns, HD releases, and subtitle tracks. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 108
@@ -59,6 +78,7 @@
     "timestamp": 1795572272000,
     "format": "Anime",
     "category": "Anime News",
+    "imageUrl": null,
     "matchedAnime": null,
     "editorialSummary": "The latest industry development regarding \"Live-Action 10 Things I Want to Do Before I Turn 40 Film's Trailer Reveals Theme Song\" signals noteworthy momentum for the anime landscape. As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends. Editorial observers highlight how shifting broadcast formats and digital syndication agreements continue to redefine how new series reach international fandoms. Whether discovering new seasonal releases or revisiting classic series, AniHubStream's streaming platform delivers fast, uninterrupted playback with high-definition multi-source streams. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 110
@@ -73,10 +93,18 @@
     "timestamp": 1795571433000,
     "format": "Manga",
     "category": "Manga Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-n2bF3NnELNsq.jpg",
     "matchedAnime": {
       "title": "Frieren",
       "slug": "sousou-no-frieren",
-      "streamUrl": "/anime/sousou-no-frieren"
+      "streamUrl": "/anime/sousou-no-frieren",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-n2bF3NnELNsq.jpg",
+      "rating": 9.1,
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Frieren: Beyond Journey's End Manga Gets Spinoff Manga Mini-Series\" signals noteworthy momentum for the manga landscape. While this announcement specifically centers on the Manga franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects. While this announcement highlights the print publication, newcomers can dive into the animated adaptation currently streaming in full HD with multi-language subs on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 98
@@ -91,6 +119,7 @@
     "timestamp": 1795569900000,
     "format": "Anime",
     "category": "Anime News",
+    "imageUrl": null,
     "matchedAnime": null,
     "editorialSummary": "The latest industry development regarding \"Live-Action 2027 Kaiji Film Unveils Full Trailer, Poster, More Cast\" signals noteworthy momentum for the anime landscape. As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends. Editorial observers highlight how shifting broadcast formats and digital syndication agreements continue to redefine how new series reach international fandoms. Anime fans looking for current seasonal broadcasts can explore AniHubStream's searchable index featuring verified episode countdowns, HD releases, and subtitle tracks. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 105
@@ -105,10 +134,21 @@
     "timestamp": 1795568104000,
     "format": "Manga",
     "category": "Manga Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx47-4CR68arv452h.jpg",
     "matchedAnime": {
       "title": "Akira",
       "slug": "akira",
-      "streamUrl": "/anime/akira"
+      "streamUrl": "/anime/akira",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx47-4CR68arv452h.jpg",
+      "rating": 7.9,
+      "genres": [
+        "action",
+        "adventure",
+        "horror",
+        "mystery",
+        "sci-fi",
+        "supernatural"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Mitei Hattori's Smile! Manga Gets Live-Action Series With Global Release Plans\" signals noteworthy momentum for the manga landscape. While this announcement specifically centers on the Manga franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects. Watch the anime adaptation on AniHubStream in 1080p full high definition with dual Japanese audio, synced multi-language subtitles, and skip-intro chapter markers on our dedicated Akira watch page. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 104
@@ -123,10 +163,17 @@
     "timestamp": 1795566600000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx160803-Rcr3IvhE7q9c.png",
     "matchedAnime": {
       "title": "MAGICAL GIRL RAISING PROJECT restart",
       "slug": "magical-girl-raising-project-restart",
-      "streamUrl": "/anime/magical-girl-raising-project-restart"
+      "streamUrl": "/anime/magical-girl-raising-project-restart",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx160803-Rcr3IvhE7q9c.png",
+      "rating": 6.1,
+      "genres": [
+        "action",
+        "fantasy"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Magical Girl Raising Project restart ‒ Episode 8\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following MAGICAL GIRL RAISING PROJECT restart. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 120
@@ -141,10 +188,17 @@
     "timestamp": 1795563000000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx186742-v7yfbefc8fuO.png",
     "matchedAnime": {
       "title": "A Certain Dark Item",
       "slug": "a-certain-dark-item",
-      "streamUrl": "/anime/a-certain-dark-item"
+      "streamUrl": "/anime/a-certain-dark-item",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx186742-v7yfbefc8fuO.png",
+      "rating": 6.6,
+      "genres": [
+        "action",
+        "sci-fi"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"A Certain Dark Item ‒ Episode 7\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following A Certain Dark Item. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. With anticipation building for this next chapter, fans can stream the complete animated series in full 1080p high definition—featuring dual audio options and accurate subtitles—over on AniHubStream's dedicated episode hub for A Certain Dark Item. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 126
@@ -159,10 +213,18 @@
     "timestamp": 1795559400000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b203275-YyNHygkzIjMC.jpg",
     "matchedAnime": {
       "title": "Devils' Crest",
       "slug": "devils-crest",
-      "streamUrl": "/anime/devils-crest"
+      "streamUrl": "/anime/devils-crest",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b203275-YyNHygkzIjMC.jpg",
+      "rating": 5.2,
+      "genres": [
+        "action",
+        "adventure",
+        "fantasy"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Devils' Crest ‒ Episode 4\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Devils' Crest. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. With anticipation building for this next chapter, fans can stream the complete animated series in full 1080p high definition—featuring dual audio options and accurate subtitles—over on AniHubStream's dedicated episode hub for Devils' Crest. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 120
@@ -177,10 +239,18 @@
     "timestamp": 1795539600000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199340-YQlmzvmcJzyt.jpg",
     "matchedAnime": {
       "title": "Rascal Does Not Dream of a Dear Friend",
       "slug": "rascal-does-not-dream-of-a-dear-friend",
-      "streamUrl": "/anime/rascal-does-not-dream-of-a-dear-friend"
+      "streamUrl": "/anime/rascal-does-not-dream-of-a-dear-friend",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx199340-YQlmzvmcJzyt.jpg",
+      "rating": 8.4,
+      "genres": [
+        "drama",
+        "romance",
+        "supernatural"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Rascal Does Not Dream of a Dear Friend Anime Film Review\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Rascal Does Not Dream of a Dear Friend. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by Anime News Network.",
     "wordCount": 126
@@ -195,10 +265,17 @@
     "timestamp": 1795504893000,
     "format": "Visual Novel",
     "category": "Visual Novel Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21578-XXfNNVseCg2G.jpg",
     "matchedAnime": {
       "title": "DAYS",
       "slug": "days",
-      "streamUrl": "/anime/days"
+      "streamUrl": "/anime/days",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21578-XXfNNVseCg2G.jpg",
+      "rating": 6.7,
+      "genres": [
+        "comedy",
+        "drama"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"'Mahoutsukai no Yoru' Sequel Anime Announced\" signals noteworthy momentum for the visual novel landscape. While this announcement specifically centers on the Visual Novel franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects. Watch the anime adaptation on AniHubStream in 1080p full high definition with dual Japanese audio, synced multi-language subtitles, and skip-intro chapter markers on our dedicated DAYS watch page. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 99
@@ -213,10 +290,18 @@
     "timestamp": 1795449360000,
     "format": "Manga",
     "category": "Manga Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx204011-j45RZoqYbdZK.jpg",
     "matchedAnime": {
       "title": "PSYREN",
       "slug": "psyren",
-      "streamUrl": "/anime/psyren"
+      "streamUrl": "/anime/psyren",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx204011-j45RZoqYbdZK.jpg",
+      "rating": 7,
+      "genres": [
+        "action",
+        "adventure",
+        "sci-fi"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"'Psyren' Announces Supporting Cast\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following PSYREN. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 110
@@ -231,10 +316,18 @@
     "timestamp": 1795432139000,
     "format": "Manga",
     "category": "Manga Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx269-d2GmRkJbMopq.png",
     "matchedAnime": {
       "title": "Bleach",
       "slug": "bleach",
-      "streamUrl": "/anime/bleach"
+      "streamUrl": "/anime/bleach",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx269-d2GmRkJbMopq.png",
+      "rating": 7.9,
+      "genres": [
+        "action",
+        "adventure",
+        "supernatural"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"'Zatsuyou Fuyo Jutsushi ga Jibun no Saikyou ni Kizuku made' Announces Additional Cast\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Bleach. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 119
@@ -249,10 +342,18 @@
     "timestamp": 1795360316000,
     "format": "Manga",
     "category": "Manga Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx158898-O3egiBNkxLQO.png",
     "matchedAnime": {
       "title": "Mission: Yozakura Family",
       "slug": "mission-yozakura-family",
-      "streamUrl": "/anime/mission-yozakura-family"
+      "streamUrl": "/anime/mission-yozakura-family",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx158898-O3egiBNkxLQO.png",
+      "rating": 7.4,
+      "genres": [
+        "action",
+        "comedy",
+        "romance"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"'Yozakura-san Chi no Daisakusen' Creator Launches New Manga\" signals noteworthy momentum for the manga landscape. While this announcement specifically centers on the Manga franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects. While this announcement highlights the print publication, newcomers can dive into the animated adaptation currently streaming in full HD with multi-language subs on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 95
@@ -267,10 +368,17 @@
     "timestamp": 1795360115000,
     "format": "Manga",
     "category": "Manga Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21578-XXfNNVseCg2G.jpg",
     "matchedAnime": {
       "title": "DAYS",
       "slug": "days",
-      "streamUrl": "/anime/days"
+      "streamUrl": "/anime/days",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21578-XXfNNVseCg2G.jpg",
+      "rating": 6.7,
+      "genres": [
+        "comedy",
+        "drama"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Manga 'Sakamoto Days' Concludes Serialization\" signals noteworthy momentum for the manga landscape. While this announcement specifically centers on the Manga franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects. While this announcement highlights the print publication, newcomers can dive into the animated adaptation currently streaming in full HD with multi-language subs on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 92
@@ -285,6 +393,7 @@
     "timestamp": 1795348683000,
     "format": "Anime",
     "category": "Anime News",
+    "imageUrl": null,
     "matchedAnime": null,
     "editorialSummary": "The latest industry development regarding \"Singer, Voice Actress Kiyono Yasuno Announces Marriage\" signals noteworthy momentum for the anime landscape. As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends. Editorial observers highlight how shifting broadcast formats and digital syndication agreements continue to redefine how new series reach international fandoms. Whether discovering new seasonal releases or revisiting classic series, AniHubStream's streaming platform delivers fast, uninterrupted playback with high-definition multi-source streams. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 99
@@ -299,10 +408,18 @@
     "timestamp": 1795347409000,
     "format": "Light Novel",
     "category": "Light Novel Franchise Update",
+    "imageUrl": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101165-v5NwPXWPFDuD.jpg",
     "matchedAnime": {
       "title": "GOBLIN SLAYER",
       "slug": "goblin-slayer",
-      "streamUrl": "/anime/goblin-slayer"
+      "streamUrl": "/anime/goblin-slayer",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101165-v5NwPXWPFDuD.jpg",
+      "rating": 7.1,
+      "genres": [
+        "action",
+        "adventure",
+        "fantasy"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Light Novel 'Sono Mono. Nochi ni…' Gets TV Anime in 2027\" signals noteworthy momentum for the light novel landscape. While this announcement specifically centers on the Light Novel franchise, fans of the series can experience the ongoing animated story right now. Production committee insights show that source publication milestones regularly coincide with new season developments and commemorative projects. Watch the anime adaptation on AniHubStream in 1080p full high definition with dual Japanese audio, synced multi-language subtitles, and skip-intro chapter markers on our dedicated GOBLIN SLAYER watch page. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 105
@@ -317,6 +434,7 @@
     "timestamp": 1795345075000,
     "format": "Light Novel",
     "category": "Light Novel News",
+    "imageUrl": null,
     "matchedAnime": null,
     "editorialSummary": "The latest industry development regarding \"'Tensei Kizoku, Kantei Skill de Nariagaru 3rd Season' Reveals Additional Cast, Fourth Promo for \"Assassin\" Arc\" signals noteworthy momentum for the anime landscape. As the anime industry continues its global expansion, developments regarding production committees, streaming licensing, animation studio workflows, and seasonal schedules offer valuable foresight into upcoming programming trends. Editorial observers highlight how shifting broadcast formats and digital syndication agreements continue to redefine how new series reach international fandoms. AniHubStream monitors ongoing Japanese broadcast updates to ensure international audiences have access to synchronized episode schedules, official streaming metadata, and timely announcements across all major seasonal titles with zero disruptive takeovers. Full reporting, official artwork, and complete announcement details were originally published by MyAnimeList.",
     "wordCount": 119
@@ -331,10 +449,18 @@
     "timestamp": 1791027000000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://img1.ak.crunchyroll.com/i/spire3-tmb/817078f6a59c2ea22a9e798ce909577b1790578469_thumb.jpg",
     "matchedAnime": {
       "title": "Another",
       "slug": "another",
-      "streamUrl": "/anime/another"
+      "streamUrl": "/anime/another",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11111-gvvE5bBYsyFo.png",
+      "rating": 7.1,
+      "genres": [
+        "horror",
+        "mystery",
+        "supernatural"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Detective Conan (1214-current) - Episode 1215 - The Crimson Closing Day (The Penultimate Show)\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Another. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by Crunchyroll News.",
     "wordCount": 121
@@ -349,10 +475,19 @@
     "timestamp": 1790694000000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1017583d42aaa83589b6aa95e4a51e6a1677868478_thumb.jpg",
     "matchedAnime": {
       "title": "Attack on Titan Final Season THE FINAL CHAPTERS Special 1",
       "slug": "attack-on-titan-final-season-the-final-chapters-special-1",
-      "streamUrl": "/anime/attack-on-titan-final-season-the-final-chapters-special-1"
+      "streamUrl": "/anime/attack-on-titan-final-season-the-final-chapters-special-1",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx146984-GXrLeT6vQqyP.jpg",
+      "rating": 8.7,
+      "genres": [
+        "action",
+        "drama",
+        "fantasy",
+        "mystery"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Attack on Titan Final Season (Polish Dub) - Attack on Titan Final Season THE FINAL CHAPTERS Special 1\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Attack on Titan Final Season THE FINAL CHAPTERS Special 1. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. With anticipation building for this next chapter, fans can stream the complete animated series in full 1080p high definition—featuring dual audio options and accurate subtitles—over on AniHubStream's dedicated episode hub for Attack on Titan Final Season THE FINAL CHAPTERS Special 1. Full reporting, official artwork, and complete announcement details were originally published by Crunchyroll News.",
     "wordCount": 148
@@ -367,10 +502,21 @@
     "timestamp": 1790559000000,
     "format": "Anime",
     "category": "Anime Franchise Update",
+    "imageUrl": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f276dfd0975f676f12818710081fc1161311018465_thumb.jpg",
     "matchedAnime": {
       "title": "Naruto",
       "slug": "naruto",
-      "streamUrl": "/anime/naruto"
+      "streamUrl": "/anime/naruto",
+      "art": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20-dE6UHbFFg1A5.jpg",
+      "rating": 8,
+      "genres": [
+        "action",
+        "adventure",
+        "comedy",
+        "drama",
+        "fantasy",
+        "supernatural"
+      ]
     },
     "editorialSummary": "The latest industry development regarding \"Naruto Shippuden: The Assembly of the Five Kage (Telugu Dub) - Episode 220 - Prophecy of the Great Lord Elder\" signals noteworthy momentum for the anime landscape. This announcement directly impacts the global community following Naruto. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. Industry observers note that consistent pacing and faithful adaptation of the source material remain essential components of the franchise's enduring popularity. Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of Naruto on AniHubStream. Full reporting, official artwork, and complete announcement details were originally published by Crunchyroll News.",
     "wordCount": 125
