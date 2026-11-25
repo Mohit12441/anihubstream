@@ -67,6 +67,35 @@ function getDiscordWebhookUrl(options = {}) {
 }
 
 /**
+ * Reads DISCORD_BOT_TOKEN and DISCORD_CHANNEL_ID from environment or root .env file
+ * @param {object} [options]
+ * @param {string} [options.discordBotToken]
+ * @param {string} [options.discordChannelId]
+ * @param {boolean} [options.ignoreEnvFile]
+ * @returns {{ token: string, channelId: string } | null}
+ */
+function getDiscordBotConfig(options = {}) {
+  const token = options.discordBotToken || process.env.DISCORD_BOT_TOKEN || null;
+  const channelId = options.discordChannelId || process.env.DISCORD_CHANNEL_ID || null;
+  if (token && channelId) return { token, channelId };
+  if (options.ignoreEnvFile) return null;
+  try {
+    const envPath = path.resolve(__dirname, '../.env');
+    if (fs.existsSync(envPath)) {
+      const content = fs.readFileSync(envPath, 'utf8');
+      const tokenMatch = content.match(/DISCORD_BOT_TOKEN\s*=\s*([a-zA-Z0-9_.-]+)/);
+      const chanMatch = content.match(/DISCORD_CHANNEL_ID\s*=\s*([0-9]+)/);
+      const resolvedToken = token || (tokenMatch && tokenMatch[1]) || null;
+      const resolvedChan = channelId || (chanMatch && chanMatch[1]) || null;
+      if (resolvedToken && resolvedChan) {
+        return { token: resolvedToken, channelId: resolvedChan };
+      }
+    }
+  } catch {}
+  return null;
+}
+
+/**
  * Loads the push ledger to prevent duplicate submissions within cooldown period
  * @returns {Record<string, number>}
  */
@@ -162,7 +191,8 @@ export async function submitUrlsToBing(urls, options = {}) {
  */
 export async function broadcastToDiscord(urls, options = {}) {
   const webhookUrl = getDiscordWebhookUrl(options);
-  if (!webhookUrl) {
+  const botConfig = getDiscordBotConfig(options);
+  if (!webhookUrl && !botConfig) {
     return { success: true, count: 0, skipped: true };
   }
 
@@ -177,37 +207,48 @@ export async function broadcastToDiscord(urls, options = {}) {
   }).join('\n');
 
   try {
-    const res = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        username: 'AniHubStream Episode Bot',
-        avatar_url: 'https://anihubstream.com/favicon.svg',
-        embeds: [
-          {
-            title: '🎬 New Anime Episodes Released!',
-            description: `Fresh episodes are available to stream online now on AniHubStream in Sub & Dub:\n\n${linksList}`,
-            color: 6445550,
-            footer: {
-              text: 'AniHubStream • Free Anime Streaming & Episode Tracker',
-            },
-            timestamp: new Date().toISOString(),
+    const targetUrl = webhookUrl || `https://discord.com/api/v10/channels/${botConfig?.channelId}/messages`;
+    const headers = { 'Content-Type': 'application/json' };
+    if (!webhookUrl && botConfig) {
+      headers['Authorization'] = `Bot ${botConfig.token}`;
+    }
+
+    const payload = {
+      embeds: [
+        {
+          title: '🎬 New Anime Episodes Released!',
+          description: `Fresh episodes are available to stream online now on AniHubStream in Sub & Dub:\n\n${linksList}`,
+          color: 6445550,
+          footer: {
+            text: 'AniHubStream • Free Anime Streaming & Episode Tracker',
           },
-        ],
-      }),
+          timestamp: new Date().toISOString(),
+        },
+      ],
+    };
+
+    if (webhookUrl) {
+      payload.username = 'AniHubStream Episode Bot';
+      payload.avatar_url = 'https://anihubstream.com/favicon.svg';
+    }
+
+    const res = await fetch(targetUrl, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(payload),
       signal: AbortSignal.timeout(10000),
     });
 
     if (!res.ok) {
       const text = await res.text();
-      console.warn(`[auto-push] ⚠️ Discord webhook HTTP ${res.status}: ${text}`);
+      console.warn(`[auto-push] ⚠️ Discord API HTTP ${res.status}: ${text}`);
       return { success: false, count: 0, error: `HTTP ${res.status}: ${text}` };
     }
 
     console.log(`[auto-push] ✅ Broadcasted ${batch.length} episode links to Discord community!`);
     return { success: true, count: batch.length };
   } catch (err) {
-    console.warn('[auto-push] ⚠️ Discord webhook error:', err.message);
+    console.warn('[auto-push] ⚠️ Discord broadcast error:', err.message);
     return { success: false, count: 0, error: err.message };
   }
 }

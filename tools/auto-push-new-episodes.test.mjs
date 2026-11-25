@@ -110,3 +110,29 @@ test('auto-push: broadcastToDiscord sends rich webhook payload when configured',
     globalThis.fetch = origFetch;
   }
 });
+
+test('auto-push: broadcastToDiscord sends via Bot Token and Channel ID', async () => {
+  const origFetch = globalThis.fetch;
+  let targetUrl = '';
+  let authHeader = '';
+  // @ts-ignore
+  globalThis.fetch = async (url, opts) => {
+    targetUrl = String(url);
+    authHeader = opts.headers['Authorization'];
+    return new Response(JSON.stringify({ id: 'msg-123' }), { status: 200 });
+  };
+
+  try {
+    const res = await broadcastToDiscord(['https://anihubstream.com/watch/solo-leveling/1'], {
+      discordBotToken: 'mock-bot-token',
+      discordChannelId: '987654321',
+      ignoreEnvFile: true,
+    });
+    assert.equal(res.success, true);
+    assert.equal(res.count, 1);
+    assert.equal(targetUrl, 'https://discord.com/api/v10/channels/987654321/messages');
+    assert.equal(authHeader, 'Bot mock-bot-token');
+  } finally {
+    globalThis.fetch = origFetch;
+  }
+});
