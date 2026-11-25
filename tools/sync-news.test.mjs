@@ -3,6 +3,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import Parser from 'rss-parser';
 import {
   generateNewsId,
   slugifyTitle,
@@ -10,9 +11,84 @@ import {
   detectFormatContext,
   deduplicateNewsItems,
   generateEditorialEnrichment,
+  sanitizeXml,
+  AI_EDITORIAL_SYSTEM_PROMPT,
 } from './sync-news.mjs';
 
-test('Automated Anime News Ingestion & Editorial Enrichment Pipeline', async (t) => {
+/**
+ * Sample mockData array testing sanitization, entity matching, and CTA variations
+ * across Anime and Manga/Light Novel sources.
+ */
+export const mockData = [
+  {
+    title: "Psyren Manga Gets TV Anime Adaptation & Official Teaser\x00",
+    link: "https://myanimelist.net/news/78910",
+    snippet: "Toshiaki Iwashiro's supernatural battle manga Psyren is officially receiving a television anime adaptation.",
+    pubDate: "2026-11-25T01:30:00.000Z",
+    source: "MyAnimeList",
+    imageUrl: "https://myanimelist.net/images/news/psyren.jpg",
+    matchedAnime: { title: "Psyren", slug: "psyren" }
+  },
+  {
+    title: "Mahoutsukai no Yoru Visual Novel Receives Official Manga Serialization Sequel & Volume 1 Preview",
+    link: "https://myanimelist.net/news/78912",
+    snippet: "Type-Moon announced today that the legendary visual novel is expanding with a brand new spinoff volume.",
+    pubDate: "2026-11-25T02:00:00.000Z",
+    source: "MyAnimeList",
+    imageUrl: "https://myanimelist.net/images/news/mahoutsukai.jpg",
+    matchedAnime: null
+  },
+  {
+    title: "Solo Leveling Season 2 Broadcast Schedule Set",
+    link: "https://www.animenewsnetwork.com/news/2026-11-25/solo-leveling-season-2/.101",
+    snippet: "Aniplex announced the official international broadcast release dates for Solo Leveling Season 2.",
+    pubDate: "2026-11-25T02:30:00.000Z",
+    source: "Anime News Network",
+    imageUrl: "https://cdn.animenewsnetwork.com/thumbnails/solo.jpg",
+    matchedAnime: { title: "Solo Leveling", slug: "solo-leveling" }
+  },
+  {
+    title: "Solo Leveling Gets Second Season TV Premiere Details",
+    link: "https://www.crunchyroll.com/news/item/solo-leveling-second-season",
+    snippet: "Crunchyroll announces simulcast streaming details for Solo Leveling's return.",
+    pubDate: "2026-11-25T03:00:00.000Z",
+    source: "Crunchyroll News",
+    imageUrl: "https://crunchyroll.com/news/solo.jpg",
+    matchedAnime: { title: "Solo Leveling", slug: "solo-leveling" }
+  }
+];
+
+test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async (t) => {
+  await t.test('sanitizeXml cleans unescaped ampersands and control characters for rss-parser', async () => {
+    const rawXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Crunchyroll News & Updates &amp; Highlights</title>
+    <link>https://www.crunchyroll.com/news</link>
+    <description>Latest Anime News & Releases</description>
+    <item>
+      <title>Solo Leveling & More Anime News\x00\x08</title>
+      <link>https://www.crunchyroll.com/news/item-1</link>
+      <description>Check out Season 2 & new trailers &lt;b&gt;exclusive&lt;/b&gt;!</description>
+      <pubDate>Wed, 25 Nov 2026 05:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>`;
+
+    const cleaned = sanitizeXml(rawXml);
+    assert.ok(!cleaned.includes('\x00'));
+    assert.ok(!cleaned.includes('\x08'));
+    assert.ok(cleaned.includes('&amp; More'));
+    assert.ok(cleaned.includes('&amp; Highlights')); // existing &amp; remains valid, not &amp;amp;
+    assert.ok(cleaned.includes('&lt;b&gt;'));
+
+    const parser = new Parser();
+    const feed = await parser.parseString(cleaned);
+    assert.equal(feed.title, 'Crunchyroll News & Updates & Highlights');
+    assert.equal(feed.items.length, 1);
+    assert.equal(feed.items[0].title, 'Solo Leveling & More Anime News');
+  });
+
   await t.test('generateNewsId produces deterministic 12-char hex id', () => {
     const id1 = generateNewsId('https://animenewsnetwork.com/test-article');
     const id2 = generateNewsId('https://animenewsnetwork.com/test-article');
@@ -44,75 +120,76 @@ test('Automated Anime News Ingestion & Editorial Enrichment Pipeline', async (t)
     assert.equal(detectFormatContext('Demon Slayer Infinity Castle Movie Trilogy Premieres', 'Ufotable theatrical anime'), 'Anime');
   });
 
-  await t.test('Enrichment handles MAL anime-related news with "Watch the anime adaptation" CTA', () => {
-    const mockMalAnimeItem = {
-      title: "Psyren Manga Creator's New Project Receives TV Anime Greenlit",
-      contentSnippet: "Toshiaki Iwashiro's supernatural psychic series is officially receiving an animated adaptation.",
-    };
-    const mockMatchedAnime = {
-      title: "Psyren",
-      slug: "psyren",
-    };
-
-    const enriched = generateEditorialEnrichment(mockMalAnimeItem, mockMatchedAnime, 'MyAnimeList');
-    assert.ok(enriched.includes('Watch the anime adaptation on AniHubStream'));
-    assert.ok(enriched.includes('Psyren'));
-    assert.ok(enriched.includes('MyAnimeList'));
-  });
-
-  await t.test('Enrichment handles MAL manga/LN news without anime with "Check out our anime catalog" CTA', () => {
-    const mockMalLnMangaItem = {
-      title: "Mahoutsukai no Yoru Visual Novel Receives Official Manga Serialization Sequel",
-      contentSnippet: "Type-Moon announced today that the legendary visual novel is expanding with a brand new spinoff volume.",
-    };
-
-    const enriched = generateEditorialEnrichment(mockMalLnMangaItem, null, 'MyAnimeList');
-    assert.ok(enriched.includes('Check out our anime catalog for similar titles'));
-    assert.ok(enriched.includes('visual novel'));
-    assert.ok(enriched.includes('MyAnimeList'));
-  });
-
-  await t.test('deduplicateNewsItems merges duplicate ANN and MAL stories prioritizing image and earlier time', () => {
-    const mockFeed = [
+  await t.test('Upgraded Deduplication Logic uses 0.30 threshold for matching anime to catch paraphrased titles', () => {
+    // Two articles with paraphrased titles about Solo Leveling
+    const items = [
       {
-        title: "Psyren TV Anime Adaptation Officially Announced",
-        link: "https://www.animenewsnetwork.com/news/2026-11-25/psyren-anime/.123",
-        snippet: "Toshiaki Iwashiro's supernatural battle manga Psyren is getting a television anime.",
-        pubDate: "2026-11-25T01:00:00.000Z",
+        title: "Solo Leveling Season 2 Broadcast Schedule Set",
+        link: "https://www.animenewsnetwork.com/news/2026-11-25/solo-leveling-season-2/.101",
+        pubDate: "2026-11-25T02:30:00.000Z",
         source: "Anime News Network",
-        imageUrl: null,
-        matchedAnime: { title: "Psyren", slug: "psyren" }
+        imageUrl: "https://cdn.animenewsnetwork.com/thumbnails/solo.jpg",
+        matchedAnime: { title: "Solo Leveling", slug: "solo-leveling" }
       },
       {
-        title: "Psyren Manga Gets TV Anime Adaptation",
-        link: "https://myanimelist.net/news/78910",
-        snippet: "Shueisha announced that Psyren manga is receiving a TV anime adaptation.",
-        pubDate: "2026-11-25T01:30:00.000Z",
-        source: "MyAnimeList",
-        imageUrl: "https://myanimelist.net/images/news/psyren.jpg",
-        matchedAnime: { title: "Psyren", slug: "psyren" }
-      },
-      {
-        title: "Unrelated One Piece Special Episode Announced",
-        link: "https://myanimelist.net/news/78911",
-        snippet: "Toei Animation announced a new episode special.",
-        pubDate: "2026-11-25T02:00:00.000Z",
-        source: "MyAnimeList",
+        title: "Solo Leveling Gets Second Season TV Premiere Details",
+        link: "https://www.crunchyroll.com/news/item/solo-leveling-second-season",
+        pubDate: "2026-11-25T03:00:00.000Z",
+        source: "Crunchyroll News",
         imageUrl: null,
-        matchedAnime: { title: "One Piece", slug: "one-piece" }
+        matchedAnime: { title: "Solo Leveling", slug: "solo-leveling" }
       }
     ];
 
-    const result = deduplicateNewsItems(mockFeed);
+    const deduped = deduplicateNewsItems(items);
+    // Should deduplicate into 1 story because matchedAnime.slug is equal and similarity >= 0.30
+    assert.equal(deduped.length, 1);
+    // Prioritizes item with image
+    assert.equal(deduped[0].source, 'Anime News Network');
+    assert.equal(deduped[0].imageUrl, 'https://cdn.animenewsnetwork.com/thumbnails/solo.jpg');
+  });
 
-    // 3 raw items should deduplicate down to 2 unique stories
-    assert.equal(result.length, 2);
+  await t.test('AI_EDITORIAL_SYSTEM_PROMPT is exported and defines varied CTA reference examples', () => {
+    assert.ok(AI_EDITORIAL_SYSTEM_PROMPT.includes('Scaled Content Abuse'));
+    assert.ok(AI_EDITORIAL_SYSTEM_PROMPT.includes('Do not copy these examples verbatim'));
+    assert.ok(AI_EDITORIAL_SYSTEM_PROMPT.includes('Reference Example A'));
+    assert.ok(AI_EDITORIAL_SYSTEM_PROMPT.includes('Reference Example D'));
+    assert.ok(AI_EDITORIAL_SYSTEM_PROMPT.includes('AniHubStream'));
+  });
 
-    // The Psyren story should pick the MyAnimeList item because it has a valid imageUrl
-    const psyrenStory = result.find(r => r.title.includes('Psyren'));
-    assert.ok(psyrenStory);
-    assert.equal(psyrenStory.source, 'MyAnimeList');
-    assert.equal(psyrenStory.imageUrl, 'https://myanimelist.net/images/news/psyren.jpg');
+  await t.test('generateEditorialEnrichment dynamically produces varied journalistic CTAs', () => {
+    const itemA = {
+      title: "Solo Leveling Season 2 Trailer Released",
+      link: "https://example.com/article-a",
+      contentSnippet: "A new trailer showcases Jinwoo's upcoming battles in season 2.",
+    };
+    const itemB = {
+      title: "Solo Leveling Episode Air Date Confirmed",
+      link: "https://example.com/article-b",
+      contentSnippet: "Broadcasters confirm the air date for the upcoming season.",
+    };
+    const anime = { title: "Solo Leveling", slug: "solo-leveling" };
+
+    const enrichedA = generateEditorialEnrichment(itemA, anime, 'Anime News Network');
+    const enrichedB = generateEditorialEnrichment(itemB, anime, 'MyAnimeList');
+
+    assert.ok(enrichedA.includes('AniHubStream'));
+    assert.ok(enrichedB.includes('AniHubStream'));
+    // Both are enriched and have different text
+    assert.notEqual(enrichedA, enrichedB);
+  });
+
+  await t.test('mockData array items process cleanly through enrichment pipeline', () => {
+    const deduped = deduplicateNewsItems(mockData);
+    // 4 items: Psyren (1), Mahoutsukai (1), Solo Leveling (2 paraphrased deduped to 1) -> Total 3
+    assert.equal(deduped.length, 3);
+
+    for (const item of deduped) {
+      const enriched = generateEditorialEnrichment(item, item.matchedAnime, item.source);
+      assert.ok(enriched.length > 100);
+      assert.ok(enriched.includes('AniHubStream'));
+      assert.ok(enriched.includes(item.source));
+    }
   });
 
   await t.test('Generated public news files and sitemap exist and contain valid items', () => {
