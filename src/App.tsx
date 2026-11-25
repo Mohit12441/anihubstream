@@ -28,6 +28,8 @@ const Privacy = lazy(() => import('./pages/Privacy').then((m) => ({ default: m.P
 const Terms = lazy(() => import('./pages/Terms').then((m) => ({ default: m.Terms })));
 const Contact = lazy(() => import('./pages/Contact').then((m) => ({ default: m.Contact })));
 const Search = lazy(() => import('./pages/Search').then((m) => ({ default: m.Search })));
+const News = lazy(() => import('./pages/News').then((m) => ({ default: m.News })));
+const NewsArticle = lazy(() => import('./pages/NewsArticle').then((m) => ({ default: m.NewsArticle })));
 const Embed = lazy(() => import('./pages/Embed').then((m) => ({ default: m.Embed })));
 const NotFound = lazy(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
@@ -97,6 +99,8 @@ export function App() {
               <Route path="/requests" element={<Requests />} />
               <Route path="/discover" element={<Discover />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/news/:slug" element={<NewsArticle />} />
               <Route path="/about" element={<About />} />
               <Route path="/dmca" element={<Dmca />} />
               <Route path="/privacy" element={<Privacy />} />

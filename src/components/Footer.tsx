@@ -36,6 +36,9 @@ export function Footer() {
                 <Link to="/schedule">Airing Schedule</Link>
               </li>
               <li>
+                <Link to="/news">News &amp; Guides</Link>
+              </li>
+              <li>
                 <Link to="/discover">Discover</Link>
               </li>
               <li>

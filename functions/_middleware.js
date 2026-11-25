@@ -30,6 +30,7 @@ export async function onRequest(context) {
       'Allow: /api/stats',
       'Allow: /api/search',
       'Allow: /api/img',
+      'Allow: /news',
       'Disallow: /search',
       'Disallow: /*?s=',
       'Disallow: /*?genre=',
@@ -531,6 +532,56 @@ export async function onRequest(context) {
   } else if (path === '/discover') {
     title = 'Discover Trending & Popular Anime | AniHubStream';
     desc = 'Find your next favorite anime series. Browse trending releases, community favorites, and staff picks.';
+  } else if (path === '/news') {
+    title = 'Anime News, Guides & Episode Schedules | AniHubStream';
+    desc = 'Explore the latest anime news, seasonal schedule breakdowns, top 10 rankings, and deep-dive analysis on AniHubStream.';
+    jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'AniHubStream Anime News & Editorial',
+      url: `${origin}/news`,
+      description: desc,
+    };
+  } else if (path.startsWith('/news/')) {
+    const slug = path.replace('/news/', '').replace(/\/$/, '');
+    const newsMap = {
+      'spring-2026-anime-season-guide': {
+        title: 'Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates | AniHubStream',
+        desc: 'From battle shonen to supernatural mysteries, here is your definitive guide to the Spring 2026 anime season.',
+      },
+      'top-10-dark-fantasy-anime-masterpieces': {
+        title: 'Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked) | AniHubStream',
+        desc: 'A deep dive into the grittiest, most emotionally resonant dark fantasy anime ever produced.',
+      },
+      'solo-leveling-reawakening-complete-guide': {
+        title: 'Solo Leveling ReAwakening: Story Arcs, Power Scaling & Watch Guide | AniHubStream',
+        desc: 'Everything you need to know about Sung Jinwoo’s journey from E-Rank hunter to Monarch of Shadows.',
+      },
+      'best-isekai-anime-ranked-by-worldbuilding': {
+        title: 'The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action | AniHubStream',
+        desc: 'Move beyond generic reincarnation tropes. Standout isekai series with intricate magic systems and realism.',
+      },
+    };
+    const item = newsMap[slug] || {
+      title: 'Anime News & Editorial Guide | AniHubStream',
+      desc: 'Read in-depth anime analysis, seasonal guides, and rankings on AniHubStream.',
+    };
+    title = item.title;
+    desc = item.desc;
+    jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'NewsArticle',
+      headline: item.title,
+      description: item.desc,
+      mainEntityOfPage: `${origin}/news/${slug}`,
+      datePublished: '2026-03-20T10:00:00+00:00',
+      author: { '@type': 'Organization', name: 'AniHubStream Editorial' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'AniHubStream',
+        url: origin,
+      },
+    };
   } else if (path === '/about') {
     title = 'About AniHubStream — Free Anime Streaming Platform';
     desc = 'Learn about AniHubStream, our mission, catalog data sources (Kitsu, AniList), and high-performance streaming architecture.';
@@ -795,6 +846,28 @@ ${scheduleLinksHtml}
 <a href="/anime/bleach" style="display:inline-block;padding:0.4rem 0.8rem;background:#181824;color:#f0f0f5;border:1px solid #2e2e42;border-radius:6px;text-decoration:none;">Bleach</a>
 </nav>
 </section>
+</main>`;
+  } else if (path === '/news') {
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:960px;margin:0 auto;line-height:1.6;color:#e2e8f0;">
+<h1>AniHubStream Anime News, Seasonal Guides & Rankings</h1>
+<p>In-depth original editorial content, seasonal broadcast schedules, character analysis, and comprehensive anime rankings curated by the AniHubStream team.</p>
+<section style="margin:2rem 0;">
+<h2>Featured Editorial Articles & Guides</h2>
+<ul style="list-style:none;padding:0;">
+<li style="margin-bottom:1.5rem;"><a href="/news/spring-2026-anime-season-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates</a><p>From high-octane battle shonen to atmospheric supernatural mysteries, here is your definitive guide to the blockbuster Spring 2026 anime season.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/top-10-dark-fantasy-anime-masterpieces" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)</a><p>A deep dive into the grittiest, most emotionally resonant dark fantasy anime ever produced, exploring worldbuilding, philosophical tension, and animation.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/solo-leveling-reawakening-complete-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Solo Leveling ReAwakening: Story Arcs, Power Scaling & Watch Guide</a><p>Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/best-isekai-anime-ranked-by-worldbuilding" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action</a><p>Move beyond generic reincarnation tropes. These standout isekai series elevate the genre with intricate magic systems, economic realism, and profound character growth.</p></li>
+</ul>
+</section>
+</main>`;
+  } else if (path.startsWith('/news/')) {
+    const slug = path.replace('/news/', '').replace(/\/$/, '');
+    preHtml = `<main class="crawler-content" style="padding:2rem;max-width:860px;margin:0 auto;line-height:1.7;color:#e2e8f0;">
+<nav aria-label="Breadcrumb" style="font-size:0.9rem;margin-bottom:1rem;"><a href="/" style="color:#ff1f4a;">Home</a> &gt; <a href="/news" style="color:#ff1f4a;">News &amp; Guides</a></nav>
+<h1>AniHubStream Editorial Analysis: ${slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</h1>
+<p>Read full episode guides, seasonal release calendars, and character deep-dives on AniHubStream. Stream all featured anime episodes online free in 1080p high definition with multi-language subtitles and synchronized broadcast schedules.</p>
+<p style="margin-top:2rem;"><a href="/anime" style="color:#ff1f4a;font-weight:bold;">Browse All Anime Titles</a> &bull; <a href="/schedule" style="color:#ff1f4a;font-weight:bold;">View Airing Schedule</a> &bull; <a href="/news" style="color:#ff1f4a;font-weight:bold;">Back to News Hub</a></p>
 </main>`;
   } else if (path === '/' || path === '') {
     const topHomeSlugs = [

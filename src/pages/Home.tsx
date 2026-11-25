@@ -8,6 +8,8 @@ import { ContinueWatchingRow } from '../components/ContinueWatchingRow';
 import { RecommendedShelf } from '../components/RecommendedShelf';
 import { HeroSlideshow } from '../components/HeroSlideshow';
 import { HomeSchedule } from '../components/HomeSchedule';
+import { TrustBadges } from '../components/TrustBadges';
+import { NewsSpotlight } from '../components/NewsSpotlight';
 import { genreIcon } from '../components/genreIcons';
 import { listCatalogue } from '../data/api';
 import { artUrl, hydrateCard } from '../data/model';
@@ -123,6 +125,8 @@ export function Home() {
     <div className="page home">
       <HeroSlideshow items={home.trending} />
 
+      <TrustBadges />
+
       <div className="home__rows shell">
         {status !== 'ready' ? (
           status === 'error' ? (
@@ -173,6 +177,8 @@ export function Home() {
         </section>
 
         <HomeSchedule />
+
+        <NewsSpotlight />
 
         <section className="home__row" aria-label="Themed sections">
           <div className="moods">
