@@ -16,6 +16,7 @@ import {
   SOURCES,
   generateSeoTitle,
   fetchOpenGraphImage,
+  extractAnimeTitleForSearch,
 } from './sync-news.mjs';
 
 /**
@@ -248,5 +249,20 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     assert.ok(!titleWithTag.includes('[Exclusive]'));
     assert.ok(!titleWithTag.includes('- Anime Corner'));
     assert.ok(titleWithTag.includes('Jujutsu Kaisen'));
+  });
+
+  await t.test('extractAnimeTitleForSearch strips headline boilerplate to isolate anime series title', () => {
+    assert.equal(
+      extractAnimeTitleForSearch("The Kept Man of the Princess Knight Anime's New Video Reveals More Cast"),
+      "The Kept Man of the Princess Knight"
+    );
+    assert.equal(
+      extractAnimeTitleForSearch("Solo Leveling Season 2: Arise from the Shadow Premieres in April"),
+      "Solo Leveling Season 2"
+    );
+    assert.equal(
+      extractAnimeTitleForSearch("News: Frieren TV Anime Announces Spinoff Episode"),
+      "Frieren"
+    );
   });
 });

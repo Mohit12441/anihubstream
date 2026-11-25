@@ -211,6 +211,34 @@ export async function fetchOpenGraphImage(url) {
 }
 
 /**
+ * Extracts a clean anime search term from raw news headlines
+ * Strips common headline phrases like "Anime's New Video", "Gets TV Anime", etc.
+ * @param {string} rawTitle
+ * @returns {string}
+ */
+export function extractAnimeTitleForSearch(rawTitle) {
+  if (!rawTitle || typeof rawTitle !== 'string') return '';
+  let clean = rawTitle.trim();
+  clean = clean.replace(/^(news|report|announcement|update|scoop):\s*/i, '');
+  clean = clean.split(/[:\-\(\]]/)[0].trim();
+  clean = clean.replace(/'s\s+(new\s+)?(video|trailer|visual|cast|staff|theme|opening|ending|release|premiere).*/i, '');
+  clean = clean.replace(/\s+(tv\s+)?anime('s)?\b.*/i, '');
+  clean = clean.replace(/\s+(reveals|announces|debuts|premieres|streams|delays|confirms|unveils|gets|teases)\b.*/i, '');
+  return clean.trim();
+}
+
+const OFFICIAL_BANNER_FALLBACKS = [
+  '/images/banners/banner-spring-2026.jpg',
+  '/images/banners/banner-solo-leveling.jpg',
+  '/images/banners/banner-demon-slayer.jpg',
+  '/images/banners/banner-jujutsu-kaisen.jpg',
+  '/images/banners/banner-one-piece.jpg',
+  '/images/banners/banner-frieren.jpg',
+  '/images/banners/banner-chainsaw-man.jpg',
+  '/images/banners/banner-dark-fantasy.jpg',
+];
+
+/**
  * Generates an optimized SEO title targeting search engine carousels (Bing / Google News)
  * Enforces 50-65 character sweet spot and high-intent franchise keywords.
  * @param {string} rawTitle
@@ -583,7 +611,7 @@ export async function syncNews(options = {}) {
     // Deep industry metadata enrichment via AniList GraphQL
     let aniListMeta = null;
     try {
-      const searchTitle = item.matchedAnime ? item.matchedAnime.title : item.title.split(/[:\-\(\]]/)[0];
+      const searchTitle = item.matchedAnime ? item.matchedAnime.title : extractAnimeTitleForSearch(item.title);
       aniListMeta = await fetchAniListMetadata(searchTitle);
     } catch {
       // Non-fatal, continues seamlessly
@@ -600,6 +628,10 @@ export async function syncNews(options = {}) {
     }
     if (!finalImageUrl) {
       finalImageUrl = aniListMeta?.bannerImage || aniListMeta?.coverImage || item.matchedAnime?.art || null;
+    }
+    // High-resolution authentic anime visual guarantee: zero missing images
+    if (!finalImageUrl) {
+      finalImageUrl = OFFICIAL_BANNER_FALLBACKS[enrichedNews.length % OFFICIAL_BANNER_FALLBACKS.length];
     }
 
     const enrichedSummary = generateEditorialEnrichment(item, item.matchedAnime, item.source, aniListMeta);
