@@ -25,6 +25,22 @@ const BING_API_ENDPOINT = 'https://ssl.bing.com/webmaster/api.svc/json/SubmitUrl
 const LEDGER_PATH = path.resolve(__dirname, '.cache/pushed-episodes.json');
 
 /**
+ * Reads BING_WEBMASTER_API_KEY from environment or root .env file
+ */
+function getBingApiKey() {
+  if (process.env.BING_WEBMASTER_API_KEY) return process.env.BING_WEBMASTER_API_KEY;
+  try {
+    const envPath = path.resolve(__dirname, '../.env');
+    if (fs.existsSync(envPath)) {
+      const content = fs.readFileSync(envPath, 'utf8');
+      const match = content.match(/BING_WEBMASTER_API_KEY\s*=\s*([a-zA-Z0-9_-]+)/);
+      if (match && match[1]) return match[1];
+    }
+  } catch {}
+  return null;
+}
+
+/**
  * Loads the push ledger to prevent duplicate submissions within cooldown period
  * @returns {Record<string, number>}
  */
@@ -66,7 +82,7 @@ export function saveLedger(ledger) {
  * @returns {Promise<{ success: boolean, count: number, error?: string }>}
  */
 export async function submitUrlsToBing(urls, options = {}) {
-  const apiKey = options.apiKey || process.env.BING_WEBMASTER_API_KEY;
+  const apiKey = options.apiKey || getBingApiKey();
   const siteUrl = options.siteUrl || DEFAULT_SITE_URL;
 
   if (!apiKey) {
