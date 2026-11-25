@@ -189,6 +189,45 @@ export async function submitUrlsToBing(urls, options = {}) {
  * @param {boolean} [options.ignoreEnvFile]
  * @returns {Promise<{ success: boolean, count: number, skipped?: boolean, error?: string }>}
  */
+/**
+ * Resolves anime metadata and poster image from URL
+ * @param {string} url
+ */
+function getAnimeMetaFromUrl(url) {
+  const match = url.match(/\/watch\/([a-zA-Z0-9_-]+)(?:\/([0-9]+))?/);
+  if (!match) return null;
+  const slug = match[1];
+  const episode = match[2] || '1';
+  try {
+    const catalogPath = path.resolve(__dirname, `../data/catalog/${slug}.json`);
+    if (fs.existsSync(catalogPath)) {
+      const data = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+      return {
+        slug,
+        episode,
+        title: data.title || slug.replace(/-/g, ' '),
+        poster: data.key_art || data.art || 'https://anihubstream.com/og.png',
+      };
+    }
+  } catch {}
+  return {
+    slug,
+    episode,
+    title: slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+    poster: 'https://anihubstream.com/og.png',
+  };
+}
+
+/**
+ * Broadcasts newly released anime episodes to Discord community channel via Webhook or Bot Token
+ * @param {string[]} urls
+ * @param {object} [options]
+ * @param {string} [options.discordWebhookUrl]
+ * @param {string} [options.discordBotToken]
+ * @param {string} [options.discordChannelId]
+ * @param {boolean} [options.ignoreEnvFile]
+ * @returns {Promise<{ success: boolean, count: number, skipped?: boolean, error?: string }>}
+ */
 export async function broadcastToDiscord(urls, options = {}) {
   const webhookUrl = getDiscordWebhookUrl(options);
   const botConfig = getDiscordBotConfig(options);
@@ -201,10 +240,6 @@ export async function broadcastToDiscord(urls, options = {}) {
   }
 
   const batch = Array.from(new Set(urls)).slice(0, 10);
-  const linksList = batch.map((u) => {
-    const cleanPath = u.replace(/^https?:\/\/anihubstream\.com\//, '');
-    return `• [${cleanPath}](${u})`;
-  }).join('\n');
 
   try {
     const targetUrl = webhookUrl || `https://discord.com/api/v10/channels/${botConfig?.channelId}/messages`;
@@ -213,19 +248,49 @@ export async function broadcastToDiscord(urls, options = {}) {
       headers['Authorization'] = `Bot ${botConfig.token}`;
     }
 
-    const payload = {
-      embeds: [
-        {
-          title: '🎬 New Anime Episodes Released!',
-          description: `Fresh episodes are available to stream online now on AniHubStream in Sub & Dub:\n\n${linksList}`,
-          color: 6445550,
+    let embeds = [];
+
+    if (batch.length === 1) {
+      const meta = getAnimeMetaFromUrl(batch[0]);
+      if (meta) {
+        embeds.push({
+          title: '🚨 New Episode Alert!',
+          description: `**${meta.title} Episode ${meta.episode} is now available!**\n\n📺 **Streaming Now**\n👉 [Click here to watch on AniHubStream](${batch[0]})`,
+          color: 0xff3366,
+          image: meta.poster ? { url: meta.poster } : undefined,
           footer: {
             text: 'AniHubStream • Free Anime Streaming & Episode Tracker',
           },
           timestamp: new Date().toISOString(),
+        });
+      }
+    }
+
+    if (embeds.length === 0) {
+      const linksList = batch.map((u) => {
+        const meta = getAnimeMetaFromUrl(u);
+        if (meta) {
+          return `• **[${meta.title} Ep ${meta.episode}](${u})**`;
+        }
+        const cleanPath = u.replace(/^https?:\/\/anihubstream\.com\//, '');
+        return `• [${cleanPath}](${u})`;
+      }).join('\n');
+
+      const firstMeta = getAnimeMetaFromUrl(batch[0]);
+
+      embeds.push({
+        title: '🚨 New Episode Alert!',
+        description: `Fresh episodes are available to stream online now on AniHubStream in Sub & Dub:\n\n${linksList}`,
+        color: 0xff3366,
+        image: firstMeta?.poster ? { url: firstMeta.poster } : undefined,
+        footer: {
+          text: 'AniHubStream • Free Anime Streaming & Episode Tracker',
         },
-      ],
-    };
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    const payload = { embeds };
 
     if (webhookUrl) {
       payload.username = 'AniHubStream Episode Bot';
