@@ -326,6 +326,9 @@ html[data-theme='light'] .wordmark__oni {
 .mobile-nav {
   position: absolute;
   inset: 100% 0 auto;
+  max-height: calc(100vh - var(--header-h, 64px));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 6px var(--shell-pad) 22px;
   background: var(--glass-strong);
   backdrop-filter: blur(22px);
