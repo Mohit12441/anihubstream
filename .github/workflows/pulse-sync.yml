@@ -121,7 +121,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add tools/catalogue-sources.json data/news/feed.json data/news/editorial.json public/api/editorial.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml
+          git add tools/catalogue-sources.json data/news/feed.json data/news/editorial.json public/editorial.json public/api/editorial.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml
           if ! git diff --staged --quiet; then
             git commit -m "chore(sync): record newly discovered anime & news updates [skip ci]"
             git pull origin master --rebase || true

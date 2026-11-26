@@ -684,6 +684,12 @@ Watch the complete isekai library with fast playback on AniHubStream!
   fs.writeFileSync(dataPath, JSON.stringify(guides, null, 2), 'utf8');
   console.log(`  [+] Wrote ${guides.length} editorial guides to: ${dataPath}`);
 
+  // Save to public/editorial.json (root static asset for Pages)
+  const publicRootPath = path.resolve('public/editorial.json');
+  fs.mkdirSync(path.dirname(publicRootPath), { recursive: true });
+  fs.writeFileSync(publicRootPath, JSON.stringify(guides, null, 2), 'utf8');
+  console.log(`  [+] Wrote root static payload to: ${publicRootPath}`);
+
   // Save to public/api/editorial.json (for live fetch / CDN caching)
   const publicApiPath = path.resolve('public/api/editorial.json');
   fs.mkdirSync(path.dirname(publicApiPath), { recursive: true });
