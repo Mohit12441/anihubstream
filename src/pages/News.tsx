@@ -61,7 +61,8 @@ const PAGE_SIZE = 12;
 
 export function News() {
   const [searchParams] = useSearchParams();
-  const [activeTab, setActiveTab] = useState<'live' | 'editorial'>('live');
+  const tabParam = searchParams.get('tab');
+  const [activeTab, setActiveTab] = useState<'editorial' | 'live'>(tabParam === 'live' ? 'live' : 'editorial');
   const [selectedCat, setSelectedCat] = useState('All');
   const [selectedSource, setSelectedSource] = useState('All Sources');
   const [searchQuery, setSearchQuery] = useState('');
@@ -208,21 +209,21 @@ export function News() {
         <nav className="news-nav-bar" aria-label="News sections">
           <button
             type="button"
-            className={`news-nav-tab ${activeTab === 'live' ? 'news-nav-tab--active' : ''}`}
-            onClick={() => setActiveTab('live')}
-          >
-            <Radio size={16} aria-hidden="true" />
-            <span>Trending Live Wire</span>
-            <span className="news-nav-count">{filteredLiveNews.length}</span>
-          </button>
-          <button
-            type="button"
             className={`news-nav-tab news-nav-tab--editorial ${activeTab === 'editorial' ? 'news-nav-tab--active' : ''}`}
             onClick={() => setActiveTab('editorial')}
           >
             <Sparkles size={16} aria-hidden="true" />
             <span>Curated Editorial Guides</span>
             <span className="news-nav-count">{NEWS_ARTICLES.length}</span>
+          </button>
+          <button
+            type="button"
+            className={`news-nav-tab news-nav-tab--live ${activeTab === 'live' ? 'news-nav-tab--active' : ''}`}
+            onClick={() => setActiveTab('live')}
+          >
+            <Radio size={16} aria-hidden="true" />
+            <span>Trending Live Wire</span>
+            <span className="news-nav-count">{filteredLiveNews.length}</span>
           </button>
         </nav>
 
