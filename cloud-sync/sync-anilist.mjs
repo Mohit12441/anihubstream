@@ -968,7 +968,7 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
 
       /* Prioritize pending queue items, then allocate the remaining budget to the catalogue slice
          so summary.items_processed strictly never exceeds MAX_ITEMS. */
-      const pendingOnly = process.env.PENDING_ONLY === '1';
+      const pendingOnly = process.argv.includes('--pending-only');
       const pending = CREATES_ROWS ? await pendingSlice(cursor.pendingAfter, want) : EMPTY_PENDING;
       if (pendingOnly && !pending.count) {
         exitReason = 'pending_empty';

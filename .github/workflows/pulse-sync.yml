@@ -90,7 +90,7 @@ jobs:
             node cloud-sync/discover.mjs --limit=$DISCOVERY_LIMIT || true
 
             echo "📦 [STEP 2C] Creating Rows in D1 from Discovery Queue..."
-            PENDING_ONLY=1 MAX_ITEMS_PER_RUN=15 MODE=delta CLOUD_CREATES_ROWS=1 LEGACY_WRITER_ACTIVE=1 node cloud-sync/sync-anilist.mjs || true
+            MAX_ITEMS_PER_RUN=15 MODE=delta CLOUD_CREATES_ROWS=1 LEGACY_WRITER_ACTIVE=1 node cloud-sync/sync-anilist.mjs --pending-only || true
           fi
 
           # 3. Synchronize Multi-Provider Mappings (AniKoto, HiAnime, AniWatch, HindiFlix, HDRezka)

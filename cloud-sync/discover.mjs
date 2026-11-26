@@ -216,7 +216,8 @@ export async function discoverTrending({
   paceIntervalMs = 0,
   sleepImpl = (ms) => new Promise((r) => setTimeout(r, ms)),
 } = {}) {
-  if (!hasD1Credentials()) {
+  // If running in production with real d1All but no credentials, exit cleanly
+  if (allImpl === d1All && !hasD1Credentials()) {
     console.warn(`[discover] Cloudflare D1 credentials missing. Skipping cloud discovery cleanly.`);
     return { queued: [], total_scanned: 0, dry_run: dryRun };
   }
