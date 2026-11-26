@@ -264,7 +264,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
     authorRole: 'Anime Industry Correspondent & Narrative Analyst',
     date: TODAY,
     readTime: '9 min read',
-    coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-X8kCkhbJyQ0n.jpg',
+    coverImage: '/images/banners/banner-monster.jpg',
     tags: ['Psychological Anime', 'Philosophy', 'Monster', 'Vinland Saga', 'Evangelion', 'Must Watch', 'Anime Analysis'],
     targetKeywords: [
       'anime that leave you thinking long after they end',
@@ -347,7 +347,7 @@ Whether you are caught up on the latest weekly releases or looking to binge an o
     authorRole: 'Senior Anime Journalist & Data Lead',
     date: TODAY,
     readTime: '8 min read',
-    coverImage: trendingList[0]?.key_art || trendingList[0]?.art || 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg',
+    coverImage: trendingList[0]?.key_art || trendingList[0]?.art || '/images/banners/banner-overgeared.jpg',
     tags: ['Rankings', 'Trending Anime', 'Anime Power Rankings', 'Top 10', 'Anime Guide'],
     targetKeywords: [
       'weekly anime power rankings',
@@ -414,7 +414,7 @@ Don't let seasonal marketing dictate what you watch. Add these sleeper picks to 
     authorRole: 'Narrative Critic & Curator',
     date: TODAY,
     readTime: '7 min read',
-    coverImage: sleepers[0]?.key_art || sleepers[0]?.art || 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13125-2EDZb8ahshQc.png',
+    coverImage: sleepers[0]?.key_art || sleepers[0]?.art || '/images/banners/banner-frieren.jpg',
     tags: ['Underrated Anime', 'Hidden Gems', 'Anime Criticism', 'Must Watch', 'Anime Recommendations'],
     targetKeywords: [
       'underrated anime masterpieces',
@@ -496,7 +496,7 @@ Bookmark this guide to stay ahead of upcoming broadcast delays, recap episodes, 
     authorRole: 'Broadcast Syndication Analyst',
     date: TODAY,
     readTime: '7 min read',
-    coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png',
+    coverImage: '/images/banners/banner-reincarnated-as-a-sword.png',
     tags: ['Seasonal Guide', 'Anime Schedule', 'Ongoing Anime', 'Weekly Air Dates', 'Simulcast'],
     targetKeywords: [
       'anime season broadcast guide',
@@ -557,7 +557,7 @@ export async function generateEditorialGuides() {
       authorRole: 'Anime Industry Correspondent',
       date: TODAY,
       readTime: '8 min read',
-      coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172810-h8z9aPz1zQ8f.jpg',
+      coverImage: '/images/banners/banner-solo-leveling.jpg',
       tags: ['Solo Leveling', 'Sung Jinwoo', 'Action', 'Power Scaling', 'Manhwa Adaptation'],
       targetKeywords: [
         'solo leveling season 2 watch guide',
@@ -605,7 +605,7 @@ Stream all episodes of [Solo Leveling on AniHubStream](/anime/solo-leveling) in 
       authorRole: 'Senior Anime Journalist',
       date: TODAY,
       readTime: '12 min read',
-      coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-m5b1so1GFOnq.png',
+      coverImage: '/images/banners/banner-dark-fantasy.jpg',
       tags: ['Dark Fantasy', 'Berserk', 'Attack on Titan', 'Chainsaw Man', 'Anime Rankings'],
       targetKeywords: [
         'best dark fantasy anime ranked',
@@ -657,7 +657,7 @@ Stream these dark fantasy classics and more on AniHubStream!
       authorRole: 'Franchise Data Specialist',
       date: TODAY,
       readTime: '15 min read',
-      coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108465-b1t7cT8G8Z5Q.jpg',
+      coverImage: '/images/banners/banner-isekai-worldbuilding.jpg',
       tags: ['Isekai', 'Mushoku Tensei', 'Re:Zero', 'Overlord', 'Anime Rankings'],
       targetKeywords: [
         'best isekai anime ranked',

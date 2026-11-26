@@ -324,6 +324,11 @@ export function News() {
                     alt={featured.title}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     loading="eager"
+                    onError={(e) => {
+                      if (e.currentTarget.src !== window.location.origin + '/images/banners/banner-spring-2026.jpg') {
+                        e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+                      }
+                    }}
                   />
                   <div
                     style={{
@@ -407,6 +412,11 @@ export function News() {
                     className="news-card__thumb"
                     loading="lazy"
                     decoding="async"
+                    onError={(e) => {
+                      if (e.currentTarget.src !== window.location.origin + '/images/banners/banner-spring-2026.jpg') {
+                        e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+                      }
+                    }}
                   />
                   <span className="news-card__category">{article.category}</span>
                   {article.badge && (
