@@ -1,4 +1,5 @@
 import FEED_ITEMS from '../../data/news/feed.json';
+import EDITORIAL_GUIDES from '../../data/news/editorial.json';
 
 export interface NewsArticleItem {
   slug: string;
@@ -15,7 +16,7 @@ export interface NewsArticleItem {
   content: string; // Structured Markdown / HTML
 }
 
-export const NEWS_ARTICLES: NewsArticleItem[] = [
+const FALLBACK_EDITORIAL_ARTICLES: NewsArticleItem[] = [
   {
     slug: 'spring-2026-anime-season-guide',
     title: 'Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates',
@@ -180,6 +181,10 @@ Browse our dedicated **Isekai** category shelf on AniHubStream to filter by subb
     `.trim(),
   },
 ];
+
+export const NEWS_ARTICLES: NewsArticleItem[] = Array.isArray(EDITORIAL_GUIDES) && EDITORIAL_GUIDES.length > 0
+  ? (EDITORIAL_GUIDES as unknown as NewsArticleItem[])
+  : FALLBACK_EDITORIAL_ARTICLES;
 
 export function cleanExcerpt(text: string, maxChars = 155): string {
   if (!text) return '';

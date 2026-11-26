@@ -103,9 +103,10 @@ jobs:
           echo "🎬 [STEP 4] Syncing Newly Released Episodes & Auto-Pushing to Bing & IndexNow..."
           EPISODES_BATCH_LIMIT=20 node cloud-sync/sync-episodes.mjs || true
 
-          # 5. Sync Anime News, Enriched SEO & Sitemaps
-          echo "📰 [STEP 5] Syncing Trending Anime News, Enriched SEO & Sitemaps..."
+          # 5. Sync Anime News, Enriched Editorial Guides, SEO & Sitemaps
+          echo "📰 [STEP 5] Syncing Trending Anime News, Enriched Editorial Guides, SEO & Sitemaps..."
           node tools/sync-news.mjs || true
+          node tools/generate-editorial-guides.mjs || true
           node scripts/generate-sitemap.mjs || true
 
           echo "============================================================"
@@ -120,7 +121,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add tools/catalogue-sources.json data/news/feed.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml
+          git add tools/catalogue-sources.json data/news/feed.json data/news/editorial.json public/api/editorial.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml
           if ! git diff --staged --quiet; then
             git commit -m "chore(sync): record newly discovered anime & news updates [skip ci]"
             git pull origin master --rebase || true

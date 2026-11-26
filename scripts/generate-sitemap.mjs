@@ -61,13 +61,31 @@ export function generateSitemap() {
 
   animeIds.sort((a, b) => a.localeCompare(b));
 
-  // Load news articles (both live feed and static curated guides)
-  const newsEntries = [
-    { slug: 'spring-2026-anime-season-guide', date: '2026-03-20' },
-    { slug: 'top-10-dark-fantasy-anime-masterpieces', date: '2026-03-15' },
-    { slug: 'solo-leveling-reawakening-complete-guide', date: '2026-03-08' },
-    { slug: 'best-isekai-anime-ranked-by-worldbuilding', date: '2026-02-28' },
-  ];
+  // Load curated editorial guides
+  const newsEntries = [];
+  const editorialPath = path.resolve('data/news/editorial.json');
+  if (fs.existsSync(editorialPath)) {
+    try {
+      const editorials = JSON.parse(fs.readFileSync(editorialPath, 'utf8'));
+      if (Array.isArray(editorials)) {
+        for (const item of editorials) {
+          if (item.slug) {
+            newsEntries.push({ slug: item.slug, date: item.date || TODAY });
+          }
+        }
+      }
+    } catch {}
+  }
+  if (newsEntries.length === 0) {
+    newsEntries.push(
+      { slug: 'weekly-anime-power-rankings-top-trending', date: TODAY },
+      { slug: '6-anime-that-leave-you-thinking-long-after-they-end', date: TODAY },
+      { slug: 'anime-season-broadcast-guide-airing-schedules', date: TODAY },
+      { slug: 'top-10-dark-fantasy-anime-masterpieces', date: TODAY },
+      { slug: 'solo-leveling-reawakening-complete-guide', date: TODAY },
+      { slug: 'best-isekai-anime-ranked-by-worldbuilding', date: TODAY }
+    );
+  }
 
   const newsFeedPath = path.resolve('data/news/feed.json');
   if (fs.existsSync(newsFeedPath)) {
