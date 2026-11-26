@@ -330,16 +330,40 @@ export function News() {
                       position: 'absolute',
                       top: 16,
                       left: 16,
-                      background: 'var(--crimson)',
-                      color: '#fff',
-                      fontWeight: 800,
-                      fontSize: '0.75rem',
-                      padding: '4px 10px',
-                      borderRadius: 'var(--r-xs)',
-                      letterSpacing: '0.05em',
+                      display: 'flex',
+                      gap: 8,
+                      alignItems: 'center',
                     }}
                   >
-                    FEATURED
+                    <span
+                      style={{
+                        background: 'var(--crimson)',
+                        color: '#fff',
+                        fontWeight: 800,
+                        fontSize: '0.75rem',
+                        padding: '4px 10px',
+                        borderRadius: 'var(--r-xs)',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      FEATURED
+                    </span>
+                    {featured.badge && (
+                      <span
+                        style={{
+                          background: 'rgba(15,23,42,0.9)',
+                          color: 'var(--cyan)',
+                          border: '1px solid rgba(36,211,238,0.4)',
+                          fontWeight: 700,
+                          fontSize: '0.75rem',
+                          padding: '4px 10px',
+                          borderRadius: 'var(--r-xs)',
+                          letterSpacing: '0.03em',
+                        }}
+                      >
+                        {featured.badge}
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -385,6 +409,27 @@ export function News() {
                     decoding="async"
                   />
                   <span className="news-card__category">{article.category}</span>
+                  {article.badge && (
+                    <span
+                      style={{
+                        position: 'absolute',
+                        top: 10,
+                        left: 10,
+                        background: 'rgba(15, 23, 42, 0.9)',
+                        color: 'var(--cyan)',
+                        border: '1px solid rgba(36, 211, 238, 0.35)',
+                        fontSize: '0.68rem',
+                        fontWeight: 700,
+                        padding: '3px 8px',
+                        borderRadius: 'var(--r-xs)',
+                        letterSpacing: '0.02em',
+                        backdropFilter: 'blur(4px)',
+                        zIndex: 2,
+                      }}
+                    >
+                      {article.badge}
+                    </span>
+                  )}
                 </Link>
 
                 <div className="news-card__body">

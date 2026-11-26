@@ -4,6 +4,8 @@ import EDITORIAL_GUIDES from '../../data/news/editorial.json';
 export interface NewsArticleItem {
   slug: string;
   title: string;
+  altTitles?: string[];
+  badge?: string;
   excerpt: string;
   category: 'Seasonal Guide' | 'Rankings' | 'Analysis' | 'News' | 'Anime News' | 'Anime Franchise Update';
   author: string;
@@ -12,8 +14,13 @@ export interface NewsArticleItem {
   readTime: string;
   coverImage: string;
   tags: string[];
+  targetKeywords?: string[];
   relatedAnimeSlugs: string[];
   content: string; // Structured Markdown / HTML
+  social?: {
+    reddit?: { title: string; markdown: string };
+    twitter?: { hook: string; tags: string[] };
+  };
 }
 
 const FALLBACK_EDITORIAL_ARTICLES: NewsArticleItem[] = [

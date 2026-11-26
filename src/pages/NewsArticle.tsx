@@ -256,6 +256,22 @@ export function NewsArticle() {
     }
   };
 
+  const handleCopyReddit = () => {
+    if (article?.social?.reddit && navigator.clipboard) {
+      const text = `${article.social.reddit.title}\n\n${article.social.reddit.markdown}`;
+      navigator.clipboard.writeText(text);
+      notify('Reddit discussion post copied to clipboard!');
+    }
+  };
+
+  const handleCopyTwitter = () => {
+    if (article?.social?.twitter && navigator.clipboard) {
+      const text = `${article.social.twitter.hook}\n\nRead more: https://anihubstream.com/news/${article.slug}\n\n${article.social.twitter.tags.join(' ')}`;
+      navigator.clipboard.writeText(text);
+      notify('Twitter / X post copied to clipboard!');
+    }
+  };
+
   const related = getAllNewsArticles().filter((a) => a.slug !== article.slug).slice(0, 3);
 
   // Picture Logic: Resolve anime mentioned in article or metadata
@@ -282,9 +298,30 @@ export function NewsArticle() {
           </span>
         </nav>
 
+        {article.badge && (
+          <div style={{ marginTop: 8, marginBottom: 8 }}>
+            <span
+              style={{
+                display: 'inline-block',
+                background: 'rgba(36, 211, 238, 0.15)',
+                color: 'var(--cyan)',
+                border: '1px solid rgba(36, 211, 238, 0.35)',
+                padding: '4px 12px',
+                borderRadius: 'var(--r-xs)',
+                fontSize: '0.75rem',
+                fontWeight: 700,
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {article.badge}
+            </span>
+          </div>
+        )}
+
         <h1 className="article-header__title">{article.title}</h1>
 
-        <div className="article-header__meta">
+        <div className="article-header__meta" style={{ flexWrap: 'wrap', gap: 12 }}>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
             <User size={15} style={{ color: 'var(--crimson)' }} />
             <b>{article.author}</b> ({article.authorRole})
@@ -297,15 +334,52 @@ export function NewsArticle() {
             <Clock size={15} />
             {article.readTime}
           </span>
-          <button
-            type="button"
-            onClick={handleShare}
-            className="btn btn--xs btn--ghost"
-            style={{ marginLeft: 'auto', display: 'inline-flex', alignItems: 'center', gap: 6 }}
-            aria-label="Share article"
-          >
-            <Share2 size={14} /> Share
-          </button>
+          
+          <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+            {article.social?.reddit && (
+              <button
+                type="button"
+                onClick={handleCopyReddit}
+                className="btn btn--xs btn--ghost"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  color: 'var(--orange)',
+                  borderColor: 'rgba(249, 115, 22, 0.3)',
+                }}
+                title="Copy ready-to-post Reddit discussion Markdown"
+              >
+                Copy Reddit Post
+              </button>
+            )}
+            {article.social?.twitter && (
+              <button
+                type="button"
+                onClick={handleCopyTwitter}
+                className="btn btn--xs btn--ghost"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  color: 'var(--cyan)',
+                  borderColor: 'rgba(36, 211, 238, 0.3)',
+                }}
+                title="Copy ready-to-post Twitter / X thread hook"
+              >
+                Copy Twitter Hook
+              </button>
+            )}
+            <button
+              type="button"
+              onClick={handleShare}
+              className="btn btn--xs btn--ghost"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+              aria-label="Share article link"
+            >
+              <Share2 size={14} /> Share
+            </button>
+          </div>
         </div>
 
         <div className="article-cover-wrap">
@@ -498,6 +572,30 @@ export function NewsArticle() {
             </Link>
           ))}
         </div>
+
+        {/* Target Semantic & LSI Queries (GEO Citation Discovery) */}
+        {article.targetKeywords && article.targetKeywords.length > 0 && (
+          <div style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', fontWeight: 600, textTransform: 'uppercase' }}>
+              Semantic Search Clusters:
+            </span>
+            {article.targetKeywords.map((kw) => (
+              <span
+                key={kw}
+                style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  color: 'rgba(255,255,255,0.7)',
+                  fontSize: '0.75rem',
+                  padding: '2px 8px',
+                  borderRadius: 'var(--r-xs)',
+                }}
+              >
+                {kw}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Backlink & Internal Streaming Call-to-Action */}
         <div
