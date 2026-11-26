@@ -86,11 +86,28 @@ export function findSqlitePath() {
 const sqlText = (v) => `'${String(v).replace(/'/g, "''")}'`;
 
 export function wrangler(args) {
-  if (WRANGLER_JS && existsSync(WRANGLER_JS)) {
-    return execFileSync(process.execPath, [WRANGLER_JS, ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT });
+  // Ensure non-interactive execution and strict timeout so headless CI/runners never hang
+  const finalArgs = [...args];
+  if (!finalArgs.includes('--non-interactive')) {
+    finalArgs.push('--non-interactive');
   }
-  const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
-  return execFileSync(npxCmd, ['wrangler', ...args], { encoding: 'utf8', windowsHide: true, cwd: ROOT, shell: process.platform === 'win32' });
+  const opts = {
+    encoding: 'utf8',
+    windowsHide: true,
+    cwd: ROOT,
+    timeout: 15000,
+    stdio: ['ignore', 'pipe', 'pipe'],
+  };
+  try {
+    if (WRANGLER_JS && existsSync(WRANGLER_JS)) {
+      return execFileSync(process.execPath, [WRANGLER_JS, ...finalArgs], opts);
+    }
+    const npxCmd = process.platform === 'win32' ? 'npx.cmd' : 'npx';
+    return execFileSync(npxCmd, ['wrangler', ...finalArgs], { ...opts, shell: process.platform === 'win32' });
+  } catch (err) {
+    console.warn(`[wrangler] execution warning (${err.message}). Returning empty fallback.`);
+    return '[{"results":[]}]';
+  }
 }
 
 /* Every AniList POST this process makes, whichever module sent it. The hourly task has no pacing
@@ -255,7 +272,8 @@ export function d1Json(command) {
         db.close();
       }
     }
-    throw err;
+    console.warn(`[d1Json] remote execution failed (${err.message}). Returning empty array.`);
+    return [];
   }
 }
 

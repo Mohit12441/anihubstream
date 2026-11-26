@@ -31,14 +31,23 @@ async function main() {
   let trendRes = { totalTrending: 0 };
   if (includeTrending) {
     console.log('► Stage 1: Syncing global trending ranks from AniList (24h Daily Cadence)...');
-    trendRes = await syncTrendingRanks({ isRemote, quiet: false });
+    try {
+      trendRes = await syncTrendingRanks({ isRemote, quiet: false });
+    } catch (trendErr) {
+      console.warn('⚠️ [Stage 1] Trending ranks sync warning:', trendErr.message);
+    }
   } else {
     console.log('► Stage 1: Skipped trending ranks (scheduled on 24-hour daily cadence; use --trending to force).');
   }
 
   // Stage 2: Airing schedule delta from AniList (~5s, hourly)
   console.log('\n► Stage 2: Checking broadcast airing slots (Hourly AniList Sync)...');
-  const schedRes = await syncOngoingSchedules({ isRemote, quiet: false });
+  let schedRes = { updated: 0, unchanged: 0 };
+  try {
+    schedRes = await syncOngoingSchedules({ isRemote, quiet: false });
+  } catch (schedErr) {
+    console.warn('⚠️ [Stage 2] Airing schedule sync warning:', schedErr.message);
+  }
 
   // Stage 3: Newly released episodes delta (~10s)
   console.log('\n► Stage 3: Checking and generating newly released episodes...');

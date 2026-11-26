@@ -23,6 +23,11 @@ function intEnv(name, fallback) {
   return n;
 }
 
+export function hasD1Credentials() {
+  const { CF_ACCOUNT_ID, CF_DATABASE_ID, CF_API_TOKEN } = process.env;
+  return Boolean(CF_ACCOUNT_ID && CF_DATABASE_ID && CF_API_TOKEN);
+}
+
 function account() {
   const { CF_ACCOUNT_ID, CF_DATABASE_ID, CF_API_TOKEN } = process.env;
   const missing = [

@@ -14,7 +14,7 @@
 
 import { randomUUID } from 'node:crypto';
 import { resolve } from 'node:path';
-import { d1All, d1First, d1Query } from './d1.mjs';
+import { d1All, d1First, d1Query, hasD1Credentials } from './d1.mjs';
 import {
   acquireLease,
   getCursor,
@@ -170,6 +170,10 @@ export function mapHiAnimeItem(item, existingRow = null) {
  */
 export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false } = {}) {
   const startedAt = Date.now();
+  if (!hasD1Credentials()) {
+    console.warn(`[hianime-sync] Cloudflare D1 credentials missing. Skipping cloud HiAnime ingestion cleanly.`);
+    return { status: 'skipped', reason: 'missing_credentials', itemsProcessed: 0, itemsCreated: 0, itemsUpdated: 0 };
+  }
   console.log(`[hianime-sync] starting run ${RUN_ID} (pages: ${pagesPerRun})`);
 
   let leaseHeld = false;

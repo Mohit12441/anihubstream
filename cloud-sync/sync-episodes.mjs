@@ -11,7 +11,7 @@
  */
 
 import { randomUUID } from 'node:crypto';
-import { d1All, d1First, d1Query } from './d1.mjs';
+import { d1All, d1First, d1Query, hasD1Credentials } from './d1.mjs';
 import { acquireLease, leaseKeeper, recordRun, releaseLease } from './state.mjs';
 import { notifySearchEnginesOfNewEpisodes } from '../tools/auto-push-new-episodes.mjs';
 
@@ -83,6 +83,10 @@ export async function fetchAniSkipMarkers(malId, ep) {
  * Executes one bounded episode synchronization pass
  */
 export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false } = {}) {
+  if (!hasD1Credentials()) {
+    console.warn(`[sync-episodes] Cloudflare D1 credentials missing. Skipping cloud episode sync cleanly.`);
+    return { status: 'skipped', reason: 'missing_credentials', created: 0 };
+  }
   console.log(`[sync-episodes] Starting run ${RUN_ID} (budget: ${limit} episodes)...`);
   let leaseHeld = false;
   if (!force) {

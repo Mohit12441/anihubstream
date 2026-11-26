@@ -1,7 +1,7 @@
 // cloud-sync/discover.mjs
 // Discovers currently-airing trending anime on AniList and queues new titles into sync_pending.
 // Runs purely via D1 REST and AniList GraphQL — requires zero local machine dependencies.
-import { d1All, d1Query, parseRetryAfter } from './d1.mjs';
+import { d1All, d1Query, hasD1Credentials, parseRetryAfter } from './d1.mjs';
 import { mediaSlug } from './sync-anilist.mjs';
 
 const ANILIST_ENDPOINT = process.env.ANILIST_ENDPOINT?.trim() || 'https://graphql.anilist.co';
@@ -216,6 +216,10 @@ export async function discoverTrending({
   paceIntervalMs = 0,
   sleepImpl = (ms) => new Promise((r) => setTimeout(r, ms)),
 } = {}) {
+  if (!hasD1Credentials()) {
+    console.warn(`[discover] Cloudflare D1 credentials missing. Skipping cloud discovery cleanly.`);
+    return { queued: [], total_scanned: 0, dry_run: dryRun };
+  }
   // 1. Fetch existing anime and pending queue from D1
   const animeRows = await allImpl('SELECT id, source_ids FROM anime');
   const pendingRows = await allImpl('SELECT anilist_id, slug FROM sync_pending');

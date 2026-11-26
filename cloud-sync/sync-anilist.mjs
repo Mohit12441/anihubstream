@@ -48,7 +48,7 @@
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { createAnilist, RunAborted, BudgetExhausted } from './anilist.mjs';
-import { assertLiveColumns, assertLiveTables, d1All, d1First, d1Query, insertRows, schemaFaults } from './d1.mjs';
+import { assertLiveColumns, assertLiveTables, d1All, d1First, d1Query, hasD1Credentials, insertRows, schemaFaults } from './d1.mjs';
 import {
   acquireLease, budget, getCursor, getThrottle, leaseKeeper, recordRun, releaseLease, setCursor, setThrottle, utcDay,
 } from './state.mjs';
@@ -802,6 +802,13 @@ const newSummary = () => ({
 let summary = newSummary();
 
 async function main({ forceTakeover = process.argv.includes('--force-takeover') } = {}) {
+  if (!hasD1Credentials()) {
+    console.warn(`[sync-anilist] Cloudflare D1 credentials missing. Skipping cloud AniList sync cleanly.`);
+    summary.exit_reason = 'missing_credentials';
+    summary.duration_ms = 0;
+    console.log(JSON.stringify(summary));
+    return summary;
+  }
   /* The schema gate, before anything is read for a decision and before the takeover marker is
      written: insertRows() names anime's columns, so a column production does not have is not a
      warning — the first chunked upsert dies on `no such column: …` mid-batch, having already taken
@@ -961,8 +968,13 @@ async function main({ forceTakeover = process.argv.includes('--force-takeover') 
 
       /* Prioritize pending queue items, then allocate the remaining budget to the catalogue slice
          so summary.items_processed strictly never exceeds MAX_ITEMS. */
+      const pendingOnly = process.env.PENDING_ONLY === '1';
       const pending = CREATES_ROWS ? await pendingSlice(cursor.pendingAfter, want) : EMPTY_PENDING;
-      const catalogueWant = want - pending.count;
+      if (pendingOnly && !pending.count) {
+        exitReason = 'pending_empty';
+        break;
+      }
+      const catalogueWant = pendingOnly ? 0 : want - pending.count;
       const slice = catalogueWant > 0
         ? await catalogueSlice(cursor.after, catalogueWant)
         : { rows: [], known: new Map(), anilistIds: [], unmapped: [], after: cursor.after };

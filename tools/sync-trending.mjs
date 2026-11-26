@@ -162,6 +162,7 @@ export async function syncTrendingRanks({ db = null, isRemote = process.argv.inc
       WHERE json_extract(source_ids, '$.anilist') IS NOT NULL
     `);
 
+    const updates = [];
     for (const row of idRows) {
       const anilistId = Number(row.anilist_id);
       const animeId = String(row.anime_id);
@@ -169,18 +170,29 @@ export async function syncTrendingRanks({ db = null, isRemote = process.argv.inc
       if (rankMap.has(anilistId)) {
         const rank = rankMap.get(anilistId);
         rankedSlugs.add(animeId);
-        await d1Query('UPDATE anime SET trend_rank = ?1 WHERE id = ?2 AND (trend_rank IS NULL OR trend_rank != ?1)', [rank, animeId]);
-        updatedCount++;
+        updates.push({ id: animeId, rank });
       }
     }
 
-    const currentTrending = await d1All('SELECT id FROM anime WHERE trend_rank IS NOT NULL');
-    for (const row of currentTrending) {
-      const id = String(row.id);
-      if (!rankedSlugs.has(id)) {
-        await d1Query('UPDATE anime SET trend_rank = NULL WHERE id = ?1', [id]);
-        clearedCount++;
-      }
+    // Batch update trend_ranks in chunks of 20 to minimize D1 REST roundtrips and avoid parameter limits
+    const CHUNK = 20;
+    for (let i = 0; i < updates.length; i += CHUNK) {
+      const chunk = updates.slice(i, i + CHUNK);
+      const cases = chunk.map((_, idx) => `WHEN ?${idx * 2 + 1} THEN ?${idx * 2 + 2}`).join(' ');
+      const inList = chunk.map((_, idx) => `?${idx * 2 + 1}`).join(', ');
+      const params = [];
+      chunk.forEach((u) => {
+        params.push(u.id, u.rank);
+      });
+      await d1Query(`UPDATE anime SET trend_rank = CASE id ${cases} END WHERE id IN (${inList})`, params);
+      updatedCount += chunk.length;
+    }
+
+    // Clear stale trending ranks
+    if (rankedSlugs.size > 0) {
+      const placeholders = Array.from(rankedSlugs).map((_, idx) => `?${idx + 1}`).join(', ');
+      await d1Query(`UPDATE anime SET trend_rank = NULL WHERE trend_rank IS NOT NULL AND id NOT IN (${placeholders})`, Array.from(rankedSlugs));
+      clearedCount++;
     }
   } else if (isRemote) {
     // Remote D1 execution via wrangler CLI fallback

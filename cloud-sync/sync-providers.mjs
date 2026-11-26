@@ -18,7 +18,7 @@ import { randomUUID } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { d1All, d1First, d1Query, insertRows } from './d1.mjs';
+import { d1All, d1First, d1Query, hasD1Credentials, insertRows } from './d1.mjs';
 import { acquireLease, leaseKeeper, recordRun, releaseLease } from './state.mjs';
 import { computeFranchiseGraph } from '../tools/auto-sync-franchises.mjs';
 import { autoSyncProviders } from '../tools/auto-sync-providers.mjs';
@@ -96,7 +96,7 @@ export async function normalizeRatings() {
  * Main Orchestrator
  */
 export async function runProvidersSync({ force = false } = {}) {
-  if (!process.env.CF_ACCOUNT_ID || !process.env.CF_API_TOKEN) {
+  if (!hasD1Credentials()) {
     console.log('[sync-providers] Cloudflare REST credentials not set; running local SQLite provider sync...');
     const localRes = await autoSyncProviders({ quiet: false });
     return { status: 'success', mode: 'local', results: localRes };

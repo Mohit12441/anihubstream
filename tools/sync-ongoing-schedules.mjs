@@ -73,7 +73,10 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
 
   if (!isRemote) {
     const dbPath = findSqlitePath();
-    if (!dbPath) throw new Error('No local D1 sqlite file found.');
+    if (!dbPath) {
+      console.warn('[sync-ongoing-schedules] No local D1 sqlite file found. Skipping schedule sync cleanly.');
+      return { updated: 0, cleared: 0, unchanged: 0, totalTitles: 0, durationMs: Date.now() - start };
+    }
     console.log('Target Database:', dbPath);
     db = new DatabaseSync(dbPath);
 
@@ -184,6 +187,10 @@ export async function syncOngoingSchedules({ isRemote = process.argv.includes('-
   }
 
   console.log(`Found ${ongoingRows.length} ongoing anime with AniList IDs.`);
+  if (ongoingRows.length === 0) {
+    if (!quiet) console.log('[sync-ongoing-schedules] No ongoing rows to sync. Exiting cleanly.');
+    return { updated: 0, cleared: 0, unchanged: 0, totalTitles: 0, durationMs: Date.now() - start };
+  }
 
   const rowBySlug = new Map(ongoingRows.map((r) => [r.id, r]));
   let updatedCount = 0;
