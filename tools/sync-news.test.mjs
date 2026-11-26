@@ -44,11 +44,11 @@ export const mockData = [
   },
   {
     title: "Solo Leveling Season 2 Broadcast Schedule Set",
-    link: "https://www.animenewsnetwork.com/news/2026-11-25/solo-leveling-season-2/.101",
+    link: "https://animecorner.me/solo-leveling-season-2-schedule/",
     snippet: "Aniplex announced the official international broadcast release dates for Solo Leveling Season 2.",
     pubDate: "2026-11-25T02:30:00.000Z",
-    source: "Anime News Network",
-    imageUrl: "https://cdn.animenewsnetwork.com/thumbnails/solo.jpg",
+    source: "Anime Corner",
+    imageUrl: "https://animecorner.me/thumbnails/solo.jpg",
     matchedAnime: { title: "Solo Leveling", slug: "solo-leveling" }
   },
   {
@@ -94,9 +94,9 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
   });
 
   await t.test('generateNewsId produces deterministic 12-char hex id', () => {
-    const id1 = generateNewsId('https://animenewsnetwork.com/test-article');
-    const id2 = generateNewsId('https://animenewsnetwork.com/test-article');
-    const id3 = generateNewsId('https://animenewsnetwork.com/different-article');
+    const id1 = generateNewsId('https://animecorner.me/test-article');
+    const id2 = generateNewsId('https://animecorner.me/test-article');
+    const id3 = generateNewsId('https://animecorner.me/different-article');
 
     assert.equal(id1.length, 12);
     assert.equal(id1, id2);
@@ -129,10 +129,10 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     const items = [
       {
         title: "Solo Leveling Season 2 Broadcast Schedule Set",
-        link: "https://www.animenewsnetwork.com/news/2026-11-25/solo-leveling-season-2/.101",
+        link: "https://animecorner.me/solo-leveling-season-2-schedule/",
         pubDate: "2026-11-25T02:30:00.000Z",
-        source: "Anime News Network",
-        imageUrl: "https://cdn.animenewsnetwork.com/thumbnails/solo.jpg",
+        source: "Anime Corner",
+        imageUrl: "https://animecorner.me/thumbnails/solo.jpg",
         matchedAnime: { title: "Solo Leveling", slug: "solo-leveling" }
       },
       {
@@ -149,8 +149,8 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     // Should deduplicate into 1 story because matchedAnime.slug is equal and similarity >= 0.30
     assert.equal(deduped.length, 1);
     // Prioritizes item with image
-    assert.equal(deduped[0].source, 'Anime News Network');
-    assert.equal(deduped[0].imageUrl, 'https://cdn.animenewsnetwork.com/thumbnails/solo.jpg');
+    assert.equal(deduped[0].source, 'Anime Corner');
+    assert.equal(deduped[0].imageUrl, 'https://animecorner.me/thumbnails/solo.jpg');
   });
 
   await t.test('AI_EDITORIAL_SYSTEM_PROMPT is exported and defines varied CTA reference examples', () => {
@@ -174,7 +174,7 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     };
     const anime = { title: "Solo Leveling", slug: "solo-leveling" };
 
-    const enrichedA = generateEditorialEnrichment(itemA, anime, 'Anime News Network');
+    const enrichedA = generateEditorialEnrichment(itemA, anime, 'Anime Corner');
     const enrichedB = generateEditorialEnrichment(itemB, anime, 'MyAnimeList');
 
     assert.ok(enrichedA.includes('AniHubStream'));
@@ -226,7 +226,7 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
       score: "8.4"
     };
 
-    const enriched = generateEditorialEnrichment(item, anime, 'Anime News Network', mockAniList);
+    const enriched = generateEditorialEnrichment(item, anime, 'Anime Corner', mockAniList);
     assert.ok(enriched.includes('A-1 Pictures'));
     assert.ok(enriched.includes('Shunsuke Nakashige'));
     assert.ok(enriched.includes('Web Manhwa'));
@@ -238,6 +238,11 @@ test('Automated Anime News Ingestion, Sanitization & Editorial Pipeline', async 
     const ac = SOURCES.find(s => s.name === 'Anime Corner');
     assert.ok(ac, 'Anime Corner must be in SOURCES');
     assert.equal(ac.url, 'https://animecorner.me/feed/');
+  });
+
+  await t.test('SOURCES does not include Anime News Network', () => {
+    const ann = SOURCES.find(s => s.name === 'Anime News Network');
+    assert.strictEqual(ann, undefined);
   });
 
   await t.test('generateSeoTitle creates clean, high-CTR titles within optimal length', () => {

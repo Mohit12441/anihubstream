@@ -10,7 +10,6 @@ const INDEXNOW_KEY = '9f8b2c4e1a7d3f5b8a0c6e4d2f1a9b7c';
 
 export const SOURCES = [
   { name: 'Anime Corner', url: 'https://animecorner.me/feed/' },
-  { name: 'Anime News Network', url: 'https://www.animenewsnetwork.com/all/rss.xml' },
   { name: 'MyAnimeList', url: 'https://myanimelist.net/rss/news.xml' },
   { name: 'Crunchyroll News', url: 'https://www.crunchyroll.com/news/rss', fallbackUrl: 'https://www.crunchyroll.com/rss/anime' },
 ];
@@ -42,7 +41,7 @@ GUIDELINES:
      Reference Example E (No direct anime yet): "Although an animated television series has yet to debut, fans of high-stakes story arcs can explore AniHubStream's curated anime catalog for closely matching thematic adventures."
      Reference Example F (Similar recommendations): "Readers captivated by the novel's creative world-building can browse AniHubStream's streaming library to discover acclaimed anime featuring similar tones and character dynamics."
    - INSTRUCTION: Do not copy these examples verbatim. Write a unique, journalistic sentence that conveys this intent in voice and context tailored specifically to the article.
-4. Conclude with a factual citation acknowledging the original reporting source (e.g., Anime News Network, MyAnimeList, or Crunchyroll).
+4. Conclude with a factual citation acknowledging the original reporting source (e.g., Anime Corner, MyAnimeList, or Crunchyroll).
 `.trim();
 
 /**

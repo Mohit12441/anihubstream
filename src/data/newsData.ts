@@ -273,7 +273,6 @@ Full announcement details, official key visuals, and promotional trailers were o
   `.trim();
 
   const authorMap: Record<string, { name: string; role: string; url: string }> = {
-    'Anime News Network': { name: 'Kenji Sato', role: 'Senior Anime Journalist', url: 'https://anihubstream.com/about#editorial' },
     'Anime Corner': { name: 'Elena Rostova', role: 'Anime Industry Correspondent', url: 'https://anihubstream.com/about#editorial' },
     'Crunchyroll News': { name: 'Marcus Vance', role: 'Broadcast Syndication Analyst', url: 'https://anihubstream.com/about#editorial' },
     'MyAnimeList': { name: 'Daiki Tanaka', role: 'Franchise Data Specialist', url: 'https://anihubstream.com/about#editorial' }

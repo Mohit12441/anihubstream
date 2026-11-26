@@ -10,7 +10,7 @@ import INITIAL_LIVE_NEWS from '../../data/news/feed.json';
 import '../styles/news.css';
 
 const CATEGORIES = ['All', 'Seasonal Guide', 'Rankings', 'Analysis'];
-const LIVE_SOURCES = ['All Sources', 'Anime Corner', 'Anime News Network', 'MyAnimeList', 'Crunchyroll News'];
+const LIVE_SOURCES = ['All Sources', 'Anime Corner', 'MyAnimeList', 'Crunchyroll News'];
 
 interface LiveNewsItem {
   id: string;
@@ -46,8 +46,6 @@ function formatTimeAgo(timestamp: number): string {
 
 function getAuthorForSource(source: string): { name: string; role: string } {
   switch (source) {
-    case 'Anime News Network':
-      return { name: 'Kenji Sato', role: 'Senior Anime Journalist' };
     case 'Anime Corner':
       return { name: 'Elena Rostova', role: 'Anime Industry Correspondent' };
     case 'Crunchyroll News':
@@ -55,7 +53,7 @@ function getAuthorForSource(source: string): { name: string; role: string } {
     case 'MyAnimeList':
       return { name: 'Daiki Tanaka', role: 'Franchise Data Specialist' };
     default:
-      return { name: 'AniHub Editorial Desk', role: 'Anime News Curator' };
+      return { name: 'Kenji Sato', role: 'Senior Anime Journalist' };
   }
 }
 
