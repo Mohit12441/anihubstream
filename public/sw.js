@@ -4,13 +4,16 @@
  * Scope: /
  */
 
-const SHELL_CACHE = 'anihub-shell-v5';
+const SHELL_CACHE = 'anihub-shell-v6';
 const STREAM_CACHE = 'anihub-stream-v2';
 const MAX_STREAM_SEGMENTS = 45;
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
+  '/favicon.ico',
+  '/favicon-48x48.png',
+  '/apple-touch-icon.png',
   '/emblem.svg',
   '/manifest.webmanifest',
 ];
