@@ -311,13 +311,63 @@
     "format": "Anime",
     "category": "Anime News",
     "imageUrl": "https://cdn.myanimelist.net/s/common/uploaded_files/1795661095-15eba3e67bfc44709082d62c6a185dfc.jpeg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "SILVER LINK.",
+    "staff": [
+      {
+        "role": "Original Story",
+        "name": "Buncololi"
+      },
+      {
+        "role": "Original Character Design",
+        "name": "Kantoku"
+      },
+      {
+        "role": "Director",
+        "name": "Mirai Minato"
+      },
+      {
+        "role": "Series Composition",
+        "name": "Hitomi Mieno"
+      },
+      {
+        "role": "Character Design",
+        "name": "Saori Nakashiki"
+      },
+      {
+        "role": "Art Director",
+        "name": "Yuuki Shinjou"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Piercarlo",
+        "actor": "Aoi Yuuki",
+        "voiceActor": "Aoi Yuuki",
+        "name": "Aoi Yuuki"
+      },
+      {
+        "character": "Sasaki",
+        "actor": "Tomokazu Sugita",
+        "voiceActor": "Tomokazu Sugita",
+        "name": "Tomokazu Sugita"
+      },
+      {
+        "character": "Kurosu",
+        "actor": "Akari Kitou",
+        "voiceActor": "Akari Kitou",
+        "name": "Akari Kitou"
+      },
+      {
+        "character": "Müller",
+        "actor": "Hiroki Yasumoto",
+        "voiceActor": "Hiroki Yasumoto",
+        "name": "Hiroki Yasumoto"
+      }
+    ],
+    "sourceMaterial": "LIGHT NOVEL",
     "matchedAnime": null,
-    "editorialSummary": "Industry sources have confirmed new developments concerning 'Sasaki to Pii-chan Season 2' Unveils Additional Cast. Industry observers note that sustained collaboration between animation studios and international distribution partners continues to elevate seasonal broadcast quality worldwide. Whether discovering new seasonal releases or revisiting classic series, AniHubStream's streaming platform delivers fast, uninterrupted playback with high-definition multi-source streams. Original announcements, visual assets, and full coverage courtesy of MyAnimeList.",
-    "wordCount": 65
+    "editorialSummary": "Industry sources have confirmed new developments concerning 'Sasaki to Pii-chan Season 2' Unveils Additional Cast. Animation production is spearheaded by SILVER LINK., featuring key leadership under Original Story Buncololi, originating from LIGHT NOVEL, holding a strong 6.7/10 community rating. Industry observers note that sustained collaboration between animation studios and international distribution partners continues to elevate seasonal broadcast quality worldwide. Whether discovering new seasonal releases or revisiting classic series, AniHubStream's streaming platform delivers fast, uninterrupted playback with high-definition multi-source streams. Original announcements, visual assets, and full coverage courtesy of MyAnimeList.",
+    "wordCount": 89
   },
   {
     "id": "d24500c305f1",
@@ -704,13 +754,63 @@
     "format": "Manga",
     "category": "Manga News",
     "imageUrl": "https://cdn.myanimelist.net/s/common/uploaded_files/1795581323-ed622d604aea0a0992a1e53153edcc03.jpeg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "LIDENFILMS",
+    "staff": [
+      {
+        "role": "Original Creator",
+        "name": "Hitoshi Iwaaki"
+      },
+      {
+        "role": "Director",
+        "name": "Nobuharu Kamanaka"
+      },
+      {
+        "role": "Assistant Director",
+        "name": "Takatoshi Suzuki"
+      },
+      {
+        "role": "Series Composition",
+        "name": "Toshiya Oono"
+      },
+      {
+        "role": "Character Design",
+        "name": "Isoroku Koga"
+      },
+      {
+        "role": "Prop Design",
+        "name": "Kenichi Ootomo"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Eumenes",
+        "actor": "Nobunaga Shimazaki",
+        "voiceActor": "Nobunaga Shimazaki",
+        "name": "Nobunaga Shimazaki"
+      },
+      {
+        "character": "Philip 2-sei",
+        "actor": "Fumihiko Tachiki",
+        "voiceActor": "Fumihiko Tachiki",
+        "name": "Fumihiko Tachiki"
+      },
+      {
+        "character": "Aristotle",
+        "actor": "Tsuguo Mogami",
+        "voiceActor": "Tsuguo Mogami",
+        "name": "Tsuguo Mogami"
+      },
+      {
+        "character": "Charon",
+        "actor": "Wataru Takagi",
+        "voiceActor": "Wataru Takagi",
+        "name": "Wataru Takagi"
+      }
+    ],
+    "sourceMaterial": "MANGA",
     "matchedAnime": null,
-    "editorialSummary": "The creative team behind 'Historie' Unveils Production Staff, Additional Cast, Theme Songs, Second Promo has shared fresh details. Industry observers note that sustained collaboration between animation studios and international distribution partners continues to elevate seasonal broadcast quality worldwide. Whether discovering new seasonal releases or revisiting classic series, AniHubStream's streaming platform delivers fast, uninterrupted playback with high-definition multi-source streams. Original announcements, visual assets, and full coverage courtesy of MyAnimeList.",
-    "wordCount": 68
+    "editorialSummary": "The creative team behind 'Historie' Unveils Production Staff, Additional Cast, Theme Songs, Second Promo has shared fresh details. Animation production is spearheaded by LIDENFILMS, featuring key leadership under Original Creator Hitoshi Iwaaki, originating from MANGA. Industry observers note that sustained collaboration between animation studios and international distribution partners continues to elevate seasonal broadcast quality worldwide. Whether discovering new seasonal releases or revisiting classic series, AniHubStream's streaming platform delivers fast, uninterrupted playback with high-definition multi-source streams. Original announcements, visual assets, and full coverage courtesy of MyAnimeList.",
+    "wordCount": 85
   },
   {
     "id": "ce1c890641c9",
@@ -724,10 +824,54 @@
     "format": "Visual Novel",
     "category": "Visual Novel Franchise Update",
     "imageUrl": "https://cdn.myanimelist.net/s/common/uploaded_files/1795504801-f92e80a47ff0f942dbb3edacb2a76c13.jpeg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "ufotable",
+    "staff": [
+      {
+        "role": "Original Creator",
+        "name": "Kinoko Nasu"
+      },
+      {
+        "role": "Original Creator",
+        "name": "Type-Moon"
+      },
+      {
+        "role": "Original Character Design",
+        "name": "Hirokazu Koyama"
+      },
+      {
+        "role": "Chief Director",
+        "name": "Hikaru Kondou"
+      },
+      {
+        "role": "Director",
+        "name": "Masaru Takeuchi"
+      },
+      {
+        "role": "Character Design",
+        "name": "Moe Tsuzuki"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Aoko Aozaki",
+        "actor": "Haruka Tomatsu",
+        "voiceActor": "Haruka Tomatsu",
+        "name": "Haruka Tomatsu"
+      },
+      {
+        "character": "Alice Kuonji",
+        "actor": "Kana Hanazawa",
+        "voiceActor": "Kana Hanazawa",
+        "name": "Kana Hanazawa"
+      },
+      {
+        "character": "Soujuurou Shizuki",
+        "actor": "Yuusuke Kobayashi",
+        "voiceActor": "Yuusuke Kobayashi",
+        "name": "Yuusuke Kobayashi"
+      }
+    ],
+    "sourceMaterial": "VISUAL NOVEL",
     "matchedAnime": {
       "title": "Mahoutsukai no Yoru",
       "slug": "mahoutsukai-no-yoru",
@@ -739,8 +883,8 @@
         "Mystery"
       ]
     },
-    "editorialSummary": "New developments regarding 'Mahoutsukai no Yoru' Sequel Anime Announced highlight significant milestones for the visual novel calendar. While this announcement specifically centers on the Visual Novel franchise, fans can experience the ongoing animated story right now. Source publication milestones regularly coincide with new season developments and commemorative projects. Watch the anime adaptation on AniHubStream in 1080p full high definition with dual Japanese audio, synced multi-language subtitles, and skip-intro chapter markers on our dedicated Mahoutsukai no Yoru watch page. Primary reporting, production credits, and official artwork verified via MyAnimeList.",
-    "wordCount": 88
+    "editorialSummary": "New developments regarding 'Mahoutsukai no Yoru' Sequel Anime Announced highlight significant milestones for the visual novel calendar. Animation production is spearheaded by ufotable, featuring key leadership under Original Creator Kinoko Nasu, originating from VISUAL NOVEL, holding a strong 7.8/10 community rating. While this announcement specifically centers on the Visual Novel franchise, fans can experience the ongoing animated story right now. Source publication milestones regularly coincide with new season developments and commemorative projects. Watch the anime adaptation on AniHubStream in 1080p full high definition with dual Japanese audio, synced multi-language subtitles, and skip-intro chapter markers on our dedicated Mahoutsukai no Yoru watch page. Primary reporting, production credits, and official artwork verified via MyAnimeList.",
+    "wordCount": 112
   },
   {
     "id": "08feaa449c8e",
@@ -774,10 +918,60 @@
     "format": "Manga",
     "category": "Manga Franchise Update",
     "imageUrl": "https://cdn.myanimelist.net/s/common/uploaded_files/1795449241-3a9c8c48a2d0f37bf6c7354ad5014ca1.jpeg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "Satelight",
+    "staff": [
+      {
+        "role": "Original Creator",
+        "name": "Toshiaki Iwashiro"
+      },
+      {
+        "role": "Director ",
+        "name": "Katsumi Ono"
+      },
+      {
+        "role": "Series Composition",
+        "name": "Shin Yoshida"
+      },
+      {
+        "role": "Character Design",
+        "name": "Akira Ookuma"
+      },
+      {
+        "role": "Art Director",
+        "name": "Kenichi Tajiri"
+      },
+      {
+        "role": "Color Design",
+        "name": "Yoshimi Kawakami"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Ageha Yoshina",
+        "actor": "Rikuya Yasuda",
+        "voiceActor": "Rikuya Yasuda",
+        "name": "Rikuya Yasuda"
+      },
+      {
+        "character": "Sakurako Amamiya",
+        "actor": "Mayuko Kazama",
+        "voiceActor": "Mayuko Kazama",
+        "name": "Mayuko Kazama"
+      },
+      {
+        "character": "Asaga Hiryuu",
+        "actor": "Shunsuke Takeuchi",
+        "voiceActor": "Shunsuke Takeuchi",
+        "name": "Shunsuke Takeuchi"
+      },
+      {
+        "character": "Oboro Mochizuki",
+        "actor": "Souma Saitou",
+        "voiceActor": "Souma Saitou",
+        "name": "Souma Saitou"
+      }
+    ],
+    "sourceMaterial": "MANGA",
     "matchedAnime": {
       "title": "PSYREN",
       "slug": "psyren",
@@ -790,8 +984,8 @@
         "sci-fi"
       ]
     },
-    "editorialSummary": "Industry sources have confirmed new developments concerning 'Psyren' Announces Supporting Cast. Expectations remain high for PSYREN as production committees harmonize seasonal schedules with worldwide streaming releases, ensuring seamless access across global territories. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Original announcements, visual assets, and full coverage courtesy of MyAnimeList.",
-    "wordCount": 69
+    "editorialSummary": "Industry sources have confirmed new developments concerning 'Psyren' Announces Supporting Cast. Animation production is spearheaded by Satelight, featuring key leadership under Original Creator Toshiaki Iwashiro, originating from MANGA, holding a strong 6.9/10 community rating. Expectations remain high for PSYREN as production committees harmonize seasonal schedules with worldwide streaming releases, ensuring seamless access across global territories. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Original announcements, visual assets, and full coverage courtesy of MyAnimeList.",
+    "wordCount": 92
   },
   {
     "id": "795c25e601ab",
@@ -1059,10 +1253,60 @@
     "format": "Anime",
     "category": "Anime Franchise Update",
     "imageUrl": "https://img1.ak.crunchyroll.com/i/spire3-tmb/817078f6a59c2ea22a9e798ce909577b1790578469_thumb.jpg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "TMS Entertainment",
+    "staff": [
+      {
+        "role": "Original Creator",
+        "name": "Goushou Aoyama"
+      },
+      {
+        "role": "Director (eps 1-118)",
+        "name": "Kenji Kodama"
+      },
+      {
+        "role": "Director (eps 119-161, 163-218, 220-332, 667-677, 680-)",
+        "name": "Yasuichirou Yamamoto"
+      },
+      {
+        "role": "Director (eps 162, 219, 333-504)",
+        "name": "Masato Satou"
+      },
+      {
+        "role": "Director (eps 505-666, 678, 679)",
+        "name": "Koujin Ochi"
+      },
+      {
+        "role": "Director (eps 975-)",
+        "name": "Nobuharu Kamanaka"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Conan Edogawa",
+        "actor": "Minami Takayama",
+        "voiceActor": "Minami Takayama",
+        "name": "Minami Takayama"
+      },
+      {
+        "character": "Kogorou Mouri",
+        "actor": "Rikiya Koyama",
+        "voiceActor": "Rikiya Koyama",
+        "name": "Rikiya Koyama"
+      },
+      {
+        "character": "Ran Mouri",
+        "actor": "Wakana Yamazaki",
+        "voiceActor": "Wakana Yamazaki",
+        "name": "Wakana Yamazaki"
+      },
+      {
+        "character": "Ai Haibara",
+        "actor": "Megumi Hayashibara",
+        "voiceActor": "Megumi Hayashibara",
+        "name": "Megumi Hayashibara"
+      }
+    ],
+    "sourceMaterial": "MANGA",
     "matchedAnime": {
       "title": "Detective Conan",
       "slug": "detective-conan",
@@ -1075,8 +1319,8 @@
         "mystery"
       ]
     },
-    "editorialSummary": "The creative team behind Detective Conan has shared fresh details. Expectations remain high for Detective Conan as production committees harmonize seasonal schedules with worldwide streaming releases, ensuring seamless access across global territories. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Original announcements, visual assets, and full coverage courtesy of Crunchyroll News.",
-    "wordCount": 70
+    "editorialSummary": "The creative team behind Detective Conan has shared fresh details. Animation production is spearheaded by TMS Entertainment, featuring key leadership under Original Creator Goushou Aoyama, originating from MANGA, holding a strong 8.2/10 community rating. Expectations remain high for Detective Conan as production committees harmonize seasonal schedules with worldwide streaming releases, ensuring seamless access across global territories. Viewers eager to catch up on earlier seasons before the upcoming release can tune in to the high-quality Japanese broadcast and English dub streams directly on AniHubStream. Original announcements, visual assets, and full coverage courtesy of Crunchyroll News.",
+    "wordCount": 94
   },
   {
     "id": "2a5761d4ccf3",
@@ -1090,10 +1334,60 @@
     "format": "Anime",
     "category": "Anime Franchise Update",
     "imageUrl": "https://img1.ak.crunchyroll.com/i/spire4-tmb/1017583d42aaa83589b6aa95e4a51e6a1677868478_thumb.jpg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "MAPPA",
+    "staff": [
+      {
+        "role": "Original Creator",
+        "name": "Hajime Isayama"
+      },
+      {
+        "role": "Director",
+        "name": "Yuuichirou Hayashi"
+      },
+      {
+        "role": "Series Composition",
+        "name": "Hiroshi Seko"
+      },
+      {
+        "role": "Character Design",
+        "name": "Tomohiro Kishi"
+      },
+      {
+        "role": "Sub Character Design",
+        "name": "Yuuko Yamada"
+      },
+      {
+        "role": "Sub Character Design",
+        "name": "Kenji Terao"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Mikasa Ackerman",
+        "actor": "Yui Ishikawa",
+        "voiceActor": "Yui Ishikawa",
+        "name": "Yui Ishikawa"
+      },
+      {
+        "character": "Eren Yeager",
+        "actor": "Yuuki Kaji",
+        "voiceActor": "Yuuki Kaji",
+        "name": "Yuuki Kaji"
+      },
+      {
+        "character": "Armin Arlert",
+        "actor": "Marina Inoue",
+        "voiceActor": "Marina Inoue",
+        "name": "Marina Inoue"
+      },
+      {
+        "character": "Levi",
+        "actor": "Hiroshi Kamiya",
+        "voiceActor": "Hiroshi Kamiya",
+        "name": "Hiroshi Kamiya"
+      }
+    ],
+    "sourceMaterial": "MANGA",
     "matchedAnime": {
       "title": "Attack on Titan Final Season THE FINAL CHAPTERS Special 1",
       "slug": "attack-on-titan-final-season-the-final-chapters-special-1",
@@ -1107,8 +1401,8 @@
         "mystery"
       ]
     },
-    "editorialSummary": "Production updates surrounding Attack on Titan Final Season (Polish Dub) - Attack on Titan Final Season THE FINAL CHAPTERS Special 1 have been officially unveiled. This announcement directly impacts the global community following Attack on Titan Final Season THE FINAL CHAPTERS Special 1. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. With anticipation building for this next chapter, fans can stream the complete animated series in full 1080p high definition—featuring dual audio options and accurate subtitles—over on AniHubStream's dedicated episode hub for Attack on Titan Final Season THE FINAL CHAPTERS Special 1. Full reporting and official production announcements originally published by Crunchyroll News.",
-    "wordCount": 119
+    "editorialSummary": "Production updates surrounding Attack on Titan Final Season (Polish Dub) - Attack on Titan Final Season THE FINAL CHAPTERS Special 1 have been officially unveiled. Animation production is spearheaded by MAPPA, featuring key leadership under Original Creator Hajime Isayama, originating from MANGA, holding a strong 8.7/10 community rating. This announcement directly impacts the global community following Attack on Titan Final Season THE FINAL CHAPTERS Special 1. Production timelines, voice cast reprisals, and international simulcast arrangements remain focal points for fans eager to see key story arcs animated with cinematic fidelity. With anticipation building for this next chapter, fans can stream the complete animated series in full 1080p high definition—featuring dual audio options and accurate subtitles—over on AniHubStream's dedicated episode hub for Attack on Titan Final Season THE FINAL CHAPTERS Special 1. Full reporting and official production announcements originally published by Crunchyroll News.",
+    "wordCount": 142
   },
   {
     "id": "49e79160b1cf",
@@ -1122,10 +1416,60 @@
     "format": "Anime",
     "category": "Anime Franchise Update",
     "imageUrl": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f276dfd0975f676f12818710081fc1161311018465_thumb.jpg",
-    "studio": null,
-    "staff": [],
-    "voiceCast": [],
-    "sourceMaterial": null,
+    "studio": "Studio Pierrot",
+    "staff": [
+      {
+        "role": "Original Creator",
+        "name": "Masashi Kishimoto"
+      },
+      {
+        "role": "Director",
+        "name": "Hayato Date"
+      },
+      {
+        "role": "Character Design",
+        "name": "Tetsuya Nishio"
+      },
+      {
+        "role": "Character Design",
+        "name": "Hirofumi Suzuki"
+      },
+      {
+        "role": "Art Director",
+        "name": "Shigenori Takada"
+      },
+      {
+        "role": "Color Design",
+        "name": "Takuya Kawami"
+      }
+    ],
+    "voiceCast": [
+      {
+        "character": "Sasuke Uchiha",
+        "actor": "Noriaki Sugiyama",
+        "voiceActor": "Noriaki Sugiyama",
+        "name": "Noriaki Sugiyama"
+      },
+      {
+        "character": "Naruto Uzumaki",
+        "actor": "Junko Takeuchi",
+        "voiceActor": "Junko Takeuchi",
+        "name": "Junko Takeuchi"
+      },
+      {
+        "character": "Kakashi Hatake",
+        "actor": "Kazuhiko Inoue",
+        "voiceActor": "Kazuhiko Inoue",
+        "name": "Kazuhiko Inoue"
+      },
+      {
+        "character": "Sakura Haruno",
+        "actor": "Chie Nakamura",
+        "voiceActor": "Chie Nakamura",
+        "name": "Chie Nakamura"
+      }
+    ],
+    "sourceMaterial": "MANGA",
     "matchedAnime": {
       "title": "Naruto",
       "slug": "naruto",
@@ -1141,7 +1485,7 @@
         "supernatural"
       ]
     },
-    "editorialSummary": "New developments regarding Naruto Shippuden: The Assembly of the Five Kage (Telugu Dub) - Episode 220 - Prophecy of the Great Lord Elder highlight significant milestones for the anime calendar. The continued trajectory of Naruto reflects the franchise's formidable staying power, combining rigorous visual craftsmanship with deeply compelling storytelling. Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of Naruto on AniHubStream. Verified reporting and initial broadcast schedules confirmed through Crunchyroll News.",
-    "wordCount": 84
+    "editorialSummary": "New developments regarding Naruto Shippuden: The Assembly of the Five Kage (Telugu Dub) - Episode 220 - Prophecy of the Great Lord Elder highlight significant milestones for the anime calendar. Animation production is spearheaded by Studio Pierrot, featuring key leadership under Original Creator Masashi Kishimoto, originating from MANGA, holding a strong 8.0/10 community rating. The continued trajectory of Naruto reflects the franchise's formidable staying power, combining rigorous visual craftsmanship with deeply compelling storytelling. Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of Naruto on AniHubStream. Verified reporting and initial broadcast schedules confirmed through Crunchyroll News.",
+    "wordCount": 108
   }
 ]
