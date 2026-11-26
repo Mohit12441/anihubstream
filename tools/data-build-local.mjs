@@ -25,6 +25,7 @@ export async function buildLocalDatabase(opts = {}) {
   fs.mkdirSync(path.dirname(dbPath), { recursive: true });
 
   const db = new DatabaseSync(dbPath);
+  db.exec('PRAGMA busy_timeout = 30000;');
 
   // Apply schema if file exists
   if (fs.existsSync(SCHEMA_FILE)) {

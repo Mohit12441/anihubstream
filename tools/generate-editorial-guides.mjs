@@ -264,7 +264,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
     authorRole: 'Anime Industry Correspondent & Narrative Analyst',
     date: TODAY,
     readTime: '9 min read',
-    coverImage: '/images/banners/banner-monster.jpg',
+    coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-kM9U8V7X7hP1.jpg',
     tags: ['Psychological Anime', 'Philosophy', 'Monster', 'Vinland Saga', 'Evangelion', 'Must Watch', 'Anime Analysis'],
     targetKeywords: [
       'anime that leave you thinking long after they end',
@@ -323,7 +323,13 @@ Every ranked anime is evaluated across three primary metrics:
     const rating = anime.rating ? `${anime.rating} / 10` : '8.2 / 10';
     const season = anime.season || '2026';
     const kind = anime.kind || 'TV Series';
-    const synopsis = anime.synopsis || 'One of the standout series commanding global streaming viewership this week with exceptional narrative execution.';
+    const rawSynopsis = anime.synopsis || 'One of the standout series commanding global streaming viewership this week with exceptional narrative execution.';
+    const synopsis = rawSynopsis
+      .replace(/\(Source:.*?\)/gi, '')
+      .replace(/\[Written by.*?\]/gi, '')
+      .replace(/Note:.*?(?=(\n\n|$))/gis, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
 
     markdown += `\n\n### #${rank}. ${title}
 - **Global Rank:** #${rank} | **Format:** ${kind} (${season}) | **Rating:** ⭐ ${rating}
@@ -392,10 +398,18 @@ If you are tired of predictable power fantasies, sterile cliffhangers, and shall
 `.trim();
 
   sleepers.forEach((anime, idx) => {
+    const rawSynopsis = anime.synopsis || 'An exceptional narrative journey with standout character development.';
+    const synopsis = rawSynopsis
+      .replace(/\(Source:.*?\)/gi, '')
+      .replace(/\[Written by.*?\]/gi, '')
+      .replace(/Note:\s*.*?(?=(\n|$))/gis, '')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+
     markdown += `\n\n### ${idx + 1}. ${anime.title}
 - **Rating:** ⭐ ${anime.rating || '8.2'} / 10 | **Format:** ${anime.kind || 'TV Series'}
 - **Where to Stream:** [Watch on AniHubStream](/anime/${anime.id})
-- **The Core Premise:** ${anime.synopsis}
+- **The Core Premise:** ${synopsis}
 - **Why Mainstream Fans Missed It (And Why It Matters):** Free from formulaic tropes, this series respects the viewer's intelligence. Instead of instant sensory overload, it constructs methodical tension, believable psychological motives, and payoffs that feel genuinely earned.`;
   });
 
@@ -500,7 +514,7 @@ Bookmark this guide to stay ahead of upcoming broadcast delays, recap episodes, 
     authorRole: 'Broadcast Syndication Analyst',
     date: TODAY,
     readTime: '7 min read',
-    coverImage: '/images/banners/banner-reincarnated-as-a-sword.png',
+    coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx139587-5z2bWqj55M3g.jpg',
     tags: ['Seasonal Guide', 'Anime Schedule', 'Ongoing Anime', 'Weekly Air Dates', 'Simulcast'],
     targetKeywords: [
       'anime season broadcast guide',
@@ -561,7 +575,7 @@ export async function generateEditorialGuides() {
       authorRole: 'Anime Industry Correspondent',
       date: TODAY,
       readTime: '8 min read',
-      coverImage: '/images/banners/banner-solo-leveling.jpg',
+      coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx151807-it355ZgzquUd.png',
       tags: ['Solo Leveling', 'Sung Jinwoo', 'Action', 'Power Scaling', 'Manhwa Adaptation'],
       targetKeywords: [
         'solo leveling season 2 watch guide',
@@ -609,7 +623,7 @@ Stream all episodes of [Solo Leveling on AniHubStream](/anime/solo-leveling) in 
       authorRole: 'Senior Anime Journalist',
       date: TODAY,
       readTime: '22 min read',
-      coverImage: '/images/banners/banner-dark-fantasy.jpg',
+      coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx33-68lK9Fffx2j4.jpg',
       tags: ['Dark Fantasy', 'Berserk', 'Attack on Titan', 'Chainsaw Man', 'Made in Abyss', 'Anime Rankings'],
       targetKeywords: [
         'best dark fantasy anime ranked',
@@ -712,7 +726,7 @@ Stream these ten dark fantasy masterpieces with pristine multi-source 1080p play
       authorRole: 'Franchise Data Specialist',
       date: TODAY,
       readTime: '26 min read',
-      coverImage: '/images/banners/banner-isekai-worldbuilding.jpg',
+      coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108465-trh9y3dV2f69.jpg',
       tags: ['Isekai', 'Mushoku Tensei', 'Re:Zero', 'Overlord', 'Slime', 'Anime Rankings'],
       targetKeywords: [
         'best isekai anime ranked',

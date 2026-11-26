@@ -300,7 +300,7 @@ export function News() {
                       const target = e.currentTarget;
                       if (!target.getAttribute('data-fallback-tried')) {
                         target.setAttribute('data-fallback-tried', 'true');
-                        target.src = '/images/banners/banner-spring-2026.jpg';
+                        target.src = 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg';
                       }
                     }}
                   />
@@ -364,7 +364,7 @@ export function News() {
                       const target = e.currentTarget;
                       if (!target.getAttribute('data-fallback-tried')) {
                         target.setAttribute('data-fallback-tried', 'true');
-                        target.src = '/images/banners/banner-spring-2026.jpg';
+                        target.src = 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg';
                       }
                     }}
                   />

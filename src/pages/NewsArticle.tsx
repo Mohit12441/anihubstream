@@ -24,6 +24,9 @@ interface ParsedBlock {
 function renderMarkdown(str: string): string {
   if (!str) return '';
   return str
+    .replace(/\(Source:.*?\)/gi, '')
+    .replace(/\[Written by.*?\]/gi, '')
+    .replace(/Note:\s*Tempai:.*?(?=(\n|$))/gi, '')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);text-decoration:underline;font-weight:600;">$1</a>')
     .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
@@ -53,9 +56,10 @@ function parseArticleBlocks(content: string): ParsedBlock[] {
       continue;
     }
 
-    // Heading 3
-    if (line.startsWith('### ')) {
-      const rawText = line.replace('### ', '').trim();
+    // Heading 3 or numbered anime entry heading (e.g. '### 1. Title', '### #1. Title', '#1. Title', '#2. Title')
+    const h3Match = line.match(/^###\s+(.*)/) || line.match(/^#+(\d+[\.:\s-].*)/);
+    if (h3Match) {
+      const rawText = h3Match[1].trim();
       const text = cleanHeadingText(rawText);
       const matched = resolveAnime(text) || resolveAnime(rawText);
       blocks.push({ type: 'h3', text, matchedAnime: matched });
@@ -63,11 +67,23 @@ function parseArticleBlocks(content: string): ParsedBlock[] {
       continue;
     }
 
-    // Heading 2
+    // Heading 2 (e.g. '## Section Title')
     if (line.startsWith('## ')) {
       const rawText = line.replace('## ', '').trim();
       const text = cleanHeadingText(rawText);
       blocks.push({ type: 'h2', text });
+      i++;
+      continue;
+    }
+
+    // Standalone numbered entry with link (e.g. "1. [Mushoku Tensei: Jobless Reincarnation](/anime/...)")
+    const standaloneEntryMatch = line.match(/^(\d+)\.\s+\[([^\]]+)\]\(([^)]+)\)$/);
+    if (standaloneEntryMatch) {
+      const rank = standaloneEntryMatch[1];
+      const title = standaloneEntryMatch[2];
+      const text = `${rank}. ${title}`;
+      const matched = resolveAnime(title) || resolveAnime(text);
+      blocks.push({ type: 'h3', text, matchedAnime: matched });
       i++;
       continue;
     }

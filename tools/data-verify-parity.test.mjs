@@ -1,26 +1,19 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import { verifyDataParity } from './data-verify-parity.mjs';
 import { buildLocalDatabase } from './data-build-local.mjs';
-import { getLocalSqlitePath } from './data-pull-pure.mjs';
-import { DatabaseSync } from 'node:sqlite';
 
 test('data-verify-parity: verifies parity between database and data/ directory', async () => {
-  const dbPath = getLocalSqlitePath();
-  const db = new DatabaseSync(dbPath);
-  let count = 0;
-  try {
-    const row = /** @type {any} */ (db.prepare('SELECT count(*) as c FROM anime').get());
-    count = row?.c || 0;
-  } catch {}
-  db.close();
-
-  // If running in clean CI environment without pre-populated SQLite, build from data/ first
-  if (count === 0) {
-    await buildLocalDatabase({ dbPath });
+  const tmpDbPath = path.resolve('tools/.cache/test-parity-d1.sqlite');
+  fs.mkdirSync(path.dirname(tmpDbPath), { recursive: true });
+  if (fs.existsSync(tmpDbPath)) {
+    fs.rmSync(tmpDbPath, { force: true });
   }
 
-  const report = await verifyDataParity({ source: 'local', dbPath });
+  await buildLocalDatabase({ dbPath: tmpDbPath });
+  const report = await verifyDataParity({ source: 'local', dbPath: tmpDbPath });
 
   assert.equal(typeof report.isPureParity, 'boolean');
   assert.equal(typeof report.mismatches, 'number');
@@ -34,4 +27,11 @@ test('data-verify-parity: verifies parity between database and data/ directory',
 
   assert.equal(report.isPureParity, true);
   assert.equal(report.mismatches, 0);
+
+  // Clean up
+  try {
+    if (fs.existsSync(tmpDbPath)) {
+      fs.rmSync(tmpDbPath, { force: true });
+    }
+  } catch {}
 });
