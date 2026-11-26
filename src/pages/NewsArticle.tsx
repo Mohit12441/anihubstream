@@ -35,6 +35,8 @@ export function cleanHeadingText(str: string): string {
     .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Extract link text from [Title](url)
     .replace(/\*\*(.*?)\*\*/g, '$1')           // Strip bold **
     .replace(/\*(.*?)\*/g, '$1')               // Strip italics *
+    .replace(/^#+\s*/, '')                     // Strip leading hashtags (e.g. ### or #2)
+    .replace(/^#(?=\d)/, '')                   // Strip # right before a number (e.g. #1 -> 1)
     .trim();
 }
 
@@ -410,8 +412,10 @@ export function NewsArticle() {
             loading="eager"
             decoding="async"
             onError={(e) => {
-              if (e.currentTarget.src !== '/images/banners/banner-spring-2026.jpg') {
-                e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+              const target = e.currentTarget;
+              if (!target.getAttribute('data-fallback-tried')) {
+                target.setAttribute('data-fallback-tried', 'true');
+                target.src = '/images/banners/banner-spring-2026.jpg';
               }
             }}
           />

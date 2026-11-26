@@ -323,8 +323,10 @@ export function News() {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     loading="eager"
                     onError={(e) => {
-                      if (e.currentTarget.src !== window.location.origin + '/images/banners/banner-spring-2026.jpg') {
-                        e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+                      const target = e.currentTarget;
+                      if (!target.getAttribute('data-fallback-tried')) {
+                        target.setAttribute('data-fallback-tried', 'true');
+                        target.src = '/images/banners/banner-spring-2026.jpg';
                       }
                     }}
                   />
@@ -411,8 +413,10 @@ export function News() {
                     loading="lazy"
                     decoding="async"
                     onError={(e) => {
-                      if (e.currentTarget.src !== window.location.origin + '/images/banners/banner-spring-2026.jpg') {
-                        e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+                      const target = e.currentTarget;
+                      if (!target.getAttribute('data-fallback-tried')) {
+                        target.setAttribute('data-fallback-tried', 'true');
+                        target.src = '/images/banners/banner-spring-2026.jpg';
                       }
                     }}
                   />
