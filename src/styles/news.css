@@ -206,20 +206,26 @@
 .article-cover-wrap {
   width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 200px;
-  max-height: 480px;
+  max-height: 420px;
   border-radius: var(--r-md);
   overflow: hidden;
   margin: 24px 0 32px 0;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(13, 15, 24, 0.9);
+  background: #0d0f18;
 }
 
 .article-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center center;
+}
+
+@media (min-width: 900px) {
+  .article-cover-wrap {
+    aspect-ratio: 21 / 9;
+    max-height: 380px;
+  }
 }
 
 .article-content {

@@ -201,7 +201,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
 
 ---
 
-### 1. [Monster](/anime/monster) (Studio Madhouse)
+### 1. Monster (Studio Madhouse)
 - **Episodes:** 74 | **Rating:** ⭐ 8.8 / 10 | **Format:** TV Series
 - **Where to Stream:** [Watch Monster on AniHubStream Free](/anime/monster)
 - **The Core Dilemma:** Is all human life inherently equal, or are some individuals born fundamentally monstrous?
@@ -210,7 +210,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
 
 ---
 
-### 2. [Neon Genesis Evangelion](/anime/neon-genesis-evangelion) (Studio Gainax)
+### 2. Neon Genesis Evangelion (Studio Gainax)
 - **Episodes:** 26 + Films | **Rating:** ⭐ 8.3 / 10 | **Format:** TV Series
 - **Where to Stream:** [Watch Neon Genesis Evangelion on AniHubStream Free](/anime/neon-genesis-evangelion)
 - **The Core Dilemma:** How can we open ourselves to love and connection when closeness guarantees emotional pain?
@@ -219,7 +219,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
 
 ---
 
-### 3. [Vinland Saga](/anime/vinland-saga) (Wit Studio / MAPPA)
+### 3. Vinland Saga (Wit Studio / MAPPA)
 - **Episodes:** 48 | **Rating:** ⭐ 8.8 / 10 | **Format:** TV Series
 - **Where to Stream:** [Watch Vinland Saga on AniHubStream Free](/anime/vinland-saga)
 - **The Core Dilemma:** Can a person break the cycle of generational violence, and what does it truly mean to have "no enemies"?
@@ -228,7 +228,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
 
 ---
 
-### 4. [Shinsekai Yori (From the New World)](/anime/shinsekai-yori) (A-1 Pictures)
+### 4. Shinsekai Yori (From the New World) (A-1 Pictures)
 - **Episodes:** 25 | **Rating:** ⭐ 8.3 / 10 | **Format:** TV Series
 - **Where to Stream:** [Watch Shinsekai Yori on AniHubStream Free](/anime/shinsekai-yori)
 - **The Core Dilemma:** What horrific compromises must a utopian civilization make to preserve social order?
@@ -237,7 +237,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
 
 ---
 
-### 5. [Serial Experiments Lain](/anime/serial-experiments-lain) (Studio Triangle Staff)
+### 5. Serial Experiments Lain (Studio Triangle Staff)
 - **Episodes:** 13 | **Rating:** ⭐ 8.0 / 10 | **Format:** TV Series
 - **Where to Stream:** [Watch Serial Experiments Lain on AniHubStream Free](/anime/serial-experiments-lain)
 - **The Core Dilemma:** Where does individual consciousness end and digital omnipresence begin?
@@ -246,7 +246,7 @@ If you are craving thought-provoking, psychologically gripping stories that rewa
 
 ---
 
-### 6. [Death Parade](/anime/death-parade) (Studio Madhouse)
+### 6. Death Parade (Studio Madhouse)
 - **Episodes:** 12 | **Rating:** ⭐ 7.9 / 10 | **Format:** TV Series
 - **Where to Stream:** [Watch Death Parade on AniHubStream Free](/anime/death-parade)
 - **The Core Dilemma:** Is any human being truly qualified to pass ultimate moral judgment on another soul?
@@ -325,7 +325,7 @@ Every ranked anime is evaluated across three primary metrics:
     const kind = anime.kind || 'TV Series';
     const synopsis = anime.synopsis || 'One of the standout series commanding global streaming viewership this week with exceptional narrative execution.';
 
-    markdown += `\n\n### #${rank}. [${title}](/anime/${slug})
+    markdown += `\n\n### #${rank}. ${title}
 - **Global Rank:** #${rank} | **Format:** ${kind} (${season}) | **Rating:** ⭐ ${rating}
 - **Where to Stream:** [Watch on AniHubStream Free](/anime/${slug})
 - **The Narrative Hook:** ${synopsis}
@@ -392,7 +392,7 @@ If you are tired of predictable power fantasies, sterile cliffhangers, and shall
 `.trim();
 
   sleepers.forEach((anime, idx) => {
-    markdown += `\n\n### ${idx + 1}. [${anime.title}](/anime/${anime.id})
+    markdown += `\n\n### ${idx + 1}. ${anime.title}
 - **Rating:** ⭐ ${anime.rating || '8.2'} / 10 | **Format:** ${anime.kind || 'TV Series'}
 - **Where to Stream:** [Watch on AniHubStream](/anime/${anime.id})
 - **The Core Premise:** ${anime.synopsis}
@@ -458,20 +458,24 @@ Here is your definitive **Broadcast Season Guide**, featuring the most anticipat
 
 ## 1. Top Tier Broadcast Highlights
 
-### [Reincarnated as a Sword Season 2](/anime/reincarnated-as-a-sword-season-2)
+### Reincarnated as a Sword Season 2
 - **Studio:** C2C | **Status:** Ongoing | **Weekly Air Day:** Wednesday
+- **Where to Stream:** [Watch on AniHubStream Free](/anime/reincarnated-as-a-sword-season-2)
 - **Why It's a Must-Watch:** Building upon the standout combat animation of Season 1, Fran and Teacher travel to the Beast Kingdom, facing deeper political intrigue and intense dungeon trials.
 
-### [Overgeared](/anime/overgeared)
+### Overgeared
 - **Format:** ONA | **Status:** Ongoing | **Weekly Air Day:** Sunday
+- **Where to Stream:** [Watch on AniHubStream Free](/anime/overgeared)
 - **Why It's a Must-Watch:** Adapting one of the most celebrated web novels of all time, Grid’s transformation from an unlucky gaming failure to a legendary blacksmith delivers unmatched progression fantasy satisfaction.
 
-### [The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life](/anime/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life)
+### The Laid-Off Cheat-Granting Mage Enjoys a Second Lease on Life
 - **Format:** TV Series | **Status:** Ongoing | **Weekly Air Day:** Tuesday
+- **Where to Stream:** [Watch on AniHubStream Free](/anime/the-laid-off-cheat-granting-mage-enjoys-a-second-lease-on-life)
 - **Why It's a Must-Watch:** A refreshingly upbeat twist on the betrayal trope, Rein’s reclaiming of his massive enchantment points delivers hilarious comedic beats and heartwarming adventure.
 
-### [ONE PIECE (Egghead Arc)](/anime/one-piece)
+### ONE PIECE (Egghead Arc)
 - **Studio:** Toei Animation | **Status:** Ongoing | **Weekly Air Day:** Sunday
+- **Where to Stream:** [Watch on AniHubStream Free](/anime/one-piece)
 - **Why It's a Must-Watch:** As the Straw Hat crew ventures onto Dr. Vegapunk’s futuristic island of Egghead, the long-running series delivers peak cinematic sakuga and lore-shattering world history revelations.
 
 ---
@@ -618,16 +622,16 @@ Stream all episodes of [Solo Leveling on AniHubStream](/anime/solo-leveling) in 
       content: `
 Dark fantasy represents anime at its rawest and most visceral. By exploring consequences, moral decay, and unforgiving worlds, these ten masterpieces stand apart from standard heroic journeys.
 
-### 1. [Berserk](/anime/berserk)
+### 1. Berserk
 The gold standard of dark fantasy. Kentaro Miura’s magnum opus follows Guts, the Black Swordsman, in an uncompromising struggle against cosmic destiny, betrayal, and demonic torment.
 
-### 2. [Attack on Titan](/anime/attack-on-titan)
+### 2. Attack on Titan
 What begins as humanity’s survival against man-eating giants evolves into a devastating political commentary on cycles of hatred, war, and fascism.
 
-### 3. [Chainsaw Man](/anime/chainsaw-man)
+### 3. Chainsaw Man
 Studio MAPPA’s hyper-stylized adaptation blends grindhouse horror with deeply human loneliness and dark humor.
 
-### 4. [Jujutsu Kaisen](/anime/jujutsu-kaisen)
+### 4. Jujutsu Kaisen
 High-stakes curse manipulation with brutal consequences, culminating in the critically acclaimed Shibuya Incident.
 
 Stream these dark fantasy classics and more on AniHubStream!
@@ -670,13 +674,13 @@ Stream these dark fantasy classics and more on AniHubStream!
       content: `
 The isekai genre is often dismissed as escapist fantasy, but its finest works feature the richest worldbuilding, most complex magic systems, and deepest character arcs in contemporary anime.
 
-### 1. [Mushoku Tensei: Jobless Reincarnation](/anime/mushoku-tensei-jobless-reincarnation)
+### 1. Mushoku Tensei: Jobless Reincarnation
 The undisputed pioneer of modern isekai. Exceptional world geography, generational linguistics, and authentic personal redemption.
 
-### 2. [Re:Zero — Starting Life in Another World](/anime/rezero-starting-life-in-another-world)
+### 2. Re:Zero — Starting Life in Another World
 A masterclass in psychological agony and psychological resilience, testing Subaru Natsuki against insurmountable timelines.
 
-### 3. [Overlord](/anime/overlord)
+### 3. Overlord
 The ultimate villain protagonist saga, exploring geopolitical expansion and world domination from the perspective of an omnipotent undead overlord.
 
 Watch the complete isekai library with fast playback on AniHubStream!

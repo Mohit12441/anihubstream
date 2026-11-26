@@ -29,6 +29,15 @@ function renderMarkdown(str: string): string {
     .replace(/\*(.*?)\*/g, '<em>$1</em>');
 }
 
+export function cleanHeadingText(str: string): string {
+  if (!str) return '';
+  return str
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // Extract link text from [Title](url)
+    .replace(/\*\*(.*?)\*\*/g, '$1')           // Strip bold **
+    .replace(/\*(.*?)\*/g, '$1')               // Strip italics *
+    .trim();
+}
+
 function parseArticleBlocks(content: string): ParsedBlock[] {
   const lines = content.replace(/\r\n/g, '\n').split('\n');
   const blocks: ParsedBlock[] = [];
@@ -44,8 +53,9 @@ function parseArticleBlocks(content: string): ParsedBlock[] {
 
     // Heading 3
     if (line.startsWith('### ')) {
-      const text = line.replace('### ', '').trim();
-      const matched = resolveAnime(text);
+      const rawText = line.replace('### ', '').trim();
+      const text = cleanHeadingText(rawText);
+      const matched = resolveAnime(text) || resolveAnime(rawText);
       blocks.push({ type: 'h3', text, matchedAnime: matched });
       i++;
       continue;
@@ -53,7 +63,8 @@ function parseArticleBlocks(content: string): ParsedBlock[] {
 
     // Heading 2
     if (line.startsWith('## ')) {
-      const text = line.replace('## ', '').trim();
+      const rawText = line.replace('## ', '').trim();
+      const text = cleanHeadingText(rawText);
       blocks.push({ type: 'h2', text });
       i++;
       continue;
@@ -70,21 +81,28 @@ function parseArticleBlocks(content: string): ParsedBlock[] {
         const rank = parseInt(m[1], 10);
         const textContent = m[2];
 
-        // Extract **Title**: Body if present
+        // Extract **Title**: Body or [Title](url): Body if present
         const boldMatch = textContent.match(/^\*\*(.*?)\*\*(.*)/);
         let title = '';
         let body = textContent;
         if (boldMatch) {
           title = boldMatch[1];
           body = boldMatch[2].replace(/^[:\s-]+/, '').trim();
+        } else {
+          const linkMatch = textContent.match(/^\[([^\]]+)\]\(([^)]+)\)(.*)/);
+          if (linkMatch) {
+            title = linkMatch[1];
+            body = linkMatch[3].replace(/^[:\s-]+/, '').trim();
+          }
         }
 
-        const matchedAnime = resolveAnime(title) || resolveAnime(textContent);
+        const cleanTitle = title ? cleanHeadingText(title) : '';
+        const matchedAnime = resolveAnime(cleanTitle) || resolveAnime(textContent);
 
         items.push({
           rank,
-          raw: textContent,
-          title: title || undefined,
+          raw: cleanHeadingText(textContent),
+          title: cleanTitle || undefined,
           body: body || undefined,
           matchedAnime: matchedAnime || undefined,
         });
