@@ -170,6 +170,9 @@ export function NewsArticle() {
               '@type': 'NewsArticle',
               headline: article.title,
               description: article.excerpt,
+              articleSection: article.category,
+              keywords: article.tags?.join(', ') || 'anime news, anime stream, anihubstream',
+              inLanguage: 'en-US',
               image: [article.coverImage.startsWith('http') ? article.coverImage : `https://anihubstream.com${article.coverImage}`],
               datePublished: `${article.date}T10:00:00+00:00`,
               dateModified: `${article.date}T10:00:00+00:00`,
@@ -196,6 +199,20 @@ export function NewsArticle() {
                 '@type': 'WebPage',
                 '@id': `https://anihubstream.com/news/${article.slug}`,
               },
+              ...(article.relatedAnimeSlugs?.length
+                ? {
+                    about: article.relatedAnimeSlugs.map((slug) => ({
+                      '@type': 'Thing',
+                      name: slug,
+                      url: `https://anihubstream.com/anime/${slug}`,
+                    })),
+                    mentions: article.relatedAnimeSlugs.map((slug) => ({
+                      '@type': 'Thing',
+                      name: slug,
+                      url: `https://anihubstream.com/anime/${slug}`,
+                    })),
+                  }
+                : {}),
             },
             {
               '@type': 'BreadcrumbList',
@@ -310,7 +327,37 @@ export function NewsArticle() {
       </div>
 
       <div className="article-content" style={{ margin: '0 auto' }}>
-        {/* Featured Series Showcase Bar (Picture Logic with Name of Anime) */}
+        {/* Render Lead Blocks (H1/H2 intro & opening paragraph) first so lede is above fold */}
+        {blocks.slice(0, Math.min(2, blocks.length)).map((block, idx) => {
+          if (block.type === 'h3') {
+            return (
+              <div key={idx} style={{ marginTop: 28, marginBottom: 14 }}>
+                <h3>{block.text}</h3>
+                {block.matchedAnime && (
+                  <AnimeSpotlightCard
+                    anime={block.matchedAnime}
+                    variant="inline-banner"
+                    subtitle={`Featured in this section: Stream ${block.matchedAnime.title} with high-definition multi-source playback, synchronized subtitles, and zero ad takeovers on AniHubStream.`}
+                  />
+                )}
+              </div>
+            );
+          }
+          if (block.type === 'h2') {
+            return <h2 key={idx}>{block.text}</h2>;
+          }
+          if (block.type === 'paragraph') {
+            return (
+              <p
+                key={idx}
+                dangerouslySetInnerHTML={{ __html: renderMarkdown(block.text || '') }}
+              />
+            );
+          }
+          return null;
+        })}
+
+        {/* Featured Series Showcase Bar (Positioned below the Lede so answers are first) */}
         {allMentionedAnime.length > 0 && (
           <section className="mentioned-anime-section">
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
@@ -363,8 +410,8 @@ export function NewsArticle() {
           </section>
         )}
 
-        {/* Structured Article Blocks (Rankings, Sections, Bullets & Inline Anime Cards) */}
-        {blocks.map((block, idx) => {
+        {/* Structured Article Blocks (Remaining Content) */}
+        {blocks.slice(Math.min(2, blocks.length)).map((block, idx) => {
           if (block.type === 'h3') {
             return (
               <div key={idx} style={{ marginTop: 28, marginBottom: 14 }}>

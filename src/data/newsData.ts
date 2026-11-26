@@ -197,6 +197,24 @@ export function cleanExcerpt(text: string, maxChars = 155): string {
 
 export function convertLiveNewsToArticle(item: any): NewsArticleItem {
   const title = item.originalTitle || item.title;
+  const isAnime = (item.format || 'Anime').toLowerCase() === 'anime';
+  const seed = (item.slug || title).split('').reduce((acc: number, c: string) => acc + c.charCodeAt(0), 0);
+
+  const headlineH2s = [
+    '## Announcement & Key Industry Details',
+    '## Production Overview & Story Developments',
+    '## Official Release Details & Franchise Context',
+    '## Project Background & Creative Milestones',
+  ];
+  const leadH2 = headlineH2s[seed % headlineH2s.length];
+
+  const studioH2s = [
+    '## Animation Studio & Production Pedigree',
+    '## Creative Studio & Direction Team',
+    '## Production Leadership & Studio Credits',
+  ];
+  const studioH2 = studioH2s[seed % studioH2s.length];
+
   const staffList = (item.staff || [])
     .map((s: any) => `- **${s.role}**: ${s.name}`)
     .join('\n');
@@ -205,12 +223,27 @@ export function convertLiveNewsToArticle(item: any): NewsArticleItem {
     .map((c: any) => `- **${c.character || 'Character'}**: ${c.actor || c.voiceActor || c.name}`)
     .join('\n');
 
+  const broadcastOrReadingSection = isAnime
+    ? `## Broadcast Schedule & Where to Watch
+Episodes are scheduled for synchronized international simulcast with original Japanese audio and official multi-language subtitles. AniHubStream tracks live countdown clocks, release days, and 1080p high-definition streams across all major broadcast series.`
+    : `## Source Reading & Catalog Exploration
+Official anime broadcast adaptations have not been scheduled for this release. Fans of the franchise can track print serialization developments or explore related anime adaptations with similar themes in AniHubStream's curated streaming library.`;
+
+  const keyFactsBlock = `
+### Key Production Facts
+- **Format**: ${item.format || 'Anime'}
+${item.studio ? `- **Animation Studio**: ${item.studio}\n` : ''}${item.sourceMaterial ? `- **Original Source**: ${item.sourceMaterial}\n` : ''}- **Reporting Source**: [${item.source}](${item.sourceUrl})
+${item.matchedAnime ? `- **Streaming Availability**: [Watch ${item.matchedAnime.title} on AniHubStream](${item.matchedAnime.streamUrl})` : ''}
+`.trim();
+
   const content = `
-## Announcement & Key Industry Details
+${leadH2}
 
 ${item.editorialSummary}
 
-${item.studio || staffList ? `## Animation Studio & Production Pedigree
+${keyFactsBlock}
+
+${item.studio || staffList ? `${studioH2}
 ${item.studio ? `- **Lead Studio**: ${item.studio}\n` : ''}${staffList ? `\n**Production Leadership**:\n${staffList}\n` : ''}` : ''}
 
 ${castList ? `## Featured Cast & Characters
@@ -221,8 +254,7 @@ ${item.sourceMaterial ? `## Source Material & Adaptation Context
 This release is adapted from the original **${item.sourceMaterial}**, expanding its reach across global broadcast and streaming syndication.
 ` : ''}
 
-## Broadcast Schedule & Where to Watch
-Episodes are scheduled for synchronized international simulcast with original Japanese audio and official multi-language subtitles. AniHubStream tracks live countdown clocks, release days, and 1080p high-definition streams across all major broadcast series.
+${broadcastOrReadingSection}
 
 ## Primary Verification & Citation
 Full announcement details, official key visuals, and promotional trailers were originally published and verified by [${item.source}](${item.sourceUrl}).

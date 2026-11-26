@@ -451,15 +451,17 @@ export function News() {
                     {/* Header: Source, Date, Category */}
                     <div className="live-wire-card__header">
                       <div className="live-wire-card__badges">
-                        <span className="pill pill--sm" style={{ background: 'rgba(36,211,238,0.15)', color: 'var(--cyan)', border: '1px solid rgba(36,211,238,0.3)', fontWeight: 700 }}>
+                        <span className="pill pill--sm" style={{ background: 'rgba(36,211,238,0.18)', color: '#f8fafc', border: '1px solid rgba(36,211,238,0.45)', fontWeight: 700 }}>
                           {item.source}
                         </span>
-                        <span className="pill pill--sm" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.8)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                        <span className="pill pill--sm" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.85)', border: '1px solid rgba(255,255,255,0.12)' }}>
                           {item.category}
                         </span>
-                        <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
                           <Calendar size={13} aria-hidden="true" />
-                          <time dateTime={item.publishedAt}>{formatTimeAgo(item.timestamp)}</time>
+                          <time dateTime={item.publishedAt}>
+                            {new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} • {formatTimeAgo(item.timestamp)}
+                          </time>
                         </span>
                       </div>
 

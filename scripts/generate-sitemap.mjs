@@ -16,13 +16,17 @@ const RETIRED_SLUGS = new Set([
 ]);
 
 const staticPages = [
-  { loc: `${ORIGIN}/`, priority: '1.0', changefreq: 'daily' },
-  { loc: `${ORIGIN}/anime`, priority: '0.9', changefreq: 'daily' },
-  { loc: `${ORIGIN}/about`, priority: '0.5', changefreq: 'monthly' },
-  { loc: `${ORIGIN}/dmca`, priority: '0.3', changefreq: 'monthly' },
-  { loc: `${ORIGIN}/privacy`, priority: '0.3', changefreq: 'monthly' },
-  { loc: `${ORIGIN}/terms`, priority: '0.3', changefreq: 'monthly' },
-  { loc: `${ORIGIN}/contact`, priority: '0.4', changefreq: 'monthly' },
+  { loc: `${ORIGIN}/` },
+  { loc: `${ORIGIN}/anime` },
+  { loc: `${ORIGIN}/genres` },
+  { loc: `${ORIGIN}/schedule` },
+  { loc: `${ORIGIN}/discover` },
+  { loc: `${ORIGIN}/news` },
+  { loc: `${ORIGIN}/about` },
+  { loc: `${ORIGIN}/dmca` },
+  { loc: `${ORIGIN}/privacy` },
+  { loc: `${ORIGIN}/terms` },
+  { loc: `${ORIGIN}/contact` },
 ];
 
 export function generateSitemap() {
@@ -57,18 +61,41 @@ export function generateSitemap() {
 
   animeIds.sort((a, b) => a.localeCompare(b));
 
+  // Load news articles (both live feed and static curated guides)
+  const newsEntries = [
+    { slug: 'spring-2026-anime-season-guide', date: '2026-03-20' },
+    { slug: 'top-10-dark-fantasy-anime-masterpieces', date: '2026-03-15' },
+    { slug: 'solo-leveling-reawakening-complete-guide', date: '2026-03-08' },
+    { slug: 'best-isekai-anime-ranked-by-worldbuilding', date: '2026-02-28' },
+  ];
+
+  const newsFeedPath = path.resolve('data/news/feed.json');
+  if (fs.existsSync(newsFeedPath)) {
+    try {
+      const feed = JSON.parse(fs.readFileSync(newsFeedPath, 'utf8'));
+      if (Array.isArray(feed)) {
+        for (const item of feed) {
+          if (item.slug && !newsEntries.some(e => e.slug === item.slug)) {
+            const date = item.publishedAt ? String(item.publishedAt).slice(0, 10) : TODAY;
+            newsEntries.push({ slug: item.slug, date });
+          }
+        }
+      }
+    } catch {}
+  }
+
   const urls = [
     ...staticPages.map(p => `  <url>
     <loc>${p.loc}</loc>
     <lastmod>${TODAY}</lastmod>
-    <changefreq>${p.changefreq}</changefreq>
-    <priority>${p.priority}</priority>
+  </url>`),
+    ...newsEntries.map(n => `  <url>
+    <loc>${ORIGIN}/news/${n.slug}</loc>
+    <lastmod>${n.date}</lastmod>
   </url>`),
     ...animeIds.map(id => `  <url>
     <loc>${ORIGIN}/anime/${id}</loc>
     <lastmod>${TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>`),
   ];
 

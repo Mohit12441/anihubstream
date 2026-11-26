@@ -812,8 +812,12 @@
 .live-wire-card__excerpt {
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .live-wire-card__actions {

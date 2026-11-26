@@ -202,6 +202,9 @@ export function Header() {
     clearSuggestions();
   };
 
+  const isMac = typeof navigator !== 'undefined' && /Mac|iPod|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+  const kbdShortcut = isMac ? '⌘K' : 'Ctrl+K';
+
   return (
     <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <ScrollProgress />
@@ -254,10 +257,10 @@ export function Header() {
                 type="button"
                 className="site-header__kbd-btn"
                 onClick={() => window.dispatchEvent(new CustomEvent('anihub:open-command-palette'))}
-                title="Open Command Palette (Ctrl+K or ⌘K)"
+                title={`Open Command Palette (${kbdShortcut})`}
                 aria-label="Open Command Palette"
               >
-                <kbd>⌘K</kbd>
+                <kbd>{kbdShortcut}</kbd>
               </button>
               <button type="submit" className="search__go" aria-label="Run search">
                 <Search size={15} aria-hidden="true" />

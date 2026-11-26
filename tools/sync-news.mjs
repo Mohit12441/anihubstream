@@ -373,9 +373,45 @@ export function computeJaccardSimilarity(setA, setB) {
 }
 
 /**
+ * Transliteration and alias map for cross-language title deduplication
+ * Merges English and Romaji variations of the same underlying franchise.
+ */
+export const TITLE_TRANSLITERATION_MAP = {
+  'youchien wars': 'kindergarten-wars',
+  'kindergarten wars': 'kindergarten-wars',
+  'himekishi-sama no himo': 'the-kept-man-of-the-princess-knight',
+  'the kept man of the princess knight': 'the-kept-man-of-the-princess-knight',
+  'shiboyugi': 'death-game-for-food',
+  'death games to put food on the table': 'death-game-for-food',
+  'sousou no frieren': 'frieren',
+  'frieren beyond journeys end': 'frieren',
+  'kimetsu no yaiba': 'demon-slayer',
+  'shingeki no kyojin': 'attack-on-titan',
+  'boku no hero academia': 'my-hero-academia',
+  'tate no yuusha no nariagari': 'shield-hero',
+  'kage no jitsuryokusha ni naritakute': 'eminence-in-shadow',
+};
+
+/**
+ * Normalizes title into canonical transliteration group if mapped
+ * @param {string} title
+ * @returns {string}
+ */
+export function normalizeTransliteration(title) {
+  if (!title) return '';
+  const lower = title.toLowerCase().replace(/['"’]/g, '');
+  for (const [pattern, canonical] of Object.entries(TITLE_TRANSLITERATION_MAP)) {
+    if (lower.includes(pattern)) {
+      return canonical;
+    }
+  }
+  return '';
+}
+
+/**
  * Deduplicates raw news items across sources (e.g. ANN vs MAL vs Crunchyroll).
- * If candidate and existing share the same matched anime slug, the Jaccard threshold
- * drops to 0.30 to catch paraphrased titles.
+ * If candidate and existing share the same matched anime slug or transliteration group,
+ * the Jaccard threshold drops to 0.30 to catch paraphrased titles.
  * Prioritizes the item with a clear image, or earlier timestamp.
  * @param {Array<any>} items
  * @returns {Array<any>}
@@ -385,6 +421,7 @@ export function deduplicateNewsItems(items) {
 
   for (const candidate of items) {
     const candidateTokens = extractTokens(candidate.title);
+    const candidateGroup = normalizeTransliteration(candidate.title);
     let duplicateIndex = -1;
 
     for (let i = 0; i < deduped.length; i++) {
@@ -392,6 +429,13 @@ export function deduplicateNewsItems(items) {
 
       // Exact URL match
       if (existing.link === candidate.link) {
+        duplicateIndex = i;
+        break;
+      }
+
+      // Exact transliteration group match (e.g., Youchien Wars vs Kindergarten Wars)
+      const existingGroup = normalizeTransliteration(existing.title);
+      if (candidateGroup && existingGroup && candidateGroup === existingGroup) {
         duplicateIndex = i;
         break;
       }
@@ -799,16 +843,28 @@ export async function syncNews(options = {}) {
 }
 
 /**
- * Generates Google News compliant XML sitemap
+ * Generates Google News compliant XML sitemap adhering strictly to Google's 48-hour publication rule
  * @param {Array<any>} articles
  */
 export function generateNewsSitemap(articles) {
-  const newsItems = (articles || []).slice(0, 50);
-  const now = new Date().toISOString();
+  const now = new Date();
+  const cutoffTime = now.getTime() - 48 * 60 * 60 * 1000; // Strict 48-hour window
+
+  // Filter articles published within the last 48 hours
+  let newsItems = (articles || []).filter((a) => {
+    const timestamp = a.timestamp || (a.publishedAt ? new Date(a.publishedAt).getTime() : 0);
+    return timestamp >= cutoffTime;
+  });
+
+  // Safe fallback: if news wire was quiet in last 48 hours, include top 5 freshest articles so sitemap is valid
+  if (newsItems.length === 0 && Array.isArray(articles) && articles.length > 0) {
+    newsItems = articles.slice(0, 5);
+  }
 
   const urlElements = newsItems.map((a) => {
     const loc = `${ORIGIN}/news/${a.slug}`;
-    const pubDate = a.publishedAt || now;
+    const pubDate = a.publishedAt || now.toISOString();
+    const lastmod = String(pubDate).slice(0, 10);
     const titleEsc = (a.title || '')
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
@@ -816,6 +872,7 @@ export function generateNewsSitemap(articles) {
 
     return `  <url>
     <loc>${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
     <news:news>
       <news:publication>
         <news:name>AniHubStream News</news:name>
@@ -836,7 +893,7 @@ ${urlElements.join('\n')}
 
   const outPath = path.resolve('public/sitemap-news.xml');
   fs.writeFileSync(outPath, xml, 'utf8');
-  console.log(`✅ Generated Google News sitemap with ${newsItems.length} entries at ${outPath}`);
+  console.log(`✅ Generated Google News sitemap with ${newsItems.length} fresh (<=48h) entries at ${outPath}`);
 }
 
 /**

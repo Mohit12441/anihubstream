@@ -10,16 +10,24 @@ export async function onRequestGet(context) {
     const now = new Date().toISOString().slice(0, 10);
 
   const staticUrls = [
-    { loc: `${origin}/`, priority: '1.0', changefreq: 'daily' },
-    { loc: `${origin}/anime`, priority: '0.9', changefreq: 'daily' },
-    { loc: `${origin}/genres`, priority: '0.8', changefreq: 'weekly' },
-    { loc: `${origin}/schedule`, priority: '0.8', changefreq: 'daily' },
-    { loc: `${origin}/discover`, priority: '0.7', changefreq: 'daily' },
-    { loc: `${origin}/about`, priority: '0.5', changefreq: 'monthly' },
-    { loc: `${origin}/dmca`, priority: '0.3', changefreq: 'monthly' },
-    { loc: `${origin}/privacy`, priority: '0.3', changefreq: 'monthly' },
-    { loc: `${origin}/terms`, priority: '0.3', changefreq: 'monthly' },
-    { loc: `${origin}/contact`, priority: '0.4', changefreq: 'monthly' },
+    { loc: `${origin}/` },
+    { loc: `${origin}/anime` },
+    { loc: `${origin}/genres` },
+    { loc: `${origin}/schedule` },
+    { loc: `${origin}/discover` },
+    { loc: `${origin}/news` },
+    { loc: `${origin}/about` },
+    { loc: `${origin}/dmca` },
+    { loc: `${origin}/privacy` },
+    { loc: `${origin}/terms` },
+    { loc: `${origin}/contact` },
+  ];
+
+  const newsUrls = [
+    { loc: `${origin}/news/spring-2026-anime-season-guide`, lastmod: '2026-03-20' },
+    { loc: `${origin}/news/top-10-dark-fantasy-anime-masterpieces`, lastmod: '2026-03-15' },
+    { loc: `${origin}/news/solo-leveling-reawakening-complete-guide`, lastmod: '2026-03-08' },
+    { loc: `${origin}/news/best-isekai-anime-ranked-by-worldbuilding`, lastmod: '2026-02-28' },
   ];
 
   let animeUrls = [];
@@ -48,8 +56,6 @@ export async function onRequestGet(context) {
         animeUrls.push({
           loc: `${origin}/anime/${row.id}`,
           lastmod,
-          changefreq: 'weekly',
-          priority: '0.8',
         });
       }
     } catch (e) {
@@ -57,7 +63,7 @@ export async function onRequestGet(context) {
     }
   }
 
-  const allUrls = [...staticUrls, ...animeUrls];
+  const allUrls = [...staticUrls, ...newsUrls, ...animeUrls];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -65,9 +71,7 @@ ${allUrls
   .map(
     (u) => `  <url>
     <loc>${u.loc}</loc>
-    ${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}
-    <changefreq>${u.changefreq}</changefreq>
-    <priority>${u.priority}</priority>
+    ${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : `<lastmod>${now}</lastmod>`}
   </url>`
   )
   .join('\n')}

@@ -33,13 +33,15 @@ jobs:
         run: npm ci --prefer-offline --no-audit
 
       - name: Fetch, Enrich & Match News
-        run: node tools/sync-news.mjs
+        run: |
+          node tools/sync-news.mjs
+          node scripts/generate-sitemap.mjs
 
       - name: Commit & Push Updated News Feed & Sitemap
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/news/feed.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/feed.xml public/rss.xml
+          git add data/news/feed.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml
           if ! git diff --staged --quiet; then
             git commit -m "chore(news): auto-sync trending anime news & update sitemap [skip ci]"
             git pull origin master --rebase || true
