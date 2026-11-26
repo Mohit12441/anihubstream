@@ -1,7 +1,7 @@
 // @ts-check
 import { useEffect, useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Newspaper, Rss, ArrowRight, Calendar, Clock, Radio, ExternalLink, Search, ChevronLeft, ChevronRight, User } from 'lucide-react';
+import { Newspaper, Rss, ArrowRight, Calendar, Clock, Radio, ExternalLink, Search, ChevronLeft, ChevronRight, User, X, Sparkles, Film } from 'lucide-react';
 import { NEWS_ARTICLES } from '../data/newsData';
 import { resolveAnime } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
@@ -164,163 +164,136 @@ export function News() {
 
   return (
     <div className="page news-page shell">
-      <header className="page-head" style={{ marginBottom: 28, paddingTop: 16 }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 14 }}>
-          <div>
-            <h1 style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', margin: 0 }}>
-              <Newspaper size={32} style={{ color: 'var(--crimson)' }} aria-hidden="true" />
-              Anime News &amp; Editorial Hub
+      <header className="news-page-head">
+        <div className="news-hero-top">
+          <div className="news-hero-brand">
+            <div className="news-live-beacon">
+              <span className="news-live-beacon__dot" aria-hidden="true" />
+              <span>Anime News Wire • 24/7 Global Curation</span>
+            </div>
+            <h1 className="news-hero-title">
+              <Newspaper size={34} className="news-hero-title__icon" aria-hidden="true" />
+              <span>Anime News &amp; Editorial Hub</span>
             </h1>
-            <p style={{ color: 'rgba(255,255,255,0.65)', marginTop: 8, fontSize: '0.95rem' }}>
-              Original seasonal guides, episode breakdowns, rankings, and real-time curated industry updates.
+            <p className="news-hero-desc">
+              Comprehensive seasonal guides, rankings, and real-time studio announcements from Tokyo to worldwide simulcasts.
             </p>
           </div>
-          <div style={{ display: 'flex', gap: 10 }}>
+
+          <div className="news-hero-actions">
             <a
               href="/sitemap-news.xml"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn--sm btn--ghost"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+              className="news-link-btn"
+              title="View News XML Sitemap"
             >
-              News Sitemap
+              <span>News Sitemap</span>
+              <ExternalLink size={13} aria-hidden="true" />
             </a>
             <a
               href="/rss.xml"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn--sm btn--ghost"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}
+              className="news-link-btn news-link-btn--rss"
+              title="Subscribe via RSS Feed"
             >
-              <Rss size={16} style={{ color: 'var(--orange)' }} />
-              RSS Feed
+              <Rss size={15} style={{ color: 'var(--orange)' }} aria-hidden="true" />
+              <span>RSS Feed</span>
             </a>
           </div>
         </div>
 
-        {/* Global Tabs */}
-        <div style={{ display: 'flex', gap: 12, marginTop: 24, borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: 14 }}>
+        {/* Unified Segmented Nav Tabs */}
+        <nav className="news-nav-bar" aria-label="News sections">
           <button
             type="button"
-            className={`pill ${activeTab === 'live' ? 'pill--active' : ''}`}
+            className={`news-nav-tab ${activeTab === 'live' ? 'news-nav-tab--active' : ''}`}
             onClick={() => setActiveTab('live')}
-            style={{
-              cursor: 'pointer',
-              background: activeTab === 'live' ? 'var(--crimson)' : 'transparent',
-              color: '#fff',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 8,
-              padding: '6px 16px',
-              fontSize: '0.9rem',
-              fontWeight: 700,
-            }}
           >
-            <Radio size={15} className="live-pulse-icon" />
-            Trending Live Wire ({filteredLiveNews.length})
+            <Radio size={16} aria-hidden="true" />
+            <span>Trending Live Wire</span>
+            <span className="news-nav-count">{filteredLiveNews.length}</span>
           </button>
           <button
             type="button"
-            className={`pill ${activeTab === 'editorial' ? 'pill--active' : ''}`}
+            className={`news-nav-tab news-nav-tab--editorial ${activeTab === 'editorial' ? 'news-nav-tab--active' : ''}`}
             onClick={() => setActiveTab('editorial')}
-            style={{
-              cursor: 'pointer',
-              background: activeTab === 'editorial' ? 'rgba(36,211,238,0.2)' : 'transparent',
-              color: activeTab === 'editorial' ? 'var(--cyan)' : 'rgba(255,255,255,0.7)',
-              border: activeTab === 'editorial' ? '1px solid rgba(36,211,238,0.4)' : '1px solid transparent',
-              padding: '6px 16px',
-              fontSize: '0.9rem',
-              fontWeight: 700,
-            }}
           >
-            Curated Editorial Guides ({NEWS_ARTICLES.length})
+            <Sparkles size={16} aria-hidden="true" />
+            <span>Curated Editorial Guides</span>
+            <span className="news-nav-count">{NEWS_ARTICLES.length}</span>
           </button>
-        </div>
+        </nav>
 
-        {/* Filter controls based on active tab */}
-        {activeTab === 'editorial' ? (
-          <div style={{ display: 'flex', gap: 8, marginTop: 16, overflowX: 'auto', paddingBottom: 4 }}>
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                className={`pill pill--sm ${selectedCat === cat ? 'pill--active' : ''}`}
-                onClick={() => setSelectedCat(cat)}
-                style={{
-                  cursor: 'pointer',
-                  background: selectedCat === cat ? 'var(--crimson)' : 'rgba(255,255,255,0.06)',
-                  color: selectedCat === cat ? '#fff' : 'rgba(255,255,255,0.7)',
-                }}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        ) : (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginTop: 16 }}>
-            <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
-              {LIVE_SOURCES.map((src) => (
+        {/* Filter Strip */}
+        <div className="news-filter-strip">
+          {activeTab === 'editorial' ? (
+            <div className="news-pill-scroller">
+              {CATEGORIES.map((cat) => (
                 <button
-                  key={src}
+                  key={cat}
                   type="button"
-                  className={`pill pill--sm ${selectedSource === src ? 'pill--active' : ''}`}
-                  onClick={() => setSelectedSource(src)}
-                  style={{
-                    cursor: 'pointer',
-                    background: selectedSource === src ? 'rgba(36,211,238,0.25)' : 'rgba(255,255,255,0.06)',
-                    color: selectedSource === src ? 'var(--cyan)' : 'rgba(255,255,255,0.7)',
-                    border: selectedSource === src ? '1px solid rgba(36,211,238,0.4)' : '1px solid transparent',
-                  }}
+                  className={`news-filter-pill ${selectedCat === cat ? 'news-filter-pill--active' : ''}`}
+                  onClick={() => setSelectedCat(cat)}
                 >
-                  {src}
+                  {cat}
                 </button>
               ))}
             </div>
+          ) : (
+            <>
+              <div className="news-pill-scroller">
+                {LIVE_SOURCES.map((src) => (
+                  <button
+                    key={src}
+                    type="button"
+                    className={`news-filter-pill ${selectedSource === src ? 'news-filter-pill--cyan-active' : ''}`}
+                    onClick={() => setSelectedSource(src)}
+                  >
+                    {src}
+                  </button>
+                ))}
+              </div>
 
-            <div style={{ position: 'relative', minWidth: 220, flex: '1 1 240px', maxWidth: 360 }}>
-              <Search size={15} style={{ position: 'absolute', left: 12, top: '50%', transform: 'translateY(-50%)', color: 'rgba(255,255,255,0.4)' }} />
-              <input
-                type="search"
-                placeholder="Search live anime wire..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '8px 12px 8px 34px',
-                  borderRadius: 'var(--r-pill)',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  background: 'rgba(20,24,36,0.8)',
-                  color: '#fff',
-                  fontSize: '0.85rem',
-                  outline: 'none',
-                }}
-              />
-            </div>
-          </div>
-        )}
+              <div className="news-search-wrap">
+                <Search size={15} className="news-search-icon" aria-hidden="true" />
+                <input
+                  type="search"
+                  placeholder="Search live anime wire..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="news-search-input"
+                  aria-label="Search anime news stories"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    className="news-search-clear"
+                    onClick={() => setSearchQuery('')}
+                    title="Clear search"
+                    aria-label="Clear search input"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
+              </div>
+            </>
+          )}
+        </div>
       </header>
 
       {/* CURATED EDITORIAL GUIDES TAB */}
       {activeTab === 'editorial' && (
         <>
           {featured && selectedCat === 'All' && (
-            <section className="featured-news-hero" style={{ marginBottom: 40 }}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'minmax(300px, 1.2fr) 1fr',
-                  borderRadius: 'var(--r-lg)',
-                  overflow: 'hidden',
-                  background: 'linear-gradient(135deg, rgba(25, 29, 46, 0.9) 0%, rgba(13, 15, 24, 0.95) 100%)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  boxShadow: '0 16px 40px rgba(0,0,0,0.5)',
-                }}
-              >
-                <div style={{ position: 'relative', minHeight: 280, overflow: 'hidden' }}>
+            <section className="featured-news-hero" aria-label="Featured Story">
+              <div className="featured-news-hero__grid">
+                <div className="featured-news-hero__cover-wrap">
                   <img
                     src={featured.coverImage}
                     alt={featured.title}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    className="featured-news-hero__cover"
                     loading="eager"
                     onError={(e) => {
                       const target = e.currentTarget;
@@ -330,71 +303,45 @@ export function News() {
                       }
                     }}
                   />
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: 16,
-                      left: 16,
-                      display: 'flex',
-                      gap: 8,
-                      alignItems: 'center',
-                    }}
-                  >
-                    <span
-                      style={{
-                        background: 'var(--crimson)',
-                        color: '#fff',
-                        fontWeight: 800,
-                        fontSize: '0.75rem',
-                        padding: '4px 10px',
-                        borderRadius: 'var(--r-xs)',
-                        letterSpacing: '0.05em',
-                      }}
-                    >
+                  <div className="featured-news-hero__cover-scrim" aria-hidden="true" />
+                  <div className="featured-news-hero__badges">
+                    <span className="featured-badge-pill featured-badge-pill--lead">
                       FEATURED
                     </span>
                     {featured.badge && (
-                      <span
-                        style={{
-                          background: 'rgba(15,23,42,0.9)',
-                          color: 'var(--cyan)',
-                          border: '1px solid rgba(36,211,238,0.4)',
-                          fontWeight: 700,
-                          fontSize: '0.75rem',
-                          padding: '4px 10px',
-                          borderRadius: 'var(--r-xs)',
-                          letterSpacing: '0.03em',
-                        }}
-                      >
+                      <span className="featured-badge-pill featured-badge-pill--badge">
                         {featured.badge}
                       </span>
                     )}
                   </div>
                 </div>
 
-                <div style={{ padding: '32px 28px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 14, color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem', marginBottom: 12 }}>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-                      <Calendar size={14} /> {featured.date}
+                <div className="featured-news-hero__body">
+                  <div className="featured-news-hero__meta">
+                    <span>
+                      <Calendar size={14} aria-hidden="true" />
+                      <time dateTime={featured.date}>{featured.date}</time>
                     </span>
-                    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}>
-                      <Clock size={14} /> {featured.readTime}
+                    <span>
+                      <Clock size={14} aria-hidden="true" />
+                      <span>{featured.readTime}</span>
                     </span>
                   </div>
 
-                  <h2 style={{ fontSize: 'clamp(1.3rem, 2.2vw, 1.8rem)', fontWeight: 800, margin: '0 0 14px 0', lineHeight: 1.3 }}>
-                    <Link to={`/news/${featured.slug}`} style={{ color: '#fff', textDecoration: 'none' }}>
+                  <h2 className="featured-news-hero__title">
+                    <Link to={`/news/${featured.slug}`}>
                       {featured.title}
                     </Link>
                   </h2>
 
-                  <p style={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, fontSize: '0.95rem', margin: '0 0 20px 0' }}>
+                  <p className="featured-news-hero__excerpt">
                     {featured.excerpt}
                   </p>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-                    <Link to={`/news/${featured.slug}`} className="btn btn--sm btn--primary" style={{ display: 'inline-flex', gap: 8, alignItems: 'center' }}>
-                      Read Complete Guide <ArrowRight size={16} />
+                  <div className="featured-news-hero__actions">
+                    <Link to={`/news/${featured.slug}`} className="featured-news-hero__btn">
+                      <span>Read Complete Guide</span>
+                      <ArrowRight size={16} aria-hidden="true" />
                     </Link>
                   </div>
                 </div>
@@ -402,7 +349,7 @@ export function News() {
             </section>
           )}
 
-          <div className="news-grid" style={{ marginBottom: 40 }}>
+          <div className="news-grid">
             {filteredEditorial.map((article) => (
               <article key={article.slug} className="news-card">
                 <Link to={`/news/${article.slug}`} className="news-card__thumb-link">
@@ -420,39 +367,23 @@ export function News() {
                       }
                     }}
                   />
-                  <span className="news-card__category">{article.category}</span>
-                  {article.badge && (
-                    <span
-                      style={{
-                        position: 'absolute',
-                        top: 10,
-                        left: 10,
-                        background: 'rgba(15, 23, 42, 0.9)',
-                        color: 'var(--cyan)',
-                        border: '1px solid rgba(36, 211, 238, 0.35)',
-                        fontSize: '0.68rem',
-                        fontWeight: 700,
-                        padding: '3px 8px',
-                        borderRadius: 'var(--r-xs)',
-                        letterSpacing: '0.02em',
-                        backdropFilter: 'blur(4px)',
-                        zIndex: 2,
-                      }}
-                    >
-                      {article.badge}
-                    </span>
-                  )}
+                  <div className="news-card__badge-cluster">
+                    <span className="news-card__category">{article.category}</span>
+                    {article.badge && (
+                      <span className="news-card__badge">{article.badge}</span>
+                    )}
+                  </div>
                 </Link>
 
                 <div className="news-card__body">
                   <div className="news-card__meta">
-                    <span className="news-card__date">
+                    <span>
                       <Calendar size={13} aria-hidden="true" />
-                      {article.date}
+                      <time dateTime={article.date}>{article.date}</time>
                     </span>
-                    <span className="news-card__read">
+                    <span>
                       <Clock size={13} aria-hidden="true" />
-                      {article.readTime}
+                      <span>{article.readTime}</span>
                     </span>
                   </div>
 
@@ -464,7 +395,8 @@ export function News() {
 
                   <div className="news-card__footer">
                     <Link to={`/news/${article.slug}`} className="news-card__read-link">
-                      Read Full Guide <ArrowRight size={14} aria-hidden="true" />
+                      <span>Read Full Guide</span>
+                      <ArrowRight size={14} aria-hidden="true" />
                     </Link>
                   </div>
                 </div>
@@ -476,14 +408,23 @@ export function News() {
 
       {/* TRENDING LIVE WIRE TAB WITH DEDICATED PERMALINKS */}
       {activeTab === 'live' && (
-        <section className="live-wire-section">
+        <section className="live-wire-section" aria-label="Trending News Wire">
           {liveLoading ? (
             <div style={{ padding: '60px 0', textAlign: 'center', color: 'rgba(255,255,255,0.6)' }}>
               Loading real-time curated anime news wire...
             </div>
           ) : filteredLiveNews.length === 0 ? (
-            <div style={{ padding: '40px 0', textAlign: 'center', color: 'rgba(255,255,255,0.6)' }}>
-              No recent news items match your criteria.
+            <div style={{ padding: '50px 0', textAlign: 'center', color: 'rgba(255,255,255,0.6)' }}>
+              <p style={{ fontSize: '1.05rem', marginBottom: 12 }}>No stories match your current filter.</p>
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                  className="btn btn--sm btn--ghost"
+                >
+                  Clear search query
+                </button>
+              )}
             </div>
           ) : (
             <div className="live-wire-list">
@@ -505,16 +446,16 @@ export function News() {
 
                 return (
                   <article key={item.id} className="live-wire-card">
-                    {/* Header: Source, Date, Category */}
+                    {/* Header: Badges & Spotlight */}
                     <div className="live-wire-card__header">
                       <div className="live-wire-card__badges">
-                        <span className="pill pill--sm" style={{ background: 'rgba(36,211,238,0.18)', color: '#f8fafc', border: '1px solid rgba(36,211,238,0.45)', fontWeight: 700 }}>
+                        <span className="live-wire-source-pill">
                           {item.source}
                         </span>
-                        <span className="pill pill--sm" style={{ background: 'rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.85)', border: '1px solid rgba(255,255,255,0.12)' }}>
+                        <span className="live-wire-cat-pill">
                           {item.category}
                         </span>
-                        <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                        <span className="live-wire-card__time">
                           <Calendar size={13} aria-hidden="true" />
                           <time dateTime={item.publishedAt}>
                             {new Date(item.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} • {formatTimeAgo(item.timestamp)}
@@ -530,7 +471,7 @@ export function News() {
                       )}
                     </div>
 
-                    {/* Main Content Layout with Dedicated Permalink */}
+                    {/* Content: Thumbnail & Body */}
                     <div className="live-wire-card__content">
                       <Link to={`/news/${item.slug}`} className="live-wire-card__thumb-link">
                         <img
@@ -540,8 +481,10 @@ export function News() {
                           loading="lazy"
                           decoding="async"
                           onError={(e) => {
-                            if (e.currentTarget.src !== window.location.origin + '/images/banners/banner-spring-2026.jpg') {
-                              e.currentTarget.src = '/images/banners/banner-spring-2026.jpg';
+                            const target = e.currentTarget;
+                            if (!target.getAttribute('data-fallback-tried')) {
+                              target.setAttribute('data-fallback-tried', 'true');
+                              target.src = '/images/banners/banner-spring-2026.jpg';
                             }
                           }}
                         />
@@ -559,22 +502,24 @@ export function News() {
                         </p>
 
                         <div className="live-wire-card__actions">
-                          <Link to={`/news/${item.slug}`} className="btn btn--sm btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                            Read Full Article <ArrowRight size={13} />
+                          <Link to={`/news/${item.slug}`} className="btn btn--sm btn--primary">
+                            <span>Read Full Article</span>
+                            <ArrowRight size={13} aria-hidden="true" />
                           </Link>
                           {resolvedAnime && (
-                            <Link to={resolvedAnime.streamUrl} className="btn btn--sm btn--ghost" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                              Stream Anime <ArrowRight size={13} />
+                            <Link to={resolvedAnime.streamUrl} className="btn btn--sm btn--ghost">
+                              <Film size={13} aria-hidden="true" />
+                              <span>Stream Anime</span>
                             </Link>
                           )}
                         </div>
                       </div>
                     </div>
 
-                    {/* Card Footer: Author Byline + Source Verification Link */}
+                    {/* Card Footer: Author & Source */}
                     <div className="live-wire-card__footer">
                       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
-                        <User size={13} style={{ color: 'var(--crimson)' }} />
+                        <User size={13} style={{ color: 'var(--crimson)' }} aria-hidden="true" />
                         <b>{author.name}</b> ({author.role})
                       </span>
                       <a
@@ -583,7 +528,8 @@ export function News() {
                         rel="noopener noreferrer"
                         style={{ color: 'var(--cyan)', display: 'inline-flex', alignItems: 'center', gap: 5, textDecoration: 'none' }}
                       >
-                        Source Verification ({item.source}) <ExternalLink size={12} />
+                        <span>Source Verification ({item.source})</span>
+                        <ExternalLink size={12} aria-hidden="true" />
                       </a>
                     </div>
                   </article>
@@ -592,41 +538,45 @@ export function News() {
             </div>
           )}
 
-          {/* Pagination Controls with Real Crawlable Links and Rel Prev/Next */}
+          {/* Pagination Controls with Accessible Rel Links */}
           {totalPages > 1 && (
             <nav className="live-wire-pagination" aria-label="News pagination">
               {safePage > 1 ? (
                 <Link
                   to={safePage === 2 ? '/news' : `/news?page=${safePage - 1}`}
                   rel="prev"
-                  className="btn btn--sm btn--ghost"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                  className="pagination-btn"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                  <ChevronLeft size={15} /> Prev
+                  <ChevronLeft size={15} aria-hidden="true" />
+                  <span>Prev</span>
                 </Link>
               ) : (
-                <span className="btn btn--sm btn--ghost" style={{ opacity: 0.4, cursor: 'not-allowed', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                  <ChevronLeft size={15} /> Prev
-                </span>
+                <button type="button" disabled className="pagination-btn">
+                  <ChevronLeft size={15} aria-hidden="true" />
+                  <span>Prev</span>
+                </button>
               )}
-              <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.7)', padding: '0 8px' }}>
+
+              <span className="pagination-page-indicator">
                 Page <b>{safePage}</b> of <b>{totalPages}</b>
               </span>
+
               {safePage < totalPages ? (
                 <Link
                   to={`/news?page=${safePage + 1}`}
                   rel="next"
-                  className="btn btn--sm btn--ghost"
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                  className="pagination-btn"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
-                  Next <ChevronRight size={15} />
+                  <span>Next</span>
+                  <ChevronRight size={15} aria-hidden="true" />
                 </Link>
               ) : (
-                <span className="btn btn--sm btn--ghost" style={{ opacity: 0.4, cursor: 'not-allowed', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                  Next <ChevronRight size={15} />
-                </span>
+                <button type="button" disabled className="pagination-btn">
+                  <span>Next</span>
+                  <ChevronRight size={15} aria-hidden="true" />
+                </button>
               )}
             </nav>
           )}
