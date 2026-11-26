@@ -35,7 +35,7 @@
       "src": "/emblem.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "/og.png",
