@@ -33,7 +33,7 @@ async function getTopTrendingAnime(limit = 10) {
   if (hasD1Credentials()) {
     try {
       const rows = await d1All(`
-        SELECT id, title, rating, year, season, kind, status, synopsis, trend_rank
+        SELECT id, title, rating, year, season, kind, status, synopsis, trend_rank, art, key_art
         FROM anime
         WHERE trend_rank IS NOT NULL
         ORDER BY trend_rank ASC
@@ -50,7 +50,7 @@ async function getTopTrendingAnime(limit = 10) {
     try {
       const db = new DatabaseSync(dbPath);
       const rows = db.prepare(`
-        SELECT id, title, rating, year, season, kind, status, synopsis, trend_rank
+        SELECT id, title, rating, year, season, kind, status, synopsis, trend_rank, art, key_art
         FROM anime
         WHERE trend_rank IS NOT NULL
         ORDER BY trend_rank ASC
@@ -62,7 +62,7 @@ async function getTopTrendingAnime(limit = 10) {
     }
   }
 
-  // Authoritative fallback dataset if database has not yet synced trend ranks
+  // Authoritative fallback dataset if database has not yet synced trend ranks (All REAL AniList Photos)
   return [
     {
       id: 'reincarnated-as-a-sword-season-2',
@@ -73,6 +73,8 @@ async function getTopTrendingAnime(limit = 10) {
       season: 'Fall 2026',
       kind: 'ONA',
       status: 'Ongoing',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png',
       synopsis: 'Fran and Teacher embark on new dungeon expeditions, navigating dangerous political machinations and escalating beast-tribe conflicts in the Beast Kingdom.'
     },
     {
@@ -84,6 +86,8 @@ async function getTopTrendingAnime(limit = 10) {
       season: 'Fall 2026',
       kind: 'TV',
       status: 'Ongoing',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b207329-6VPeZIDfF4Sr.png',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/b207329-6VPeZIDfF4Sr.png',
       synopsis: 'Rein, an expelled guild enchanter, reclaims immense enhancement points once gifted to ungrateful allies and discovers his boundless potential.'
     },
     {
@@ -95,6 +99,8 @@ async function getTopTrendingAnime(limit = 10) {
       season: 'Fall 2026',
       kind: 'ONA',
       status: 'Ongoing',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg',
       synopsis: 'Grid, an unlucky low-level gamer, accidentally stumbles upon a legendary blacksmith class that turns him into a terrifying game-breaking powerhouse.'
     },
     {
@@ -106,6 +112,8 @@ async function getTopTrendingAnime(limit = 10) {
       season: 'Fall 2026',
       kind: 'TV',
       status: 'Ongoing',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx184323-jW6rZ8L1QvW2.jpg',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx184323-jW6rZ8L1QvW2.jpg',
       synopsis: 'Using her unique SSS-Rank skill, Lorna breaks free from societal expectations to travel the world on an unpredictable, whimsical adventure.'
     },
     {
@@ -117,6 +125,8 @@ async function getTopTrendingAnime(limit = 10) {
       season: 'Fall 2026',
       kind: 'TV',
       status: 'Ongoing',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172810-h8z9aPz1zQ8f.jpg',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx172810-h8z9aPz1zQ8f.jpg',
       synopsis: 'Desir Arman continues manipulating historical timeline nodes to prevent humanity\'s catastrophic extinction in the impending Shadow Labyrinths.'
     }
   ];
@@ -131,7 +141,7 @@ async function getSleeperAnime(limit = 5) {
     try {
       const db = new DatabaseSync(dbPath);
       const rows = db.prepare(`
-        SELECT id, title, rating, year, season, kind, status, synopsis
+        SELECT id, title, rating, year, season, kind, status, synopsis, art, key_art
         FROM anime
         WHERE rating >= 7.8 AND (trend_rank IS NULL OR trend_rank > 5)
         ORDER BY rating DESC
@@ -146,6 +156,8 @@ async function getSleeperAnime(limit = 5) {
       title: 'From the New World (Shinsekai Yori)',
       rating: 8.3,
       kind: 'TV',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13125-2EDZb8ahshQc.png',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13125-2EDZb8ahshQc.png',
       synopsis: 'A millennium in the future, a secluded psychic society discovers the horrific, grotesque sacrifices made to sustain their utopia.'
     },
     {
@@ -153,6 +165,8 @@ async function getSleeperAnime(limit = 5) {
       title: 'Monster',
       rating: 8.8,
       kind: 'TV',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg',
       synopsis: 'Dr. Kenzo Tenma risks everything to hunt down the sociopathic monster whose life he saved on the operating table.'
     },
     {
@@ -160,6 +174,8 @@ async function getSleeperAnime(limit = 5) {
       title: 'Vinland Saga',
       rating: 8.8,
       kind: 'TV',
+      art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101348-2fhDFPCuMNiz.jpg',
+      key_art: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101348-2fhDFPCuMNiz.jpg',
       synopsis: 'A brutal historical epic that transitions from ruthless Viking revenge to a profound philosophy of absolute pacifism.'
     }
   ];
@@ -331,7 +347,7 @@ Whether you are caught up on the latest weekly releases or looking to binge an o
     authorRole: 'Senior Anime Journalist & Data Lead',
     date: TODAY,
     readTime: '8 min read',
-    coverImage: '/images/banners/banner-spring-2026.jpg',
+    coverImage: trendingList[0]?.key_art || trendingList[0]?.art || 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg',
     tags: ['Rankings', 'Trending Anime', 'Anime Power Rankings', 'Top 10', 'Anime Guide'],
     targetKeywords: [
       'weekly anime power rankings',
@@ -398,7 +414,7 @@ Don't let seasonal marketing dictate what you watch. Add these sleeper picks to 
     authorRole: 'Narrative Critic & Curator',
     date: TODAY,
     readTime: '7 min read',
-    coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-m5b1so1GFOnq.png',
+    coverImage: sleepers[0]?.key_art || sleepers[0]?.art || 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx13125-2EDZb8ahshQc.png',
     tags: ['Underrated Anime', 'Hidden Gems', 'Anime Criticism', 'Must Watch', 'Anime Recommendations'],
     targetKeywords: [
       'underrated anime masterpieces',
@@ -480,7 +496,7 @@ Bookmark this guide to stay ahead of upcoming broadcast delays, recap episodes, 
     authorRole: 'Broadcast Syndication Analyst',
     date: TODAY,
     readTime: '7 min read',
-    coverImage: '/images/banners/banner-spring-2026.jpg',
+    coverImage: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png',
     tags: ['Seasonal Guide', 'Anime Schedule', 'Ongoing Anime', 'Weekly Air Dates', 'Simulcast'],
     targetKeywords: [
       'anime season broadcast guide',
@@ -696,11 +712,90 @@ Watch the complete isekai library with fast playback on AniHubStream!
   fs.writeFileSync(publicApiPath, JSON.stringify(guides, null, 2), 'utf8');
   console.log(`  [+] Wrote public API payload to: ${publicApiPath}`);
 
+  // Export real API poster registry for all referenced anime (zero fake/AI art)
+  exportReferencedPosters(guides, trendingList, sleeperList);
+
   console.log('\n====================================================');
   console.log(`✅ Brain successfully generated ${guides.length} Curated Editorial Guides with SEO/GEO & Social Packs!`);
   console.log('====================================================');
 
   return guides;
+}
+
+/**
+ * Export real official AniList poster registry for all anime mentioned in the news guides
+ */
+function exportReferencedPosters(guides, trendingList, sleeperList) {
+  const referencedSlugs = new Set();
+  trendingList.forEach((a) => a.id && referencedSlugs.add(a.id));
+  sleeperList.forEach((a) => a.id && referencedSlugs.add(a.id));
+  guides.forEach((g) => {
+    (g.relatedAnimeSlugs || []).forEach((s) => referencedSlugs.add(s));
+  });
+
+  const posterList = [];
+  const dbPath = findSqlitePath();
+  let db = null;
+  if (dbPath && fs.existsSync(dbPath)) {
+    try {
+      db = new DatabaseSync(dbPath);
+    } catch {}
+  }
+
+  for (const slug of referencedSlugs) {
+    let row = null;
+    if (db) {
+      try {
+        row = db.prepare('SELECT id, title, native, rating, kind, status, art, key_art, synopsis FROM anime WHERE id = ?').get(slug);
+        if (!row) {
+          row = db.prepare('SELECT id, title, native, rating, kind, status, art, key_art, synopsis FROM anime WHERE id LIKE ?').get(`%${slug}%`);
+        }
+      } catch {}
+    }
+
+    if (!row) {
+      const catPath = path.resolve(`data/catalog/${slug}.json`);
+      if (fs.existsSync(catPath)) {
+        try {
+          const item = JSON.parse(fs.readFileSync(catPath, 'utf8'));
+          row = {
+            id: item.id || slug,
+            title: item.title,
+            native: item.native,
+            rating: item.rating,
+            kind: item.kind,
+            status: item.status,
+            art: item.art,
+            key_art: item.key_art,
+            synopsis: item.synopsis,
+          };
+        } catch {}
+      }
+    }
+
+    const realArt = row?.key_art || row?.art;
+    if (row && realArt) {
+      posterList.push({
+        slug: row.id || slug,
+        title: row.title,
+        nativeTitle: row.native || undefined,
+        art: realArt,
+        fallbackArt: row.art || realArt,
+        rating: row.rating || 8.0,
+        format: row.kind === 'TV' ? 'TV Series' : (row.kind || 'Anime'),
+        status: row.status || 'Ongoing',
+        streamUrl: `/anime/${row.id || slug}`,
+        synopsis: row.synopsis || undefined,
+      });
+    }
+  }
+
+  const outPath = path.resolve('data/news/editorial-posters.json');
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, JSON.stringify(posterList, null, 2), 'utf8');
+  console.log(`  [+] Wrote ${posterList.length} real API anime posters to: ${outPath}`);
+
+  return posterList;
 }
 
 // Allow direct CLI invocation

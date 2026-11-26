@@ -12,7 +12,7 @@ interface Props {
 }
 
 export function AnimeSpotlightCard({ anime, variant = 'inline-banner', subtitle, className = '' }: Props) {
-  const fallback = anime.fallbackArt || '/art/poster-shadow-hunter.jpg';
+  const fallback = anime.fallbackArt || anime.art;
 
   if (variant === 'compact-chip') {
     return (
