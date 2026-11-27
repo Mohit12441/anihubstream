@@ -9,6 +9,7 @@ import { SakuraEasterEgg } from './components/SakuraEasterEgg';
 import { DomainExpansion } from './components/DomainExpansion';
 import { CommandPalette } from './components/CommandPalette';
 import { QuickViewModal } from './components/QuickViewModal';
+import { TrailerModal } from './components/TrailerModal';
 import { BackToTop } from './components/BackToTop';
 import { checkAiringAlerts } from './lib/notifications';
 import { useMouseGlow } from './lib/useMouseGlow';
@@ -78,6 +79,7 @@ export function App() {
           <DomainExpansion />
           <CommandPalette />
           <QuickViewModal />
+          <TrailerModal />
           <BackToTop />
         </>
       )}

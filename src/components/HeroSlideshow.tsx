@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Pause, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles, Bookmark, Check } from 'lucide-react';
+import { Play, Pause, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles, Bookmark, Check, Film } from 'lucide-react';
 import { Embers } from './Embers';
 import { artKeyUrl } from '../data/model';
 import type { Anime } from '../data/model';
@@ -148,6 +148,13 @@ export function HeroSlideshow({ items }: Props) {
     if (!current) return;
     soundFx.playChime();
     window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: current }));
+  };
+
+  const handleOpenTrailer = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!current) return;
+    soundFx.playChime();
+    window.dispatchEvent(new CustomEvent('anihub:open-trailer', { detail: current }));
   };
 
   const togglePause = () => {
@@ -300,6 +307,17 @@ export function HeroSlideshow({ items }: Props) {
                 <span>Watch Now</span>
               </Link>
             )}
+            {/* Trailer CTA button (fli.cx inspired) */}
+            <button
+              type="button"
+              className="hero-slideshow__btn-trailer"
+              onClick={handleOpenTrailer}
+              aria-label={`Watch trailer for ${current.title}`}
+            >
+              <Film size={17} aria-hidden="true" />
+              <span>Trailer</span>
+            </button>
+
             <Link
               to={hasNoEpisodes ? '/schedule' : `/anime/${current.id}`}
               className="hero-slideshow__btn-details"

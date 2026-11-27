@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Compass, Flame, Sparkles, Star, X } from 'lucide-react';
+import { ArrowRight, Compass, Flame, Sparkles, Star, X, ChevronDown, Check } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
 import { AnimeCarousel } from '../components/AnimeCarousel';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
@@ -16,7 +16,15 @@ import { artUrl, hydrateCard } from '../data/model';
 import type { Anime } from '../data/model';
 import { useCatalogue } from '../state/catalogue';
 import { useSEO } from '../lib/useSEO';
+import { soundFx } from '../lib/soundFx';
 import '../styles/home.css';
+
+const SHOWCASE_FILTERS = [
+  { id: 'trending', label: 'Trending this week', icon: Flame },
+  { id: 'top', label: 'Top Rated of All Time', icon: Star },
+  { id: 'ongoing', label: 'Ongoing This Season', icon: Sparkles },
+  { id: 'fresh', label: 'Recently Added', icon: Compass },
+] as const;
 
 const MOODS = [
   {
@@ -55,6 +63,21 @@ export function Home() {
   const { status, error, reload, GENRES, genreLabel, home } = useCatalogue();
   const [genre, setGenre] = useState<string | null>(null);
   const [seed, setSeed] = useState(0);
+  const [trendFilter, setTrendFilter] = useState<'trending' | 'top' | 'ongoing' | 'fresh'>('trending');
+  const [filterOpen, setFilterOpen] = useState(false);
+  const filterDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (filterDropdownRef.current && !filterDropdownRef.current.contains(e.target as Node)) {
+        setFilterOpen(false);
+      }
+    };
+    if (filterOpen) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    }
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
+  }, [filterOpen]);
 
   useSEO({
     title: 'AniHubStream — Watch Anime Free Anytime, Anywhere',
@@ -103,10 +126,13 @@ export function Home() {
 
   const genreAccent = (id: string) => GENRES.find((g) => g.id === id)?.accent ?? '#ff1f4a';
 
-  const featured = useMemo<Anime[]>(
-    () => (genre ? shelf?.items ?? [] : rotate(home.trending, seed)),
-    [genre, shelf, seed, home.trending],
-  );
+  const featured = useMemo<Anime[]>(() => {
+    if (genre) return shelf?.items ?? [];
+    if (trendFilter === 'top') return rotate(home.top, seed);
+    if (trendFilter === 'ongoing') return rotate(home.ongoing, seed);
+    if (trendFilter === 'fresh') return rotate(home.fresh, seed);
+    return rotate(home.trending, seed);
+  }, [genre, shelf, trendFilter, seed, home]);
 
   const rows = useMemo(
     () => ({
@@ -118,7 +144,9 @@ export function Home() {
     [seed, home],
   );
 
-  const heading = genre ? genreLabel(genre) : 'Trending Now';
+  const heading = genre
+    ? genreLabel(genre)
+    : SHOWCASE_FILTERS.find((f) => f.id === trendFilter)?.label ?? 'Trending this week';
 
 
   return (
@@ -141,13 +169,71 @@ export function Home() {
 
             <section className="home__row" aria-labelledby="row-trending">
           <div className="sec-head">
-            <h2 id="row-trending">
-              <Flame size={21} aria-hidden="true" />
-              {heading}
-              <Link to="/anime" className="sec-head__link" aria-label="Browse all anime">
-                <ArrowRight size={18} aria-hidden="true" />
-              </Link>
-            </h2>
+            {genre ? (
+              <h2 id="row-trending">
+                <Flame size={21} aria-hidden="true" />
+                {heading}
+                <Link to="/anime" className="sec-head__link" aria-label="Browse all anime">
+                  <ArrowRight size={18} aria-hidden="true" />
+                </Link>
+              </h2>
+            ) : (
+              <div className="sec-head__filter-wrap" ref={filterDropdownRef}>
+                <button
+                  type="button"
+                  id="row-trending"
+                  className="sec-head__filter-pill"
+                  onClick={() => {
+                    soundFx.playClick();
+                    setFilterOpen((prev) => !prev);
+                  }}
+                  aria-expanded={filterOpen}
+                  aria-haspopup="listbox"
+                  aria-label="Filter trending anime shelf"
+                >
+                  <Flame size={20} className="sec-head__filter-icon" aria-hidden="true" />
+                  <span className="sec-head__filter-title">{heading}</span>
+                  <ChevronDown
+                    size={16}
+                    className={`sec-head__chevron ${filterOpen ? 'sec-head__chevron--open' : ''}`}
+                    aria-hidden="true"
+                  />
+                </button>
+
+                {filterOpen && (
+                  <div className="sec-head__filter-menu" role="listbox">
+                    {SHOWCASE_FILTERS.map((opt) => {
+                      const Icon = opt.icon;
+                      const isSelected = opt.id === trendFilter;
+                      return (
+                        <button
+                          key={opt.id}
+                          type="button"
+                          role="option"
+                          aria-selected={isSelected}
+                          className={`sec-head__filter-item ${isSelected ? 'sec-head__filter-item--active' : ''}`}
+                          onClick={() => {
+                            soundFx.playClick();
+                            setTrendFilter(opt.id);
+                            setFilterOpen(false);
+                          }}
+                        >
+                          <div className="sec-head__filter-item-left">
+                            <Icon size={16} className="sec-head__filter-item-icon" />
+                            <span>{opt.label}</span>
+                          </div>
+                          {isSelected && <Check size={15} className="sec-head__filter-check" />}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                <Link to="/anime" className="sec-head__link" aria-label="Browse all anime">
+                  <ArrowRight size={18} aria-hidden="true" />
+                </Link>
+              </div>
+            )}
             {genre && (
               <span className="pill pill--sm" style={{ '--pc': genreAccent(genre) } as React.CSSProperties}>
                 {shelfBusy ? 'Counting…' : `${shelf?.total ?? 0} titles`}
