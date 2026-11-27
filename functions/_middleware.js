@@ -1240,14 +1240,6 @@ ${topAnimeHtml}
     });
   }
 
-  // Preload homepage hero only on homepage
-  if (path === '/' || path === '') {
-    rewriter = rewriter.on('head', {
-      element(e) {
-        e.append(`\n    <link rel="preload" as="image" href="/art/hero-demon.webp" type="image/webp" fetchpriority="high" />`, { html: true });
-      },
-    });
-  }
 
   if (preHtml) {
     rewriter = rewriter.on('#root', {
