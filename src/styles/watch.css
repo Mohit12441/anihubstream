@@ -2513,6 +2513,69 @@
   flex-shrink: 0;
 }
 
+/* Frosted Glass Genre & Trailer Pills Row (fli.cx inspired) */
+.watch__pills-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.watch__pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 180ms ease;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.watch__pill-badge:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+}
+
+.watch__pill-badge--trailer {
+  color: #ff4d6d;
+  border-color: rgba(255, 31, 74, 0.3);
+  background: rgba(255, 31, 74, 0.1);
+}
+
+.watch__pill-badge--trailer:hover {
+  background: rgba(255, 31, 74, 0.22);
+  color: #ffffff;
+  border-color: rgba(255, 31, 74, 0.5);
+  box-shadow: 0 0 12px rgba(255, 31, 74, 0.25);
+}
+
+.watch__pill-badge--save {
+  color: #cbd5e1;
+}
+
+.watch__pill-badge--save.is-saved {
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.12);
+}
+
+.watch__pill-badge--save.is-saved:hover {
+  background: rgba(34, 197, 94, 0.2);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
 /* ==========================================================================
    Anchored Server Dropdown Menu (No screen dimming, compact & fast)
    ========================================================================== */

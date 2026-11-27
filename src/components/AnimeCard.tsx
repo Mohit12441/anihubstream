@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Info, Play, Star } from 'lucide-react';
+import { ArrowRight, Info, Play, Star, Bookmark, Check, Film } from 'lucide-react';
 import { Art } from './Art';
 import { AiringCountdown } from './AiringCountdown';
 import { stamp } from '../lib/time';
@@ -24,7 +24,8 @@ const rankTint = ['#8fe9ff', '#b57bff', '#ff5470', '#ff9420', '#ffc247'];
 
 export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Props) {
   const { genreLabel } = useCatalogue();
-  const { history } = useLibrary();
+  const { has, toggle, history } = useLibrary();
+  const isSaved = has(anime.id);
   const resume = history.find((h) => h.anime.id === anime.id);
   const cleanTitle = cleanAnimeTitle(anime.title);
   const isUpcoming = anime.status === 'Upcoming' || anime.status === 'NOT_YET_RELEASED';
@@ -34,6 +35,27 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
     : (resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1);
   const to = isUpcoming ? `/anime/${anime.id}` : `/watch/${encodeURIComponent(anime.id)}/${targetEp}`;
   const tint = rank ? rankTint[(rank - 1) % rankTint.length] : anime.accent;
+
+  const handleToggleList = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    soundFx.playClick();
+    toggle(anime.id);
+  };
+
+  const handleOpenTrailer = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    soundFx.playChime();
+    window.dispatchEvent(new CustomEvent('anihub:open-trailer', { detail: anime }));
+  };
+
+  const handleOpenQuickView = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    soundFx.playChime();
+    window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: anime }));
+  };
 
   const hoverTimer = useRef<number | null>(null);
   const previewTimer = useRef<number | null>(null);
@@ -110,19 +132,35 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
           <span className="acard__play" aria-hidden="true">
             <Play size={18} fill="currentColor" strokeWidth={0} />
           </span>
-          <button
-            type="button"
-            className="acard__info-btn"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: anime }));
-            }}
-            aria-label={`Quick preview for ${cleanTitle}`}
-            title="Quick preview"
-          >
-            <Info size={13} aria-hidden="true" />
-          </button>
+          <div className="acard__actions">
+            <button
+              type="button"
+              className={`acard__action-btn ${isSaved ? 'acard__action-btn--saved' : ''}`}
+              onClick={handleToggleList}
+              aria-label={isSaved ? `Remove ${cleanTitle} from list` : `Add ${cleanTitle} to list`}
+              title={isSaved ? 'In My List' : 'Add to My List'}
+            >
+              {isSaved ? <Check size={13} aria-hidden="true" /> : <Bookmark size={13} aria-hidden="true" />}
+            </button>
+            <button
+              type="button"
+              className="acard__action-btn"
+              onClick={handleOpenTrailer}
+              aria-label={`Watch trailer for ${cleanTitle}`}
+              title="Watch Trailer"
+            >
+              <Film size={13} aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="acard__action-btn"
+              onClick={handleOpenQuickView}
+              aria-label={`Quick preview for ${cleanTitle}`}
+              title="Quick preview"
+            >
+              <Info size={13} aria-hidden="true" />
+            </button>
+          </div>
           {resume && resume.seconds > 0 && (
             <div className="acard__progress-track" aria-hidden="true">
               <div
@@ -215,19 +253,35 @@ export function AnimeCard({ anime, variant = 'key', rank, badge, episode }: Prop
         <span className="acard__play" aria-hidden="true">
           <Play size={18} fill="currentColor" strokeWidth={0} />
         </span>
-        <button
-          type="button"
-          className="acard__info-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: anime }));
-          }}
-          aria-label={`Quick preview for ${cleanTitle}`}
-          title="Quick preview"
-        >
-          <Info size={13} aria-hidden="true" />
-        </button>
+        <div className="acard__actions">
+          <button
+            type="button"
+            className={`acard__action-btn ${isSaved ? 'acard__action-btn--saved' : ''}`}
+            onClick={handleToggleList}
+            aria-label={isSaved ? `Remove ${cleanTitle} from list` : `Add ${cleanTitle} to list`}
+            title={isSaved ? 'In My List' : 'Add to My List'}
+          >
+            {isSaved ? <Check size={13} aria-hidden="true" /> : <Bookmark size={13} aria-hidden="true" />}
+          </button>
+          <button
+            type="button"
+            className="acard__action-btn"
+            onClick={handleOpenTrailer}
+            aria-label={`Watch trailer for ${cleanTitle}`}
+            title="Watch Trailer"
+          >
+            <Film size={13} aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            className="acard__action-btn"
+            onClick={handleOpenQuickView}
+            aria-label={`Quick preview for ${cleanTitle}`}
+            title="Quick preview"
+          >
+            <Info size={13} aria-hidden="true" />
+          </button>
+        </div>
         {resume && resume.seconds > 0 && (
           <div className="acard__progress-track" aria-hidden="true">
             <div

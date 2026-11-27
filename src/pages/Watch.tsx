@@ -15,6 +15,7 @@ import {
   SkipBack,
   SkipForward,
   Tv,
+  Film,
 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
@@ -37,6 +38,7 @@ import { useSEO } from '../lib/useSEO';
 import { SLUG_REDIRECTS } from '../data/redirects';
 import { bridgeResolve, prefetchEpisode, type BridgeSource } from '../lib/streamBridge';
 import { warmStreamOrigins } from '../lib/warmConnections';
+import { soundFx } from '../lib/soundFx';
 import { CommentsSection } from '../components/CommentsSection';
 import '../styles/watch.css';
 import '../styles/player.css';
@@ -311,6 +313,18 @@ export function Watch() {
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
+
+  // Dynamic Ambient Color Adaptation on Episode Change (fli.cx inspired)
+  useEffect(() => {
+    if (!anime) return;
+    const accent = anime.accent || '#ff1f4a';
+    document.documentElement.style.setProperty('--hero-accent', accent);
+    document.documentElement.style.setProperty('--ambient-accent', accent);
+    return () => {
+      document.documentElement.style.removeProperty('--hero-accent');
+      document.documentElement.style.removeProperty('--ambient-accent');
+    };
+  }, [anime?.id, anime?.accent, epNum]);
   const [providerRegistry, setProviderRegistry] = useState<ProviderRegistry>(() => buildProviderRegistry(DEFAULT_PLAY_SERVERS));
   const [_scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const [_providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
@@ -1060,6 +1074,43 @@ export function Watch() {
                 <SkipForward size={14} aria-hidden="true" />
               </button>
             </div>
+          </div>
+
+          {/* Frosted Glass Genre & Trailer Badges Row (fli.cx inspired) */}
+          <div className="watch__pills-row">
+            {anime.genres && anime.genres.slice(0, 5).map((g) => (
+              <Link
+                key={g}
+                to={`/anime?genre=${encodeURIComponent(g.toLowerCase())}`}
+                className="watch__pill-badge"
+              >
+                <span>{genreLabel(g)}</span>
+              </Link>
+            ))}
+            <button
+              type="button"
+              className="watch__pill-badge watch__pill-badge--trailer"
+              onClick={() => {
+                soundFx.playChime();
+                window.dispatchEvent(new CustomEvent('anihub:open-trailer', { detail: anime }));
+              }}
+              aria-label={`Watch official trailer for ${anime.title}`}
+            >
+              <Film size={12} aria-hidden="true" />
+              <span>Trailer</span>
+            </button>
+            <button
+              type="button"
+              className={`watch__pill-badge watch__pill-badge--save ${has(anime.id) ? 'is-saved' : ''}`}
+              onClick={() => {
+                soundFx.playClick();
+                toggle(anime.id);
+              }}
+              aria-label={has(anime.id) ? 'Remove from My List' : 'Add to My List'}
+            >
+              <BookmarkPlus size={12} aria-hidden="true" />
+              <span>{has(anime.id) ? 'Saved' : 'Watchlist'}</span>
+            </button>
           </div>
 
           {/* UNIFIED STREAM CONTROL BAR */}
