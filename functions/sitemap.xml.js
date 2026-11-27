@@ -5,8 +5,18 @@ import { withEdgeCache } from './api/_lib.js';
 
 export async function onRequestGet(context) {
   const { request, env } = context;
+  const origin = request?.url ? new URL(request.url).origin : 'https://anihubstream.com';
+
+  if (env?.ASSETS) {
+    try {
+      const assetRes = await env.ASSETS.fetch(new URL('/sitemap.xml', origin));
+      if (assetRes && assetRes.status === 200) {
+        return assetRes;
+      }
+    } catch {}
+  }
+
   return withEdgeCache(request, env, 3600, async () => {
-    const origin = request?.url ? new URL(request.url).origin : 'https://anihubstream.com';
     const now = new Date().toISOString().slice(0, 10);
 
   const staticUrls = [
@@ -28,6 +38,13 @@ export async function onRequestGet(context) {
     { loc: `${origin}/news/top-10-dark-fantasy-anime-masterpieces`, lastmod: '2026-03-15' },
     { loc: `${origin}/news/solo-leveling-reawakening-complete-guide`, lastmod: '2026-03-08' },
     { loc: `${origin}/news/best-isekai-anime-ranked-by-worldbuilding`, lastmod: '2026-02-28' },
+    { loc: `${origin}/news/top-10-psychological-thriller-anime-ranked`, lastmod: now },
+    { loc: `${origin}/news/best-sci-fi-cyberpunk-anime-ranked`, lastmod: now },
+    { loc: `${origin}/news/top-must-watch-romance-anime-emotional-payoff`, lastmod: now },
+    { loc: `${origin}/news/ultimate-shonen-battle-anime-tier-list`, lastmod: now },
+    { loc: `${origin}/news/studio-mappa-best-anime-ranked`, lastmod: now },
+    { loc: `${origin}/news/ufotable-best-anime-ranked`, lastmod: now },
+    { loc: `${origin}/news/top-10-sports-anime-hype-adrenaline`, lastmod: now },
   ];
 
   let animeUrls = [];
