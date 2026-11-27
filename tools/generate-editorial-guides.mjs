@@ -27,6 +27,26 @@ import { d1All, hasD1Credentials } from '../cloud-sync/d1.mjs';
 const TODAY = new Date().toISOString().split('T')[0];
 
 /**
+ * Automatically resolves a verified anime key art or cover art from the catalog
+ * @param {any} guide
+ * @returns {string|null}
+ */
+export function resolveCoverImageForGuide(guide) {
+  for (const slug of (guide.relatedAnimeSlugs || [])) {
+    const catalogPath = path.resolve('data/catalog', `${slug}.json`);
+    if (fs.existsSync(catalogPath)) {
+      try {
+        const anime = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+        if (anime.key_art || anime.art) {
+          return anime.key_art || anime.art;
+        }
+      } catch {}
+    }
+  }
+  return null;
+}
+
+/**
  * Fetch top trending anime from D1 or local SQLite
  */
 async function getTopTrendingAnime(limit = 10) {
@@ -1419,6 +1439,14 @@ Stream all 10 sports masterpieces with synchronized subtitles on AniHubStream.
       }
     }
   ];
+
+  // Automatically resolve verified, distinct anime key art from catalog for each guide (zero duplicated fallbacks)
+  for (const guide of guides) {
+    const catalogArt = resolveCoverImageForGuide(guide);
+    if (catalogArt) {
+      guide.coverImage = catalogArt;
+    }
+  }
 
   // Save to data/news/editorial.json
   const dataPath = path.resolve('data/news/editorial.json');
