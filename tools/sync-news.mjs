@@ -5,6 +5,7 @@ import crypto from 'node:crypto';
 import Parser from 'rss-parser';
 import { fetchAniListMetadata } from './anilist-enricher.mjs';
 import { submitUrlsToBing } from './auto-push-new-episodes.mjs';
+import { generateEditorialGuides } from './generate-editorial-guides.mjs';
 
 const ORIGIN = 'https://anihubstream.com';
 const INDEXNOW_KEY = '9f8b2c4e1a7d3f5b8a0c6e4d2f1a9b7c';
@@ -866,16 +867,27 @@ export async function syncNews(options = {}) {
 
   console.log(`✅ Successfully enriched and wrote ${enrichedNews.length} news items.`);
 
+  // Synchronize and refresh Curated Editorial Guides with real API visuals & trending signals
+  let editorialGuides = [];
+  try {
+    console.log('📖 Generating Curated Editorial Guides & poster registry...');
+    editorialGuides = await generateEditorialGuides();
+  } catch (err) {
+    console.warn('Editorial guides sync non-fatal:', err.message);
+  }
+
   // Generate Google News XML Sitemap
   generateNewsSitemap(enrichedNews);
 
   // Automatically submit newly enriched news URLs to Bing Webmaster, IndexNow & Google Search Console
   if (enrichedNews.length > 0) {
+    const editorialUrls = (editorialGuides || []).map((g) => `${ORIGIN}/news/${g.slug}`);
     const urlsToIndex = [
       `${ORIGIN}/news`,
       `${ORIGIN}/sitemap-news.xml`,
       `${ORIGIN}/sitemap.xml`,
-      ...enrichedNews.slice(0, 45).map((a) => `${ORIGIN}/news/${a.slug}`),
+      ...editorialUrls,
+      ...enrichedNews.slice(0, 40).map((a) => `${ORIGIN}/news/${a.slug}`),
     ];
 
     // 1. Submit to Microsoft Bing Webmaster API

@@ -41,6 +41,7 @@ jobs:
             echo "$GSC_KEY_JSON" > /tmp/gsc-key.json
             export GSC_KEY_PATH=/tmp/gsc-key.json
           fi
+          node tools/generate-editorial-guides.mjs
           node tools/sync-news.mjs
           node scripts/generate-sitemap.mjs
           node scripts/generate-rss.mjs
@@ -53,7 +54,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/news/feed.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml
+          git add data/news/feed.json public/news-feed.json public/api/news.json public/sitemap-news.xml public/sitemap.xml public/feed.xml public/rss.xml data/news/editorial.json public/editorial.json public/api/editorial.json data/news/editorial-posters.json
           if ! git diff --staged --quiet; then
             git commit -m "chore(news): auto-sync trending anime news & update sitemap"
             git pull origin master --rebase || true

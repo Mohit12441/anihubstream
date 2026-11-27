@@ -130,11 +130,25 @@ export function News() {
       .finally(() => setLiveLoading(false));
   }, []);
 
-  const filteredEditorial = selectedCat === 'All'
-    ? NEWS_ARTICLES
-    : NEWS_ARTICLES.filter((a) => a.category === selectedCat);
+  const [editorialArticles, setEditorialArticles] = useState(NEWS_ARTICLES);
 
-  const featured = NEWS_ARTICLES[0];
+  useEffect(() => {
+    // Refresh editorial guides dynamically from CDN
+    fetch('/editorial.json')
+      .then((res) => (res.ok ? res.json() : []))
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setEditorialArticles(data);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const filteredEditorial = selectedCat === 'All'
+    ? editorialArticles
+    : editorialArticles.filter((a) => a.category === selectedCat);
+
+  const featured = editorialArticles[0] || NEWS_ARTICLES[0];
 
   const liveSources = useMemo(() => {
     const sources = new Set<string>();
@@ -240,7 +254,7 @@ export function News() {
           >
             <Sparkles size={16} aria-hidden="true" />
             <span>Curated Editorial Guides</span>
-            <span className="news-nav-count">{NEWS_ARTICLES.length}</span>
+            <span className="news-nav-count">{editorialArticles.length}</span>
           </button>
           <button
             type="button"

@@ -169,6 +169,12 @@ export async function submitUrlsToBing(urls, options = {}) {
 
     if (!res.ok) {
       const errText = await res.text();
+      const quotaMatch = errText.match(/Quota remaining for today:\s*(\d+)/i);
+      if (quotaMatch && parseInt(quotaMatch[1], 10) > 0 && batch.length > parseInt(quotaMatch[1], 10)) {
+        const remaining = parseInt(quotaMatch[1], 10);
+        console.log(`[auto-push] ℹ Auto-adjusting to Bing Webmaster daily quota: submitting ${remaining} URLs...`);
+        return submitUrlsToBing(batch.slice(0, remaining), options);
+      }
       console.error(`[auto-push] ❌ Bing API error HTTP ${res.status}: ${errText}`);
       return { success: false, count: 0, error: `HTTP ${res.status}: ${errText}` };
     }
