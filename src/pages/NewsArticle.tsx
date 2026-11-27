@@ -1,7 +1,8 @@
 // @ts-check
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Play, Star, Sparkles, Film } from 'lucide-react';
-import { getNewsArticleBySlug, getAllNewsArticles } from '../data/newsData';
+import { getNewsArticleBySlug, getAllNewsArticles, convertLiveNewsToArticle, NewsArticleItem } from '../data/newsData';
 import { resolveAnime, findAnimeInText } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
 import { useSEO } from '../lib/useSEO';
@@ -165,7 +166,59 @@ function parseArticleBlocks(content: string): ParsedBlock[] {
 export function NewsArticle() {
   const { slug } = useParams<{ slug: string }>();
   const { notify } = useToast();
-  const article = slug ? getNewsArticleBySlug(slug) : undefined;
+  const initialArticle = slug ? getNewsArticleBySlug(slug) : undefined;
+  const [article, setArticle] = useState<NewsArticleItem | undefined>(initialArticle);
+  const [loading, setLoading] = useState(!initialArticle);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    if (!slug) return;
+    const found = getNewsArticleBySlug(slug);
+    if (found) {
+      setArticle(found);
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
+    const normalizedSlug = slug.replace(/--+/g, '-').replace(/-+$/, '');
+    Promise.all([
+      fetch('/editorial.json').then((r) => (r.ok ? r.json() : [])).catch(() => []),
+      fetch('/news-feed.json').then((r) => (r.ok ? r.json() : [])).catch(() => []),
+    ]).then(([editorials, liveFeed]) => {
+      if (Array.isArray(editorials)) {
+        const match = editorials.find((e: any) => e.slug === slug || e.slug === normalizedSlug);
+        if (match) {
+          setArticle(match);
+          setLoading(false);
+          return;
+        }
+      }
+      if (Array.isArray(liveFeed)) {
+        const match = liveFeed.find((l: any) => l.slug === slug || l.slug === normalizedSlug);
+        if (match) {
+          setArticle(convertLiveNewsToArticle(match));
+          setLoading(false);
+          return;
+        }
+      }
+      setLoading(false);
+    }).catch(() => {
+      setLoading(false);
+    });
+  }, [slug]);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const progress = Math.min(100, Math.max(0, (window.scrollY / totalHeight) * 100));
+        setScrollProgress(progress);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Extract FAQs if present for Google FAQPage Rich Results Schema
   const faqEntities: Array<{ '@type': 'Question'; name: string; acceptedAnswer: { '@type': 'Answer'; text: string } }> = [];
@@ -271,6 +324,15 @@ export function NewsArticle() {
       : undefined,
   });
 
+  if (loading && !article) {
+    return (
+      <div className="page shell" style={{ padding: '80px 0', textAlign: 'center', color: 'rgba(255,255,255,0.7)' }}>
+        <div style={{ display: 'inline-block', width: 32, height: 32, border: '3px solid rgba(255,255,255,0.2)', borderTopColor: 'var(--crimson)', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+        <p style={{ marginTop: 16, fontSize: '1.05rem' }}>Loading anime article...</p>
+      </div>
+    );
+  }
+
   if (!article) {
     return (
       <div className="page shell" style={{ padding: '60px 0', textAlign: 'center' }}>
@@ -285,7 +347,20 @@ export function NewsArticle() {
     );
   }
 
-  const handleShare = () => {
+  const handleShare = async () => {
+    const shareData = {
+      title: article.title,
+      text: article.excerpt,
+      url: window.location.href,
+    };
+    if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (err: any) {
+        if (err.name === 'AbortError') return;
+      }
+    }
     if (navigator.clipboard) {
       navigator.clipboard.writeText(window.location.href);
       notify('Article link copied to clipboard!');
@@ -323,6 +398,21 @@ export function NewsArticle() {
 
   return (
     <article className="page news-article-view shell">
+      <div
+        className="news-reading-progress"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          height: 3,
+          width: `${scrollProgress}%`,
+          background: 'linear-gradient(90deg, var(--crimson), var(--cyan))',
+          zIndex: 9999,
+          transition: 'width 0.1s linear',
+          pointerEvents: 'none',
+        }}
+        aria-hidden="true"
+      />
       <div className="article-hero">
         <nav className="article-breadcrumb" aria-label="Breadcrumb">
           <Link to="/">Home</Link>

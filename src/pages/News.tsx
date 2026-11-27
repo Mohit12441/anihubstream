@@ -77,7 +77,7 @@ function getAuthorForSource(source: string): { name: string; role: string } {
 const PAGE_SIZE = 12;
 
 export function News() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const tabParam = searchParams.get('tab');
   const [activeTab, setActiveTab] = useState<'editorial' | 'live'>(tabParam === 'live' ? 'live' : 'editorial');
   const [selectedCat, setSelectedCat] = useState('All');
@@ -85,6 +85,26 @@ export function News() {
   const [searchQuery, setSearchQuery] = useState('');
   const [liveNews, setLiveNews] = useState<LiveNewsItem[]>(INITIAL_LIVE_NEWS as unknown as LiveNewsItem[]);
   const [liveLoading, setLiveLoading] = useState(false);
+
+  useEffect(() => {
+    if (tabParam === 'live' && activeTab !== 'live') {
+      setActiveTab('live');
+    } else if (!tabParam && activeTab !== 'editorial') {
+      setActiveTab('editorial');
+    }
+  }, [tabParam]);
+
+  const switchTab = (tab: 'editorial' | 'live') => {
+    setActiveTab(tab);
+    const nextParams = new URLSearchParams(searchParams);
+    if (tab === 'live') {
+      nextParams.set('tab', 'live');
+    } else {
+      nextParams.delete('tab');
+      nextParams.delete('page');
+    }
+    setSearchParams(nextParams, { replace: true });
+  };
 
   const currentPage = Math.max(1, parseInt(searchParams.get('page') || '1', 10));
 
@@ -144,9 +164,18 @@ export function News() {
       .catch(() => {});
   }, []);
 
-  const filteredEditorial = selectedCat === 'All'
-    ? editorialArticles
-    : editorialArticles.filter((a) => a.category === selectedCat);
+  const filteredEditorial = useMemo(() => {
+    return editorialArticles.filter((a) => {
+      const matchesCat = selectedCat === 'All' || a.category === selectedCat;
+      const q = searchQuery.toLowerCase().trim();
+      const matchesSearch = !q ||
+        a.title.toLowerCase().includes(q) ||
+        a.excerpt.toLowerCase().includes(q) ||
+        (a.tags && a.tags.some((t: string) => t.toLowerCase().includes(q))) ||
+        (a.relatedAnimeSlugs && a.relatedAnimeSlugs.some((s: string) => s.toLowerCase().includes(q)));
+      return matchesCat && matchesSearch;
+    });
+  }, [editorialArticles, selectedCat, searchQuery]);
 
   const featured = editorialArticles[0] || NEWS_ARTICLES[0];
 
@@ -250,7 +279,7 @@ export function News() {
           <button
             type="button"
             className={`news-nav-tab news-nav-tab--editorial ${activeTab === 'editorial' ? 'news-nav-tab--active' : ''}`}
-            onClick={() => setActiveTab('editorial')}
+            onClick={() => switchTab('editorial')}
           >
             <Sparkles size={16} aria-hidden="true" />
             <span>Curated Editorial Guides</span>
@@ -259,7 +288,7 @@ export function News() {
           <button
             type="button"
             className={`news-nav-tab news-nav-tab--live ${activeTab === 'live' ? 'news-nav-tab--active' : ''}`}
-            onClick={() => setActiveTab('live')}
+            onClick={() => switchTab('live')}
           >
             <Radio size={16} aria-hidden="true" />
             <span>Trending Live Wire</span>
@@ -270,18 +299,43 @@ export function News() {
         {/* Filter Strip */}
         <div className="news-filter-strip">
           {activeTab === 'editorial' ? (
-            <div className="news-pill-scroller">
-              {CATEGORIES.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  className={`news-filter-pill ${selectedCat === cat ? 'news-filter-pill--active' : ''}`}
-                  onClick={() => setSelectedCat(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+            <>
+              <div className="news-pill-scroller">
+                {CATEGORIES.map((cat) => (
+                  <button
+                    key={cat}
+                    type="button"
+                    className={`news-filter-pill ${selectedCat === cat ? 'news-filter-pill--active' : ''}`}
+                    onClick={() => setSelectedCat(cat)}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+
+              <div className="news-search-wrap">
+                <Search size={15} className="news-search-icon" aria-hidden="true" />
+                <input
+                  type="search"
+                  placeholder="Search 14+ guides, rankings & anime..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="news-search-input"
+                  aria-label="Search editorial guides"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    className="news-search-clear"
+                    onClick={() => setSearchQuery('')}
+                    title="Clear search"
+                    aria-label="Clear search input"
+                  >
+                    <X size={14} />
+                  </button>
+                )}
+              </div>
+            </>
           ) : (
             <>
               <div className="news-pill-scroller">
@@ -327,7 +381,7 @@ export function News() {
       {/* CURATED EDITORIAL GUIDES TAB */}
       {activeTab === 'editorial' && (
         <>
-          {featured && selectedCat === 'All' && (
+          {featured && selectedCat === 'All' && !searchQuery && (
             <section className="featured-news-hero" aria-label="Featured Story">
               <div className="featured-news-hero__grid">
                 <div className="featured-news-hero__cover-wrap">
@@ -390,60 +444,73 @@ export function News() {
             </section>
           )}
 
-          <div className="news-grid">
-            {filteredEditorial.map((article) => (
-              <article key={article.slug} className="news-card">
-                <Link to={`/news/${article.slug}`} className="news-card__thumb-link">
-                  <img
-                    src={article.coverImage}
-                    alt={article.title}
-                    className="news-card__thumb"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      const target = e.currentTarget;
-                      if (!target.getAttribute('data-fallback-tried')) {
-                        target.setAttribute('data-fallback-tried', 'true');
-                        target.src = '/images/banners/banner-spring-2026.jpg';
-                      }
-                    }}
-                  />
-                  <div className="news-card__badge-cluster">
-                    <span className="news-card__category">{article.category}</span>
-                    {article.badge && (
-                      <span className="news-card__badge">{article.badge}</span>
-                    )}
+          {filteredEditorial.length === 0 ? (
+            <div style={{ padding: '60px 0', textAlign: 'center', color: 'rgba(255,255,255,0.6)' }}>
+              <p style={{ fontSize: '1.1rem', marginBottom: 12 }}>No editorial guides match "{searchQuery}".</p>
+              <button
+                type="button"
+                onClick={() => { setSearchQuery(''); setSelectedCat('All'); }}
+                className="btn btn--sm btn--ghost"
+              >
+                Clear search &amp; filters
+              </button>
+            </div>
+          ) : (
+            <div className="news-grid">
+              {filteredEditorial.map((article) => (
+                <article key={article.slug} className="news-card">
+                  <Link to={`/news/${article.slug}`} className="news-card__thumb-link">
+                    <img
+                      src={article.coverImage}
+                      alt={article.title}
+                      className="news-card__thumb"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.getAttribute('data-fallback-tried')) {
+                          target.setAttribute('data-fallback-tried', 'true');
+                          target.src = '/images/banners/banner-spring-2026.jpg';
+                        }
+                      }}
+                    />
+                    <div className="news-card__badge-cluster">
+                      <span className="news-card__category">{article.category}</span>
+                      {article.badge && (
+                        <span className="news-card__badge">{article.badge}</span>
+                      )}
+                    </div>
+                  </Link>
+
+                  <div className="news-card__body">
+                    <div className="news-card__meta">
+                      <span>
+                        <Calendar size={13} aria-hidden="true" />
+                        <time dateTime={article.date}>{article.date}</time>
+                      </span>
+                      <span>
+                        <Clock size={13} aria-hidden="true" />
+                        <span>{article.readTime}</span>
+                      </span>
+                    </div>
+
+                    <h3 className="news-card__title">
+                      <Link to={`/news/${article.slug}`}>{article.title}</Link>
+                    </h3>
+
+                    <p className="news-card__excerpt">{article.excerpt}</p>
+
+                    <div className="news-card__footer">
+                      <Link to={`/news/${article.slug}`} className="news-card__read-link">
+                        <span>Read Full Guide</span>
+                        <ArrowRight size={14} aria-hidden="true" />
+                      </Link>
+                    </div>
                   </div>
-                </Link>
-
-                <div className="news-card__body">
-                  <div className="news-card__meta">
-                    <span>
-                      <Calendar size={13} aria-hidden="true" />
-                      <time dateTime={article.date}>{article.date}</time>
-                    </span>
-                    <span>
-                      <Clock size={13} aria-hidden="true" />
-                      <span>{article.readTime}</span>
-                    </span>
-                  </div>
-
-                  <h3 className="news-card__title">
-                    <Link to={`/news/${article.slug}`}>{article.title}</Link>
-                  </h3>
-
-                  <p className="news-card__excerpt">{article.excerpt}</p>
-
-                  <div className="news-card__footer">
-                    <Link to={`/news/${article.slug}`} className="news-card__read-link">
-                      <span>Read Full Guide</span>
-                      <ArrowRight size={14} aria-hidden="true" />
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+                </article>
+              ))}
+            </div>
+          )}
         </>
       )}
 
@@ -584,7 +651,7 @@ export function News() {
             <nav className="live-wire-pagination" aria-label="News pagination">
               {safePage > 1 ? (
                 <Link
-                  to={safePage === 2 ? '/news' : `/news?page=${safePage - 1}`}
+                  to={safePage === 2 ? '/news?tab=live' : `/news?tab=live&page=${safePage - 1}`}
                   rel="prev"
                   className="pagination-btn"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -605,7 +672,7 @@ export function News() {
 
               {safePage < totalPages ? (
                 <Link
-                  to={`/news?page=${safePage + 1}`}
+                  to={`/news?tab=live&page=${safePage + 1}`}
                   rel="next"
                   className="pagination-btn"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

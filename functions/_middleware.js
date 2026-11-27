@@ -633,29 +633,89 @@ export async function onRequest(context) {
     const slug = rawSlug;
     ogType = 'article';
     const newsMap = {
-      'spring-2026-anime-season-guide': {
-        title: 'Spring 2026 Anime Season Guide: Most Anticipated Releases & Air Dates',
-        desc: 'The definitive broadcast preview for Spring 2026 — analyzing returning franchise powerhouses, studio production teams, premiere dates, and streaming platforms.',
-        author: 'AniHub Editorial Team',
-        image: `${origin}/images/banners/banner-spring-2026.jpg`,
+      'weekly-anime-power-rankings-top-trending': {
+        title: 'Weekly Anime Power Rankings: Why Overgeared Is Dominating Global Viewership (2026-11-27)',
+        desc: 'Analyzing global streaming telemetry, engagement metrics, and community sentiment to rank the top 10 anime series captivating viewers worldwide this week.',
+        author: 'Kenji Sato',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx212888-NhyvqPt5aIuJ.jpg',
+      },
+      '6-anime-that-leave-you-thinking-long-after-they-end': {
+        title: 'Beyond Entertainment: 6 Anime Masterpieces That Force You to Confront Uncomfortable Truths',
+        desc: 'An exploration of profound anime narratives that transcend escapism, examining existential dread, societal complacency, and the nature of grief.',
+        author: 'Elena Rostova',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx19-gtMC64182sm4.jpg',
+      },
+      '5-hidden-gem-anime-outclassing-modern-shonen': {
+        title: 'Stop Watching Generic Slop: 5 Hidden Gems That Are Quietly Outclassing Modern Shonen',
+        desc: 'Escape the repetitive cycle of generic power-fantasy adaptations with these 5 extraordinary hidden gems that showcase visionary direction, organic pacing, and genuine emotional stakes.',
+        author: 'Elena Rostova',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx154587-qQTzQnEJJ3oB.jpg',
+      },
+      'anime-season-broadcast-guide-airing-schedules': {
+        title: 'Anime Broadcast Season Guide: Most Anticipated Releases & Air Dates (2026-11-27)',
+        desc: 'The definitive broadcast preview for the current anime season — analyzing returning franchise powerhouses, studio production teams, premiere dates, and streaming platforms.',
+        author: 'Marcus Vance',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx159042-GGFwlDskc5vR.png',
+      },
+      'solo-leveling-reawakening-complete-guide': {
+        title: 'Solo Leveling ReAwakening & Season 2: Story Arcs, Power Scaling & Watch Guide',
+        desc: 'Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows.',
+        author: 'Elena Rostova',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx176496-9BDMjAZGEbq4.png',
       },
       'top-10-dark-fantasy-anime-masterpieces': {
         title: 'Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)',
         desc: 'An authoritative, production-level ranking of the grittiest dark fantasy anime ever animated — analyzing animation pedigree, psychological weight, and unforgiving worldbuilding.',
         author: 'Kenji Sato',
-        image: `${origin}/images/banners/banner-dark-fantasy.jpg`,
-      },
-      'solo-leveling-reawakening-complete-guide': {
-        title: 'Solo Leveling ReAwakening: Story Arcs, Power Scaling & Watch Guide',
-        desc: 'Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows.',
-        author: 'AniHub Editorial Team',
-        image: `${origin}/images/banners/banner-solo-leveling.jpg`,
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21560-6iifjdssfebJ.jpg',
       },
       'best-isekai-anime-ranked-by-worldbuilding': {
         title: 'The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action',
         desc: 'Move beyond generic reincarnation tropes. These 15 standout isekai series elevate the genre with intricate magic systems, economic realism, and profound character growth.',
+        author: 'Daiki Tanaka',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx127720-ADJgIrUVMdU9.jpg',
+      },
+      'top-10-psychological-thriller-anime-ranked': {
+        title: 'Top 10 Psychological Thriller Anime Ranked by Suspense & Mind Games',
+        desc: 'From Death Note to Monster, discover 10 intense anime where intellect, moral corruption, and high-stakes psychological warfare rule.',
         author: 'Elena Rostova',
-        image: `${origin}/images/banners/banner-isekai-worldbuilding.jpg`,
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1535-kUgkcrfOrkUM.jpg',
+      },
+      'best-sci-fi-cyberpunk-anime-ranked': {
+        title: 'Top 10 High-Stakes Sci-Fi & Cyberpunk Anime Masterpieces Ranked',
+        desc: 'From Cyberpunk Edgerunners to Steins;Gate, rank the 10 greatest sci-fi anime ever animated by futuristic worldbuilding and philosophical depth.',
+        author: 'Marcus Vance',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120377-ayZPoxiWt4Li.jpg',
+      },
+      'top-must-watch-romance-anime-emotional-payoff': {
+        title: '10 Must-Watch Romance Anime with Genuine Emotional Payoff (Ranked)',
+        desc: 'Beyond will-they-won\'t-they delays: 10 romance anime where relationships actually progress with emotional maturity and satisfying climaxes.',
+        author: 'Daiki Tanaka',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101921-ufrjLzhSz7L1.jpg',
+      },
+      'ultimate-shonen-battle-anime-tier-list': {
+        title: 'The Definitive Shonen Battle Anime Tier List: Ranked by Fights & Animation',
+        desc: 'Rank the greatest battle shonen series from Hunter x Hunter to Jujutsu Kaisen by combat choreography, sakuga animation, and ideological stakes.',
+        author: 'Kenji Sato',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11061-y5gsT1hoHuHw.png',
+      },
+      'studio-mappa-best-anime-ranked': {
+        title: 'Studio MAPPA: 10 Defining Masterpieces Ranked by Sakuga & Story',
+        desc: 'From Jujutsu Kaisen to Chainsaw Man and Attack on Titan, analyze Studio MAPPA\'s defining anime masterworks by visual brilliance and narrative impact.',
+        author: 'Elena Rostova',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113415-LHBAeoZDIsnF.jpg',
+      },
+      'ufotable-best-anime-ranked': {
+        title: 'Studio Ufotable: 8 Visually Stunning Anime Ranked by Sakuga Animation',
+        desc: 'The definitive ranking of Studio Ufotable\'s visual masterpieces: Demon Slayer, Fate/Zero, Heaven\'s Feel, and Unlimited Blade Works ranked by sakuga pedigree.',
+        author: 'Marcus Vance',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101922-WBsBl0ClmgYL.jpg',
+      },
+      'top-10-sports-anime-hype-adrenaline': {
+        title: 'Top 10 Sports Anime That Deliver Pure Hype and Adrenaline (Ranked)',
+        desc: 'From Haikyuu to Blue Lock and Hajime no Ippo, rank the 10 sports anime that deliver unmatched motivation, adrenaline, and emotional payoff.',
+        author: 'Elena Rostova',
+        image: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx137822-U8naszP96vzC.png',
       },
     };
     const prettyTitle = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -978,10 +1038,16 @@ ${scheduleLinksHtml}
 <section style="margin:2rem 0;">
 <h2>Featured Editorial Articles &amp; Guides</h2>
 <ul style="list-style:none;padding:0;">
-<li style="margin-bottom:1.5rem;"><a href="/news/spring-2026-anime-season-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Spring 2026 Anime Season Guide: Most Anticipated Releases &amp; Air Dates</a><p>From high-octane battle shonen to atmospheric supernatural mysteries, here is your definitive guide to the blockbuster Spring 2026 anime season. Featured series: <a href="/anime/solo-leveling" style="color:#24d3ee;">Solo Leveling</a> &bull; <a href="/anime/jujutsu-kaisen" style="color:#24d3ee;">Jujutsu Kaisen</a> &bull; <a href="/anime/demon-slayer" style="color:#24d3ee;">Demon Slayer</a>.</p></li>
-<li style="margin-bottom:1.5rem;"><a href="/news/top-10-dark-fantasy-anime-masterpieces" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)</a><p>A deep dive into the grittiest, most emotionally resonant dark fantasy anime ever produced, exploring worldbuilding, philosophical tension, and animation. Featured series: <a href="/anime/jujutsu-kaisen" style="color:#24d3ee;">Jujutsu Kaisen</a> &bull; <a href="/anime/chainsaw-man" style="color:#24d3ee;">Chainsaw Man</a>.</p></li>
-<li style="margin-bottom:1.5rem;"><a href="/news/solo-leveling-reawakening-complete-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Solo Leveling ReAwakening: Story Arcs, Power Scaling &amp; Watch Guide</a><p>Everything you need to know about Sung Jinwoo’s journey from the World’s Weakest E-Rank hunter to the Monarch of Shadows. Featured series: <a href="/anime/solo-leveling" style="color:#24d3ee;">Solo Leveling</a>.</p></li>
-<li style="margin-bottom:1.5rem;"><a href="/news/best-isekai-anime-ranked-by-worldbuilding" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action</a><p>Move beyond generic reincarnation tropes. These standout isekai series elevate the genre with intricate magic systems, economic realism, and profound character growth.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/weekly-anime-power-rankings-top-trending" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Weekly Anime Power Rankings</a><p>Global streaming viewership telemetry and rankings. Featured: <a href="/anime/overgeared" style="color:#24d3ee;">Overgeared</a> &bull; <a href="/anime/solo-leveling" style="color:#24d3ee;">Solo Leveling</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/top-10-psychological-thriller-anime-ranked" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Psychological Thriller Anime Ranked by Suspense &amp; Mind Games</a><p>Mind game masterpieces ranked. Featured: <a href="/anime/death-note" style="color:#24d3ee;">Death Note</a> &bull; <a href="/anime/monster" style="color:#24d3ee;">Monster</a> &bull; <a href="/anime/steins-gate" style="color:#24d3ee;">Steins;Gate</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/best-sci-fi-cyberpunk-anime-ranked" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 High-Stakes Sci-Fi &amp; Cyberpunk Anime Masterpieces Ranked</a><p>Futuristic worldbuilding and dystopias. Featured: <a href="/anime/cyberpunk-edgerunners" style="color:#24d3ee;">Cyberpunk: Edgerunners</a> &bull; <a href="/anime/psycho-pass" style="color:#24d3ee;">Psycho-Pass</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/ultimate-shonen-battle-anime-tier-list" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">The Definitive Shonen Battle Anime Tier List: Ranked by Fights &amp; Animation</a><p>Top battle shonen ranked. Featured: <a href="/anime/hunter-x-hunter-2011" style="color:#24d3ee;">Hunter x Hunter</a> &bull; <a href="/anime/jujutsu-kaisen" style="color:#24d3ee;">Jujutsu Kaisen</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/studio-mappa-best-anime-ranked" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Studio MAPPA: 10 Defining Masterpieces Ranked by Sakuga &amp; Story</a><p>Studio MAPPA's greatest productions analyzed. Featured: <a href="/anime/jujutsu-kaisen" style="color:#24d3ee;">Jujutsu Kaisen</a> &bull; <a href="/anime/chainsaw-man" style="color:#24d3ee;">Chainsaw Man</a> &bull; <a href="/anime/attack-on-titan" style="color:#24d3ee;">Attack on Titan</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/ufotable-best-anime-ranked" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Studio Ufotable: 8 Visually Stunning Anime Ranked by Sakuga Animation</a><p>The definitive Ufotable visual ranking. Featured: <a href="/anime/demon-slayer" style="color:#24d3ee;">Demon Slayer</a> &bull; <a href="/anime/fate-zero" style="color:#24d3ee;">Fate/Zero</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/top-10-sports-anime-hype-adrenaline" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Sports Anime That Deliver Pure Hype and Adrenaline (Ranked)</a><p>Pure motivation and adrenaline. Featured: <a href="/anime/blue-lock" style="color:#24d3ee;">Blue Lock</a> &bull; <a href="/anime/haikyuu" style="color:#24d3ee;">Haikyuu!!</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/top-10-dark-fantasy-anime-masterpieces" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Top 10 Dark Fantasy Anime Masterpieces You Must Watch (Ranked)</a><p>A deep dive into gritty dark fantasy anime. Featured: <a href="/anime/berserk" style="color:#24d3ee;">Berserk</a> &bull; <a href="/anime/chainsaw-man" style="color:#24d3ee;">Chainsaw Man</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/solo-leveling-reawakening-complete-guide" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">Solo Leveling ReAwakening &amp; Season 2: Story Arcs, Power Scaling &amp; Watch Guide</a><p>Everything you need to know about Sung Jinwoo's journey. Featured: <a href="/anime/solo-leveling" style="color:#24d3ee;">Solo Leveling</a>.</p></li>
+<li style="margin-bottom:1.5rem;"><a href="/news/best-isekai-anime-ranked-by-worldbuilding" style="color:#ff1f4a;font-size:1.2rem;font-weight:bold;">The 15 Best Isekai Anime Ranked by Story, Worldbuilding, and Action</a><p>Move beyond generic reincarnation tropes. Featured: <a href="/anime/mushoku-tensei-jobless-reincarnation" style="color:#24d3ee;">Mushoku Tensei</a> &bull; <a href="/anime/re-zero" style="color:#24d3ee;">Re:Zero</a>.</p></li>
 </ul>
 </section>
 </main>`;
