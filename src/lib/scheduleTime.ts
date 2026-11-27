@@ -173,8 +173,9 @@ export function parseScheduleDate(
   if (!dateStr) return null;
   const parts = dateStr.trim().split(/\s+/);
   if (parts.length < 2) return null;
-  const monthIdx = MONTH_NAMES.indexOf(parts[0]);
-  const dayNum = Number.parseInt(parts[1], 10);
+  const rawMonth = parts[0].replace(/[^a-zA-Z]/g, '').slice(0, 3).toLowerCase();
+  const monthIdx = MONTH_NAMES.findIndex((m) => m.toLowerCase() === rawMonth);
+  const dayNum = Number.parseInt(parts[1].replace(/[^0-9]/g, ''), 10);
   if (monthIdx === -1 || isNaN(dayNum)) return null;
 
   const [hStr = '0', mStr = '0'] = (timeStr || '00:00').split(':');
@@ -213,7 +214,7 @@ export function getEpisodeReleaseStatus(
   if (targetMs == null && dateStr) {
     const parsed = parseScheduleDate(dateStr, timeStr, now, useLocalTime);
     if (parsed) {
-      targetMs = parsed.getTime();
+      targetMs = rollTimestampToCurrentWeek(parsed.getTime(), now.getTime());
     }
   }
 

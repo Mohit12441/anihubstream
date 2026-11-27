@@ -825,9 +825,16 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
-    // Primary Provider Selection: AniKoto is always the primary server when an anime is opened
+    const isFromSchedule = url.searchParams.get('from') === 'schedule' || url.searchParams.get('source') === 'schedule';
+
+    // Primary Provider Selection: AniKoto is always the primary server when an anime is opened, EXCEPT when navigating from schedule
     if (!requested || requested === 'auto') {
-      requested = 'anikoto';
+      if (isFromSchedule) {
+        const provCandidate = ['anikoto', 'hianime', 'aniwatch', 'anipm', 'hdrezka'].find((p) => availableSlugs[p]);
+        requested = provCandidate || 'anikoto';
+      } else {
+        requested = 'anikoto';
+      }
     }
 
     if (!resolvedTitle && id) {
@@ -1497,7 +1504,7 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
           episode: ep,
           malId: resolvedMalId || null,
           scopedProvider: requested,
-          scopedProviderUnavailable: (requested && requested !== 'auto') ? (directRes.provider !== requested) : false,
+          scopedProviderUnavailable: (requested && requested !== 'auto' && !isFromSchedule) ? (directRes.provider !== requested) : false,
           servers: serverList,
           providers: buildProviderRegistryBuckets(serverList),
           aniskip: aniskipData || null,
@@ -1512,7 +1519,13 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
         ? (!hasRezkaBridge && !directRes && (!bridgeRes || (!bridgeRes.master && !bridgeRes.streamUrl) || bridgeRes.provider !== 'hdrezka'))
         : (requested !== 'torrent' && !availableSlugs[requested]);
       let serversToReturn = defaultServers;
-      if (requested && requested !== 'auto') {
+      if (isFromSchedule) {
+        serversToReturn = [...defaultServers].sort((a, b) => {
+          const aAvail = availableSlugs[a.provider] ? 1 : 0;
+          const bAvail = availableSlugs[b.provider] ? 1 : 0;
+          return bAvail - aAvail;
+        });
+      } else if (requested && requested !== 'auto') {
         const matching = defaultServers.filter((s) => s.provider === requested);
         const others = defaultServers.filter((s) => s.provider !== requested);
         serversToReturn = matching.length ? [...matching, ...others] : defaultServers;

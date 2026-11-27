@@ -107,7 +107,7 @@ export function ScheduleList({ entries, highlightId, todayDay, useLocalTime = tr
 
         const hasDub = Boolean(e.sched_dub_at || e.dubAt || e.anime.sched_dub_at || e.anime.schedule?.dubAt);
         const toWatch = `/watch/${e.anime.id}/${targetEp}`;
-        const watchTarget = audio === 'dub' && hasDub ? `${toWatch}?audio=dub` : toWatch;
+        const watchTarget = `${toWatch}?from=schedule${audio === 'dub' && hasDub ? '&audio=dub' : ''}`;
 
         const pillEpLabel = (!isReleased && nextEp) ? `Next: Ep ${nextEp}` : `Ep ${targetEp}`;
 

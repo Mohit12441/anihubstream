@@ -144,6 +144,7 @@ export interface PlayQuery {
   malId?: number | string;
   server?: string;
   anilist?: number | string;
+  from?: string;
 }
 
 export interface PlayResponse {

@@ -141,7 +141,7 @@ export function HomeSchedule() {
 
             const hasDub = Boolean(entry.sched_dub_at || entry.dubAt || anime.sched_dub_at || anime.schedule?.dubAt);
             const toWatch = `/watch/${anime.id}/${targetEp}`;
-            const watchTarget = audio === 'dub' && hasDub ? `${toWatch}?audio=dub` : toWatch;
+            const watchTarget = `${toWatch}?from=schedule${audio === 'dub' && hasDub ? '&audio=dub' : ''}`;
             const destination = isReleased ? watchTarget : `/anime/${anime.id}`;
             const epDisplay = isReleased ? targetEp : (nextEp ?? targetEp);
 

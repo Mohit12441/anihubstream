@@ -370,9 +370,12 @@ export function Watch() {
   const [_scopedProviderUnavailable, setScopedProviderUnavailable] = useState(false);
   const [_providerHealth, setProviderHealth] = useState<Record<string, { status?: string; latencyMs?: number }>>({});
   const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
+  const isFromSchedule = params.get('from') === 'schedule' || params.get('source') === 'schedule';
   const targetProvider = (
     params.get('provider') ||
-    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : id?.startsWith('animesalt:') ? 'animesalt' : 'anikoto')
+    (isFromSchedule
+      ? ''
+      : (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : id?.startsWith('animesalt:') ? 'animesalt' : 'anikoto'))
   ).toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const rawSrv = params.get('server');
@@ -537,6 +540,7 @@ export function Watch() {
       provider: targetProvider || undefined,
       malId: anime.malId || undefined,
       anilist: targetAnilist,
+      from: isFromSchedule ? 'schedule' : undefined,
     })
       .then((data) => {
         if (cancelled) return;
@@ -607,6 +611,21 @@ export function Watch() {
                || null;
           }
 
+          // Schedule server selection logic: select which video is available on server (only for schedule)
+          if (isFromSchedule && !params.get('server')) {
+            const readyCandidate = mergedServers.find((s: PlayServer) => {
+              const matchesAudio = isDub ? (s.id.includes('-dub') || s.audio === 'dub') : (!s.id.includes('-dub') && s.audio !== 'dub');
+              return matchesAudio && s.status !== 'unavailable' && (s.status === 'ready' || Boolean(s.streamUrl));
+            }) || mergedServers.find((s: PlayServer) => {
+              const matchesAudio = isDub ? (s.id.includes('-dub') || s.audio === 'dub') : (!s.id.includes('-dub') && s.audio !== 'dub');
+              return matchesAudio && s.status !== 'unavailable';
+            }) || mergedServers.find((s: PlayServer) => s.status !== 'unavailable');
+
+            if (readyCandidate) {
+              matchedServer = readyCandidate;
+            }
+          }
+
           if (matchedServer && matchedServer.status === 'unavailable') {
             // If requested server is unavailable, fall back to first ready server of same provider
             const fallbackServer = targetProvider
@@ -617,7 +636,7 @@ export function Watch() {
 
           if (matchedServer) {
             const matchedProv = (matchedServer.provider || (matchedServer.id.includes(':') ? matchedServer.id.split(':')[0] : '')).toLowerCase();
-            if (!targetProvider || targetProvider === 'auto' || matchedProv === targetProvider) {
+            if (isFromSchedule || !targetProvider || targetProvider === 'auto' || matchedProv === targetProvider) {
               setActiveServerId(matchedServer.id);
             }
           }
