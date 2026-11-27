@@ -674,10 +674,12 @@ export function AdvancedPlayer(props: Props) {
       case 'volDown':
         volume(prefs.volume - 0.1);
         break;
-      case 'mute':
-        patch({ muted: !prefs.muted });
-        setHud({ text: prefs.muted ? 'Unmuted' : 'Muted', id: Date.now() });
+      case 'mute': {
+        const nextMuted = !prefs.muted;
+        patch({ muted: nextMuted });
+        setHud({ text: nextMuted ? 'Muted' : 'Unmuted', id: Date.now() });
         break;
+      }
       case 'fullscreen':
         toggleFull();
         break;

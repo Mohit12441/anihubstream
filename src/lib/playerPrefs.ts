@@ -285,7 +285,11 @@ function write(key: string, value: unknown) {
 export function loadPrefs(): PlayerPrefs {
   const stored = read<PlayerPrefs>(PREFS_KEY, DEFAULT_PREFS);
   const speed = SPEEDS.includes(stored.speed as (typeof SPEEDS)[number]) ? stored.speed : 1;
-  const volume = Math.min(1, Math.max(0, Number(stored.volume) || 0));
+  const volume =
+    typeof stored.volume === 'number' && !isNaN(stored.volume)
+      ? Math.min(1, Math.max(0, stored.volume))
+      : DEFAULT_PREFS.volume;
+  const muted = typeof stored.muted === 'boolean' ? stored.muted : DEFAULT_PREFS.muted;
   const quality = QUALITIES.some((q) => q.id === stored.quality) ? stored.quality : '1080p';
   const aspect = ASPECTS.some((a) => a.id === stored.aspect) ? stored.aspect : 'default';
   const accent = ACCENTS.some((a) => a.id === stored.accent) ? stored.accent : 'crimson';
@@ -300,6 +304,7 @@ export function loadPrefs(): PlayerPrefs {
     ...stored,
     speed,
     volume,
+    muted,
     quality,
     aspect,
     accent,

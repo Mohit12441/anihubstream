@@ -45,8 +45,22 @@ export function Header() {
   const searchWrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let ticking = false;
     const onScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          // Hysteresis deadband: scroll down past 35px triggers scrolled state,
+          // scroll back above 10px reverts it. Prevents oscillation/jitter at boundary.
+          setScrolled((prev) => {
+            if (!prev && y > 35) return true;
+            if (prev && y < 10) return false;
+            return prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
