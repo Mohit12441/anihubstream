@@ -317,7 +317,7 @@ export function Watch() {
   const [availableProvidersList, setAvailableProvidersList] = useState<{ id: string; name: string; available: boolean; status?: string; latencyMs?: number }[]>([]);
   const targetProvider = (
     params.get('provider') ||
-    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : id?.startsWith('animesalt:') ? 'animesalt' : '')
+    (id?.startsWith('hianime:') ? 'hianime' : id?.startsWith('anikoto:') ? 'anikoto' : id?.startsWith('aniwatch:') ? 'aniwatch' : id?.startsWith('anipm:') ? 'anipm' : id?.startsWith('hdrezka:') ? 'hdrezka' : id?.startsWith('animesalt:') ? 'animesalt' : 'anikoto')
   ).toLowerCase();
   const [activeServerId, setActiveServerId] = useState<string>(() => {
     const rawSrv = params.get('server');
@@ -541,9 +541,15 @@ export function Watch() {
             ) || null;
           }
 
-          if (!matchedServer && serverList.length > 0) {
-            // Default: activate the backend's pre-resolved winner in servers[0]
-            matchedServer = serverList[0];
+          if (!matchedServer) {
+            // AniKoto is always the primary server when an anime is opened
+            matchedServer = mergedServers.find((s: PlayServer) => {
+              const isAnikoto = s.provider?.toLowerCase() === 'anikoto' || s.id?.toLowerCase().startsWith('anikoto:');
+              const matchesAudio = isDub ? (s.id.includes('-dub') || s.audio === 'dub') : (!s.id.includes('-dub') && s.audio !== 'dub');
+              return isAnikoto && matchesAudio && s.status !== 'unavailable';
+            }) || mergedServers.find((s: PlayServer) => (s.provider?.toLowerCase() === 'anikoto' || s.id?.toLowerCase().startsWith('anikoto:')) && s.status !== 'unavailable')
+               || serverList[0]
+               || null;
           }
 
           if (matchedServer && matchedServer.status === 'unavailable') {

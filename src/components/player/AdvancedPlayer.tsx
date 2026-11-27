@@ -92,6 +92,7 @@ export function AdvancedPlayer(props: Props) {
   const [countdown, setCountdown] = useState(COUNTDOWN);
   const [dismissed, setDismissed] = useState(false);
   const [showEmbedEscape, setShowEmbedEscape] = useState(false);
+  const [seekRipple, setSeekRipple] = useState<{ dir: 'back' | 'fwd'; key: number } | null>(null);
 
   const open = menu.kind !== 'none';
 
@@ -773,7 +774,10 @@ export function AdvancedPlayer(props: Props) {
     if (isDouble) {
       tap.current = { t: 0, x: 0, timer: 0, visible: prev.visible };
       const r = e.currentTarget.getBoundingClientRect();
-      handlePartyJump(e.clientX - r.left < r.width / 2 ? -10 : 10);
+      const dir = (e.clientX - r.left < r.width / 2) ? 'back' : 'fwd';
+      handlePartyJump(dir === 'back' ? -10 : 10);
+      setSeekRipple({ dir, key: Date.now() });
+      window.setTimeout(() => setSeekRipple(null), 650);
       return;
     }
     // decide from the state *before* pointerdown revealed the chrome, otherwise a tap
@@ -861,6 +865,13 @@ export function AdvancedPlayer(props: Props) {
       onFocus={wake}
     >
       <div className="player__stage" ref={stageRef} data-chrome={chrome ? 'visible' : 'hidden'}>
+        {seekRipple && (
+          <div className={`player__seek-ripple player__seek-ripple--${seekRipple.dir}`} key={seekRipple.key} aria-hidden="true">
+            <span className="player__seek-ripple-pill">
+              {seekRipple.dir === 'back' ? '« 10s' : '10s »'}
+            </span>
+          </div>
+        )}
         <AmbilightGlow videoEl={live.videoEl} accentColor={anime.accent} />
         <Art
           sources={[anime.key, anime.poster]}

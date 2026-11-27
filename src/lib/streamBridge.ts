@@ -239,7 +239,7 @@ export async function prefetchEpisode(
   animeId: string,
   ep: number,
   audio: 'sub' | 'dub' | string,
-  provider: string = 'auto',
+  provider: string = 'anikoto',
   server?: string,
 ): Promise<void> {
   if (!animeId || ep < 1) return;
@@ -248,7 +248,7 @@ export async function prefetchEpisode(
 
   try {
     const cleanId = encodeURIComponent(animeId);
-    void fetch(`/api/play?id=${cleanId}&ep=${ep}&audio=${audio}`, {
+    void fetch(`/api/play?id=${cleanId}&ep=${ep}&audio=${audio}&provider=anikoto`, {
       priority: 'low' as RequestPriority,
     }).catch(() => {});
   } catch {}
@@ -260,7 +260,7 @@ export async function bridgeResolve(
   animeId: string,
   ep: number,
   audio: 'sub' | 'dub' | string,
-  provider: string = 'auto',
+  provider: string = 'anikoto',
   server?: string,
 ): Promise<BridgeSource | ResolveFailure> {
   const key = streamCacheKey(animeId, ep, audio, provider, server);

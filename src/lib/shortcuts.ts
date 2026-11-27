@@ -45,13 +45,18 @@ export function actionFor(e: KeyboardEvent): ShortcutAction | null {
   return LOWER.get(key) ?? null;
 }
 
+function checkEl(el: HTMLElement | null): boolean {
+  if (!el || !el.tagName) return false;
+  const tag = el.tagName.toUpperCase();
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true;
+  if (el.isContentEditable) return true;
+  return !!el.closest?.('[contenteditable="true"], [role="combobox"], [role="listbox"], [role="textbox"], [role="searchbox"], input, textarea, select');
+}
+
 /** Never hijack typing into fields the viewer is actually using. */
 export function isEditable(target: EventTarget | null): boolean {
-  const el = target as HTMLElement | null;
-  if (!el || !el.tagName) return false;
-  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName)) return true;
-  if (el.isContentEditable) return true;
-  return !!el.closest?.('[contenteditable="true"], [role="combobox"], [role="listbox"]');
+  const active = typeof document !== 'undefined' ? (document.activeElement as HTMLElement | null) : null;
+  return checkEl(target as HTMLElement | null) || checkEl(active);
 }
 
 export const SHORTCUT_GROUPS: { title: string; items: { keys: string[]; label: string }[] }[] = [

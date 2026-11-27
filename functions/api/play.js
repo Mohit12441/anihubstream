@@ -825,20 +825,9 @@ export const onRequestGet = async ({ request, env, waitUntil }) => {
       { id: 'torrent', name: 'P2P Swarm', available: true, ...(providerHealth.torrent || {}) },
     ];
 
-    // Dynamic Provider Priority: If not explicitly requested or is 'auto', select the fastest healthy provider
+    // Primary Provider Selection: AniKoto is always the primary server when an anime is opened
     if (!requested || requested === 'auto') {
-      const candidates = ['anikoto', 'hianime', 'aniwatch', 'anipm'].filter((p) => availableSlugs[p]);
-      if (candidates.length > 0) {
-        candidates.sort((a, b) => {
-          const healthA = providerHealth[a]?.status === 'healthy' ? 0 : 1;
-          const healthB = providerHealth[b]?.status === 'healthy' ? 0 : 1;
-          if (healthA !== healthB) return healthA - healthB;
-          return (providerHealth[a]?.latencyMs || 999) - (providerHealth[b]?.latencyMs || 999);
-        });
-        requested = candidates[0];
-      } else {
-        requested = 'anikoto';
-      }
+      requested = 'anikoto';
     }
 
     if (!resolvedTitle && id) {

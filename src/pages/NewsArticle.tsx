@@ -740,6 +740,11 @@ export function NewsArticle() {
                       <span className="mentioned-anime-card__sub">
                         <Star size={11} fill="currentColor" style={{ color: 'var(--gold)' }} />
                         {anime.rating} • {anime.format}
+                        {anime.status && (
+                          <span style={{ marginLeft: 4, padding: '1px 6px', borderRadius: 4, fontSize: '0.68rem', background: anime.status.toLowerCase().includes('ongoing') || anime.status.toLowerCase().includes('simulcast') ? 'rgba(34, 197, 94, 0.2)' : 'rgba(255,255,255,0.1)', color: anime.status.toLowerCase().includes('ongoing') || anime.status.toLowerCase().includes('simulcast') ? '#4ade80' : 'rgba(255,255,255,0.7)', fontWeight: 600 }}>
+                            {anime.status}
+                          </span>
+                        )}
                       </span>
                       <span style={{ fontSize: '0.72rem', color: 'var(--crimson-soft)', display: 'inline-flex', alignItems: 'center', gap: 3, fontWeight: 700, marginTop: 2 }}>
                         <Play size={10} fill="currentColor" /> Stream Now
@@ -784,9 +789,16 @@ export function NewsArticle() {
                     <li key={itemIdx} id={itemId} className="article-numbered-item">
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
-                          <strong style={{ fontSize: '1.05rem', color: '#fff' }}>
-                            {item.title || item.raw}
-                          </strong>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                            <strong style={{ fontSize: '1.05rem', color: '#fff' }}>
+                              {item.title || item.raw}
+                            </strong>
+                            {item.matchedAnime?.status && (
+                              <span style={{ padding: '2px 7px', borderRadius: 4, fontSize: '0.7rem', background: item.matchedAnime.status.toLowerCase().includes('ongoing') || item.matchedAnime.status.toLowerCase().includes('simulcast') ? 'rgba(34, 197, 94, 0.15)' : 'rgba(255,255,255,0.08)', color: item.matchedAnime.status.toLowerCase().includes('ongoing') || item.matchedAnime.status.toLowerCase().includes('simulcast') ? '#4ade80' : 'rgba(255,255,255,0.7)', fontWeight: 700, border: '1px solid rgba(255,255,255,0.1)' }}>
+                                {item.matchedAnime.status}
+                              </span>
+                            )}
+                          </div>
                           {item.matchedAnime && (
                             <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
                               <Link
