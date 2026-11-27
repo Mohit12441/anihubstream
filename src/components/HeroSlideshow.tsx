@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles } from 'lucide-react';
+import { Play, Pause, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles, Bookmark, Check } from 'lucide-react';
 import { Embers } from './Embers';
 import { artKeyUrl } from '../data/model';
 import type { Anime } from '../data/model';
 import { usePrefersReducedMotion } from '../lib/motion';
+import { useLibrary } from '../state/library';
+import { soundFx } from '../lib/soundFx';
 
 interface Props {
   items: Anime[];
@@ -14,6 +16,7 @@ const AUTOPLAY_DELAY_MS = 6000;
 
 export function HeroSlideshow({ items }: Props) {
   const reduced = usePrefersReducedMotion();
+  const { has, toggle: toggleWatchlist } = useLibrary();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -131,6 +134,26 @@ export function HeroSlideshow({ items }: Props) {
   const accentColor = current.accent || '#ff1f4a';
   const isUpcoming = current.status === 'Upcoming' || current.status === 'NOT_YET_RELEASED';
   const hasNoEpisodes = isUpcoming || (current.status === 'Ongoing' && (current.episodeCount ?? 0) === 0);
+  const isSaved = current ? has(current.id) : false;
+
+  const handleToggleSaved = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!current) return;
+    soundFx.playClick();
+    toggleWatchlist(current.id);
+  };
+
+  const handleQuickView = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!current) return;
+    soundFx.playChime();
+    window.dispatchEvent(new CustomEvent('anihub:quick-view', { detail: current }));
+  };
+
+  const togglePause = () => {
+    soundFx.playClick();
+    setIsPaused((prev) => !prev);
+  };
 
   return (
     <section
@@ -261,7 +284,8 @@ export function HeroSlideshow({ items }: Props) {
             {hasNoEpisodes ? (
               <Link
                 to={`/anime/${current.id}`}
-                className="btn btn--primary hero-slideshow__btn-watch"
+                className="hero-slideshow__btn-play"
+                onClick={() => soundFx.playClick()}
               >
                 <Info size={18} aria-hidden="true" />
                 <span>View Details</span>
@@ -269,7 +293,8 @@ export function HeroSlideshow({ items }: Props) {
             ) : (
               <Link
                 to={`/watch/${current.id}/1`}
-                className="btn btn--primary hero-slideshow__btn-watch"
+                className="hero-slideshow__btn-play"
+                onClick={() => soundFx.playClick()}
               >
                 <Play size={18} fill="currentColor" strokeWidth={0} aria-hidden="true" />
                 <span>Watch Now</span>
@@ -277,15 +302,38 @@ export function HeroSlideshow({ items }: Props) {
             )}
             <Link
               to={hasNoEpisodes ? '/schedule' : `/anime/${current.id}`}
-              className="btn btn--ghost hero-slideshow__btn-details"
+              className="hero-slideshow__btn-details"
+              onClick={() => soundFx.playClick()}
             >
               {hasNoEpisodes ? <Sparkles size={17} aria-hidden="true" /> : <Info size={17} aria-hidden="true" />}
               <span>{hasNoEpisodes ? 'Release Schedule' : 'Details'}</span>
             </Link>
+
+            {/* Quick Overview button */}
+            <button
+              type="button"
+              className="hero-slideshow__icon-btn"
+              onClick={handleQuickView}
+              aria-label={`Quick overview of ${current.title}`}
+              title="Quick Overview"
+            >
+              <Info size={18} aria-hidden="true" />
+            </button>
+
+            {/* Direct My List Toggle button */}
+            <button
+              type="button"
+              className={`hero-slideshow__icon-btn ${isSaved ? 'hero-slideshow__icon-btn--saved' : ''}`}
+              onClick={handleToggleSaved}
+              aria-label={isSaved ? `Remove ${current.title} from My List` : `Add ${current.title} to My List`}
+              title={isSaved ? 'Saved in My List' : 'Add to My List'}
+            >
+              {isSaved ? <Check size={18} aria-hidden="true" /> : <Bookmark size={18} aria-hidden="true" />}
+            </button>
           </div>
         </div>
 
-        {/* Carousel controls & pagination */}
+        {/* Carousel controls & segmented progress (fli.cx inspired) */}
         <div className="hero-slideshow__controls">
           <div className="hero-slideshow__arrows">
             <button
@@ -306,29 +354,48 @@ export function HeroSlideshow({ items }: Props) {
             </button>
           </div>
 
-          {/* Slide indicator dots */}
-          <div className="hero-slideshow__indicators" role="tablist" aria-label="Slideshow pages">
-            {activeItems.map((item, idx) => {
-              const isActive = idx === currentIndex;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  aria-label={`Go to slide ${idx + 1}: ${item.title}`}
-                  className={`hero-slideshow__dot ${isActive ? 'hero-slideshow__dot--active' : ''}`}
-                  onClick={() => setCurrentIndex(idx)}
-                >
-                  {isActive && !isPaused && !reduced && (
-                    <span
-                      className="hero-slideshow__dot-fill"
-                      style={{ animationDuration: `${AUTOPLAY_DELAY_MS}ms` }}
-                    />
-                  )}
-                </button>
-              );
-            })}
+          {/* Frosted glass capsule with pause toggle and segmented slide bars */}
+          <div className="hero-slideshow__progress-capsule" role="tablist" aria-label="Slideshow pages">
+            <button
+              type="button"
+              className="hero-slideshow__pause-btn"
+              onClick={togglePause}
+              aria-label={isPaused ? 'Resume slideshow' : 'Pause slideshow'}
+              title={isPaused ? 'Resume slideshow' : 'Pause slideshow'}
+            >
+              {isPaused ? (
+                <Play size={13} fill="currentColor" strokeWidth={0} aria-hidden="true" />
+              ) : (
+                <Pause size={13} fill="currentColor" strokeWidth={0} aria-hidden="true" />
+              )}
+            </button>
+
+            <div className="hero-slideshow__segments">
+              {activeItems.map((item, idx) => {
+                const isActive = idx === currentIndex;
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    aria-label={`Go to slide ${idx + 1}: ${item.title}`}
+                    className={`hero-slideshow__segment ${isActive ? 'hero-slideshow__segment--active' : ''}`}
+                    onClick={() => {
+                      soundFx.playClick();
+                      setCurrentIndex(idx);
+                    }}
+                  >
+                    {isActive && (
+                      <span
+                        className={`hero-slideshow__segment-fill ${isPaused ? 'hero-slideshow__segment-fill--paused' : ''}`}
+                        style={{ animationDuration: `${AUTOPLAY_DELAY_MS}ms` }}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

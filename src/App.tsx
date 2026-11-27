@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
+import { MobileTabBar } from './components/MobileTabBar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { AmbientBackground } from './components/AmbientBackground';
@@ -112,6 +113,7 @@ export function App() {
         </div>
       </main>
       {!bare && <Footer />}
+      {!bare && <MobileTabBar />}
     </>
   );
 }
