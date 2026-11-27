@@ -220,6 +220,17 @@ export function EpisodeSidebar({
                 placeholder={`Search ${total} episodes`}
                 aria-label="Search episodes by number or title"
               />
+              {term && (
+                <button
+                  type="button"
+                  className="eps__search-clear"
+                  onClick={() => setTerm('')}
+                  aria-label="Clear episode search"
+                  title="Clear search"
+                >
+                  <X size={13} aria-hidden="true" />
+                </button>
+              )}
             </span>
             <div className="eps__filters" role="group" aria-label="Filter episodes">
               {(
@@ -280,6 +291,17 @@ export function EpisodeSidebar({
                     onClick={() => handleSelectEp(ep.n)}
                     onMouseEnter={() => {
                       warmStreamOrigins();
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        const nextBtn = e.currentTarget.closest('li')?.nextElementSibling?.querySelector<HTMLButtonElement>('.eps__item');
+                        nextBtn?.focus();
+                      } else if (e.key === 'ArrowUp') {
+                        e.preventDefault();
+                        const prevBtn = e.currentTarget.closest('li')?.previousElementSibling?.querySelector<HTMLButtonElement>('.eps__item');
+                        prevBtn?.focus();
+                      }
                     }}
                     aria-current={isCurrent ? 'true' : undefined}
                   >

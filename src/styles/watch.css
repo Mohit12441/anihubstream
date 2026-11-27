@@ -1238,6 +1238,25 @@
 .eps__search input::placeholder {
   color: #64748b;
 }
+.eps__search-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+.eps__search-clear:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
 .eps__filters {
   display: flex;
   gap: 8px;
