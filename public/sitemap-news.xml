@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
+    <loc>https://anihubstream.com/news/kaze-wo-tsugumono-reveals-additional-staff-second-promo</loc>
+    <lastmod>2026-11-27</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>AniHubStream News</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-27T11:24:16.000Z</news:publication_date>
+      <news:title>'Kaze wo Tsugumono' Reveals Additional Staff, Second Promo</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://anihubstream.com/news/neko-to-ryuu-2nd-season-reveals-additional-cast-opening-theme</loc>
+    <lastmod>2026-11-27</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>AniHubStream News</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-11-27T09:30:55.000Z</news:publication_date>
+      <news:title>'Neko to Ryuu 2nd Season' Reveals Additional Cast, Opening Theme</news:title>
+    </news:news>
+  </url>
+  <url>
     <loc>https://anihubstream.com/news/additional-cast-for-shuiro-no-kamen-announced</loc>
     <lastmod>2026-11-27</lastmod>
     <news:news>
@@ -431,78 +455,6 @@
       </news:publication>
       <news:publication_date>2026-11-25T14:40:04.000Z</news:publication_date>
       <news:title>At 25:00, in Akasaka Gets Anime</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://anihubstream.com/news/kakunaru-ue-wa-unveils-additional-cast-theme-songs-second-promo</loc>
-    <lastmod>2026-11-25</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>AniHubStream News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-25T12:38:37.000Z</news:publication_date>
-      <news:title>'Kakunaru Ue wa' Unveils Additional Cast, Theme Songs, Second Promo</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://anihubstream.com/news/at-2500-in-akasaka-gets-2027-tv-anime</loc>
-    <lastmod>2026-11-25</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>AniHubStream News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-25T12:27:57.000Z</news:publication_date>
-      <news:title>At 25:00, in Akasaka Gets 2027 TV Anime</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://anihubstream.com/news/now-that-we-draw-reveals-main-trailer-and-visual-january-8-debut</loc>
-    <lastmod>2026-11-25</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>AniHubStream News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-25T11:40:21.000Z</news:publication_date>
-      <news:title>Now That We Draw Reveals Main Trailer and Visual, January 8 Debut</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://anihubstream.com/news/manga-25-ji-akasaka-de-gets-tv-anime-in-2027</loc>
-    <lastmod>2026-11-25</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>AniHubStream News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-25T10:47:18.000Z</news:publication_date>
-      <news:title>Manga '25-ji, Akasaka de' Gets TV Anime in 2027</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://anihubstream.com/news/youchien-wars-unveils-additional-staff-main-promo-opening-theme</loc>
-    <lastmod>2026-11-25</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>AniHubStream News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-25T09:23:54.000Z</news:publication_date>
-      <news:title>'Youchien Wars' Unveils Additional Staff, Main Promo, Opening Theme</news:title>
-    </news:news>
-  </url>
-  <url>
-    <loc>https://anihubstream.com/news/himekishi-sama-no-himo-reveals-supporting-cast-second-promo</loc>
-    <lastmod>2026-11-25</lastmod>
-    <news:news>
-      <news:publication>
-        <news:name>AniHubStream News</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-11-25T08:45:57.000Z</news:publication_date>
-      <news:title>'Himekishi-sama no Himo' Reveals Supporting Cast, Second Promo</news:title>
     </news:news>
   </url>
 </urlset>
