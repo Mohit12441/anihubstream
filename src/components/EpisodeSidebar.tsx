@@ -42,7 +42,7 @@ interface Props {
 const state = (ep: Episode, anime: Anime, positions: PositionMap) => {
   const p = positions[positionKey(anime.id, ep.n)];
   if (!p || (!p.finished && p.t <= 1)) return { status: 'new' as const, ratio: 0 };
-  const d = toSeconds(ep.runtime);
+  const d = (p.d && p.d > 0) ? p.d : toSeconds(ep.runtime);
   if (p.finished || (d > 0 && p.t / d >= 0.93)) return { status: 'watched' as const, ratio: 1 };
   return { status: 'progress' as const, ratio: d > 0 ? Math.min(1, p.t / d) : 0 };
 };

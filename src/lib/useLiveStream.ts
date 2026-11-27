@@ -758,6 +758,25 @@ export function useLiveStream(o: Options) {
         v.play().then(
           () => setPlayRefused(null),
           (e: unknown) => {
+            if (e instanceof DOMException && e.name === 'NotAllowedError' && !v.muted) {
+              v.muted = true;
+              v.play().then(
+                () => {
+                  setPlayRefused({
+                    n: ++playTry.current,
+                    text: 'Playing muted due to browser policy. Tap screen or speaker icon to unmute.',
+                  });
+                },
+                () => {
+                  playTry.current += 1;
+                  setPlayRefused({
+                    n: playTry.current,
+                    text: 'The browser only plays video after a gesture it can see — tap the picture to play.',
+                  });
+                },
+              );
+              return;
+            }
             playTry.current += 1;
             setPlayRefused({
               n: playTry.current,

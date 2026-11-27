@@ -163,8 +163,11 @@ html[data-theme='light'] .wordmark__oni {
 }
 
 .suggestion-item:hover,
-.suggestion-item:focus-visible {
-  background: rgba(255, 255, 255, 0.08);
+.suggestion-item:focus-visible,
+.suggestion-item.is-selected {
+  background: color-mix(in srgb, var(--accent) 18%, rgba(255, 255, 255, 0.08));
+  border-left: 3px solid var(--accent);
+  padding-left: 7px;
   outline: none;
 }
 

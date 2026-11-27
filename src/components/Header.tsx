@@ -77,6 +77,7 @@ export function Header() {
   }, [open]);
 
   const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const [loading, setLoading] = useState(false);
   const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -115,11 +116,13 @@ export function Header() {
         .then(data => {
           if (controller.signal.aborted) return;
           setSuggestions(data.hits || []);
+          setSelectedIndex(-1);
           setLoading(false);
         })
         .catch(() => {
           if (controller.signal.aborted) return;
           setSuggestions([]);
+          setSelectedIndex(-1);
           setLoading(false);
         });
     }, 150);
@@ -128,6 +131,7 @@ export function Header() {
 
   const clearSuggestions = () => {
     setSuggestions([]);
+    setSelectedIndex(-1);
     setLoading(false);
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
@@ -169,13 +173,15 @@ export function Header() {
 
     return (
       <ul className="instant-suggestions" role="listbox" aria-label="Suggestions">
-        {suggestions.map((hit: any) => (
+        {suggestions.map((hit: any, index: number) => (
           <li
             key={hit.id}
-            className="suggestion-item"
+            className={`suggestion-item${selectedIndex === index ? ' is-selected' : ''}`}
             role="option"
+            aria-selected={selectedIndex === index}
             tabIndex={0}
             onClick={() => handleSuggestionClick(hit)}
+            onMouseEnter={() => setSelectedIndex(index)}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -263,6 +269,19 @@ export function Header() {
                 onKeyDown={(e) => {
                   if (e.key === 'Escape') {
                     clearSuggestions();
+                  } else if (e.key === 'ArrowDown') {
+                    if (suggestions.length > 0) {
+                      e.preventDefault();
+                      setSelectedIndex((prev) => (prev < suggestions.length - 1 ? prev + 1 : 0));
+                    }
+                  } else if (e.key === 'ArrowUp') {
+                    if (suggestions.length > 0) {
+                      e.preventDefault();
+                      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : suggestions.length - 1));
+                    }
+                  } else if (e.key === 'Enter' && selectedIndex >= 0 && selectedIndex < suggestions.length) {
+                    e.preventDefault();
+                    handleSuggestionClick(suggestions[selectedIndex]);
                   }
                 }}
                 autoComplete="off"
