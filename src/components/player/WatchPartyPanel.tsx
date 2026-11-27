@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Users,
-  Copy,
   Check,
   Send,
   X,
@@ -10,6 +9,7 @@ import {
   Sparkles,
   Edit2,
   User,
+  Share2,
 } from 'lucide-react';
 import {
   WatchPartyClient,
@@ -102,13 +102,34 @@ export function WatchPartyPanel({
     partyClient.sendReaction(emoji);
   };
 
-  const handleCopyLink = () => {
+  const handleCopyLink = async () => {
     if (!partyClient) return;
     const url = new URL(window.location.href);
     url.searchParams.set('party', partyClient.roomId);
-    navigator.clipboard.writeText(url.toString());
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    const link = url.toString();
+
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Watch Party on AniHubStream',
+          text: `Join my watch party! Room: ${partyClient.roomId}`,
+          url: link,
+        });
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+        return;
+      } catch (err: any) {
+        if (err?.name === 'AbortError') return;
+      }
+    }
+
+    try {
+      await navigator.clipboard.writeText(link);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback
+    }
   };
 
   const handleCreateNew = () => {
@@ -271,10 +292,10 @@ export function WatchPartyPanel({
                 type="button"
                 className="party-action-btn"
                 onClick={handleCopyLink}
-                title="Copy shareable link"
+                title="Share or copy invite link"
               >
-                {copied ? <Check size={14} className="text-green" /> : <Copy size={14} />}
-                <span>{copied ? 'Copied!' : 'Copy Link'}</span>
+                {copied ? <Check size={14} className="text-green" /> : <Share2 size={14} />}
+                <span>{copied ? 'Copied!' : 'Share Link'}</span>
               </button>
               <button
                 type="button"

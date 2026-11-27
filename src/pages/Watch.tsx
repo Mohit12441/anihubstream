@@ -871,6 +871,20 @@ export function Watch() {
   const goNext = () => idx < last && selectEpisode(idx + 1);
   const goPrev = () => idx > 1 && selectEpisode(idx - 1);
 
+  const handleToggleWatched = useCallback((epN: number, currentFinished: boolean) => {
+    if (!anime) return;
+    const k = positionKey(anime.id, epN);
+    const existing = positions[k];
+    const duration = existing?.d && existing.d > 0 ? existing.d : 1440;
+    if (currentFinished) {
+      record(k, 0, duration);
+      notify(`Episode ${epN} marked as unwatched.`);
+    } else {
+      record(k, duration, duration);
+      notify(`Episode ${epN} marked as watched.`);
+    }
+  }, [anime, positions, record, notify]);
+
   const handleSelectServer = (server: PlayServer) => {
     setActiveServerId(server.id);
     const isDub = server.id.includes('-dub') || server.audio?.toLowerCase() === 'dub' || server.type?.toLowerCase() === 'dub';
@@ -1392,6 +1406,7 @@ export function Watch() {
           positions={positions}
           theatre={theatre}
           onTheatre={setTheatre}
+          onToggleWatched={handleToggleWatched}
         />
 
         {epDrawerOpen && (
@@ -1407,6 +1422,7 @@ export function Watch() {
             onTheatre={setTheatre}
             isDrawer
             onCloseDrawer={() => setEpDrawerOpen(false)}
+            onToggleWatched={handleToggleWatched}
           />
         )}
       </div>

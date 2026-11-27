@@ -36,6 +36,12 @@ test('Thumbnail Parser: resolveRelativeUrl resolves paths against VTT base URL',
     'https://other-cdn.com/thumb.jpg'
   );
   assert.equal(resolveRelativeUrl('/api/proxy?url=1', base), '/api/proxy?url=1');
+
+  // Proxied base URL should unwrap upstream target and re-wrap correctly
+  const proxiedBase = '/api/proxy?url=https%3A%2F%2Fmegaplay.buzz%2Fmedia%2Fthumbnails.vtt&referer=https%3A%2F%2Fmegaplay.buzz';
+  const resolvedProxied = resolveRelativeUrl('sprite_0.webp', proxiedBase);
+  assert.ok(resolvedProxied.includes('sprite_0.webp'));
+  assert.ok(resolvedProxied.startsWith('/api/proxy'));
 });
 
 test('Thumbnail Parser: parseThumbnailVtt parses sprite sheet with #xywh coordinates', () => {

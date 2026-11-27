@@ -37,6 +37,7 @@ interface Props {
   onTheatre: (v: boolean) => void;
   isDrawer?: boolean;
   onCloseDrawer?: () => void;
+  onToggleWatched?: (epNum: number, currentFinished: boolean) => void;
 }
 
 const state = (ep: Episode, anime: Anime, positions: PositionMap) => {
@@ -61,6 +62,7 @@ export function EpisodeSidebar({
   onTheatre,
   isDrawer,
   onCloseDrawer,
+  onToggleWatched,
 }: Props) {
   const [term, setTerm] = useState('');
   const [filter, setFilter] = useState<Filter>('all');
@@ -292,14 +294,48 @@ export function EpisodeSidebar({
                       <b className="eps__ep-title-row">
                         <span>{viewMode === 'grid' ? `EP ${ep.n}` : `Episode ${ep.n}`}</span>
                         {s.status === 'watched' && (
-                          <em className="eps__seen">
+                          <span
+                            className="eps__seen"
+                            role="button"
+                            tabIndex={0}
+                            title="Click to mark unwatched"
+                            aria-label={`Episode ${ep.n} watched. Click to mark unwatched.`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onToggleWatched?.(ep.n, true);
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                onToggleWatched?.(ep.n, true);
+                              }
+                            }}
+                          >
                             <Check size={11} aria-hidden="true" /> Watched
-                          </em>
+                          </span>
                         )}
                         {s.status === 'progress' && (
-                          <em className="eps__seen eps__seen--part">
+                          <span
+                            className="eps__seen eps__seen--part"
+                            role="button"
+                            tabIndex={0}
+                            title="Click to mark watched"
+                            aria-label={`Episode ${ep.n} in progress (${Math.round(s.ratio * 100)}%). Click to mark watched.`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onToggleWatched?.(ep.n, false);
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                onToggleWatched?.(ep.n, false);
+                              }
+                            }}
+                          >
                             {Math.round(s.ratio * 100)}%
-                          </em>
+                          </span>
                         )}
                       </b>
                       {ep.title && ep.title.trim().toLowerCase() !== `episode ${ep.n}` ? (

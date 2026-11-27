@@ -43,11 +43,25 @@ export function parseVttTime(timeStr: string): number {
  */
 export function resolveRelativeUrl(relativeUrl: string, baseUrl?: string): string {
   if (!relativeUrl) return '';
-  if (!baseUrl || relativeUrl.startsWith('http://') || relativeUrl.startsWith('https://') || relativeUrl.startsWith('//') || relativeUrl.startsWith('/')) {
+  if (relativeUrl.startsWith('http://') || relativeUrl.startsWith('https://') || relativeUrl.startsWith('//')) {
     return relativeUrl;
   }
+  if (!baseUrl) return relativeUrl;
+
   try {
-    const base = new URL(baseUrl);
+    const base = new URL(baseUrl, typeof window !== 'undefined' ? window.location.origin : 'https://anihubstream.com');
+    // If baseUrl is a proxied endpoint (e.g. /api/proxy?url=https%3A%2F%2Fmegaplay...%2Fthumbnails.vtt),
+    // resolve the relative image sprite URL against the actual upstream target, then re-wrap through the proxy.
+    const proxiedTarget = base.searchParams.get('url');
+    if (proxiedTarget) {
+      const realTargetBase = new URL(proxiedTarget);
+      const resolvedTarget = new URL(relativeUrl, realTargetBase).href;
+      base.searchParams.set('url', resolvedTarget);
+      return base.pathname + base.search;
+    }
+    if (relativeUrl.startsWith('/')) {
+      return relativeUrl;
+    }
     return new URL(relativeUrl, base).href;
   } catch {
     return relativeUrl;
