@@ -19,8 +19,8 @@ const NAV = [
   { label: 'Ongoing', to: '/anime?status=Ongoing' },
   { label: 'My List', to: '/my-list' },
   { label: 'Episode Schedule', shortLabel: 'Schedule', to: '/schedule' },
-  { label: 'News & Guides', shortLabel: 'News', to: '/news' },
-  { label: 'Request Anime', shortLabel: 'Requests', to: '/requests' },
+  { label: 'News & Guides', shortLabel: 'News', to: '/news', extra: true },
+  { label: 'Request Anime', shortLabel: 'Requests', to: '/requests', extra: true },
 ];
 
 function isActive(to: string, pathname: string, search: string) {
@@ -234,7 +234,7 @@ export function Header() {
         <nav className="site-nav" aria-label="Primary">
           <ul>
             {NAV.map((item) => (
-              <li key={item.label}>
+              <li key={item.label} className={item.extra ? 'site-nav__item--extra' : undefined}>
                 <Link
                   to={item.to}
                   className={isActive(item.to, pathname, search) ? 'is-current' : undefined}
