@@ -228,11 +228,23 @@ export async function onRequest(context) {
   const hasCloudflareCache = typeof caches !== 'undefined' && caches.default;
   const isGetOrHead = request.method === 'GET' || request.method === 'HEAD';
   const hasUserSession = Boolean(request.headers.get('cookie')?.includes('anihub_session'));
-  const isPublicHtmlRoute = isGetOrHead && !hasUserSession && !url.searchParams.has('bypass');
+  const isNoCache = request.headers.get('cache-control')?.includes('no-cache') || request.headers.get('pragma')?.includes('no-cache');
+  const isPublicHtmlRoute = isGetOrHead && !hasUserSession && !url.searchParams.has('bypass') && !isNoCache;
+
+  // Use deployment-aware cache key so new git pushes / deployments invalidate edge cache instantly
+  const deployTag = env?.CF_PAGES_COMMIT_SHA || 'v1';
+  let edgeCacheKey = request;
+  if (hasCloudflareCache) {
+    try {
+      const cacheUrl = new URL(request.url);
+      cacheUrl.searchParams.set('__deploy', deployTag);
+      edgeCacheKey = new Request(cacheUrl.toString(), request);
+    } catch (_) {}
+  }
 
   if (hasCloudflareCache && isPublicHtmlRoute) {
     try {
-      const cached = await caches.default.match(request);
+      const cached = await caches.default.match(edgeCacheKey);
       if (cached) {
         return cached;
       }
@@ -1315,9 +1327,9 @@ ${topAnimeHtml}
   if (hasCloudflareCache && isPublicHtmlRoute && deliveredResponse.status === 200) {
     try {
       if (context.waitUntil) {
-        context.waitUntil(caches.default.put(request, deliveredResponse.clone()));
+        context.waitUntil(caches.default.put(edgeCacheKey, deliveredResponse.clone()));
       } else {
-        await caches.default.put(request, deliveredResponse.clone());
+        await caches.default.put(edgeCacheKey, deliveredResponse.clone());
       }
     } catch (_) {}
   }

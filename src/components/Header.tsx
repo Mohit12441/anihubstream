@@ -259,11 +259,11 @@ export function Header() {
               <label className="sr-only" htmlFor="hdr-search">
                 Search anime
               </label>
-              <Search size={16} aria-hidden="true" />
+              <Search size={15} className="site-header__search-icon" aria-hidden="true" />
               <input
                 id="hdr-search"
                 type="search"
-                placeholder="Search anime..."
+                placeholder="Search..."
                 value={q}
                 onChange={handleInputChange}
                 onKeyDown={(e) => {
@@ -294,9 +294,6 @@ export function Header() {
                 aria-label="Open Command Palette"
               >
                 <kbd>{kbdShortcut}</kbd>
-              </button>
-              <button type="submit" className="search__go" aria-label="Run search">
-                <Search size={15} aria-hidden="true" />
               </button>
             </form>
             {renderSuggestions()}
