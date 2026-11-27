@@ -35,6 +35,7 @@ interface LibraryValue {
   favourites: Set<string>;
   toggleFavourite: (id: string) => void;
   history: HistoryEntry[];
+  clearHistory: () => void;
   secondsFor: (animeId: string, n: number) => number | undefined;
   recordPosition: (anime: Anime, n: number, episodeTitle: string, seconds: number, runtimeSeconds: number) => void;
   reload: () => void;
@@ -210,6 +211,13 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const clearHistory = useCallback(() => {
+    setHistory([]);
+    try {
+      localStorage.removeItem('anihub:positions');
+    } catch {}
+  }, []);
+
   const value = useMemo<LibraryValue>(
     () => ({
       status,
@@ -221,11 +229,12 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
       favourites,
       toggleFavourite,
       history,
+      clearHistory,
       secondsFor: (animeId, n) => history.find((h) => h.episodeId === episodeIdOf(animeId, n))?.seconds,
       recordPosition,
       reload: () => setNonce((x) => x + 1),
     }),
-    [status, error, items, busy, toggle, favourites, toggleFavourite, history, recordPosition],
+    [status, error, items, busy, toggle, favourites, toggleFavourite, history, clearHistory, recordPosition],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

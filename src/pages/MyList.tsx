@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { BookmarkX, Clock, Heart, Info, Play } from 'lucide-react';
+import { BookmarkX, Clock, Heart, Info, Play, Trash2 } from 'lucide-react';
 import { AnimeCard } from '../components/AnimeCard';
 import { Art } from '../components/Art';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
@@ -17,7 +17,7 @@ import '../styles/pages.css';
 
 export function MyList() {
   const { byId } = useCatalogue();
-  const { status, error, reload, items, history, favourites, isBusy, toggle, toggleFavourite } = useLibrary();
+  const { status, error, reload, items, history, clearHistory, favourites, isBusy, toggle, toggleFavourite } = useLibrary();
 
   useSEO({
     title: 'My List & Watch History — Saved Anime | AniHubStream',
@@ -98,7 +98,26 @@ export function MyList() {
                   Continue watching
                   <span className="sec-head__count">{history.length}</span>
                 </h2>
-                <p className="sec-head__hint">Last 20 positions for this browser&rsquo;s viewer id</p>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <p className="sec-head__hint">Last 20 positions for this browser&rsquo;s viewer id</p>
+                  {history.length > 0 && (
+                    <button
+                      type="button"
+                      className="btn btn--sm btn--ghost"
+                      style={{ fontSize: '11px', padding: '3px 8px', color: 'var(--text-muted)' }}
+                      onClick={() => {
+                        if (window.confirm('Clear all recorded playback positions?')) {
+                          clearHistory();
+                        }
+                      }}
+                      title="Clear watch history"
+                      aria-label="Clear all watch history"
+                    >
+                      <Trash2 size={12} aria-hidden="true" />
+                      Clear History
+                    </button>
+                  )}
+                </div>
               </div>
 
               {history.length ? (

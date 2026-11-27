@@ -13,6 +13,8 @@ import {
 } from 'lucide-react';
 import { useAnimeDetail, useCatalogue } from '../state/catalogue';
 import { useLibrary } from '../state/library';
+import { usePlayerPreferences } from '../lib/usePlayerPrefs';
+import { positionKey } from '../lib/playerPrefs';
 import { useSEO } from '../lib/useSEO';
 import { CatalogueError, CatalogueLoading } from '../components/CatalogueState';
 import { AiringCountdown } from '../components/AiringCountdown';
@@ -37,6 +39,7 @@ export function AnimeDetail() {
   const { status, error, missing, anime, reload } = useAnimeDetail(id);
   const { genreLabel } = useCatalogue();
   const { has, isBusy, toggle, favourites, toggleFavourite, history } = useLibrary();
+  const { positions } = usePlayerPreferences();
 
   const [themes, setThemes] = useState<AnimeTheme[]>([]);
 
@@ -70,8 +73,46 @@ export function AnimeDetail() {
   const inList = has(anime.id);
   const isFav = favourites.has(anime.id);
   const resume = history.find((h) => h.anime.id === anime.id);
-  const targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
   const epCount = isUpcoming ? 0 : (anime.episodes?.length || anime.episodeCount || 0);
+
+  let targetEp = resume?.episodeNumber && resume.episodeNumber > 0 ? resume.episodeNumber : 1;
+  let isNextEp = false;
+  let hasProgress = false;
+
+  const currentPos = positions[positionKey(anime.id, targetEp)];
+  if (currentPos && (currentPos.finished || (currentPos.d > 0 && currentPos.t / currentPos.d >= 0.9))) {
+    if (targetEp < epCount) {
+      targetEp += 1;
+      isNextEp = true;
+    }
+    hasProgress = true;
+  } else if (currentPos && currentPos.t > 1) {
+    hasProgress = true;
+  } else if (!resume) {
+    for (let i = 1; i <= Math.min(epCount, 200); i++) {
+      const pos = positions[positionKey(anime.id, i)];
+      if (pos && (pos.finished || (pos.d > 0 && pos.t / pos.d >= 0.9))) {
+        hasProgress = true;
+        if (i < epCount) {
+          targetEp = i + 1;
+          isNextEp = true;
+        } else {
+          targetEp = i;
+        }
+      } else if (pos && pos.t > 1) {
+        hasProgress = true;
+        targetEp = i;
+        isNextEp = false;
+        break;
+      }
+    }
+  }
+
+  const ctaLabel = isNextEp
+    ? `Continue: Episode ${targetEp}`
+    : (resume?.episodeNumber || hasProgress) && targetEp > 1
+      ? `Resume Episode ${targetEp}`
+      : 'Watch Episode 1';
   const ratingFormatted = anime.rating ? (anime.rating > 10 ? (anime.rating / 10).toFixed(1) : anime.rating.toFixed(1)) : '—';
 
   const getWatchUrl = (targetEpNum: number) => {
@@ -221,13 +262,24 @@ export function AnimeDetail() {
                   <span>{isUpcoming ? 'Upcoming · View Release Schedule' : 'Coming Soon · View Schedule'}</span>
                 </Link>
               ) : (
-                <Link
-                  to={getWatchUrl(targetEp)}
-                  className="ad-cta-btn"
-                >
-                  <Play size={18} fill="currentColor" />
-                  <span>{resume?.episodeNumber ? `Resume Episode ${resume.episodeNumber}` : 'Watch Episode 1'}</span>
-                </Link>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+                  <Link
+                    to={getWatchUrl(targetEp)}
+                    className="ad-cta-btn"
+                  >
+                    <Play size={18} fill="currentColor" />
+                    <span>{ctaLabel}</span>
+                  </Link>
+                  {targetEp > 1 && (
+                    <Link
+                      to={getWatchUrl(1)}
+                      className="ad-cta-secondary"
+                      title="Watch from Episode 1"
+                    >
+                      Start from Ep 1
+                    </Link>
+                  )}
+                </div>
               )}
             </div>
           </div>
