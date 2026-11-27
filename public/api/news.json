@@ -1040,60 +1040,10 @@
     "format": "Anime",
     "category": "Anime Franchise Update",
     "imageUrl": "https://img1.ak.crunchyroll.com/i/spire4-tmb/f276dfd0975f676f12818710081fc1161311018465_thumb.jpg",
-    "studio": "Studio Pierrot",
-    "staff": [
-      {
-        "role": "Original Creator",
-        "name": "Masashi Kishimoto"
-      },
-      {
-        "role": "Director",
-        "name": "Hayato Date"
-      },
-      {
-        "role": "Character Design",
-        "name": "Tetsuya Nishio"
-      },
-      {
-        "role": "Character Design",
-        "name": "Hirofumi Suzuki"
-      },
-      {
-        "role": "Art Director",
-        "name": "Shigenori Takada"
-      },
-      {
-        "role": "Color Design",
-        "name": "Takuya Kawami"
-      }
-    ],
-    "voiceCast": [
-      {
-        "character": "Sasuke Uchiha",
-        "actor": "Noriaki Sugiyama",
-        "voiceActor": "Noriaki Sugiyama",
-        "name": "Noriaki Sugiyama"
-      },
-      {
-        "character": "Naruto Uzumaki",
-        "actor": "Junko Takeuchi",
-        "voiceActor": "Junko Takeuchi",
-        "name": "Junko Takeuchi"
-      },
-      {
-        "character": "Kakashi Hatake",
-        "actor": "Kazuhiko Inoue",
-        "voiceActor": "Kazuhiko Inoue",
-        "name": "Kazuhiko Inoue"
-      },
-      {
-        "character": "Sakura Haruno",
-        "actor": "Chie Nakamura",
-        "voiceActor": "Chie Nakamura",
-        "name": "Chie Nakamura"
-      }
-    ],
-    "sourceMaterial": "MANGA",
+    "studio": null,
+    "staff": [],
+    "voiceCast": [],
+    "sourceMaterial": null,
     "matchedAnime": {
       "title": "Naruto",
       "slug": "naruto",
@@ -1109,7 +1059,7 @@
         "supernatural"
       ]
     },
-    "editorialSummary": "New developments regarding Naruto Shippuden: The Assembly of the Five Kage (Telugu Dub) - Episode 220 - Prophecy of the Great Lord Elder highlight significant milestones for the anime calendar. Animation production is spearheaded by Studio Pierrot, featuring key leadership under Original Creator Masashi Kishimoto, originating from MANGA, holding a strong 8.0/10 community rating. The continued trajectory of Naruto reflects the franchise's formidable staying power, combining rigorous visual craftsmanship with deeply compelling storytelling. Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of Naruto on AniHubStream. Verified reporting and initial broadcast schedules confirmed through Crunchyroll News.",
-    "wordCount": 108
+    "editorialSummary": "New developments regarding Naruto Shippuden: The Assembly of the Five Kage (Telugu Dub) - Episode 220 - Prophecy of the Great Lord Elder highlight significant milestones for the anime calendar. The continued trajectory of Naruto reflects the franchise's formidable staying power, combining rigorous visual craftsmanship with deeply compelling storytelling. Ahead of the announced premiere, anime enthusiasts looking to revisit pivotal franchise moments can enjoy ad-light, uninterrupted playback across every episode of Naruto on AniHubStream. Verified reporting and initial broadcast schedules confirmed through Crunchyroll News.",
+    "wordCount": 84
   }
 ]
