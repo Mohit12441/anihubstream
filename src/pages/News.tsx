@@ -10,7 +10,16 @@ import INITIAL_LIVE_NEWS from '../../data/news/feed.json';
 import '../styles/news.css';
 
 const CATEGORIES = ['All', 'Seasonal Guide', 'Rankings', 'Analysis'];
-const LIVE_SOURCES = ['All Sources', 'Anime Corner', 'MyAnimeList', 'Crunchyroll News'];
+const LIVE_SOURCES = [
+  'All Sources',
+  'Anime Corner',
+  'MyAnimeList',
+  'Crunchyroll News',
+  'Anime Trending',
+  'Otaku USA Magazine',
+  'Dexerto Anime',
+  'CBR Anime',
+];
 
 interface LiveNewsItem {
   id: string;
@@ -52,6 +61,14 @@ function getAuthorForSource(source: string): { name: string; role: string } {
       return { name: 'Marcus Vance', role: 'Broadcast Syndication Analyst' };
     case 'MyAnimeList':
       return { name: 'Daiki Tanaka', role: 'Franchise Data Specialist' };
+    case 'Anime Trending':
+      return { name: 'Kento Takahashi', role: 'Global Anime Trends Analyst' };
+    case 'Otaku USA Magazine':
+      return { name: 'Joseph Luster', role: 'Senior Feature Journalist' };
+    case 'Dexerto Anime':
+      return { name: 'Liam Croft', role: 'Entertainment & Gaming Editor' };
+    case 'CBR Anime':
+      return { name: 'David Caballero', role: 'Comics & Manga Specialist' };
     default:
       return { name: 'Kenji Sato', role: 'Senior Anime Journalist' };
   }
@@ -119,6 +136,15 @@ export function News() {
 
   const featured = NEWS_ARTICLES[0];
 
+  const liveSources = useMemo(() => {
+    const sources = new Set<string>();
+    for (const item of liveNews) {
+      if (item.source) sources.add(item.source);
+    }
+    const dynamicSources = Array.from(sources);
+    return ['All Sources', ...(dynamicSources.length > 0 ? dynamicSources : LIVE_SOURCES.slice(1))];
+  }, [liveNews]);
+
   const filteredLiveNews = useMemo(() => {
     const rawFiltered = liveNews.filter((item) => {
       const matchesSource = selectedSource === 'All Sources' || item.source.toLowerCase().includes(selectedSource.toLowerCase().replace(' news', ''));
@@ -130,26 +156,26 @@ export function News() {
       return matchesSource && matchesSearch;
     });
 
-    // Deduplicate stories by franchise / title token
+    // Deduplicate stories by slug and normalized headline prefix (preventing false drops of distinct news)
     const seenSlugs = new Set<string>();
-    const seenFranchises = new Set<string>();
+    const seenTitles = new Set<string>();
     const deduped: LiveNewsItem[] = [];
 
     for (const item of rawFiltered) {
       if (seenSlugs.has(item.slug)) continue;
       seenSlugs.add(item.slug);
 
-      const normTitle = (item.matchedAnime?.slug || item.title)
+      const titleKey = item.title
         .toLowerCase()
         .replace(/^(the|a|an)\s+/i, '')
         .replace(/[^a-z0-9]/g, '')
-        .slice(0, 14);
+        .slice(0, 36);
 
-      if (normTitle && seenFranchises.has(normTitle)) {
+      if (titleKey && seenTitles.has(titleKey)) {
         continue;
       }
-      if (normTitle) {
-        seenFranchises.add(normTitle);
+      if (titleKey) {
+        seenTitles.add(titleKey);
       }
       deduped.push(item);
     }
@@ -245,7 +271,7 @@ export function News() {
           ) : (
             <>
               <div className="news-pill-scroller">
-                {LIVE_SOURCES.map((src) => (
+                {liveSources.map((src) => (
                   <button
                     key={src}
                     type="button"

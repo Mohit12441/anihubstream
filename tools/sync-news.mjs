@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import Parser from 'rss-parser';
 import { fetchAniListMetadata } from './anilist-enricher.mjs';
+import { submitUrlsToBing } from './auto-push-new-episodes.mjs';
 
 const ORIGIN = 'https://anihubstream.com';
 const INDEXNOW_KEY = '9f8b2c4e1a7d3f5b8a0c6e4d2f1a9b7c';
@@ -11,7 +12,11 @@ const INDEXNOW_KEY = '9f8b2c4e1a7d3f5b8a0c6e4d2f1a9b7c';
 export const SOURCES = [
   { name: 'Anime Corner', url: 'https://animecorner.me/feed/' },
   { name: 'MyAnimeList', url: 'https://myanimelist.net/rss/news.xml' },
-  { name: 'Crunchyroll News', url: 'https://www.crunchyroll.com/news/rss', fallbackUrl: 'https://www.crunchyroll.com/rss/anime' },
+  { name: 'Crunchyroll News', url: 'https://www.crunchyroll.com/rss/anime', fallbackUrl: 'https://www.crunchyroll.com/news/rss' },
+  { name: 'Anime Trending', url: 'https://anitrendz.net/news/feed/' },
+  { name: 'Otaku USA Magazine', url: 'https://otakuusamagazine.com/feed/' },
+  { name: 'Dexerto Anime', url: 'https://www.dexerto.com/anime/feed/' },
+  { name: 'CBR Anime', url: 'https://cbr.com/feed/category/anime/' },
 ];
 
 /**
@@ -676,7 +681,7 @@ export async function syncNews(options = {}) {
     }
 
     if (feed && Array.isArray(feed.items)) {
-      const items = feed.items.slice(0, 10);
+      const items = feed.items.slice(0, 25);
       for (const it of items) {
         if (!it.title || !it.link) continue;
 
@@ -804,22 +809,54 @@ export async function syncNews(options = {}) {
     });
   }
 
-  // Sort by published timestamp descending
-  enrichedNews.sort((a, b) => b.timestamp - a.timestamp);
-
   // Ensure directories exist
   const dataNewsDir = path.resolve('data/news');
   const publicApiDir = path.resolve('public/api');
   fs.mkdirSync(dataNewsDir, { recursive: true });
   fs.mkdirSync(publicApiDir, { recursive: true });
 
-  // Fallback items if all live feeds were unreachable
-  if (enrichedNews.length === 0) {
-    const existingPath = path.join(dataNewsDir, 'feed.json');
-    if (fs.existsSync(existingPath)) {
-      console.log('ℹ Retaining existing news feed cache.');
-      return;
+  // Merge with existing rolling cache to maintain high news volume (60-120 items)
+  const existingPath = path.join(dataNewsDir, 'feed.json');
+  let existingItems = [];
+  if (fs.existsSync(existingPath)) {
+    try {
+      existingItems = JSON.parse(fs.readFileSync(existingPath, 'utf8'));
+    } catch {}
+  }
+
+  // Deduplicate against existing by id, slug, and sourceUrl
+  const seenIds = new Set(enrichedNews.map((i) => i.id));
+  const seenSlugs = new Set(enrichedNews.map((i) => i.slug));
+  const seenUrls = new Set(enrichedNews.map((i) => i.sourceUrl));
+
+  // Retain older items from the rolling window (up to 14 days old, or maintain at least 60 items)
+  const fourteenDaysAgo = Date.now() - 14 * 24 * 60 * 60 * 1000;
+  for (const old of existingItems) {
+    if (!old || !old.id || !old.slug) continue;
+    if (seenIds.has(old.id) || seenSlugs.has(old.slug) || (old.sourceUrl && seenUrls.has(old.sourceUrl))) {
+      continue;
     }
+    const itemTime = old.timestamp || (old.publishedAt ? new Date(old.publishedAt).getTime() : 0);
+    if (itemTime >= fourteenDaysAgo || enrichedNews.length < 60) {
+      seenIds.add(old.id);
+      seenSlugs.add(old.slug);
+      if (old.sourceUrl) seenUrls.add(old.sourceUrl);
+      enrichedNews.push(old);
+    }
+  }
+
+  // Fallback items if all live feeds were unreachable and no new items produced
+  if (enrichedNews.length === 0 && existingItems.length > 0) {
+    console.log('ℹ Retaining existing news feed cache.');
+    enrichedNews = existingItems;
+  }
+
+  // Sort all combined items by published timestamp descending
+  enrichedNews.sort((a, b) => b.timestamp - a.timestamp);
+
+  // Cap at 120 items to keep bundle lightweight and responsive
+  if (enrichedNews.length > 120) {
+    enrichedNews = enrichedNews.slice(0, 120);
   }
 
   // Write static outputs (both public/api/news.json and public/news-feed.json to avoid Cloudflare [[path]].js collisions)
@@ -832,10 +869,42 @@ export async function syncNews(options = {}) {
   // Generate Google News XML Sitemap
   generateNewsSitemap(enrichedNews);
 
-  // Automatically submit newly enriched news URLs to Bing & IndexNow
+  // Automatically submit newly enriched news URLs to Bing Webmaster, IndexNow & Google Search Console
   if (enrichedNews.length > 0) {
-    const topUrls = enrichedNews.slice(0, 15).map((a) => `${ORIGIN}/news/${a.slug}`);
-    await pingIndexNow(topUrls);
+    const urlsToIndex = [
+      `${ORIGIN}/news`,
+      `${ORIGIN}/sitemap-news.xml`,
+      `${ORIGIN}/sitemap.xml`,
+      ...enrichedNews.slice(0, 45).map((a) => `${ORIGIN}/news/${a.slug}`),
+    ];
+
+    // 1. Submit to Microsoft Bing Webmaster API
+    try {
+      const bingKey = process.env.BING_WEBMASTER_API_KEY || '0f95f3641de8422999f1ab7d7acf9f53';
+      const bingRes = await submitUrlsToBing(urlsToIndex, { apiKey: bingKey });
+      console.log(`🎯 Bing Webmaster API: submitted ${bingRes.count || urlsToIndex.length} URLs`);
+    } catch (err) {
+      console.warn(`Bing Webmaster submission non-fatal: ${err.message}`);
+    }
+
+    // 2. Broadcast to IndexNow network (IndexNow & Bing endpoints)
+    await pingIndexNow(urlsToIndex);
+
+    // 3. Google Search Console sitemap submission if credentials available
+    try {
+      const gscKeyPath = process.env.GSC_KEY_PATH || process.env.GOOGLE_APPLICATION_CREDENTIALS;
+      if (gscKeyPath && fs.existsSync(gscKeyPath)) {
+        console.log('🔍 Submitting sitemaps to Google Search Console...');
+        const creds = JSON.parse(fs.readFileSync(gscKeyPath, 'utf8'));
+        const { getAccessToken, submitSitemap } = await import('./gsc-telemetry.mjs');
+        const token = await getAccessToken(creds);
+        await submitSitemap(token, 'sc-domain:anihubstream.com', 'https://anihubstream.com/sitemap-news.xml').catch(() => {});
+        await submitSitemap(token, 'sc-domain:anihubstream.com', 'https://anihubstream.com/sitemap.xml').catch(() => {});
+        console.log('✅ Google Search Console sitemaps registered successfully');
+      }
+    } catch (err) {
+      console.warn(`Google Search Console submission non-fatal: ${err.message}`);
+    }
   }
 
   return enrichedNews;
@@ -896,25 +965,32 @@ ${urlElements.join('\n')}
 }
 
 /**
- * Pings IndexNow with newly published/updated news URLs
+ * Pings IndexNow with newly published/updated news URLs across IndexNow & Bing endpoints
  * @param {string[]} urls
  */
 export async function pingIndexNow(urls) {
   if (!urls || urls.length === 0) return;
-  try {
-    const res = await fetch('https://api.indexnow.org/indexnow', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      body: JSON.stringify({
-        host: 'anihubstream.com',
-        key: INDEXNOW_KEY,
-        keyLocation: `https://anihubstream.com/${INDEXNOW_KEY}.txt`,
-        urlList: urls.slice(0, 50),
-      }),
-    });
-    console.log(`🚀 IndexNow ping returned HTTP ${res.status}`);
-  } catch (err) {
-    console.warn(`IndexNow ping skipped: ${err.message}`);
+  const endpoints = [
+    'https://api.indexnow.org/indexnow',
+    'https://www.bing.com/indexnow',
+  ];
+
+  for (const endpoint of endpoints) {
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({
+          host: 'anihubstream.com',
+          key: INDEXNOW_KEY,
+          keyLocation: `https://anihubstream.com/${INDEXNOW_KEY}.txt`,
+          urlList: urls.slice(0, 50),
+        }),
+      });
+      console.log(`🚀 IndexNow (${new URL(endpoint).hostname}) ping returned HTTP ${res.status}`);
+    } catch (err) {
+      console.warn(`IndexNow ping (${endpoint}) skipped: ${err.message}`);
+    }
   }
 }
 
@@ -922,10 +998,7 @@ export async function pingIndexNow(urls) {
 if (process.argv[1] && process.argv[1].endsWith('sync-news.mjs')) {
   syncNews()
     .then((articles) => {
-      if (articles && articles.length > 0) {
-        const topUrls = articles.slice(0, 10).map((a) => `${ORIGIN}/news/${a.slug}`);
-        return pingIndexNow(topUrls);
-      }
+      console.log(`✨ News sync complete: ${articles?.length || 0} active articles.`);
     })
     .catch((err) => {
       console.error('Fatal syncNews error:', err);

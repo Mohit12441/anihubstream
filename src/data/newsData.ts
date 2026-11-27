@@ -312,7 +312,11 @@ Full announcement details, official key visuals, and promotional trailers were o
   const authorMap: Record<string, { name: string; role: string; url: string }> = {
     'Anime Corner': { name: 'Elena Rostova', role: 'Anime Industry Correspondent', url: 'https://anihubstream.com/about#editorial' },
     'Crunchyroll News': { name: 'Marcus Vance', role: 'Broadcast Syndication Analyst', url: 'https://anihubstream.com/about#editorial' },
-    'MyAnimeList': { name: 'Daiki Tanaka', role: 'Franchise Data Specialist', url: 'https://anihubstream.com/about#editorial' }
+    'MyAnimeList': { name: 'Daiki Tanaka', role: 'Franchise Data Specialist', url: 'https://anihubstream.com/about#editorial' },
+    'Anime Trending': { name: 'Kento Takahashi', role: 'Global Anime Trends Analyst', url: 'https://anihubstream.com/about#editorial' },
+    'Otaku USA Magazine': { name: 'Joseph Luster', role: 'Senior Feature Journalist', url: 'https://anihubstream.com/about#editorial' },
+    'Dexerto Anime': { name: 'Liam Croft', role: 'Entertainment & Gaming Editor', url: 'https://anihubstream.com/about#editorial' },
+    'CBR Anime': { name: 'David Caballero', role: 'Comics & Manga Specialist', url: 'https://anihubstream.com/about#editorial' },
   };
 
   const authorInfo = authorMap[item.source] || { name: 'AniHub Editorial Desk', role: 'Anime News Curator', url: 'https://anihubstream.com/about#editorial' };
