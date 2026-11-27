@@ -322,12 +322,23 @@ export function Watch() {
   const [dismissedDock, setDismissedDock] = useState(false);
 
   useEffect(() => {
-    if (theatre) {
+    if (theatre || !anime) {
       setIsDocked(false);
       return;
     }
     const el = playerAnchorRef.current;
     if (!el) return;
+
+    const check = () => {
+      const rect = el.getBoundingClientRect();
+      const isPast = rect.bottom < 0;
+      setIsDocked(isPast && !dismissedDock);
+      if (!isPast) setDismissedDock(false);
+    };
+
+    window.addEventListener('scroll', check, { passive: true });
+    check();
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         const isPast = entry.boundingClientRect.bottom < 0;
@@ -337,8 +348,12 @@ export function Watch() {
       { threshold: 0 }
     );
     observer.observe(el);
-    return () => observer.disconnect();
-  }, [theatre, dismissedDock]);
+
+    return () => {
+      window.removeEventListener('scroll', check);
+      observer.disconnect();
+    };
+  }, [theatre, dismissedDock, anime?.id]);
 
   // Dynamic Ambient Color Adaptation on Episode Change (fli.cx inspired)
   useEffect(() => {
