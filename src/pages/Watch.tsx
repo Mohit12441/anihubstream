@@ -16,6 +16,8 @@ import {
   SkipForward,
   Tv,
   Film,
+  Maximize2,
+  X,
 } from 'lucide-react';
 import { AdvancedPlayer } from '../components/player/AdvancedPlayer';
 import { DownloadModal } from '../components/player/DownloadModal';
@@ -313,6 +315,30 @@ export function Watch() {
   const [epDrawerOpen, setEpDrawerOpen] = useState(false);
   const [currentStream, setCurrentStream] = useState<BridgeSource | null>(null);
   const lastFallbackNotified = useRef<string>('');
+
+  // Floating Mini-Player on Scroll (Scroll PiP - fli.cx inspired)
+  const playerAnchorRef = useRef<HTMLDivElement>(null);
+  const [isDocked, setIsDocked] = useState(false);
+  const [dismissedDock, setDismissedDock] = useState(false);
+
+  useEffect(() => {
+    if (theatre) {
+      setIsDocked(false);
+      return;
+    }
+    const el = playerAnchorRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isPast = entry.boundingClientRect.bottom < 0;
+        setIsDocked(isPast && !dismissedDock);
+        if (!isPast) setDismissedDock(false);
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [theatre, dismissedDock]);
 
   // Dynamic Ambient Color Adaptation on Episode Change (fli.cx inspired)
   useEffect(() => {
@@ -983,44 +1009,76 @@ export function Watch() {
 
       <div className="watch__grid shell">
         <div className="watch__main">
-          <AdvancedPlayer
-            anime={anime}
-            animeId={anime.id}
-            episode={episode}
-            next={episodes[idx] ?? null}
-            hasPrev={idx > 1}
-            hasNext={idx < last}
-            onPrev={goPrev}
-            onNext={goNext}
-            theatre={theatre}
-            onTheatre={setTheatre}
-            prefs={prefs}
-            patch={patch}
-            patchSubs={patchSubs}
-            restoreSubs={restoreSubs}
-            restoreAppearance={restoreAppearance}
-            resumeAt={resumeAt}
-            onProgress={(t) => {
-              record(key, t, runtime);
-              recordPosition(anime, idx, episode?.title || `Episode ${idx}`, t, runtime);
-              // Prefetch next episode when reaching 80% progress
-              if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
-                const nextEp = idx + 1;
-                if (prefetchedNext.current !== nextEp) {
-                  prefetchedNext.current = nextEp;
-                  void prefetchEpisode(anime.id, nextEp, prefs.audio ?? 'sub');
-                }
-              }
-            }}
-            onStreamResolved={setIsStreamResolved}
-            onStreamInfo={setCurrentStream}
-            serverId={activeServerId}
-            onServerChange={setActiveServerId}
-            servers={currentSubservers}
-            onSelectServer={handleSelectServer}
-            initialServer={activeServer}
-            initialPartyRoom={params.get('party')}
-          />
+          <div ref={playerAnchorRef} className="watch__player-anchor">
+            {isDocked && <div className="watch__player-placeholder" aria-hidden="true" />}
+            <div className={`watch__player-container ${isDocked ? 'is-docked' : ''}`}>
+              {isDocked && (
+                <div className="watch__mini-bar">
+                  <span className="watch__mini-label">{anime.title} · EP {idx}</span>
+                  <div className="watch__mini-actions">
+                    <button
+                      type="button"
+                      className="watch__mini-action-btn"
+                      onClick={() => {
+                        playerAnchorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      }}
+                      title="Expand to main player"
+                      aria-label="Expand player"
+                    >
+                      <Maximize2 size={13} aria-hidden="true" />
+                    </button>
+                    <button
+                      type="button"
+                      className="watch__mini-action-btn"
+                      onClick={() => setDismissedDock(true)}
+                      title="Close mini player"
+                      aria-label="Close mini player"
+                    >
+                      <X size={13} aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              )}
+              <AdvancedPlayer
+                anime={anime}
+                animeId={anime.id}
+                episode={episode}
+                next={episodes[idx] ?? null}
+                hasPrev={idx > 1}
+                hasNext={idx < last}
+                onPrev={goPrev}
+                onNext={goNext}
+                theatre={theatre}
+                onTheatre={setTheatre}
+                prefs={prefs}
+                patch={patch}
+                patchSubs={patchSubs}
+                restoreSubs={restoreSubs}
+                restoreAppearance={restoreAppearance}
+                resumeAt={resumeAt}
+                onProgress={(t) => {
+                  record(key, t, runtime);
+                  recordPosition(anime, idx, episode?.title || `Episode ${idx}`, t, runtime);
+                  // Prefetch next episode when reaching 80% progress
+                  if (runtime > 0 && t / runtime >= 0.8 && anime && idx < anime.episodes.length) {
+                    const nextEp = idx + 1;
+                    if (prefetchedNext.current !== nextEp) {
+                      prefetchedNext.current = nextEp;
+                      void prefetchEpisode(anime.id, nextEp, prefs.audio ?? 'sub');
+                    }
+                  }
+                }}
+                onStreamResolved={setIsStreamResolved}
+                onStreamInfo={setCurrentStream}
+                serverId={activeServerId}
+                onServerChange={setActiveServerId}
+                servers={currentSubservers}
+                onSelectServer={handleSelectServer}
+                initialServer={activeServer}
+                initialPartyRoom={params.get('party')}
+              />
+            </div>
+          </div>
 
           {/* PROMINENT SERIES & EPISODE TITLE HEADER & QUICK NAV */}
           <div className="watch__title-strip">

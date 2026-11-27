@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Pause, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles, Bookmark, Check, Film } from 'lucide-react';
+import { Play, Pause, Info, ChevronLeft, ChevronRight, Flame, Star, Sparkles, Plus, Check, Film, Calendar, Clock, Tag } from 'lucide-react';
 import { Embers } from './Embers';
 import { artKeyUrl } from '../data/model';
 import type { Anime } from '../data/model';
@@ -243,33 +243,40 @@ export function HeroSlideshow({ items }: Props) {
             </Link>
           </h1>
 
-          {/* Metadata badges (Rating, Year, Format, Episode Count) */}
+          {/* Metadata badges (Rating, Year, Format, Episode Count - fli.cx style) */}
           <div className="hero-slideshow__meta">
             {current.rating > 0 && (
               <span className="hero-slideshow__meta-item hero-slideshow__meta-item--rating">
-                <Star size={14} fill="currentColor" aria-hidden="true" />
+                <Star size={13} fill="currentColor" aria-hidden="true" />
                 <span>{current.rating.toFixed(1)}</span>
               </span>
             )}
             {current.year > 0 && (
-              <span className="hero-slideshow__meta-item">{current.year}</span>
+              <span className="hero-slideshow__meta-item">
+                <Calendar size={13} aria-hidden="true" />
+                <span>{current.year}</span>
+              </span>
             )}
+            <span className="hero-slideshow__meta-item">
+              <Clock size={13} aria-hidden="true" />
+              <span>
+                {isUpcoming
+                  ? 'Coming Soon'
+                  : current.episodeCount > 0
+                  ? `${current.episodeCount} ${current.episodeCount === 1 ? 'Ep' : 'Eps'}`
+                  : current.episodeTotal
+                  ? `${current.episodeTotal} Eps`
+                  : 'Full Season'}
+              </span>
+            </span>
             {current.kind && (
               <span className="hero-slideshow__meta-item hero-slideshow__meta-item--kind">
                 {current.kind}
               </span>
             )}
-            <span className="hero-slideshow__meta-item">
-              {isUpcoming
-                ? 'Coming Soon'
-                : current.episodeCount > 0
-                ? `${current.episodeCount} ${current.episodeCount === 1 ? 'Episode' : 'Episodes'}`
-                : current.episodeTotal
-                ? `${current.episodeTotal} Episodes`
-                : 'Full Season'}
-            </span>
             {current.genres && current.genres.length > 0 && (
               <div className="hero-slideshow__tags">
+                <Tag size={13} aria-hidden="true" className="hero-slideshow__tag-icon" />
                 {current.genres.slice(0, 3).map((g) => (
                   <Link
                     key={g}
@@ -338,7 +345,7 @@ export function HeroSlideshow({ items }: Props) {
               <Info size={18} aria-hidden="true" />
             </button>
 
-            {/* Direct My List Toggle button */}
+            {/* Direct My List Toggle button (fli.cx style Plus / Check) */}
             <button
               type="button"
               className={`hero-slideshow__icon-btn ${isSaved ? 'hero-slideshow__icon-btn--saved' : ''}`}
@@ -346,7 +353,7 @@ export function HeroSlideshow({ items }: Props) {
               aria-label={isSaved ? `Remove ${current.title} from My List` : `Add ${current.title} to My List`}
               title={isSaved ? 'Saved in My List' : 'Add to My List'}
             >
-              {isSaved ? <Check size={18} aria-hidden="true" /> : <Bookmark size={18} aria-hidden="true" />}
+              {isSaved ? <Check size={18} aria-hidden="true" /> : <Plus size={18} aria-hidden="true" />}
             </button>
           </div>
         </div>

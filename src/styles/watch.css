@@ -2803,3 +2803,93 @@
   }
 }
 
+/* ---------- Scroll PiP / Docked Mini-Player (fli.cx inspired) ---------- */
+.watch__player-anchor {
+  position: relative;
+  width: 100%;
+}
+
+.watch__player-placeholder {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.watch__player-container.is-docked {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  z-index: 850;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.14);
+  animation: miniPlayerDock 280ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes miniPlayerDock {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.watch__mini-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(10, 13, 22, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 20;
+}
+
+.watch__mini-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #f8fafc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.watch__mini-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.watch__mini-action-btn {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.watch__mini-action-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .watch__player-container.is-docked {
+    width: 290px;
+    bottom: calc(5.2rem + env(safe-area-inset-bottom, 12px));
+    right: 12px;
+  }
+}
+
+
