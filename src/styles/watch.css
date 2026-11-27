@@ -290,6 +290,28 @@
   background: color-mix(in srgb, var(--crimson, #ff2a5f) 24%, transparent);
   border-color: var(--crimson, #ff2a5f);
 }
+.eps__seen--unwatched {
+  color: var(--text-muted, #94a3b8);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  padding: 1px 5px;
+}
+.eps__item:hover .eps__seen--unwatched,
+.eps__item:focus-within .eps__seen--unwatched {
+  opacity: 1;
+}
+.eps__seen--unwatched:hover {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: scale(1.08);
+}
+@media (hover: none) {
+  .eps__seen--unwatched {
+    opacity: 0.55;
+  }
+}
 .eps__thumb img {
   width: 100%;
   height: 100%;

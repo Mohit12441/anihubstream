@@ -337,6 +337,28 @@ export function EpisodeSidebar({
                             {Math.round(s.ratio * 100)}%
                           </span>
                         )}
+                        {s.status === 'new' && onToggleWatched && (
+                          <span
+                            className="eps__seen eps__seen--unwatched"
+                            role="button"
+                            tabIndex={0}
+                            title="Mark as watched"
+                            aria-label={`Mark Episode ${ep.n} as watched`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onToggleWatched(ep.n, false);
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                onToggleWatched(ep.n, false);
+                              }
+                            }}
+                          >
+                            <Check size={11} aria-hidden="true" />
+                          </span>
+                        )}
                       </b>
                       {ep.title && ep.title.trim().toLowerCase() !== `episode ${ep.n}` ? (
                         <span className="eps__title">{ep.title}</span>
