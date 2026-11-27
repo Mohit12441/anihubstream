@@ -57,7 +57,7 @@ html[data-theme='light'] .wordmark__oni {
   align-items: center;
   gap: clamp(4px, 0.6vw, 8px);
   flex-shrink: 0;
-  z-index: 10;
+  z-index: 30;
   padding: 4px 6px;
   border-radius: 9999px;
   background: rgba(14, 18, 28, 0.72);
@@ -287,10 +287,17 @@ html[data-theme='light'] .site-header__tools .icon-btn:hover {
 
 @media (min-width: 1141px) {
   .site-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
     z-index: 20;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 1400px) {
+  .site-nav li:nth-child(n+7) {
+    display: none;
   }
 }
 .site-nav ul {

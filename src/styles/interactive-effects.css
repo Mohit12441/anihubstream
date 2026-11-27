@@ -163,45 +163,12 @@ footer {
 .stagger-4 { transition-delay: 200ms; }
 .stagger-5 { transition-delay: 250ms; }
 
-/* ---------- 5. Awwwards Navigation Menu & Dock Glow ---------- */
+/* ---------- 5. Awwwards Navigation Menu & Header Shadow ---------- */
 .site-header {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 -1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.site-nav {
-  position: relative;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 4px 5px;
-  border-radius: var(--r-pill, 999px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.site-nav a {
-  padding: 6px clamp(8px, 0.8vw, 12px);
-  border-radius: var(--r-pill, 999px);
-  font-size: 13.5px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  transition: all var(--dur-2, 0.2s) var(--ease, ease);
-}
-
-.site-nav a::after {
-  display: none !important;
-}
-
-.site-nav a:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-.site-nav a.is-current {
-  background: color-mix(in srgb, var(--accent, #ff2a5f) 22%, rgba(255, 255, 255, 0.06));
-  border: 1px solid color-mix(in srgb, var(--accent, #ff2a5f) 50%, transparent);
-  color: #fff;
-  box-shadow: 0 0 16px color-mix(in srgb, var(--accent, #ff2a5f) 35%, transparent);
-}
+/* Nav links styling is maintained cleanly in header.css (fli.cx capsule design) */
 
 /* ---------- 6. Smooth Sliders & Carousel Scroll Snap ---------- */
 .carousel__track {
