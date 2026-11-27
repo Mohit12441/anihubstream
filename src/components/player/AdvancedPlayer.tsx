@@ -619,8 +619,13 @@ export function AdvancedPlayer(props: Props) {
     notify(r.text);
   }, [live.playRefused, notify]);
 
-  /* ---------- auto-next countdown ---------- */
-  const autoNextOpen = engine.ended && !dismissed;
+  /* ---------- auto-next countdown (fli.cx / Netflix style) ---------- */
+  const outro = episode?.markers?.find((m) => m.kind === 'outro');
+  const isNearEnd = Boolean(
+    (outro && engine.time >= outro.start && outro.start > 60) ||
+    (engine.duration > 120 && engine.time / engine.duration >= 0.94)
+  );
+  const autoNextOpen = (engine.ended || (hasNext && isNearEnd)) && !dismissed;
   const countdownRef = useRef(countdown);
   useEffect(() => {
     countdownRef.current = countdown;
