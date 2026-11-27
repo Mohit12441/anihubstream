@@ -149,8 +149,11 @@ export function AnimeSpotlightCard({ anime, variant = 'inline-banner', subtitle,
           </p>
 
           <div className="anime-spotlight-banner__actions">
-            <Link to={anime.streamUrl} className="btn btn--sm btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontWeight: 700 }}>
-              <Play size={14} fill="currentColor" /> Watch on AniHubStream
+            <Link to={`/watch/${encodeURIComponent(anime.slug)}/1`} className="btn btn--sm btn--primary" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontWeight: 700 }} title={`Watch ${anime.title} Episode 1`}>
+              <Play size={13} fill="currentColor" /> Watch Ep 1
+            </Link>
+            <Link to={anime.streamUrl} className="btn btn--sm btn--ghost" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontWeight: 600 }} title={`View ${anime.title} details & all episodes`}>
+              Overview &amp; Episodes
             </Link>
             <div className="anime-spotlight-banner__perks">
               <span title="Full High Definition 1080p Streaming">

@@ -1,10 +1,11 @@
 // @ts-check
 import { useEffect, useState, useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Newspaper, Rss, ArrowRight, Calendar, Clock, Radio, ExternalLink, Search, ChevronLeft, ChevronRight, User, X, Sparkles, Film } from 'lucide-react';
+import { Newspaper, Rss, ArrowRight, Calendar, Clock, Radio, ExternalLink, Search, ChevronLeft, ChevronRight, User, X, Sparkles, Film, Bookmark } from 'lucide-react';
 import { NEWS_ARTICLES } from '../data/newsData';
 import { resolveAnime } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
+import { useSavedArticles } from '../lib/useSavedArticles';
 import { useSEO } from '../lib/useSEO';
 import INITIAL_LIVE_NEWS from '../../data/news/feed.json';
 import '../styles/news.css';
@@ -79,12 +80,16 @@ const PAGE_SIZE = 12;
 export function News() {
   const [searchParams, setSearchParams] = useSearchParams();
   const tabParam = searchParams.get('tab');
+  const catParam = searchParams.get('category');
+  const tagParam = searchParams.get('tag') || '';
   const [activeTab, setActiveTab] = useState<'editorial' | 'live'>(tabParam === 'live' ? 'live' : 'editorial');
-  const [selectedCat, setSelectedCat] = useState('All');
+  const [selectedCat, setSelectedCat] = useState(catParam || 'All');
   const [selectedSource, setSelectedSource] = useState('All Sources');
   const [searchQuery, setSearchQuery] = useState('');
   const [liveNews, setLiveNews] = useState<LiveNewsItem[]>(INITIAL_LIVE_NEWS as unknown as LiveNewsItem[]);
   const [liveLoading, setLiveLoading] = useState(false);
+
+  const { savedSlugs, isSaved, toggleSave } = useSavedArticles();
 
   useEffect(() => {
     if (tabParam === 'live' && activeTab !== 'live') {
@@ -93,6 +98,15 @@ export function News() {
       setActiveTab('editorial');
     }
   }, [tabParam]);
+
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    if (cat && cat !== selectedCat) {
+      setSelectedCat(cat);
+    } else if (!cat && selectedCat !== 'All' && selectedCat !== 'Saved') {
+      setSelectedCat('All');
+    }
+  }, [searchParams]);
 
   const switchTab = (tab: 'editorial' | 'live') => {
     setActiveTab(tab);
@@ -103,6 +117,18 @@ export function News() {
       nextParams.delete('tab');
       nextParams.delete('page');
     }
+    setSearchParams(nextParams, { replace: true });
+  };
+
+  const handleSelectCategory = (cat: string) => {
+    setSelectedCat(cat);
+    const nextParams = new URLSearchParams(searchParams);
+    if (cat === 'All') {
+      nextParams.delete('category');
+    } else {
+      nextParams.set('category', cat);
+    }
+    nextParams.delete('page');
     setSearchParams(nextParams, { replace: true });
   };
 
@@ -166,16 +192,25 @@ export function News() {
 
   const filteredEditorial = useMemo(() => {
     return editorialArticles.filter((a) => {
-      const matchesCat = selectedCat === 'All' || a.category === selectedCat;
+      if (selectedCat === 'Saved') {
+        if (!savedSlugs.includes(a.slug)) return false;
+      } else {
+        const matchesCat = selectedCat === 'All' || a.category === selectedCat;
+        if (!matchesCat) return false;
+      }
+      if (tagParam) {
+        const matchesTag = a.tags && a.tags.some((t: string) => t.toLowerCase() === tagParam.toLowerCase());
+        if (!matchesTag) return false;
+      }
       const q = searchQuery.toLowerCase().trim();
       const matchesSearch = !q ||
         a.title.toLowerCase().includes(q) ||
         a.excerpt.toLowerCase().includes(q) ||
         (a.tags && a.tags.some((t: string) => t.toLowerCase().includes(q))) ||
         (a.relatedAnimeSlugs && a.relatedAnimeSlugs.some((s: string) => s.toLowerCase().includes(q)));
-      return matchesCat && matchesSearch;
+      return matchesSearch;
     });
-  }, [editorialArticles, selectedCat, searchQuery]);
+  }, [editorialArticles, selectedCat, searchQuery, savedSlugs, tagParam]);
 
   const featured = editorialArticles[0] || NEWS_ARTICLES[0];
 
@@ -190,6 +225,9 @@ export function News() {
 
   const filteredLiveNews = useMemo(() => {
     const rawFiltered = liveNews.filter((item) => {
+      if (selectedCat === 'Saved') {
+        if (!savedSlugs.includes(item.slug)) return false;
+      }
       const matchesSource = selectedSource === 'All Sources' || item.source.toLowerCase().includes(selectedSource.toLowerCase().replace(' news', ''));
       const q = searchQuery.toLowerCase().trim();
       const matchesSearch = !q ||
@@ -306,11 +344,20 @@ export function News() {
                     key={cat}
                     type="button"
                     className={`news-filter-pill ${selectedCat === cat ? 'news-filter-pill--active' : ''}`}
-                    onClick={() => setSelectedCat(cat)}
+                    onClick={() => handleSelectCategory(cat)}
                   >
                     {cat}
                   </button>
                 ))}
+                <button
+                  type="button"
+                  className={`news-filter-pill ${selectedCat === 'Saved' ? 'news-filter-pill--active' : ''}`}
+                  onClick={() => handleSelectCategory('Saved')}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}
+                >
+                  <Bookmark size={13} fill={selectedCat === 'Saved' ? 'currentColor' : 'none'} />
+                  <span>Saved ({savedSlugs.length})</span>
+                </button>
               </div>
 
               <div className="news-search-wrap">
@@ -446,14 +493,33 @@ export function News() {
 
           {filteredEditorial.length === 0 ? (
             <div style={{ padding: '60px 0', textAlign: 'center', color: 'rgba(255,255,255,0.6)' }}>
-              <p style={{ fontSize: '1.1rem', marginBottom: 12 }}>No editorial guides match "{searchQuery}".</p>
-              <button
-                type="button"
-                onClick={() => { setSearchQuery(''); setSelectedCat('All'); }}
-                className="btn btn--sm btn--ghost"
-              >
-                Clear search &amp; filters
-              </button>
+              {selectedCat === 'Saved' ? (
+                <>
+                  <Bookmark size={36} style={{ color: 'var(--cyan)', opacity: 0.6, margin: '0 auto 12px' }} />
+                  <p style={{ fontSize: '1.15rem', fontWeight: 700, color: '#fff', marginBottom: 8 }}>No saved articles yet</p>
+                  <p style={{ fontSize: '0.92rem', maxWidth: 440, margin: '0 auto 16px' }}>
+                    Click the bookmark icon on any guide or breaking news story to save it to your reading list.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => handleSelectCategory('All')}
+                    className="btn btn--sm btn--primary"
+                  >
+                    Browse All Guides
+                  </button>
+                </>
+              ) : (
+                <>
+                  <p style={{ fontSize: '1.1rem', marginBottom: 12 }}>No editorial guides match "{searchQuery}".</p>
+                  <button
+                    type="button"
+                    onClick={() => { setSearchQuery(''); handleSelectCategory('All'); }}
+                    className="btn btn--sm btn--ghost"
+                  >
+                    Clear search &amp; filters
+                  </button>
+                </>
+              )}
             </div>
           ) : (
             <div className="news-grid">
@@ -500,11 +566,25 @@ export function News() {
 
                     <p className="news-card__excerpt">{article.excerpt}</p>
 
-                    <div className="news-card__footer">
+                    <div className="news-card__footer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                       <Link to={`/news/${article.slug}`} className="news-card__read-link">
                         <span>Read Full Guide</span>
                         <ArrowRight size={14} aria-hidden="true" />
                       </Link>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleSave(article.slug);
+                        }}
+                        className={`btn btn--xs ${isSaved(article.slug) ? 'btn--primary' : 'btn--ghost'}`}
+                        style={{ padding: '3px 8px', borderRadius: 'var(--r-pill)', display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                        title={isSaved(article.slug) ? 'Saved' : 'Save for later'}
+                        aria-label={isSaved(article.slug) ? 'Remove from saved' : 'Save guide'}
+                      >
+                        <Bookmark size={12} fill={isSaved(article.slug) ? 'currentColor' : 'none'} />
+                        <span style={{ fontSize: '0.72rem' }}>{isSaved(article.slug) ? 'Saved' : 'Save'}</span>
+                      </button>
                     </div>
                   </div>
                 </article>
@@ -609,17 +689,27 @@ export function News() {
                           {item.editorialSummary}
                         </p>
 
-                        <div className="live-wire-card__actions">
+                        <div className="live-wire-card__actions" style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                           <Link to={`/news/${item.slug}`} className="btn btn--sm btn--primary">
                             <span>Read Full Article</span>
                             <ArrowRight size={13} aria-hidden="true" />
                           </Link>
                           {resolvedAnime && (
-                            <Link to={resolvedAnime.streamUrl} className="btn btn--sm btn--ghost">
+                            <Link to={`/watch/${encodeURIComponent(resolvedAnime.slug)}/1`} className="btn btn--sm btn--ghost" title={`Watch ${resolvedAnime.title} Episode 1`}>
                               <Film size={13} aria-hidden="true" />
-                              <span>Stream Anime</span>
+                              <span>Watch Ep 1</span>
                             </Link>
                           )}
+                          <button
+                            type="button"
+                            onClick={() => toggleSave(item.slug)}
+                            className={`btn btn--sm ${isSaved(item.slug) ? 'btn--primary' : 'btn--ghost'}`}
+                            style={{ display: 'inline-flex', alignItems: 'center', gap: 5 }}
+                            title={isSaved(item.slug) ? 'Saved' : 'Save for later'}
+                          >
+                            <Bookmark size={13} fill={isSaved(item.slug) ? 'currentColor' : 'none'} />
+                            <span>{isSaved(item.slug) ? 'Saved' : 'Save'}</span>
+                          </button>
                         </div>
                       </div>
                     </div>

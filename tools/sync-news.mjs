@@ -876,18 +876,28 @@ export async function syncNews(options = {}) {
     console.warn('Editorial guides sync non-fatal:', err.message);
   }
 
+  // Ensure editorialGuides is populated even if generator returned empty
+  if (!editorialGuides || !Array.isArray(editorialGuides) || editorialGuides.length === 0) {
+    const editPath = path.resolve('data/news/editorial.json');
+    if (fs.existsSync(editPath)) {
+      try {
+        editorialGuides = JSON.parse(fs.readFileSync(editPath, 'utf8'));
+      } catch {}
+    }
+  }
+
   // Generate Google News XML Sitemap
   generateNewsSitemap(enrichedNews);
 
   // Automatically submit newly enriched news URLs to Bing Webmaster, IndexNow & Google Search Console
-  if (enrichedNews.length > 0) {
+  if (enrichedNews.length > 0 || (editorialGuides && editorialGuides.length > 0)) {
     const editorialUrls = (editorialGuides || []).map((g) => `${ORIGIN}/news/${g.slug}`);
     const urlsToIndex = [
       `${ORIGIN}/news`,
       `${ORIGIN}/sitemap-news.xml`,
       `${ORIGIN}/sitemap.xml`,
       ...editorialUrls,
-      ...enrichedNews.slice(0, 40).map((a) => `${ORIGIN}/news/${a.slug}`),
+      ...enrichedNews.slice(0, 80).map((a) => `${ORIGIN}/news/${a.slug}`),
     ];
 
     // 1. Submit to Microsoft Bing Webmaster API
@@ -996,7 +1006,7 @@ export async function pingIndexNow(urls) {
           host: 'anihubstream.com',
           key: INDEXNOW_KEY,
           keyLocation: `https://anihubstream.com/${INDEXNOW_KEY}.txt`,
-          urlList: urls.slice(0, 50),
+          urlList: urls.slice(0, 100),
         }),
       });
       console.log(`🚀 IndexNow (${new URL(endpoint).hostname}) ping returned HTTP ${res.status}`);

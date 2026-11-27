@@ -1,13 +1,28 @@
 // @ts-check
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Play, Star, Sparkles, Film } from 'lucide-react';
+import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Play, Star, Sparkles, Film, Bookmark, ListOrdered, ChevronDown, ChevronUp } from 'lucide-react';
 import { getNewsArticleBySlug, getAllNewsArticles, convertLiveNewsToArticle, NewsArticleItem } from '../data/newsData';
 import { resolveAnime, findAnimeInText } from '../data/animeResolver';
 import { AnimeSpotlightCard } from '../components/AnimeSpotlightCard';
+import { useSavedArticles } from '../lib/useSavedArticles';
 import { useSEO } from '../lib/useSEO';
 import { useToast } from '../lib/Toast';
 import '../styles/news.css';
+
+interface TocItem {
+  id: string;
+  title: string;
+  level: 2 | 3;
+}
+
+function slugifyAnchor(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 50);
+}
 
 interface ParsedBlock {
   type: 'h2' | 'h3' | 'numbered-list' | 'bullet-list' | 'paragraph';
@@ -170,6 +185,11 @@ export function NewsArticle() {
   const [article, setArticle] = useState<NewsArticleItem | undefined>(initialArticle);
   const [loading, setLoading] = useState(!initialArticle);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [tocOpen, setTocOpen] = useState(true);
+  const [activeTocId, setActiveTocId] = useState<string>('');
+
+  const { isSaved, toggleSave } = useSavedArticles();
+  const bookmarked = article ? isSaved(article.slug) : false;
 
   useEffect(() => {
     if (!slug) return;
@@ -219,6 +239,55 @@ export function NewsArticle() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  // Structured Block Parser for Rankings, Lists, Headings, and Spotlights
+  const blocks = useMemo(() => {
+    return article ? parseArticleBlocks(article.content) : [];
+  }, [article?.content]);
+
+  // Generate Table of Contents items
+  const tocItems = useMemo(() => {
+    if (!article) return [];
+    const items: TocItem[] = [];
+    blocks.forEach((block, bIdx) => {
+      if (block.type === 'h2' && block.text) {
+        const id = slugifyAnchor(block.text) || `section-${bIdx}`;
+        items.push({ id, title: block.text, level: 2 });
+      } else if (block.type === 'h3' && block.text) {
+        const id = slugifyAnchor(block.text) || `entry-${bIdx}`;
+        items.push({ id, title: block.text, level: 3 });
+      } else if (block.type === 'numbered-list' && block.items) {
+        block.items.forEach((item, itemIdx) => {
+          const id = `rank-${item.rank || itemIdx + 1}`;
+          const title = item.rank ? `#${item.rank} ${item.title || item.raw}` : (item.title || item.raw);
+          items.push({ id, title, level: 3 });
+        });
+      }
+    });
+    return items;
+  }, [article, blocks]);
+
+  useEffect(() => {
+    if (tocItems.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveTocId(entry.target.id);
+            break;
+          }
+        }
+      },
+      { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+    );
+
+    tocItems.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [tocItems]);
 
   // Extract FAQs if present for Google FAQPage Rich Results Schema
   const faqEntities: Array<{ '@type': 'Question'; name: string; acceptedAnswer: { '@type': 'Answer'; text: string } }> = [];
@@ -393,9 +462,6 @@ export function NewsArticle() {
   const textAnime = findAnimeInText(article.content);
   const allMentionedAnime = Array.from(new Map([...explicitAnime, ...textAnime].map((a) => [a.slug, a])).values());
 
-  // Structured Block Parser for Rankings, Lists, Headings, and Spotlights
-  const blocks = parseArticleBlocks(article.content);
-
   return (
     <article className="page news-article-view shell">
       <div
@@ -498,6 +564,20 @@ export function NewsArticle() {
             )}
             <button
               type="button"
+              onClick={() => {
+                const added = toggleSave(article.slug);
+                notify(added ? 'Saved to reading list!' : 'Removed from reading list');
+              }}
+              className={`btn btn--xs ${bookmarked ? 'btn--primary' : 'btn--ghost'}`}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+              aria-label={bookmarked ? 'Remove article from reading list' : 'Save article for later'}
+              title={bookmarked ? 'Saved to reading list' : 'Save article for later'}
+            >
+              <Bookmark size={14} fill={bookmarked ? 'currentColor' : 'none'} />
+              {bookmarked ? 'Saved' : 'Save'}
+            </button>
+            <button
+              type="button"
               onClick={handleShare}
               className="btn btn--xs btn--ghost"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
@@ -559,6 +639,66 @@ export function NewsArticle() {
           return null;
         })}
 
+        {/* Table of Contents for Long-form Articles */}
+        {tocItems.length >= 3 && (
+          <nav className="article-toc" aria-label="Table of Contents">
+            <div
+              className="article-toc__header"
+              onClick={() => setTocOpen(!tocOpen)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setTocOpen(!tocOpen);
+                }
+              }}
+              aria-expanded={tocOpen}
+            >
+              <div className="article-toc__title">
+                <ListOrdered size={16} style={{ color: 'var(--cyan)' }} />
+                <span>Table of Contents</span>
+                <span className="article-toc__count">{tocItems.length} entries</span>
+              </div>
+              <button
+                type="button"
+                className="btn btn--xs btn--ghost"
+                style={{ padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: 4 }}
+                aria-label={tocOpen ? 'Collapse Table of Contents' : 'Expand Table of Contents'}
+              >
+                {tocOpen ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+                <span>{tocOpen ? 'Hide' : 'Show'}</span>
+              </button>
+            </div>
+
+            {tocOpen && (
+              <div className="article-toc__body">
+                <div className="article-toc__grid">
+                  {tocItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      className={`article-toc__link ${activeTocId === item.id ? 'is-active' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const target = document.getElementById(item.id);
+                        if (target) {
+                          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          window.history.replaceState(null, '', `#${item.id}`);
+                          setActiveTocId(item.id);
+                        }
+                      }}
+                      title={item.title}
+                    >
+                      {item.title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </nav>
+        )}
+
         {/* Featured Series Showcase Bar (Positioned below the Lede so answers are first) */}
         {allMentionedAnime.length > 0 && (
           <section className="mentioned-anime-section">
@@ -615,8 +755,9 @@ export function NewsArticle() {
         {/* Structured Article Blocks (Remaining Content) */}
         {blocks.slice(Math.min(2, blocks.length)).map((block, idx) => {
           if (block.type === 'h3') {
+            const h3Id = slugifyAnchor(block.text || '') || `entry-${idx}`;
             return (
-              <div key={idx} style={{ marginTop: 28, marginBottom: 14 }}>
+              <div key={idx} id={h3Id} style={{ marginTop: 28, marginBottom: 14 }}>
                 <h3>{block.text}</h3>
                 {block.matchedAnime && (
                   <AnimeSpotlightCard
@@ -630,38 +771,52 @@ export function NewsArticle() {
           }
 
           if (block.type === 'h2') {
-            return <h2 key={idx}>{block.text}</h2>;
+            const h2Id = slugifyAnchor(block.text || '') || `section-${idx}`;
+            return <h2 key={idx} id={h2Id}>{block.text}</h2>;
           }
 
           if (block.type === 'numbered-list') {
             return (
               <ol key={idx} className="article-numbered-list">
-                {block.items?.map((item, itemIdx) => (
-                  <li key={itemIdx} className="article-numbered-item">
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
-                        <strong style={{ fontSize: '1.05rem', color: '#fff' }}>
-                          {item.title || item.raw}
-                        </strong>
-                        {item.matchedAnime && (
-                          <Link
-                            to={item.matchedAnime.streamUrl}
-                            className="btn btn--xs btn--primary"
-                            style={{ display: 'inline-flex', alignItems: 'center', gap: 5, padding: '3px 10px', fontSize: '0.74rem' }}
-                            title={`Stream ${item.matchedAnime.title}`}
-                          >
-                            <Play size={10} fill="currentColor" /> Stream on AniHub
-                          </Link>
+                {block.items?.map((item, itemIdx) => {
+                  const itemId = `rank-${item.rank || itemIdx + 1}`;
+                  return (
+                    <li key={itemIdx} id={itemId} className="article-numbered-item">
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8 }}>
+                          <strong style={{ fontSize: '1.05rem', color: '#fff' }}>
+                            {item.title || item.raw}
+                          </strong>
+                          {item.matchedAnime && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 6, flexWrap: 'wrap' }}>
+                              <Link
+                                to={`/watch/${encodeURIComponent(item.matchedAnime.slug)}/1`}
+                                className="btn btn--xs btn--primary"
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 10px', fontSize: '0.74rem', fontWeight: 700 }}
+                                title={`Watch ${item.matchedAnime.title} Episode 1`}
+                              >
+                                <Play size={10} fill="currentColor" /> Watch Ep 1
+                              </Link>
+                              <Link
+                                to={item.matchedAnime.streamUrl}
+                                className="btn btn--xs btn--ghost"
+                                style={{ display: 'inline-flex', alignItems: 'center', gap: 4, padding: '3px 8px', fontSize: '0.74rem' }}
+                                title={`View ${item.matchedAnime.title} Hub`}
+                              >
+                                Hub
+                              </Link>
+                            </div>
+                          )}
+                        </div>
+                        {item.body && (
+                          <p style={{ margin: 0, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.94rem', lineHeight: 1.6 }}>
+                            {item.body}
+                          </p>
                         )}
                       </div>
-                      {item.body && (
-                        <p style={{ margin: 0, color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.94rem', lineHeight: 1.6 }}>
-                          {item.body}
-                        </p>
-                      )}
-                    </div>
-                  </li>
-                ))}
+                    </li>
+                  );
+                })}
               </ol>
             );
           }
