@@ -453,6 +453,32 @@ html[data-theme='light'] .wordmark__text em {
   color: var(--text);
   background: var(--surface-3);
 }
+
+/* fli.cx inspired section header action pill */
+.sec-head__action-link {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+.sec-head__action-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateX(2px);
+}
 .sec-head__tools {
   margin-left: auto;
   display: flex;

@@ -23,11 +23,16 @@ html[data-theme='light'] .wordmark__oni {
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  background: color-mix(in srgb, var(--bg) 78%, transparent);
-  backdrop-filter: blur(18px) saturate(140%);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--dur-3) var(--ease), border-color var(--dur-3) var(--ease), backdrop-filter var(--dur-3) var(--ease);
+}
+
+.site-header.is-scrolled {
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
   border-bottom: 1px solid var(--line);
-  transition: background-color var(--dur-3) var(--ease), border-color var(--dur-3) var(--ease);
 }
 
 .wordmark {
@@ -36,6 +41,7 @@ html[data-theme='light'] .wordmark__oni {
 }
 
 .site-header__inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,16 +55,56 @@ html[data-theme='light'] .wordmark__oni {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: clamp(6px, 0.8vw, 10px);
+  gap: clamp(4px, 0.6vw, 8px);
   flex-shrink: 0;
   z-index: 10;
+  padding: 4px 6px;
+  border-radius: 9999px;
+  background: rgba(14, 18, 28, 0.72);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme='light'] .site-header__tools {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.12);
+}
+
+.site-header__tools .icon-btn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  transition: all 160ms ease;
+  cursor: pointer;
+}
+
+.site-header__tools .icon-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.08);
+}
+
+html[data-theme='light'] .site-header__tools .icon-btn {
+  color: #475569;
+}
+html[data-theme='light'] .site-header__tools .icon-btn:hover {
+  color: #0f172a;
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .site-header__search-wrap {
   position: relative;
-  width: clamp(170px, 17vw, 280px);
-  min-width: 170px;
-  max-width: 280px;
+  width: clamp(160px, 15vw, 240px);
+  min-width: 160px;
+  max-width: 240px;
   flex: 1 1 auto;
 }
 
@@ -69,17 +115,18 @@ html[data-theme='light'] .wordmark__oni {
   width: 100%;
   min-width: 0;
   max-width: 100%;
-  height: 40px;
-  padding: 0 6px 0 14px;
+  height: 32px;
+  padding: 0 6px 0 12px;
   border-radius: var(--r-pill);
-  background: var(--bg-card, #0e111a);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   flex-shrink: 1;
-  transition: border-color var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease);
+  transition: border-color var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), background-color var(--dur-2) var(--ease);
 }
 .site-header__search:focus-within {
+  background: rgba(255, 255, 255, 0.1);
   border-color: color-mix(in srgb, var(--accent) 60%, transparent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 13%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 .site-header__search > svg {
   color: var(--text-3);
@@ -91,13 +138,14 @@ html[data-theme='light'] .wordmark__oni {
   border: 0;
   background: none;
   outline: none;
-  font-size: 14px;
+  font-size: 13px;
+  color: #ffffff;
 }
 .site-header__search input::-webkit-search-cancel-button {
   display: none;
 }
 .site-header__search input::placeholder {
-  color: var(--text-3);
+  color: #94a3b8;
 }
 
 .site-header__search-wrap {
@@ -235,6 +283,15 @@ html[data-theme='light'] .wordmark__oni {
   align-items: center;
   flex-shrink: 0;
   overflow: visible;
+}
+
+@media (min-width: 1141px) {
+  .site-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+  }
 }
 .site-nav ul {
   display: flex;
@@ -435,6 +492,14 @@ html[data-theme='light'] .site-nav a.is-current {
 @media (max-width: 760px) {
   :root {
     --header-h: 64px;
+  }
+  .site-header__tools {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding: 0;
   }
   .site-header__search-wrap {
     display: none !important;

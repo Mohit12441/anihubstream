@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Play, PlayCircle, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowRight, Play, PlayCircle, X } from 'lucide-react';
 import { getPositions, removePosition } from '../data/api';
 import { artKeyUrl, cleanAnimeTitle, type ApiPosition } from '../data/model';
 import { AnimeCarousel } from './AnimeCarousel';
@@ -57,7 +57,10 @@ export function ContinueWatchingRow({ onLoaded }: Props) {
           <PlayCircle size={21} aria-hidden="true" style={{ color: 'var(--crimson, #ff1f4a)' }} />
           Continue Watching
         </h2>
-        <span className="sec-head__hint">Jump straight back into your active shows</span>
+        <Link to="/my-list" className="sec-head__action-link" aria-label="View all continue watching in My List">
+          <span>See all</span>
+          <ArrowRight size={14} aria-hidden="true" />
+        </Link>
       </div>
 
       <AnimeCarousel label="Continue Watching">

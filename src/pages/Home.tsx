@@ -383,12 +383,12 @@ function Row({
       <div className="sec-head">
         <h2 id={id}>
           {icon}
-          {title}
-          <Link to={to} className="sec-head__link" aria-label={toLabel}>
-            <ArrowRight size={18} aria-hidden="true" />
-          </Link>
+          <span>{title}</span>
         </h2>
-        <p className="sec-head__hint">{toLabel}</p>
+        <Link to={to} className="sec-head__action-link" aria-label={toLabel}>
+          <span>See all</span>
+          <ArrowRight size={14} aria-hidden="true" />
+        </Link>
       </div>
       <AnimeCarousel label={title}>
         {items.length ? (
