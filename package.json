@@ -65,7 +65,10 @@
     "bing:sitemaps": "bing-webmaster sitemaps",
     "bing:auto-push": "node tools/auto-push-new-episodes.mjs",
     "indexnow": "node tools/indexnow.mjs",
-    "indexnow:sitemap": "node tools/indexnow.mjs --sitemap"
+    "indexnow:sitemap": "node tools/indexnow.mjs --sitemap",
+    "backlinks:syndicate": "node tools/syndicate-new-episodes.mjs",
+    "backlinks:submit": "node tools/backlink-submitter.mjs",
+    "backlinks:verify": "node tools/verify-backlinks.mjs"
   },
   "dependencies": {
     "hls.js": "^1.7.3",
