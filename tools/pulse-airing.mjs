@@ -64,8 +64,8 @@ async function main() {
   console.log('\n====================================================');
   console.log(`✅ Hourly Airing Pulse finished in ${durationSec}s!`);
   console.log(`   - Trending shows ranked: ${trendRes.totalTrending || 0}`);
-  console.log(`   - Schedules written: ${schedRes.updated}`);
-  console.log(`   - Unchanged titles skipped: ${schedRes.unchanged}`);
+  console.log(`   - Schedules written: ${schedRes?.updated ?? 0}`);
+  console.log(`   - Unchanged titles skipped: ${schedRes?.unchanged ?? 0}`);
   console.log('====================================================\n');
 }
 

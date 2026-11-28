@@ -723,7 +723,7 @@ export async function syncNews(options = {}) {
   const uniqueItems = deduplicateNewsItems(rawItems);
   console.log(`🧹 Deduplicated ${rawItems.length} raw items down to ${uniqueItems.length} unique stories.`);
 
-  const enrichedNews = [];
+  let enrichedNews = [];
 
   for (const item of uniqueItems) {
     const newsId = generateNewsId(item.link);

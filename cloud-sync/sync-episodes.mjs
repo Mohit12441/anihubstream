@@ -109,12 +109,15 @@ export async function syncEpisodes({ limit = EPISODES_BATCH_LIMIT, force = false
     // Prioritize ongoing anime, then recently added anime where episode count < episode_total
     const animeNeedingEps = await d1All(`
       SELECT a.id, a.title, a.kind, a.art, a.key_art, a.synopsis, a.source_ids, a.episode_total, a.status, a.sched_episode,
-             (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) as current_episodes
+             COALESCE(ep.current_episodes, 0) as current_episodes
       FROM anime a
+      LEFT JOIN (
+        SELECT anime_id, count(*) as current_episodes FROM episode GROUP BY anime_id
+      ) ep ON ep.anime_id = a.id
       WHERE a.status NOT IN ('Upcoming', 'NOT_YET_RELEASED')
         AND (
-          (a.status = 'Ongoing' AND (SELECT count(*) FROM episode e WHERE e.anime_id = a.id) < COALESCE(a.episode_total, 2000))
-          OR (a.episode_total IS NOT NULL AND a.episode_total > (SELECT count(*) FROM episode e WHERE e.anime_id = a.id))
+          (a.status = 'Ongoing' AND COALESCE(ep.current_episodes, 0) < COALESCE(a.episode_total, 2000))
+          OR (a.episode_total IS NOT NULL AND a.episode_total > COALESCE(ep.current_episodes, 0))
         )
       ORDER BY (CASE WHEN a.status = 'Ongoing' THEN 0 ELSE 1 END), (CASE WHEN a.trend_rank IS NOT NULL THEN 0 ELSE 1 END), a.trend_rank ASC, a.rating DESC
       LIMIT 10

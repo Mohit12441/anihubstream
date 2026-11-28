@@ -192,6 +192,22 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
   let itemsCreated = 0;
   let itemsUpdated = 0;
 
+  // Pre-load lookup cache once to eliminate hundreds of thousands of unindexed D1 row reads
+  const allAnime = await d1All('SELECT id, source_ids FROM anime');
+  const malToExisting = new Map();
+  const hianimeToExisting = new Map();
+  const idToExisting = new Map();
+
+  for (const a of (allAnime || [])) {
+    if (!a?.id) continue;
+    idToExisting.set(a.id, a);
+    try {
+      const src = typeof a.source_ids === 'string' ? JSON.parse(a.source_ids || '{}') : a.source_ids || {};
+      if (src.mal) malToExisting.set(Number(src.mal), a);
+      if (src.hianime) hianimeToExisting.set(src.hianime, a);
+    } catch {}
+  }
+
   try {
     for (let p = 0; p < pagesPerRun; p++) {
       const currentPage = startPage + p;
@@ -221,22 +237,13 @@ export async function syncHiAnime({ pagesPerRun = PAGES_PER_RUN, force = false }
         const malId = Number(item.mal_id) > 0 ? Number(item.mal_id) : null;
 
         let existing = null;
-        if (malId) {
-          existing = await d1First(
-            `SELECT a.id, a.source_ids FROM anime a
-             WHERE json_extract(a.source_ids,'$.mal') = ?1
-                OR json_extract(a.source_ids,'$.hianime') = ?2
-             ORDER BY
-               (EXISTS(SELECT 1 FROM library l WHERE l.anime_id=a.id)) DESC,
-               (json_extract(a.source_ids,'$.anilist') IS NOT NULL) DESC,
-               length(a.id) ASC
-             LIMIT 1`,
-            [malId, item.slug],
-          );
-        }
-        if (!existing) {
+        if (malId && malToExisting.has(malId)) {
+          existing = malToExisting.get(malId);
+        } else if (hianimeToExisting.has(item.slug)) {
+          existing = hianimeToExisting.get(item.slug);
+        } else {
           const targetSlug = slugify(item.title) || item.slug;
-          existing = await d1First('SELECT id, source_ids FROM anime WHERE id = ?1', [targetSlug]);
+          existing = idToExisting.get(targetSlug) || null;
         }
 
         const record = mapHiAnimeItem(item, existing);
